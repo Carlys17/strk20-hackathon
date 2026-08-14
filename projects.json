@@ -1,5 +1,160 @@
 [
   {
+    "slug": "redpocket",
+    "name": "Redpocket",
+    "one_liner": "Password red packets: one link, N shares, each claim lands in a shielded STRK20 balance.",
+    "category": "Payments",
+    "repo_url": "https://github.com/kevlau1/redpocket",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-09",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x0671dfa406d914e9b422792b698b6cb8f585bc5f6ef789f31d65b46143fdaef5",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x04ec2a146f05c73ffc4ab6cbf482ef60847499515d8c44be622a6007ffd0c588",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-14T21:19:16Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "kevlau1",
+        "name": "K",
+        "avatar_url": "https://avatars.githubusercontent.com/u/87843207?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Cursor",
+        "name": "Cursor",
+        "avatar_url": "",
+        "commits": 4
+      }
+    ],
+    "active_days": [
+      "2026-08-14"
+    ],
+    "head_sha": "e02ceb95e3f0f6c1034794e89c3042d0d48bbf0f",
+    "readme_hash": "2706:# Redpocket\n\nPassword Redpockets on Starknet [STRK20](https://strk20.starknet.io/hackathon). Claims settle into a shielded balance.\n\nStealth is the default, not a second product: send and claim both g",
+    "churn_pct": 53.6,
+    "summary": "Distribute passwords as red packets for confidential claims.",
+    "description_long": "This project allows hosts to create password-protected red packets that users can claim discreetly. It leverages the Starknet Wallet API and a privacy anonymizer to ensure that each address can claim only once, using a digest system that prevents password exposure. The implementation includes a unique Merkle tree structure for secure ticket management and verification, ensuring user privacy throughout the process.",
+    "latest_push": "Committed Merkle tickets and a Mainnet helper.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1654,
+    "deletions": 311,
+    "assessment": null
+  },
+  {
+    "slug": "offbook",
+    "name": "offbook",
+    "one_liner": "a private OTC settlement layer for Starknet, Counterparties agree a token-for-token block trade (RFQ), then settle atomically through STRK20",
+    "category": "DeFi",
+    "repo_url": "https://github.com/Akinbola247/offbook",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-05",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x04446e8cb7ec46bc03c1a9de2c5a4f2ec849ca8e584d7243d362d759083710fa",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-14T21:15:42Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Akinbola247",
+        "name": "Akinbola247",
+        "avatar_url": "https://avatars.githubusercontent.com/u/112096641?v=4"
+      },
+      {
+        "login": "iamkenzman",
+        "name": "iamkenzman",
+        "avatar_url": "https://github.com/iamkenzman.png"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14"
+    ],
+    "head_sha": "48134666072ba0e18a3e8eeebf8044f2c055f041",
+    "readme_hash": "",
+    "churn_pct": 0.3,
+    "summary": "",
+    "description_long": "",
+    "latest_push": "Added Offbook landing and dashboard UI along with multiple helper contracts.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": false,
+    "additions": 8,
+    "deletions": 0,
+    "assessment": null
+  },
+  {
     "slug": "tx404",
     "name": "Tx404",
     "one_liner": "Non-custodial shielding API/SDK: drop shield, unshield, and private-transfer into any app without touching a viewing key.",
@@ -45,7 +200,6 @@
     ],
     "head_sha": "1dba26232ee3af8a26fc34f2db6f3ae4f7f642cf",
     "readme_hash": "3904:# Tx404\n\nTx404 is a non-custodial shielding API/SDK: drop shield, unshield, and private-transfer into any app without touching a viewing key. It provides core STRK20 privacy primitives through the Sta",
-    "churn_pct": 100,
     "summary": "Provide non-custodial shielding for private transfers in apps.",
     "description_long": "The project offers a non-custodial API/SDK that integrates privacy features into applications without holding user keys. It focuses on allowing users to shield, unshield, and make private transfers through their own wallets, ensuring end-user control over transactions. Key challenges include maintaining security while integrating with existing DeFi flows and ensuring compatibility with different wallets.",
     "latest_push": "Added the Tx404 privacy SDK core and related documentation.",
@@ -84,6 +238,7 @@
     "has_readme": true,
     "additions": 4375,
     "deletions": 46,
+    "churn_pct": 100,
     "assessment": null
   },
   {
@@ -574,90 +729,6 @@
     "additions": 511,
     "deletions": 1,
     "churn_pct": 12.8,
-    "assessment": null
-  },
-  {
-    "slug": "redpocket",
-    "name": "Redpocket",
-    "one_liner": "Password red packets: one link, N shares, each claim lands in a shielded STRK20 balance.",
-    "category": "Payments",
-    "repo_url": "https://github.com/kevlau1/redpocket",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-09",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-14T17:37:10Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "kevlau1",
-        "name": "K",
-        "avatar_url": "https://avatars.githubusercontent.com/u/87843207?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Cursor",
-        "name": "Cursor",
-        "avatar_url": "",
-        "commits": 2
-      }
-    ],
-    "active_days": [
-      "2026-08-14"
-    ],
-    "head_sha": "c0cbc6368d588a9a06fc50b84238269d8ed1b652",
-    "readme_hash": "2542:# Redpocket\n\nPassword Redpockets on Starknet [STRK20](https://strk20.starknet.io/hackathon). Claims settle into a shielded balance.\n\nStealth is the default, not a second product: send and claim both g",
-    "summary": "Distribute password-protected tokens into shielded balances.",
-    "description_long": "This project uses Starknet to create a private dapp that allows users to share tokens through password-protected Redpockets, facilitating claims that land in shielded balances. The technical challenge involves ensuring only one claim per address and using a privacy pool to maintain anonymity throughout the claiming process. Integration with the STRK20 token standard and implementation of a unique password hash for security are key components of the system.",
-    "latest_push": "Published Redpocket for the STRK20 Private Sprint.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 5350,
-    "deletions": 0,
-    "churn_pct": 100,
     "assessment": null
   },
   {
