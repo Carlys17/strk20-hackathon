@@ -1,5 +1,79 @@
 [
   {
+    "slug": "neobank",
+    "name": "Private money account",
+    "one_liner": "Hold, send, and earn on STRK20 without publishing salary or net worth.",
+    "category": "Consumer",
+    "repo_url": "https://github.com/kamalbuilds/neobank",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "kamalbuilds",
+    "inspired_by": "IDEA-13",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-14T14:18:43Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "kamalbuilds",
+        "name": "kamalbuilds",
+        "avatar_url": "https://avatars.githubusercontent.com/u/95926324?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14"
+    ],
+    "head_sha": "2a973bc0af3b1d1c20b2c37fee2449074061e635",
+    "readme_hash": "2446:# Private money account\n\nHold and send on the live STRK20 pool without publishing salary or net worth. Yield is planned, not in this repo.\n\nThis is a non-custodial Starknet app. It is not a licensed b",
+    "churn_pct": 4.1,
+    "summary": "Enable private transactions on the STRK20 pool without revealing sensitive financial details.",
+    "description_long": "This dapp facilitates holding and sending STRK20 assets while keeping user financial information shielded. It utilizes a non-custodial architecture where the app never holds viewing keys, solving the challenge of maintaining user privacy in transactions. The implementation involves wallet integration, requiring users to approve transactions through a series of prompts to manage asset shielding and private transfers.",
+    "latest_push": "Fixed the Shield deployment to deposit the account correctly.",
+    "tooling": [
+      {
+        "label": "AVNU",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 88,
+    "deletions": 13
+  },
+  {
     "slug": "envelope",
     "name": "envelope",
     "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
@@ -45,7 +119,6 @@
     ],
     "head_sha": "3890d2d13960ce7147d0e5ba12fbc41d455e97cd",
     "readme_hash": "6582:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
-    "churn_pct": 3,
     "summary": "Send private money as a link to anyone without requiring prior registration.",
     "description_long": "The project implements a STRK20 anonymizer contract that allows users to shield tokens, seal them in an envelope, and send a link to the recipient. This approach solves the problem of private transfers on Starknet where the recipient does not need to be a registered user, thus allowing seamless payments to anyone while protecting the identity of the sender through the use of secure cryptographic signatures.",
     "latest_push": "Implemented logic for handling seal and dart interactions in claims.",
@@ -63,7 +136,8 @@
     ],
     "has_readme": true,
     "additions": 109,
-    "deletions": 47
+    "deletions": 47,
+    "churn_pct": 3
   },
   {
     "slug": "veyl",
@@ -217,80 +291,6 @@
     "additions": 2376,
     "deletions": 2091,
     "churn_pct": 100
-  },
-  {
-    "slug": "neobank",
-    "name": "Private money account",
-    "one_liner": "Hold, send, and earn on STRK20 without publishing salary or net worth.",
-    "category": "Consumer",
-    "repo_url": "https://github.com/kamalbuilds/neobank",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "kamalbuilds",
-    "inspired_by": "IDEA-13",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-14T13:02:46Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "kamalbuilds",
-        "name": "kamalbuilds",
-        "avatar_url": "https://avatars.githubusercontent.com/u/95926324?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14"
-    ],
-    "head_sha": "b01446c6e11f6c31205e280203f622bed1ad5823",
-    "readme_hash": "2446:# Private money account\n\nHold and send on the live STRK20 pool without publishing salary or net worth. Yield is planned, not in this repo.\n\nThis is a non-custodial Starknet app. It is not a licensed b",
-    "summary": "Enable private transactions on the STRK20 pool without revealing sensitive financial details.",
-    "description_long": "This dapp facilitates holding and sending STRK20 assets while keeping user financial information shielded. It utilizes a non-custodial architecture where the app never holds viewing keys, solving the challenge of maintaining user privacy in transactions. The implementation involves wallet integration, requiring users to approve transactions through a series of prompts to manage asset shielding and private transfers.",
-    "latest_push": "Fixed authorization issues and added AVNU private swap with server-side paymaster.",
-    "tooling": [
-      {
-        "label": "AVNU",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 25,
-    "deletions": 9,
-    "churn_pct": 1.4
   },
   {
     "slug": "veilcast",
