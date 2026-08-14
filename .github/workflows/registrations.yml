@@ -147,19 +147,6 @@ jobs:
               fi
             fi
 
-            cp "$RUNNER_TEMP/merged.json" registry.json
-
-            if ! node scripts/validate-registry.mjs; then
-              gh pr comment "$n" --body "\`registry.json\` does not validate, so this is not going in yet. Every problem is listed in the Registrations run - push a fix to this branch and it will be applied on its own."
-              git checkout --quiet -- registry.json
-              echo "::endgroup::"; continue
-            fi
-            if ! HISTORY_REF=origin/main node scripts/check-registry-retention.mjs; then
-              gh pr comment "$n" --body "Applying this would drop a project that is already in the table, so it is on hold. The Registrations run says which one and prints the entry to put back."
-              git checkout --quiet -- registry.json
-              echo "::endgroup::"; continue
-            fi
-
             # Credited to the person who wrote it. The numeric id is what makes
             # GitHub attach the co-authorship to their account.
             author_id=$(gh api "users/$author" --jq '.id' 2>/dev/null)
@@ -174,18 +161,48 @@ jobs:
               fi
             } > "$RUNNER_TEMP/message.txt"
 
-            git add registry.json
-            git commit --quiet -F "$RUNNER_TEMP/message.txt"
+            # Anything at all can land on main between reading it and pushing -
+            # another registration, a cron reindex, a maintainer. Deferring to
+            # "the next run" left #16 open indefinitely, because the thing that
+            # won the race did not touch registry.json and so started no run.
+            # Rebuild against the new main and try again instead.
+            sha=""
+            for attempt in 1 2 3; do
+              cp "$RUNNER_TEMP/merged.json" registry.json
 
-            if ! git push origin HEAD:main; then
-              # Something else moved main mid-run. Nothing is lost - the next
-              # run rebuilds this against whatever main says then.
-              echo "main moved while applying - will retry next run"
+              if ! node scripts/validate-registry.mjs; then
+                gh pr comment "$n" --body "\`registry.json\` does not validate, so this is not going in yet. Every problem is listed in the Registrations run - push a fix to this branch and it will be applied on its own."
+                git checkout --quiet -- registry.json
+                break
+              fi
+              if ! HISTORY_REF=origin/main node scripts/check-registry-retention.mjs; then
+                gh pr comment "$n" --body "Applying this would drop a project that is already in the table, so it is on hold. The Registrations run says which one and prints the entry to put back."
+                git checkout --quiet -- registry.json
+                break
+              fi
+
+              git add registry.json
+              git commit --quiet -F "$RUNNER_TEMP/message.txt"
+
+              if git push origin HEAD:main; then
+                sha=$(git rev-parse --short HEAD)
+                break
+              fi
+
+              echo "main moved while applying - rebuilding on top of it (attempt $attempt)"
               git fetch --quiet origin main && git reset --hard --quiet origin/main
-              echo "::endgroup::"; continue
+              cp registry.json "$RUNNER_TEMP/main.json"
+              # Re-resolve against the registry as it is now: whatever won the
+              # race may itself have added an entry this one has to sit after.
+              MAIN="$RUNNER_TEMP/main.json" BASE="$RUNNER_TEMP/base.json" HEAD="$RUNNER_TEMP/head.json" \
+                SUMMARY="$RUNNER_TEMP/summary.json" \
+                node scripts/merge-registry.mjs > "$RUNNER_TEMP/merged.json" || break
+            done
+
+            if [ -z "$sha" ]; then
+              echo "not applied this run"; echo "::endgroup::"; continue
             fi
 
-            sha=$(git rev-parse --short HEAD)
             {
               echo "Applied to main as \`${sha}\` - your project is on the hub within the half hour."
               echo
