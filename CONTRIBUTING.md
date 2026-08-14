@@ -2,7 +2,7 @@
 
 Thanks for building on the Starknet privacy pool. Everything here happens through pull requests.
 
-A valid pull request merges itself, usually within a minute, and your project is on the hub within the half hour. Merging puts your project on the hub and nothing else - it does not add you to the Telegram group, which you join yourself.
+A valid pull request merges itself, usually within a minute, and your project is on the hub within the half hour.
 
 ## Applying
 
@@ -30,7 +30,7 @@ If you do resolve one by hand, keep **every** entry from both sides. Taking one 
 Two are required:
 
 - **`repo_url`** - a public GitHub repository. The hub reads your commits, README, and manifests from it.
-- **`telegram`** - bare Telegram usernames, no `@` and no `t.me` links, one for each person on the team. This is how the STRK20 team reaches you during the sprint - about your entry, your submission, or a prize. It is not a group invite: joining the Telegram group is something you do yourself.
+- **`telegram`** - bare Telegram usernames, no `@` and no `t.me` links, one for each person on the team. This is how the STRK20 team reaches you during the sprint - about your entry, your submission, or a prize.
 
 The rest are optional, and only worth setting if the derived value is wrong:
 
