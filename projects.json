@@ -1,5 +1,87 @@
 [
   {
+    "slug": "quietline",
+    "name": "Quietline",
+    "one_liner": "Encrypted on-chain mail on Starknet. Payment memos ride the same private transfer.",
+    "category": "Other",
+    "repo_url": "https://github.com/gstohl/quietline",
+    "demo_url": "https://github.com/gstohl/quietline",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-01",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-14T19:40:27Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "gstohl",
+        "name": "gstohl",
+        "avatar_url": "https://avatars.githubusercontent.com/u/191050810?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14"
+    ],
+    "head_sha": "16a14209e86a473259a63224ccff9032fac89375",
+    "readme_hash": "8772:# Quietline\n\nEncrypted on-chain mail on Starknet.\n\nAddresses never appear on the message. Content decrypts only on the\nrecipient's device. A private transfer can carry a memo in the same\ntransaction —",
+    "churn_pct": 26.2,
+    "summary": "Send and receive encrypted messages on Starknet without revealing identities.",
+    "description_long": "Quietline allows users to send encrypted messages via Starknet, where both sender and recipient identities remain hidden. The project leverages privacy-enhancing techniques to ensure that messages are decrypted only on the recipient's device, with the added option to send payment memos in the same private transactions. This challenges developers to ensure security while functioning on a public chain, effectively balancing anonymity with usability.",
+    "latest_push": "Added chain evidence and mailbox restore UI along with escrow settlement.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 2062,
+    "deletions": 6,
+    "assessment": null
+  },
+  {
     "slug": "stake-wars",
     "name": "stake-wars",
     "one_liner": "",
@@ -20,7 +102,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-14T19:27:58Z",
+    "pushed_at": "2026-08-14T19:30:44Z",
     "stars": 0,
     "builders": [
       {
@@ -33,12 +115,12 @@
     "active_days": [
       "2026-08-14"
     ],
-    "head_sha": "b24d3da163c81b6fea72fe2e60546f6989d9ba59",
-    "readme_hash": "2609:# StakeWars\n\nStakeWars is a persistent Starknet staking game presented through a\nretro-futurist command interface. This repository contains the web application,\ngame API, and Dojo contracts.\n\n## Repos",
-    "churn_pct": 7,
-    "summary": "Create a persistent staking game in a retro-futurist interface.",
-    "description_long": "The project combines a web application built with React and TypeScript, along with a Go-based API and smart contracts written in Cairo. A significant challenge is ensuring the game operates smoothly on the Starknet blockchain, requiring effective deployment and management of the Dojo World and its assets.",
-    "latest_push": "Installed STRK20 privacy integration skill and added its project manifest.",
+    "head_sha": "84d909d10823aabd64f8cdf58cf7aed7c7331948",
+    "readme_hash": "2742:# StakeWars\n\nStakeWars is a persistent, non-custodial strategy game built around Starknet\nvalidator delegation. Operators allocate delegated STRK to capture and defend\nterritories on the Core, a 3D sp",
+    "churn_pct": 0.1,
+    "summary": "Build a non-custodial strategy game on Starknet.",
+    "description_long": "The project features a persistent game where operators allocate STRK for territory control on a 3D sphere. It is built using a stack that includes React and Go for the frontend and API, along with Cairo for smart contracts. The main challenge lies in integrating various components like the game API and smart contracts while ensuring a smooth user experience.",
+    "latest_push": "Updated the StakeWars description in the README.md file.",
     "tooling": [
       {
         "label": "Cairo",
@@ -47,8 +129,8 @@
       }
     ],
     "has_readme": true,
-    "additions": 930,
-    "deletions": 0,
+    "additions": 4,
+    "deletions": 3,
     "assessment": null
   },
   {
@@ -108,7 +190,6 @@
     ],
     "head_sha": "c10b8cf67761de92c30231477a2d460e2cb4ea9c",
     "readme_hash": "5451:# Cutout\n\n**A privacy-liquidity router for STRK20.**\n\nBefore you sign, Cutout works out whether your amount has meaningful public cover\nright now, and routes flexible transactions toward healthier exa",
-    "churn_pct": 0.5,
     "summary": "Provide privacy-liquidity routing for STRK20 transactions.",
     "description_long": "The project analyzes proposed transactions to assess their linkability based on historical deposit data. It returns a cohort quality report that helps users choose amounts with better privacy coverage, addressing the operational privacy gap that STRK20 faces. The challenge involves accurately measuring and reporting on exact-amount cohorts without claiming absolute anonymity.",
     "latest_push": "Recorded the completed private transfer flow in strk20.json.",
@@ -122,6 +203,7 @@
     "has_readme": true,
     "additions": 3,
     "deletions": 1,
+    "churn_pct": 0.5,
     "assessment": null
   },
   {
@@ -160,7 +242,6 @@
     ],
     "head_sha": "1784f20f345315db0e3cdf3f7254c0abf42c1286",
     "readme_hash": "11616:# stk402\n\nAmount-confidential STRK20 payments for x402 agents on Starknet.\n\nSTK402 adds an encrypted x402 payment scheme for STRK20. The agent and server exchange encrypted payment terms and receipt m",
-    "churn_pct": 1.5,
     "summary": "Enable encrypted STRK20 payments for x402 agents on Starknet.",
     "description_long": "This project implements a payment scheme that allows for encrypted transactions of STRK20 tokens between agents and a server using a secure protocol. It tackles the challenge of ensuring privacy for both payer and recipient by employing encryption methods like X25519 and AES-256-GCM to protect sensitive payment details from unauthorized access.",
     "latest_push": "Locked demo_url in docs and added content to /SKILL.md.",
@@ -184,6 +265,7 @@
     "has_readme": true,
     "additions": 104,
     "deletions": 12,
+    "churn_pct": 1.5,
     "assessment": null
   },
   {
@@ -484,88 +566,6 @@
     "additions": 1758,
     "deletions": 34,
     "churn_pct": 89.8,
-    "assessment": null
-  },
-  {
-    "slug": "quietline",
-    "name": "Quietline",
-    "one_liner": "Encrypted on-chain mail on Starknet. Payment memos ride the same private transfer.",
-    "category": "Other",
-    "repo_url": "https://github.com/gstohl/quietline",
-    "demo_url": "https://github.com/gstohl/quietline",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-01",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-14T17:09:46Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "gstohl",
-        "name": "gstohl",
-        "avatar_url": "https://avatars.githubusercontent.com/u/191050810?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14"
-    ],
-    "head_sha": "d9f5a7a4fa70ab61989c6a56a4bd4bbb0ca9e973",
-    "readme_hash": "8772:# Quietline\n\nEncrypted on-chain mail on Starknet.\n\nAddresses never appear on the message. Content decrypts only on the\nrecipient's device. A private transfer can carry a memo in the same\ntransaction —",
-    "summary": "Send and receive encrypted messages on Starknet without revealing identities.",
-    "description_long": "Quietline allows users to send encrypted messages via Starknet, where both sender and recipient identities remain hidden. The project leverages privacy-enhancing techniques to ensure that messages are decrypted only on the recipient's device, with the added option to send payment memos in the same private transactions. This challenges developers to ensure security while functioning on a public chain, effectively balancing anonymity with usability.",
-    "latest_push": "Added versioned mail envelopes and implemented idempotent OTC deal flows.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 4143,
-    "deletions": 148,
-    "churn_pct": 67.8,
     "assessment": null
   },
   {
