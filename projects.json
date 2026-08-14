@@ -1,5 +1,129 @@
 [
   {
+    "slug": "noxis",
+    "name": "noxis",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/Shadow-MMN/noxis",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-14T15:38:46Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Shadow-MMN",
+        "name": "Shadow-MMN",
+        "avatar_url": "https://avatars.githubusercontent.com/u/183208511?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14"
+    ],
+    "head_sha": "b7865367f7d263077368795c808a018b05706d53",
+    "readme_hash": "1962:# Noxis\n\n**Private payments on Starknet.**\n\nNoxis is a private payments app built for the [STRK20 Private Sprint](https://github.com/starkience/strk20-hackathon). It lets you hold, send, and receive S",
+    "churn_pct": 71.2,
+    "summary": "Facilitate private payments on Starknet with enhanced confidentiality.",
+    "description_long": "The project allows users to deposit STRK into a privacy pool, minting private notes for confidential transactions. It addresses the challenge of maintaining transaction privacy while ensuring some public visibility of transaction activity. Features include secure unshielding of notes to new accounts and private transfers without revealing sender or recipient details.",
+    "latest_push": "Added Noxis branding, MIT license, and strk20.json progress file.",
+    "tooling": [
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 65,
+    "deletions": 23,
+    "assessment": null
+  },
+  {
+    "slug": "envelope",
+    "name": "envelope",
+    "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
+    "category": "Payments",
+    "repo_url": "https://github.com/0xrlawrence/envelope",
+    "demo_url": "https://0xrlawrence.github.io/envelope/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-09",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x04ff4f083a4667930efe14963645f9bda00bb10d44e4c13a9ee808e66c076211",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-14T15:36:40Z",
+    "stars": 1,
+    "builders": [
+      {
+        "login": "0xrlawrence",
+        "name": "0xrlawrence",
+        "avatar_url": "https://avatars.githubusercontent.com/u/250132405?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14"
+    ],
+    "head_sha": "febd16f6cccaf1a43800fe0f4bc5ccd39ae67e41",
+    "readme_hash": "6582:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
+    "churn_pct": 4.3,
+    "summary": "Send private money as a link to anyone without requiring prior registration.",
+    "description_long": "The project implements a STRK20 anonymizer contract that allows users to shield tokens, seal them in an envelope, and send a link to the recipient. This approach solves the problem of private transfers on Starknet where the recipient does not need to be a registered user, thus allowing seamless payments to anyone while protecting the identity of the sender through the use of secure cryptographic signatures.",
+    "latest_push": "Stopped sending an envelope that the user already cancelled.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 178,
+    "deletions": 64,
+    "assessment": null
+  },
+  {
     "slug": "paybook",
     "name": "Paybook",
     "one_liner": "Private payroll with scoped disclosure. Public can verify a run; only the payee or auditor can open a slice.",
@@ -35,7 +159,6 @@
     ],
     "head_sha": "b90eda36ba1731973275354f07ad4d1cf8cff96b",
     "readme_hash": "1692:# Paybook\n\nPrivate payroll with scoped disclosure on [STRK20](https://strk20.starknet.io).\n\nA company pays people from a shielded treasury. The public can verify that a run happened and, optionally, t",
-    "churn_pct": 20,
     "summary": "Manage private payroll with selective visibility for verification.",
     "description_long": "A company makes payroll payments from a shielded treasury, allowing public verification of the transaction while keeping individual salaries confidential. Employees and specified auditors can access only the information they are permitted to see, addressing the challenge of privacy in payroll processes. The project employs the STRK20 protocol to ensure secure payroll commitments without exposing sensitive details.",
     "latest_push": "Added a cinematic landing, shared app shell, and Sepolia wallet connection.",
@@ -54,68 +177,7 @@
     "has_readme": true,
     "additions": 444,
     "deletions": 60,
-    "assessment": null
-  },
-  {
-    "slug": "envelope",
-    "name": "envelope",
-    "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
-    "category": "Payments",
-    "repo_url": "https://github.com/0xrlawrence/envelope",
-    "demo_url": "https://0xrlawrence.github.io/envelope/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-09",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x04ff4f083a4667930efe14963645f9bda00bb10d44e4c13a9ee808e66c076211",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-14T15:07:58Z",
-    "stars": 1,
-    "builders": [
-      {
-        "login": "0xrlawrence",
-        "name": "0xrlawrence",
-        "avatar_url": "https://avatars.githubusercontent.com/u/250132405?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14"
-    ],
-    "head_sha": "9b99a622399a4441e9d8a867c6bd7513d744a8da",
-    "readme_hash": "6582:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
-    "summary": "Send private money as a link to anyone without requiring prior registration.",
-    "description_long": "The project implements a STRK20 anonymizer contract that allows users to shield tokens, seal them in an envelope, and send a link to the recipient. This approach solves the problem of private transfers on Starknet where the recipient does not need to be a registered user, thus allowing seamless payments to anyone while protecting the identity of the sender through the use of secure cryptographic signatures.",
-    "latest_push": "Folded the dart from a real airmail envelope and printed the amount on it.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 311,
-    "deletions": 100,
-    "churn_pct": 7.8,
+    "churn_pct": 20,
     "assessment": null
   },
   {
