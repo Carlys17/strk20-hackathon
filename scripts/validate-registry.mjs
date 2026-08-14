@@ -139,6 +139,15 @@ registry.forEach((entry, i) => {
      demo video live in the team's own strk20.json, and the hub derives whether
      a project is submitted from what it can actually verify - so there is no
      second pull request to police. */
+  /* Not a field anyone can set on themselves. Said plainly here rather than
+     silently dropped, so nobody sets it, sees no star, and assumes the build
+     is broken. */
+  for (const editorial of ["starred", "star_reason", "spotlight"]) {
+    if (entry[editorial] !== undefined) {
+      notes.push(`${where}: "${editorial}" is not read from registry.json - the star is ours to give, and it is ignored here.`);
+    }
+  }
+
   for (const moved of ["starknet_address", "transactions", "contracts", "demo_url", "demo_video", "status"]) {
     if (entry[moved] !== undefined) {
       notes.push(`${where}: "${moved}" moved to strk20.json in your own repository - it is ignored here. See CONTRIBUTING.md.`);

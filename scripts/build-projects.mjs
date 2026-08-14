@@ -48,6 +48,52 @@ const warn = (msg) => { warnings.push(msg); console.warn(`  warn: ${msg}`); };
 
 const REGISTRY_URL = new URL("../registry.json", import.meta.url);
 const PROJECTS_URL = new URL("../projects.json", import.meta.url);
+const SPOTLIGHT_URL = new URL("../spotlight.json", import.meta.url);
+
+/* The star is an editorial pick, not a measurement. Innovation is half of what
+ * it is meant to say, and nothing in a repository measures that - anything
+ * derived would be a score wearing a star's clothes, with all the ranking and
+ * gaming that comes with a score.
+ *
+ * It lives in its own file for one reason: a team may edit its own row in
+ * registry.json, so a flag kept there is a flag a project can award itself.
+ * The registrations bot only ever applies pull requests whose sole file is
+ * registry.json, so this one cannot be touched from a fork.
+ *
+ *   [{ "repo_url": "https://github.com/team/project", "reason": "why" }]
+ */
+function loadSpotlight() {
+  if (!existsSync(SPOTLIGHT_URL)) return new Map();
+  let parsed;
+  try {
+    parsed = JSON.parse(readFileSync(SPOTLIGHT_URL, "utf8"));
+  } catch (e) {
+    warn(`spotlight.json is not valid JSON (${e.message}) - no project is starred this run`);
+    return new Map();
+  }
+  if (!Array.isArray(parsed)) {
+    warn("spotlight.json must be an array - no project is starred this run");
+    return new Map();
+  }
+  const out = new Map();
+  for (const item of parsed) {
+    const key = repoKey(item?.repo_url);
+    if (!key) {
+      warn(`spotlight.json entry without a usable repo_url - skipped`);
+      continue;
+    }
+    out.set(key, typeof item?.reason === "string" ? item.reason.trim() : "");
+  }
+  return out;
+}
+
+/* owner/repo, lowercased - the same identity registry.json entries are keyed
+   on elsewhere, so a spotlight entry keeps working through a rename of case. */
+function repoKey(url) {
+  if (typeof url !== "string") return null;
+  const m = url.trim().match(/^(?:https?:\/\/)?(?:www\.)?github\.com[/:]([^/\s]+)\/([^/?#\s]+)/i);
+  return m ? `${m[1]}/${m[2].replace(/\.git$/i, "")}`.toLowerCase() : null;
+}
 
 /* ---------- GitHub ---------- */
 
@@ -672,6 +718,11 @@ async function buildProject(entry, prev) {
        They exist so the team can reach a project's builders, not to be
        published on a page anyone can scrape. */
     inspired_by: entry.inspired_by || "",
+    /* Read from spotlight.json, never from the entry - a team editing its own
+       row must not be able to star itself. An entry that sets "starred" is
+       ignored here and told so by validate-registry.mjs. */
+    starred: SPOTLIGHT.has(repoKey(entry.repo_url)),
+    star_reason: SPOTLIGHT.get(repoKey(entry.repo_url)) || "",
     contracts,
     transactions,
     verified_txs: verifiedTxs,
@@ -802,6 +853,9 @@ async function buildProject(entry, prev) {
 }
 
 /* ---------- run ---------- */
+
+const SPOTLIGHT = loadSpotlight();
+if (SPOTLIGHT.size) console.log(`starred: ${[...SPOTLIGHT.keys()].join(", ")}`);
 
 const registry = JSON.parse(readFileSync(REGISTRY_URL, "utf8"));
 if (!Array.isArray(registry)) {
