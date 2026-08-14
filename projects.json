@@ -45,7 +45,7 @@
       "mainnet": true
     },
     "status": "building",
-    "pushed_at": "2026-08-14T21:55:33Z",
+    "pushed_at": "2026-08-14T22:04:41Z",
     "stars": 0,
     "builders": [
       {
@@ -59,18 +59,18 @@
         "family": "Cursor",
         "name": "Cursor",
         "avatar_url": "",
-        "commits": 12
+        "commits": 18
       }
     ],
     "active_days": [
       "2026-08-14"
     ],
-    "head_sha": "5e48da005b309b5315a26c09d9a722fa39e7a79c",
-    "readme_hash": "2706:# Redpocket\n\nPassword Redpockets on Starknet [STRK20](https://strk20.starknet.io/hackathon). Claims settle into a shielded balance.\n\nStealth is the default, not a second product: send and claim both g",
-    "churn_pct": 1.6,
-    "summary": "Distribute passwords as red packets for confidential claims.",
-    "description_long": "This project allows hosts to create password-protected red packets that users can claim discreetly. It leverages the Starknet Wallet API and a privacy anonymizer to ensure that each address can claim only once, using a digest system that prevents password exposure. The implementation includes a unique Merkle tree structure for secure ticket management and verification, ensuring user privacy throughout the process.",
-    "latest_push": "Read shielded balances from Ready once without guessing the amount.",
+    "head_sha": "b677d62ae6506e2975b961b465390083b0df8437",
+    "readme_hash": "4046:# Redpocket\n\nLive demo: [https://redpocket-virid.vercel.app/](https://redpocket-virid.vercel.app/) — Ready wallet, Starknet Mainnet.\n\nDrop a password into a group chat. People race to claim. The money",
+    "churn_pct": 0.8,
+    "summary": "Distribute money privately via password-protected claims in group chats.",
+    "description_long": "The project enables users to drop a password into a group chat, allowing participants to race for claims that land in a shielded STRK20 balance. It utilizes a Merkle tree to ensure that while the total claimed amount is visible, individual claims remain anonymous, solving the issue of public payout visibility in group transactions. Two claiming modes—equal split and lucky draw—add flexibility, enhancing user engagement without revealing sensitive information.",
+    "latest_push": "Linked the live Mainnet demo in the README and reorganized its content.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -104,8 +104,8 @@
       }
     ],
     "has_readme": true,
-    "additions": 9,
-    "deletions": 49,
+    "additions": 24,
+    "deletions": 6,
     "assessment": null
   },
   {
@@ -144,7 +144,6 @@
     ],
     "head_sha": "eb2718de7059e787f6823abb742b7d1ba22ee0d6",
     "readme_hash": "4089:# STRK20 Privacy Sentinel\n\n> An MCP-powered privacy analytics agent for monitoring and managing shielded DeFi positions on Starknet using the STRK20 privacy pool.\n\n## Problem\n\nDeFi users on Starknet w",
-    "churn_pct": 100,
     "summary": "Monitor and manage shielded DeFi positions on Starknet.",
     "description_long": "This project provides an autonomous agent to track shielded balances and private transfers in the STRK20 privacy pool. It addresses the challenge of visibility for DeFi users by detecting anomalies in transactions and generating compliance reports, thus ensuring ongoing portfolio management and risk monitoring.",
     "latest_push": "Created the STRK20 Privacy Sentinel as an initial commit.",
@@ -152,6 +151,7 @@
     "has_readme": true,
     "additions": 469,
     "deletions": 0,
+    "churn_pct": 100,
     "assessment": null
   },
   {
@@ -301,7 +301,7 @@
     "churn_pct": 0.3,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added Offbook landing and dashboard UI with associated functionality.",
+    "latest_push": "Added Offbook landing and dashboard UI along with new helper contracts.",
     "tooling": [
       {
         "label": "Cairo",
