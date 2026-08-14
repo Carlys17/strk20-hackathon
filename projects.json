@@ -20,7 +20,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-14T19:40:27Z",
+    "pushed_at": "2026-08-14T20:26:25Z",
     "stars": 0,
     "builders": [
       {
@@ -33,11 +33,12 @@
     "active_days": [
       "2026-08-14"
     ],
-    "head_sha": "16a14209e86a473259a63224ccff9032fac89375",
+    "head_sha": "ab84d67afe93a44c5350d086cbd18f39e189a9f2",
     "readme_hash": "8772:# Quietline\n\nEncrypted on-chain mail on Starknet.\n\nAddresses never appear on the message. Content decrypts only on the\nrecipient's device. A private transfer can carry a memo in the same\ntransaction —",
+    "churn_pct": 20.8,
     "summary": "Send and receive encrypted messages on Starknet without revealing identities.",
     "description_long": "Quietline allows users to send encrypted messages via Starknet, where both sender and recipient identities remain hidden. The project leverages privacy-enhancing techniques to ensure that messages are decrypted only on the recipient's device, with the added option to send payment memos in the same private transactions. This challenges developers to ensure security while functioning on a public chain, effectively balancing anonymity with usability.",
-    "latest_push": "Added chain evidence and mailbox restore UI along with escrow settlement.",
+    "latest_push": "Fixed the batch shape of the STRK20 helper action.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -76,9 +77,95 @@
       }
     ],
     "has_readme": true,
-    "additions": 2062,
-    "deletions": 6,
-    "churn_pct": 26.2,
+    "additions": 1470,
+    "deletions": 349,
+    "assessment": null
+  },
+  {
+    "slug": "tx404",
+    "name": "Tx404",
+    "one_liner": "Non-custodial shielding API/SDK: drop shield, unshield, and private-transfer into any app without touching a viewing key.",
+    "category": "Infra",
+    "repo_url": "https://github.com/Abhyudday/tx404",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-26",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-14T20:21:54Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Abhyudday",
+        "name": "Abhyuday Pratap Singh",
+        "avatar_url": "https://avatars.githubusercontent.com/u/76898190?v=4"
+      },
+      {
+        "login": "PhilippeR26",
+        "name": "PhilippeR26",
+        "avatar_url": "https://avatars.githubusercontent.com/u/81040730?v=4"
+      },
+      {
+        "login": "Akashneelesh",
+        "name": "Akashneelesh",
+        "avatar_url": "https://avatars.githubusercontent.com/u/66639153?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14"
+    ],
+    "head_sha": "0a80c1846c08367bb441ec94760d9cc269f0de6b",
+    "readme_hash": "2605:# Tx404\n\nTx404 is a non-custodial shielding API/SDK: drop shield, unshield, and private-transfer into any app without touching a viewing key. It provides core STRK20 privacy primitives through the Sta",
+    "churn_pct": 62.3,
+    "summary": "Provide non-custodial shielding API for private transfers in apps.",
+    "description_long": "The project offers a non-custodial API/SDK that enables the shielding, unshielding, and private transferring of funds within applications without handling viewing keys. It integrates with the Starknet Wallet API to execute actions securely, signing each transaction with the user's own privacy-enabled wallet. A key technical challenge is ensuring that the backend does not hold any sensitive user information while providing the necessary functionality for privacy in DeFi applications.",
+    "latest_push": "Initialized Tx404 and added the STRK20 favicon and its metadata.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1052,
+    "deletions": 14,
     "assessment": null
   },
   {
@@ -117,7 +204,6 @@
     ],
     "head_sha": "b9598080ea35d0a64a967f607bee334533e1e0bd",
     "readme_hash": "6623:# CipherPay STRK20 Private Payroll\n\nCipherPay is a staged Starknet payroll-disbursement application. Phase 1 provides a real interactive STRK20 payroll flow through Starknet.js `WalletAccountV6`; real",
-    "churn_pct": 0.1,
     "summary": "Process payroll disbursements using STRK20 on Starknet.",
     "description_long": "The project implements a staged payroll-disbursement system utilizing Starknet.js WalletAccountV6 for STRK20 token transfers. It focuses on securely confirming payroll transactions through a dual-requirement setup: a specific transaction hash and a configured-RPC receipt to verify completion, addressing challenges with wallet broadcast failures. The application emphasizes strict security protocols to ensure sensitive data does not reside on the server, and employs a background worker for handling payroll confirmations accurately.",
     "latest_push": "Polished the landing page and saved recipient flow.",
@@ -161,6 +247,7 @@
     "has_readme": true,
     "additions": 9,
     "deletions": 8,
+    "churn_pct": 0.1,
     "assessment": null
   },
   {
