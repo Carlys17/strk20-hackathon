@@ -1,5 +1,71 @@
 [
   {
+    "slug": "envelope",
+    "name": "envelope",
+    "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
+    "category": "Payments",
+    "repo_url": "https://github.com/0xrlawrence/envelope",
+    "demo_url": "https://0xrlawrence.github.io/envelope/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-09",
+    "contracts": [
+      {
+        "address": "0x04ff4f083a4667930efe14963645f9bda00bb10d44e4c13a9ee808e66c076211",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-14T14:13:48Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "0xrlawrence",
+        "name": "0xrlawrence",
+        "avatar_url": "https://avatars.githubusercontent.com/u/250132405?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude",
+        "avatar_url": "https://avatars.githubusercontent.com/u/81847?v=4",
+        "commits": 1
+      }
+    ],
+    "active_days": [
+      "2026-08-14"
+    ],
+    "head_sha": "3890d2d13960ce7147d0e5ba12fbc41d455e97cd",
+    "readme_hash": "6582:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
+    "churn_pct": 3,
+    "summary": "Send private money as a link to anyone without requiring prior registration.",
+    "description_long": "The project implements a STRK20 anonymizer contract that allows users to shield tokens, seal them in an envelope, and send a link to the recipient. This approach solves the problem of private transfers on Starknet where the recipient does not need to be a registered user, thus allowing seamless payments to anyone while protecting the identity of the sender through the use of secure cryptographic signatures.",
+    "latest_push": "Implemented logic for handling seal and dart interactions in claims.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 109,
+    "deletions": 47
+  },
+  {
     "slug": "veyl",
     "name": "Veyl",
     "one_liner": "Private launch & trading terminal on Starknet — trade and launch tokens through unlinkable execution identities funded by the STRK20 pool.",
@@ -33,7 +99,6 @@
     ],
     "head_sha": "2b192bcce65c24671faac25840763c6008dfcf12",
     "readme_hash": "5421:<div align=\"center\">\n\n# Veyl\n\n**A private launch & trading terminal on Starknet.**\n\nTrade and launch tokens without your wallet becoming a target — funded through the [STRK20](https://strk20-by-exampl",
-    "churn_pct": 6.8,
     "summary": "Enable private trading and launching of tokens on Starknet.",
     "description_long": "This project allows traders to operate without revealing their identities by using unlinkable execution identities funded through the STRK20 privacy pool. It addresses the problem of on-chain trading history being exposed to bots by implementing shielded funding and sealed-bid fair launches, ensuring that trades remain anonymous while still functioning on the blockchain.",
     "latest_push": "Rebranded the shielded-flow UI for Veyl and verified the build.",
@@ -71,7 +136,8 @@
     ],
     "has_readme": true,
     "additions": 109,
-    "deletions": 8
+    "deletions": 8,
+    "churn_pct": 6.8
   },
   {
     "slug": "quietline",
@@ -301,6 +367,47 @@
     "churn_pct": 0.4
   },
   {
+    "slug": "offbook",
+    "name": "offbook",
+    "one_liner": "a private OTC settlement layer for Starknet, Counterparties agree a token-for-token block trade (RFQ), then settle atomically through STRK20",
+    "category": "DeFi",
+    "repo_url": "https://github.com/Akinbola247/offbook",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-05",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-14T12:03:04Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "iamkenzman",
+        "name": "iamkenzman",
+        "avatar_url": "https://github.com/iamkenzman.png"
+      }
+    ],
+    "agents": [],
+    "active_days": [],
+    "head_sha": null,
+    "readme_hash": "",
+    "churn_pct": 0,
+    "summary": "",
+    "description_long": "",
+    "latest_push": "",
+    "tooling": [],
+    "has_readme": false,
+    "additions": 0,
+    "deletions": 0
+  },
+  {
     "slug": "cutout",
     "name": "Cutout",
     "one_liner": "A privacy-liquidity router for STRK20. Before you sign, it checks whether your amount has meaningful public cover and routes flexible transactions toward healthier exact-amount cohorts.",
@@ -342,72 +449,6 @@
     "additions": 1,
     "deletions": 1,
     "churn_pct": 0.8
-  },
-  {
-    "slug": "envelope",
-    "name": "envelope",
-    "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
-    "category": "Payments",
-    "repo_url": "https://github.com/0xrlawrence/envelope",
-    "demo_url": "https://0xrlawrence.github.io/envelope/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-09",
-    "contracts": [
-      {
-        "address": "0x04ff4f083a4667930efe14963645f9bda00bb10d44e4c13a9ee808e66c076211",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-14T11:08:24Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "0xrlawrence",
-        "name": "Ralph Lawrence",
-        "avatar_url": "https://avatars.githubusercontent.com/u/250132405?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude",
-        "avatar_url": "https://avatars.githubusercontent.com/u/81847?v=4",
-        "commits": 48
-      }
-    ],
-    "active_days": [
-      "2026-08-14"
-    ],
-    "head_sha": "e08de5174c36e68496b48cd0e03b5a0d988f9cb6",
-    "readme_hash": "6582:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
-    "summary": "Send private money as a link to anyone without requiring prior registration.",
-    "description_long": "The project implements a STRK20 anonymizer contract that allows users to shield tokens, seal them in an envelope, and send a link to the recipient. This approach solves the problem of private transfers on Starknet where the recipient does not need to be a registered user, thus allowing seamless payments to anyone while protecting the identity of the sender through the use of secure cryptographic signatures.",
-    "latest_push": "Implemented various enhancements to the claim and envelope handling logic.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 109,
-    "deletions": 47,
-    "churn_pct": 3
   },
   {
     "slug": "stk402",
