@@ -1,5 +1,206 @@
 [
   {
+    "slug": "envelope",
+    "name": "envelope",
+    "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
+    "category": "Payments",
+    "repo_url": "https://github.com/0xrlawrence/envelope",
+    "demo_url": "https://0xrlawrence.github.io/envelope/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-09",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x04ff4f083a4667930efe14963645f9bda00bb10d44e4c13a9ee808e66c076211",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-14T18:39:25Z",
+    "stars": 1,
+    "builders": [
+      {
+        "login": "0xrlawrence",
+        "name": "0xrlawrence",
+        "avatar_url": "https://avatars.githubusercontent.com/u/250132405?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14"
+    ],
+    "head_sha": "74d74d7db6ca0884ec3c149d21a942c0da195f0f",
+    "readme_hash": "6582:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
+    "churn_pct": 1,
+    "summary": "Send private money as a link to anyone without requiring prior registration.",
+    "description_long": "The project implements a STRK20 anonymizer contract that allows users to shield tokens, seal them in an envelope, and send a link to the recipient. This approach solves the problem of private transfers on Starknet where the recipient does not need to be a registered user, thus allowing seamless payments to anyone while protecting the identity of the sender through the use of secure cryptographic signatures.",
+    "latest_push": "Added redirect handling in the wrong-link routes and improved return logic.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 53,
+    "deletions": 13,
+    "assessment": null
+  },
+  {
+    "slug": "stk402",
+    "name": "stk402",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/Sarthib7/stk402",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-14T18:32:20Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Sarthib7",
+        "name": "sarthib7",
+        "avatar_url": "https://avatars.githubusercontent.com/u/112841873?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14"
+    ],
+    "head_sha": "0c6a5ac2d4d241ff8b040854908da20602b18919",
+    "readme_hash": "11558:# stk402\n\nAmount-confidential STRK20 payments for x402 agents on Starknet.\n\nSTK402 adds an encrypted x402 payment scheme for STRK20. The agent and server exchange encrypted payment terms and receipt m",
+    "churn_pct": 100,
+    "summary": "Enable encrypted STRK20 payments for x402 agents on Starknet.",
+    "description_long": "The project implements a scheme for amount-confidential STRK20 payments where agents and servers exchange encrypted payment metadata. It utilizes X25519, HKDF-SHA256, and AES-256-GCM for encryption, ensuring that sensitive payment details remain private and secure during the transaction process while offering a mechanism to verify signed receipts to prevent replay attacks.",
+    "latest_push": "Encrypted x402 payment metadata and scaffolded consumer pay web app.",
+    "tooling": [
+      {
+        "label": "Privacy SDK",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 8958,
+    "deletions": 270,
+    "assessment": null
+  },
+  {
+    "slug": "neobank",
+    "name": "Private money account",
+    "one_liner": "Hold, send, and earn on STRK20 without publishing salary or net worth.",
+    "category": "Consumer",
+    "repo_url": "https://github.com/kamalbuilds/neobank",
+    "demo_url": "https://neobank-six.vercel.app",
+    "demo_video": "",
+    "x_handle": "kamalbuilds",
+    "inspired_by": "IDEA-13",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-14T18:02:59Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "kamalbuilds",
+        "name": "kamalbuilds",
+        "avatar_url": "https://avatars.githubusercontent.com/u/95926324?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14"
+    ],
+    "head_sha": "968dfea0ffb85e6fb102c83e5a5353fab45e1361",
+    "readme_hash": "4187:# Private money account\n\nHold and send on the live STRK20 pool without publishing salary or net worth. Yield is planned, not in this repo.\n\nFirst mainnet shield is live: [`0x04c4bea05417ce1062adef39b3",
+    "churn_pct": 12.8,
+    "summary": "Manage private transactions on the STRK20 pool without disclosing personal financial information.",
+    "description_long": "This project allows users to hold and send digital assets while keeping their transactions private. It leverages a non-custodial Starknet application to shield and unshield USDC or STRK, addressing the challenge of maintaining anonymity in financial operations while still allowing for necessary deposit and withdrawal visibility.",
+    "latest_push": "Logged issuer form fills in the neobank Brave profile.",
+    "tooling": [
+      {
+        "label": "AVNU",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 511,
+    "deletions": 1,
+    "assessment": null
+  },
+  {
     "slug": "cutout",
     "name": "Cutout",
     "one_liner": "A privacy-liquidity router for STRK20. Before you sign, it checks whether your amount has meaningful public cover and routes flexible transactions toward healthier exact-amount cohorts.",
@@ -46,7 +247,6 @@
     ],
     "head_sha": "9b1414515966b655c79cebe2b01bf3984e67390e",
     "readme_hash": "5451:# Cutout\n\n**A privacy-liquidity router for STRK20.**\n\nBefore you sign, Cutout works out whether your amount has meaningful public cover\nright now, and routes flexible transactions toward healthier exa",
-    "churn_pct": 0.6,
     "summary": "Provide privacy-liquidity routing for STRK20 transactions.",
     "description_long": "The project analyzes proposed transactions to assess their linkability based on historical deposit data. It returns a cohort quality report that helps users choose amounts with better privacy coverage, addressing the operational privacy gap that STRK20 faces. The challenge involves accurately measuring and reporting on exact-amount cohorts without claiming absolute anonymity.",
     "latest_push": "Recorded verified STRK20 mainnet transactions in strk20.json.",
@@ -60,145 +260,7 @@
     "has_readme": true,
     "additions": 4,
     "deletions": 1,
-    "assessment": null
-  },
-  {
-    "slug": "neobank",
-    "name": "Private money account",
-    "one_liner": "Hold, send, and earn on STRK20 without publishing salary or net worth.",
-    "category": "Consumer",
-    "repo_url": "https://github.com/kamalbuilds/neobank",
-    "demo_url": "https://neobank-six.vercel.app",
-    "demo_video": "",
-    "x_handle": "kamalbuilds",
-    "inspired_by": "IDEA-13",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-14T17:45:34Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "kamalbuilds",
-        "name": "kamalbuilds",
-        "avatar_url": "https://avatars.githubusercontent.com/u/95926324?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14"
-    ],
-    "head_sha": "7af92554d693bc26bccf1e247f4e179f9a0e90a2",
-    "readme_hash": "4187:# Private money account\n\nHold and send on the live STRK20 pool without publishing salary or net worth. Yield is planned, not in this repo.\n\nFirst mainnet shield is live: [`0x04c4bea05417ce1062adef39b3",
-    "churn_pct": 2.7,
-    "summary": "Manage private transactions on the STRK20 pool without disclosing personal financial information.",
-    "description_long": "This project allows users to hold and send digital assets while keeping their transactions private. It leverages a non-custodial Starknet application to shield and unshield USDC or STRK, addressing the challenge of maintaining anonymity in financial operations while still allowing for necessary deposit and withdrawal visibility.",
-    "latest_push": "Locked card last mile as CCTP hop in CARD_LAST_MILE.md.",
-    "tooling": [
-      {
-        "label": "AVNU",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 96,
-    "deletions": 0,
-    "assessment": null
-  },
-  {
-    "slug": "envelope",
-    "name": "envelope",
-    "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
-    "category": "Payments",
-    "repo_url": "https://github.com/0xrlawrence/envelope",
-    "demo_url": "https://0xrlawrence.github.io/envelope/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-09",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x04ff4f083a4667930efe14963645f9bda00bb10d44e4c13a9ee808e66c076211",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-14T17:45:33Z",
-    "stars": 1,
-    "builders": [
-      {
-        "login": "0xrlawrence",
-        "name": "0xrlawrence",
-        "avatar_url": "https://avatars.githubusercontent.com/u/250132405?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14"
-    ],
-    "head_sha": "003b775b965fd80950a2ab42c49d6779502251b9",
-    "readme_hash": "6582:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
-    "churn_pct": 0.2,
-    "summary": "Send private money as a link to anyone without requiring prior registration.",
-    "description_long": "The project implements a STRK20 anonymizer contract that allows users to shield tokens, seal them in an envelope, and send a link to the recipient. This approach solves the problem of private transfers on Starknet where the recipient does not need to be a registered user, thus allowing seamless payments to anyone while protecting the identity of the sender through the use of secure cryptographic signatures.",
-    "latest_push": "Recognised a declined wallet request by its code.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 14,
-    "deletions": 1,
+    "churn_pct": 0.6,
     "assessment": null
   },
   {
@@ -793,68 +855,6 @@
     "has_readme": true,
     "additions": 3,
     "deletions": 3,
-    "churn_pct": 0.4,
-    "assessment": null
-  },
-  {
-    "slug": "stk402",
-    "name": "stk402",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/Sarthib7/stk402",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-14T09:28:43Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Sarthib7",
-        "name": "sarthib7",
-        "avatar_url": "https://avatars.githubusercontent.com/u/112841873?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14"
-    ],
-    "head_sha": "761f44b97fe6ba69d247e6751fb6b3f19e8addc5",
-    "readme_hash": "8086:# stk402\n\nPrivate STRK20 payments for x402 agents on Starknet.\n\nSTK402 adds an `exact-private` x402 payment scheme. An agent pays with a private STRK20 transfer. The server verifies the signed receipt",
-    "summary": "Implement private STRK20 payments for x402 agents on Starknet.",
-    "description_long": "This project creates an `exact-private` payment scheme for x402 agents using private STRK20 transfers. It involves the verification of signed receipts and prevention of replay attacks while ensuring secure resource retrieval after payment. The system operates within a Devnet environment and includes planned future functions for Sepolia and Mainnet operations.",
-    "latest_push": "Added safe private balance funding and client for payments.",
-    "tooling": [
-      {
-        "label": "Privacy SDK",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 21,
-    "deletions": 0,
     "churn_pct": 0.4,
     "assessment": null
   },
