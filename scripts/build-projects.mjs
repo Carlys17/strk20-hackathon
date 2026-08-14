@@ -48,53 +48,6 @@ const warn = (msg) => { warnings.push(msg); console.warn(`  warn: ${msg}`); };
 
 const REGISTRY_URL = new URL("../registry.json", import.meta.url);
 const PROJECTS_URL = new URL("../projects.json", import.meta.url);
-const SPOTLIGHT_URL = new URL("../spotlight.json", import.meta.url);
-
-/* The star is an editorial pick, not a measurement. Innovation is half of what
- * it is meant to say, and nothing in a repository measures that - anything
- * derived would be a score wearing a star's clothes, with all the ranking and
- * gaming that comes with a score.
- *
- * It lives in its own file for one reason: a team may edit its own row in
- * registry.json, so a flag kept there is a flag a project can award itself.
- * The registrations bot only ever applies pull requests whose sole file is
- * registry.json, so this one cannot be touched from a fork.
- *
- *   [{ "repo_url": "https://github.com/team/project", "reason": "why" }]
- */
-function loadSpotlight() {
-  if (!existsSync(SPOTLIGHT_URL)) return new Map();
-  let parsed;
-  try {
-    parsed = JSON.parse(readFileSync(SPOTLIGHT_URL, "utf8"));
-  } catch (e) {
-    warn(`spotlight.json is not valid JSON (${e.message}) - no project is starred this run`);
-    return new Map();
-  }
-  if (!Array.isArray(parsed)) {
-    warn("spotlight.json must be an array - no project is starred this run");
-    return new Map();
-  }
-  const out = new Map();
-  for (const item of parsed) {
-    const key = repoKey(item?.repo_url);
-    if (!key) {
-      warn(`spotlight.json entry without a usable repo_url - skipped`);
-      continue;
-    }
-    out.set(key, typeof item?.reason === "string" ? item.reason.trim() : "");
-  }
-  return out;
-}
-
-/* owner/repo, lowercased - the same identity registry.json entries are keyed
-   on elsewhere, so a spotlight entry keeps working through a rename of case. */
-function repoKey(url) {
-  if (typeof url !== "string") return null;
-  const m = url.trim().match(/^(?:https?:\/\/)?(?:www\.)?github\.com[/:]([^/\s]+)\/([^/?#\s]+)/i);
-  return m ? `${m[1]}/${m[2].replace(/\.git$/i, "")}`.toLowerCase() : null;
-}
-
 /* ---------- GitHub ---------- */
 
 async function gh(path) {
@@ -607,6 +560,45 @@ async function openai(system, user, maxTokens = 300) {
   }
 }
 
+/* ---------- the star ---------- */
+
+/* Five criteria. Three are facts this script already establishes - a live demo,
+ * a demo video, three transactions verified against the pool on-chain - and two
+ * are judgements only a reader of the code can make.
+ *
+ * The judgement half is a model, and a model is not a measurement. Two things
+ * keep it honest enough to hang a public mark on:
+ *
+ *   - It is anchored. The prompt carries the contracts, the languages and the
+ *     dependencies this script already read, so "technically complex" is a
+ *     reading of what is there rather than of how the README sells it.
+ *   - It is cached on head_sha, like the summaries. A project that has not
+ *     pushed is not re-judged, so a star cannot flicker on and off between two
+ *     runs of a thirty-minute cron over identical code.
+ *
+ * What it cannot do is know prior art. There is no web access here, so
+ * "has this been done before" is answered from the model's own priors - stated
+ * plainly because it is the weakest part of the star, and the reason the
+ * rubric asks for novelty *of approach* over novelty of idea. */
+const STAR_SYSTEM = `You assess projects in a Starknet privacy hackathon for a public board other builders read.
+
+Return JSON: {"innovative": boolean, "complex": boolean, "reason": string}.
+
+innovative - true only if the project applies privacy technology in a way that is not the obvious one. A private transfer UI, a wallet wrapper, or a swap that routes through a pool is the obvious one: false. Applying it to a domain that does not usually get privacy, or composing primitives into something the pool was not built for, is true.
+
+complex - true only if the code shows real engineering depth. Judge the CONTRACTS AND STACK given below, not the README's ambitions. A single contract that wraps a pool call, or a frontend with no contract of its own, is false. Several interacting contracts, a custom proving or nullifier scheme, an indexer, or non-trivial Cairo is true.
+
+Be sparing. Most hackathon projects are neither. Answering true to both should be uncommon, and a project you are unsure about is false.
+
+reason - ONE sentence, under 120 characters, saying concretely what earned it or what is missing. No praise, no adjectives about the team. Never mention this rubric.`;
+
+/* Both halves must hold, on top of all three facts. The star says a project is
+ * finished, deep and unusual - any one of those alone is not it. */
+function starOf(assessment, requirements) {
+  const facts = Object.values(requirements).every(Boolean);
+  return !!(facts && assessment?.innovative && assessment?.complex);
+}
+
 const DESC_SYSTEM = `You describe developer projects for a public hackathon board that other builders read.
 Return JSON: {"summary": string, "description_long": string}.
 summary: ONE sentence, under 110 characters, saying what the project does. Start with a verb or a noun phrase, never with the project's name or "This project".
@@ -721,8 +713,9 @@ async function buildProject(entry, prev) {
     /* Read from spotlight.json, never from the entry - a team editing its own
        row must not be able to star itself. An entry that sets "starred" is
        ignored here and told so by validate-registry.mjs. */
-    starred: SPOTLIGHT.has(repoKey(entry.repo_url)),
-    star_reason: SPOTLIGHT.get(repoKey(entry.repo_url)) || "",
+    /* Filled in below, once the assessment for this head_sha is in hand. */
+    starred: false,
+    star_reason: "",
     contracts,
     transactions,
     verified_txs: verifiedTxs,
@@ -750,7 +743,11 @@ async function buildProject(entry, prev) {
    * poisons the cache permanently: the SHA never changes again for a finished
    * project, so it would never retry. */
   const summaryUsable = !OPENAI_KEY || !!prev?.summary;
-  if (prev && headSha && prev.head_sha === headSha && summaryUsable) {
+  /* Same shape of trap as the summary one: a project crosses into ready when a
+     transaction verifies, which happens without a push, so the SHA never
+     changes again and it would sit unjudged forever. */
+  const assessmentUsable = !OPENAI_KEY || !ready || !!prev?.assessment;
+  if (prev && headSha && prev.head_sha === headSha && summaryUsable && assessmentUsable) {
     console.log(`  ${entry.slug}: unchanged`);
     return {
       ...base,
@@ -765,6 +762,12 @@ async function buildProject(entry, prev) {
       additions: prev.additions || 0,
       deletions: prev.deletions || 0,
       churn_pct: prev.churn_pct || 0,
+      /* The verdict stands for this head_sha, but the facts around it are
+         checked again: a transaction verifies on-chain without anyone pushing,
+         so a project can cross the line between two runs of the cron. */
+      assessment: prev.assessment || null,
+      starred: starOf(prev.assessment, requirements) || !!prev.starred,
+      star_reason: prev.star_reason || "",
     };
   }
 
@@ -837,6 +840,35 @@ async function buildProject(entry, prev) {
     ? Math.min(100, Math.round(((additions + deletions) / estimatedLines) * 1000) / 10)
     : 0;
 
+  /* Judged only once the three facts hold. A project that cannot be starred
+     yet does not need a verdict - most of the fleet is mid-build on any given
+     run - and it keeps the model away from rating unfinished work. */
+  let assessment = (prev?.head_sha === headSha && prev?.assessment) || null;
+  if (ready && OPENAI_KEY && !assessment) {
+    const contractList = contracts.length
+      ? contracts.map((c) => `- ${c.address || c}${c.name ? ` (${c.name})` : ""}`).join("\n")
+      : "none declared";
+    const langList = Object.entries(langs || {})
+      .sort((a, b) => b[1] - a[1])
+      .map(([l, bytes]) => `${l} ${Math.round((bytes / (totalBytes || 1)) * 100)}%`)
+      .join(", ") || "unknown";
+    assessment = await openai(STAR_SYSTEM, [
+      `Project: ${entry.name}`,
+      `Team's own one-liner: ${entry.one_liner || "-"}`,
+      ``,
+      `CONTRACTS AND STACK (what is actually there):`,
+      `Deployed contracts:\n${contractList}`,
+      `Languages by share: ${langList}`,
+      `Declared dependencies: ${[...tooling.values()].map((t) => t.label).join(", ") || "none detected"}`,
+      `Verified pool transactions: ${verifiedTxs}`,
+      ``,
+      `README:\n${(readme || "").slice(0, 5000)}`,
+    ].join("\n"), 220);
+  }
+  if (assessment) {
+    console.log(`  ${entry.slug}: innovative=${!!assessment.innovative} complex=${!!assessment.complex}`);
+  }
+
   return {
     ...base,
     head_sha: headSha,
@@ -849,13 +881,19 @@ async function buildProject(entry, prev) {
     has_readme: !!readme,
     additions,
     deletions,
+    /* Kept so the next run reuses the verdict for this head_sha rather than
+       asking again and risking a different answer over identical code. */
+    assessment,
+    /* Sticky. A push is re-judged, and a model asked twice about nearly the
+       same repository will not always answer the same way - taking a star back
+       over a typo fix is not something to do to a team mid-sprint. Earned once
+       is earned. */
+    starred: starOf(assessment, requirements) || !!prev?.starred,
+    star_reason: assessment?.reason || prev?.star_reason || "",
   };
 }
 
 /* ---------- run ---------- */
-
-const SPOTLIGHT = loadSpotlight();
-if (SPOTLIGHT.size) console.log(`starred: ${[...SPOTLIGHT.keys()].join(", ")}`);
 
 const registry = JSON.parse(readFileSync(REGISTRY_URL, "utf8"));
 if (!Array.isArray(registry)) {
