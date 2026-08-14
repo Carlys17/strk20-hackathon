@@ -51,7 +51,7 @@ Two fields. Everything else is read from the repository itself.
 
 | Field | Required | Notes |
 |---|---|---|
-| `repo_url` | yes | your public GitHub repository |
+| `repo_url` | yes | your public GitHub repository - it needs a first commit before it appears on the hub |
 | `telegram` | yes | Telegram usernames, no `@`, one per person on the team - how the STRK20 team reaches you during the sprint |
 
 Optional, only if the derived value is wrong:

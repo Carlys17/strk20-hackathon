@@ -735,6 +735,21 @@ async function buildProject(entry, prev) {
   const head = await gh(`/repos/${owner}/${repo}/commits?per_page=1`);
   const headSha = head?.[0]?.sha || null;
 
+  /* A repository with nothing in it is not a project yet. Registering the
+   * minute the repo is created is fair enough - the entry stays in
+   * registry.json and the team keeps its place - but the row it would draw is
+   * every column empty, and GitHub sets pushed_at to the creation time, so it
+   * sorts above teams that are actually shipping.
+   *
+   * Three conditions together, because none of them alone means empty:
+   * /commits answers 409 on a repository with no commits and null on a rate
+   * limit, size is 0 for both an empty repo and an unreachable one, and a
+   * project that had code before must never vanish over a bad response. */
+  if (!headSha && meta && meta.size === 0 && !prev?.head_sha) {
+    console.log(`  ${entry.slug}: no commits yet - not listed`);
+    return null;
+  }
+
   /* Nothing new since the last run: reuse everything generated. This is the
    * common case on a 30-minute cron and costs no tokens.
    *
@@ -916,7 +931,10 @@ const seenSlugs = new Set();
 const projects = [];
 for (const [i, entry] of registry.entries()) {
   if (!validate(entry, i, seenSlugs)) continue;
-  projects.push(await buildProject(entry, prevBySlug.get(entry.slug)));
+  /* Null means the repository has no commits yet. The registration stands;
+     the row does not exist until there is something to show in it. */
+  const project = await buildProject(entry, prevBySlug.get(entry.slug));
+  if (project) projects.push(project);
 }
 
 /* Most recently pushed first. The hub re-sorts client-side too, so this is

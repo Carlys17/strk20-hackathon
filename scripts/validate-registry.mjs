@@ -174,6 +174,11 @@ if (repoChecks.length && TOKEN) {
         const meta = await res.json();
         if (meta.private) err(where, `${owner}/${repo} is private - public repositories are required`);
         if (!meta.license) notes.push(`${where}: ${owner}/${repo} has no license. Add one before submitting - it counts toward the open-source score.`);
+        /* Not a rejection: registering the minute the repository exists is
+           fine and the place is kept. It just does not draw a row yet, and
+           saying so here is the difference between waiting and thinking the
+           registration failed. */
+        if (meta.size === 0) notes.push(`${where}: ${owner}/${repo} has no commits yet, so it will not appear on the hub until you push. The registration itself is fine - nothing to redo.`);
       }
     } catch (e) {
       notes.push(`${where}: could not check ${owner}/${repo} (${e.message})`);

@@ -29,7 +29,7 @@ If you do resolve one by hand, keep **every** entry from both sides. Taking one 
 
 Two are required:
 
-- **`repo_url`** - a public GitHub repository. The hub reads your commits, README, and manifests from it.
+- **`repo_url`** - a public GitHub repository with at least one commit in it. The hub reads your commits, README, and manifests from it, so a repository with nothing in it registers fine and keeps your place but draws no row until you push.
 - **`telegram`** - bare Telegram usernames, no `@` and no `t.me` links, one for each person on the team. This is how the STRK20 team reaches you during the sprint - about your entry, your submission, or a prize.
 
 The rest are optional, and only worth setting if the derived value is wrong:
