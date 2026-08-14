@@ -23,6 +23,7 @@
  */
 
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { normalize, aliases } from "./repo-key.mjs";
 
 function load(label, path, fallback) {
   if (!path || !existsSync(path)) {
@@ -49,13 +50,6 @@ function load(label, path, fallback) {
   return parsed;
 }
 
-/* Matches check-registry-retention.mjs: owner/repo, lowercased, no .git. */
-function normalize(repoUrl) {
-  if (typeof repoUrl !== "string") return null;
-  const m = repoUrl.trim().match(/^(?:https?:\/\/)?(?:www\.)?github\.com[/:]([^/\s]+)\/([^/?#\s]+)/i);
-  return m ? `${m[1]}/${m[2].replace(/\.git$/i, "")}`.toLowerCase() : null;
-}
-
 const main = load("MAIN", process.env.MAIN);
 const head = load("HEAD", process.env.HEAD);
 /* A branch cut before registry.json existed has no base version. Everything on
@@ -63,15 +57,21 @@ const head = load("HEAD", process.env.HEAD);
 const base = load("BASE", process.env.BASE, []);
 
 const merged = main.slice();
+
+/* Indexed under every name each project is known by, so a branch that points an
+   entry at a renamed repository updates the row it already has instead of
+   adding a second one for the same project. */
 const indexByKey = new Map();
-main.forEach((entry, i) => {
-  const key = normalize(entry?.repo_url);
-  if (key && !indexByKey.has(key)) indexByKey.set(key, i);
-});
+for (const [i, entry] of main.entries()) {
+  for (const key of await aliases(entry?.repo_url)) {
+    if (!indexByKey.has(key)) indexByKey.set(key, i);
+  }
+}
 const baseByKey = new Map();
 for (const entry of base) {
-  const key = normalize(entry?.repo_url);
-  if (key && !baseByKey.has(key)) baseByKey.set(key, entry);
+  for (const key of await aliases(entry?.repo_url)) {
+    if (!baseByKey.has(key)) baseByKey.set(key, entry);
+  }
 }
 
 const added = [];

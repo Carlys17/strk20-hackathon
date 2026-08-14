@@ -137,16 +137,21 @@ jobs:
             fi
 
             # Appending your own project is bookkeeping. Rewriting a row that is
-            # already in the table is a claim about someone else's project, and
-            # no check here can tell whether the branch has any business making
-            # it. Unattended merging covers the first case only.
-            updated=$(jq -r '.updated | join(", ")' "$RUNNER_TEMP/summary.json")
+            # already in the table is a claim about someone else's project - one
+            # of the fields it can change is the contact the team is reached on.
+            # It merges unattended only if the author has a visible claim to the
+            # row, checked against main and GitHub rather than the branch.
+            updated=$(jq -r '.updated | join(" ")' "$RUNNER_TEMP/summary.json")
             if [ -n "$updated" ]; then
-              gh pr comment "$n" --body "This changes entries that are already in the table ($updated), so it is not merging on its own - a maintainer will look. If one of those is your own project, say so here."
-              echo "modifies existing entries ($updated) - left for a maintainer"; echo "::endgroup::"; continue
+              author=$(gh pr view "$n" --json author --jq '.author.login')
+              if ! MAIN="$RUNNER_TEMP/main.json" UPDATED="$updated" AUTHOR="$author" \
+                   node scripts/check-row-ownership.mjs; then
+                gh pr comment "$n" --body "This changes rows that are already in the table (\`${updated}\`), and I cannot tell that they are yours - you are not listed in their \`team\` on main, and you do not own the repositories they point at. Leaving this for a maintainer. If it is your project, say so here."
+                echo "changes rows it does not own - left for a maintainer"; echo "::endgroup::"; continue
+              fi
             fi
-            if [ "$(jq -r '.added | length' "$RUNNER_TEMP/summary.json")" = "0" ]; then
-              echo "adds nothing - left for a maintainer"; echo "::endgroup::"; continue
+            if [ -z "$updated" ] && [ "$(jq -r '.added | length' "$RUNNER_TEMP/summary.json")" = "0" ]; then
+              echo "adds nothing and changes nothing - left for a maintainer"; echo "::endgroup::"; continue
             fi
 
             # Validated here rather than by reading the pull request's checks.

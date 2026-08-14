@@ -43,6 +43,8 @@ jobs:
       - name: Refuse to publish a registry that lost a project
         env:
           HISTORY_REF: HEAD
+          # Used to tell a renamed repository from a removed one.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/check-registry-retention.mjs
 
       - name: Build projects.json

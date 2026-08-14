@@ -21,26 +21,11 @@
 
 import { execFileSync } from "node:child_process";
 import { readFileSync, existsSync } from "node:fs";
+import { normalize, canonical } from "./repo-key.mjs";
 
 const HISTORY_REF = process.env.HISTORY_REF || "origin/main";
 const REGISTRY_PATH = new URL("../registry.json", import.meta.url);
 const REMOVALS_PATH = new URL("../registry-removals.json", import.meta.url);
-
-/* Compared case-insensitively and without the .git suffix or a trailing slash,
- * so re-adding the same repository under a different spelling does not read as
- * a removal plus an unrelated addition.
- *
- * Anything that is not owner/repo returns null and is not tracked. A URL that
- * validate-registry.mjs would have rejected - an organisation page, a typo -
- * was never a project anyone could open, so correcting it in a later commit is
- * a fix rather than a removal. https://github.com/ZylithFi in 711aab6, fixed to
- * ZylithFi/client in 18238dc, is the case this exists for. */
-function normalize(repoUrl) {
-  if (typeof repoUrl !== "string") return null;
-  const m = repoUrl.trim().match(/^(?:https?:\/\/)?(?:www\.)?github\.com[/:]([^/\s]+)\/([^/?#\s]+)/i);
-  if (!m) return null;
-  return `${m[1]}/${m[2].replace(/\.git$/i, "")}`.toLowerCase();
-}
 
 function git(args) {
   return execFileSync("git", args, { encoding: "utf8", maxBuffer: 32 * 1024 * 1024 });
@@ -131,7 +116,14 @@ const present = new Set(current.map((entry) => normalize(entry?.repo_url)).filte
 const missing = [];
 for (const [key, { entry, sha }] of everAccepted) {
   if (present.has(key) || removals.has(key)) continue;
-  missing.push({ key, entry, sha });
+
+  /* Renaming a repository is a normal thing to do mid-sprint, and on a literal
+     key it looks exactly like the project leaving. Ask GitHub what the old name
+     points at now before calling anything lost. */
+  const now = await canonical(key);
+  if (now && present.has(now)) continue;
+
+  missing.push({ key, entry, sha, now });
 }
 
 /* ---------- report ---------- */
