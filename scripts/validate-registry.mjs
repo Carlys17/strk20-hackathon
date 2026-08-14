@@ -81,7 +81,7 @@ registry.forEach((entry, i) => {
      does not recognise. Refusing a registration over it meant a team that
      described itself in one word we had not thought of - "Trading" - sat
      blocked behind a check while everyone else was building. */
-  if (entry.category && !CATEGORIES.includes(entry.category)) {
+  if (entry.category && !CATEGORIES.some((c) => c.toLowerCase() === String(entry.category).trim().toLowerCase())) {
     notes.push(`${where}: category "${entry.category}" is not one the hub filters on (${CATEGORIES.join(", ")}), so it will show under Other. Pick one of those if you would rather be listed there.`);
   }
 

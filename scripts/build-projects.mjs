@@ -587,9 +587,17 @@ function validate(entry, index, seenSlugs) {
   /* Derived from the repository when the entry does not say otherwise. */
   entry.slug = entry.slug || repo.repo.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
   if (seenSlugs.has(entry.slug)) { warn(`${where} duplicate slug "${entry.slug}" - skipped`); return false; }
-  if (entry.category && !CATEGORIES.includes(entry.category)) {
-    warn(`${where} category "${entry.category}" is not one of ${CATEGORIES.join(", ")} - kept as Other`);
-    entry.category = "Other";
+  /* Case-insensitive, because "defi" is DeFi and nobody typing it means
+     anything else. Matching exactly cost a project: Offbook was rejected for
+     the lower-case d, told twice, and closed its own pull request. */
+  if (entry.category) {
+    const match = CATEGORIES.find((c) => c.toLowerCase() === String(entry.category).trim().toLowerCase());
+    if (match) {
+      entry.category = match;
+    } else {
+      warn(`${where} category "${entry.category}" is not one of ${CATEGORIES.join(", ")} - kept as Other`);
+      entry.category = "Other";
+    }
   }
   seenSlugs.add(entry.slug);
   return true;
