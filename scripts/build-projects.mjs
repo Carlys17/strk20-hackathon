@@ -58,7 +58,19 @@ async function gh(path) {
     throw new Error(`rate limited on ${path}` + (reset ? ` (resets ${new Date(reset * 1000).toISOString()})` : ""));
   }
   if (!res.ok) return null;
-  return res.json();
+  /* An empty body is a valid answer, not a broken one: /contributors replies
+     204 No Content for a repository with no commits yet, and res.json() on
+     that throws "Unexpected end of JSON input" - which took down a whole
+     index run over one repository registered before its first push. */
+  if (res.status === 204) return null;
+  const body = await res.text();
+  if (!body.trim()) return null;
+  try {
+    return JSON.parse(body);
+  } catch {
+    warn(`${path} returned a body that is not JSON`);
+    return null;
+  }
 }
 
 /* Accepts the shapes people actually paste: with or without a trailing slash,
