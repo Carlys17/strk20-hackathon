@@ -1,5 +1,72 @@
 [
   {
+    "slug": "ownerz",
+    "name": "Ownerz",
+    "one_liner": "Privacy-first data marketplace on Starknet with post-quantum encryption and STRK20 payments.",
+    "category": "Consumer",
+    "repo_url": "https://github.com/cxto21/ownerz",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-14T23:10:35Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "naiamproducts",
+        "name": "naiam-studio",
+        "avatar_url": "https://avatars.githubusercontent.com/u/209201511?v=4"
+      },
+      {
+        "login": "cxto21",
+        "name": "Naiam | Ignacio",
+        "avatar_url": "https://avatars.githubusercontent.com/u/101372852?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14"
+    ],
+    "head_sha": "b5760347c16fe0b046a04170953a57d5885cddf3",
+    "readme_hash": "1624:# Ownerz — Privacy-First Data Marketplace\n\n## Core Value\nA marketplace where anyone can monetize private data on blockchain with anonymous transactions, no intermediaries, no hidden costs.\n\n## How It ",
+    "churn_pct": 0.7,
+    "summary": "Facilitate anonymous data transactions using Starknet and post-quantum encryption.",
+    "description_long": "This project allows users to upload locally encrypted files to Filecoin while only sharing a CID and price on a Starknet smart contract. The system employs ZK-proofs for anonymous transactions and delivers decryption keys through a private blockchain event, ensuring maximum privacy for both buyers and sellers.",
+    "latest_push": "Added strk20.json for hackathon registration and initial ownerz data marketplace.",
+    "tooling": [
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 6,
+    "deletions": 0,
+    "assessment": null
+  },
+  {
     "slug": "sealed",
     "name": "Sealed",
     "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
@@ -20,7 +87,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-14T22:43:36Z",
+    "pushed_at": "2026-08-14T22:58:17Z",
     "stars": 0,
     "builders": [
       {
@@ -34,17 +101,18 @@
         "family": "Claude",
         "name": "Claude Opus 5",
         "avatar_url": "",
-        "commits": 1
+        "commits": 3
       }
     ],
     "active_days": [
       "2026-08-14"
     ],
-    "head_sha": "1f12530a7174e1c7af6f2b14b86e5b34ff1861df",
-    "readme_hash": "5786:# Sealed\n\nSealed-bid, second-price auctions on Starknet, where nobody can see who is bidding or what they bid.\n\n## What Sealed is\n\nA single-item, single-round, sealed-bid auction that settles at the s",
-    "summary": "Facilitate private sealed-bid auctions on Starknet with unlinkable bidders.",
-    "description_long": "This project implements a sealed-bid, second-price auction system where bidders use private sub-accounts to maintain anonymity. It utilizes Poseidon commitments for bids and ensures uniform collateral to prevent leakage of bid amounts. The challenge lies in effectively separating the identity of bidders from their bids while ensuring that the auction mechanism remains functional and incentivizes honest bidding.",
-    "latest_push": "Set up Sealed for the STRK20 Private Sprint.",
+    "head_sha": "4e9ad760409f2decb593f1d3d73b788508354977",
+    "readme_hash": "5993:# Sealed\n\nA deployable Vickrey variant of RFP-08 on Starknet. Bidder identities stay unlinkable, bid values stay hidden until reveal, every bidder locks identical STRK20-funded collateral, and failing",
+    "churn_pct": 0,
+    "summary": "Facilitate sealed-bid second-price auctions with private bidder identities on Starknet.",
+    "description_long": "This project implements a Vickrey auction where bidder identities remain unlinkable using private sub-accounts. It uses a commitment scheme to keep bid values hidden until the reveal, ensuring that the collateral amount is uniform across all bidders to prevent leakage of bid information before the reveal. The system is still in development, focusing on establishing the auction mechanics and privacy safeguards.",
+    "latest_push": "Added agent handoff functionality for steps 1 to 4.",
     "tooling": [
       {
         "label": "Starknet Foundry",
@@ -53,9 +121,8 @@
       }
     ],
     "has_readme": true,
-    "additions": 937,
-    "deletions": 0,
-    "churn_pct": 0,
+    "additions": 198,
+    "deletions": 2,
     "assessment": null
   },
   {
@@ -360,7 +427,7 @@
     "churn_pct": 0.3,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added Offbook landing and dashboard UI along with various helper contracts.",
+    "latest_push": "Added Offbook settlement helper contract and its related tests.",
     "tooling": [
       {
         "label": "Cairo",
