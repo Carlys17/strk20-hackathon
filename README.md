@@ -149,7 +149,7 @@ Winners announced **September 4**.
 - [STRK20 by example](https://strk20-by-example.org/what-is-strk20) - Documentation for the pool, the Privacy Wallet API, and anonymizer contracts.
 - [Build on STRK20](https://strk20.starknet.io/build) - Integration routes: private dapp, privacy wallet, or your own prover.
 
-The STRK20 team is in the Telegram group every day of the sprint.
+Stuck on something? Open an issue on this repository - the STRK20 team reads them every day of the sprint.
 
 ## After the sprint
 

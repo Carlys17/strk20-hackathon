@@ -1,6 +1,6 @@
 # Day 0 - your first mainnet transaction
 
-The sprint is mainnet-only. Prizes require **three real transactions** against the pool, listed by hash in your `strk20.json`, so the first thing to do - before you write any code - is prove you can reach the pool on mainnet. Budget an hour. If you're still stuck after that, post in the Telegram group; getting you unblocked is what the team is there for.
+The sprint is mainnet-only. Prizes require **three real transactions** against the pool, listed by hash in your `strk20.json`, so the first thing to do - before you write any code - is prove you can reach the pool on mainnet. Budget an hour. If you're still stuck after that, open an issue; getting you unblocked is what the team is there for.
 
 > **This is real money on a real network.** Start with an amount you would not mind losing. Nothing about the sprint requires large sums - three transactions of a few STRK each satisfy the eligibility rule.
 
@@ -26,7 +26,7 @@ POOL_ADDRESS=0x040337b1af3c663e86e333bab5a4b28da8d4652a15a69beee2b677776ffe812a
 
 Pool on Voyager: [voyager.online/contract/0x040337b1af3c663e86e333bab5a4b28da8d4652a15a69beee2b677776ffe812a](https://voyager.online/contract/0x040337b1af3c663e86e333bab5a4b28da8d4652a15a69beee2b677776ffe812a)
 
-> **Two values are still missing from this document** - the mainnet **discovery/indexer URL** and the mainnet **proving service URL**. The starter kit ships hosted *Sepolia* endpoints for both; the mainnet equivalents come from StarkWare and will be filled in here before August 14. Until then, build against Sepolia and ask in Telegram if you need mainnet proving early. Don't guess at endpoints - a wrong proving service will fail in ways that look like your bug.
+> **Two values are still missing from this document** - the mainnet **discovery/indexer URL** and the mainnet **proving service URL**. The starter kit ships hosted *Sepolia* endpoints for both; the mainnet equivalents come from StarkWare and will be filled in here before August 14. Until then, build against Sepolia and open an issue if you need mainnet proving early. Don't guess at endpoints - a wrong proving service will fail in ways that look like your bug.
 
 ---
 
@@ -105,4 +105,4 @@ Private DeFi routes through shared anonymizer contracts into public venues, so a
 - [STRK20 by example](https://strk20-by-example.org/what-is-strk20) - the pool, the wallet API, anonymizer contracts
 - [Integration routes](https://strk20.starknet.io/build) - private dapp vs privacy wallet vs your own prover
 
-Stuck? Telegram. Every day of the sprint.
+Stuck? Open an issue. Every day of the sprint.

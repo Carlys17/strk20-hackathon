@@ -108,4 +108,4 @@ Your README should still cover what it does and why it needed privacy, how to ru
 
 ## Reporting issues
 
-Open an issue for a broken check, a wrong entry, or anything unclear in these docs. For questions while building, the Telegram group is faster - the STRK20 team is in it every day of the sprint.
+Open an issue for a broken check, a wrong entry, anything unclear in these docs, or a question while building. The STRK20 team reads them every day of the sprint.
