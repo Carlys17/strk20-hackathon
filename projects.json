@@ -1,5 +1,64 @@
 [
   {
+    "slug": "sealed",
+    "name": "Sealed",
+    "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/tinoxbt/sealed",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-08",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-14T22:43:36Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "tinoxbt",
+        "name": "tinoxbt",
+        "avatar_url": "https://avatars.githubusercontent.com/u/202869881?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 1
+      }
+    ],
+    "active_days": [
+      "2026-08-14"
+    ],
+    "head_sha": "1f12530a7174e1c7af6f2b14b86e5b34ff1861df",
+    "readme_hash": "5786:# Sealed\n\nSealed-bid, second-price auctions on Starknet, where nobody can see who is bidding or what they bid.\n\n## What Sealed is\n\nA single-item, single-round, sealed-bid auction that settles at the s",
+    "churn_pct": 0,
+    "summary": "Facilitate private sealed-bid auctions on Starknet with unlinkable bidders.",
+    "description_long": "This project implements a sealed-bid, second-price auction system where bidders use private sub-accounts to maintain anonymity. It utilizes Poseidon commitments for bids and ensures uniform collateral to prevent leakage of bid amounts. The challenge lies in effectively separating the identity of bidders from their bids while ensuring that the auction mechanism remains functional and incentivizes honest bidding.",
+    "latest_push": "Set up Sealed for the STRK20 Private Sprint.",
+    "tooling": [
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 937,
+    "deletions": 0,
+    "assessment": null
+  },
+  {
     "slug": "redpocket",
     "name": "Redpocket",
     "one_liner": "Password red packets: one link, N shares, each claim lands in a shielded STRK20 balance.",
@@ -45,7 +104,7 @@
       "mainnet": true
     },
     "status": "building",
-    "pushed_at": "2026-08-14T22:04:41Z",
+    "pushed_at": "2026-08-14T22:31:44Z",
     "stars": 0,
     "builders": [
       {
@@ -59,18 +118,18 @@
         "family": "Cursor",
         "name": "Cursor",
         "avatar_url": "",
-        "commits": 18
+        "commits": 20
       }
     ],
     "active_days": [
       "2026-08-14"
     ],
-    "head_sha": "b677d62ae6506e2975b961b465390083b0df8437",
-    "readme_hash": "4046:# Redpocket\n\nLive demo: [https://redpocket-virid.vercel.app/](https://redpocket-virid.vercel.app/) — Ready wallet, Starknet Mainnet.\n\nDrop a password into a group chat. People race to claim. The money",
-    "churn_pct": 0.8,
-    "summary": "Distribute money privately via password-protected claims in group chats.",
-    "description_long": "The project enables users to drop a password into a group chat, allowing participants to race for claims that land in a shielded STRK20 balance. It utilizes a Merkle tree to ensure that while the total claimed amount is visible, individual claims remain anonymous, solving the issue of public payout visibility in group transactions. Two claiming modes—equal split and lucky draw—add flexibility, enhancing user engagement without revealing sensitive information.",
-    "latest_push": "Linked the live Mainnet demo in the README and reorganized its content.",
+    "head_sha": "da54f3d8101ee195b3f374af6084583b6d75c0fb",
+    "readme_hash": "4046:# Redpacket\n\nLive demo: [https://redpocket-virid.vercel.app/](https://redpocket-virid.vercel.app/) — Ready wallet, Starknet Mainnet.\n\nDrop a password into a group chat. People race to claim. The money",
+    "churn_pct": 4.8,
+    "summary": "Claim cryptographic red packets with passwords in a group chat.",
+    "description_long": "The project enables users to drop a password within a group chat for claiming red packets that land in a shielded STRK20 balance. It features two modes: equal split for fair distribution and lucky draw for randomized shares, ensuring privacy while maintaining transparency on the total amount distributed. It uses a specialized Wallet API and a privacy helper to secure transactions without revealing passwords or individual claims.",
+    "latest_push": "Renamed the product to Redpacket in user-facing copy.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -104,8 +163,60 @@
       }
     ],
     "has_readme": true,
-    "additions": 24,
-    "deletions": 6,
+    "additions": 90,
+    "deletions": 85,
+    "assessment": null
+  },
+  {
+    "slug": "stake-wars",
+    "name": "stake-wars",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/broody/stake-wars",
+    "demo_url": "https://stakewars.gg",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-14T22:27:22Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "broody",
+        "name": "broody",
+        "avatar_url": "https://avatars.githubusercontent.com/u/610224?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14"
+    ],
+    "head_sha": "d91104dc5cb7bc1bfe3b9b4570ee9847c46d5fed",
+    "readme_hash": "2785:# StakeWars\n\nStakeWars is a persistent, non-custodial strategy game built around Starknet\nvalidator delegation. Each Operator's complete live delegated STRK balance is\ntheir power for capturing and de",
+    "churn_pct": 17.5,
+    "summary": "Build a 3D strategy game using validator delegation on Starknet.",
+    "description_long": "This project involves a non-custodial strategy game where players utilize their delegated STRK balances to capture and defend territories on a 3D sphere. The technical challenge includes integrating various technologies such as React and Cairo contracts, while ensuring a smooth experience through a Go-based API and managing local deployment on the Starknet chain.",
+    "latest_push": "Utilized full delegated power for control points in the control_reader.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 764,
+    "deletions": 1450,
     "assessment": null
   },
   {
@@ -152,58 +263,6 @@
     "additions": 469,
     "deletions": 0,
     "churn_pct": 100,
-    "assessment": null
-  },
-  {
-    "slug": "stake-wars",
-    "name": "stake-wars",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/broody/stake-wars",
-    "demo_url": "https://stakewars.gg",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-14T21:46:56Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "broody",
-        "name": "broody",
-        "avatar_url": "https://avatars.githubusercontent.com/u/610224?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14"
-    ],
-    "head_sha": "98cf6cd311065d6a255586dbf0b700076ee08097",
-    "readme_hash": "2742:# StakeWars\n\nStakeWars is a persistent, non-custodial strategy game built around Starknet\nvalidator delegation. Operators allocate delegated STRK to capture and defend\nterritories on the Core, a 3D sp",
-    "summary": "Build a non-custodial strategy game on Starknet.",
-    "description_long": "The project features a persistent game where operators allocate STRK for territory control on a 3D sphere. It is built using a stack that includes React and Go for the frontend and API, along with Cairo for smart contracts. The main challenge lies in integrating various components like the game API and smart contracts while ensuring a smooth user experience.",
-    "latest_push": "Brightened the landing sphere wireframe in the component file.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1,
-    "deletions": 1,
-    "churn_pct": 0,
     "assessment": null
   },
   {
@@ -301,7 +360,7 @@
     "churn_pct": 0.3,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added Offbook landing and dashboard UI along with new helper contracts.",
+    "latest_push": "Added Offbook landing and dashboard UI along with related helpers.",
     "tooling": [
       {
         "label": "Cairo",
