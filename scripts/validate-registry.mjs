@@ -86,11 +86,11 @@ registry.forEach((entry, i) => {
     err(where, `status "${entry.status}" must be "building" or "finished"`);
   }
 
-  /* Participation is curated: the PR is how we decide whether to add someone to
-     the builders group, so a reachable Telegram handle is the one thing we
-     cannot proceed without. */
+  /* Registrations merge unattended, so this is the only contact detail anyone
+     collects. Without a reachable handle there is no way to reach a team about
+     their entry, their submission, or a prize. */
   if (!Array.isArray(entry.telegram) || entry.telegram.length === 0) {
-    err(where, '"telegram" must be a non-empty array of Telegram usernames, one per person joining the group');
+    err(where, '"telegram" must be a non-empty array of Telegram usernames, one per person on the team');
   } else {
     for (const h of entry.telegram) {
       if (typeof h !== "string" || /^@|t\.me|https?:|\s/.test(h)) {
@@ -99,7 +99,7 @@ registry.forEach((entry, i) => {
     }
     toAdd.push({ slug: entry.slug || `entry #${i + 1}`, handles: entry.telegram });
     if (Array.isArray(entry.team) && entry.telegram.length !== entry.team.length) {
-      notes.push(`${where}: ${entry.team.length} GitHub handles but ${entry.telegram.length} Telegram usernames - everyone who wants group access needs one.`);
+      notes.push(`${where}: ${entry.team.length} GitHub handles but ${entry.telegram.length} Telegram usernames - one per person on the team.`);
     }
   }
 
@@ -171,9 +171,9 @@ if (repoChecks.length && TOKEN) {
 
 for (const n of notes) console.log(`note: ${n}`);
 
-/* Surfaced for whoever reviews the pull request: these are the people to check
-   against the builders group, and to add if the application holds up. Saves
-   opening the diff to find them. */
+/* Registrations merge unattended, so nobody necessarily opens the diff. Listing
+   the handles here is what makes a run readable after the fact: who registered,
+   and who to contact about it. */
 if (toAdd.length) {
   console.log("\nTelegram usernames in this registry:");
   for (const { slug, handles } of toAdd) console.log(`  ${slug}: ${handles.join(", ")}`);

@@ -27,9 +27,9 @@ You build in your own public repository. Your progress appears on the hub at [st
 
 1. Fork this repository and add one object to [`registry.json`](registry.json).
 2. Open a pull request saying what you're building.
-3. Once merged, you're in the builders group and your project appears on the hub.
+3. It merges on its own once the check passes, and your project appears on the hub within the half hour.
 
-Applications are reviewed by the STRK20 team and stay open for the whole sprint.
+Registration stays open for the whole sprint. Merging puts your project on the hub - it does not add you to the Telegram group; join that yourself.
 
 This is the only pull request you open. Everything else - your pushes, your stack, your contracts, your demo - is read from your repository and refreshed every 30 minutes.
 
@@ -52,7 +52,7 @@ Two fields. Everything else is read from the repository itself.
 | Field | Required | Notes |
 |---|---|---|
 | `repo_url` | yes | your public GitHub repository |
-| `telegram` | yes | Telegram usernames, no `@`, one per person who needs group access |
+| `telegram` | yes | Telegram usernames, no `@`, one per person on the team - how the STRK20 team reaches you during the sprint |
 
 Optional, only if the derived value is wrong:
 
