@@ -1,5 +1,67 @@
 [
   {
+    "slug": "envelope",
+    "name": "envelope",
+    "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
+    "category": "Payments",
+    "repo_url": "https://github.com/0xrlawrence/envelope",
+    "demo_url": "https://0xrlawrence.github.io/envelope/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-09",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x04ff4f083a4667930efe14963645f9bda00bb10d44e4c13a9ee808e66c076211",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-14T15:07:58Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "0xrlawrence",
+        "name": "0xrlawrence",
+        "avatar_url": "https://avatars.githubusercontent.com/u/250132405?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14"
+    ],
+    "head_sha": "9b99a622399a4441e9d8a867c6bd7513d744a8da",
+    "readme_hash": "6582:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
+    "churn_pct": 7.8,
+    "summary": "Send private money as a link to anyone without requiring prior registration.",
+    "description_long": "The project implements a STRK20 anonymizer contract that allows users to shield tokens, seal them in an envelope, and send a link to the recipient. This approach solves the problem of private transfers on Starknet where the recipient does not need to be a registered user, thus allowing seamless payments to anyone while protecting the identity of the sender through the use of secure cryptographic signatures.",
+    "latest_push": "Folded the dart from a real airmail envelope and printed the amount on it.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 311,
+    "deletions": 100,
+    "assessment": null
+  },
+  {
     "slug": "cutout",
     "name": "Cutout",
     "one_liner": "A privacy-liquidity router for STRK20. Before you sign, it checks whether your amount has meaningful public cover and routes flexible transactions toward healthier exact-amount cohorts.",
@@ -35,7 +97,6 @@
     ],
     "head_sha": "0666cdd9e9636fbce401364048d0e937ad85c37f",
     "readme_hash": "5451:# Cutout\n\n**A privacy-liquidity router for STRK20.**\n\nBefore you sign, Cutout works out whether your amount has meaningful public cover\nright now, and routes flexible transactions toward healthier exa",
-    "churn_pct": 100,
     "summary": "Provide privacy-liquidity routing for STRK20 transactions.",
     "description_long": "The project analyzes proposed transactions to assess their linkability based on historical deposit data. It returns a cohort quality report that helps users choose amounts with better privacy coverage, addressing the operational privacy gap that STRK20 faces. The challenge involves accurately measuring and reporting on exact-amount cohorts without claiming absolute anonymity.",
     "latest_push": "Added a deterministic shield preflight engine.",
@@ -49,6 +110,7 @@
     "has_readme": true,
     "additions": 1107,
     "deletions": 126,
+    "churn_pct": 100,
     "assessment": null
   },
   {
@@ -126,68 +188,6 @@
     "additions": 249,
     "deletions": 22,
     "churn_pct": 9.2,
-    "assessment": null
-  },
-  {
-    "slug": "envelope",
-    "name": "envelope",
-    "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
-    "category": "Payments",
-    "repo_url": "https://github.com/0xrlawrence/envelope",
-    "demo_url": "https://0xrlawrence.github.io/envelope/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-09",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x04ff4f083a4667930efe14963645f9bda00bb10d44e4c13a9ee808e66c076211",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-14T14:25:57Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "0xrlawrence",
-        "name": "0xrlawrence",
-        "avatar_url": "https://avatars.githubusercontent.com/u/250132405?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14"
-    ],
-    "head_sha": "5fd7506366a3b02281cffe72c120fa72ef4b980e",
-    "readme_hash": "6582:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
-    "summary": "Send private money as a link to anyone without requiring prior registration.",
-    "description_long": "The project implements a STRK20 anonymizer contract that allows users to shield tokens, seal them in an envelope, and send a link to the recipient. This approach solves the problem of private transfers on Starknet where the recipient does not need to be a registered user, thus allowing seamless payments to anyone while protecting the identity of the sender through the use of secure cryptographic signatures.",
-    "latest_push": "Sorted the sealed page by actionable items.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 362,
-    "deletions": 165,
-    "churn_pct": 10,
     "assessment": null
   },
   {
