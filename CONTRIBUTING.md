@@ -2,7 +2,7 @@
 
 Thanks for building on the Starknet privacy pool. Everything here happens through pull requests.
 
-Opening a pull request is an application, not a registration: we review it, and merging it means we're adding you to the builders group.
+A valid pull request merges itself, usually within a minute, and your project is on the hub within the half hour. What isn't automatic is the builders group - we read the Telegram usernames in your entry and add you by hand.
 
 ## Applying
 
@@ -14,8 +14,12 @@ Opening a pull request is an application, not a registration: we review it, and 
      "telegram": ["your_telegram"]
    }
    ```
-3. Don't modify anyone else's entry. Append yours; leave the rest alone.
-4. Open the pull request. A check runs automatically and reports every problem at once.
+3. Don't modify anyone else's entry. Append yours; leave the rest alone - a pull request that changes an existing row stops and waits for a maintainer.
+4. Open the pull request. It validates and merges on its own. If something is wrong, the check reports every problem at once - fix it on the branch and it merges itself.
+
+**Ignore merge conflicts.** Everyone appends to the end of the same array, so your branch conflicts with every application merged after you opened it. Don't resolve it - a bot rewrites your branch as the current `registry.json` plus your entry, usually within a minute. Leave *Allow edits by maintainers* on and there is nothing for you to do.
+
+If you do resolve one by hand, keep **every** entry from both sides. Taking one side of the file deletes projects that were already accepted, and a check will block the merge until they're back.
 
 **Start building before it's merged.** Registration doesn't unlock anything - merging only decides when your project appears on the hub.
 

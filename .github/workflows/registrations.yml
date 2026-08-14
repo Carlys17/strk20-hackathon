@@ -1,0 +1,168 @@
+name: Registrations
+
+# Keeps every open registration pull request mergeable, and merges it.
+#
+# Registration is an append to a single JSON array, so the moment one pull
+# request merges, every other one conflicts. Left to contributors, that conflict
+# gets resolved in the web editor by taking one side of the file, which drops a
+# project that was already accepted - it has happened once already. So the
+# resolution is done here instead: main's registry, plus whatever this branch
+# added. There is no judgement in that, only bookkeeping.
+#
+# Merging is unattended. A registration that adds its own entry and validates
+# goes in, and the project is on the hub within the half hour. Nothing here
+# reads the application - the checks are about the shape of the file, not about
+# whether the project belongs in the sprint. A maintainer stops one by putting
+# the "hold" label on it, or reverts it from main afterwards.
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, labeled]
+    paths:
+      - registry.json
+  push:
+    branches: [main]
+    paths:
+      - registry.json
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+# Two runs pushing to the same branches would race. A push to main and an open
+# pull request arriving together is the normal case, not the rare one.
+concurrency:
+  group: registrations
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      # Always the base repository, never the pull request's code. A fork can
+      # change anything under scripts/, so every branch is restored to main's
+      # scripts before anything runs and is only ever read as data.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EVENT: ${{ github.event_name }}
+          PR: ${{ github.event.pull_request.number }}
+        run: |
+          set -uo pipefail
+
+          # A merge into main invalidates every other open branch, so that case
+          # fans out. A pull request event only concerns itself.
+          if [ "$EVENT" = "pull_request_target" ]; then
+            numbers="$PR"
+          else
+            numbers=$(gh pr list --state open --base main --limit 100 --json number --jq '.[].number')
+          fi
+          [ -z "${numbers// /}" ] && { echo "no open registration pull requests"; exit 0; }
+
+          git config user.name  "strk20-sprint-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch --no-tags origin +refs/heads/main:refs/remotes/origin/main
+          git show origin/main:registry.json > "$RUNNER_TEMP/main.json"
+
+          for n in $numbers; do
+            echo "::group::PR #$n"
+
+            meta=$(gh pr view "$n" --json files,labels,isDraft,state)
+            if [ "$(jq -r '.state' <<< "$meta")" != "OPEN" ] || [ "$(jq -r '.isDraft' <<< "$meta")" = "true" ]; then
+              echo "not an open, ready pull request - skipped"; echo "::endgroup::"; continue
+            fi
+
+            # Rebuilding the file is only safe when registry.json is the whole
+            # change. A branch that also touches scripts or workflows is a
+            # maintainer's problem, not a bookkeeping one.
+            touched=$(jq -r '[.files[].path] | sort | join(",")' <<< "$meta")
+            if [ "$touched" != "registry.json" ]; then
+              echo "touches $touched - not a plain registration, skipped"; echo "::endgroup::"; continue
+            fi
+
+            if ! gh pr checkout "$n" --force; then
+              echo "could not check out - skipped"; echo "::endgroup::"; continue
+            fi
+
+            # The branch's own scripts are never trusted or run. Restoring to
+            # the worktree only, so they are not staged and never committed.
+            git restore --source=origin/main --worktree -- scripts .github 2>/dev/null || true
+            git restore --source=origin/main --worktree -- registry-removals.json 2>/dev/null || true
+
+            # What the contributor started from. Without it an entry they
+            # deliberately edited is indistinguishable from a stale copy.
+            base_sha=$(git merge-base origin/main HEAD)
+            git show "${base_sha}:registry.json" > "$RUNNER_TEMP/base.json" 2>/dev/null || echo "[]" > "$RUNNER_TEMP/base.json"
+            cp registry.json "$RUNNER_TEMP/head.json"
+
+            if ! MAIN="$RUNNER_TEMP/main.json" BASE="$RUNNER_TEMP/base.json" HEAD="$RUNNER_TEMP/head.json" \
+                 SUMMARY="$RUNNER_TEMP/summary.json" \
+                 node scripts/merge-registry.mjs > "$RUNNER_TEMP/merged.json"; then
+              gh pr comment "$n" --body "This branch's \`registry.json\` could not be merged automatically - it has unresolved conflict markers or is not valid JSON. Fix it on the branch and this will pick it up again."
+              echo "::endgroup::"; continue
+            fi
+
+            if cmp -s "$RUNNER_TEMP/merged.json" registry.json; then
+              echo "already in sync with main"
+            else
+              cp "$RUNNER_TEMP/merged.json" registry.json
+              git add registry.json
+              git commit -m "chore: sync registry.json with main" \
+                         -m "Rebuilt as main's registry plus this branch's entries, so the append-only conflict does not have to be resolved by hand."
+              # A fork branch is only pushable when the author left "allow edits
+              # by maintainers" on. Saying so is more useful than a red run.
+              if ! git push; then
+                gh pr comment "$n" --body "main has moved on since this branch was opened, and I cannot push the fix because *Allow edits by maintainers* is off for this pull request. Either turn it on, or merge main into your branch yourself and keep **every** entry from both sides - a project already in the table must not disappear."
+                echo "::endgroup::"; continue
+              fi
+              echo "synced"
+            fi
+
+            # Registrations merge themselves. The only thing that stops one is a
+            # maintainer putting "hold" on it - which is worth doing the moment
+            # something looks like spam, because by then it is already in the
+            # table and a revert is the way back out.
+            if jq -e '.labels[] | select(.name == "hold")' <<< "$meta" > /dev/null; then
+              echo "on hold - leaving for a maintainer"; echo "::endgroup::"; continue
+            fi
+
+            # Appending your own project is bookkeeping. Rewriting a row that is
+            # already in the table is a claim about someone else's project, and
+            # no check here can tell whether the branch has any business making
+            # it. Unattended merging covers the first case only.
+            updated=$(jq -r '.updated | join(", ")' "$RUNNER_TEMP/summary.json")
+            if [ -n "$updated" ]; then
+              gh pr comment "$n" --body "This changes entries that are already in the table ($updated), so it is not merging on its own - a maintainer will look. If one of those is your own project, say so here."
+              echo "modifies existing entries ($updated) - left for a maintainer"; echo "::endgroup::"; continue
+            fi
+            if [ "$(jq -r '.added | length' "$RUNNER_TEMP/summary.json")" = "0" ]; then
+              echo "adds nothing - left for a maintainer"; echo "::endgroup::"; continue
+            fi
+
+            # Validated here rather than by reading the pull request's checks.
+            # A commit pushed with GITHUB_TOKEN does not start a new workflow
+            # run, so the check on the pull request still describes the file as
+            # it was before the sync above. This is the file that would merge.
+            if ! node scripts/validate-registry.mjs; then
+              gh pr comment "$n" --body "\`registry.json\` does not validate, so this is not merging yet. Every problem is listed in the Registrations run - fix them on this branch and it will merge itself."
+              echo "::endgroup::"; continue
+            fi
+            if ! HISTORY_REF=origin/main node scripts/check-registry-retention.mjs; then
+              gh pr comment "$n" --body "Merging this would drop a project that is already in the table, so it is on hold. The Registrations run says which one and prints the entry to put back."
+              echo "::endgroup::"; continue
+            fi
+
+            gh pr merge "$n" --squash --delete-branch || \
+              gh pr comment "$n" --body "Valid and in sync, but the merge did not go through. Merging by hand is safe now: the branch already contains every entry on main."
+            echo "::endgroup::"
+          done

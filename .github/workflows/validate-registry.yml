@@ -3,11 +3,22 @@ name: Validate registry
 # Registration is a pull request against registry.json, so this check is what
 # stands between a contributor and being merged. Green means a maintainer can
 # merge without reading the JSON.
+#
+# It also runs on push to main, because a merge conflict is resolved by hand at
+# merge time - in the web editor, or by taking one side of the file - and that
+# resolution is content no pull-request run ever saw.
 on:
   pull_request:
     paths:
       - registry.json
       - scripts/validate-registry.mjs
+      - scripts/check-registry-retention.mjs
+      - registry-removals.json
+  push:
+    branches: [main]
+    paths:
+      - registry.json
+      - registry-removals.json
   workflow_dispatch:
 
 permissions:
@@ -19,18 +30,31 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          # The retention check reads every past version of registry.json.
           fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
 
+      # On a pull request the checkout above is the merge of this branch into
+      # main, but main may have moved since that merge commit was computed. The
+      # retention check works from full history rather than a single baseline,
+      # so it does not depend on that being fresh - this only reports it.
+      - name: Fetch main
+        run: |
+          git fetch --no-tags origin +refs/heads/main:refs/remotes/origin/main
+          if [ "${{ github.event_name }}" = "pull_request" ] && ! git merge-base --is-ancestor origin/main HEAD; then
+            echo "note: this branch is behind main. Merging main into it before merge is the safest path."
+          fi
+
       - name: Check registry.json
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/validate-registry.mjs
 
+      # Fails if a project that was ever accepted on main is not in this file.
       - name: Prevent removing accepted projects
         env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HISTORY_REF: origin/main
         run: node scripts/check-registry-retention.mjs

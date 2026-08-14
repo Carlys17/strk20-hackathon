@@ -28,10 +28,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # The retention gate below reads every past version of registry.json.
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
+
+      # projects.json is what the hub renders, so this is the last place a lost
+      # project can be caught before it disappears from the table. If a merge
+      # dropped someone, the build is skipped and the table keeps serving the
+      # last good file until registry.json is fixed.
+      - name: Refuse to publish a registry that lost a project
+        env:
+          HISTORY_REF: HEAD
+        run: node scripts/check-registry-retention.mjs
 
       - name: Build projects.json
         env:
