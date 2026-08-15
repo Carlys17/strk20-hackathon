@@ -1,5 +1,87 @@
 [
   {
+    "slug": "tx404",
+    "name": "Tx404",
+    "one_liner": "Non-custodial shielding API/SDK: drop shield, unshield, and private-transfer into any app without touching a viewing key.",
+    "category": "Infra",
+    "repo_url": "https://github.com/Abhyudday/tx404",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-26",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T09:28:10Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Abhyudday",
+        "name": "Abhyuday Pratap Singh",
+        "avatar_url": "https://avatars.githubusercontent.com/u/76898190?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15"
+    ],
+    "head_sha": "a451ac1794667b880d6d01e8d9033051c3dabda9",
+    "readme_hash": "4875:# Tx404\n\nTx404 is a non-custodial shielding API/SDK: drop shield, unshield, and private-transfer into any app without touching a viewing key. It provides core STRK20 privacy primitives through the Sta",
+    "churn_pct": 12.9,
+    "summary": "Enable private transactions in apps without handling private keys.",
+    "description_long": "The project implements a non-custodial shielding API/SDK that allows app developers to integrate privacy features for transactions. It manages the complexities of private transfers and shielding by utilizing a privacy-enabled wallet that signs actions, ensuring user control over their keys and funds. This solution aims to simplify the implementation of privacy in decentralized finance applications while keeping user data secure.",
+    "latest_push": "Redesigned the Tx404 frontend with updated styles and layout.",
+    "tooling": [
+      {
+        "label": "AVNU",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 70,
+    "deletions": 259,
+    "assessment": null
+  },
+  {
     "slug": "vinss",
     "name": "VINSS",
     "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
@@ -20,7 +102,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-15T09:23:01Z",
+    "pushed_at": "2026-08-15T09:27:09Z",
     "stars": 0,
     "builders": [
       {
@@ -38,12 +120,12 @@
     "active_days": [
       "2026-08-15"
     ],
-    "head_sha": "4359b5dba7212aeaa29cacd794cde2141c572dc9",
+    "head_sha": "9cc19629243ce15bc83751058b64046bbfcafbc8",
     "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
-    "churn_pct": 1.4,
+    "churn_pct": 0,
     "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
     "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
-    "latest_push": "Registered VINSS escrow contracts and added Sepolia deployment workflow.",
+    "latest_push": "Fixed the VINSS Scarb source path in the Scarb.toml file.",
     "tooling": [
       {
         "label": "Cairo",
@@ -52,7 +134,7 @@
       }
     ],
     "has_readme": true,
-    "additions": 119,
+    "additions": 1,
     "deletions": 0,
     "assessment": null
   },
@@ -93,7 +175,6 @@
     ],
     "head_sha": "3816d8ea7c0e9b13ac4addd63fe475bd8f54f55c",
     "readme_hash": "9559:# Quietline\n\nEncrypted on-chain mail on Starknet.\n\nAddresses never appear on the message. Content decrypts only on the\nrecipient's device. A private transfer can carry a memo in the same\ntransaction —",
-    "churn_pct": 14.6,
     "summary": "Enable encrypted on-chain mail with associated payments on Starknet.",
     "description_long": "Quietline facilitates private messaging on Starknet where the sender and recipient identities are concealed. It uses a `privacy_invoke` helper to ensure the content of messages is decrypted only on the recipient's device, while also allowing payment memos to be included in the same transaction, keeping the payment amount hidden. The technical challenge lies in maintaining anonymity while managing the complexity of secure transactions and message delivery without a centralized server.",
     "latest_push": "Tested Quietline mail integration with the actual privacy pool.",
@@ -137,6 +218,79 @@
     "has_readme": true,
     "additions": 1324,
     "deletions": 25,
+    "churn_pct": 14.6,
+    "assessment": null
+  },
+  {
+    "slug": "nomada",
+    "name": "Nomada",
+    "one_liner": "the all in one private p2p transfer app on starknet.",
+    "category": "Other",
+    "repo_url": "https://github.com/mateojkk/Nomada",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T09:08:55Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "mateojkk",
+        "name": "mateojkk",
+        "avatar_url": "https://avatars.githubusercontent.com/u/233367458?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15"
+    ],
+    "head_sha": "1f64fe481300ec22d712afa4897044502fc330b9",
+    "readme_hash": "2216:# ◈ Nomada\n\n<p align=\"center\">\n  <strong>The all-in-one private P2P transfer app on Starknet.</strong>\n</p>\n\nNomada is a privacy-first chat app built for the Starknet ecosystem using the **STRK20 priv",
+    "churn_pct": 0.1,
+    "summary": "Facilitate private P2P transfers with a chat interface on Starknet.",
+    "description_long": "The project uses the STRK20 privacy protocol to enable private financial transactions through a conversational chat interface. It parses commands like 'shield' and 'send' in a React and TypeScript frontend, executing them directly against the user's Starknet wallet. Key challenges include ensuring wallet compatibility and integrating seamless transaction handling through the STRK20 API.",
+    "latest_push": "Marked Phase 2 as complete in the documentation.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 4,
+    "deletions": 4,
     "assessment": null
   },
   {
@@ -317,88 +471,6 @@
     "additions": 930,
     "deletions": 0,
     "churn_pct": 100,
-    "assessment": null
-  },
-  {
-    "slug": "tx404",
-    "name": "Tx404",
-    "one_liner": "Non-custodial shielding API/SDK: drop shield, unshield, and private-transfer into any app without touching a viewing key.",
-    "category": "Infra",
-    "repo_url": "https://github.com/Abhyudday/tx404",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-26",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-15T07:25:17Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Abhyudday",
-        "name": "Abhyuday Pratap Singh",
-        "avatar_url": "https://avatars.githubusercontent.com/u/76898190?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15"
-    ],
-    "head_sha": "ae58e67b6765c70438fb7c14faa613fe36d0854a",
-    "readme_hash": "4875:# Tx404\n\nTx404 is a non-custodial shielding API/SDK: drop shield, unshield, and private-transfer into any app without touching a viewing key. It provides core STRK20 privacy primitives through the Sta",
-    "summary": "Enable private transactions in apps without handling private keys.",
-    "description_long": "The project implements a non-custodial shielding API/SDK that allows app developers to integrate privacy features for transactions. It manages the complexities of private transfers and shielding by utilizing a privacy-enabled wallet that signs actions, ensuring user control over their keys and funds. This solution aims to simplify the implementation of privacy in decentralized finance applications while keeping user data secure.",
-    "latest_push": "Launched the Tx404 privacy SDK.",
-    "tooling": [
-      {
-        "label": "AVNU",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1,
-    "deletions": 0,
-    "churn_pct": 0,
     "assessment": null
   },
   {
@@ -1383,7 +1455,7 @@
     "churn_pct": 0.3,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added Offbook landing and dashboard UI along with STRK20 submission metadata.",
+    "latest_push": "Added Offbook landing and dashboard UI along with settlement helper contracts.",
     "tooling": [
       {
         "label": "Cairo",
