@@ -1,5 +1,62 @@
 [
   {
+    "slug": "vinss",
+    "name": "VINSS",
+    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/DXJLabs/vinss",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-01",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T10:47:39Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ntfound-dev",
+        "name": "ntfound-dev",
+        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
+      },
+      {
+        "login": "DXJLabs",
+        "name": "DXJ Labs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15"
+    ],
+    "head_sha": "df7a279731199912c221e4657c98bcae916ce20f",
+    "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
+    "churn_pct": 0.3,
+    "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
+    "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
+    "latest_push": "Added a deployment report and nonce delay to the workflow.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 26,
+    "deletions": 2,
+    "assessment": null
+  },
+  {
     "slug": "privora",
     "name": "Privora",
     "one_liner": "",
@@ -46,63 +103,6 @@
     "assessment": null
   },
   {
-    "slug": "vinss",
-    "name": "VINSS",
-    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/DXJLabs/vinss",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-01",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-15T10:41:23Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "ntfound-dev",
-        "name": "ntfound-dev",
-        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
-      },
-      {
-        "login": "DXJLabs",
-        "name": "DXJ Labs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15"
-    ],
-    "head_sha": "42282dae6ffe3fc8beb8f64e3a13e07d309c30b3",
-    "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
-    "churn_pct": 20.8,
-    "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
-    "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
-    "latest_push": "Fixed the Sepolia deployment workflow and account flag order.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 923,
-    "deletions": 898,
-    "assessment": null
-  },
-  {
     "slug": "quietline",
     "name": "Quietline",
     "one_liner": "Encrypted on-chain mail on Starknet. Payment memos ride the same private transfer.",
@@ -139,7 +139,6 @@
     ],
     "head_sha": "4a2126651acf95c7fad65d8629ab9a9e43e18bfb",
     "readme_hash": "13564:# Quietline\n\nEncrypted on-chain mail on Starknet.\n\nAddresses never appear on the message. Content decrypts only on the\nrecipient's device. A private transfer can carry a memo in the same\ntransaction —",
-    "churn_pct": 17.3,
     "summary": "Send encrypted messages and payment memos on Starknet securely.",
     "description_long": "This project creates a private-mail loop on the Starknet mainnet, allowing users to send encrypted messages without revealing sender or recipient identities. It solves the challenge of securely communicating and transferring value concurrently by embedding payment memos within private transactions, ensuring confidentiality throughout the process.",
     "latest_push": "Added a browser-viewable real-pool localnet and documented the demo.",
@@ -183,6 +182,7 @@
     "has_readme": true,
     "additions": 1795,
     "deletions": 21,
+    "churn_pct": 17.3,
     "assessment": null
   },
   {
@@ -232,7 +232,6 @@
     ],
     "head_sha": "fac22c5fbaff2be27b1f63b0624c8b969746424a",
     "readme_hash": "6585:# Veilpass\n\nPrivate creator memberships on Starknet.\n\nA subscriber pays from a shielded STRK balance. The creator receives a private\nopen note. The shared helper records a fixed-term access commitment",
-    "churn_pct": 9.8,
     "summary": "Facilitate private creator memberships using STRK20 on Starknet.",
     "description_long": "Subscribers pay using a shielded STRK balance, allowing creators to receive private notifications without knowing subscriber identities. The challenge lies in securely processing transactions while maintaining privacy, as it involves creating on-chain commitments without exposing wallet details or viewing keys. The implementation utilizes a privacy wallet for transaction actions and a shared helper to record access commitments, ensuring secure and anonymous exchanges.",
     "latest_push": "Deployed the Veilpass helper on the mainnet.",
@@ -251,6 +250,7 @@
     "has_readme": true,
     "additions": 139,
     "deletions": 36,
+    "churn_pct": 9.8,
     "assessment": null
   },
   {
@@ -1589,7 +1589,7 @@
     "churn_pct": 0.3,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added Offbook landing and dashboard UI along with various helper contracts.",
+    "latest_push": "Added Offbook landing and dashboard UI along with several helper contracts.",
     "tooling": [
       {
         "label": "Cairo",
