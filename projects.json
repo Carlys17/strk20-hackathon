@@ -1,5 +1,128 @@
 [
   {
+    "slug": "airlock",
+    "name": "Airlock",
+    "one_liner": "One-click privacy from any chain: bridge in, hold private, withdraw to a different chain with no on-chain link.",
+    "category": "Infra",
+    "repo_url": "https://github.com/kenkomu/airlock",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-09",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T09:44:24Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "kenkomu",
+        "name": "Kenneth Njoroge",
+        "avatar_url": "https://avatars.githubusercontent.com/u/95502725?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15"
+    ],
+    "head_sha": "1f25f4a11189de90eaee7e7067c477a0a6491b22",
+    "readme_hash": "6606:# Airlock\n\n**One-click privacy from any chain.** Step in on one chain, the door seals behind you, step out on another. No on-chain link between the two sides.\n\nBuilt on the [STRK20](https://strk20-by-",
+    "churn_pct": 0,
+    "summary": "Enable cross-chain privacy without on-chain links.",
+    "description_long": "This project allows users to bridge assets from one chain to another while ensuring privacy by severing links between deposit and withdrawal addresses. It uses a privacy pool that enables users to engage without ever having to interact directly with the underlying privacy technology. The main challenge tackled here is maintaining anonymity during the deposit and withdrawal processes, especially considering the timing and amount of transactions that could potentially link user activity.",
+    "latest_push": "Added one-click privacy functionality for any chain.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 66,
+    "deletions": 46,
+    "assessment": null
+  },
+  {
+    "slug": "strk20-privacy-wallet",
+    "name": "strk20-privacy-wallet",
+    "one_liner": "Umbra-grade privacy wallet for Starknet powered by STRK20 privacy pool",
+    "category": "Other",
+    "repo_url": "https://github.com/SmratJay/strk20-privacy-wallet",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T09:39:56Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "jaybhati",
+        "name": "JAY BHATI",
+        "avatar_url": "https://avatars.githubusercontent.com/u/53556347?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15"
+    ],
+    "head_sha": "f1884f6d3f5c02313fd3b9b1136577213617f766",
+    "readme_hash": "3413:# 🔒 STRK20 Privacy Wallet\n\n> **Umbra-grade UX on a stronger foundation — fully powered by the STRK20 privacy pool on Starknet.**\n\nBuilt by **Jai** ([@SmratJay](https://github.com/SmratJay)) — founder",
+    "churn_pct": 100,
+    "summary": "Provide a privacy wallet using the STRK20 privacy pool.",
+    "description_long": "This wallet allows users to generate a single viewing key for simplified onboarding and private transactions without revealing on-chain identities. It integrates with the STRK20 privacy protocol, automating note discovery and enabling private sends without the need for a separate relayer, all while maintaining a clean user interface.",
+    "latest_push": "Completed the STRK20 privacy wallet Next.js app.",
+    "tooling": [
+      {
+        "label": "AVNU",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 5954,
+    "deletions": 136,
+    "assessment": null
+  },
+  {
     "slug": "tx404",
     "name": "Tx404",
     "one_liner": "Non-custodial shielding API/SDK: drop shield, unshield, and private-transfer into any app without touching a viewing key.",
@@ -35,7 +158,6 @@
     ],
     "head_sha": "a451ac1794667b880d6d01e8d9033051c3dabda9",
     "readme_hash": "4875:# Tx404\n\nTx404 is a non-custodial shielding API/SDK: drop shield, unshield, and private-transfer into any app without touching a viewing key. It provides core STRK20 privacy primitives through the Sta",
-    "churn_pct": 12.9,
     "summary": "Enable private transactions in apps without handling private keys.",
     "description_long": "The project implements a non-custodial shielding API/SDK that allows app developers to integrate privacy features for transactions. It manages the complexities of private transfers and shielding by utilizing a privacy-enabled wallet that signs actions, ensuring user control over their keys and funds. This solution aims to simplify the implementation of privacy in decentralized finance applications while keeping user data secure.",
     "latest_push": "Redesigned the Tx404 frontend with updated styles and layout.",
@@ -79,6 +201,7 @@
     "has_readme": true,
     "additions": 70,
     "deletions": 259,
+    "churn_pct": 12.9,
     "assessment": null
   },
   {
@@ -122,7 +245,6 @@
     ],
     "head_sha": "9cc19629243ce15bc83751058b64046bbfcafbc8",
     "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
-    "churn_pct": 0,
     "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
     "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
     "latest_push": "Fixed the VINSS Scarb source path in the Scarb.toml file.",
@@ -136,6 +258,7 @@
     "has_readme": true,
     "additions": 1,
     "deletions": 0,
+    "churn_pct": 0,
     "assessment": null
   },
   {
@@ -257,7 +380,6 @@
     ],
     "head_sha": "1f64fe481300ec22d712afa4897044502fc330b9",
     "readme_hash": "2216:# ◈ Nomada\n\n<p align=\"center\">\n  <strong>The all-in-one private P2P transfer app on Starknet.</strong>\n</p>\n\nNomada is a privacy-first chat app built for the Starknet ecosystem using the **STRK20 priv",
-    "churn_pct": 0.1,
     "summary": "Facilitate private P2P transfers with a chat interface on Starknet.",
     "description_long": "The project uses the STRK20 privacy protocol to enable private financial transactions through a conversational chat interface. It parses commands like 'shield' and 'send' in a React and TypeScript frontend, executing them directly against the user's Starknet wallet. Key challenges include ensuring wallet compatibility and integrating seamless transaction handling through the STRK20 API.",
     "latest_push": "Marked Phase 2 as complete in the documentation.",
@@ -291,6 +413,7 @@
     "has_readme": true,
     "additions": 4,
     "deletions": 4,
+    "churn_pct": 0.1,
     "assessment": null
   },
   {
@@ -425,52 +548,6 @@
     "additions": 1019,
     "deletions": 181,
     "churn_pct": 68.2,
-    "assessment": null
-  },
-  {
-    "slug": "strk20-privacy-wallet",
-    "name": "strk20-privacy-wallet",
-    "one_liner": "Umbra-grade privacy wallet for Starknet powered by STRK20 privacy pool",
-    "category": "Other",
-    "repo_url": "https://github.com/SmratJay/strk20-privacy-wallet",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-15T08:21:27Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "jaybhati",
-        "name": "JAY BHATI",
-        "avatar_url": "https://avatars.githubusercontent.com/u/53556347?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15"
-    ],
-    "head_sha": "1bfa8710de6486bbec15700621826560e7162647",
-    "readme_hash": "3413:# 🔒 STRK20 Privacy Wallet\n\n> **Umbra-grade UX on a stronger foundation — fully powered by the STRK20 privacy pool on Starknet.**\n\nBuilt by **Jai** ([@SmratJay](https://github.com/SmratJay)) — founder",
-    "summary": "Provide a privacy wallet using the STRK20 privacy pool.",
-    "description_long": "This wallet allows users to generate a single viewing key for simplified onboarding and private transactions without revealing on-chain identities. It integrates with the STRK20 privacy protocol, automating note discovery and enabling private sends without the need for a separate relayer, all while maintaining a clean user interface.",
-    "latest_push": "Installed strk20-agent-skills and created the STRK20 privacy wallet skeleton.",
-    "tooling": [],
-    "has_readme": true,
-    "additions": 930,
-    "deletions": 0,
-    "churn_pct": 100,
     "assessment": null
   },
   {
@@ -1455,7 +1532,7 @@
     "churn_pct": 0.3,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added Offbook landing and dashboard UI along with settlement helper contracts.",
+    "latest_push": "Added Offbook landing and dashboard UI along with settlement helpers.",
     "tooling": [
       {
         "label": "Cairo",
