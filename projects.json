@@ -1,10 +1,78 @@
 [
   {
-    "slug": "blindpool",
-    "name": "blindpool",
-    "one_liner": "Public odds. Invisible bettors. A Starknet prediction market where the order book is public and every position is shielded in the STRK20 privacy pool. STRK20 Private Sprint (RFP-07).",
+    "slug": "mosby-pass",
+    "name": "Mosby Pass",
+    "one_liner": "Private event admission powered by shielded STRK on Starknet.",
+    "category": "Consumer",
+    "repo_url": "https://github.com/welttowelt/mosby-pass",
+    "demo_url": "https://welttowelt.github.io/mosby-pass/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x05dd2c68fa1c0fba3b425a7c855fbc0a60867763b2688bf44f2225d422173da6",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x12bad0ed32d90bbde43d0579624e1bae3585ce1a7f6d4081a7296f099fe1103",
+        "ok": true,
+        "pool": true
+      }
+    ],
+    "verified_txs": 1,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T11:39:00Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "welttowelt",
+        "name": "welttowelt",
+        "avatar_url": "https://avatars.githubusercontent.com/u/58338510?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15"
+    ],
+    "head_sha": "934de89cb0cad5ebac394745f925755121451a7a",
+    "readme_hash": "5255:# Mosby Pass\n\nPrivate event admission on Starknet.\n\nAn attendee scans an event QR, pays from shielded STRK, and receives a\ndevice-bound pass. At the door, a fresh challenge proves control of that pass",
+    "churn_pct": 6,
+    "summary": "Enable private event admission using shielded STRK on Starknet.",
+    "description_long": "The project allows attendees to pay for event admission using shielded STRK, ensuring their public wallet address remains hidden from organizers. Attendees generate a unique access key on their devices, which is validated at the gate through a fresh challenge, enhancing privacy and security against unauthorized entry.",
+    "latest_push": "Replaced site typography and copy across multiple files.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 58,
+    "deletions": 58,
+    "assessment": null
+  },
+  {
+    "slug": "stk402",
+    "name": "stk402",
+    "one_liner": "",
     "category": "Other",
-    "repo_url": "https://github.com/frankolien/blindpool",
+    "repo_url": "https://github.com/Sarthib7/stk402",
     "demo_url": "",
     "demo_video": "",
     "x_handle": "",
@@ -20,7 +88,69 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-15T11:18:03Z",
+    "pushed_at": "2026-08-15T11:36:11Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Sarthib7",
+        "name": "sarthib7",
+        "avatar_url": "https://avatars.githubusercontent.com/u/112841873?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14"
+    ],
+    "head_sha": "1784f20f345315db0e3cdf3f7254c0abf42c1286",
+    "readme_hash": "11616:# stk402\n\nAmount-confidential STRK20 payments for x402 agents on Starknet.\n\nSTK402 adds an encrypted x402 payment scheme for STRK20. The agent and server exchange encrypted payment terms and receipt m",
+    "summary": "Enable encrypted STRK20 payments for x402 agents on Starknet.",
+    "description_long": "This project implements a payment scheme that allows for encrypted transactions of STRK20 tokens between agents and a server using a secure protocol. It tackles the challenge of ensuring privacy for both payer and recipient by employing encryption methods like X25519 and AES-256-GCM to protect sensitive payment details from unauthorized access.",
+    "latest_push": "Locked demo_url in docs and added content to /SKILL.md.",
+    "tooling": [
+      {
+        "label": "Privacy SDK",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 104,
+    "deletions": 12,
+    "churn_pct": 1.5,
+    "assessment": null
+  },
+  {
+    "slug": "blindpool",
+    "name": "blindpool",
+    "one_liner": "Public odds. Invisible bettors. A Starknet prediction market where the order book is public and every position is shielded in the STRK20 privacy pool. STRK20 Private Sprint (RFP-07).",
+    "category": "Other",
+    "repo_url": "https://github.com/frankolien/blindpool",
+    "demo_url": "https://stark-cyan.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T11:23:18Z",
     "stars": 0,
     "builders": [
       {
@@ -33,11 +163,12 @@
     "active_days": [
       "2026-08-15"
     ],
-    "head_sha": "ae4dca4302f8b9879bf6e59a6947c808250efdb6",
+    "head_sha": "47eac1fd26f8072a8646a23bfe42d9c62da49b40",
     "readme_hash": "6484:# Blindpool\n\n**Public odds. Invisible bettors.**\n\nA prediction market on Starknet where the order book is fully public and every\nposition is shielded. Anyone can read the odds, the volume and the sett",
+    "churn_pct": 3.3,
     "summary": "Create a prediction market that protects bettor identities.",
     "description_long": "Blindpool establishes a prediction market with public odds while keeping bettor positions private. The project utilizes a Starknet-based privacy pool, allowing participants to take positions anonymously by separating the public record of bets from private transfers. This approach addresses issues like copy-trading and front-running by ensuring that while aggregate data is accessible, individual contributions remain shielded.",
-    "latest_push": "Implemented Cairo scaffolding with acceptance tests and deployment instructions.",
+    "latest_push": "Deployed the live mainnet runbook and verified the transaction recorder.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -71,9 +202,8 @@
       }
     ],
     "has_readme": true,
-    "additions": 1561,
-    "deletions": 126,
-    "churn_pct": 36.3,
+    "additions": 156,
+    "deletions": 0,
     "assessment": null
   },
   {
@@ -131,74 +261,6 @@
     "additions": 15,
     "deletions": 7,
     "churn_pct": 0.3,
-    "assessment": null
-  },
-  {
-    "slug": "mosby-pass",
-    "name": "Mosby Pass",
-    "one_liner": "Private event admission powered by shielded STRK on Starknet.",
-    "category": "Consumer",
-    "repo_url": "https://github.com/welttowelt/mosby-pass",
-    "demo_url": "https://welttowelt.github.io/mosby-pass/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x05dd2c68fa1c0fba3b425a7c855fbc0a60867763b2688bf44f2225d422173da6",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [
-      {
-        "hash": "0x12bad0ed32d90bbde43d0579624e1bae3585ce1a7f6d4081a7296f099fe1103",
-        "ok": true,
-        "pool": true
-      }
-    ],
-    "verified_txs": 1,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-15T11:17:03Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "welttowelt",
-        "name": "welttowelt",
-        "avatar_url": "https://avatars.githubusercontent.com/u/58338510?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15"
-    ],
-    "head_sha": "1bea9e63ad46d69d5bc4183691754ab9af3bc608",
-    "readme_hash": "5255:# Mosby Pass\n\nPrivate event admission on Starknet.\n\nAn attendee scans an event QR, pays from shielded STRK, and receives a\ndevice-bound pass. At the door, a fresh challenge proves control of that pass",
-    "summary": "Enable private event admission using shielded STRK on Starknet.",
-    "description_long": "The project allows attendees to pay for event admission using shielded STRK, ensuring their public wallet address remains hidden from organizers. Attendees generate a unique access key on their devices, which is validated at the gate through a fresh challenge, enhancing privacy and security against unauthorized entry.",
-    "latest_push": "Pivoted Veilpass into Mosby Pass event admission and published the demo.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1261,
-    "deletions": 835,
-    "churn_pct": 90.3,
     "assessment": null
   },
   {
@@ -354,7 +416,7 @@
     "head_sha": "bb403bdc2f7e617c0f26e1058943fb1c9ac941a1",
     "readme_hash": "7:# stark",
     "churn_pct": 0,
-    "summary": "",
+    "summary": "undefined",
     "description_long": "",
     "latest_push": "Added STRK20 project metadata.",
     "tooling": [],
@@ -1652,7 +1714,7 @@
     "churn_pct": 0.3,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added Offbook landing and dashboard UI with related helpers.",
+    "latest_push": "Added Offbook landing and dashboard UI along with settlement helpers.",
     "tooling": [
       {
         "label": "Cairo",
@@ -1818,68 +1880,6 @@
     "additions": 3,
     "deletions": 1,
     "churn_pct": 0.5,
-    "assessment": null
-  },
-  {
-    "slug": "stk402",
-    "name": "stk402",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/Sarthib7/stk402",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-14T19:04:40Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Sarthib7",
-        "name": "sarthib7",
-        "avatar_url": "https://avatars.githubusercontent.com/u/112841873?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14"
-    ],
-    "head_sha": "1784f20f345315db0e3cdf3f7254c0abf42c1286",
-    "readme_hash": "11616:# stk402\n\nAmount-confidential STRK20 payments for x402 agents on Starknet.\n\nSTK402 adds an encrypted x402 payment scheme for STRK20. The agent and server exchange encrypted payment terms and receipt m",
-    "summary": "Enable encrypted STRK20 payments for x402 agents on Starknet.",
-    "description_long": "This project implements a payment scheme that allows for encrypted transactions of STRK20 tokens between agents and a server using a secure protocol. It tackles the challenge of ensuring privacy for both payer and recipient by employing encryption methods like X25519 and AES-256-GCM to protect sensitive payment details from unauthorized access.",
-    "latest_push": "Locked demo_url in docs and added content to /SKILL.md.",
-    "tooling": [
-      {
-        "label": "Privacy SDK",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 104,
-    "deletions": 12,
-    "churn_pct": 1.5,
     "assessment": null
   },
   {
