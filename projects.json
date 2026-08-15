@@ -1,5 +1,62 @@
 [
   {
+    "slug": "vinss",
+    "name": "VINSS",
+    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/DXJLabs/vinss",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-01",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T09:49:02Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ntfound-dev",
+        "name": "ntfound-dev",
+        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
+      },
+      {
+        "login": "DXJLabs",
+        "name": "DXJ Labs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15"
+    ],
+    "head_sha": "81156048d5cbf545ea6491828519e5d185d20fcf",
+    "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
+    "churn_pct": 0,
+    "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
+    "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
+    "latest_push": "Configured the VINSS Cairo library path in Scarab.toml.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 3,
+    "deletions": 1,
+    "assessment": null
+  },
+  {
     "slug": "airlock",
     "name": "Airlock",
     "one_liner": "One-click privacy from any chain: bridge in, hold private, withdraw to a different chain with no on-chain link.",
@@ -35,7 +92,6 @@
     ],
     "head_sha": "1f25f4a11189de90eaee7e7067c477a0a6491b22",
     "readme_hash": "6606:# Airlock\n\n**One-click privacy from any chain.** Step in on one chain, the door seals behind you, step out on another. No on-chain link between the two sides.\n\nBuilt on the [STRK20](https://strk20-by-",
-    "churn_pct": 0,
     "summary": "Enable cross-chain privacy without on-chain links.",
     "description_long": "This project allows users to bridge assets from one chain to another while ensuring privacy by severing links between deposit and withdrawal addresses. It uses a privacy pool that enables users to engage without ever having to interact directly with the underlying privacy technology. The main challenge tackled here is maintaining anonymity during the deposit and withdrawal processes, especially considering the timing and amount of transactions that could potentially link user activity.",
     "latest_push": "Added one-click privacy functionality for any chain.",
@@ -43,6 +99,7 @@
     "has_readme": true,
     "additions": 66,
     "deletions": 46,
+    "churn_pct": 0,
     "assessment": null
   },
   {
@@ -81,7 +138,6 @@
     ],
     "head_sha": "f1884f6d3f5c02313fd3b9b1136577213617f766",
     "readme_hash": "3413:# 🔒 STRK20 Privacy Wallet\n\n> **Umbra-grade UX on a stronger foundation — fully powered by the STRK20 privacy pool on Starknet.**\n\nBuilt by **Jai** ([@SmratJay](https://github.com/SmratJay)) — founder",
-    "churn_pct": 100,
     "summary": "Provide a privacy wallet using the STRK20 privacy pool.",
     "description_long": "This wallet allows users to generate a single viewing key for simplified onboarding and private transactions without revealing on-chain identities. It integrates with the STRK20 privacy protocol, automating note discovery and enabling private sends without the need for a separate relayer, all while maintaining a clean user interface.",
     "latest_push": "Completed the STRK20 privacy wallet Next.js app.",
@@ -120,6 +176,7 @@
     "has_readme": true,
     "additions": 5954,
     "deletions": 136,
+    "churn_pct": 100,
     "assessment": null
   },
   {
@@ -202,63 +259,6 @@
     "additions": 70,
     "deletions": 259,
     "churn_pct": 12.9,
-    "assessment": null
-  },
-  {
-    "slug": "vinss",
-    "name": "VINSS",
-    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/DXJLabs/vinss",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-01",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-15T09:27:09Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "ntfound-dev",
-        "name": "ntfound-dev",
-        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
-      },
-      {
-        "login": "DXJLabs",
-        "name": "DXJ Labs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15"
-    ],
-    "head_sha": "9cc19629243ce15bc83751058b64046bbfcafbc8",
-    "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
-    "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
-    "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
-    "latest_push": "Fixed the VINSS Scarb source path in the Scarb.toml file.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1,
-    "deletions": 0,
-    "churn_pct": 0,
     "assessment": null
   },
   {
@@ -1532,7 +1532,7 @@
     "churn_pct": 0.3,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added Offbook landing and dashboard UI along with settlement helpers.",
+    "latest_push": "Added Offbook landing and dashboard UI.",
     "tooling": [
       {
         "label": "Cairo",
