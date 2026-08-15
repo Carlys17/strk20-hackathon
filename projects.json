@@ -1,5 +1,68 @@
 [
   {
+    "slug": "envelope",
+    "name": "envelope",
+    "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
+    "category": "Payments",
+    "repo_url": "https://github.com/0xrlawrence/envelope",
+    "demo_url": "https://0xrlawrence.github.io/envelope/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-09",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x04ff4f083a4667930efe14963645f9bda00bb10d44e4c13a9ee808e66c076211",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T02:48:53Z",
+    "stars": 1,
+    "builders": [
+      {
+        "login": "0xrlawrence",
+        "name": "0xrlawrence",
+        "avatar_url": "https://avatars.githubusercontent.com/u/250132405?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15"
+    ],
+    "head_sha": "48d1e7f3a28c660123ef4b961264093f3e5d5866",
+    "readme_hash": "6582:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
+    "churn_pct": 1.1,
+    "summary": "Send private money as a link to anyone without requiring prior registration.",
+    "description_long": "The project implements a STRK20 anonymizer contract that allows users to shield tokens, seal them in an envelope, and send a link to the recipient. This approach solves the problem of private transfers on Starknet where the recipient does not need to be a registered user, thus allowing seamless payments to anyone while protecting the identity of the sender through the use of secure cryptographic signatures.",
+    "latest_push": "Added a warning for the money-loss setting and pinned the surplus boundary.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 67,
+    "deletions": 1,
+    "assessment": null
+  },
+  {
     "slug": "sealed",
     "name": "Sealed",
     "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
@@ -35,7 +98,6 @@
     ],
     "head_sha": "80f29c961a11cc52f7b3480d60c6924d414553d3",
     "readme_hash": "5993:# Sealed\n\nA deployable Vickrey variant of RFP-08 on Starknet. Bidder identities stay unlinkable, bid values stay hidden until reveal, every bidder locks identical STRK20-funded collateral, and failing",
-    "churn_pct": 100,
     "summary": "Facilitate sealed-bid second-price auctions with private bidder identities on Starknet.",
     "description_long": "This project implements a Vickrey auction where bidder identities remain unlinkable using private sub-accounts. It uses a commitment scheme to keep bid values hidden until the reveal, ensuring that the collateral amount is uniform across all bidders to prevent leakage of bid information before the reveal. The system is still in development, focusing on establishing the auction mechanics and privacy safeguards.",
     "latest_push": "Implemented the auction with twelve invariants and covered the cancel path.",
@@ -54,6 +116,60 @@
     "has_readme": true,
     "additions": 4133,
     "deletions": 34,
+    "churn_pct": 100,
+    "assessment": null
+  },
+  {
+    "slug": "nexora-protocol",
+    "name": "Nexora-Protocol",
+    "one_liner": "One-click privacy for the multichain economy - powered by Starknet + STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/Gedion08/Nexora-Protocol",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T01:45:24Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Gedion08",
+        "name": "Gedion08",
+        "avatar_url": "https://avatars.githubusercontent.com/u/102872099?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15"
+    ],
+    "head_sha": "72c83bd03e53fa73eaeb63fe734e9c5768e13380",
+    "readme_hash": "2508:# Nexora Protocol\n\n**Starknet as the privacy layer for the multichain economy.**\n\nNexora Protocol is a cross-chain privacy protocol that lets users deposit assets on any supported chain (Arbitrum, Bas",
+    "churn_pct": 0,
+    "summary": "Creates a cross-chain privacy routing protocol for decentralized assets.",
+    "description_long": "The Nexora Protocol allows users to deposit and hold assets privately across multiple chains using STRK20 shielded notes. It simplifies the user experience by eliminating the need for additional wallets or native tokens for gas, handling transactions and privacy routing automatically. The integration of Starknet serves as the underlying privacy engine to ensure minimal public linkability.",
+    "latest_push": "Initialized Nexora Protocol monorepo with documentation and build configuration.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 0,
+    "deletions": 0,
     "assessment": null
   },
   {
@@ -92,7 +208,6 @@
     ],
     "head_sha": "207ecc03cfe85a7d8e99a2fcf7a58b840f5066a7",
     "readme_hash": "5586:# Blindpool\n\n**Public odds. Invisible bettors.**\n\nA prediction market on Starknet where the order book is fully public and every\nposition is shielded. Anyone can read the odds, the volume and the sett",
-    "churn_pct": 57.2,
     "summary": "Create a privacy-focused prediction market on Starknet.",
     "description_long": "Blindpool addresses privacy concerns in prediction markets by keeping bettor positions shielded while allowing visibility of odds and total volume. It separates public market data from individual positions, ensuring that no observer can link a bet to a specific user, thereby preventing copy-trading and front-running. The implementation relies on the STRK20 privacy pool, utilizing a combined public and private transaction flow to maintain anonymity.",
     "latest_push": "Corrected the integration route and added the STRK20 integration plan.",
@@ -131,6 +246,7 @@
     "has_readme": true,
     "additions": 1409,
     "deletions": 14,
+    "churn_pct": 57.2,
     "assessment": null
   },
   {
@@ -779,7 +895,7 @@
     "churn_pct": 0.3,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added Offbook landing and dashboard UI along with helper contracts.",
+    "latest_push": "Added Offbook landing and dashboard UI along with new helpers and tests.",
     "tooling": [
       {
         "label": "Cairo",
@@ -1094,68 +1210,6 @@
     "additions": 104,
     "deletions": 12,
     "churn_pct": 1.5,
-    "assessment": null
-  },
-  {
-    "slug": "envelope",
-    "name": "envelope",
-    "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
-    "category": "Payments",
-    "repo_url": "https://github.com/0xrlawrence/envelope",
-    "demo_url": "https://0xrlawrence.github.io/envelope/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-09",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x04ff4f083a4667930efe14963645f9bda00bb10d44e4c13a9ee808e66c076211",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-14T18:39:25Z",
-    "stars": 1,
-    "builders": [
-      {
-        "login": "0xrlawrence",
-        "name": "0xrlawrence",
-        "avatar_url": "https://avatars.githubusercontent.com/u/250132405?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14"
-    ],
-    "head_sha": "74d74d7db6ca0884ec3c149d21a942c0da195f0f",
-    "readme_hash": "6582:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
-    "summary": "Send private money as a link to anyone without requiring prior registration.",
-    "description_long": "The project implements a STRK20 anonymizer contract that allows users to shield tokens, seal them in an envelope, and send a link to the recipient. This approach solves the problem of private transfers on Starknet where the recipient does not need to be a registered user, thus allowing seamless payments to anyone while protecting the identity of the sender through the use of secure cryptographic signatures.",
-    "latest_push": "Added redirect handling in the wrong-link routes and improved return logic.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 53,
-    "deletions": 13,
-    "churn_pct": 1,
     "assessment": null
   },
   {
