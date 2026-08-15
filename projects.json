@@ -1,5 +1,68 @@
 [
   {
+    "slug": "envelope",
+    "name": "envelope",
+    "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
+    "category": "Payments",
+    "repo_url": "https://github.com/0xrlawrence/envelope",
+    "demo_url": "https://0xrlawrence.github.io/envelope/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-09",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x04ff4f083a4667930efe14963645f9bda00bb10d44e4c13a9ee808e66c076211",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T19:26:21Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "0xrlawrence",
+        "name": "0xrlawrence",
+        "avatar_url": "https://avatars.githubusercontent.com/u/250132405?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15"
+    ],
+    "head_sha": "2c2ea3222c24ba311fe4313e3d02f67e7a43ca85",
+    "readme_hash": "6582:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
+    "churn_pct": 0.5,
+    "summary": "Send private money as a link to anyone without requiring prior registration.",
+    "description_long": "The project implements a STRK20 anonymizer contract that allows users to shield tokens, seal them in an envelope, and send a link to the recipient. This approach solves the problem of private transfers on Starknet where the recipient does not need to be a registered user, thus allowing seamless payments to anyone while protecting the identity of the sender through the use of secure cryptographic signatures.",
+    "latest_push": "Described the reason a new account cannot shield in error handling.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 44,
+    "deletions": 1,
+    "assessment": null
+  },
+  {
     "slug": "sable",
     "name": "SABLE",
     "one_liner": "Send a client an invoice link. They pay it. The money lands shielded.",
@@ -35,7 +98,6 @@
     ],
     "head_sha": "8004445e5e19b90b51bdf88aa350d4349290cd45",
     "readme_hash": "2060:# SABLE — Private Invoicing & Payout Rail on STRK20\n\n> Send a client an invoice link. They pay it. The money lands **shielded** —\n> your client list, your rates, and your balance never appear on-chain",
-    "churn_pct": 100,
     "summary": "Facilitate private invoicing with secure payment links for freelancers.",
     "description_long": "The project addresses the challenge of protecting freelancer and creator financial data on public chains. By utilizing a shield pool with a private invoicing and payout model, it enables users to receive payments without exposing vital business information such as client lists and payment amounts. The integration of a viewing key allows freelancers to monitor their transactions and balances while maintaining privacy.",
     "latest_push": "Added STRK20 skill, documentation mirror, and sprint context.",
@@ -43,6 +105,7 @@
     "has_readme": true,
     "additions": 4032,
     "deletions": 0,
+    "churn_pct": 100,
     "assessment": null
   },
   {
@@ -81,7 +144,6 @@
     ],
     "head_sha": "d03cedb0b81c4056ee00a0a0be08f0897b8072c4",
     "readme_hash": "6674:# Booty Bank\n\n> BORROW AGAINST YOUR BBL.\n\nBooty Bank is the primary money account built for OnlyFans creators. The product combines daily banking, creator income, private credit, fan perks, and post-q",
-    "churn_pct": 100,
     "summary": "Manage income credentials and credit eligibility for creators.",
     "description_long": "The project focuses on enabling OnlyFans creators to have a dedicated banking solution simplifying income management and credit eligibility. It uses Starknet for privacy and account authorization, while integrating features such as payments, budgeting, and creator rewards within a single platform. The complexity lies in ensuring secure income verification and handling sensitive data off-chain while facilitating interactions with various fiat payment rails.",
     "latest_push": "Added Starknet wallet support and Privy social login placeholder.",
@@ -100,6 +162,7 @@
     "has_readme": true,
     "additions": 11046,
     "deletions": 348,
+    "churn_pct": 100,
     "assessment": null
   },
   {
@@ -138,7 +201,6 @@
     ],
     "head_sha": "e2793b3d60232c28d5068e928e5cc64987ecf7e5",
     "readme_hash": "5649:# Facet\n\n**Private identities for Starknet DeFi.**\n\nOne shielded balance. Unlimited unlinkable facets. Trade on one protocol as one\nidentity, lend on another as a different one, and nothing on-chain c",
-    "churn_pct": 51.1,
     "summary": "Enable private identities for DeFi on Starknet through unlinkable facets.",
     "description_long": "This project implements a system of shadow accounts that allows users to interact with DeFi protocols without revealing their real identities. It uniquely generates a separate identity for each user, protocol, and interaction, preventing any links between them. By funding shadow accounts through shielded notes rather than public approvals, Facet ensures enhanced privacy for users while operating within existing StarkWare technology.",
     "latest_push": "Replayed the decoded invocation against real anonymizer bytecode.",
@@ -157,6 +219,7 @@
     "has_readme": true,
     "additions": 397,
     "deletions": 6,
+    "churn_pct": 51.1,
     "assessment": null
   },
   {
@@ -196,7 +259,6 @@
     ],
     "head_sha": "fcf74c4cd86367354b248f956905dc14988a155a",
     "readme_hash": "10709:# Veilance Market\n\nPrivate digital services marketplace powered by STRK20 on Starknet.\n\nVeilance Market is being built as a functional marketplace where sellers publish\ndigital services, buyers discov",
-    "churn_pct": 3.9,
     "summary": "Create a private digital services marketplace on Starknet.",
     "description_long": "Veilance Market enables buyers and sellers to interact through a private escrow system without revealing wallet identities. Using shielded STRK20 balances, the project addresses the challenge of maintaining payment confidentiality while enforcing commercial agreements. The implementation separates decision-making authority from payment destination, ensuring secure and private settlement transactions.",
     "latest_push": "Added marketplace seed functionality and a contract review document.",
@@ -215,6 +277,7 @@
     "has_readme": true,
     "additions": 516,
     "deletions": 11,
+    "churn_pct": 3.9,
     "assessment": null
   },
   {
@@ -253,7 +316,6 @@
     ],
     "head_sha": "baa8e520d72f2a66db7c7c52fa3fff966cdce351",
     "readme_hash": "326:# Aegis\nPrivate, recurring subscription payments on Starknet. Creators and businesses get predictable revenue with publicly verifiable aggregates, while payer identity, amount, and billing cadence sta",
-    "churn_pct": 100,
     "summary": "Enable private subscriptions on Starknet with verifiable aggregates.",
     "description_long": "This project focuses on implementing recurring payment systems that protect payer identity and billing details while allowing businesses to verify total revenue. The challenge lies in using the STRK20 pool to ensure privacy for individual transactions while maintaining transparent aggregate data for revenue projection.",
     "latest_push": "Added the Aegis Next.js STRK20 demo app with associated files and components.",
@@ -292,69 +354,7 @@
     "has_readme": true,
     "additions": 2099,
     "deletions": 0,
-    "assessment": null
-  },
-  {
-    "slug": "envelope",
-    "name": "envelope",
-    "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
-    "category": "Payments",
-    "repo_url": "https://github.com/0xrlawrence/envelope",
-    "demo_url": "https://0xrlawrence.github.io/envelope/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-09",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x04ff4f083a4667930efe14963645f9bda00bb10d44e4c13a9ee808e66c076211",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-15T19:04:48Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "0xrlawrence",
-        "name": "0xrlawrence",
-        "avatar_url": "https://avatars.githubusercontent.com/u/250132405?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15"
-    ],
-    "head_sha": "f5b828c04f0d1647a22175d357dbda79e7bab6fb",
-    "readme_hash": "6582:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
-    "churn_pct": 2.5,
-    "summary": "Send private money as a link to anyone without requiring prior registration.",
-    "description_long": "The project implements a STRK20 anonymizer contract that allows users to shield tokens, seal them in an envelope, and send a link to the recipient. This approach solves the problem of private transfers on Starknet where the recipient does not need to be a registered user, thus allowing seamless payments to anyone while protecting the identity of the sender through the use of secure cryptographic signatures.",
-    "latest_push": "Added an offer to shield when the pool is empty.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 197,
-    "deletions": 11,
+    "churn_pct": 100,
     "assessment": null
   },
   {
@@ -2593,7 +2593,7 @@
     "churn_pct": 0.3,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added Offbook landing and dashboard UI along with various helper contracts.",
+    "latest_push": "Added Offbook landing and dashboard UI, along with several helpers.",
     "tooling": [
       {
         "label": "Cairo",
