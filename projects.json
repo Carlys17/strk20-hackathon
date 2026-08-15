@@ -20,7 +20,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-15T14:18:08Z",
+    "pushed_at": "2026-08-15T14:37:37Z",
     "stars": 0,
     "builders": [
       {
@@ -33,12 +33,12 @@
     "active_days": [
       "2026-08-15"
     ],
-    "head_sha": "9427f5b450861fe5ecf4d6029a42e54850941a7f",
+    "head_sha": "7043dc51d14b3f6a1d4f3a079146829d05c1db1b",
     "readme_hash": "7:# stark",
     "churn_pct": 100,
     "summary": "undefined",
     "description_long": "",
-    "latest_push": "Added the STRK20 chain read path, payment API, and escrow contract.",
+    "latest_push": "Built the Privora web payment experience and integrated privacy APIs.",
     "tooling": [
       {
         "label": "Rust",
@@ -47,8 +47,111 @@
       }
     ],
     "has_readme": true,
-    "additions": 2778,
-    "deletions": 142,
+    "additions": 1726,
+    "deletions": 0,
+    "assessment": null
+  },
+  {
+    "slug": "booty-bank",
+    "name": "Booty Bank",
+    "one_liner": "Private income credentials and credit eligibility for OnlyFans creators on Starknet.",
+    "category": "Consumer",
+    "repo_url": "https://github.com/welttowelt/booty-bank",
+    "demo_url": "https://bootybank.app/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T14:34:55Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "welttowelt",
+        "name": "welttowelt",
+        "avatar_url": "https://avatars.githubusercontent.com/u/58338510?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15"
+    ],
+    "head_sha": "d43dd2f440c88fdbfeb7b18e4781aeb403dece70",
+    "readme_hash": "5589:# Booty Bank\n\n> BORROW AGAINST YOUR BBL.\n\nBooty Bank is the primary money account built for OnlyFans creators. The product combines daily banking, creator income, private credit, fan perks, and post-q",
+    "churn_pct": 59.9,
+    "summary": "Manage private income and credit for OnlyFans creators on Starknet.",
+    "description_long": "The project implements a banking prototype specifically for OnlyFans creators, allowing them to consolidate various financial functions into one account. It utilizes Cairo contracts for secure income credential verification and post-quantum account authorization through Starknet, addressing the challenge of privacy and income verification without exposing sensitive data.",
+    "latest_push": "Deployed the Booty Bank app and launched the waitlist.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1895,
+    "deletions": 9,
+    "assessment": null
+  },
+  {
+    "slug": "veilpay",
+    "name": "VeilPay",
+    "one_liner": "Private payroll with scoped disclosure. Public can verify a run; only the payee or auditor can open a slice.",
+    "category": "Payments",
+    "repo_url": "https://github.com/OpenDagri/veilpay",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T14:33:25Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "OpenDagri",
+        "name": "David GRIGNET",
+        "avatar_url": "https://avatars.githubusercontent.com/u/317329795?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15"
+    ],
+    "head_sha": "eca7f867fecb1d6a72937537fe6f7a816a1c272f",
+    "readme_hash": "49:# veilpay\nRepo for Starknet's Hackathon Aug 2026\n",
+    "churn_pct": 0,
+    "summary": "Enable private payroll with controlled data disclosure.",
+    "description_long": "",
+    "latest_push": "Created strk20.json with initial structure.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 6,
+    "deletions": 0,
     "assessment": null
   },
   {
@@ -88,7 +191,6 @@
     ],
     "head_sha": "6498f16440e15bfab3260ebdcae195ff3d203e69",
     "readme_hash": "5703:# Lens\n\nSee what a STRK20 action still reveals. A privacy briefing for anyone about to shield, send, or unshield on Starknet.\n\n**[Hidden vs visible](./docs/HIDDEN-VS-VISIBLE.md)** · **[Fixture the sco",
-    "churn_pct": 9.8,
     "summary": "Provide privacy assessments for actions on Starknet's STRK20 token.",
     "description_long": "Lens analyzes the user's transaction history to identify public edges associated with potential privacy leaks before signing any shield, send, or unshield actions. It grades these actions as quiet, noisy, or loud based on past behavior, thus helping users make informed decisions. The challenge lies in accurately scoring the history of transactions without relying on external data, ensuring a reliable assessment of privacy risks.",
     "latest_push": "Added the judge function in decide.ts and updated several documentation files.",
@@ -127,6 +229,7 @@
     "has_readme": true,
     "additions": 344,
     "deletions": 46,
+    "churn_pct": 9.8,
     "assessment": null
   },
   {
@@ -173,7 +276,6 @@
     ],
     "head_sha": "df58fb637bf9a493b856945bf69d46da2d9f87c3",
     "readme_hash": "6827:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
-    "churn_pct": 0.6,
     "summary": "Create a private peer-to-peer hospitality protocol on Starknet.",
     "description_long": "Philoxenia enables a social trust network for private hospitality without public listings. The most challenging aspect involves implementing trustless payments via escrow in Cairo while managing off-chain data like friendships and bookings, ensuring privacy and secure settlements.",
     "latest_push": "Added listings open and nights booked to the landing network stats.",
@@ -187,6 +289,7 @@
     "has_readme": true,
     "additions": 46,
     "deletions": 4,
+    "churn_pct": 0.6,
     "assessment": null
   },
   {
@@ -245,63 +348,6 @@
     "additions": 1338,
     "deletions": 126,
     "churn_pct": 14.8,
-    "assessment": null
-  },
-  {
-    "slug": "booty-bank",
-    "name": "Booty Bank",
-    "one_liner": "Private income credentials and credit eligibility for OnlyFans creators on Starknet.",
-    "category": "Consumer",
-    "repo_url": "https://github.com/welttowelt/booty-bank",
-    "demo_url": "https://welttowelt.github.io/booty-bank/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-15T13:42:21Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "welttowelt",
-        "name": "welttowelt",
-        "avatar_url": "https://avatars.githubusercontent.com/u/58338510?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15"
-    ],
-    "head_sha": "3ddd18d5afa19f77292f4c2bd4824fc226e38a15",
-    "readme_hash": "4584:# Booty Bank\n\n> BORROW AGAINST YOUR BBL.\n\nBooty Bank is the primary money account built for OnlyFans creators. The product combines daily banking, creator income, private credit, fan perks, and post-q",
-    "summary": "Provide income credentials and credit eligibility for OnlyFans creators.",
-    "description_long": "This project focuses on creating a banking platform for OnlyFans creators that integrates income management and credit functionalities. It employs Cairo contracts for private income verification while maintaining offchain sensitive data to ensure user privacy. The challenge lies in building a secure, compliant financial ecosystem that requires collaborations with regulated banking and lending partners.",
-    "latest_push": "Closed account authority gaps and sharpened mobile UX.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1,
-    "deletions": 1,
-    "churn_pct": 0.1,
     "assessment": null
   },
   {
@@ -1985,7 +2031,7 @@
     "churn_pct": 0.3,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added Offbook landing and dashboard UI along with settlement helpers.",
+    "latest_push": "Added Offbook landing and dashboard UI along with several connection helpers.",
     "tooling": [
       {
         "label": "Cairo",
