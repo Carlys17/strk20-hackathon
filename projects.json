@@ -1,5 +1,151 @@
 [
   {
+    "slug": "envelope",
+    "name": "envelope",
+    "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
+    "category": "Payments",
+    "repo_url": "https://github.com/0xrlawrence/envelope",
+    "demo_url": "https://0xrlawrence.github.io/envelope/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-09",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x04ff4f083a4667930efe14963645f9bda00bb10d44e4c13a9ee808e66c076211",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T04:25:13Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "0xrlawrence",
+        "name": "0xrlawrence",
+        "avatar_url": "https://avatars.githubusercontent.com/u/250132405?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15"
+    ],
+    "head_sha": "9b25cbf6bb35ed4d862cb5a41e9dbf6eab44bfba",
+    "readme_hash": "6582:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
+    "churn_pct": 7,
+    "summary": "Send private money as a link to anyone without requiring prior registration.",
+    "description_long": "The project implements a STRK20 anonymizer contract that allows users to shield tokens, seal them in an envelope, and send a link to the recipient. This approach solves the problem of private transfers on Starknet where the recipient does not need to be a registered user, thus allowing seamless payments to anyone while protecting the identity of the sender through the use of secure cryptographic signatures.",
+    "latest_push": "Dropped the sound switch, wiped themes, and adjusted envelope interactions.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 356,
+    "deletions": 163,
+    "assessment": null
+  },
+  {
+    "slug": "morrow",
+    "name": "Morrow",
+    "one_liner": "A privacy preflight for STRK20 milestone payouts.",
+    "category": "Other",
+    "repo_url": "https://github.com/nftkingiii/Morrow",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T04:16:04Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "nftkingiii",
+        "name": "nftking",
+        "avatar_url": "https://avatars.githubusercontent.com/u/112104786?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15"
+    ],
+    "head_sha": "f1d971a59e09a8f2fff6f49530a323cd647eecc3",
+    "readme_hash": "4369:# Morrow\n\nMorrow is a privacy preflight for STRK20 milestone payouts. Before an operator funds a grant, it makes the transaction structure legible: what is public, what remains inside STRK20, and whet",
+    "churn_pct": 20.5,
+    "summary": "Facilitate privacy assessment for STRK20 milestone payouts.",
+    "description_long": "This project helps operators understand the privacy implications of funding grants by making the transaction structure clear. It compares different funding sequences and explains what information remains public versus private within the STRK20 framework. Key challenges include ensuring accurate privacy analysis without handling sensitive keys or proofs directly.",
+    "latest_push": "Added Morrow privacy preflight and authorized Ready checks.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 234,
+    "deletions": 76,
+    "assessment": null
+  },
+  {
     "slug": "philoxenia",
     "name": "philoxenia",
     "one_liner": "Private P2P hospitality on Starknet — STRK20 Private Sprint",
@@ -43,7 +189,6 @@
     ],
     "head_sha": "42ad04072b4b4a3a6bf962a94c782584f958f1cf",
     "readme_hash": "6827:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
-    "churn_pct": 75.6,
     "summary": "Create a private peer-to-peer hospitality protocol on Starknet.",
     "description_long": "Philoxenia enables a social trust network for private hospitality without public listings. The most challenging aspect involves implementing trustless payments via escrow in Cairo while managing off-chain data like friendships and bookings, ensuring privacy and secure settlements.",
     "latest_push": "Implemented ship bookings, messaging, dual-asset escrow, and live landing stats.",
@@ -57,69 +202,7 @@
     "has_readme": true,
     "additions": 5571,
     "deletions": 806,
-    "assessment": null
-  },
-  {
-    "slug": "envelope",
-    "name": "envelope",
-    "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
-    "category": "Payments",
-    "repo_url": "https://github.com/0xrlawrence/envelope",
-    "demo_url": "https://0xrlawrence.github.io/envelope/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-09",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x04ff4f083a4667930efe14963645f9bda00bb10d44e4c13a9ee808e66c076211",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-15T03:26:23Z",
-    "stars": 1,
-    "builders": [
-      {
-        "login": "0xrlawrence",
-        "name": "0xrlawrence",
-        "avatar_url": "https://avatars.githubusercontent.com/u/250132405?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15"
-    ],
-    "head_sha": "2c7c1f8c02789821b93a4b97ddc5c8d5b004103b",
-    "readme_hash": "6582:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
-    "churn_pct": 14.6,
-    "summary": "Send private money as a link to anyone without requiring prior registration.",
-    "description_long": "The project implements a STRK20 anonymizer contract that allows users to shield tokens, seal them in an envelope, and send a link to the recipient. This approach solves the problem of private transfers on Starknet where the recipient does not need to be a registered user, thus allowing seamless payments to anyone while protecting the identity of the sender through the use of secure cryptographic signatures.",
-    "latest_push": "Added a light theme and applied it to multiple components and pages.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1011,
-    "deletions": 48,
+    "churn_pct": 75.6,
     "assessment": null
   },
   {
@@ -942,7 +1025,7 @@
     "churn_pct": 0.3,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added Offbook landing and dashboard UI along with settlement helper contracts.",
+    "latest_push": "Added Offbook landing and dashboard UI.",
     "tooling": [
       {
         "label": "Cairo",
@@ -1468,88 +1551,6 @@
     "additions": 34,
     "deletions": 21,
     "churn_pct": 1.6,
-    "assessment": null
-  },
-  {
-    "slug": "morrow",
-    "name": "Morrow",
-    "one_liner": "Private milestone grants on Starknet, powered by STRK20",
-    "category": "Other",
-    "repo_url": "https://github.com/nftkingiii/Morrow",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-14T16:40:48Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "nftkingiii",
-        "name": "nftking",
-        "avatar_url": "https://avatars.githubusercontent.com/u/112104786?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14"
-    ],
-    "head_sha": "6c52d450816328c66d395967f42866c6d59af174",
-    "readme_hash": "3242:# Morrow\n\nMorrow is a private milestone-grant protocol on Starknet. Grant terms remain public; the recipient identity and payout trail stay inside STRK20.\n\nThe core lifecycle is deliberately narrow:\n\n",
-    "summary": "Facilitate private milestone grants on Starknet with controlled visibility.",
-    "description_long": "This project implements a milestone-grant protocol that anonymizes recipient identities and payout trails while maintaining public grant terms. It achieves this by using confidential notes and a privacy layer for operators, which allows funds to be securely shielded and milestones to be claimed or recovered based on specific secrets. The challenge involves ensuring robust privacy while managing funds and implementing a secure escrow mechanism without comprehensive audits.",
-    "latest_push": "Completed phase one of the STRK20 wallet implementation.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 597,
-    "deletions": 196,
-    "churn_pct": 59.6,
     "assessment": null
   },
   {
