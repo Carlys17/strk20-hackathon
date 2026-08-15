@@ -40,7 +40,6 @@
     ],
     "head_sha": "df7a279731199912c221e4657c98bcae916ce20f",
     "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
-    "churn_pct": 0.3,
     "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
     "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
     "latest_push": "Added a deployment report and nonce delay to the workflow.",
@@ -54,6 +53,7 @@
     "has_readme": true,
     "additions": 26,
     "deletions": 2,
+    "churn_pct": 0.3,
     "assessment": null
   },
   {
@@ -1449,6 +1449,63 @@
     "assessment": null
   },
   {
+    "slug": "veilance-market",
+    "name": "Veilance Market",
+    "one_liner": "Private digital services marketplace powered by STRK20 on Starknet",
+    "category": "Payments",
+    "repo_url": "https://github.com/Portablelle/veilance-market",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-14T22:00:21Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Portablelle",
+        "name": "Portablelle",
+        "avatar_url": "https://avatars.githubusercontent.com/u/15817250?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14"
+    ],
+    "head_sha": "1aab3af2607f6fa362b5f968904d493a8998c758",
+    "readme_hash": "6198:# Veilance Market\n\nPrivate digital services marketplace powered by STRK20 on Starknet.\n\nVeilance Market is being built as a functional marketplace where sellers publish\ndigital services, buyers discov",
+    "churn_pct": 100,
+    "summary": "Create a private marketplace for digital services using STRK20 on Starknet.",
+    "description_long": "This project builds a digital services marketplace where transactions are secured through shielded STRK20 balances to protect user identities. The main challenge is ensuring that while transactions are public, sensitive details remain hidden, balancing transparency and privacy. By separating decision authority from payment destination, the marketplace allows for secure disputing and settlement, making it suitable for confidential commercial relationships.",
+    "latest_push": "Added the protocol module and marketplace with initialized settings.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 8405,
+    "deletions": 70,
+    "assessment": null
+  },
+  {
     "slug": "strk20-sentinel",
     "name": "STRK20 Privacy Sentinel",
     "one_liner": "MCP-powered privacy analytics agent for monitoring and managing shielded DeFi positions on Starknet.",
@@ -1589,7 +1646,7 @@
     "churn_pct": 0.3,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added Offbook landing and dashboard UI along with several helper contracts.",
+    "latest_push": "Added Offbook landing and dashboard UI along with various helpers.",
     "tooling": [
       {
         "label": "Cairo",
