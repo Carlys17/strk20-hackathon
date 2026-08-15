@@ -1,5 +1,51 @@
 [
   {
+    "slug": "veilcheck",
+    "name": "VeilCheck",
+    "one_liner": "Privacy preflight for STRK20: detect timing correlation and amount leakage before signing.",
+    "category": "Tooling",
+    "repo_url": "https://github.com/ashiru-1/VeilCheck",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "cyph3rxt",
+    "inspired_by": "IDEA-25",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T05:00:53Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ashiru-1",
+        "name": "Cypher",
+        "avatar_url": "https://avatars.githubusercontent.com/u/113275299?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15"
+    ],
+    "head_sha": "b981a97b6a81d81e83c31bf9dd30fbab8ce438b4",
+    "readme_hash": "93:# VeilCheck\nPrivacy preflight for STRK20 — detects transaction linkage risks before signing.\n",
+    "churn_pct": 0,
+    "summary": "Detect transaction linkage risks before signing.",
+    "description_long": "The project analyzes STRK20 transactions to identify timing correlation and potential amount leakage. It aims to provide a safety check for users by assessing risks associated with their privacy before they finalize any transactions.",
+    "latest_push": "Made the initial commit for the VeilCheck project.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 23,
+    "deletions": 0,
+    "assessment": null
+  },
+  {
     "slug": "envelope",
     "name": "envelope",
     "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
@@ -41,7 +87,6 @@
     ],
     "head_sha": "a7553a4e7075fb1bfc3982f3d000d3722f4de795",
     "readme_hash": "6582:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
-    "churn_pct": 5.3,
     "summary": "Send private money as a link to anyone without requiring prior registration.",
     "description_long": "The project implements a STRK20 anonymizer contract that allows users to shield tokens, seal them in an envelope, and send a link to the recipient. This approach solves the problem of private transfers on Starknet where the recipient does not need to be a registered user, thus allowing seamless payments to anyone while protecting the identity of the sender through the use of secure cryptographic signatures.",
     "latest_push": "Added password-locked envelopes and adjusted layout of the UI.",
@@ -60,6 +105,7 @@
     "has_readme": true,
     "additions": 397,
     "deletions": 18,
+    "churn_pct": 5.3,
     "assessment": null
   },
   {
@@ -1025,7 +1071,7 @@
     "churn_pct": 0.3,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added Offbook landing and dashboard UI along with several new helper contracts.",
+    "latest_push": "Added OffbookSettlement helper contract and its corresponding tests.",
     "tooling": [
       {
         "label": "Cairo",
