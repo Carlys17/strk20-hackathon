@@ -1,5 +1,63 @@
 [
   {
+    "slug": "veilance-market",
+    "name": "Veilance Market",
+    "one_liner": "Private digital services marketplace powered by STRK20 on Starknet",
+    "category": "Payments",
+    "repo_url": "https://github.com/Portablelle/veilance-market",
+    "demo_url": "https://test-ovh.tail3708da.ts.net:10000",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T19:28:01Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Portablelle",
+        "name": "Portablelle",
+        "avatar_url": "https://avatars.githubusercontent.com/u/15817250?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15"
+    ],
+    "head_sha": "f5290c46289110a6811344c351b3e4faf8c774e2",
+    "readme_hash": "11087:# Veilance Market\n\nPrivate digital services marketplace powered by STRK20 on Starknet.\n\nVeilance Market is being built as a functional marketplace where sellers publish\ndigital services, buyers discov",
+    "churn_pct": 8.7,
+    "summary": "Facilitate private transactions for digital services using STRK20 on Starknet.",
+    "description_long": "The platform merges public escrow mechanics with private funding and settlement, addressing the challenge of financial privacy in digital marketplaces. By utilizing STRK20 tokens, it ensures that both buyers and sellers can engage in transactions without exposing their wallet identities, while maintaining oversight and dispute resolution through an arbitrator. The implementation aims for a complete user experience from service publication to payment, all while managing privacy and transparency constraints.",
+    "latest_push": "Added verified reviews and notifications to the marketplace.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1243,
+    "deletions": 20,
+    "assessment": null
+  },
+  {
     "slug": "envelope",
     "name": "envelope",
     "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
@@ -41,7 +99,6 @@
     ],
     "head_sha": "2c2ea3222c24ba311fe4313e3d02f67e7a43ca85",
     "readme_hash": "6582:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
-    "churn_pct": 0.5,
     "summary": "Send private money as a link to anyone without requiring prior registration.",
     "description_long": "The project implements a STRK20 anonymizer contract that allows users to shield tokens, seal them in an envelope, and send a link to the recipient. This approach solves the problem of private transfers on Starknet where the recipient does not need to be a registered user, thus allowing seamless payments to anyone while protecting the identity of the sender through the use of secure cryptographic signatures.",
     "latest_push": "Described the reason a new account cannot shield in error handling.",
@@ -60,6 +117,7 @@
     "has_readme": true,
     "additions": 44,
     "deletions": 1,
+    "churn_pct": 0.5,
     "assessment": null
   },
   {
@@ -220,64 +278,6 @@
     "additions": 397,
     "deletions": 6,
     "churn_pct": 51.1,
-    "assessment": null
-  },
-  {
-    "slug": "veilance-market",
-    "name": "Veilance Market",
-    "one_liner": "Private digital services marketplace powered by STRK20 on Starknet",
-    "category": "Payments",
-    "repo_url": "https://github.com/Portablelle/veilance-market",
-    "demo_url": "https://test-ovh.tail3708da.ts.net:10000",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-15T19:12:19Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Portablelle",
-        "name": "Portablelle",
-        "avatar_url": "https://avatars.githubusercontent.com/u/15817250?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15"
-    ],
-    "head_sha": "fcf74c4cd86367354b248f956905dc14988a155a",
-    "readme_hash": "10709:# Veilance Market\n\nPrivate digital services marketplace powered by STRK20 on Starknet.\n\nVeilance Market is being built as a functional marketplace where sellers publish\ndigital services, buyers discov",
-    "summary": "Create a private digital services marketplace on Starknet.",
-    "description_long": "Veilance Market enables buyers and sellers to interact through a private escrow system without revealing wallet identities. Using shielded STRK20 balances, the project addresses the challenge of maintaining payment confidentiality while enforcing commercial agreements. The implementation separates decision-making authority from payment destination, ensuring secure and private settlement transactions.",
-    "latest_push": "Added marketplace seed functionality and a contract review document.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 516,
-    "deletions": 11,
-    "churn_pct": 3.9,
     "assessment": null
   },
   {
@@ -2593,7 +2593,7 @@
     "churn_pct": 0.3,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added Offbook landing and dashboard UI, along with several helpers.",
+    "latest_push": "Added Offbook landing and dashboard UI along with several helper contracts.",
     "tooling": [
       {
         "label": "Cairo",
