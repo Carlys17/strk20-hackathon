@@ -35,7 +35,6 @@
     ],
     "head_sha": "ae4dca4302f8b9879bf6e59a6947c808250efdb6",
     "readme_hash": "6484:# Blindpool\n\n**Public odds. Invisible bettors.**\n\nA prediction market on Starknet where the order book is fully public and every\nposition is shielded. Anyone can read the odds, the volume and the sett",
-    "churn_pct": 36.3,
     "summary": "Create a prediction market that protects bettor identities.",
     "description_long": "Blindpool establishes a prediction market with public odds while keeping bettor positions private. The project utilizes a Starknet-based privacy pool, allowing participants to take positions anonymously by separating the public record of bets from private transfers. This approach addresses issues like copy-trading and front-running by ensuring that while aggregate data is accessible, individual contributions remain shielded.",
     "latest_push": "Implemented Cairo scaffolding with acceptance tests and deployment instructions.",
@@ -74,6 +73,7 @@
     "has_readme": true,
     "additions": 1561,
     "deletions": 126,
+    "churn_pct": 36.3,
     "assessment": null
   },
   {
@@ -117,7 +117,6 @@
     ],
     "head_sha": "c911e785ae15368e99dadde1f8154c8c935cf35c",
     "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
-    "churn_pct": 0.3,
     "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
     "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
     "latest_push": "Updated Sepolia contract deployments and added VINSS demo URL.",
@@ -131,6 +130,7 @@
     "has_readme": true,
     "additions": 15,
     "deletions": 7,
+    "churn_pct": 0.3,
     "assessment": null
   },
   {
@@ -180,7 +180,6 @@
     ],
     "head_sha": "1bea9e63ad46d69d5bc4183691754ab9af3bc608",
     "readme_hash": "5255:# Mosby Pass\n\nPrivate event admission on Starknet.\n\nAn attendee scans an event QR, pays from shielded STRK, and receives a\ndevice-bound pass. At the door, a fresh challenge proves control of that pass",
-    "churn_pct": 90.3,
     "summary": "Enable private event admission using shielded STRK on Starknet.",
     "description_long": "The project allows attendees to pay for event admission using shielded STRK, ensuring their public wallet address remains hidden from organizers. Attendees generate a unique access key on their devices, which is validated at the gate through a fresh challenge, enhancing privacy and security against unauthorized entry.",
     "latest_push": "Pivoted Veilpass into Mosby Pass event admission and published the demo.",
@@ -199,6 +198,7 @@
     "has_readme": true,
     "additions": 1261,
     "deletions": 835,
+    "churn_pct": 90.3,
     "assessment": null
   },
   {
@@ -238,7 +238,6 @@
     ],
     "head_sha": "80189fb30716475f65e3abfc58c9a49b504dc61c",
     "readme_hash": "2508:# Nexora Protocol\n\n**Starknet as the privacy layer for the multichain economy.**\n\nNexora Protocol is a cross-chain privacy protocol that lets users deposit assets on any supported chain (Arbitrum, Bas",
-    "churn_pct": 100,
     "summary": "Creates a cross-chain privacy routing protocol for decentralized assets.",
     "description_long": "The Nexora Protocol allows users to deposit and hold assets privately across multiple chains using STRK20 shielded notes. It simplifies the user experience by eliminating the need for additional wallets or native tokens for gas, handling transactions and privacy routing automatically. The integration of Starknet serves as the underlying privacy engine to ensure minimal public linkability.",
     "latest_push": "Added the PrivacyHub Cairo contract and deployment scripts.",
@@ -257,6 +256,7 @@
     "has_readme": true,
     "additions": 114,
     "deletions": 0,
+    "churn_pct": 100,
     "assessment": null
   },
   {
@@ -296,7 +296,6 @@
     ],
     "head_sha": "86e9b9b24d2c1363aa321149c614f03215aea53e",
     "readme_hash": "6324:# Veilance Market\n\nPrivate digital services marketplace powered by STRK20 on Starknet.\n\nVeilance Market is being built as a functional marketplace where sellers publish\ndigital services, buyers discov",
-    "churn_pct": 1.1,
     "summary": "Create a private digital services marketplace on Starknet.",
     "description_long": "Veilance Market allows buyers and sellers to interact in a private digital services marketplace using STRK20 for confidential transactions. It addresses the issue of exposing user wallet identities during escrow transactions by using shielded balances and private settlement notes, ensuring privacy while still maintaining a public escrow state. Central to its functionality is the distinct separation of authority roles, which governs how funds are managed and disputes resolved.",
     "latest_push": "Recorded hackathon registration and published marketplace demo.",
@@ -315,6 +314,7 @@
     "has_readme": true,
     "additions": 21,
     "deletions": 18,
+    "churn_pct": 1.1,
     "assessment": null
   },
   {
@@ -1652,7 +1652,7 @@
     "churn_pct": 0.3,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added Offbook landing and dashboard UI along with settlement helpers.",
+    "latest_push": "Added Offbook landing and dashboard UI with related helpers.",
     "tooling": [
       {
         "label": "Cairo",
