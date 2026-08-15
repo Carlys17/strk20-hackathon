@@ -1,14 +1,14 @@
 [
   {
-    "slug": "vinss",
-    "name": "VINSS",
-    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
+    "slug": "blindpool",
+    "name": "blindpool",
+    "one_liner": "Public odds. Invisible bettors. A Starknet prediction market where the order book is public and every position is shielded in the STRK20 privacy pool. STRK20 Private Sprint (RFP-07).",
     "category": "Other",
-    "repo_url": "https://github.com/DXJLabs/vinss",
+    "repo_url": "https://github.com/frankolien/blindpool",
     "demo_url": "",
     "demo_video": "",
     "x_handle": "",
-    "inspired_by": "IDEA-01",
+    "inspired_by": "",
     "starred": false,
     "star_reason": "",
     "contracts": [],
@@ -20,7 +20,84 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-15T10:47:39Z",
+    "pushed_at": "2026-08-15T11:18:03Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "frankolien",
+        "name": "frankolien",
+        "avatar_url": "https://avatars.githubusercontent.com/u/105513394?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15"
+    ],
+    "head_sha": "ae4dca4302f8b9879bf6e59a6947c808250efdb6",
+    "readme_hash": "6484:# Blindpool\n\n**Public odds. Invisible bettors.**\n\nA prediction market on Starknet where the order book is fully public and every\nposition is shielded. Anyone can read the odds, the volume and the sett",
+    "churn_pct": 36.3,
+    "summary": "Create a prediction market that protects bettor identities.",
+    "description_long": "Blindpool establishes a prediction market with public odds while keeping bettor positions private. The project utilizes a Starknet-based privacy pool, allowing participants to take positions anonymously by separating the public record of bets from private transfers. This approach addresses issues like copy-trading and front-running by ensuring that while aggregate data is accessible, individual contributions remain shielded.",
+    "latest_push": "Implemented Cairo scaffolding with acceptance tests and deployment instructions.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1561,
+    "deletions": 126,
+    "assessment": null
+  },
+  {
+    "slug": "vinss",
+    "name": "VINSS",
+    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/DXJLabs/vinss",
+    "demo_url": "https://vinss-nu.vercel.app/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-01",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T11:17:49Z",
     "stars": 0,
     "builders": [
       {
@@ -38,11 +115,12 @@
     "active_days": [
       "2026-08-15"
     ],
-    "head_sha": "df7a279731199912c221e4657c98bcae916ce20f",
+    "head_sha": "c911e785ae15368e99dadde1f8154c8c935cf35c",
     "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
+    "churn_pct": 0.3,
     "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
     "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
-    "latest_push": "Added a deployment report and nonce delay to the workflow.",
+    "latest_push": "Updated Sepolia contract deployments and added VINSS demo URL.",
     "tooling": [
       {
         "label": "Cairo",
@@ -51,9 +129,192 @@
       }
     ],
     "has_readme": true,
-    "additions": 26,
-    "deletions": 2,
-    "churn_pct": 0.3,
+    "additions": 15,
+    "deletions": 7,
+    "assessment": null
+  },
+  {
+    "slug": "mosby-pass",
+    "name": "Mosby Pass",
+    "one_liner": "Private event admission powered by shielded STRK on Starknet.",
+    "category": "Consumer",
+    "repo_url": "https://github.com/welttowelt/mosby-pass",
+    "demo_url": "https://welttowelt.github.io/mosby-pass/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x05dd2c68fa1c0fba3b425a7c855fbc0a60867763b2688bf44f2225d422173da6",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x12bad0ed32d90bbde43d0579624e1bae3585ce1a7f6d4081a7296f099fe1103",
+        "ok": true,
+        "pool": true
+      }
+    ],
+    "verified_txs": 1,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T11:17:03Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "welttowelt",
+        "name": "welttowelt",
+        "avatar_url": "https://avatars.githubusercontent.com/u/58338510?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15"
+    ],
+    "head_sha": "1bea9e63ad46d69d5bc4183691754ab9af3bc608",
+    "readme_hash": "5255:# Mosby Pass\n\nPrivate event admission on Starknet.\n\nAn attendee scans an event QR, pays from shielded STRK, and receives a\ndevice-bound pass. At the door, a fresh challenge proves control of that pass",
+    "churn_pct": 90.3,
+    "summary": "Enable private event admission using shielded STRK on Starknet.",
+    "description_long": "The project allows attendees to pay for event admission using shielded STRK, ensuring their public wallet address remains hidden from organizers. Attendees generate a unique access key on their devices, which is validated at the gate through a fresh challenge, enhancing privacy and security against unauthorized entry.",
+    "latest_push": "Pivoted Veilpass into Mosby Pass event admission and published the demo.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1261,
+    "deletions": 835,
+    "assessment": null
+  },
+  {
+    "slug": "nexora-protocol",
+    "name": "Nexora-Protocol",
+    "one_liner": "One-click privacy for the multichain economy - powered by Starknet + STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/Gedion08/Nexora-Protocol",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T11:16:25Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Gedion08",
+        "name": "Gedion08",
+        "avatar_url": "https://avatars.githubusercontent.com/u/102872099?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15"
+    ],
+    "head_sha": "80189fb30716475f65e3abfc58c9a49b504dc61c",
+    "readme_hash": "2508:# Nexora Protocol\n\n**Starknet as the privacy layer for the multichain economy.**\n\nNexora Protocol is a cross-chain privacy protocol that lets users deposit assets on any supported chain (Arbitrum, Bas",
+    "churn_pct": 100,
+    "summary": "Creates a cross-chain privacy routing protocol for decentralized assets.",
+    "description_long": "The Nexora Protocol allows users to deposit and hold assets privately across multiple chains using STRK20 shielded notes. It simplifies the user experience by eliminating the need for additional wallets or native tokens for gas, handling transactions and privacy routing automatically. The integration of Starknet serves as the underlying privacy engine to ensure minimal public linkability.",
+    "latest_push": "Added the PrivacyHub Cairo contract and deployment scripts.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 114,
+    "deletions": 0,
+    "assessment": null
+  },
+  {
+    "slug": "veilance-market",
+    "name": "Veilance Market",
+    "one_liner": "Private digital services marketplace powered by STRK20 on Starknet",
+    "category": "Payments",
+    "repo_url": "https://github.com/Portablelle/veilance-market",
+    "demo_url": "https://test-ovh.tail3708da.ts.net:10000",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T10:58:45Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Portablelle",
+        "name": "Portablelle",
+        "avatar_url": "https://avatars.githubusercontent.com/u/15817250?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15"
+    ],
+    "head_sha": "86e9b9b24d2c1363aa321149c614f03215aea53e",
+    "readme_hash": "6324:# Veilance Market\n\nPrivate digital services marketplace powered by STRK20 on Starknet.\n\nVeilance Market is being built as a functional marketplace where sellers publish\ndigital services, buyers discov",
+    "churn_pct": 1.1,
+    "summary": "Create a private digital services marketplace on Starknet.",
+    "description_long": "Veilance Market allows buyers and sellers to interact in a private digital services marketplace using STRK20 for confidential transactions. It addresses the issue of exposing user wallet identities during escrow transactions by using shielded balances and private settlement notes, ensuring privacy while still maintaining a public escrow state. Central to its functionality is the distinct separation of authority roles, which governs how funds are managed and disputes resolved.",
+    "latest_push": "Recorded hackathon registration and published marketplace demo.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 21,
+    "deletions": 18,
     "assessment": null
   },
   {
@@ -183,74 +444,6 @@
     "additions": 1795,
     "deletions": 21,
     "churn_pct": 17.3,
-    "assessment": null
-  },
-  {
-    "slug": "veilpass",
-    "name": "Veilpass",
-    "one_liner": "Private creator memberships powered by STRK20 on Starknet.",
-    "category": "Payments",
-    "repo_url": "https://github.com/welttowelt/veilpass",
-    "demo_url": "https://welttowelt.github.io/veilpass/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-12",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x05dd2c68fa1c0fba3b425a7c855fbc0a60867763b2688bf44f2225d422173da6",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [
-      {
-        "hash": "0x12bad0ed32d90bbde43d0579624e1bae3585ce1a7f6d4081a7296f099fe1103",
-        "ok": true,
-        "pool": true
-      }
-    ],
-    "verified_txs": 1,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-15T10:29:31Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "welttowelt",
-        "name": "welttowelt",
-        "avatar_url": "https://avatars.githubusercontent.com/u/58338510?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15"
-    ],
-    "head_sha": "fac22c5fbaff2be27b1f63b0624c8b969746424a",
-    "readme_hash": "6585:# Veilpass\n\nPrivate creator memberships on Starknet.\n\nA subscriber pays from a shielded STRK balance. The creator receives a private\nopen note. The shared helper records a fixed-term access commitment",
-    "summary": "Facilitate private creator memberships using STRK20 on Starknet.",
-    "description_long": "Subscribers pay using a shielded STRK balance, allowing creators to receive private notifications without knowing subscriber identities. The challenge lies in securely processing transactions while maintaining privacy, as it involves creating on-chain commitments without exposing wallet details or viewing keys. The implementation utilizes a privacy wallet for transaction actions and a shared helper to record access commitments, ensuring secure and anonymous exchanges.",
-    "latest_push": "Deployed the Veilpass helper on the mainnet.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 139,
-    "deletions": 36,
-    "churn_pct": 9.8,
     "assessment": null
   },
   {
@@ -528,83 +721,6 @@
     "additions": 70,
     "deletions": 259,
     "churn_pct": 12.9,
-    "assessment": null
-  },
-  {
-    "slug": "blindpool",
-    "name": "blindpool",
-    "one_liner": "Public odds. Invisible bettors. A Starknet prediction market where the order book is public and every position is shielded in the STRK20 privacy pool. STRK20 Private Sprint (RFP-07).",
-    "category": "Other",
-    "repo_url": "https://github.com/frankolien/blindpool",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-15T09:04:57Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "frankolien",
-        "name": "frankolien",
-        "avatar_url": "https://avatars.githubusercontent.com/u/105513394?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15"
-    ],
-    "head_sha": "cb64fa1fb5868fc128f9c3ac6238f1eac451545f",
-    "readme_hash": "6484:# Blindpool\n\n**Public odds. Invisible bettors.**\n\nA prediction market on Starknet where the order book is fully public and every\nposition is shielded. Anyone can read the odds, the volume and the sett",
-    "summary": "Create a prediction market that protects bettor identities.",
-    "description_long": "Blindpool establishes a prediction market with public odds while keeping bettor positions private. The project utilizes a Starknet-based privacy pool, allowing participants to take positions anonymously by separating the public record of bets from private transfers. This approach addresses issues like copy-trading and front-running by ensuring that while aggregate data is accessible, individual contributions remain shielded.",
-    "latest_push": "Added a model-checked TLA+ spec, threat model, and contract spec.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1547,
-    "deletions": 33,
-    "churn_pct": 46.4,
     "assessment": null
   },
   {
@@ -1251,59 +1367,6 @@
     "assessment": null
   },
   {
-    "slug": "nexora-protocol",
-    "name": "Nexora-Protocol",
-    "one_liner": "One-click privacy for the multichain economy - powered by Starknet + STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/Gedion08/Nexora-Protocol",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-15T01:45:24Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Gedion08",
-        "name": "Gedion08",
-        "avatar_url": "https://avatars.githubusercontent.com/u/102872099?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15"
-    ],
-    "head_sha": "72c83bd03e53fa73eaeb63fe734e9c5768e13380",
-    "readme_hash": "2508:# Nexora Protocol\n\n**Starknet as the privacy layer for the multichain economy.**\n\nNexora Protocol is a cross-chain privacy protocol that lets users deposit assets on any supported chain (Arbitrum, Bas",
-    "summary": "Creates a cross-chain privacy routing protocol for decentralized assets.",
-    "description_long": "The Nexora Protocol allows users to deposit and hold assets privately across multiple chains using STRK20 shielded notes. It simplifies the user experience by eliminating the need for additional wallets or native tokens for gas, handling transactions and privacy routing automatically. The integration of Starknet serves as the underlying privacy engine to ensure minimal public linkability.",
-    "latest_push": "Initialized Nexora Protocol monorepo with documentation and build configuration.",
-    "tooling": [
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 0,
-    "deletions": 0,
-    "churn_pct": 0,
-    "assessment": null
-  },
-  {
     "slug": "lens",
     "name": "lens",
     "one_liner": "See what a STRK20 action still reveals, then take a quieter path",
@@ -1449,63 +1512,6 @@
     "assessment": null
   },
   {
-    "slug": "veilance-market",
-    "name": "Veilance Market",
-    "one_liner": "Private digital services marketplace powered by STRK20 on Starknet",
-    "category": "Payments",
-    "repo_url": "https://github.com/Portablelle/veilance-market",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-14T22:00:21Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Portablelle",
-        "name": "Portablelle",
-        "avatar_url": "https://avatars.githubusercontent.com/u/15817250?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14"
-    ],
-    "head_sha": "1aab3af2607f6fa362b5f968904d493a8998c758",
-    "readme_hash": "6198:# Veilance Market\n\nPrivate digital services marketplace powered by STRK20 on Starknet.\n\nVeilance Market is being built as a functional marketplace where sellers publish\ndigital services, buyers discov",
-    "churn_pct": 100,
-    "summary": "Create a private marketplace for digital services using STRK20 on Starknet.",
-    "description_long": "This project builds a digital services marketplace where transactions are secured through shielded STRK20 balances to protect user identities. The main challenge is ensuring that while transactions are public, sensitive details remain hidden, balancing transparency and privacy. By separating decision authority from payment destination, the marketplace allows for secure disputing and settlement, making it suitable for confidential commercial relationships.",
-    "latest_push": "Added the protocol module and marketplace with initialized settings.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 8405,
-    "deletions": 70,
-    "assessment": null
-  },
-  {
     "slug": "strk20-sentinel",
     "name": "STRK20 Privacy Sentinel",
     "one_liner": "MCP-powered privacy analytics agent for monitoring and managing shielded DeFi positions on Starknet.",
@@ -1646,7 +1652,7 @@
     "churn_pct": 0.3,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added Offbook landing and dashboard UI along with various helpers.",
+    "latest_push": "Added Offbook landing and dashboard UI along with settlement helpers.",
     "tooling": [
       {
         "label": "Cairo",
