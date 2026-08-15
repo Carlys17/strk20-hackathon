@@ -1,5 +1,145 @@
 [
   {
+    "slug": "vinss",
+    "name": "VINSS",
+    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/DXJLabs/vinss",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-01",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T09:23:01Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ntfound-dev",
+        "name": "ntfound-dev",
+        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
+      },
+      {
+        "login": "DXJLabs",
+        "name": "DXJ Labs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15"
+    ],
+    "head_sha": "4359b5dba7212aeaa29cacd794cde2141c572dc9",
+    "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
+    "churn_pct": 1.4,
+    "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
+    "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
+    "latest_push": "Registered VINSS escrow contracts and added Sepolia deployment workflow.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 119,
+    "deletions": 0,
+    "assessment": null
+  },
+  {
+    "slug": "quietline",
+    "name": "Quietline",
+    "one_liner": "Encrypted on-chain mail on Starknet. Payment memos ride the same private transfer.",
+    "category": "Other",
+    "repo_url": "https://github.com/gstohl/quietline",
+    "demo_url": "https://github.com/gstohl/quietline",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-01",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T09:15:19Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "gstohl",
+        "name": "gstohl",
+        "avatar_url": "https://avatars.githubusercontent.com/u/191050810?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15"
+    ],
+    "head_sha": "3816d8ea7c0e9b13ac4addd63fe475bd8f54f55c",
+    "readme_hash": "9559:# Quietline\n\nEncrypted on-chain mail on Starknet.\n\nAddresses never appear on the message. Content decrypts only on the\nrecipient's device. A private transfer can carry a memo in the same\ntransaction —",
+    "churn_pct": 14.6,
+    "summary": "Enable encrypted on-chain mail with associated payments on Starknet.",
+    "description_long": "Quietline facilitates private messaging on Starknet where the sender and recipient identities are concealed. It uses a `privacy_invoke` helper to ensure the content of messages is decrypted only on the recipient's device, while also allowing payment memos to be included in the same transaction, keeping the payment amount hidden. The technical challenge lies in maintaining anonymity while managing the complexity of secure transactions and message delivery without a centralized server.",
+    "latest_push": "Tested Quietline mail integration with the actual privacy pool.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1324,
+    "deletions": 25,
+    "assessment": null
+  },
+  {
     "slug": "blindpool",
     "name": "blindpool",
     "one_liner": "Public odds. Invisible bettors. A Starknet prediction market where the order book is public and every position is shielded in the STRK20 privacy pool. STRK20 Private Sprint (RFP-07).",
@@ -35,7 +175,6 @@
     ],
     "head_sha": "cb64fa1fb5868fc128f9c3ac6238f1eac451545f",
     "readme_hash": "6484:# Blindpool\n\n**Public odds. Invisible bettors.**\n\nA prediction market on Starknet where the order book is fully public and every\nposition is shielded. Anyone can read the odds, the volume and the sett",
-    "churn_pct": 46.4,
     "summary": "Create a prediction market that protects bettor identities.",
     "description_long": "Blindpool establishes a prediction market with public odds while keeping bettor positions private. The project utilizes a Starknet-based privacy pool, allowing participants to take positions anonymously by separating the public record of bets from private transfers. This approach addresses issues like copy-trading and front-running by ensuring that while aggregate data is accessible, individual contributions remain shielded.",
     "latest_push": "Added a model-checked TLA+ spec, threat model, and contract spec.",
@@ -74,63 +213,7 @@
     "has_readme": true,
     "additions": 1547,
     "deletions": 33,
-    "assessment": null
-  },
-  {
-    "slug": "vinss",
-    "name": "VINSS",
-    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/DXJLabs/vinss",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-01",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-15T08:58:02Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "ntfound-dev",
-        "name": "ntfound-dev",
-        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
-      },
-      {
-        "login": "DXJLabs",
-        "name": "DXJ Labs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15"
-    ],
-    "head_sha": "8c7704eb51f00c95cd732c01693fcbac43242bb6",
-    "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
-    "churn_pct": 0.3,
-    "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
-    "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
-    "latest_push": "Renamed VEIL references to VINSS in the README file.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 11,
-    "deletions": 11,
+    "churn_pct": 46.4,
     "assessment": null
   },
   {
@@ -169,7 +252,6 @@
     ],
     "head_sha": "b906e5c945e63fc8cb64fdf5251ac0edf69120e2",
     "readme_hash": "6396:# Veilpass\n\nPrivate creator memberships on Starknet.\n\nA subscriber pays from a shielded STRK balance. The creator receives a private\nopen note. The shared helper records a fixed-term access commitment",
-    "churn_pct": 68.2,
     "summary": "Facilitate private creator memberships using shielded STRK transactions.",
     "description_long": "This project generates a private offer link for memberships where subscribers pay using shielded STRK tokens. The system employs a shared helper to record access commitments without revealing subscriber wallets, thus ensuring privacy throughout the transaction process. It leverages cryptographic commitments and maintains strict contract invariants to secure transactions and verify memberships.",
     "latest_push": "Bound memberships to private creator offers and published the Veilpass demo.",
@@ -188,6 +270,7 @@
     "has_readme": true,
     "additions": 1019,
     "deletions": 181,
+    "churn_pct": 68.2,
     "assessment": null
   },
   {
@@ -1160,88 +1243,6 @@
     "assessment": null
   },
   {
-    "slug": "quietline",
-    "name": "Quietline",
-    "one_liner": "Encrypted on-chain mail on Starknet. Payment memos ride the same private transfer.",
-    "category": "Other",
-    "repo_url": "https://github.com/gstohl/quietline",
-    "demo_url": "https://github.com/gstohl/quietline",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-01",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-14T23:33:16Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "gstohl",
-        "name": "gstohl",
-        "avatar_url": "https://avatars.githubusercontent.com/u/191050810?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14"
-    ],
-    "head_sha": "9e6e4a0bf3e25d1f3ef81041f5aecb8af04bf734",
-    "readme_hash": "8772:# Quietline\n\nEncrypted on-chain mail on Starknet.\n\nAddresses never appear on the message. Content decrypts only on the\nrecipient's device. A private transfer can carry a memo in the same\ntransaction —",
-    "summary": "Send and receive encrypted messages on Starknet without revealing identities.",
-    "description_long": "Quietline allows users to send encrypted messages via Starknet, where both sender and recipient identities remain hidden. The project leverages privacy-enhancing techniques to ensure that messages are decrypted only on the recipient's device, with the added option to send payment memos in the same private transactions. This challenges developers to ensure security while functioning on a public chain, effectively balancing anonymity with usability.",
-    "latest_push": "Documented reasons why Sepolia cannot be tested programmatically.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 27,
-    "deletions": 0,
-    "churn_pct": 0.3,
-    "assessment": null
-  },
-  {
     "slug": "strk20-sentinel",
     "name": "STRK20 Privacy Sentinel",
     "one_liner": "MCP-powered privacy analytics agent for monitoring and managing shielded DeFi positions on Starknet.",
@@ -1382,7 +1383,7 @@
     "churn_pct": 0.3,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added Offbook landing and dashboard UI.",
+    "latest_push": "Added Offbook landing and dashboard UI along with STRK20 submission metadata.",
     "tooling": [
       {
         "label": "Cairo",
