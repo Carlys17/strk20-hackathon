@@ -1,5 +1,139 @@
 [
   {
+    "slug": "vinss",
+    "name": "VINSS",
+    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/DXJLabs/vinss",
+    "demo_url": "https://vinss-nu.vercel.app/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-01",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T18:28:45Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ntfound-dev",
+        "name": "ntfound-dev",
+        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
+      },
+      {
+        "login": "DXJLabs",
+        "name": "DXJ Labs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15"
+    ],
+    "head_sha": "fd3d6b8362296432b6114cc14564e7c7fe49c465",
+    "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
+    "churn_pct": 1.4,
+    "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
+    "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
+    "latest_push": "Fixed the normalization of STRK20 invoke calldata.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 80,
+    "deletions": 40,
+    "assessment": null
+  },
+  {
+    "slug": "strk20-privacy-wallet",
+    "name": "strk20-privacy-wallet",
+    "one_liner": "Umbra-grade privacy wallet for Starknet powered by STRK20 privacy pool",
+    "category": "Other",
+    "repo_url": "https://github.com/SmratJay/strk20-privacy-wallet",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-15T18:26:40Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "SmratJay",
+        "name": "SmratJay",
+        "avatar_url": "https://avatars.githubusercontent.com/u/74355410?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15"
+    ],
+    "head_sha": "438f2c93b0575444e0c1ae61117d105bc386fc81",
+    "readme_hash": "8323:# 🔒 STRK20 Privacy Wallet (Umbra Mode)\n\n> **Umbra-grade UX on a stronger foundation — fully powered by the native STRK20 Privacy Pool on Starknet.**\n\nBuilt by **Jai Bhati** ([@SmratJay](https://githu",
+    "churn_pct": 4.5,
+    "summary": "Enable private transactions with STRK20 through a sleek wallet interface.",
+    "description_long": "This project integrates the STRK20 Privacy Pool on Starknet to facilitate private transactions using zero-knowledge cryptography. Key challenges addressed include implementing a single registered viewing key for transaction visibility and developing an efficient scanning mechanism for encrypted UTXO notes, which avoids public address exposure.",
+    "latest_push": "Upgraded the enterprise README with architecture diagrams and testing guides.",
+    "tooling": [
+      {
+        "label": "AVNU",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 128,
+    "deletions": 58,
+    "assessment": null
+  },
+  {
     "slug": "veilance-market",
     "name": "Veilance Market",
     "one_liner": "Private digital services marketplace powered by STRK20 on Starknet",
@@ -36,7 +170,6 @@
     ],
     "head_sha": "5e8b8681d903f77cc13086bd14b224643e47418e",
     "readme_hash": "10399:# Veilance Market\n\nPrivate digital services marketplace powered by STRK20 on Starknet.\n\nVeilance Market is being built as a functional marketplace where sellers publish\ndigital services, buyers discov",
-    "churn_pct": 2.4,
     "summary": "Create a privacy-focused digital services marketplace on Starknet.",
     "description_long": "This project builds a functional marketplace where buyers and sellers can transact with privacy considerations in mind. It utilizes STRK20 private balances to secure transactions and maintains a public escrow state while keeping wallet identities confidential, solving the issue of revealing counterparties through conventional on-chain escrows.",
     "latest_push": "Added deployment and regression checks with multiple tests.",
@@ -55,6 +188,7 @@
     "has_readme": true,
     "additions": 306,
     "deletions": 13,
+    "churn_pct": 2.4,
     "assessment": null
   },
   {
@@ -93,7 +227,6 @@
     ],
     "head_sha": "d689db5879c4bc91ab7c5dc4dcf301d4d686b6cb",
     "readme_hash": "5649:# Facet\n\n**Private identities for Starknet DeFi.**\n\nOne shielded balance. Unlimited unlinkable facets. Trade on one protocol as one\nidentity, lend on another as a different one, and nothing on-chain c",
-    "churn_pct": 100,
     "summary": "Enable private identities for DeFi on Starknet through unlinkable facets.",
     "description_long": "This project implements a system of shadow accounts that allows users to interact with DeFi protocols without revealing their real identities. It uniquely generates a separate identity for each user, protocol, and interaction, preventing any links between them. By funding shadow accounts through shielded notes rather than public approvals, Facet ensures enhanced privacy for users while operating within existing StarkWare technology.",
     "latest_push": "Added fork tests against the live shadow account anonymizer.",
@@ -112,83 +245,7 @@
     "has_readme": true,
     "additions": 588,
     "deletions": 8,
-    "assessment": null
-  },
-  {
-    "slug": "strk20-privacy-wallet",
-    "name": "strk20-privacy-wallet",
-    "one_liner": "Umbra-grade privacy wallet for Starknet powered by STRK20 privacy pool",
-    "category": "Other",
-    "repo_url": "https://github.com/SmratJay/strk20-privacy-wallet",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-15T18:17:45Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "SmratJay",
-        "name": "SmratJay",
-        "avatar_url": "https://avatars.githubusercontent.com/u/74355410?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15"
-    ],
-    "head_sha": "24fdad36189920f491afcfb0fb004c165d5603f5",
-    "readme_hash": "3413:# 🔒 STRK20 Privacy Wallet\n\n> **Umbra-grade UX on a stronger foundation — fully powered by the STRK20 privacy pool on Starknet.**\n\nBuilt by **Jai** ([@SmratJay](https://github.com/SmratJay)) — founder",
-    "churn_pct": 62.7,
-    "summary": "Provide a privacy wallet using the STRK20 privacy pool.",
-    "description_long": "This wallet allows users to generate a single viewing key for simplified onboarding and private transactions without revealing on-chain identities. It integrates with the STRK20 privacy protocol, automating note discovery and enabling private sends without the need for a separate relayer, all while maintaining a clean user interface.",
-    "latest_push": "Added unit tests, a stealth invoice generator, and an AVNU multi-call swap.",
-    "tooling": [
-      {
-        "label": "AVNU",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 2416,
-    "deletions": 175,
+    "churn_pct": 100,
     "assessment": null
   },
   {
@@ -264,7 +321,6 @@
     ],
     "head_sha": "56ee7728da15f582f6b8e0a5be812d74cd99d3e2",
     "readme_hash": "7179:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
-    "churn_pct": 1.1,
     "summary": "Create a private peer-to-peer hospitality protocol on Starknet.",
     "description_long": "This project allows users to connect for private hospitality using a social trust network without public listings. It utilizes Cairo-based escrow for trustless payments while maintaining user privacy, solving challenges related to secure transactions and friend-based discovery. The architecture integrates a Next.js frontend and Fastify backend, with on-chain solutions for payment escrow.",
     "latest_push": "Added demo videos with voiceover and aligned documentation with STRK20.",
@@ -278,6 +334,7 @@
     "has_readme": true,
     "additions": 78,
     "deletions": 45,
+    "churn_pct": 1.1,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -320,7 +377,6 @@
     ],
     "head_sha": "40e01e208c143b5e95f6ded4dc214b0bf92bdcd3",
     "readme_hash": "3404:# ShadowLedger\n\nPrivate payroll and treasury disbursements with public aggregate accountability on Starknet STRK20.\n\nShadowLedger is an entry for the STRK20 Private Sprint 2026, in the **Payments** ca",
-    "churn_pct": 70.4,
     "summary": "Enable private payroll with public accountability using STRK20 tokens.",
     "description_long": "This project allows organizations to process payroll privately while ensuring public verification through aggregate accountability. It facilitates the distribution of individual allocations as private STRK20 notes and provides mechanisms for recipients and auditors to obtain verification artifacts without compromising privacy. The technical challenge involves implementing a secure transfer and ensuring compliance with privacy standards while maintaining usability.",
     "latest_push": "Built the recipient readiness flow and added related tests and documentation.",
@@ -328,6 +384,7 @@
     "has_readme": true,
     "additions": 1640,
     "deletions": 16,
+    "churn_pct": 70.4,
     "assessment": null
   },
   {
@@ -987,63 +1044,6 @@
     "additions": 107,
     "deletions": 56,
     "churn_pct": 5.5,
-    "assessment": null
-  },
-  {
-    "slug": "vinss",
-    "name": "VINSS",
-    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/DXJLabs/vinss",
-    "demo_url": "https://vinss-nu.vercel.app/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-01",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-15T16:26:45Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "ntfound-dev",
-        "name": "ntfound-dev",
-        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
-      },
-      {
-        "login": "DXJLabs",
-        "name": "DXJ Labs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15"
-    ],
-    "head_sha": "c228ff6486593d169c88a6c9b5406b2703723e44",
-    "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
-    "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
-    "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
-    "latest_push": "Fixed room data mapping in the page.tsx file.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 47,
-    "deletions": 64,
-    "churn_pct": 1.3,
     "assessment": null
   },
   {
@@ -2516,7 +2516,7 @@
     "churn_pct": 0.3,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added Offbook landing and dashboard UI with submission metadata.",
+    "latest_push": "Added OffbookSettlement helper contract and its tests.",
     "tooling": [
       {
         "label": "Cairo",
@@ -2739,6 +2739,58 @@
     "additions": 34,
     "deletions": 21,
     "churn_pct": 1.6,
+    "assessment": null
+  },
+  {
+    "slug": "veilfolio",
+    "name": "Veilfolio",
+    "one_liner": "One portfolio. Separate identities. Private by design.",
+    "category": "Other",
+    "repo_url": "https://github.com/obiJohnbosco163/Veilfolio",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-14T12:49:38Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "obiJohnbosco163",
+        "name": "obijohnbosco163",
+        "avatar_url": "https://avatars.githubusercontent.com/u/123234391?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14"
+    ],
+    "head_sha": "cae9e9edc6a532668afeb492319cf778fdac6d82",
+    "readme_hash": "5896:# Veilfolio\n\n**One portfolio. Separate identities. Private by design.**\n\nA privacy-first portfolio layer for Starknet that lets users organize one unified portfolio into separate, privacy-aware execut",
+    "churn_pct": 100,
+    "summary": "Organize a unified portfolio into separate, privacy-aware identities.",
+    "description_long": "Veilfolio enables users to manage a single portfolio while maintaining diverse execution identities for different strategies using STRK20 for privacy. The challenge lies in balancing privacy and transparency, as only specific transaction details are hidden while ensuring users can still interact with the public Starknet blockchain.",
+    "latest_push": "Added a structure for project features implementation.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 14853,
+    "deletions": 4,
     "assessment": null
   },
   {
