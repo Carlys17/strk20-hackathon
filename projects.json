@@ -20,7 +20,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-16T18:39:18Z",
+    "pushed_at": "2026-08-16T18:55:54Z",
     "stars": 0,
     "builders": [
       {
@@ -34,12 +34,12 @@
       "2026-08-15",
       "2026-08-16"
     ],
-    "head_sha": "05e78951b9ba43a32be9fd8d0f376b6c9f56aa22",
+    "head_sha": "058170076d3d73e07744c037fbe5f7136c4fc0c2",
     "readme_hash": "457:# Portage.fun\n\n> A cozy idle creature-collecting game on Starknet — provably-fair on-chain\n> hatches, ownable creatures, and a player-driven marketplace. Built on STRK20.\n\n- **Contracts** (`contracts/",
-    "churn_pct": 34.3,
+    "churn_pct": 6.8,
     "summary": "Create and trade provably-fair idle creatures on Starknet.",
     "description_long": "This project utilizes Starknet for a creature-collecting game that features on-chain RNG for hatching. It tackles the challenge of ensuring fair ownership and trading through smart contracts, while providing a Next.js frontend for player interactions.",
-    "latest_push": "Added creature stats, experience progression, and evolution UI flow.",
+    "latest_push": "Fixed the gain_exp function to be cooldown-gated in the contracts.",
     "tooling": [
       {
         "label": "starknet.js",
@@ -53,8 +53,66 @@
       }
     ],
     "has_readme": true,
-    "additions": 1377,
-    "deletions": 82,
+    "additions": 180,
+    "deletions": 115,
+    "assessment": null
+  },
+  {
+    "slug": "booty-bank",
+    "name": "Booty Bank",
+    "one_liner": "Private income credentials and credit eligibility for OnlyFans creators on Starknet.",
+    "category": "Consumer",
+    "repo_url": "https://github.com/welttowelt/booty-bank",
+    "demo_url": "https://bootybank.app/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T18:54:24Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "welttowelt",
+        "name": "welttowelt",
+        "avatar_url": "https://avatars.githubusercontent.com/u/58338510?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16"
+    ],
+    "head_sha": "113616e523a3d46c9c57fa3f2156bab49c199429",
+    "readme_hash": "8777:# Booty Bank\n\n> BORROW AGAINST YOUR BBL.\n\nBooty Bank is the primary money account built for OnlyFans creators. The product combines daily banking, creator income, private credit, fan perks, and a post",
+    "churn_pct": 0.9,
+    "summary": "Manage income and credit for OnlyFans creators via a secure Starknet account.",
+    "description_long": "The project provides a comprehensive banking solution for OnlyFans creators, integrating income management and credit eligibility checks with advanced privacy features using Starknet. It utilizes Cairo contracts to implement income credentials and a unique account system while ensuring user anonymity and security through post-quantum cryptography. The challenging part involves creating a seamless experience for financial transactions and integrating various functionalities like budgeting, payments, and privacy controls without compromising user data.",
+    "latest_push": "Routed Mainnet activity to Starkscan in the explorer.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 50,
+    "deletions": 10,
     "assessment": null
   },
   {
@@ -78,7 +136,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-16T18:38:45Z",
+    "pushed_at": "2026-08-16T18:51:46Z",
     "stars": 0,
     "builders": [
       {
@@ -91,16 +149,47 @@
     "active_days": [
       "2026-08-16"
     ],
-    "head_sha": "9e311f96352a356630bf93b5003efc86d34ce766",
-    "readme_hash": "549:# zkPayslip\n\nPrivate payroll on Starknet, built on the STRK20 privacy pool: employers run\nshielded salary disbursements, and each employee can generate a one-time,\nverifier-bound proof of income — wit",
+    "head_sha": "507ccd3c5300db30f0eca49d391e3ad9250134e9",
+    "readme_hash": "764:# zkPayslip\n\nPrivate payroll on Starknet, built on the STRK20 privacy pool: employers run\nshielded salary disbursements, and each employee can generate a one-time,\nverifier-bound proof of income — wit",
     "churn_pct": 100,
-    "summary": "Enable private salary disbursements for employees using zero-knowledge proofs.",
-    "description_long": "This project implements private payroll functionality on the Starknet platform using the STRK20 privacy pool. It allows employers to perform shielded salary payments while enabling employees to generate a one-time proof of income without revealing their entire financial history.",
-    "latest_push": "Created the project skeleton with domain types, MIT license, and README stub.",
-    "tooling": [],
+    "summary": "Enable private payroll processing for employers and employees.",
+    "description_long": "This project focuses on implementing a private payroll system on Starknet using the STRK20 privacy pool. The challenging part lies in allowing employers to conduct shielded salary disbursements while enabling employees to generate one-time proofs of income without revealing their entire financial history.",
+    "latest_push": "Imported STRK20 starter kit as the app baseline with adapted configurations.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
     "has_readme": true,
-    "additions": 131,
-    "deletions": 0,
+    "additions": 1970,
+    "deletions": 3,
     "assessment": null
   },
   {
@@ -141,7 +230,6 @@
     ],
     "head_sha": "2c96e711a1ebfeb1316d0b5be6f225942ef641c5",
     "readme_hash": "16011:# Quietline\n\nEncrypted on-chain mail on Starknet.\n\nAddresses never appear on the message. Content decrypts only on the\nrecipient's device. A private transfer can carry a memo in the same\ntransaction —",
-    "churn_pct": 4.2,
     "summary": "Send encrypted messages on Starknet with integrated payment memos.",
     "description_long": "This project enables users to send encrypted on-chain messages without revealing sender or recipient addresses while leveraging private transfers for payments. The biggest challenge addressed is ensuring that message content remains secure and confidential, as it only decrypts on the recipient's device. It uses a client-side architecture with browser APIs, preventing the app from handling any plaintext, while allowing wallet interactions without an allowlist.",
     "latest_push": "Added conversation tags and honest sender proof functionality.",
@@ -185,6 +273,7 @@
     "has_readme": true,
     "additions": 912,
     "deletions": 24,
+    "churn_pct": 4.2,
     "assessment": null
   },
   {
@@ -223,7 +312,6 @@
     ],
     "head_sha": "cadcab4a2472ebc60c57bf3d1f367fd7f3aa50b0",
     "readme_hash": "5837:# VeilPayouts 🎁\n\n**Private business payouts on Starknet — pay anyone by link, they claim into a shielded balance.**\n\nVeilPayouts is a privacy-native payouts rail built on [STRK20](https://strk20.star",
-    "churn_pct": 2.6,
     "summary": "Facilitate private payouts through claim links for STRK20 users.",
     "description_long": "This project implements a privacy-centric payouts system using the STRK20 standard, enabling companies to pay recipients without collecting wallet addresses or exposing balances. It uniquely addresses the challenge of making private transfers to unregistered users by using an escrow mechanism that hands off a claim link off-chain, allowing recipients to claim their funds privately.",
     "latest_push": "Documented the Sepolia shield blocker in SEPOLIA-SHIELD-BUG.md.",
@@ -262,6 +350,7 @@
     "has_readme": true,
     "additions": 46,
     "deletions": 0,
+    "churn_pct": 2.6,
     "assessment": null
   },
   {
@@ -624,64 +713,6 @@
     "additions": 1040,
     "deletions": 1459,
     "churn_pct": 100,
-    "assessment": null
-  },
-  {
-    "slug": "booty-bank",
-    "name": "Booty Bank",
-    "one_liner": "Private income credentials and credit eligibility for OnlyFans creators on Starknet.",
-    "category": "Consumer",
-    "repo_url": "https://github.com/welttowelt/booty-bank",
-    "demo_url": "https://bootybank.app/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T17:06:15Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "welttowelt",
-        "name": "welttowelt",
-        "avatar_url": "https://avatars.githubusercontent.com/u/58338510?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16"
-    ],
-    "head_sha": "e303393af94e2875fb9a44a9df68b816a88f3244",
-    "readme_hash": "8777:# Booty Bank\n\n> BORROW AGAINST YOUR BBL.\n\nBooty Bank is the primary money account built for OnlyFans creators. The product combines daily banking, creator income, private credit, fan perks, and a post",
-    "summary": "Manage income and credit for OnlyFans creators via a secure Starknet account.",
-    "description_long": "The project provides a comprehensive banking solution for OnlyFans creators, integrating income management and credit eligibility checks with advanced privacy features using Starknet. It utilizes Cairo contracts to implement income credentials and a unique account system while ensuring user anonymity and security through post-quantum cryptography. The challenging part involves creating a seamless experience for financial transactions and integrating various functionalities like budgeting, payments, and privacy controls without compromising user data.",
-    "latest_push": "Fixed Starknet wallet choices and added Xverse option.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 88,
-    "deletions": 16,
-    "churn_pct": 1.6,
     "assessment": null
   },
   {
