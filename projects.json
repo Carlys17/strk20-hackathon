@@ -1,14 +1,14 @@
 [
   {
-    "slug": "vinss",
-    "name": "VINSS",
-    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
+    "slug": "quietline",
+    "name": "Quietline",
+    "one_liner": "Encrypted on-chain mail on Starknet. Payment memos ride the same private transfer.",
     "category": "Other",
-    "repo_url": "https://github.com/DXJLabs/vinss",
-    "demo_url": "https://vinss-nu.vercel.app/",
+    "repo_url": "https://github.com/gstohl/quietline",
+    "demo_url": "https://github.com/gstohl/quietline",
     "demo_video": "",
     "x_handle": "",
-    "inspired_by": "IDEA-01",
+    "inspired_by": "RFP-01",
     "starred": false,
     "star_reason": "",
     "contracts": [],
@@ -20,50 +20,76 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-16T15:00:42Z",
+    "pushed_at": "2026-08-16T15:18:18Z",
     "stars": 0,
     "builders": [
       {
-        "login": "ntfound-dev",
-        "name": "ntfound-dev",
-        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
-      },
-      {
-        "login": "DXJLabs",
-        "name": "DXJ Labs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
+        "login": "gstohl",
+        "name": "gstohl",
+        "avatar_url": "https://avatars.githubusercontent.com/u/191050810?v=4"
       }
     ],
     "agents": [],
     "active_days": [
+      "2026-08-14",
       "2026-08-15",
       "2026-08-16"
     ],
-    "head_sha": "70b571a843b8bba59134b8e60d81a8fe7cd6d738",
-    "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
-    "churn_pct": 0,
-    "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
-    "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
-    "latest_push": "Fixed deploy and constructor arguments in the message helper.",
+    "head_sha": "e2a98abb01a4f793242ab76d468558fe0881b60a",
+    "readme_hash": "16004:# Quietline\n\nEncrypted on-chain mail on Starknet.\n\nAddresses never appear on the message. Content decrypts only on the\nrecipient's device. A private transfer can carry a memo in the same\ntransaction —",
+    "churn_pct": 3.4,
+    "summary": "Facilitate encrypted messaging on Starknet using private transfers.",
+    "description_long": "This project implements an on-chain mail system where messages are sent encrypted, ensuring sender and recipient addresses are not visible in transaction records. The main challenge is to achieve privacy through the use of a shared transaction pool where only the meta information is exposed, while encrypted message content and sender/recipient details remain hidden. It also allows for sending memos along with private asset transfers without compromising privacy.",
+    "latest_push": "Kept wallet network failures and mainnet gates explicit in the codebase.",
     "tooling": [
       {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      },
+      {
         "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
         "live": false,
         "stack": false
       }
     ],
     "has_readme": true,
-    "additions": 2,
-    "deletions": 2,
+    "additions": 687,
+    "deletions": 18,
     "assessment": null
   },
   {
-    "slug": "variety",
-    "name": "Variety",
-    "one_liner": "Compliant selective-disclosure yield vault using STRK20 native extensions",
-    "category": "Other",
-    "repo_url": "https://github.com/Teecash96/Variety",
-    "demo_url": "",
+    "slug": "booty-bank",
+    "name": "Booty Bank",
+    "one_liner": "Private income credentials and credit eligibility for OnlyFans creators on Starknet.",
+    "category": "Consumer",
+    "repo_url": "https://github.com/welttowelt/booty-bank",
+    "demo_url": "https://bootybank.app/",
     "demo_video": "",
     "x_handle": "",
     "inspired_by": "",
@@ -73,33 +99,45 @@
     "transactions": [],
     "verified_txs": 0,
     "requirements": {
-      "demo": false,
+      "demo": true,
       "video": false,
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-16T15:00:30Z",
+    "pushed_at": "2026-08-16T15:13:03Z",
     "stars": 0,
     "builders": [
       {
-        "login": "Teecash96",
-        "name": "Teecash96",
-        "avatar_url": "https://avatars.githubusercontent.com/u/54204047?v=4"
+        "login": "welttowelt",
+        "name": "welttowelt",
+        "avatar_url": "https://avatars.githubusercontent.com/u/58338510?v=4"
       }
     ],
     "agents": [],
     "active_days": [
+      "2026-08-15",
       "2026-08-16"
     ],
-    "head_sha": "27b50b1a7113323f53e426f465f46cbd52141887",
-    "readme_hash": "778:# Variety\n\nCompliant selective disclosure for private yield on Starknet.\n\nVariety is a STRK20 native extension for yield vaults. It is designed to keep\npositions and activity private while allowing a ",
-    "churn_pct": 0,
-    "summary": "Enable compliant selective disclosure for private yield on Starknet.",
-    "description_long": "This project implements a selective disclosure mechanism for yield vaults on Starknet, ensuring user privacy while allowing for necessary verifications by auditors or counterparties. The initial focus is on defining privacy boundaries, vault workflows, and disclosure proofs, laying the groundwork for secure deployment and integration.",
-    "latest_push": "Initialized Variety for the STRK20 sprint.",
-    "tooling": [],
+    "head_sha": "2861c7032a7ee2e86ba8fcd926aa1332e7049335",
+    "readme_hash": "8777:# Booty Bank\n\n> BORROW AGAINST YOUR BBL.\n\nBooty Bank is the primary money account built for OnlyFans creators. The product combines daily banking, creator income, private credit, fan perks, and a post",
+    "churn_pct": 1.7,
+    "summary": "Manage income and credit for OnlyFans creators via a secure Starknet account.",
+    "description_long": "The project provides a comprehensive banking solution for OnlyFans creators, integrating income management and credit eligibility checks with advanced privacy features using Starknet. It utilizes Cairo contracts to implement income credentials and a unique account system while ensuring user anonymity and security through post-quantum cryptography. The challenging part involves creating a seamless experience for financial transactions and integrating various functionalities like budgeting, payments, and privacy controls without compromising user data.",
+    "latest_push": "Defined the Mainnet app contract in the documentation.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
     "has_readme": true,
-    "additions": 27,
+    "additions": 91,
     "deletions": 0,
     "assessment": null
   },
@@ -114,7 +152,7 @@
     "x_handle": "",
     "inspired_by": "",
     "starred": true,
-    "star_reason": "Combines privacy technology with a unique peer-to-peer hospitality model and a custom escrow system.",
+    "star_reason": "It applies privacy to a unique hospitality protocol with multiple interacting contracts.",
     "contracts": [
       {
         "address": "0x056a817104ad7544a55873584f3d8fb41a780e5466d152b3e1f12d578e75defb",
@@ -153,7 +191,7 @@
       "mainnet": true
     },
     "status": "finished",
-    "pushed_at": "2026-08-16T14:56:27Z",
+    "pushed_at": "2026-08-16T15:12:33Z",
     "stars": 0,
     "builders": [
       {
@@ -167,7 +205,7 @@
         "family": "Cursor",
         "name": "Cursor",
         "avatar_url": "",
-        "commits": 58
+        "commits": 59
       }
     ],
     "active_days": [
@@ -175,12 +213,12 @@
       "2026-08-15",
       "2026-08-16"
     ],
-    "head_sha": "9db23c9b1f7666acb0117895e907ab9863afe982",
+    "head_sha": "95a2708246bc135c477ee90ec65a6b92dc72b042",
     "readme_hash": "8412:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
-    "churn_pct": 3.5,
+    "churn_pct": 6.2,
     "summary": "Enable private peer-to-peer hospitality payments using trust networks.",
     "description_long": "Philoxenia creates a private hospitality protocol for peer-to-peer bookings, relying on social trust instead of public listings. It integrates a Cairo escrow system for trustless payment settlement, while utilizing STRK20 tokens for private payments through the Ready X wallet. The project solves challenges of anonymity and trust management in decentralized hospitality transactions.",
-    "latest_push": "Added AVNU STRK↔DAI swap functionality and documentation.",
+    "latest_push": "Clarified connector earnings and opened friend listings from social surfaces.",
     "tooling": [
       {
         "label": "Cairo",
@@ -189,13 +227,117 @@
       }
     ],
     "has_readme": true,
-    "additions": 432,
-    "deletions": 20,
+    "additions": 762,
+    "deletions": 68,
     "assessment": {
       "innovative": true,
       "complex": true,
-      "reason": "Combines privacy technology with a unique peer-to-peer hospitality model and a custom escrow system."
+      "reason": "It applies privacy to a unique hospitality protocol with multiple interacting contracts."
     }
+  },
+  {
+    "slug": "vinss",
+    "name": "VINSS",
+    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/DXJLabs/vinss",
+    "demo_url": "https://vinss-nu.vercel.app/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-01",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T15:06:06Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ntfound-dev",
+        "name": "ntfound-dev",
+        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
+      },
+      {
+        "login": "DXJLabs",
+        "name": "DXJ Labs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16"
+    ],
+    "head_sha": "ea01435e9164e481a6f17f27998fbdf78f777cba",
+    "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
+    "churn_pct": 0,
+    "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
+    "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
+    "latest_push": "Added a deployed message helper in the README for contracts.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1,
+    "deletions": 1,
+    "assessment": null
+  },
+  {
+    "slug": "variety",
+    "name": "Variety",
+    "one_liner": "Compliant selective-disclosure yield vault using STRK20 native extensions",
+    "category": "Other",
+    "repo_url": "https://github.com/Teecash96/Variety",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T15:00:30Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Teecash96",
+        "name": "Teecash96",
+        "avatar_url": "https://avatars.githubusercontent.com/u/54204047?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-16"
+    ],
+    "head_sha": "27b50b1a7113323f53e426f465f46cbd52141887",
+    "readme_hash": "778:# Variety\n\nCompliant selective disclosure for private yield on Starknet.\n\nVariety is a STRK20 native extension for yield vaults. It is designed to keep\npositions and activity private while allowing a ",
+    "summary": "Enable compliant selective disclosure for private yield on Starknet.",
+    "description_long": "This project implements a selective disclosure mechanism for yield vaults on Starknet, ensuring user privacy while allowing for necessary verifications by auditors or counterparties. The initial focus is on defining privacy boundaries, vault workflows, and disclosure proofs, laying the groundwork for secure deployment and integration.",
+    "latest_push": "Initialized Variety for the STRK20 sprint.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 27,
+    "deletions": 0,
+    "churn_pct": 0,
+    "assessment": null
   },
   {
     "slug": "whisperpay",
@@ -240,7 +382,6 @@
     ],
     "head_sha": "ac4b25b6e9d890075e361de2578b9d328f2a1dbf",
     "readme_hash": "4872:# Whisper Pay\n\nOne-link private payment requests on Starknet, powered by STRK20 shielded transfers.\n\n## What is this?\n\nWhisper Pay is a one-link private payment request tool built on STRK20. A user ge",
-    "churn_pct": 5,
     "summary": "Facilitate private payments using shareable links on Starknet.",
     "description_long": "Users can generate shareable payment links that route transactions through STRK20's shielded transfers, ensuring privacy. When a payer uses the link, their payment details remain hidden on-chain, while the recipient can still see their incoming payments. The system allows for creating and managing these links simply, making it useful for freelancers and small businesses.",
     "latest_push": "Fixed wallet references for user registration and shielding.",
@@ -274,6 +415,7 @@
     "has_readme": true,
     "additions": 94,
     "deletions": 62,
+    "churn_pct": 5,
     "assessment": null
   },
   {
@@ -728,90 +870,6 @@
     "assessment": null
   },
   {
-    "slug": "quietline",
-    "name": "Quietline",
-    "one_liner": "Encrypted on-chain mail on Starknet. Payment memos ride the same private transfer.",
-    "category": "Other",
-    "repo_url": "https://github.com/gstohl/quietline",
-    "demo_url": "https://github.com/gstohl/quietline",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-01",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T13:53:00Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "gstohl",
-        "name": "gstohl",
-        "avatar_url": "https://avatars.githubusercontent.com/u/191050810?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16"
-    ],
-    "head_sha": "602878ff15b3c43715b504d670c01be762eab323",
-    "readme_hash": "16004:# Quietline\n\nEncrypted on-chain mail on Starknet.\n\nAddresses never appear on the message. Content decrypts only on the\nrecipient's device. A private transfer can carry a memo in the same\ntransaction —",
-    "summary": "Facilitate encrypted messaging on Starknet using private transfers.",
-    "description_long": "This project implements an on-chain mail system where messages are sent encrypted, ensuring sender and recipient addresses are not visible in transaction records. The main challenge is to achieve privacy through the use of a shared transaction pool where only the meta information is exposed, while encrypted message content and sender/recipient details remain hidden. It also allows for sending memos along with private asset transfers without compromising privacy.",
-    "latest_push": "Kept wallet network failures and mainnet gates explicit in several components.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 53,
-    "deletions": 10,
-    "churn_pct": 0.3,
-    "assessment": null
-  },
-  {
     "slug": "nightfall",
     "name": "Nightfall",
     "one_liner": "Provably-fair, privacy-native social deduction (One Night Werewolf) on STRK20 — the house cannot cheat and your role stays private.",
@@ -926,64 +984,6 @@
     "additions": 13950,
     "deletions": 509,
     "churn_pct": 100,
-    "assessment": null
-  },
-  {
-    "slug": "booty-bank",
-    "name": "Booty Bank",
-    "one_liner": "Private income credentials and credit eligibility for OnlyFans creators on Starknet.",
-    "category": "Consumer",
-    "repo_url": "https://github.com/welttowelt/booty-bank",
-    "demo_url": "https://bootybank.app/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T13:34:10Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "welttowelt",
-        "name": "welttowelt",
-        "avatar_url": "https://avatars.githubusercontent.com/u/58338510?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16"
-    ],
-    "head_sha": "6c247840e2546c66465cc3907bc95d9955fec577",
-    "readme_hash": "8777:# Booty Bank\n\n> BORROW AGAINST YOUR BBL.\n\nBooty Bank is the primary money account built for OnlyFans creators. The product combines daily banking, creator income, private credit, fan perks, and a post",
-    "summary": "Manage income and credit for OnlyFans creators via a secure Starknet account.",
-    "description_long": "The project provides a comprehensive banking solution for OnlyFans creators, integrating income management and credit eligibility checks with advanced privacy features using Starknet. It utilizes Cairo contracts to implement income credentials and a unique account system while ensuring user anonymity and security through post-quantum cryptography. The challenging part involves creating a seamless experience for financial transactions and integrating various functionalities like budgeting, payments, and privacy controls without compromising user data.",
-    "latest_push": "Gated sponsored AVNU execution in documentation and example files.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 5,
-    "deletions": 5,
-    "churn_pct": 0.2,
     "assessment": null
   },
   {
