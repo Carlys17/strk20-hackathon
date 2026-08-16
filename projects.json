@@ -1,5 +1,141 @@
 [
   {
+    "slug": "strk20-privacy-wallet",
+    "name": "strk20-privacy-wallet",
+    "one_liner": "Umbra-grade privacy wallet for Starknet powered by STRK20 privacy pool",
+    "category": "Other",
+    "repo_url": "https://github.com/SmratJay/strk20-privacy-wallet",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T03:39:12Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "SmratJay",
+        "name": "SmratJay",
+        "avatar_url": "https://avatars.githubusercontent.com/u/74355410?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16"
+    ],
+    "head_sha": "8a5de7f7f307a402479781e82124a00934c6c055",
+    "readme_hash": "8323:# 🔒 STRK20 Privacy Wallet (Umbra Mode)\n\n> **Umbra-grade UX on a stronger foundation — fully powered by the native STRK20 Privacy Pool on Starknet.**\n\nBuilt by **Jai Bhati** ([@SmratJay](https://githu",
+    "churn_pct": 24.4,
+    "summary": "Enable private transactions with STRK20 through a sleek wallet interface.",
+    "description_long": "This project integrates the STRK20 Privacy Pool on Starknet to facilitate private transactions using zero-knowledge cryptography. Key challenges addressed include implementing a single registered viewing key for transaction visibility and developing an efficient scanning mechanism for encrypted UTXO notes, which avoids public address exposure.",
+    "latest_push": "Fixed five critical bugs related to RPC fallback and wallet account resolution.",
+    "tooling": [
+      {
+        "label": "AVNU",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 909,
+    "deletions": 243,
+    "assessment": null
+  },
+  {
+    "slug": "vinss",
+    "name": "VINSS",
+    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/DXJLabs/vinss",
+    "demo_url": "https://vinss-nu.vercel.app/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-01",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T03:11:45Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ntfound-dev",
+        "name": "ntfound-dev",
+        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
+      },
+      {
+        "login": "DXJLabs",
+        "name": "DXJ Labs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16"
+    ],
+    "head_sha": "3e6de0430a6920a872a4ab86194c335869046291",
+    "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
+    "churn_pct": 0.9,
+    "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
+    "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
+    "latest_push": "Fixed the wallet messaging configuration in messaging.ts.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 62,
+    "deletions": 16,
+    "assessment": null
+  },
+  {
     "slug": "sealed",
     "name": "Sealed",
     "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
@@ -36,7 +172,6 @@
     ],
     "head_sha": "267caf17cafeb06d71db293344776c68b6f3456f",
     "readme_hash": "6683:# Sealed\n\nA deployable Vickrey variant of RFP-08 on Starknet. Bidder identities stay unlinkable, bid values stay hidden until reveal, every bidder locks identical STRK20-funded collateral, and failing",
-    "churn_pct": 38.3,
     "summary": "Enable private sealed-bid auctions on Starknet with unlinkable bidders.",
     "description_long": "A sealed-bid auction protocol that keeps bidder identities and bid values hidden until a reveal, utilizing STRK20 as collateral. Each bidder makes a commitment to their bid using a Poseidon hash, with identical amounts escrowed to maintain privacy and prevent bid leaks. The system aims to ensure honest bidding under a second-price auction rule while addressing the complexities of anonymity and collateral management.",
     "latest_push": "Executed a full auction lifecycle on Sepolia and documented mechanics.",
@@ -55,6 +190,7 @@
     "has_readme": true,
     "additions": 1281,
     "deletions": 70,
+    "churn_pct": 38.3,
     "assessment": null
   },
   {
@@ -95,7 +231,6 @@
     ],
     "head_sha": "8e69a245cf4da06aeb8967fa7cc9e91b7a49344f",
     "readme_hash": "13128:# Veilance Market\n\nExperimental digital-services marketplace preview built around STRK20 on\nStarknet.\n\nVeilance Market is intended to let sellers publish digital services and let buyers\ncomplete deliv",
-    "churn_pct": 17.7,
     "summary": "Create a digital marketplace that maintains buyer and seller privacy.",
     "description_long": "Veilance Market allows sellers to offer digital services while ensuring buyer and seller identities remain confidential. By utilizing STRK20 private balances for escrow and settlements, the project addresses the challenge of exposing wallet addresses in traditional on-chain marketplaces. This project involves complex authorization models to separate decision-making from payment destination, ensuring that funds are securely tied to commercial agreements without compromising personal information.",
     "latest_push": "Hardened escrow integration paths and added qualification for browser testing.",
@@ -114,6 +249,7 @@
     "has_readme": true,
     "additions": 2700,
     "deletions": 208,
+    "churn_pct": 17.7,
     "assessment": null
   },
   {
@@ -1107,140 +1243,6 @@
     "additions": 2099,
     "deletions": 0,
     "churn_pct": 100,
-    "assessment": null
-  },
-  {
-    "slug": "vinss",
-    "name": "VINSS",
-    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/DXJLabs/vinss",
-    "demo_url": "https://vinss-nu.vercel.app/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-01",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-15T18:28:45Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "ntfound-dev",
-        "name": "ntfound-dev",
-        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
-      },
-      {
-        "login": "DXJLabs",
-        "name": "DXJ Labs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15"
-    ],
-    "head_sha": "fd3d6b8362296432b6114cc14564e7c7fe49c465",
-    "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
-    "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
-    "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
-    "latest_push": "Fixed the normalization of STRK20 invoke calldata.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 80,
-    "deletions": 40,
-    "churn_pct": 1.4,
-    "assessment": null
-  },
-  {
-    "slug": "strk20-privacy-wallet",
-    "name": "strk20-privacy-wallet",
-    "one_liner": "Umbra-grade privacy wallet for Starknet powered by STRK20 privacy pool",
-    "category": "Other",
-    "repo_url": "https://github.com/SmratJay/strk20-privacy-wallet",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-15T18:26:40Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "SmratJay",
-        "name": "SmratJay",
-        "avatar_url": "https://avatars.githubusercontent.com/u/74355410?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15"
-    ],
-    "head_sha": "438f2c93b0575444e0c1ae61117d105bc386fc81",
-    "readme_hash": "8323:# 🔒 STRK20 Privacy Wallet (Umbra Mode)\n\n> **Umbra-grade UX on a stronger foundation — fully powered by the native STRK20 Privacy Pool on Starknet.**\n\nBuilt by **Jai Bhati** ([@SmratJay](https://githu",
-    "summary": "Enable private transactions with STRK20 through a sleek wallet interface.",
-    "description_long": "This project integrates the STRK20 Privacy Pool on Starknet to facilitate private transactions using zero-knowledge cryptography. Key challenges addressed include implementing a single registered viewing key for transaction visibility and developing an efficient scanning mechanism for encrypted UTXO notes, which avoids public address exposure.",
-    "latest_push": "Upgraded the enterprise README with architecture diagrams and testing guides.",
-    "tooling": [
-      {
-        "label": "AVNU",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 128,
-    "deletions": 58,
-    "churn_pct": 4.5,
     "assessment": null
   },
   {
