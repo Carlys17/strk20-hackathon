@@ -1,5 +1,123 @@
 [
   {
+    "slug": "stake-wars",
+    "name": "stake-wars",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/broody/stake-wars",
+    "demo_url": "https://stakewars.gg",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T05:22:26Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "broody",
+        "name": "broody",
+        "avatar_url": "https://avatars.githubusercontent.com/u/610224?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16"
+    ],
+    "head_sha": "6b5aa302b052bcd15c814ef634d061c6a756e285",
+    "readme_hash": "3040:# StakeWars\n\nStakeWars is a persistent, non-custodial strategy game built around Starknet\nvalidator delegation. Operators choose how much of their real delegated STRK to\nallocate to Control Points and",
+    "churn_pct": 31.1,
+    "summary": "Create a non-custodial strategy game using validator delegation.",
+    "description_long": "The project builds a game that allows operators to manage their delegated STRK through public bidding on Control Points. It combines elements of smart contracts with game mechanics by permanently spending losing bids while maintaining the underlying asset. The tech stack includes Go for the API and Cairo for contracts, allowing robust interaction between the frontend and blockchain.",
+    "latest_push": "Replaced sealed auctions with incremental open challenges in the auction service.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1732,
+    "deletions": 2654,
+    "assessment": null
+  },
+  {
+    "slug": "envelope",
+    "name": "envelope",
+    "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
+    "category": "Payments",
+    "repo_url": "https://github.com/0xrlawrence/envelope",
+    "demo_url": "https://0xrlawrence.github.io/envelope/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-09",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x04ff4f083a4667930efe14963645f9bda00bb10d44e4c13a9ee808e66c076211",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T05:08:29Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "0xrlawrence",
+        "name": "0xrlawrence",
+        "avatar_url": "https://avatars.githubusercontent.com/u/250132405?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16"
+    ],
+    "head_sha": "87d0c30d78a0fb9aefe1cac77703f6c4ea028f33",
+    "readme_hash": "6582:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
+    "churn_pct": 2.1,
+    "summary": "Send private money as a link to anyone without requiring prior registration.",
+    "description_long": "The project implements a STRK20 anonymizer contract that allows users to shield tokens, seal them in an envelope, and send a link to the recipient. This approach solves the problem of private transfers on Starknet where the recipient does not need to be a registered user, thus allowing seamless payments to anyone while protecting the identity of the sender through the use of secure cryptographic signatures.",
+    "latest_push": "Split the sealed page into two and improved the chain feed functionality.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 157,
+    "deletions": 21,
+    "assessment": null
+  },
+  {
     "slug": "veilcast",
     "name": "Veilcast",
     "one_liner": "Private prediction markets on Starknet: visible odds, invisible bettors.",
@@ -37,7 +155,6 @@
     ],
     "head_sha": "5d6be4ce155455ee581077c50983c065fd9c127b",
     "readme_hash": "8763:# Veilcast\n\nPrivate prediction markets on Starknet. Visible odds, invisible bettors.\n\n> Built for the STRK20 Private Sprint, against the live STRK20 privacy pool.\n\n## What it is\n\nVeilcast is a predict",
-    "churn_pct": 100,
     "summary": "Create private prediction markets on Starknet with hidden identities.",
     "description_long": "Veilcast allows users to participate in prediction markets while keeping their identities anonymous. It achieves this by maintaining public information about bet amounts and market movements, while obscuring the identity of bettors, thus preventing herding and front-running. The system utilizes Starknet's privacy features to ensure that while amounts are visible for accurate odds, the link between betters and their bets remains private.",
     "latest_push": "Wired the market into the app for board, private bets, coupons, and claims.",
@@ -81,6 +198,7 @@
     "has_readme": true,
     "additions": 4675,
     "deletions": 751,
+    "churn_pct": 100,
     "assessment": null
   },
   {
@@ -125,7 +243,6 @@
     ],
     "head_sha": "9b27b001c292a5c1fd89c05c3c32cfc866be2df5",
     "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
-    "churn_pct": 0.8,
     "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
     "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
     "latest_push": "Fixed issues with privacy_invoke selector in channelHelper calldata.",
@@ -139,6 +256,7 @@
     "has_readme": true,
     "additions": 39,
     "deletions": 34,
+    "churn_pct": 0.8,
     "assessment": null
   },
   {
@@ -474,60 +592,6 @@
     "additions": 0,
     "deletions": 0,
     "churn_pct": 0,
-    "assessment": null
-  },
-  {
-    "slug": "stake-wars",
-    "name": "stake-wars",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/broody/stake-wars",
-    "demo_url": "https://stakewars.gg",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T00:00:12Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "broody",
-        "name": "broody",
-        "avatar_url": "https://avatars.githubusercontent.com/u/610224?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16"
-    ],
-    "head_sha": "a553647fee000dc3796c772844142bbe2b09dd63",
-    "readme_hash": "2962:# StakeWars\n\nStakeWars is a persistent, non-custodial strategy game built around Starknet\nvalidator delegation. Operators choose how much of their real delegated STRK to\nallocate to Control Points and",
-    "summary": "Create a non-custodial strategy game leveraging Starknet validator delegation.",
-    "description_long": "This project implements a persistent strategy game where players use real delegated tokens for gameplay actions without creating a separate power currency. It uses encrypted bids for game challenges, ensuring privacy and security during each round of play. The backend is built with a Go API, while the frontend utilizes React and TypeScript, allowing for a comprehensive and interactive experience.",
-    "latest_push": "Restored batched actions and updated the Sepolia world configurations.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 820,
-    "deletions": 18,
-    "churn_pct": 5.6,
     "assessment": null
   },
   {
@@ -1084,69 +1148,6 @@
     "additions": 6693,
     "deletions": 266,
     "churn_pct": 79.7,
-    "assessment": null
-  },
-  {
-    "slug": "envelope",
-    "name": "envelope",
-    "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
-    "category": "Payments",
-    "repo_url": "https://github.com/0xrlawrence/envelope",
-    "demo_url": "https://0xrlawrence.github.io/envelope/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-09",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x04ff4f083a4667930efe14963645f9bda00bb10d44e4c13a9ee808e66c076211",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-15T19:53:47Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "0xrlawrence",
-        "name": "0xrlawrence",
-        "avatar_url": "https://avatars.githubusercontent.com/u/250132405?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15"
-    ],
-    "head_sha": "c1d7c9f7f7eec8cba83dcb0d184a858a2170c395",
-    "readme_hash": "6582:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
-    "summary": "Send private money as a link to anyone without requiring prior registration.",
-    "description_long": "The project implements a STRK20 anonymizer contract that allows users to shield tokens, seal them in an envelope, and send a link to the recipient. This approach solves the problem of private transfers on Starknet where the recipient does not need to be a registered user, thus allowing seamless payments to anyone while protecting the identity of the sender through the use of secure cryptographic signatures.",
-    "latest_push": "Displayed the account class on shielding failure and updated error handling.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 24,
-    "deletions": 4,
-    "churn_pct": 0.3,
     "assessment": null
   },
   {
