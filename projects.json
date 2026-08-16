@@ -1,14 +1,14 @@
 [
   {
-    "slug": "nightfall",
-    "name": "Nightfall",
-    "one_liner": "Provably-fair, privacy-native social deduction (One Night Werewolf) on STRK20 — the house cannot cheat and your role stays private.",
+    "slug": "portage",
+    "name": "Portage.fun",
+    "one_liner": "Provably-fair idle creature-collecting on Starknet — hatch, evolve, and trade original creatures.",
     "category": "Gaming",
-    "repo_url": "https://github.com/joaoolucas/nightfall",
+    "repo_url": "https://github.com/joaoolucas/portage-strk",
     "demo_url": "",
     "demo_video": "",
     "x_handle": "",
-    "inspired_by": "RFP-04",
+    "inspired_by": "",
     "starred": false,
     "star_reason": "",
     "contracts": [],
@@ -20,7 +20,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-16T17:42:30Z",
+    "pushed_at": "2026-08-16T18:07:48Z",
     "stars": 0,
     "builders": [
       {
@@ -34,12 +34,12 @@
       "2026-08-15",
       "2026-08-16"
     ],
-    "head_sha": "060e5de6bf3f7f7fccb3051762055c68609cd7bc",
+    "head_sha": "a7c44731d51a413405a2e3179fa6852dbcfd0eb9",
     "readme_hash": "457:# Portage.fun\n\n> A cozy idle creature-collecting game on Starknet — provably-fair on-chain\n> hatches, ownable creatures, and a player-driven marketplace. Built on STRK20.\n\n- **Contracts** (`contracts/",
-    "churn_pct": 100,
-    "summary": "Create a cozy idle creature-collecting game on Starknet.",
-    "description_long": "This project features on-chain, provably-fair mechanics for hatching creatures and a player-driven marketplace. It utilizes Cairo contracts for the game logic, while a Next.js client manages the user interface. The challenge lies in ensuring the RNG for hatching is fair and verifiable.",
-    "latest_push": "Pivoted the project name from Nightfall to Portage.fun.",
+    "churn_pct": 0,
+    "summary": "Create and trade provably-fair idle creatures on Starknet.",
+    "description_long": "This project utilizes Starknet for a creature-collecting game that features on-chain RNG for hatching. It tackles the challenge of ensuring fair ownership and trading through smart contracts, while providing a Next.js frontend for player interactions.",
+    "latest_push": "Added Portage creature sprites and the UI shell with mock data.",
     "tooling": [
       {
         "label": "starknet.js",
@@ -53,8 +53,85 @@
       }
     ],
     "has_readme": true,
-    "additions": 163,
-    "deletions": 6116,
+    "additions": 0,
+    "deletions": 0,
+    "assessment": null
+  },
+  {
+    "slug": "veilpayouts",
+    "name": "VeilPayouts",
+    "one_liner": "Private business payouts on STRK20 - pay anyone by claim link, they collect into a shielded balance.",
+    "category": "Payments",
+    "repo_url": "https://github.com/HarishMelwani/veilpayouts",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-10",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T18:07:24Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "HarishMelwani",
+        "name": "harishmelwani",
+        "avatar_url": "https://avatars.githubusercontent.com/u/26843056?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-16"
+    ],
+    "head_sha": "3fa67a024964725baa910ae320df0074e3440e4f",
+    "readme_hash": "5837:# VeilPayouts 🎁\n\n**Private business payouts on Starknet — pay anyone by link, they claim into a shielded balance.**\n\nVeilPayouts is a privacy-native payouts rail built on [STRK20](https://strk20.star",
+    "churn_pct": 0.6,
+    "summary": "Facilitate private payouts through claim links for STRK20 users.",
+    "description_long": "This project implements a privacy-centric payouts system using the STRK20 standard, enabling companies to pay recipients without collecting wallet addresses or exposing balances. It uniquely addresses the challenge of making private transfers to unregistered users by using an escrow mechanism that hands off a claim link off-chain, allowing recipients to claim their funds privately.",
+    "latest_push": "Fixed Sepolia RPC by switching to verified free endpoints.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 6,
+    "deletions": 5,
     "assessment": null
   },
   {
@@ -94,7 +171,7 @@
       "mainnet": true
     },
     "status": "building",
-    "pushed_at": "2026-08-16T17:41:21Z",
+    "pushed_at": "2026-08-16T18:06:58Z",
     "stars": 0,
     "builders": [
       {
@@ -107,13 +184,18 @@
     "active_days": [
       "2026-08-16"
     ],
-    "head_sha": "013e8b15f59e2168f9d511e917bd99bf4e889236",
+    "head_sha": "1b802f5c5770f7b19f208bdaf32d64b3bf87dce6",
     "readme_hash": "3815:# Aperture\n\n**Sealed-ballot governance and a shielded treasury for DAOs, native to STRK20.**\n\nBuilt for the STRK20 Private Sprint, August 2026. Day 1 — this repository is\nunder active construction and",
-    "churn_pct": 1.4,
+    "churn_pct": 70.7,
     "summary": "Enable private voting and treasury payouts for DAOs using STRK20's shielded pool.",
     "description_long": "This project implements a private voting system where votes are represented as private transfers, ensuring that choices and weights remain hidden until the tally is published. It also integrates a treasury payout mechanism that anonymizes grant recipients while still revealing payout amounts, addressing the problems of transparency and front-running in traditional on-chain governance.",
-    "latest_push": "Recorded the first mainnet pool transaction in strk20.json.",
+    "latest_push": "Derived ballot identities on-chain and implemented ProposalRegistry.",
     "tooling": [
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
       {
         "label": "Cairo",
         "live": false,
@@ -126,20 +208,84 @@
       }
     ],
     "has_readme": true,
-    "additions": 5,
-    "deletions": 1,
+    "additions": 668,
+    "deletions": 41,
     "assessment": null
   },
   {
-    "slug": "veilpayouts",
-    "name": "VeilPayouts",
-    "one_liner": "Private business payouts on STRK20 - pay anyone by claim link, they collect into a shielded balance.",
-    "category": "Payments",
-    "repo_url": "https://github.com/HarishMelwani/veilpayouts",
+    "slug": "erebus",
+    "name": "Erebus",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/PoulavBhowmick03/Erebus",
+    "demo_url": "https://erebus-private-agents.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T18:04:18Z",
+    "stars": 2,
+    "builders": [
+      {
+        "login": "PoulavBhowmick03",
+        "name": "Poulav",
+        "avatar_url": "https://avatars.githubusercontent.com/u/133862694?v=4"
+      },
+      {
+        "login": "ishitab02",
+        "name": "Ishita",
+        "avatar_url": "https://avatars.githubusercontent.com/u/139248026?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16"
+    ],
+    "head_sha": "c83fc9d4eb881d5aa70abcab74da54ab7afd5522",
+    "readme_hash": "9436:# Erebus\n\n**Negotiate in darkness, settle in silence.**\n\nErebus is experimental coordination and shielded-settlement infrastructure for AI agents.\n\n[Open the public demo](https://erebus-private-agents",
+    "churn_pct": 1.7,
+    "summary": "Provide infrastructure for autonomous AI agent negotiations and settlements.",
+    "description_long": "The project enables AI agents to negotiate and settle transactions securely through encrypted channels, ensuring that the negotiation process remains private. It aims to solve the issue of transparency in agent-to-agent commerce by providing atomic settlements and controlled disclosure of transaction details, preventing unauthorized observers from gleaning insights from metadata alone.",
+    "latest_push": "Fixed alignment of change settlement in mcp-server and agents.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Rust",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 157,
+    "deletions": 141,
+    "assessment": null
+  },
+  {
+    "slug": "nexora-protocol",
+    "name": "Nexora-Protocol",
+    "one_liner": "One-click privacy for the multichain economy - powered by Starknet + STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/Gedion08/Nexora-Protocol",
     "demo_url": "",
     "demo_video": "",
     "x_handle": "",
-    "inspired_by": "IDEA-10",
+    "inspired_by": "",
     "starred": false,
     "star_reason": "",
     "contracts": [],
@@ -151,25 +297,243 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-16T17:34:27Z",
+    "pushed_at": "2026-08-16T18:03:02Z",
     "stars": 0,
     "builders": [
       {
-        "login": "HarishMelwani",
-        "name": "harishmelwani",
-        "avatar_url": "https://avatars.githubusercontent.com/u/26843056?v=4"
+        "login": "Gedion08",
+        "name": "Gedion08",
+        "avatar_url": "https://avatars.githubusercontent.com/u/102872099?v=4"
       }
     ],
     "agents": [],
     "active_days": [
+      "2026-08-14",
+      "2026-08-15",
       "2026-08-16"
     ],
-    "head_sha": "d4ccf088af6cac3899d2a264936f061242cb4864",
-    "readme_hash": "5837:# VeilPayouts 🎁\n\n**Private business payouts on Starknet — pay anyone by link, they claim into a shielded balance.**\n\nVeilPayouts is a privacy-native payouts rail built on [STRK20](https://strk20.star",
-    "churn_pct": 7.8,
-    "summary": "Facilitate private payouts through claim links for STRK20 users.",
-    "description_long": "This project implements a privacy-centric payouts system using the STRK20 standard, enabling companies to pay recipients without collecting wallet addresses or exposing balances. It uniquely addresses the challenge of making private transfers to unregistered users by using an escrow mechanism that hands off a claim link off-chain, allowing recipients to claim their funds privately.",
-    "latest_push": "Added STRK20 capability detection and removed Alchemy RPC requirements.",
+    "head_sha": "460c62f36f482ee0ec4ee9b4a505ff1565384308",
+    "readme_hash": "4454:# Nexora Protocol\n\n**Starknet as the privacy layer for the multichain economy.**\n\nNexora Protocol is a cross-chain privacy protocol that lets users deposit assets on any supported chain (Arbitrum, Bas",
+    "churn_pct": 13.4,
+    "summary": "Enable cross-chain privacy for asset transfers using STRK20 notes.",
+    "description_long": "The project focuses on creating a cross-chain privacy protocol that utilizes Starknet as the underlying privacy engine. The challenge involves abstracting the technical complexities of privacy management, allowing users to utilize their existing wallets and assets without extensive setup. Key components include handling user transactions across multiple chains while maintaining privacy and minimizing linkability.",
+    "latest_push": "Completed frontend redesign with a STRK20-inspired dark theme and animations.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1514,
+    "deletions": 489,
+    "assessment": null
+  },
+  {
+    "slug": "quietline",
+    "name": "Quietline",
+    "one_liner": "Encrypted on-chain mail on Starknet. Payment memos ride the same private transfer.",
+    "category": "Other",
+    "repo_url": "https://github.com/gstohl/quietline",
+    "demo_url": "https://github.com/gstohl/quietline",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-01",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T17:59:17Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "gstohl",
+        "name": "gstohl",
+        "avatar_url": "https://avatars.githubusercontent.com/u/191050810?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16"
+    ],
+    "head_sha": "ce861a8c190a815a7031598e87468666cc197c5e",
+    "readme_hash": "16011:# Quietline\n\nEncrypted on-chain mail on Starknet.\n\nAddresses never appear on the message. Content decrypts only on the\nrecipient's device. A private transfer can carry a memo in the same\ntransaction —",
+    "churn_pct": 3.2,
+    "summary": "Send encrypted messages on Starknet with integrated payment memos.",
+    "description_long": "This project enables users to send encrypted on-chain messages without revealing sender or recipient addresses while leveraging private transfers for payments. The biggest challenge addressed is ensuring that message content remains secure and confidential, as it only decrypts on the recipient's device. It uses a client-side architecture with browser APIs, preventing the app from handling any plaintext, while allowing wallet interactions without an allowlist.",
+    "latest_push": "Added mainnet deploy script for QuietlineMail and enabled inbox checks.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 668,
+    "deletions": 18,
+    "assessment": null
+  },
+  {
+    "slug": "strkworld",
+    "name": "STRKWORLD",
+    "one_liner": "A 2D top-down city where the buildings are Starknet privacy protocols",
+    "category": "Gaming",
+    "repo_url": "https://github.com/Calcutatator/STRKWORLD",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T17:53:36Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Calcutatator",
+        "name": "Calcutator",
+        "avatar_url": "https://avatars.githubusercontent.com/u/114863662?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 22
+      }
+    ],
+    "active_days": [
+      "2026-08-16"
+    ],
+    "head_sha": "ec229bb252e2464544484b5cff528c70206f065c",
+    "readme_hash": "4928:# STRKWORLD\n\n**A 2D top-down city where the buildings are Starknet privacy protocols.**\n\nWalk around a shared pseudonymous world, step into a building, and use a real\nprivacy-preserving protocol with ",
+    "churn_pct": 4.8,
+    "summary": "Create a 2D city that simulates Starknet privacy protocols.",
+    "description_long": "This project involves building a 2D top-down city where each building represents a privacy protocol on Starknet. The challenge lies in implementing a system where financial buildings can only operate if they have an approved privacy execution path, ensuring that no sensitive data is exposed within the application. The architecture separates concerns among various packages, maintaining a clear boundary between the game mechanics and financial operations.",
+    "latest_push": "Fixed build to proceed without funded live-wallet and guarded Phaser traps.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 308,
+    "deletions": 0,
+    "assessment": null
+  },
+  {
+    "slug": "strk20-starter-kit",
+    "name": "strk20-starter-kit",
+    "one_liner": "Starknet privacy starter kit",
+    "category": "Other",
+    "repo_url": "https://github.com/raj921/strk20-starter-kit",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T17:52:21Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "raj921",
+        "name": "raj921",
+        "avatar_url": "https://avatars.githubusercontent.com/u/79806602?v=4"
+      },
+      {
+        "login": "PhilippeR26",
+        "name": "PhilippeR26",
+        "avatar_url": "https://avatars.githubusercontent.com/u/81040730?v=4"
+      },
+      {
+        "login": "Akashneelesh",
+        "name": "Akashneelesh",
+        "avatar_url": "https://avatars.githubusercontent.com/u/66639153?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16"
+    ],
+    "head_sha": "235fa232919631614958c2c686e639d87542e066",
+    "readme_hash": "3160:# VeilOps\n\nVeilOps is a private treasury control plane for Starknet. It turns a STRK20 wallet rail into a simple operating ritual: fund a reserve, check a sample policy, simulate a second-operator rev",
+    "churn_pct": 100,
+    "summary": "Manage private treasury operations on Starknet seamlessly.",
+    "description_long": "This project implements a private treasury control plane called VeilOps that operates on the Starknet Sepolia test network. It utilizes the Privacy Wallet API to ensure that sensitive transfer details remain confidential while enabling a structured multi-step process for handling funds, including funding reserves and conducting reviews without necessitating on-chain multisig enforcement. The challenges involve securely managing viewing keys and other sensitive data while providing visibility of key interactions without compromising privacy.",
+    "latest_push": "Built the VeilOps Sepolia treasury MVP with multiple component updates.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -203,72 +567,8 @@
       }
     ],
     "has_readme": true,
-    "additions": 123,
-    "deletions": 15,
-    "assessment": null
-  },
-  {
-    "slug": "strkworld",
-    "name": "STRKWORLD",
-    "one_liner": "A 2D top-down city where the buildings are Starknet privacy protocols",
-    "category": "Gaming",
-    "repo_url": "https://github.com/Calcutatator/STRKWORLD",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T17:32:03Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Calcutatator",
-        "name": "Calcutator",
-        "avatar_url": "https://avatars.githubusercontent.com/u/114863662?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 20
-      }
-    ],
-    "active_days": [
-      "2026-08-16"
-    ],
-    "head_sha": "eb234435341d557b644abaf1b80b5d9bb021bf93",
-    "readme_hash": "4928:# STRKWORLD\n\n**A 2D top-down city where the buildings are Starknet privacy protocols.**\n\nWalk around a shared pseudonymous world, step into a building, and use a real\nprivacy-preserving protocol with ",
-    "churn_pct": 23.1,
-    "summary": "Create a 2D city that simulates Starknet privacy protocols.",
-    "description_long": "This project involves building a 2D top-down city where each building represents a privacy protocol on Starknet. The challenge lies in implementing a system where financial buildings can only operate if they have an approved privacy execution path, ensuring that no sensitive data is exposed within the application. The architecture separates concerns among various packages, maintaining a clear boundary between the game mechanics and financial operations.",
-    "latest_push": "Closed review gaps for the blockchain lane and aligned documentation.",
-    "tooling": [
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1273,
-    "deletions": 169,
+    "additions": 1040,
+    "deletions": 1459,
     "assessment": null
   },
   {
@@ -330,65 +630,6 @@
     "assessment": null
   },
   {
-    "slug": "nexora-protocol",
-    "name": "Nexora-Protocol",
-    "one_liner": "One-click privacy for the multichain economy - powered by Starknet + STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/Gedion08/Nexora-Protocol",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T16:51:49Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Gedion08",
-        "name": "Gedion08",
-        "avatar_url": "https://avatars.githubusercontent.com/u/102872099?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16"
-    ],
-    "head_sha": "11746c688cdfee6199d507db5e1143615cab9320",
-    "readme_hash": "4454:# Nexora Protocol\n\n**Starknet as the privacy layer for the multichain economy.**\n\nNexora Protocol is a cross-chain privacy protocol that lets users deposit assets on any supported chain (Arbitrum, Bas",
-    "summary": "Enable cross-chain privacy for asset transfers using STRK20 notes.",
-    "description_long": "The project focuses on creating a cross-chain privacy protocol that utilizes Starknet as the underlying privacy engine. The challenge involves abstracting the technical complexities of privacy management, allowing users to utilize their existing wallets and assets without extensive setup. Key components include handling user transactions across multiple chains while maintaining privacy and minimizing linkability.",
-    "latest_push": "Added selective disclosure, privacy health score, and pool metrics.",
-    "tooling": [
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 933,
-    "deletions": 57,
-    "churn_pct": 7,
-    "assessment": null
-  },
-  {
     "slug": "privora",
     "name": "Privora",
     "one_liner": "",
@@ -439,90 +680,6 @@
     "additions": 277,
     "deletions": 14,
     "churn_pct": 8,
-    "assessment": null
-  },
-  {
-    "slug": "quietline",
-    "name": "Quietline",
-    "one_liner": "Encrypted on-chain mail on Starknet. Payment memos ride the same private transfer.",
-    "category": "Other",
-    "repo_url": "https://github.com/gstohl/quietline",
-    "demo_url": "https://github.com/gstohl/quietline",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-01",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T16:40:05Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "gstohl",
-        "name": "gstohl",
-        "avatar_url": "https://avatars.githubusercontent.com/u/191050810?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16"
-    ],
-    "head_sha": "b978caf541c1717179bafa5461b5d94293251605",
-    "readme_hash": "16004:# Quietline\n\nEncrypted on-chain mail on Starknet.\n\nAddresses never appear on the message. Content decrypts only on the\nrecipient's device. A private transfer can carry a memo in the same\ntransaction —",
-    "summary": "Facilitate encrypted messaging on Starknet using private transfers.",
-    "description_long": "This project implements an on-chain mail system where messages are sent encrypted, ensuring sender and recipient addresses are not visible in transaction records. The main challenge is to achieve privacy through the use of a shared transaction pool where only the meta information is exposed, while encrypted message content and sender/recipient details remain hidden. It also allows for sending memos along with private asset transfers without compromising privacy.",
-    "latest_push": "Authorized wallet access prior to chain reading and fixed mailbox setup message.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 80,
-    "deletions": 14,
-    "churn_pct": 0.4,
     "assessment": null
   },
   {
@@ -868,70 +1025,6 @@
     "additions": 94,
     "deletions": 62,
     "churn_pct": 5,
-    "assessment": null
-  },
-  {
-    "slug": "erebus",
-    "name": "Erebus",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/PoulavBhowmick03/Erebus",
-    "demo_url": "https://erebus-private-agents.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T14:46:56Z",
-    "stars": 2,
-    "builders": [
-      {
-        "login": "PoulavBhowmick03",
-        "name": "Poulav",
-        "avatar_url": "https://avatars.githubusercontent.com/u/133862694?v=4"
-      },
-      {
-        "login": "ishitab02",
-        "name": "ishitab02",
-        "avatar_url": "https://avatars.githubusercontent.com/u/139248026?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16"
-    ],
-    "head_sha": "79bf78eb13a35cc663449d1d53fd99eef497c695",
-    "readme_hash": "9436:# Erebus\n\n**Negotiate in darkness, settle in silence.**\n\nErebus is experimental coordination and shielded-settlement infrastructure for AI agents.\n\n[Open the public demo](https://erebus-private-agents",
-    "summary": "Provide infrastructure for autonomous AI agent negotiations and settlements.",
-    "description_long": "The project enables AI agents to negotiate and settle transactions securely through encrypted channels, ensuring that the negotiation process remains private. It aims to solve the issue of transparency in agent-to-agent commerce by providing atomic settlements and controlled disclosure of transaction details, preventing unauthorized observers from gleaning insights from metadata alone.",
-    "latest_push": "Added erc20.rs and an approve method for each pool.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Rust",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 459,
-    "deletions": 2114,
-    "churn_pct": 15,
     "assessment": null
   },
   {
@@ -2281,93 +2374,6 @@
     "additions": 73,
     "deletions": 19,
     "churn_pct": 2.3,
-    "assessment": null
-  },
-  {
-    "slug": "strk20-starter-kit",
-    "name": "strk20-starter-kit",
-    "one_liner": "Starknet privacy starter kit",
-    "category": "Other",
-    "repo_url": "https://github.com/raj921/strk20-starter-kit",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-15T16:45:31Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "raj921",
-        "name": "raj921",
-        "avatar_url": "https://avatars.githubusercontent.com/u/79806602?v=4"
-      },
-      {
-        "login": "PhilippeR26",
-        "name": "PhilippeR26",
-        "avatar_url": "https://avatars.githubusercontent.com/u/81040730?v=4"
-      },
-      {
-        "login": "Akashneelesh",
-        "name": "Akashneelesh",
-        "avatar_url": "https://avatars.githubusercontent.com/u/66639153?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15"
-    ],
-    "head_sha": "4e31c77c9c084315ad6c24df7cc0b844ae066280",
-    "readme_hash": "2372:# Starknet Privacy Starter Kit\n\nA lean Next.js starter for building privacy dApps on Starknet with [STRK20](https://eprint.iacr.org/2026/474) via `WalletAccountV6` (starknet.js v10). Shield, unshield,",
-    "summary": "Build privacy dApps on Starknet with wallet-controlled functions.",
-    "description_long": "This starter kit leverages Next.js to create privacy dApps using the STRK20 standard via WalletAccountV6. It enables features such as shielding, unshielding, private transfers, and reading shielded balances without exposing viewing keys. Key challenges include ensuring wallet interactions are seamless and building a minimal anonymizer contract for user deployment.",
-    "latest_push": "Added the VeilOps STRK20 privacy plan to STRK20_INTEGRATION_PLAN.md.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 107,
-    "deletions": 0,
-    "churn_pct": 7.1,
     "assessment": null
   },
   {
