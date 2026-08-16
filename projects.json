@@ -1,5 +1,83 @@
 [
   {
+    "slug": "strk20-privacy-wallet",
+    "name": "strk20-privacy-wallet",
+    "one_liner": "Umbra-grade privacy wallet for Starknet powered by STRK20 privacy pool",
+    "category": "Other",
+    "repo_url": "https://github.com/SmratJay/strk20-privacy-wallet",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T08:57:09Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "SmratJay",
+        "name": "SmratJay",
+        "avatar_url": "https://avatars.githubusercontent.com/u/74355410?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16"
+    ],
+    "head_sha": "39add9107584e2536d33d3162e924fee32bc1261",
+    "readme_hash": "8323:# 🔒 STRK20 Privacy Wallet (Umbra Mode)\n\n> **Umbra-grade UX on a stronger foundation — fully powered by the native STRK20 Privacy Pool on Starknet.**\n\nBuilt by **Jai Bhati** ([@SmratJay](https://githu",
+    "churn_pct": 1,
+    "summary": "Enable private transactions with STRK20 through a sleek wallet interface.",
+    "description_long": "This project integrates the STRK20 Privacy Pool on Starknet to facilitate private transactions using zero-knowledge cryptography. Key challenges addressed include implementing a single registered viewing key for transaction visibility and developing an efficient scanning mechanism for encrypted UTXO notes, which avoids public address exposure.",
+    "latest_push": "Fixed ERC20 transfer logic to deduct balance and mint spendable UTXO.",
+    "tooling": [
+      {
+        "label": "AVNU",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 32,
+    "deletions": 15,
+    "assessment": null
+  },
+  {
     "slug": "envelope",
     "name": "envelope",
     "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
@@ -25,7 +103,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-16T08:24:21Z",
+    "pushed_at": "2026-08-16T08:43:22Z",
     "stars": 0,
     "builders": [
       {
@@ -40,12 +118,12 @@
       "2026-08-15",
       "2026-08-16"
     ],
-    "head_sha": "081c088657be92c8321125d807003e8809eb3eb5",
+    "head_sha": "cbfbcc8fa2e155444ed0b07408689381138112b9",
     "readme_hash": "6582:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
-    "churn_pct": 4.2,
+    "churn_pct": 1.9,
     "summary": "Send private money as a link to anyone without requiring prior registration.",
     "description_long": "The project implements a STRK20 anonymizer contract that allows users to shield tokens, seal them in an envelope, and send a link to the recipient. This approach solves the problem of private transfers on Starknet where the recipient does not need to be a registered user, thus allowing seamless payments to anyone while protecting the identity of the sender through the use of secure cryptographic signatures.",
-    "latest_push": "Stopped duplicate seal requests after initial payment confirmation.",
+    "latest_push": "Added routes for flights to escape unresponsive wallets.",
     "tooling": [
       {
         "label": "Cairo",
@@ -59,8 +137,8 @@
       }
     ],
     "has_readme": true,
-    "additions": 313,
-    "deletions": 75,
+    "additions": 179,
+    "deletions": 3,
     "assessment": null
   },
   {
@@ -101,7 +179,6 @@
     ],
     "head_sha": "e3b068c16f09d4cc04948aeefcb483a584006503",
     "readme_hash": "10356:# Veilcast\n\nPrivate prediction markets on Starknet. Visible odds, invisible bettors.\n\n> Built for the STRK20 Private Sprint, against the live STRK20 privacy pool.\n\n## What it is\n\nVeilcast is a predict",
-    "churn_pct": 1,
     "summary": "Create private prediction markets with visible odds and anonymous bettors.",
     "description_long": "Veilcast utilizes Starknet to offer a prediction market where bets are anonymous but betting amounts are public, ensuring honest price signals. The project addresses the challenge of maintaining anonymity for bettors while ensuring the market remains transparent regarding the odds and volume, which allows for accurate betting without the risk of frontrunning. The system employs unique mechanisms such as relayer transactions and privacy-preserving notes to protect user identities while keeping market operations transparent.",
     "latest_push": "Pointed the hub at the live demo and locked the board's wire format in a test.",
@@ -145,84 +222,7 @@
     "has_readme": true,
     "additions": 57,
     "deletions": 5,
-    "assessment": null
-  },
-  {
-    "slug": "strk20-privacy-wallet",
-    "name": "strk20-privacy-wallet",
-    "one_liner": "Umbra-grade privacy wallet for Starknet powered by STRK20 privacy pool",
-    "category": "Other",
-    "repo_url": "https://github.com/SmratJay/strk20-privacy-wallet",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T08:05:14Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "SmratJay",
-        "name": "SmratJay",
-        "avatar_url": "https://avatars.githubusercontent.com/u/74355410?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16"
-    ],
-    "head_sha": "647413bf8e802f6b80b51b5397ee014b5c3d09b3",
-    "readme_hash": "8323:# 🔒 STRK20 Privacy Wallet (Umbra Mode)\n\n> **Umbra-grade UX on a stronger foundation — fully powered by the native STRK20 Privacy Pool on Starknet.**\n\nBuilt by **Jai Bhati** ([@SmratJay](https://githu",
-    "churn_pct": 9.3,
-    "summary": "Enable private transactions with STRK20 through a sleek wallet interface.",
-    "description_long": "This project integrates the STRK20 Privacy Pool on Starknet to facilitate private transactions using zero-knowledge cryptography. Key challenges addressed include implementing a single registered viewing key for transaction visibility and developing an efficient scanning mechanism for encrypted UTXO notes, which avoids public address exposure.",
-    "latest_push": "Added universal wallet compatibility for Braavos, Argent X, and Ready Wallet.",
-    "tooling": [
-      {
-        "label": "AVNU",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 327,
-    "deletions": 133,
+    "churn_pct": 1,
     "assessment": null
   },
   {
