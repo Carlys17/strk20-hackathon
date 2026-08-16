@@ -1,14 +1,14 @@
 [
   {
-    "slug": "nightfall",
-    "name": "Nightfall",
-    "one_liner": "Provably-fair, privacy-native social deduction (One Night Werewolf) on STRK20 — the house cannot cheat and your role stays private.",
-    "category": "Gaming",
-    "repo_url": "https://github.com/joaoolucas/nightfall",
+    "slug": "aperture-strk20",
+    "name": "Aperture",
+    "one_liner": "Sealed-ballot governance and a shielded treasury for DAOs, native to STRK20.",
+    "category": "Infra",
+    "repo_url": "https://github.com/OoJae/aperture-strk20",
     "demo_url": "",
     "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-04",
+    "x_handle": "_OoJae",
+    "inspired_by": "IDEA-27",
     "starred": false,
     "star_reason": "",
     "contracts": [],
@@ -20,41 +20,40 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-16T13:39:05Z",
+    "pushed_at": "2026-08-16T13:55:45Z",
     "stars": 0,
     "builders": [
       {
-        "login": "joaoolucas",
-        "name": "joaoolucas",
-        "avatar_url": "https://avatars.githubusercontent.com/u/83239762?v=4"
+        "login": "OoJae",
+        "name": "OoJae",
+        "avatar_url": "https://avatars.githubusercontent.com/u/73647277?v=4"
       }
     ],
     "agents": [],
     "active_days": [
-      "2026-08-15",
       "2026-08-16"
     ],
-    "head_sha": "0767199e395e29606c620f37ca24c47747258877",
-    "readme_hash": "814:# Nightfall — Provably-Fair Privacy-Native Social Games\n\nPlay **One Night Werewolf** for real stakes on Starknet, with STRK20 privacy:\nthe house can't cheat, and your role, strategy, and winnings stay",
-    "churn_pct": 0.3,
-    "summary": "Enable a fair and private version of One Night Werewolf on Starknet.",
-    "description_long": "The project utilizes a Cairo Fair Game Engine to create a version of One Night Werewolf with privacy features using STRK20. It solves the challenge of ensuring the house cannot cheat and that players’ roles and winnings remain confidential. This is achieved through a Next.js client for user interaction and AI player agents for managing games.",
-    "latest_push": "Polled on-chain game state to update the phase banner.",
+    "head_sha": "c26c0a6c9d821941c6f1e39d7c3b2d09e17d4785",
+    "readme_hash": "3815:# Aperture\n\n**Sealed-ballot governance and a shielded treasury for DAOs, native to STRK20.**\n\nBuilt for the STRK20 Private Sprint, August 2026. Day 1 — this repository is\nunder active construction and",
+    "churn_pct": 100,
+    "summary": "Enable private voting and treasury payouts for DAOs using STRK20's shielded pool.",
+    "description_long": "This project implements a private voting system where votes are represented as private transfers, ensuring that choices and weights remain hidden until the tally is published. It also integrates a treasury payout mechanism that anonymizes grant recipients while still revealing payout amounts, addressing the problems of transparency and front-running in traditional on-chain governance.",
+    "latest_push": "Installed Privacy SDK and recorded its verified export surface.",
     "tooling": [
       {
-        "label": "starknet.js",
+        "label": "Cairo",
         "live": false,
         "stack": false
       },
       {
-        "label": "Cairo",
+        "label": "Starknet Foundry",
         "live": false,
         "stack": false
       }
     ],
     "has_readme": true,
-    "additions": 11,
-    "deletions": 2,
+    "additions": 833,
+    "deletions": 26,
     "assessment": null
   },
   {
@@ -78,7 +77,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-16T13:36:29Z",
+    "pushed_at": "2026-08-16T13:53:40Z",
     "stars": 0,
     "builders": [
       {
@@ -92,18 +91,18 @@
         "family": "Claude",
         "name": "Claude Opus 5",
         "avatar_url": "",
-        "commits": 10
+        "commits": 14
       }
     ],
     "active_days": [
       "2026-08-16"
     ],
-    "head_sha": "00b2e78844f4f5fecb5cc55472e3b8ce27d719f5",
+    "head_sha": "2aaff99f8c04fa1392a6fa16f967a9fc8d565de8",
     "readme_hash": "4928:# STRKWORLD\n\n**A 2D top-down city where the buildings are Starknet privacy protocols.**\n\nWalk around a shared pseudonymous world, step into a building, and use a real\nprivacy-preserving protocol with ",
-    "churn_pct": 45.9,
+    "churn_pct": 30,
     "summary": "Create a 2D city that simulates Starknet privacy protocols.",
     "description_long": "This project involves building a 2D top-down city where each building represents a privacy protocol on Starknet. The challenge lies in implementing a system where financial buildings can only operate if they have an approved privacy execution path, ensuring that no sensitive data is exposed within the application. The architecture separates concerns among various packages, maintaining a clear boundary between the game mechanics and financial operations.",
-    "latest_push": "Updated multiple documentation files and added a working agreement.",
+    "latest_push": "Added privacy grading, approval record, and a privacy report.",
     "tooling": [
       {
         "label": "TypeScript",
@@ -112,8 +111,209 @@
       }
     ],
     "has_readme": true,
-    "additions": 594,
-    "deletions": 108,
+    "additions": 548,
+    "deletions": 0,
+    "assessment": null
+  },
+  {
+    "slug": "quietline",
+    "name": "Quietline",
+    "one_liner": "Encrypted on-chain mail on Starknet. Payment memos ride the same private transfer.",
+    "category": "Other",
+    "repo_url": "https://github.com/gstohl/quietline",
+    "demo_url": "https://github.com/gstohl/quietline",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-01",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T13:53:00Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "gstohl",
+        "name": "gstohl",
+        "avatar_url": "https://avatars.githubusercontent.com/u/191050810?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16"
+    ],
+    "head_sha": "602878ff15b3c43715b504d670c01be762eab323",
+    "readme_hash": "16004:# Quietline\n\nEncrypted on-chain mail on Starknet.\n\nAddresses never appear on the message. Content decrypts only on the\nrecipient's device. A private transfer can carry a memo in the same\ntransaction —",
+    "churn_pct": 0.3,
+    "summary": "Facilitate encrypted messaging on Starknet using private transfers.",
+    "description_long": "This project implements an on-chain mail system where messages are sent encrypted, ensuring sender and recipient addresses are not visible in transaction records. The main challenge is to achieve privacy through the use of a shared transaction pool where only the meta information is exposed, while encrypted message content and sender/recipient details remain hidden. It also allows for sending memos along with private asset transfers without compromising privacy.",
+    "latest_push": "Kept wallet network failures and mainnet gates explicit in several components.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 53,
+    "deletions": 10,
+    "assessment": null
+  },
+  {
+    "slug": "nightfall",
+    "name": "Nightfall",
+    "one_liner": "Provably-fair, privacy-native social deduction (One Night Werewolf) on STRK20 — the house cannot cheat and your role stays private.",
+    "category": "Gaming",
+    "repo_url": "https://github.com/joaoolucas/nightfall",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-04",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T13:50:34Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "joaoolucas",
+        "name": "joaoolucas",
+        "avatar_url": "https://avatars.githubusercontent.com/u/83239762?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16"
+    ],
+    "head_sha": "ab160869559662a5c141a8ce87959a0246667d46",
+    "readme_hash": "814:# Nightfall — Provably-Fair Privacy-Native Social Games\n\nPlay **One Night Werewolf** for real stakes on Starknet, with STRK20 privacy:\nthe house can't cheat, and your role, strategy, and winnings stay",
+    "churn_pct": 7.5,
+    "summary": "Enable a fair and private version of One Night Werewolf on Starknet.",
+    "description_long": "The project utilizes a Cairo Fair Game Engine to create a version of One Night Werewolf with privacy features using STRK20. It solves the challenge of ensuring the house cannot cheat and that players’ roles and winnings remain confidential. This is achieved through a Next.js client for user interaction and AI player agents for managing games.",
+    "latest_push": "Added the generic IGameEngine trait and the ability to deploy Nightfall from the wallet.",
+    "tooling": [
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 353,
+    "deletions": 10,
+    "assessment": null
+  },
+  {
+    "slug": "nexora-protocol",
+    "name": "Nexora-Protocol",
+    "one_liner": "One-click privacy for the multichain economy - powered by Starknet + STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/Gedion08/Nexora-Protocol",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T13:40:02Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Gedion08",
+        "name": "Gedion08",
+        "avatar_url": "https://avatars.githubusercontent.com/u/102872099?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16"
+    ],
+    "head_sha": "405ef66a9c682d6d11e8ced676d97474f5065022",
+    "readme_hash": "4454:# Nexora Protocol\n\n**Starknet as the privacy layer for the multichain economy.**\n\nNexora Protocol is a cross-chain privacy protocol that lets users deposit assets on any supported chain (Arbitrum, Bas",
+    "churn_pct": 100,
+    "summary": "Enable cross-chain privacy for asset transfers using STRK20 notes.",
+    "description_long": "The project focuses on creating a cross-chain privacy protocol that utilizes Starknet as the underlying privacy engine. The challenge involves abstracting the technical complexities of privacy management, allowing users to utilize their existing wallets and assets without extensive setup. Key components include handling user transactions across multiple chains while maintaining privacy and minimizing linkability.",
+    "latest_push": "Completed the frontend, relayer, SDK, and deployment for Nexora Protocol.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 13950,
+    "deletions": 509,
     "assessment": null
   },
   {
@@ -153,7 +353,6 @@
     ],
     "head_sha": "6c247840e2546c66465cc3907bc95d9955fec577",
     "readme_hash": "8777:# Booty Bank\n\n> BORROW AGAINST YOUR BBL.\n\nBooty Bank is the primary money account built for OnlyFans creators. The product combines daily banking, creator income, private credit, fan perks, and a post",
-    "churn_pct": 0.2,
     "summary": "Manage income and credit for OnlyFans creators via a secure Starknet account.",
     "description_long": "The project provides a comprehensive banking solution for OnlyFans creators, integrating income management and credit eligibility checks with advanced privacy features using Starknet. It utilizes Cairo contracts to implement income credentials and a unique account system while ensuring user anonymity and security through post-quantum cryptography. The challenging part involves creating a seamless experience for financial transactions and integrating various functionalities like budgeting, payments, and privacy controls without compromising user data.",
     "latest_push": "Gated sponsored AVNU execution in documentation and example files.",
@@ -172,6 +371,7 @@
     "has_readme": true,
     "additions": 5,
     "deletions": 5,
+    "churn_pct": 0.2,
     "assessment": null
   },
   {
@@ -312,63 +512,6 @@
     "assessment": null
   },
   {
-    "slug": "aperture-strk20",
-    "name": "Aperture",
-    "one_liner": "Sealed-ballot governance and a shielded treasury for DAOs, native to STRK20.",
-    "category": "Infra",
-    "repo_url": "https://github.com/OoJae/aperture-strk20",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "_OoJae",
-    "inspired_by": "IDEA-27",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T13:14:59Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "OoJae",
-        "name": "OoJae",
-        "avatar_url": "https://avatars.githubusercontent.com/u/73647277?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-16"
-    ],
-    "head_sha": "65ee5f69b695e3a394fc861199a5752286bb43b2",
-    "readme_hash": "3815:# Aperture\n\n**Sealed-ballot governance and a shielded treasury for DAOs, native to STRK20.**\n\nBuilt for the STRK20 Private Sprint, August 2026. Day 1 — this repository is\nunder active construction and",
-    "summary": "Enable private voting and treasury payouts for DAOs using STRK20's shielded pool.",
-    "description_long": "This project implements a private voting system where votes are represented as private transfers, ensuring that choices and weights remain hidden until the tally is published. It also integrates a treasury payout mechanism that anonymizes grant recipients while still revealing payout amounts, addressing the problems of transparency and front-running in traditional on-chain governance.",
-    "latest_push": "Documented verified Privacy SDK install route and RPC endpoints.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 41,
-    "deletions": 6,
-    "churn_pct": 14.1,
-    "assessment": null
-  },
-  {
     "slug": "morrow",
     "name": "Morrow",
     "one_liner": "A privacy preflight for STRK20 milestone payouts.",
@@ -461,90 +604,6 @@
     "additions": 420,
     "deletions": 83,
     "churn_pct": 25.9,
-    "assessment": null
-  },
-  {
-    "slug": "quietline",
-    "name": "Quietline",
-    "one_liner": "Encrypted on-chain mail on Starknet. Payment memos ride the same private transfer.",
-    "category": "Other",
-    "repo_url": "https://github.com/gstohl/quietline",
-    "demo_url": "https://github.com/gstohl/quietline",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-01",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T13:10:56Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "gstohl",
-        "name": "gstohl",
-        "avatar_url": "https://avatars.githubusercontent.com/u/191050810?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16"
-    ],
-    "head_sha": "e1cb94c9bc5930a67ab0191358f6fdeeaf4dabab",
-    "readme_hash": "16004:# Quietline\n\nEncrypted on-chain mail on Starknet.\n\nAddresses never appear on the message. Content decrypts only on the\nrecipient's device. A private transfer can carry a memo in the same\ntransaction —",
-    "summary": "Facilitate encrypted messaging on Starknet using private transfers.",
-    "description_long": "This project implements an on-chain mail system where messages are sent encrypted, ensuring sender and recipient addresses are not visible in transaction records. The main challenge is to achieve privacy through the use of a shared transaction pool where only the meta information is exposed, while encrypted message content and sender/recipient details remain hidden. It also allows for sending memos along with private asset transfers without compromising privacy.",
-    "latest_push": "Made privacy wallet support diagnosable with new diagnostic components.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 626,
-    "deletions": 75,
-    "churn_pct": 3.5,
     "assessment": null
   },
   {
@@ -1501,64 +1560,6 @@
     "additions": 4795,
     "deletions": 2,
     "churn_pct": 100,
-    "assessment": null
-  },
-  {
-    "slug": "nexora-protocol",
-    "name": "Nexora-Protocol",
-    "one_liner": "One-click privacy for the multichain economy - powered by Starknet + STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/Gedion08/Nexora-Protocol",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-15T20:15:03Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Gedion08",
-        "name": "Gedion08",
-        "avatar_url": "https://avatars.githubusercontent.com/u/102872099?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15"
-    ],
-    "head_sha": "543fe4cc17710508c995376952676486a7968721",
-    "readme_hash": "2508:# Nexora Protocol\n\n**Starknet as the privacy layer for the multichain economy.**\n\nNexora Protocol is a cross-chain privacy protocol that lets users deposit assets on any supported chain (Arbitrum, Bas",
-    "summary": "Creates a cross-chain privacy routing protocol for decentralized assets.",
-    "description_long": "The Nexora Protocol allows users to deposit and hold assets privately across multiple chains using STRK20 shielded notes. It simplifies the user experience by eliminating the need for additional wallets or native tokens for gas, handling transactions and privacy routing automatically. The integration of Starknet serves as the underlying privacy engine to ensure minimal public linkability.",
-    "latest_push": "Added SDK adapters, privacy flows, deployment scripts, and tests.",
-    "tooling": [
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 2455,
-    "deletions": 34,
-    "churn_pct": 44.3,
     "assessment": null
   },
   {
