@@ -1,63 +1,5 @@
 [
   {
-    "slug": "portage",
-    "name": "Portage.fun",
-    "one_liner": "Provably-fair idle creature-collecting on Starknet — hatch, evolve, and trade original creatures.",
-    "category": "Gaming",
-    "repo_url": "https://github.com/joaoolucas/portage-strk",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T19:20:57Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "joaoolucas",
-        "name": "joaoolucas",
-        "avatar_url": "https://avatars.githubusercontent.com/u/83239762?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16"
-    ],
-    "head_sha": "844fd3f265060fb65671c947a42b1bf483cfc358",
-    "readme_hash": "457:# Portage.fun\n\n> A cozy idle creature-collecting game on Starknet — provably-fair on-chain\n> hatches, ownable creatures, and a player-driven marketplace. Built on STRK20.\n\n- **Contracts** (`contracts/",
-    "churn_pct": 8.6,
-    "summary": "Create and trade provably-fair idle creatures on Starknet.",
-    "description_long": "This project utilizes Starknet for a creature-collecting game that features on-chain RNG for hatching. It tackles the challenge of ensuring fair ownership and trading through smart contracts, while providing a Next.js frontend for player interactions.",
-    "latest_push": "Added real creature sprites, pixel font, rarity effects, and biome backgrounds.",
-    "tooling": [
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 359,
-    "deletions": 34,
-    "assessment": null
-  },
-  {
     "slug": "booty-bank",
     "name": "Booty Bank",
     "one_liner": "Private income credentials and credit eligibility for OnlyFans creators on Starknet.",
@@ -78,7 +20,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-16T19:18:54Z",
+    "pushed_at": "2026-08-16T19:41:06Z",
     "stars": 0,
     "builders": [
       {
@@ -92,12 +34,12 @@
       "2026-08-15",
       "2026-08-16"
     ],
-    "head_sha": "66008025adfb61956206ce08a324fe74a0007258",
+    "head_sha": "7b4af1a110e470bcecd7c15d7d8aaea1c844032c",
     "readme_hash": "8777:# Booty Bank\n\n> BORROW AGAINST YOUR BBL.\n\nBooty Bank is the primary money account built for OnlyFans creators. The product combines daily banking, creator income, private credit, fan perks, and a post",
-    "churn_pct": 1.1,
+    "churn_pct": 3,
     "summary": "Manage income and credit for OnlyFans creators via a secure Starknet account.",
     "description_long": "The project provides a comprehensive banking solution for OnlyFans creators, integrating income management and credit eligibility checks with advanced privacy features using Starknet. It utilizes Cairo contracts to implement income credentials and a unique account system while ensuring user anonymity and security through post-quantum cryptography. The challenging part involves creating a seamless experience for financial transactions and integrating various functionalities like budgeting, payments, and privacy controls without compromising user data.",
-    "latest_push": "Shipped token-aware STRK20 pool actions in the privacy module.",
+    "latest_push": "Added bidirectional trading for core Starknet assets.",
     "tooling": [
       {
         "label": "Cairo",
@@ -111,8 +53,207 @@
       }
     ],
     "has_readme": true,
-    "additions": 61,
-    "deletions": 11,
+    "additions": 174,
+    "deletions": 39,
+    "assessment": null
+  },
+  {
+    "slug": "strkworld",
+    "name": "STRKWORLD",
+    "one_liner": "A 2D top-down city where the buildings are Starknet privacy protocols",
+    "category": "Gaming",
+    "repo_url": "https://github.com/Calcutatator/STRKWORLD",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T19:40:08Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Calcutatator",
+        "name": "Calcutator",
+        "avatar_url": "https://avatars.githubusercontent.com/u/114863662?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 23
+      }
+    ],
+    "active_days": [
+      "2026-08-16"
+    ],
+    "head_sha": "66a12b8d46b57b393381513d15d8fcf5ff8c301c",
+    "readme_hash": "4928:# STRKWORLD\n\n**A 2D top-down city where the buildings are Starknet privacy protocols.**\n\nWalk around a shared pseudonymous world, step into a building, and use a real\nprivacy-preserving protocol with ",
+    "churn_pct": 7.2,
+    "summary": "Create a 2D city that simulates Starknet privacy protocols.",
+    "description_long": "This project involves building a 2D top-down city where each building represents a privacy protocol on Starknet. The challenge lies in implementing a system where financial buildings can only operate if they have an approved privacy execution path, ensuring that no sensitive data is exposed within the application. The architecture separates concerns among various packages, maintaining a clear boundary between the game mechanics and financial operations.",
+    "latest_push": "Added a walkable street feature with corresponding tests and documentation.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 560,
+    "deletions": 6,
+    "assessment": null
+  },
+  {
+    "slug": "portage",
+    "name": "Portage.fun",
+    "one_liner": "Provably-fair idle creature-collecting on Starknet — hatch, evolve, and trade original creatures.",
+    "category": "Gaming",
+    "repo_url": "https://github.com/joaoolucas/portage-strk",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T19:33:37Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "joaoolucas",
+        "name": "joaoolucas",
+        "avatar_url": "https://avatars.githubusercontent.com/u/83239762?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16"
+    ],
+    "head_sha": "bfacca9ef4016cb2e2b0f2187611f2a5bb44c357",
+    "readme_hash": "457:# Portage.fun\n\n> A cozy idle creature-collecting game on Starknet — provably-fair on-chain\n> hatches, ownable creatures, and a player-driven marketplace. Built on STRK20.\n\n- **Contracts** (`contracts/",
+    "churn_pct": 14.1,
+    "summary": "Create and trade provably-fair idle creatures on Starknet.",
+    "description_long": "This project utilizes Starknet for a creature-collecting game that features on-chain RNG for hatching. It tackles the challenge of ensuring fair ownership and trading through smart contracts, while providing a Next.js frontend for player interactions.",
+    "latest_push": "Added creature detail modal and hatch/evolve animations.",
+    "tooling": [
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 681,
+    "deletions": 27,
+    "assessment": null
+  },
+  {
+    "slug": "zkpayslip",
+    "name": "zkpayslip",
+    "one_liner": "Private payroll on Starknet — shielded salary disbursements and one-time, verifier-bound income proofs on the STRK20 privacy pool.",
+    "category": "Payments",
+    "repo_url": "https://github.com/EndPx/zkpayslip",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-11",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T19:23:40Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "EndPx",
+        "name": "EndPx",
+        "avatar_url": "https://avatars.githubusercontent.com/u/127120051?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-16"
+    ],
+    "head_sha": "af0f518931fd67f4ae48b4efdf7a418d3b87d3bf",
+    "readme_hash": "764:# zkPayslip\n\nPrivate payroll on Starknet, built on the STRK20 privacy pool: employers run\nshielded salary disbursements, and each employee can generate a one-time,\nverifier-bound proof of income — wit",
+    "churn_pct": 97.3,
+    "summary": "Enable private payroll processing for employers and employees.",
+    "description_long": "This project focuses on implementing a private payroll system on Starknet using the STRK20 privacy pool. The challenging part lies in allowing employers to conduct shielded salary disbursements while enabling employees to generate one-time proofs of income without revealing their entire financial history.",
+    "latest_push": "Rebuilt the app shell for the STRK20 brand and added an /about narrative landing.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 2237,
+    "deletions": 552,
     "assessment": null
   },
   {
@@ -158,7 +299,6 @@
     ],
     "head_sha": "ba1fb8a3eb9b4c8e780876f229d3106309be7374",
     "readme_hash": "9436:# Erebus\n\n**Negotiate in darkness, settle in silence.**\n\nErebus is experimental coordination and shielded-settlement infrastructure for AI agents.\n\n[Open the public demo](https://erebus-private-agents",
-    "churn_pct": 2.3,
     "summary": "Provide infrastructure for autonomous AI agent negotiations and settlements.",
     "description_long": "The project enables AI agents to negotiate and settle transactions securely through encrypted channels, ensuring that the negotiation process remains private. It aims to solve the issue of transparency in agent-to-agent commerce by providing atomic settlements and controlled disclosure of transaction details, preventing unauthorized observers from gleaning insights from metadata alone.",
     "latest_push": "Added memo_hash functionality and corresponding documentation.",
@@ -177,83 +317,7 @@
     "has_readme": true,
     "additions": 312,
     "deletions": 88,
-    "assessment": null
-  },
-  {
-    "slug": "zkpayslip",
-    "name": "zkpayslip",
-    "one_liner": "Private payroll on Starknet — shielded salary disbursements and one-time, verifier-bound income proofs on the STRK20 privacy pool.",
-    "category": "Payments",
-    "repo_url": "https://github.com/EndPx/zkpayslip",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-11",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T19:02:15Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "EndPx",
-        "name": "EndPx",
-        "avatar_url": "https://avatars.githubusercontent.com/u/127120051?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-16"
-    ],
-    "head_sha": "527ae32e3bf3f42aed8f3cd62f6e5b526704c5b8",
-    "readme_hash": "764:# zkPayslip\n\nPrivate payroll on Starknet, built on the STRK20 privacy pool: employers run\nshielded salary disbursements, and each employee can generate a one-time,\nverifier-bound proof of income — wit",
-    "churn_pct": 43.5,
-    "summary": "Enable private payroll processing for employers and employees.",
-    "description_long": "This project focuses on implementing a private payroll system on Starknet using the STRK20 privacy pool. The challenging part lies in allowing employers to conduct shielded salary disbursements while enabling employees to generate one-time proofs of income without revealing their entire financial history.",
-    "latest_push": "Added DEFERRED runbooks, PROGRESS tracker, FINDINGS, and payroll strategies.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 921,
-    "deletions": 0,
+    "churn_pct": 2.3,
     "assessment": null
   },
   {
@@ -415,70 +479,6 @@
     "additions": 46,
     "deletions": 0,
     "churn_pct": 2.6,
-    "assessment": null
-  },
-  {
-    "slug": "strkworld",
-    "name": "STRKWORLD",
-    "one_liner": "A 2D top-down city where the buildings are Starknet privacy protocols",
-    "category": "Gaming",
-    "repo_url": "https://github.com/Calcutatator/STRKWORLD",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T18:25:10Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Calcutatator",
-        "name": "Calcutator",
-        "avatar_url": "https://avatars.githubusercontent.com/u/114863662?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 22
-      }
-    ],
-    "active_days": [
-      "2026-08-16"
-    ],
-    "head_sha": "893c19541914f4279a59ce2e22d16670fd1cae7e",
-    "readme_hash": "4928:# STRKWORLD\n\n**A 2D top-down city where the buildings are Starknet privacy protocols.**\n\nWalk around a shared pseudonymous world, step into a building, and use a real\nprivacy-preserving protocol with ",
-    "summary": "Create a 2D city that simulates Starknet privacy protocols.",
-    "description_long": "This project involves building a 2D top-down city where each building represents a privacy protocol on Starknet. The challenge lies in implementing a system where financial buildings can only operate if they have an approved privacy execution path, ensuring that no sensitive data is exposed within the application. The architecture separates concerns among various packages, maintaining a clear boundary between the game mechanics and financial operations.",
-    "latest_push": "Hardened offline privacy and fixed the current pool ABI.",
-    "tooling": [
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1420,
-    "deletions": 201,
-    "churn_pct": 21.8,
     "assessment": null
   },
   {
