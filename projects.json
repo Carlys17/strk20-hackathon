@@ -1,5 +1,92 @@
 [
   {
+    "slug": "aperture-strk20",
+    "name": "Aperture",
+    "one_liner": "Sealed-ballot governance and a shielded treasury for DAOs, native to STRK20.",
+    "category": "Infra",
+    "repo_url": "https://github.com/OoJae/aperture-strk20",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "_OoJae",
+    "inspired_by": "IDEA-27",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x045c7c6d4bbea680dadd7ea248ec793d84ad55f3d381be7c5710b12c900e1cf9",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x00533fedd104a3dd4097a6ad58f9a5637553f1a83f976867866cb60c02d7466d",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x05331694f88f34223c8c1a5445e449b552dfe2b28c93ae26bb6d5699e8443ec1",
+        "ok": true,
+        "pool": true
+      },
+      {
+        "hash": "0x02e3cee5560517e9472d977fe11d4c81ddbe0087df6ce2562d4711fe8a28e947",
+        "ok": true,
+        "pool": true
+      },
+      {
+        "hash": "0x020cc7f861d8c455df4b4f84c284ff3dcb96a6f1f94898e95a4a1a2ec919803b",
+        "ok": true,
+        "pool": true
+      }
+    ],
+    "verified_txs": 3,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": true
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T20:42:59Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "OoJae",
+        "name": "OoJae",
+        "avatar_url": "https://avatars.githubusercontent.com/u/73647277?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-16"
+    ],
+    "head_sha": "1d22890e7aa1707db25cdccae886a40d6bffaabb",
+    "readme_hash": "3815:# Aperture\n\n**Sealed-ballot governance and a shielded treasury for DAOs, native to STRK20.**\n\nBuilt for the STRK20 Private Sprint, August 2026. Day 1 — this repository is\nunder active construction and",
+    "churn_pct": 52.2,
+    "summary": "Enable private voting and treasury payouts for DAOs using STRK20's shielded pool.",
+    "description_long": "This project implements a private voting system where votes are represented as private transfers, ensuring that choices and weights remain hidden until the tally is published. It also integrates a treasury payout mechanism that anonymizes grant recipients while still revealing payout amounts, addressing the problems of transparency and front-running in traditional on-chain governance.",
+    "latest_push": "Implemented ballot derivation, viewing keys, aggregation, and tally engine.",
+    "tooling": [
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1178,
+    "deletions": 115,
+    "assessment": null
+  },
+  {
     "slug": "strkworld",
     "name": "STRKWORLD",
     "one_liner": "A 2D top-down city where the buildings are Starknet privacy protocols",
@@ -20,7 +107,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-16T20:18:30Z",
+    "pushed_at": "2026-08-16T20:27:56Z",
     "stars": 0,
     "builders": [
       {
@@ -34,17 +121,18 @@
         "family": "Claude",
         "name": "Claude Opus 5",
         "avatar_url": "",
-        "commits": 23
+        "commits": 27
       }
     ],
     "active_days": [
       "2026-08-16"
     ],
-    "head_sha": "66a12b8d46b57b393381513d15d8fcf5ff8c301c",
+    "head_sha": "32fded9d1a2937b634f6d9bbe1e028d529627449",
     "readme_hash": "4928:# STRKWORLD\n\n**A 2D top-down city where the buildings are Starknet privacy protocols.**\n\nWalk around a shared pseudonymous world, step into a building, and use a real\nprivacy-preserving protocol with ",
+    "churn_pct": 18.8,
     "summary": "Create a 2D city that simulates Starknet privacy protocols.",
     "description_long": "This project involves building a 2D top-down city where each building represents a privacy protocol on Starknet. The challenge lies in implementing a system where financial buildings can only operate if they have an approved privacy execution path, ensuring that no sensitive data is exposed within the application. The architecture separates concerns among various packages, maintaining a clear boundary between the game mechanics and financial operations.",
-    "latest_push": "Added a walkable street feature with corresponding tests and documentation.",
+    "latest_push": "Deployed scaffolding with header gate, backend container, and ops runbook.",
     "tooling": [
       {
         "label": "TypeScript",
@@ -58,9 +146,8 @@
       }
     ],
     "has_readme": true,
-    "additions": 560,
-    "deletions": 6,
-    "churn_pct": 7.2,
+    "additions": 1633,
+    "deletions": 8,
     "assessment": null
   },
   {
@@ -101,7 +188,6 @@
     ],
     "head_sha": "b42655638bd8ae0be30b7018b1ffa11e5f09de25",
     "readme_hash": "3040:# StakeWars\n\nStakeWars is a persistent, non-custodial strategy game built around Starknet\nvalidator delegation. Operators choose how much of their real delegated STRK to\nallocate to Control Points and",
-    "churn_pct": 6,
     "summary": "Create a non-custodial strategy game using validator delegation.",
     "description_long": "The project builds a game that allows operators to manage their delegated STRK through public bidding on Control Points. It combines elements of smart contracts with game mechanics by permanently spending losing bids while maintaining the underlying asset. The tech stack includes Go for the API and Cairo for contracts, allowing robust interaction between the frontend and blockchain.",
     "latest_push": "Added 10% bid raises and refined contest UI.",
@@ -115,6 +201,7 @@
     "has_readme": true,
     "additions": 550,
     "deletions": 309,
+    "churn_pct": 6,
     "assessment": null
   },
   {
@@ -154,7 +241,6 @@
     ],
     "head_sha": "1463c00228dde6b390bacbbddae155b9f53ba58a",
     "readme_hash": "457:# Portage.fun\n\n> A cozy idle creature-collecting game on Starknet — provably-fair on-chain\n> hatches, ownable creatures, and a player-driven marketplace. Built on STRK20.\n\n- **Contracts** (`contracts/",
-    "churn_pct": 1.3,
     "summary": "Create and trade provably-fair idle creatures on Starknet.",
     "description_long": "This project utilizes Starknet for a creature-collecting game that features on-chain RNG for hatching. It tackles the challenge of ensuring fair ownership and trading through smart contracts, while providing a Next.js frontend for player interactions.",
     "latest_push": "Added a persistent HCNsec OpenAI-compatible provider.",
@@ -173,6 +259,7 @@
     "has_readme": true,
     "additions": 67,
     "deletions": 1,
+    "churn_pct": 1.3,
     "assessment": null
   },
   {
@@ -213,7 +300,6 @@
     ],
     "head_sha": "6fd902903312ee884fe38dbd5a4f969731e9c201",
     "readme_hash": "4454:# Nexora Protocol\n\n**Starknet as the privacy layer for the multichain economy.**\n\nNexora Protocol is a cross-chain privacy protocol that lets users deposit assets on any supported chain (Arbitrum, Bas",
-    "churn_pct": 6.8,
     "summary": "Enable cross-chain privacy for asset transfers using STRK20 notes.",
     "description_long": "The project focuses on creating a cross-chain privacy protocol that utilizes Starknet as the underlying privacy engine. The challenge involves abstracting the technical complexities of privacy management, allowing users to utilize their existing wallets and assets without extensive setup. Key components include handling user transactions across multiple chains while maintaining privacy and minimizing linkability.",
     "latest_push": "Hardened the project with extensive documentation and contract updates.",
@@ -232,6 +318,7 @@
     "has_readme": true,
     "additions": 999,
     "deletions": 47,
+    "churn_pct": 6.8,
     "assessment": null
   },
   {
@@ -272,7 +359,6 @@
     ],
     "head_sha": "b81bf8ac723c5ad8043d5a7a1865251f932b04b4",
     "readme_hash": "16011:# Quietline\n\nEncrypted on-chain mail on Starknet.\n\nAddresses never appear on the message. Content decrypts only on the\nrecipient's device. A private transfer can carry a memo in the same\ntransaction —",
-    "churn_pct": 3.2,
     "summary": "Send encrypted messages on Starknet with integrated payment memos.",
     "description_long": "This project enables users to send encrypted on-chain messages without revealing sender or recipient addresses while leveraging private transfers for payments. The biggest challenge addressed is ensuring that message content remains secure and confidential, as it only decrypts on the recipient's device. It uses a client-side architecture with browser APIs, preventing the app from handling any plaintext, while allowing wallet interactions without an allowlist.",
     "latest_push": "Added the option for users to choose mailbox encryption at rest.",
@@ -316,6 +402,7 @@
     "has_readme": true,
     "additions": 595,
     "deletions": 132,
+    "churn_pct": 3.2,
     "assessment": null
   },
   {
@@ -355,7 +442,6 @@
     ],
     "head_sha": "5ccaaeb12ded07f5e3c8a613fcbeec1aa70b77ee",
     "readme_hash": "8995:# Booty Bank\n\n> BORROW AGAINST YOUR BBL.\n\nBooty Bank is the primary money account built for OnlyFans creators. The product combines daily banking, creator income, private credit, fan perks, and a post",
-    "churn_pct": 1.5,
     "summary": "Facilitate income credentialing and credit eligibility for creators.",
     "description_long": "This project enables OnlyFans creators to manage their income and credit profile using a single account on Starknet. It leverages custom Cairo contracts for secure income credentialing and implements various banking features, which include payments, budgeting, and privacy controls. The challenge lies in ensuring secure and private data validation while complying with the needs of creators beyond traditional banking platforms.",
     "latest_push": "Separated pool proof documentation from swap evidence.",
@@ -374,6 +460,7 @@
     "has_readme": true,
     "additions": 89,
     "deletions": 18,
+    "churn_pct": 1.5,
     "assessment": null
   },
   {
@@ -413,7 +500,6 @@
     ],
     "head_sha": "f858156f5adf8b8260eb590272f53fc243500d74",
     "readme_hash": "5649:# Facet\n\n**Private identities for Starknet DeFi.**\n\nOne shielded balance. Unlimited unlinkable facets. Trade on one protocol as one\nidentity, lend on another as a different one, and nothing on-chain c",
-    "churn_pct": 15.7,
     "summary": "Enable private identities for DeFi on Starknet through unlinkable facets.",
     "description_long": "This project implements a system of shadow accounts that allows users to interact with DeFi protocols without revealing their real identities. It uniquely generates a separate identity for each user, protocol, and interaction, preventing any links between them. By funding shadow accounts through shielded notes rather than public approvals, Facet ensures enhanced privacy for users while operating within existing StarkWare technology.",
     "latest_push": "Recorded local prover build and validation results in documentation.",
@@ -432,6 +518,7 @@
     "has_readme": true,
     "additions": 107,
     "deletions": 17,
+    "churn_pct": 15.7,
     "assessment": null
   },
   {
@@ -650,93 +737,6 @@
     "additions": 46,
     "deletions": 0,
     "churn_pct": 2.6,
-    "assessment": null
-  },
-  {
-    "slug": "aperture-strk20",
-    "name": "Aperture",
-    "one_liner": "Sealed-ballot governance and a shielded treasury for DAOs, native to STRK20.",
-    "category": "Infra",
-    "repo_url": "https://github.com/OoJae/aperture-strk20",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "_OoJae",
-    "inspired_by": "IDEA-27",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x045c7c6d4bbea680dadd7ea248ec793d84ad55f3d381be7c5710b12c900e1cf9",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x00533fedd104a3dd4097a6ad58f9a5637553f1a83f976867866cb60c02d7466d",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [
-      {
-        "hash": "0x05331694f88f34223c8c1a5445e449b552dfe2b28c93ae26bb6d5699e8443ec1",
-        "ok": true,
-        "pool": true
-      },
-      {
-        "hash": "0x02e3cee5560517e9472d977fe11d4c81ddbe0087df6ce2562d4711fe8a28e947",
-        "ok": true,
-        "pool": true
-      },
-      {
-        "hash": "0x020cc7f861d8c455df4b4f84c284ff3dcb96a6f1f94898e95a4a1a2ec919803b",
-        "ok": true,
-        "pool": true
-      }
-    ],
-    "verified_txs": 3,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": true
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T18:22:38Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "OoJae",
-        "name": "OoJae",
-        "avatar_url": "https://avatars.githubusercontent.com/u/73647277?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-16"
-    ],
-    "head_sha": "a21676bda5a13fca1d7d987f71c9a0e25875aa84",
-    "readme_hash": "3815:# Aperture\n\n**Sealed-ballot governance and a shielded treasury for DAOs, native to STRK20.**\n\nBuilt for the STRK20 Private Sprint, August 2026. Day 1 — this repository is\nunder active construction and",
-    "summary": "Enable private voting and treasury payouts for DAOs using STRK20's shielded pool.",
-    "description_long": "This project implements a private voting system where votes are represented as private transfers, ensuring that choices and weights remain hidden until the tally is published. It also integrates a treasury payout mechanism that anonymizes grant recipients while still revealing payout amounts, addressing the problems of transparency and front-running in traditional on-chain governance.",
-    "latest_push": "Implemented the GovernanceAnonymizer contract and added a Sepolia deploy driver.",
-    "tooling": [
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 770,
-    "deletions": 20,
-    "churn_pct": 48.2,
     "assessment": null
   },
   {
