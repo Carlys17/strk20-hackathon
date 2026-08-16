@@ -1,5 +1,122 @@
 [
   {
+    "slug": "sealed",
+    "name": "Sealed",
+    "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/tinoxbt/sealed",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-08",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T02:36:35Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "tinoxbt",
+        "name": "tinoxbt",
+        "avatar_url": "https://avatars.githubusercontent.com/u/202869881?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16"
+    ],
+    "head_sha": "267caf17cafeb06d71db293344776c68b6f3456f",
+    "readme_hash": "6683:# Sealed\n\nA deployable Vickrey variant of RFP-08 on Starknet. Bidder identities stay unlinkable, bid values stay hidden until reveal, every bidder locks identical STRK20-funded collateral, and failing",
+    "churn_pct": 38.3,
+    "summary": "Enable private sealed-bid auctions on Starknet with unlinkable bidders.",
+    "description_long": "A sealed-bid auction protocol that keeps bidder identities and bid values hidden until a reveal, utilizing STRK20 as collateral. Each bidder makes a commitment to their bid using a Poseidon hash, with identical amounts escrowed to maintain privacy and prevent bid leaks. The system aims to ensure honest bidding under a second-price auction rule while addressing the complexities of anonymity and collateral management.",
+    "latest_push": "Executed a full auction lifecycle on Sepolia and documented mechanics.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1281,
+    "deletions": 70,
+    "assessment": null
+  },
+  {
+    "slug": "veilance-market",
+    "name": "Veilance Market",
+    "one_liner": "Private digital services marketplace powered by STRK20 on Starknet",
+    "category": "Payments",
+    "repo_url": "https://github.com/Portablelle/veilance-market",
+    "demo_url": "https://test-ovh.tail3708da.ts.net:10000",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-16T01:51:57Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Portablelle",
+        "name": "Portablelle",
+        "avatar_url": "https://avatars.githubusercontent.com/u/15817250?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16"
+    ],
+    "head_sha": "8e69a245cf4da06aeb8967fa7cc9e91b7a49344f",
+    "readme_hash": "13128:# Veilance Market\n\nExperimental digital-services marketplace preview built around STRK20 on\nStarknet.\n\nVeilance Market is intended to let sellers publish digital services and let buyers\ncomplete deliv",
+    "churn_pct": 17.7,
+    "summary": "Create a digital marketplace that maintains buyer and seller privacy.",
+    "description_long": "Veilance Market allows sellers to offer digital services while ensuring buyer and seller identities remain confidential. By utilizing STRK20 private balances for escrow and settlements, the project addresses the challenge of exposing wallet addresses in traditional on-chain marketplaces. This project involves complex authorization models to separate decision-making from payment destination, ensuring that funds are securely tied to commercial agreements without compromising personal information.",
+    "latest_push": "Hardened escrow integration paths and added qualification for browser testing.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 2700,
+    "deletions": 208,
+    "assessment": null
+  },
+  {
     "slug": "philoxenia",
     "name": "philoxenia",
     "one_liner": "Private P2P hospitality on Starknet — STRK20 Private Sprint",
@@ -73,7 +190,6 @@
     ],
     "head_sha": "dec4719ab0ce0f29593ddce0cff0479944520796",
     "readme_hash": "8340:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
-    "churn_pct": 5.3,
     "summary": "Facilitate private peer-to-peer hospitality using a trust network.",
     "description_long": "Philoxenia is a protocol that enables social trust-based hospitality where listings are only visible to hosts and their friends. It uses Cairo for secure payment escrow while leveraging the Ready X wallet to process STRK20 private payments without requiring public listings or internal balances. The main complexity lies in managing peer trust and ensuring privacy in transactions while maintaining a seamless user experience across specified platforms.",
     "latest_push": "Fixed Chrome Ready X sign-in issue and improved globe pin UX.",
@@ -87,6 +203,7 @@
     "has_readme": true,
     "additions": 421,
     "deletions": 157,
+    "churn_pct": 5.3,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -129,7 +246,6 @@
     ],
     "head_sha": "7e06d82cb24d47d3c26bb793dc667fea3ab39ade",
     "readme_hash": "3652:<div align=\"center\">\n  <img src=\"./icon.svg\" width=\"88\" height=\"88\" alt=\"HIDDEN logo\" />\n\n  # HIDDEN\n\n  **Games where your opponent can't see your move.**\n\n  Built on Starknet mainnet with **STRK20** ",
-    "churn_pct": 0,
     "summary": "Enable private play in wagered games using STRK20 on Starknet.",
     "description_long": "This project implements a suite of 1v1 wagered games where players' moves are hidden until revealed, utilizing STRK20 for privacy. The challenge is creating commitment hashes to ensure moves stay sealed, while also managing shielded transactions through the STRK20 privacy pool, allowing for unlinkable stakes and payouts.",
     "latest_push": "Added the project icon to the Hidden project.",
@@ -137,141 +253,7 @@
     "has_readme": true,
     "additions": 0,
     "deletions": 0,
-    "assessment": null
-  },
-  {
-    "slug": "veilance-market",
-    "name": "Veilance Market",
-    "one_liner": "Private digital services marketplace powered by STRK20 on Starknet",
-    "category": "Payments",
-    "repo_url": "https://github.com/Portablelle/veilance-market",
-    "demo_url": "https://test-ovh.tail3708da.ts.net:10000",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T00:54:49Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Portablelle",
-        "name": "Portablelle",
-        "avatar_url": "https://avatars.githubusercontent.com/u/15817250?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16"
-    ],
-    "head_sha": "2bcdc45f8f396bfc2fbc0c8176b4aeb55aa6014a",
-    "readme_hash": "11087:# Veilance Market\n\nPrivate digital services marketplace powered by STRK20 on Starknet.\n\nVeilance Market is being built as a functional marketplace where sellers publish\ndigital services, buyers discov",
-    "churn_pct": 3.4,
-    "summary": "Facilitate private transactions for digital services using STRK20 on Starknet.",
-    "description_long": "The platform merges public escrow mechanics with private funding and settlement, addressing the challenge of financial privacy in digital marketplaces. By utilizing STRK20 tokens, it ensures that both buyers and sellers can engage in transactions without exposing their wallet identities, while maintaining oversight and dispute resolution through an arbitrator. The implementation aims for a complete user experience from service publication to payment, all while managing privacy and transparency constraints.",
-    "latest_push": "Hardened escrow reserve accounting and updated related documentation.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 433,
-    "deletions": 62,
-    "assessment": null
-  },
-  {
-    "slug": "sealed",
-    "name": "Sealed",
-    "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
-    "category": "DeFi",
-    "repo_url": "https://github.com/tinoxbt/sealed",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-08",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x05a58d32d426ddbf37e376c5668991168cb2e0d19cc017d5158d4836a088f7b8",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [
-      {
-        "hash": "0x02c33b96ebe0f8e1e8e2ea523659162060a6bed1f162be522e29da3e2e5f3e79",
-        "ok": false,
-        "pool": false,
-        "note": "not found on mainnet"
-      },
-      {
-        "hash": "0x3e27d50c529a7731d128e2f7189ff7d7000e7d919f4d34e36890a32817dc719",
-        "ok": false,
-        "pool": false,
-        "note": "not found on mainnet"
-      }
-    ],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T00:44:35Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "tinoxbt",
-        "name": "tinoxbt",
-        "avatar_url": "https://avatars.githubusercontent.com/u/202869881?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16"
-    ],
-    "head_sha": "e621549bd9ed5b52151aa5c4965cce0a76131912",
-    "readme_hash": "6319:# Sealed\n\nA deployable Vickrey variant of RFP-08 on Starknet. Bidder identities stay unlinkable, bid values stay hidden until reveal, every bidder locks identical STRK20-funded collateral, and failing",
-    "churn_pct": 22.4,
-    "summary": "Implement sealed-bid second-price auctions with privacy features on Starknet.",
-    "description_long": "This project creates a Vickrey variant auction where bid identities are anonymized and bid values remain hidden until revealed. It uses a uniform collateral requirement to prevent information leaks prior to the auction outcome, allowing bidders to lock identical amounts from a shielded STRK20 balance while maintaining unlinkability. The challenging part of this design is ensuring that while the auction's existence and collateral details remain visible, individual bidder information is not traceable to a specific user.",
-    "latest_push": "Redeployed the Sepolia auction with a seven day duration and added relevant pages.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 613,
-    "deletions": 12,
+    "churn_pct": 0,
     "assessment": null
   },
   {
@@ -312,7 +294,6 @@
     ],
     "head_sha": "a553647fee000dc3796c772844142bbe2b09dd63",
     "readme_hash": "2962:# StakeWars\n\nStakeWars is a persistent, non-custodial strategy game built around Starknet\nvalidator delegation. Operators choose how much of their real delegated STRK to\nallocate to Control Points and",
-    "churn_pct": 5.6,
     "summary": "Create a non-custodial strategy game leveraging Starknet validator delegation.",
     "description_long": "This project implements a persistent strategy game where players use real delegated tokens for gameplay actions without creating a separate power currency. It uses encrypted bids for game challenges, ensuring privacy and security during each round of play. The backend is built with a Go API, while the frontend utilizes React and TypeScript, allowing for a comprehensive and interactive experience.",
     "latest_push": "Restored batched actions and updated the Sepolia world configurations.",
@@ -326,6 +307,7 @@
     "has_readme": true,
     "additions": 820,
     "deletions": 18,
+    "churn_pct": 5.6,
     "assessment": null
   },
   {
