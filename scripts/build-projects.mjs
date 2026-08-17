@@ -48,6 +48,41 @@ const warn = (msg) => { warnings.push(msg); console.warn(`  warn: ${msg}`); };
 
 const REGISTRY_URL = new URL("../registry.json", import.meta.url);
 const PROJECTS_URL = new URL("../projects.json", import.meta.url);
+const AFFILIATIONS_URL = new URL("../affiliations.json", import.meta.url);
+
+/* Who is building from inside the ecosystem rather than entering it. A row from
+ * StarkWare or the Foundation reads differently from a stranger's, and a reader
+ * comparing projects deserves to know which is which without recognising
+ * handles.
+ *
+ * Declared here rather than in a registry entry, for the same reason the star
+ * is not read from one: a team may edit its own row, so anything kept there is
+ * something a project can claim about itself. The registrations bot only
+ * applies pull requests whose sole file is registry.json.
+ *
+ *   { "starkware": ["handle"], "foundation": ["handle"] }
+ */
+function loadAffiliations() {
+  const out = new Map();
+  if (!existsSync(AFFILIATIONS_URL)) return out;
+  let parsed;
+  try {
+    parsed = JSON.parse(readFileSync(AFFILIATIONS_URL, "utf8"));
+  } catch (e) {
+    warn(`affiliations.json is not valid JSON (${e.message}) - nobody is badged this run`);
+    return out;
+  }
+  for (const [org, logins] of Object.entries(parsed || {})) {
+    if (!Array.isArray(logins)) continue;
+    /* Lowercased: GitHub handles are case-insensitive and a maintainer typing
+       one from memory should not silently badge nobody. */
+    for (const login of logins) {
+      if (typeof login === "string" && login.trim()) out.set(login.trim().toLowerCase(), org);
+    }
+  }
+  return out;
+}
+
 /* ---------- GitHub ---------- */
 
 async function gh(path) {
@@ -753,6 +788,10 @@ async function buildProject(entry, prev) {
     /* Read from spotlight.json, never from the entry - a team editing its own
        row must not be able to star itself. An entry that sets "starred" is
        ignored here and told so by validate-registry.mjs. */
+    /* First affiliation among the builders. A project is from StarkWare or the
+       Foundation if anyone building it is, and the badge sits where the rank
+       would - so one per row, not one per person. */
+    affiliation: builders.map((b) => AFFILIATIONS.get((b.login || "").toLowerCase())).find(Boolean) || "",
     /* Filled in below, once the assessment for this head_sha is in hand. */
     starred: false,
     star_reason: "",
@@ -949,6 +988,9 @@ async function buildProject(entry, prev) {
 }
 
 /* ---------- run ---------- */
+
+const AFFILIATIONS = loadAffiliations();
+if (AFFILIATIONS.size) console.log(`affiliations: ${AFFILIATIONS.size} handle(s) badged`);
 
 const registry = JSON.parse(readFileSync(REGISTRY_URL, "utf8"));
 if (!Array.isArray(registry)) {
