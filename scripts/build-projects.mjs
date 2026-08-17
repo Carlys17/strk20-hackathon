@@ -691,7 +691,7 @@ const STAR_SYSTEM = `You assess projects in a Starknet privacy hackathon for a p
 
 Return JSON: {"innovative": boolean, "complex": boolean, "reason": string}.
 
-innovative - true only if the project applies privacy technology in a way that is not the obvious one. A private transfer UI, a wallet wrapper, or a swap that routes through a pool is the obvious one: false. Applying it to a domain that does not usually get privacy, or composing primitives into something the pool was not built for, is true.
+innovative - true only if the project applies privacy technology in a way that is not the obvious one. These are the obvious ones and are all false: a private transfer or send-receive app, a tipping jar, a donation page, a payment app whose only idea is that the payment is private, a wallet wrapper, a swap routed through a pool, a balance or portfolio viewer. Wrapping an ordinary product in privacy is not innovation - the question is whether privacy makes something possible that was not possible without it. Applying it to a domain that does not usually get privacy, or composing primitives into something the pool was not built for, is true.
 
 complex - true only if the code shows real engineering depth. Judge the CONTRACTS AND STACK given below, not the README's ambitions. A frontend calling an SDK, or a single contract that wraps a pool call, is false. Cairo of its own that does something, several interacting contracts, a custom proving or nullifier scheme, or an indexer is true.
 
@@ -716,7 +716,29 @@ reason - ONE sentence, under 120 characters, saying concretely what earned it or
  * Sticky, because a model asked twice about nearly the same repository will not
  * always answer the same way, and taking a star back over a typo fix is not
  * something to do to a team mid-sprint. */
-function starOf(assessment, wasStarred) {
+/* One thing the model does not get a vote on. Asked whether a project is
+ * technically complex it answers generously: stk402 was starred with the reason
+ * "lacks published deployed contracts", and strk20-sentinel with no Cairo and
+ * nothing deployed. A private payment scheme with no on-chain code of its own
+ * is the exact thing this mark exists to filter out.
+ *
+ * So depth has to be visible before the judgement counts: Cairo in the
+ * repository, or a contract actually deployed. Both are read from the repo and
+ * the chain, not from the README, and neither is a matter of opinion.
+ *
+ * The floor applies to a star already given, unlike the sticky judgement.
+ * Stickiness is there to absorb a model changing its mind; it is not there to
+ * keep a star that should not have been given. */
+function hasDepth(contracts, tooling) {
+  /* A Map while a project is being rebuilt, a plain array when it comes back
+     off the cache. */
+  const list = typeof tooling?.values === "function" ? [...tooling.values()] : (tooling || []);
+  const cairo = list.some((t) => /^cairo$/i.test(t?.label || ""));
+  return cairo || (contracts?.length || 0) > 0;
+}
+
+function starOf(assessment, depth, wasStarred) {
+  if (!depth) return false;
   return !!(assessment?.innovative && assessment?.complex) || !!wasStarred;
 }
 
@@ -910,7 +932,7 @@ async function buildProject(entry, prev) {
          checked again: a transaction verifies on-chain without anyone pushing,
          so a project can cross the line between two runs of the cron. */
       assessment: prev.assessment || null,
-      starred: starOf(prev.assessment, prev.starred),
+      starred: starOf(prev.assessment, hasDepth(contracts, prev.tooling), prev.starred),
       star_reason: prev.star_reason || "",
     };
   }
@@ -1030,7 +1052,7 @@ async function buildProject(entry, prev) {
     /* Kept so the next run reuses the verdict for this head_sha rather than
        asking again and risking a different answer over identical code. */
     assessment,
-    starred: starOf(assessment, prev?.starred),
+    starred: starOf(assessment, hasDepth(contracts, tooling), prev?.starred),
     star_reason: assessment?.reason || prev?.star_reason || "",
   };
 }
