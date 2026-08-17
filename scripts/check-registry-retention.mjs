@@ -114,19 +114,35 @@ if (!Array.isArray(current)) {
 const present = new Set(current.map((entry) => normalize(entry?.repo_url)).filter(Boolean));
 
 const missing = [];
+const unresolved = [];
 for (const [key, { entry, sha }] of everAccepted) {
   if (present.has(key) || removals.has(key)) continue;
 
   /* Renaming a repository is a normal thing to do mid-sprint, and on a literal
      key it looks exactly like the project leaving. Ask GitHub what the old name
      points at now before calling anything lost. */
-  const now = await canonical(key);
+  const { name: now, known } = await canonical(key);
   if (now && present.has(now)) continue;
+
+  /* GitHub would not say - a rate limit, a 5xx, a dropped socket. That is not
+     evidence of anything, and treating it as evidence blocked a whole rebuild
+     over three repositories that had merely been renamed. Say so and move on:
+     the check exists to catch a resolution that deleted somebody, and a run
+     that cannot reach GitHub has not established that. */
+  if (!known) {
+    unresolved.push(key);
+    continue;
+  }
 
   missing.push({ key, entry, sha, now });
 }
 
 /* ---------- report ---------- */
+
+if (unresolved.length) {
+  console.log(`note: could not ask GitHub about ${unresolved.length} repositor${unresolved.length === 1 ? "y" : "ies"} that are not in registry.json by name - not treated as missing:`);
+  for (const key of unresolved) console.log(`  ? ${key}`);
+}
 
 if (missing.length) {
   console.error(`${missing.length} project${missing.length === 1 ? " that was" : "s that were"} already accepted ${missing.length === 1 ? "is" : "are"} missing from registry.json:\n`);

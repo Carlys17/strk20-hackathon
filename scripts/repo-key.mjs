@@ -28,30 +28,43 @@ export function normalize(repoUrl) {
  * here, so callers fall back to the literal key and let a human decide rather
  * than acting on a guess. */
 export async function canonical(key) {
-  if (!key) return null;
+  if (!key) return { name: null, known: true };
   if (cache.has(key)) return cache.get(key);
 
   let result = null;
-  try {
-    const res = await fetch(`https://api.github.com/repos/${key}`, {
-      headers: {
-        Accept: "application/vnd.github+json",
-        "User-Agent": "strk20-private-sprint-validator",
-        ...(TOKEN ? { Authorization: `Bearer ${TOKEN}` } : {}),
-      },
-      /* Redirects are the whole point - fetch follows them by default, and the
-         body that comes back carries the current full_name. */
-    });
-    if (res.ok) {
-      const meta = await res.json();
-      if (typeof meta?.full_name === "string") result = meta.full_name.toLowerCase();
+  let known = false;
+  /* Retried, because the answer decides whether a project is reported as lost.
+     Asking once and taking a dropped socket for "no such repository" failed a
+     whole index run over three repositories that had simply been renamed. */
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const res = await fetch(`https://api.github.com/repos/${key}`, {
+        headers: {
+          Accept: "application/vnd.github+json",
+          "User-Agent": "strk20-private-sprint-validator",
+          ...(TOKEN ? { Authorization: `Bearer ${TOKEN}` } : {}),
+        },
+        /* Redirects are the whole point - fetch follows them by default, and the
+           body that comes back carries the current full_name. */
+      });
+      if (res.ok) {
+        const meta = await res.json();
+        if (typeof meta?.full_name === "string") result = meta.full_name.toLowerCase();
+        known = true;
+        break;
+      }
+      /* A definitive answer: the repository is not there under this name. */
+      if (res.status === 404) { known = true; break; }
+      /* Anything else - 403, 429, 5xx - is GitHub declining to say. */
+    } catch {
+      /* Network. Retry. */
     }
-  } catch {
-    result = null;
+    if (attempt < 2) await new Promise((r) => setTimeout(r, 400 * (attempt + 1)));
   }
 
-  cache.set(key, result);
-  return result;
+  const out = { name: result, known };
+  cache.set(key, out);
+  return out;
 }
 
 /* Every name a project is known by: what its entry says, and what GitHub calls
@@ -60,6 +73,6 @@ export async function canonical(key) {
 export async function aliases(repoUrl) {
   const key = normalize(repoUrl);
   if (!key) return [];
-  const now = await canonical(key);
-  return now && now !== key ? [key, now] : [key];
+  const { name } = await canonical(key);
+  return name && name !== key ? [key, name] : [key];
 }
