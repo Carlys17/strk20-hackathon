@@ -689,7 +689,7 @@ async function openai(system, user, maxTokens = 300) {
  * rubric asks for novelty *of approach* over novelty of idea. */
 const STAR_SYSTEM = `You assess projects in a Starknet privacy hackathon for a public board other builders read.
 
-Return JSON: {"innovative": boolean, "complex": boolean, "reason": string}.
+Return JSON: {"innovative": boolean, "complex": boolean, "why_innovative": string, "why_complex": string, "reason": string}.
 
 innovative - true only if the project applies privacy technology in a way that is not the obvious one. These are the obvious ones and are all false: a private transfer or send-receive app, a tipping jar, a donation page, a payment app whose only idea is that the payment is private, a wallet wrapper, a swap routed through a pool, a balance or portfolio viewer. Wrapping an ordinary product in privacy is not innovation - the question is whether privacy makes something possible that was not possible without it. Applying it to a domain that does not usually get privacy, or composing primitives into something the pool was not built for, is true.
 
@@ -699,7 +699,11 @@ You are judging work in progress, halfway through a sprint. Depth of what has be
 
 Be sparing. Answering true to both should mean something. A project you are unsure about is false.
 
-reason - ONE sentence, under 120 characters, saying concretely what earned it or what is missing. No praise, no adjectives about the team. Never mention this rubric.`;
+why_innovative - ONE sentence, under 110 characters, naming what THIS project does that the obvious version would not. Say the actual mechanism or domain, never a generic phrase like "uses privacy in a novel way" - two projects must never get the same sentence. If innovative is false, say what makes it the obvious version instead.
+
+why_complex - ONE sentence, under 110 characters, naming the specific engineering you can see: which contracts, what the Cairo does, what scheme it implements. Point at the thing, not at the fact that it exists. If complex is false, say what is missing.
+
+reason - ONE sentence, under 120 characters, the single line worth showing if only one fits. No praise, no adjectives about the team. Never mention this rubric.`;
 
 /* The star marks a builder, not a submission.
  *
@@ -729,6 +733,21 @@ reason - ONE sentence, under 120 characters, saying concretely what earned it or
  * The floor applies to a star already given, unlike the sticky judgement.
  * Stickiness is there to absorb a model changing its mind; it is not there to
  * keep a star that should not have been given. */
+/* What the floor actually saw, in words, per project - "3 contracts deployed on
+   mainnet", "Cairo in the repository". The card that explains a star should
+   show the evidence rather than assert that evidence exists. */
+function depthEvidence(contracts, tooling) {
+  const list = typeof tooling?.values === "function" ? [...tooling.values()] : (tooling || []);
+  const cairo = list.some((t) => /^cairo$/i.test(t?.label || ""));
+  const deployed = (contracts || []).filter((c) => c.network === "mainnet").length;
+  const anywhere = (contracts || []).length;
+  const parts = [];
+  if (deployed) parts.push(`${deployed} contract${deployed === 1 ? "" : "s"} deployed on mainnet`);
+  else if (anywhere) parts.push(`${anywhere} contract${anywhere === 1 ? "" : "s"} deployed`);
+  if (cairo) parts.push("Cairo in the repository");
+  return parts.join(", ");
+}
+
 function hasDepth(contracts, tooling) {
   /* A Map while a project is being rebuilt, a plain array when it comes back
      off the cache. */
@@ -912,7 +931,7 @@ async function buildProject(entry, prev) {
      failed to get an answer, must not poison the cache - the SHA does not
      change again on a project that has stopped pushing, so it would sit
      unjudged forever. */
-  const assessmentUsable = !OPENAI_KEY || !!prev?.assessment;
+  const assessmentUsable = !OPENAI_KEY || !!prev?.assessment?.why_complex;
   if (prev && headSha && prev.head_sha === headSha && summaryUsable && assessmentUsable) {
     console.log(`  ${entry.slug}: unchanged`);
     return {
@@ -933,6 +952,7 @@ async function buildProject(entry, prev) {
          so a project can cross the line between two runs of the cron. */
       assessment: prev.assessment || null,
       starred: starOf(prev.assessment, hasDepth(contracts, prev.tooling), prev.starred),
+      star_evidence: depthEvidence(contracts, prev.tooling),
       star_reason: prev.star_reason || "",
     };
   }
@@ -1011,7 +1031,7 @@ async function buildProject(entry, prev) {
      ran: the star was invisible for the half of the sprint when knowing who is
      building well is worth the most.
      Still one call per project per push, cached on head_sha. */
-  let assessment = (prev?.head_sha === headSha && prev?.assessment) || null;
+  let assessment = (prev?.head_sha === headSha && prev?.assessment?.why_complex && prev.assessment) || null;
   if (OPENAI_KEY && !assessment) {
     const contractList = contracts.length
       ? contracts.map((c) => `- ${c.address || c}${c.name ? ` (${c.name})` : ""}`).join("\n")
@@ -1053,6 +1073,7 @@ async function buildProject(entry, prev) {
        asking again and risking a different answer over identical code. */
     assessment,
     starred: starOf(assessment, hasDepth(contracts, tooling), prev?.starred),
+    star_evidence: depthEvidence(contracts, tooling),
     star_reason: assessment?.reason || prev?.star_reason || "",
   };
 }
