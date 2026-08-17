@@ -67,8 +67,20 @@ jobs:
 
           # Registrations land on main while this is running, so the push can
           # lose a race - and did, dropping a rebuild that had already been
-          # computed. projects.json is derived, so the answer is always to take
-          # the newer main and build again on top of it rather than to merge.
+          # computed.
+          #
+          # What it must not do is rebuild blindly on every rejection. At sixty
+          # projects a rebuild is several hundred API calls, and a retry that
+          # repeats them walked straight into the hourly rate limit, losing the
+          # result it was trying to save. projects.json is derived from
+          # registry.json alone: if that file is unchanged on the newer main,
+          # the one already built is still the right answer and only needs
+          # replaying on top. A rebuild is only for when the registry itself
+          # moved - a registration landed - and then only once.
+          cp projects.json "$RUNNER_TEMP/built.json"
+          base_registry=$(git rev-parse HEAD:registry.json)
+          rebuilt=0
+
           for attempt in 1 2 3; do
             git add projects.json
             # No push activity since the last tick is the common case - exit
@@ -84,9 +96,21 @@ jobs:
               exit 0
             fi
 
-            echo "main moved while indexing - rebuilding on top of it"
             git fetch --quiet origin main && git reset --hard --quiet origin/main
-            node scripts/build-projects.mjs || exit 1
+
+            if [ "$(git rev-parse HEAD:registry.json)" = "$base_registry" ]; then
+              echo "main moved but the registry did not - replaying the build already done"
+              cp "$RUNNER_TEMP/built.json" projects.json
+            elif [ "$rebuilt" = "0" ]; then
+              echo "a registration landed - rebuilding once on top of it"
+              rebuilt=1
+              node scripts/build-projects.mjs || exit 1
+              cp projects.json "$RUNNER_TEMP/built.json"
+              base_registry=$(git rev-parse HEAD:registry.json)
+            else
+              echo "the registry moved again - leaving it for the next tick"
+              exit 0
+            fi
           done
 
           echo "main kept moving - leaving it for the next tick"
