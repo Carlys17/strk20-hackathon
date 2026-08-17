@@ -11,7 +11,7 @@
     "inspired_by": "",
     "affiliation": "",
     "starred": true,
-    "star_reason": "A private hospitality protocol leveraging social trust and privacy technology.",
+    "star_reason": "Philoxenia enables trustless and private peer-to-peer hospitality without public listings.",
     "contracts": [
       {
         "address": "0x056a817104ad7544a55873584f3d8fb41a780e5466d152b3e1f12d578e75defb",
@@ -40,21 +40,20 @@
         "mine": true
       },
       {
-        "hash": "0xd081e258a00fa10af08243e2ccf6d2e5cf28076002a499223a9e5258b0976d",
+        "hash": "0x5bac436e2a9775719de94e0ec1ea62f1cbc9737b23dd780230df66a53cc7813",
         "ok": true,
         "pool": true,
-        "mine": false,
-        "note": "touched the pool, but not through this project's contracts"
+        "mine": true
       }
     ],
-    "verified_txs": 2,
+    "verified_txs": 3,
     "requirements": {
       "demo": true,
       "video": true,
-      "mainnet": false
+      "mainnet": true
     },
-    "status": "building",
-    "pushed_at": "2026-08-17T17:56:19Z",
+    "status": "finished",
+    "pushed_at": "2026-08-17T18:33:50Z",
     "stars": 0,
     "builders": [
       {
@@ -77,12 +76,12 @@
       "2026-08-16",
       "2026-08-17"
     ],
-    "head_sha": "01ff34c1592ef02b77ba194eff4d9c63b6ffe340",
+    "head_sha": "4286f3ab5a45e3647b4d9beacd8d7cafb908f008",
     "readme_hash": "9302:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
-    "churn_pct": 0.4,
+    "churn_pct": 8.5,
     "summary": "Create a private hospitality network for secure peer-to-peer stays.",
     "description_long": "Utilizing Starknet's Cairo for trustless payments, this project facilitates private hospitality connections among users without a public marketplace. It enables friend-based discovery to enhance privacy while offering sealed chat and escrow functionalities, solving the challenges of trust and safety in peer-to-peer accommodation.",
-    "latest_push": "Modified site copy for signed-out Connect to clarify payment options.",
+    "latest_push": "Recorded on-chain and settled escrow payments handling for booking transactions.",
     "tooling": [
       {
         "label": "Cairo",
@@ -91,17 +90,167 @@
       }
     ],
     "has_readme": true,
-    "additions": 27,
-    "deletions": 23,
+    "additions": 1091,
+    "deletions": 162,
     "assessment": {
       "innovative": true,
       "complex": true,
-      "why_innovative": "It enables private peer-to-peer hospitality through a trust network with no public listings.",
-      "why_complex": "Includes multiple contracts like BookingEscrow and an anonymizer for trustless settlements.",
-      "reason": "A private hospitality protocol leveraging social trust and privacy technology.",
+      "why_innovative": "It creates a private hospitality protocol using a trust network with no public listings.",
+      "why_complex": "Implements multiple Cairo contracts including an escrow system and an anonymizer.",
+      "reason": "Philoxenia enables trustless and private peer-to-peer hospitality without public listings.",
       "facts_v2": true
     },
     "star_evidence": "3 contracts deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "crewkill-strk20",
+    "name": "CrewKill",
+    "one_liner": "Staked social deduction where privacy is the game mechanic: buy a seat through the STRK20 pool, draw a role nobody can read, vote anonymously, settle on-chain.",
+    "category": "Other",
+    "repo_url": "https://github.com/nickthelegend/crewkill-strk20",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": true,
+    "star_reason": "The project leverages privacy for a novel social deduction experience with hidden roles.",
+    "contracts": [
+      {
+        "address": "0x55ac4a110992e9ced1f3133a9bff040adaaa6aeee4ed57e9b9cb89cb7586ca",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x38cea8475ecba6984807bf50eebc2d6174672f567d709d8b74c661904ec3bb8",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-17T18:25:37Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "nickthelegend",
+        "name": "nickthelegend",
+        "avatar_url": "https://avatars.githubusercontent.com/u/82558763?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-17"
+    ],
+    "head_sha": "02ed0d43947c588f0eef78a3be6873f7e0c5d9c0",
+    "readme_hash": "11961:# CrewKill\n\n**Staked social deduction on Starknet. Your wallet never touches the table, your role is a\nsecret even we can't read, and reading the room correctly pays even when you lose.**\n\nBuilt for t",
+    "churn_pct": 2.4,
+    "summary": "Enable staked social deduction with private roles and anonymous voting.",
+    "description_long": "The project utilizes a Cairo contract on Starknet to allow players to stake and play a social deduction game without revealing their roles or identities. Each player's role is derived from a commitment and can only be computed by them, ensuring that no one else, not even the game operator, has access to this information. Voting is done through spent notes that maintain anonymity, and a unique Detective Pool rewards players for correctly identifying impostors, adding strategic depth to the game.",
+    "latest_push": "Modified the ship view to display only essential player information.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 332,
+    "deletions": 91,
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "It uses privacy to enable real commitment-reveal mechanics in social deduction gaming.",
+      "why_complex": "The contracts implement a unique commit-reveal scheme with role secrets and anonymous voting.",
+      "reason": "The project leverages privacy for a novel social deduction experience with hidden roles.",
+      "facts_v2": true
+    },
+    "star_evidence": "2 contracts deployed, Cairo in the repository"
+  },
+  {
+    "slug": "portage",
+    "name": "Portage.fun",
+    "one_liner": "Provably-fair idle creature-collecting on Starknet — hatch, evolve, and trade original creatures.",
+    "category": "Gaming",
+    "repo_url": "https://github.com/joaoolucas/portage-strk",
+    "demo_url": "https://portage-topaz.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project lacks significant privacy innovation and engineering complexity.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-17T18:16:42Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "joaoolucas",
+        "name": "joaoolucas",
+        "avatar_url": "https://avatars.githubusercontent.com/u/83239762?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 1
+      }
+    ],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17"
+    ],
+    "head_sha": "54deaa557539627e7f3b22e8810e55536d20c730",
+    "readme_hash": "3958:# Portage.fun\n\n**Live demo:** https://portage-topaz.vercel.app\n\n![Portage kickoff](docs/screenshots/kickoff.png)\n\n![Portage game dashboard](docs/screenshots/dashboard.png)\n\n![Portage spatial auto-hunt",
+    "churn_pct": 0,
+    "summary": "Create and evolve creatures in a cozy idle RPG on Starknet.",
+    "description_long": "The project offers a playable top-down idle RPG with features like tile movement, NPCs, and spatial combat. It integrates local storage for progress and employs Cairo for creature mechanics and evolution, while preparing for future Starknet interactions and privacy features. The challenging aspect lies in securely managing offline progress and ensuring private transactions through STRK20 integration.",
+    "latest_push": "Ignored .vercel and .env files in the .gitignore.",
+    "tooling": [
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 3,
+    "deletions": 0,
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project involves creature collecting and game mechanics without leveraging unique privacy applications.",
+      "why_complex": "There are no deployed contracts or complex code structures currently implemented.",
+      "reason": "The project lacks significant privacy innovation and engineering complexity.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "stk402",
@@ -115,7 +264,7 @@
     "inspired_by": "",
     "affiliation": "",
     "starred": false,
-    "star_reason": "The project lacks significant Cairo engineering and is primarily a frontend application.",
+    "star_reason": "The project is still predominantly a traditional payment implementation.",
     "contracts": [],
     "transactions": [],
     "verified_txs": 0,
@@ -125,7 +274,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-17T17:55:03Z",
+    "pushed_at": "2026-08-17T18:15:18Z",
     "stars": 0,
     "builders": [
       {
@@ -139,7 +288,7 @@
         "family": "Cursor",
         "name": "Cursor",
         "avatar_url": "https://avatars.githubusercontent.com/u/199161495?v=4",
-        "commits": 13
+        "commits": 14
       }
     ],
     "active_days": [
@@ -147,12 +296,12 @@
       "2026-08-15",
       "2026-08-17"
     ],
-    "head_sha": "76fb3bad0973e801e649c6230b7370ea51bac070",
+    "head_sha": "fae7de0f6812ffa5ed2eadfe32e46e8554b11a83",
     "readme_hash": "13778:# stk402\n\nAmount-confidential STRK20 payments for x402 agents on Starknet.\n\nSTK402 adds an encrypted x402 payment scheme for STRK20. The agent and server exchange encrypted payment terms and receipt m",
-    "churn_pct": 97.3,
+    "churn_pct": 0.1,
     "summary": "Implement encrypted STRK20 payments for x402 agents on Starknet.",
     "description_long": "This project creates a payment scheme that uses encryption to secure STRK20 transactions between agents and the server. The system involves exchanging encrypted payment terms and verifying them through a series of checks, including receipt validation and replay prevention. The technical challenge lies in securely managing the encryption keys and ensuring that sensitive transaction details are protected throughout the process.",
-    "latest_push": "Redesigned the consumer pay UI for a brand-first flow.",
+    "latest_push": "Fixed compatibility for Render Node version 22 installations.",
     "tooling": [
       {
         "label": "Privacy SDK",
@@ -171,14 +320,14 @@
       }
     ],
     "has_readme": true,
-    "additions": 2396,
-    "deletions": 5443,
+    "additions": 7,
+    "deletions": 3,
     "assessment": {
       "innovative": false,
       "complex": false,
-      "why_innovative": "The project implements a basic encrypted payment scheme for STRK20, which is an obvious application of privacy.",
-      "why_complex": "No real contracts or Cairo code has been built yet; only TypeScript for the frontend.",
-      "reason": "The project lacks significant Cairo engineering and is primarily a frontend application.",
+      "why_innovative": "STK402 adds an encrypted payment scheme for STRK20, which is a private transfer.",
+      "why_complex": "No deployed contracts or complex Cairo interactions are present.",
+      "reason": "The project is still predominantly a traditional payment implementation.",
       "facts_v2": true
     },
     "star_evidence": ""
@@ -233,7 +382,6 @@
     ],
     "head_sha": "31b9b71df54841d8cf88aba5925cfd886a033c39",
     "readme_hash": "8224:# zkPayslip\n\nPrivate payroll on Starknet: salaries move invisibly inside the STRK20 privacy pool while any employee can still prove their income to exactly one verifier, once.\n\n## Live deployment\n\n| C",
-    "churn_pct": 1.9,
     "summary": "Enable private payroll verification on Starknet through zk technology.",
     "description_long": "This project allows employees to receive their salaries from a privacy pool while still proving their income to a specific verifier. It achieves privacy for the salary transfers inside the pool, while the contract ensures necessary disclosures for verification without revealing sensitive data. The challenge lies in managing timing correlations and ensuring a larger anonymity set as more transactions occur, addressing these concerns with a structured layer of disclosure.",
     "latest_push": "Refactored the navigation component to be shared across all surfaces.",
@@ -277,6 +425,7 @@
     "has_readme": true,
     "additions": 63,
     "deletions": 43,
+    "churn_pct": 1.9,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -332,7 +481,6 @@
     ],
     "head_sha": "b56c229787fb3dd467082c44cb9ab3ff364ac9b6",
     "readme_hash": "6982:# Whisper Pay\n\nOne-link private payment requests on Starknet, powered by STRK20 shielded transfers.\n\n## What is this?\n\nWhisper Pay is a one-link private payment request tool built on STRK20. A user ge",
-    "churn_pct": 12.6,
     "summary": "Facilitate private payment requests on Starknet with shareable links.",
     "description_long": "This project enables users to create private payment request links that route transactions through a privacy layer, ensuring that the details remain hidden on-chain. The challenge addressed is how to maintain transaction confidentiality while allowing recipients to see incoming payments without revealing the amounts or identities involved. By leveraging STRK20's shielded transfers, the app generates a seamless experience for both senders and recipients.",
     "latest_push": "Added a public status page to verify payments without revealing details.",
@@ -366,6 +514,7 @@
     "has_readme": true,
     "additions": 507,
     "deletions": 17,
+    "churn_pct": 12.6,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -421,7 +570,6 @@
     ],
     "head_sha": "01dc662b04e649eff55d53e6fac772b95da07ed2",
     "readme_hash": "9711:# Erebus\n\n**Negotiate in darkness, settle in silence.**\n\nErebus is experimental coordination and shielded-settlement infrastructure for AI agents.\n\n[Open the public demo](https://erebus-private-agents",
-    "churn_pct": 1.8,
     "summary": "Facilitate private transactions between AI agents using encrypted channels.",
     "description_long": "Erebus provides infrastructure for AI agents to negotiate and settle transactions without exposing the communication graph. It employs Wire v2 for secure offer negotiations and atomic settlements, while allowing selective disclosure of transaction details. The project addresses privacy challenges in agent-to-agent commerce by encrypting payloads and leveraging Starknet's note-based privacy pools.",
     "latest_push": "Shipped erebus-cli as a platform wheel.",
@@ -440,6 +588,7 @@
     "has_readme": true,
     "additions": 321,
     "deletions": 28,
+    "churn_pct": 1.8,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -573,74 +722,6 @@
       "facts_v2": true
     },
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "portage",
-    "name": "Portage.fun",
-    "one_liner": "Provably-fair idle creature-collecting on Starknet — hatch, evolve, and trade original creatures.",
-    "category": "Gaming",
-    "repo_url": "https://github.com/joaoolucas/portage-strk",
-    "demo_url": "https://portage-topaz.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Portage.fun lacks significant engineering depth and innovative privacy features.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-17T17:10:33Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "joaoolucas",
-        "name": "joaoolucas",
-        "avatar_url": "https://avatars.githubusercontent.com/u/83239762?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17"
-    ],
-    "head_sha": "3f957db22cbbb1b09a41b5ac639556099dafd4c5",
-    "readme_hash": "3958:# Portage.fun\n\n**Live demo:** https://portage-topaz.vercel.app\n\n![Portage kickoff](docs/screenshots/kickoff.png)\n\n![Portage game dashboard](docs/screenshots/dashboard.png)\n\n![Portage spatial auto-hunt",
-    "summary": "Create and evolve creatures in a cozy idle RPG on Starknet.",
-    "description_long": "The project offers a playable top-down idle RPG with features like tile movement, NPCs, and spatial combat. It integrates local storage for progress and employs Cairo for creature mechanics and evolution, while preparing for future Starknet interactions and privacy features. The challenging aspect lies in securely managing offline progress and ensuring private transactions through STRK20 integration.",
-    "latest_push": "Added PixelLab Wang tilesets for biome terrain transitions.",
-    "tooling": [
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 4766,
-    "deletions": 19,
-    "churn_pct": 52.1,
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "The project is primarily an idle creature-collecting RPG with no significant privacy mechanisms present.",
-      "why_complex": "There are no deployed contracts or complex Cairo implementations visible in the current state.",
-      "reason": "Portage.fun lacks significant engineering depth and innovative privacy features.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "strkworld",
@@ -1169,81 +1250,6 @@
       "facts_v2": true
     },
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "crewkill-strk20",
-    "name": "CrewKill",
-    "one_liner": "Staked social deduction where privacy is the game mechanic: buy a seat through the STRK20 pool, draw a role nobody can read, vote anonymously, settle on-chain.",
-    "category": "Other",
-    "repo_url": "https://github.com/nickthelegend/crewkill-strk20",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": true,
-    "star_reason": "The project introduces true confidentiality in role assignment for a staked social deduction game.",
-    "contracts": [
-      {
-        "address": "0x55ac4a110992e9ced1f3133a9bff040adaaa6aeee4ed57e9b9cb89cb7586ca",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x38cea8475ecba6984807bf50eebc2d6174672f567d709d8b74c661904ec3bb8",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-17T15:37:59Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "nickthelegend",
-        "name": "nickthelegend",
-        "avatar_url": "https://avatars.githubusercontent.com/u/82558763?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-17"
-    ],
-    "head_sha": "ffebbf73b887a5df89fdf80d01d51c01f8fee915",
-    "readme_hash": "11961:# CrewKill\n\n**Staked social deduction on Starknet. Your wallet never touches the table, your role is a\nsecret even we can't read, and reading the room correctly pays even when you lose.**\n\nBuilt for t",
-    "summary": "Enable staked social deduction with private roles and anonymous voting.",
-    "description_long": "The project utilizes a Cairo contract on Starknet to allow players to stake and play a social deduction game without revealing their roles or identities. Each player's role is derived from a commitment and can only be computed by them, ensuring that no one else, not even the game operator, has access to this information. Voting is done through spent notes that maintain anonymity, and a unique Detective Pool rewards players for correctly identifying impostors, adding strategic depth to the game.",
-    "latest_push": "Developed the CrewKill settlement contract and the ballot note.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 142,
-    "deletions": 110,
-    "churn_pct": 1.4,
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "It allows players to draw unknown roles and vote privately in a social deduction game.",
-      "why_complex": "It implements a commit-reveal scheme and shielded ballot notes through several Cairo contracts.",
-      "reason": "The project introduces true confidentiality in role assignment for a staked social deduction game.",
-      "facts_v2": true
-    },
-    "star_evidence": "2 contracts deployed, Cairo in the repository"
   },
   {
     "slug": "veilcast",
