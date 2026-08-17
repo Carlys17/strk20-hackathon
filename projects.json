@@ -1,5 +1,78 @@
 [
   {
+    "slug": "sealed",
+    "name": "Sealed",
+    "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/tinoxbt/sealed",
+    "demo_url": "https://tinoxbt.github.io/sealed/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-08",
+    "affiliation": "",
+    "starred": true,
+    "star_reason": "Sealed-bid auctions with privacy that enhances the mechanism's integrity and participant anonymity.",
+    "contracts": [
+      {
+        "address": "0x01a691c524299a7cdcde1e49680564fa35a8ac64fdf37c7e71f261e88eb03f62",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-17T22:39:50Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "tinoxbt",
+        "name": "tinoxbt",
+        "avatar_url": "https://avatars.githubusercontent.com/u/202869881?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17"
+    ],
+    "head_sha": "f99ebe48472d4f0e54e2b3921bd57e68345f9137",
+    "readme_hash": "8938:# Sealed\n\nA deployable Vickrey variant of RFP-08 on Starknet. Bidder identities stay unlinkable, bid values stay hidden until reveal, every bidder locks identical STRK20-funded collateral, and failing",
+    "churn_pct": 2.1,
+    "summary": "Enable sealed-bid auctions with unlinkable bidders on Starknet using STRK20 collateral.",
+    "description_long": "This project implements a Vickrey-style auction on Starknet where bidder identities are anonymized and bids remain hidden until revealed. Each bidder contributes equal collateral from a shielded STRK20 balance, and the system uses a commitment scheme to ensure that the bid amounts are not disclosed before the unsealing process. The challenge lies in maintaining privacy while ensuring that auction outcomes are still transparent, distinguishing between the visibility of auction logistics and the anonymity of bidders.",
+    "latest_push": "Used the shared wallet hook on the bid page and published the demo URL.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 41,
+    "deletions": 58,
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "It enables sealed-bid, second-price auctions with unlinkable bidders and private settlement.",
+      "why_complex": "It implements a commitment scheme for bids using Poseidon, managing multiple contracts and state transitions.",
+      "reason": "Sealed-bid auctions with privacy that enhances the mechanism's integrity and participant anonymity.",
+      "facts_v2": true
+    },
+    "star_evidence": "1 contract deployed, Cairo in the repository"
+  },
+  {
     "slug": "starkwhisper",
     "name": "StarkWhisper",
     "one_liner": "Metadata-resistant, end-to-end encrypted messaging & private payment memos on Starknet.",
@@ -11,7 +84,7 @@
     "inspired_by": "RFP-01",
     "affiliation": "",
     "starred": true,
-    "star_reason": "Integrates advanced cryptography to achieve metadata resistance and privacy in messaging.",
+    "star_reason": "StarkWhisper leverages advanced cryptography for secure messaging and transactions.",
     "contracts": [
       {
         "address": "0x78ae662e0cc6d1ab2cfeaf2a51ba8783d88e31886f88a794d142f95a6f8735b",
@@ -26,7 +99,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-17T22:20:23Z",
+    "pushed_at": "2026-08-17T22:38:16Z",
     "stars": 0,
     "builders": [
       {
@@ -40,12 +113,12 @@
       "2026-08-16",
       "2026-08-17"
     ],
-    "head_sha": "7d3cf6293052fbfa31fa38ec9df592315c84b023",
+    "head_sha": "1bdcc3b54ac5058b7b134d1ad14de191fd2b5a5b",
     "readme_hash": "6384:# StarkWhisper\n\n> **Metadata-Resistant, End-to-End Encrypted On-Chain Messaging & Private Payment Memos on Starknet**\n\n![Starknet](https://img.shields.io/badge/Starknet-Mainnet%20%2F%20Sepolia-c53400?",
-    "churn_pct": 1.2,
+    "churn_pct": 3.3,
     "summary": "Enable encrypted messaging and private payment memos on Starknet.",
     "description_long": "This project utilizes STRK20 Privacy Pool for metadata-resistant communication, aiming to protect user identities through ZK note spend proofs. It employs client-side encryption with ECDH key agreements, allowing private payments to be attached to messages within a single transaction on Starknet, thus addressing privacy concerns inherent in public blockchain communications.",
-    "latest_push": "Added DKSAP stealth address generation and cipher to the live send pipeline.",
+    "latest_push": "Added the STRK20 Wallet Bridge and Reference Invoker Engine.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -79,37 +152,134 @@
       }
     ],
     "has_readme": true,
-    "additions": 52,
-    "deletions": 6,
+    "additions": 157,
+    "deletions": 1,
     "assessment": {
       "innovative": true,
       "complex": true,
-      "why_innovative": "Combines metadata-resistant messaging with private payment memos using ZK proofs.",
-      "why_complex": "Implements STARK Dual-Key Stealth Addresses and Ephemeral Counterfactual Account Execution logic.",
-      "reason": "Integrates advanced cryptography to achieve metadata resistance and privacy in messaging.",
+      "why_innovative": "It enables metadata-resistant messaging and payment memos using ZK note proofs and stealth addresses.",
+      "why_complex": "The project implements STARK Curve Dual-Key Stealth Addresses, and Ephemeral Counterfactual AA Execution.",
+      "reason": "StarkWhisper leverages advanced cryptography for secure messaging and transactions.",
       "facts_v2": true
     },
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
   },
   {
-    "slug": "sealed",
-    "name": "Sealed",
-    "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
-    "category": "DeFi",
-    "repo_url": "https://github.com/tinoxbt/sealed",
+    "slug": "philoxenia",
+    "name": "philoxenia",
+    "one_liner": "Private P2P hospitality on Starknet — STRK20 Private Sprint",
+    "category": "Other",
+    "repo_url": "https://github.com/SergioSSantiago/philoxenia",
+    "demo_url": "https://philoxenia-iota.vercel.app",
+    "demo_video": "https://philoxenia-iota.vercel.app/demo/philoxenia-commercial.mp4",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": true,
+    "star_reason": "Philoxenia allows private peer-to-peer bookings without a public directory.",
+    "contracts": [
+      {
+        "address": "0x056a817104ad7544a55873584f3d8fb41a780e5466d152b3e1f12d578e75defb",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x030533c6110ee5c414a5678bd71115be738852d709c74d8136fa965271c2e1f3",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x004c0322af24bb710f3aa0e48293517777188b42d9c4428b77304008ad0ea712",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x7ef1e214d5c5e99a4f8d27ba459326f4ec0bfaba8525824d1a36754608b60f9",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x5bac436e2a9775719de94e0ec1ea62f1cbc9737b23dd780230df66a53cc7813",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x4902a7a2702b9533cf8992f5bf6953947e0d9616f8dbc9bc5b1976e0082f494",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      }
+    ],
+    "verified_txs": 3,
+    "requirements": {
+      "demo": true,
+      "video": true,
+      "mainnet": true
+    },
+    "status": "finished",
+    "pushed_at": "2026-08-17T22:36:09Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "SergioSSantiago",
+        "name": "Sergio Sapina Santiago",
+        "avatar_url": "https://avatars.githubusercontent.com/u/44295455?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Cursor",
+        "name": "Cursor",
+        "avatar_url": "",
+        "commits": 100
+      }
+    ],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17"
+    ],
+    "head_sha": "1efbf4f52ce9d4e7bf3fa891a7039273ddf461e5",
+    "readme_hash": "9313:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
+    "churn_pct": 0.2,
+    "summary": "Create a private hospitality protocol on Starknet for trust-based peer-to-peer connections.",
+    "description_long": "The project offers a private peer-to-peer hospitality protocol where listings are visible exclusively to trusted connections, enhancing user privacy. It leverages Cairo for trustless escrow payments and includes roles for hosts, guests, and connectors to drive participation, while employing Next.js for the frontend and Fastify for the backend.",
+    "latest_push": "Set Direct Book & pay to 0% on listing creation and calendar views.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 17,
+    "deletions": 17,
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "It enables private, trust-based hospitality bookings without a public listing marketplace.",
+      "why_complex": "Uses Cairo for payment escrow and trustless settlements across multiple contracts.",
+      "reason": "Philoxenia allows private peer-to-peer bookings without a public directory.",
+      "facts_v2": true
+    },
+    "star_evidence": "3 contracts deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "chaoskeyplus-appbuild",
+    "name": "ChaosKey+",
+    "one_liner": "Physical-chaos entropy device with a Ready Wallet API tab for STRK20 shield, private transfer, and unshield.",
+    "category": "Tooling",
+    "repo_url": "https://github.com/doodabug/Chaoskeyplus-appbuild",
     "demo_url": "",
     "demo_video": "",
     "x_handle": "",
-    "inspired_by": "RFP-08",
+    "inspired_by": "",
     "affiliation": "",
-    "starred": true,
-    "star_reason": "Sealed-bid auctions with unlinkable bidders leverages privacy to enhance auction integrity.",
-    "contracts": [
-      {
-        "address": "0x00bb79c9cbc96a04ef1bac51805de8642dd20f98ecd980dd208b03c931e6be87",
-        "network": "sepolia"
-      }
-    ],
+    "starred": false,
+    "star_reason": "ChaosKey+ combines physical randomness with STRK20 privacy mechanisms.",
+    "contracts": [],
     "transactions": [],
     "verified_txs": 0,
     "requirements": {
@@ -118,51 +288,45 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-17T22:19:12Z",
+    "pushed_at": "2026-08-17T22:29:05Z",
     "stars": 0,
     "builders": [
       {
-        "login": "tinoxbt",
-        "name": "tinoxbt",
-        "avatar_url": "https://avatars.githubusercontent.com/u/202869881?v=4"
+        "login": "emergent-agent-e1",
+        "name": "emergent-agent-e1",
+        "avatar_url": "https://avatars.githubusercontent.com/u/222461215?v=4"
+      },
+      {
+        "login": "doodabug",
+        "name": "doodabug",
+        "avatar_url": "https://avatars.githubusercontent.com/u/272664821?v=4"
       }
     ],
     "agents": [],
     "active_days": [
-      "2026-08-15",
+      "2026-08-14",
       "2026-08-16",
       "2026-08-17"
     ],
-    "head_sha": "62bc4848930234a5aa69e1dd6deef7423cb6c736",
-    "readme_hash": "8957:# Sealed\n\nA deployable Vickrey variant of RFP-08 on Starknet. Bidder identities stay unlinkable, bid values stay hidden until reveal, every bidder locks identical STRK20-funded collateral, and failing",
-    "churn_pct": 4,
-    "summary": "Facilitate private second-price auctions using STRK20 on Starknet.",
-    "description_long": "This project implements a sealed-bid, second-price auction where bidder identities and bid amounts remain confidential until revealed. The core challenge lies in managing uniform collateral to prevent leaking bid information before the auction results are disclosed, which is achieved by ensuring all bidders lock the same amount and only reveal their actual bids later. The auction leverages a privacy-preserving approach, with a STRK20 pool masking bidder identities and a commitment scheme protecting bid values.",
-    "latest_push": "Listed every auction known to the chain and updated the README.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
+    "head_sha": "ae0369711dc33677ac8bcd0254641306e043a45d",
+    "readme_hash": "10303:# ChaosKey+ M3\n\n**A camera-entropy cryptographic device with STRK20 privacy on Starknet.**\n\nChaosKey+ turns your phone into a physical randomness generator. Every second, it hashes visual noise from y",
+    "summary": "Generate physical randomness for secure cryptographic tokens and STRK20 transactions.",
+    "description_long": "This project captures visual noise from the camera to create a secure randomness generator for cryptographic operations. It generates various types of tokens bound to a signed ledger of entropy, ensuring tamper-proof expiry and verification capabilities. The integration with STRK20 allows private shielded transactions on Starknet, where security and privacy concerns are effectively managed.",
+    "latest_push": "Created a GitHub Actions workflow for Node.js.",
+    "tooling": [],
     "has_readme": true,
-    "additions": 173,
-    "deletions": 17,
+    "additions": 31,
+    "deletions": 0,
+    "churn_pct": 0.7,
     "assessment": {
       "innovative": true,
-      "complex": true,
-      "why_innovative": "It enables private sealed-bid auctions where bid values remain hidden until reveal using a commitment scheme.",
-      "why_complex": "It involves a unique implementation of the Vickrey auction with multiple contracts and complex state management.",
-      "reason": "Sealed-bid auctions with unlinkable bidders leverages privacy to enhance auction integrity.",
+      "complex": false,
+      "why_innovative": "It captures physical randomness to generate cryptographic tokens bound to entropy.",
+      "why_complex": "No Cairo contracts were declared; it lacks interaction depth with existing pools.",
+      "reason": "ChaosKey+ combines physical randomness with STRK20 privacy mechanisms.",
       "facts_v2": true
     },
-    "star_evidence": "1 contract deployed, Cairo in the repository"
+    "star_evidence": ""
   },
   {
     "slug": "crewkill-strk20",
@@ -210,7 +374,6 @@
     ],
     "head_sha": "d46dc41a7e934acabd4c01e2392ba8894e404c81",
     "readme_hash": "12483:# CrewKill\n\n**Staked social deduction on Starknet. Your wallet never touches the table, your role is a\nsecret even we can't read, and reading the room correctly pays even when you lose.**\n\nBuilt for t",
-    "churn_pct": 8.4,
     "summary": "Facilitate anonymous social deduction gaming on-chain with private role assignments.",
     "description_long": "Players stake through a privacy pool to buy seats, with roles generated from a commitment-based seed that the server cannot access, ensuring confidentiality. The game allows players to cast anonymous votes and also introduces a unique Detective Pool that rewards players for correctly identifying impostors, even if their side loses. The approach minimizes central control and enhances gameplay by keeping role assignments hidden, while ensuring a fair progressive gameplay experience through technology.",
     "latest_push": "Rebuilt the molfi.fun landing page and added 404 titles in the test plan.",
@@ -229,6 +392,7 @@
     "has_readme": true,
     "additions": 840,
     "deletions": 449,
+    "churn_pct": 8.4,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -238,170 +402,6 @@
       "facts_v2": true
     },
     "star_evidence": "2 contracts deployed, Cairo in the repository"
-  },
-  {
-    "slug": "philoxenia",
-    "name": "philoxenia",
-    "one_liner": "Private P2P hospitality on Starknet — STRK20 Private Sprint",
-    "category": "Other",
-    "repo_url": "https://github.com/SergioSSantiago/philoxenia",
-    "demo_url": "https://philoxenia-iota.vercel.app",
-    "demo_video": "https://philoxenia-iota.vercel.app/demo/philoxenia-commercial.mp4",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": true,
-    "star_reason": "Philoxenia enables private, trust-based hospitality without a public marketplace.",
-    "contracts": [
-      {
-        "address": "0x056a817104ad7544a55873584f3d8fb41a780e5466d152b3e1f12d578e75defb",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x030533c6110ee5c414a5678bd71115be738852d709c74d8136fa965271c2e1f3",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x004c0322af24bb710f3aa0e48293517777188b42d9c4428b77304008ad0ea712",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [
-      {
-        "hash": "0x7ef1e214d5c5e99a4f8d27ba459326f4ec0bfaba8525824d1a36754608b60f9",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      },
-      {
-        "hash": "0x5bac436e2a9775719de94e0ec1ea62f1cbc9737b23dd780230df66a53cc7813",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      },
-      {
-        "hash": "0x4902a7a2702b9533cf8992f5bf6953947e0d9616f8dbc9bc5b1976e0082f494",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      }
-    ],
-    "verified_txs": 3,
-    "requirements": {
-      "demo": true,
-      "video": true,
-      "mainnet": true
-    },
-    "status": "finished",
-    "pushed_at": "2026-08-17T22:16:56Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "SergioSSantiago",
-        "name": "Sergio Sapina Santiago",
-        "avatar_url": "https://avatars.githubusercontent.com/u/44295455?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Cursor",
-        "name": "Cursor",
-        "avatar_url": "",
-        "commits": 100
-      }
-    ],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17"
-    ],
-    "head_sha": "318a8241b07e8ecd68329ecc4076e1625e38f0ab",
-    "readme_hash": "9313:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
-    "churn_pct": 0.3,
-    "summary": "Create a private hospitality protocol on Starknet for trust-based peer-to-peer connections.",
-    "description_long": "The project offers a private peer-to-peer hospitality protocol where listings are visible exclusively to trusted connections, enhancing user privacy. It leverages Cairo for trustless escrow payments and includes roles for hosts, guests, and connectors to drive participation, while employing Next.js for the frontend and Fastify for the backend.",
-    "latest_push": "Added 'Book & pay' messaging to several pages and documents.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 24,
-    "deletions": 24,
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "It creates a private hospitality protocol using a social trust network and role-based interactions.",
-      "why_complex": "Features multiple contracts like BookingEscrow and an anonymizer implemented in Cairo.",
-      "reason": "Philoxenia enables private, trust-based hospitality without a public marketplace.",
-      "facts_v2": true
-    },
-    "star_evidence": "3 contracts deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "chaoskeyplus-appbuild",
-    "name": "ChaosKey+",
-    "one_liner": "Physical-chaos entropy device with a Ready Wallet API tab for STRK20 shield, private transfer, and unshield.",
-    "category": "Tooling",
-    "repo_url": "https://github.com/doodabug/Chaoskeyplus-appbuild",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "ChaosKey+ combines physical randomness with STRK20 privacy mechanisms.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-17T22:04:38Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "emergent-agent-e1",
-        "name": "emergent-agent-e1",
-        "avatar_url": "https://avatars.githubusercontent.com/u/222461215?v=4"
-      },
-      {
-        "login": "doodabug",
-        "name": "doodabug",
-        "avatar_url": "https://avatars.githubusercontent.com/u/272664821?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-16",
-      "2026-08-17"
-    ],
-    "head_sha": "ae0369711dc33677ac8bcd0254641306e043a45d",
-    "readme_hash": "10303:# ChaosKey+ M3\n\n**A camera-entropy cryptographic device with STRK20 privacy on Starknet.**\n\nChaosKey+ turns your phone into a physical randomness generator. Every second, it hashes visual noise from y",
-    "summary": "Generate physical randomness for secure cryptographic tokens and STRK20 transactions.",
-    "description_long": "This project captures visual noise from the camera to create a secure randomness generator for cryptographic operations. It generates various types of tokens bound to a signed ledger of entropy, ensuring tamper-proof expiry and verification capabilities. The integration with STRK20 allows private shielded transactions on Starknet, where security and privacy concerns are effectively managed.",
-    "latest_push": "Created a GitHub Actions workflow for Node.js.",
-    "tooling": [],
-    "has_readme": true,
-    "additions": 31,
-    "deletions": 0,
-    "churn_pct": 0.7,
-    "assessment": {
-      "innovative": true,
-      "complex": false,
-      "why_innovative": "It captures physical randomness to generate cryptographic tokens bound to entropy.",
-      "why_complex": "No Cairo contracts were declared; it lacks interaction depth with existing pools.",
-      "reason": "ChaosKey+ combines physical randomness with STRK20 privacy mechanisms.",
-      "facts_v2": true
-    },
-    "star_evidence": ""
   },
   {
     "slug": "hidden",
@@ -446,7 +446,6 @@
     ],
     "head_sha": "4b57d15012dafe95e29ca5bc16fd654eee1bc085",
     "readme_hash": "3652:<div align=\"center\">\n  <img src=\"./icon.svg\" width=\"88\" height=\"88\" alt=\"HIDDEN logo\" />\n\n  # HIDDEN\n\n  **Games where your opponent can't see your move.**\n\n  Built on Starknet mainnet with **STRK20** ",
-    "churn_pct": 0.1,
     "summary": "Enable private play in wagered games using STRK20 on Starknet.",
     "description_long": "This project implements a suite of 1v1 wagered games where players' moves are hidden until revealed, utilizing STRK20 for privacy. The challenge is creating commitment hashes to ensure moves stay sealed, while also managing shielded transactions through the STRK20 privacy pool, allowing for unlinkable stakes and payouts.",
     "latest_push": "Changed MOVE_WINDOW_MS to 4 hours in app.js.",
@@ -460,6 +459,7 @@
     "has_readme": true,
     "additions": 1,
     "deletions": 1,
+    "churn_pct": 0.1,
     "assessment": {
       "innovative": false,
       "complex": false,
