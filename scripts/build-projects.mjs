@@ -477,8 +477,22 @@ async function rpc(url, method, params) {
  *
  * Verified against the receipt: execution status, and whether any event in it
  * came from the pool contract. */
-async function verifyTransactions(entry) {
+/* A transaction counts when it succeeded, touched the pool, and involved this
+ * project's own deployed code.
+ *
+ * The last condition is the one that matters. Touching the pool only proves
+ * somebody used STRK20 - any shield or unshield on mainnet does that, including
+ * another team's, so three hashes copied from an explorer would have passed.
+ * Requiring an event from an address the project itself declared ties the
+ * transaction to the repository whose row it is about to light up.
+ *
+ * A project that deploys nothing is judged on the pool alone: the sprint's
+ * privacy-wallet route is a real way to build, and there is no contract of
+ * their own to point at. That is recorded on the transaction rather than
+ * hidden, so the distinction stays visible. */
+async function verifyTransactions(entry, contracts) {
   const declared = Array.isArray(entry.transactions) ? entry.transactions : [];
+  const own = contracts.map((c) => c.address).filter(Boolean);
   const out = [];
   for (const raw of declared.slice(0, 10)) {
     const hash = typeof raw === "string" ? raw.trim() : "";
@@ -488,14 +502,37 @@ async function verifyTransactions(entry) {
     }
     const receipt = await rpc(RPCS[0][1], "starknet_getTransactionReceipt", [hash]);
     if (!receipt) {
-      out.push({ hash, ok: false, pool: false, note: "not found on mainnet" });
+      out.push({ hash, ok: false, pool: false, mine: false, note: "not found on mainnet" });
       continue;
     }
+    const events = receipt.events || [];
     const ok = receipt.execution_status === "SUCCEEDED";
-    const pool = (receipt.events || []).some((e) => sameAddress(e.from_address, POOL_ADDRESS));
-    if (!ok) out.push({ hash, ok: false, pool, note: "reverted" });
-    else if (!pool) out.push({ hash, ok: true, pool: false, note: "did not touch the pool" });
-    else out.push({ hash, ok: true, pool: true });
+    const pool = events.some((e) => sameAddress(e.from_address, POOL_ADDRESS));
+
+    /* Two ways a transaction can belong to a project, because one alone is
+     * wrong in a common case. Events catch a contract that logs; calldata
+     * catches one that does not - a contract whose job is to forward a call to
+     * the pool may emit nothing at all, and judging it on events would fail a
+     * transaction that genuinely ran through it.
+     *
+     * Scanning the whole calldata rather than parsing the call array: the
+     * layout differs across invoke versions, an address appearing anywhere in
+     * it means the transaction referred to that contract, and this only has to
+     * separate a project's own transactions from a stranger's. */
+    let mine = null;
+    if (own.length) {
+      mine = events.some((e) => own.some((a) => sameAddress(e.from_address, a)));
+      if (!mine) {
+        const tx = await rpc(RPCS[0][1], "starknet_getTransactionByHash", [hash]);
+        const calldata = Array.isArray(tx?.calldata) ? tx.calldata : [];
+        mine = calldata.some((felt) => own.some((a) => sameAddress(felt, a)));
+      }
+    }
+
+    if (!ok) out.push({ hash, ok: false, pool, mine, note: "reverted" });
+    else if (!pool) out.push({ hash, ok: true, pool: false, mine, note: "did not touch the pool" });
+    else if (mine === false) out.push({ hash, ok: true, pool: true, mine: false, note: "touched the pool, but not through this project's contracts" });
+    else out.push({ hash, ok: true, pool: true, mine });
   }
   return out;
 }
@@ -681,8 +718,11 @@ async function buildProject(entry, prev) {
 
   const demoUrl = await resolveDemo(entry, meta, owner, repo);
   const contracts = await resolveContracts(entry);
-  const transactions = await verifyTransactions(entry);
-  const verifiedTxs = transactions.filter((t) => t.ok && t.pool).length;
+  const transactions = await verifyTransactions(entry, contracts);
+  /* mine === false is a transaction through somebody else's contract and does
+     not count; null is a project with nothing deployed, where the question does
+     not apply. */
+  const verifiedTxs = transactions.filter((t) => t.ok && t.pool && t.mine !== false).length;
 
   /* Submission is a state the repository is in, not a form someone remembers to
    * fill in at 23:00 on the deadline. Each requirement is checked

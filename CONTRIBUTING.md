@@ -55,7 +55,7 @@ Everything you control goes in a `strk20.json` at the root of your own repo, and
 }
 ```
 
-- **`transactions`** - at least three mainnet transaction hashes. Each is checked against the chain: it must exist, have succeeded, and have touched the STRK20 pool. Hashes rather than an address because private transactions are relayed, so the on-chain sender is never you.
+- **`transactions`** - at least three mainnet transaction hashes. Each is checked against the chain: it must exist, have succeeded, and have touched the STRK20 pool. If you listed anything in `contracts`, the transaction must also carry an event from one of them - touching the pool through someone else's contract is not your project running on mainnet. Projects that deploy nothing of their own are judged on the pool alone. Hashes rather than an address because private transactions are relayed, so the on-chain sender is never you.
 - **`contracts`** - deployed addresses. Each is checked against mainnet and Sepolia and shown with the network it was found on.
 - **`demo_video`** - your 3-minute demo video.
 - **`demo_url`** - only if your demo isn't found automatically. See below.

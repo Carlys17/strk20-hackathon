@@ -83,7 +83,7 @@ A file at the root of your own repository. Add each field when you have it. This
 
 | Field | Required | Notes |
 |---|---|---|
-| `transactions` | to be scored | At least three mainnet transaction hashes. Each is checked against the chain: it must exist, have succeeded, and have touched the STRK20 pool |
+| `transactions` | to be scored | At least three mainnet transaction hashes. Each is checked against the chain: it must exist, have succeeded, have touched the STRK20 pool, and - if you deployed contracts - have run through one of yours |
 | `contracts` | no | Deployed addresses, shown with their network |
 | `demo_video` | to be scored | Your 3-minute demo video |
 | `demo_url` | no | Only if your demo isn't found automatically |
