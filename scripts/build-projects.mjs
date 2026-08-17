@@ -670,12 +670,11 @@ async function openai(system, user, maxTokens = 300) {
 
 /* ---------- the star ---------- */
 
-/* Five criteria. Three are facts this script already establishes - a live demo,
- * a demo video, three transactions verified against the pool on-chain - and two
- * are judgements only a reader of the code can make.
+/* Two criteria, both judgements only a reader of the code can make: is the idea
+ * unusual, and is there real engineering under it.
  *
- * The judgement half is a model, and a model is not a measurement. Two things
- * keep it honest enough to hang a public mark on:
+ * A model is not a measurement. Two things keep it honest enough to hang a
+ * public mark on:
  *
  *   - It is anchored. The prompt carries the contracts, the languages and the
  *     dependencies this script already read, so "technically complex" is a
@@ -694,27 +693,31 @@ Return JSON: {"innovative": boolean, "complex": boolean, "reason": string}.
 
 innovative - true only if the project applies privacy technology in a way that is not the obvious one. A private transfer UI, a wallet wrapper, or a swap that routes through a pool is the obvious one: false. Applying it to a domain that does not usually get privacy, or composing primitives into something the pool was not built for, is true.
 
-complex - true only if the code shows real engineering depth. Judge the CONTRACTS AND STACK given below, not the README's ambitions. A single contract that wraps a pool call, or a frontend with no contract of its own, is false. Several interacting contracts, a custom proving or nullifier scheme, an indexer, or non-trivial Cairo is true.
+complex - true only if the code shows real engineering depth. Judge the CONTRACTS AND STACK given below, not the README's ambitions. A frontend calling an SDK, or a single contract that wraps a pool call, is false. Cairo of its own that does something, several interacting contracts, a custom proving or nullifier scheme, or an indexer is true.
 
-Be sparing. Most hackathon projects are neither. Answering true to both should be uncommon, and a project you are unsure about is false.
+You are judging work in progress, halfway through a sprint. Depth of what has been built so far, not whether it is finished: an unfinished project with real Cairo behind it is complex, and a polished frontend with nothing underneath is not. Missing demos, videos or mainnet transactions are not your concern.
+
+Be sparing. Answering true to both should mean something. A project you are unsure about is false.
 
 reason - ONE sentence, under 120 characters, saying concretely what earned it or what is missing. No praise, no adjectives about the team. Never mention this rubric.`;
 
-/* Both halves must hold, on top of all three facts. The star says a project is
- * finished, deep and unusual - any one of those alone is not it. */
-/* Stickiness covers the judgement, never the facts.
+/* The star marks a builder, not a submission.
  *
- * A model asked twice about nearly the same repository will not always answer
- * the same way, and taking a star back over a typo fix is not something to do
- * to a team mid-sprint - so once it has said innovative and complex, that
- * stands. The three facts are re-checked every run and must hold every run.
- * They are objective, they can genuinely stop being true, and a star over a row
- * that no longer has three verified transactions is just wrong: philoxenia kept
- * one for an hour after a tightened transaction rule dropped it to two. */
-function starOf(assessment, requirements, wasStarred) {
-  const facts = Object.values(requirements).every(Boolean);
-  const judged = !!(assessment?.innovative && assessment?.complex) || !!wasStarred;
-  return !!(facts && judged);
+ * It used to require a live demo, a demo video and three verified mainnet
+ * transactions on top of the judgement, which made it a completeness badge:
+ * nobody held one halfway through a sprint, and the people worth pointing at
+ * were invisible for the fortnight it mattered. Those three facts are already
+ * on every project panel and drive the submitted state - they did not need a
+ * second display, and they were keeping good work off the board.
+ *
+ * What is left is the part that actually says something about the builder:
+ * is the idea unusual, and is there real engineering under it.
+ *
+ * Sticky, because a model asked twice about nearly the same repository will not
+ * always answer the same way, and taking a star back over a typo fix is not
+ * something to do to a team mid-sprint. */
+function starOf(assessment, wasStarred) {
+  return !!(assessment?.innovative && assessment?.complex) || !!wasStarred;
 }
 
 const DESC_SYSTEM = `You describe developer projects for a public hackathon board that other builders read.
@@ -883,10 +886,11 @@ async function buildProject(entry, prev) {
    * poisons the cache permanently: the SHA never changes again for a finished
    * project, so it would never retry. */
   const summaryUsable = !OPENAI_KEY || !!prev?.summary;
-  /* Same shape of trap as the summary one: a project crosses into ready when a
-     transaction verifies, which happens without a push, so the SHA never
-     changes again and it would sit unjudged forever. */
-  const assessmentUsable = !OPENAI_KEY || !ready || !!prev?.assessment;
+  /* Same shape of trap as the summary one: a run with no key, or one that
+     failed to get an answer, must not poison the cache - the SHA does not
+     change again on a project that has stopped pushing, so it would sit
+     unjudged forever. */
+  const assessmentUsable = !OPENAI_KEY || !!prev?.assessment;
   if (prev && headSha && prev.head_sha === headSha && summaryUsable && assessmentUsable) {
     console.log(`  ${entry.slug}: unchanged`);
     return {
@@ -906,7 +910,7 @@ async function buildProject(entry, prev) {
          checked again: a transaction verifies on-chain without anyone pushing,
          so a project can cross the line between two runs of the cron. */
       assessment: prev.assessment || null,
-      starred: starOf(prev.assessment, requirements, prev.starred),
+      starred: starOf(prev.assessment, prev.starred),
       star_reason: prev.star_reason || "",
     };
   }
@@ -980,11 +984,13 @@ async function buildProject(entry, prev) {
     ? Math.min(100, Math.round(((additions + deletions) / estimatedLines) * 1000) / 10)
     : 0;
 
-  /* Judged only once the three facts hold. A project that cannot be starred
-     yet does not need a verdict - most of the fleet is mid-build on any given
-     run - and it keeps the model away from rating unfinished work. */
+  /* Judged on every project with code in it. This used to wait until a project
+     had a demo, a video and three verified transactions, which meant it never
+     ran: the star was invisible for the half of the sprint when knowing who is
+     building well is worth the most.
+     Still one call per project per push, cached on head_sha. */
   let assessment = (prev?.head_sha === headSha && prev?.assessment) || null;
-  if (ready && OPENAI_KEY && !assessment) {
+  if (OPENAI_KEY && !assessment) {
     const contractList = contracts.length
       ? contracts.map((c) => `- ${c.address || c}${c.name ? ` (${c.name})` : ""}`).join("\n")
       : "none declared";
@@ -1024,7 +1030,7 @@ async function buildProject(entry, prev) {
     /* Kept so the next run reuses the verdict for this head_sha rather than
        asking again and risking a different answer over identical code. */
     assessment,
-    starred: starOf(assessment, requirements, prev?.starred),
+    starred: starOf(assessment, prev?.starred),
     star_reason: assessment?.reason || prev?.star_reason || "",
   };
 }
