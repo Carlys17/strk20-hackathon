@@ -666,9 +666,19 @@ reason - ONE sentence, under 120 characters, saying concretely what earned it or
 
 /* Both halves must hold, on top of all three facts. The star says a project is
  * finished, deep and unusual - any one of those alone is not it. */
-function starOf(assessment, requirements) {
+/* Stickiness covers the judgement, never the facts.
+ *
+ * A model asked twice about nearly the same repository will not always answer
+ * the same way, and taking a star back over a typo fix is not something to do
+ * to a team mid-sprint - so once it has said innovative and complex, that
+ * stands. The three facts are re-checked every run and must hold every run.
+ * They are objective, they can genuinely stop being true, and a star over a row
+ * that no longer has three verified transactions is just wrong: philoxenia kept
+ * one for an hour after a tightened transaction rule dropped it to two. */
+function starOf(assessment, requirements, wasStarred) {
   const facts = Object.values(requirements).every(Boolean);
-  return !!(facts && assessment?.innovative && assessment?.complex);
+  const judged = !!(assessment?.innovative && assessment?.complex) || !!wasStarred;
+  return !!(facts && judged);
 }
 
 const DESC_SYSTEM = `You describe developer projects for a public hackathon board that other builders read.
@@ -860,7 +870,7 @@ async function buildProject(entry, prev) {
          checked again: a transaction verifies on-chain without anyone pushing,
          so a project can cross the line between two runs of the cron. */
       assessment: prev.assessment || null,
-      starred: starOf(prev.assessment, requirements) || !!prev.starred,
+      starred: starOf(prev.assessment, requirements, prev.starred),
       star_reason: prev.star_reason || "",
     };
   }
@@ -978,11 +988,7 @@ async function buildProject(entry, prev) {
     /* Kept so the next run reuses the verdict for this head_sha rather than
        asking again and risking a different answer over identical code. */
     assessment,
-    /* Sticky. A push is re-judged, and a model asked twice about nearly the
-       same repository will not always answer the same way - taking a star back
-       over a typo fix is not something to do to a team mid-sprint. Earned once
-       is earned. */
-    starred: starOf(assessment, requirements) || !!prev?.starred,
+    starred: starOf(assessment, requirements, prev?.starred),
     star_reason: assessment?.reason || prev?.star_reason || "",
   };
 }
