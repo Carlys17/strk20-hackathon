@@ -86,7 +86,28 @@ function loadAffiliations() {
 /* ---------- GitHub ---------- */
 
 async function gh(path) {
-  const res = await fetch(`${API}${path}`, { headers: HEADERS });
+  /* A dropped connection is not a reason to lose the whole run. Sixty projects
+   * make several hundred requests a run and one of them will eventually fail
+   * on the socket rather than the status - "other side closed" took an entire
+   * index down after every project had already been resolved.
+   *
+   * Retried twice with a short backoff, then treated as no answer, which every
+   * caller already handles. Rate limiting still throws: that is a real stop,
+   * and retrying into it would only make it worse. */
+  let res = null;
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      res = await fetch(`${API}${path}`, { headers: HEADERS });
+      break;
+    } catch (e) {
+      if (attempt === 2) {
+        warn(`${path} failed to connect (${e.cause?.message || e.message}) - skipped`);
+        return null;
+      }
+      await new Promise((r) => setTimeout(r, 400 * (attempt + 1)));
+    }
+  }
+  if (!res) return null;
   if (res.status === 403 || res.status === 429) {
     const reset = res.headers.get("x-ratelimit-reset");
     throw new Error(`rate limited on ${path}` + (reset ? ` (resets ${new Date(reset * 1000).toISOString()})` : ""));
