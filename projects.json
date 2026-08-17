@@ -1,47 +1,51 @@
 [
   {
-    "slug": "veilpay",
-    "name": "VeilPay",
-    "one_liner": "Private payroll with scoped disclosure. Public can verify a run; only the payee or auditor can open a slice.",
-    "category": "Payments",
-    "repo_url": "https://github.com/OpenDagri/veilpay",
-    "demo_url": "",
+    "slug": "starkwhisper",
+    "name": "StarkWhisper",
+    "one_liner": "Metadata-resistant, end-to-end encrypted messaging & private payment memos on Starknet.",
+    "category": "Consumer",
+    "repo_url": "https://github.com/dino1x/starkwhisper",
+    "demo_url": "https://starkwhisper.vercel.app",
     "demo_video": "",
     "x_handle": "",
-    "inspired_by": "",
+    "inspired_by": "RFP-01",
     "affiliation": "",
-    "starred": false,
-    "star_reason": "VeilPay applies privacy to a common payroll system without innovative mechanisms.",
-    "contracts": [],
+    "starred": true,
+    "star_reason": "StarkWhisper combines cutting-edge cryptography with advanced privacy solutions for messaging.",
+    "contracts": [
+      {
+        "address": "0x78ae662e0cc6d1ab2cfeaf2a51ba8783d88e31886f88a794d142f95a6f8735b",
+        "network": "mainnet"
+      }
+    ],
     "transactions": [],
     "verified_txs": 0,
     "requirements": {
-      "demo": false,
+      "demo": true,
       "video": false,
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-17T21:21:59Z",
+    "pushed_at": "2026-08-17T21:45:14Z",
     "stars": 0,
     "builders": [
       {
-        "login": "OpenDagri",
-        "name": "OpenDagri",
-        "avatar_url": "https://avatars.githubusercontent.com/u/317329795?v=4"
+        "login": "dino1x",
+        "name": "dino1x",
+        "avatar_url": "https://avatars.githubusercontent.com/u/140521069?v=4"
       }
     ],
     "agents": [],
     "active_days": [
-      "2026-08-15",
       "2026-08-16",
       "2026-08-17"
     ],
-    "head_sha": "5e5f278d1fda922e1058ada884824a593ff1cd1a",
-    "readme_hash": "1492:# VeilPay\n\n**Private Payroll on Starknet.**\n\nVeilPay is a hackathon project that demonstrates paying multiple recipients privately on Starknet using the STRK20 privacy primitives (privacy pool + STRK2",
-    "churn_pct": 1.1,
-    "summary": "Facilitate private payroll processing on Starknet.",
-    "description_long": "This project demonstrates how to pay multiple recipients privately using Starknet's STRK20 privacy features. The main challenge is ensuring that public observers cannot easily infer the recipient-to-amount mapping in a payroll batch, maintaining confidentiality while allowing for public verification.",
-    "latest_push": "Added a snapshot for the private-balance payroll flow.",
+    "head_sha": "0ca139001241c3375c876fe1c3532624ea3b697d",
+    "readme_hash": "5759:# StarkWhisper\n\n> **Metadata-Resistant, End-to-End Encrypted On-Chain Messaging & Private Payment Memos on Starknet**\n\n![Starknet](https://img.shields.io/badge/Starknet-Mainnet%20%2F%20Sepolia-c53400?",
+    "churn_pct": 15.5,
+    "summary": "Enable secure, metadata-resistant messaging and payment memos on Starknet.",
+    "description_long": "This project uses advanced cryptographic techniques like ZK note spend proofs and ECDH key agreement to ensure privacy in on-chain communications. It also allows users to attach private payment memos to their messages through a unique zero-knowledge transaction process, addressing the challenge of maintaining confidentiality in a transparent blockchain environment.",
+    "latest_push": "Added Ephemeral Counterfactual AA execution and Signal-style Double Ratchet.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -75,92 +79,17 @@
       }
     ],
     "has_readme": true,
-    "additions": 14,
-    "deletions": 12,
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "The project implements private payroll, which is a standard application of privacy tech.",
-      "why_complex": "The project primarily features frontend code without substantial Cairo contracts.",
-      "reason": "VeilPay applies privacy to a common payroll system without innovative mechanisms.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "crewkill-strk20",
-    "name": "CrewKill",
-    "one_liner": "Staked social deduction where privacy is the game mechanic: buy a seat through the STRK20 pool, draw a role nobody can read, vote anonymously, settle on-chain.",
-    "category": "Other",
-    "repo_url": "https://github.com/nickthelegend/crewkill-strk20",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": true,
-    "star_reason": "Participants play a deduction game where roles and votes remain confidential, enhancing strategy.",
-    "contracts": [
-      {
-        "address": "0x55ac4a110992e9ced1f3133a9bff040adaaa6aeee4ed57e9b9cb89cb7586ca",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x38cea8475ecba6984807bf50eebc2d6174672f567d709d8b74c661904ec3bb8",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-17T21:17:39Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "nickthelegend",
-        "name": "nickthelegend",
-        "avatar_url": "https://avatars.githubusercontent.com/u/82558763?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-17"
-    ],
-    "head_sha": "204175b54896d5367e76e7a8e4415495bf9b845b",
-    "readme_hash": "12131:# CrewKill\n\n**Staked social deduction on Starknet. Your wallet never touches the table, your role is a\nsecret even we can't read, and reading the room correctly pays even when you lose.**\n\nBuilt for t",
-    "churn_pct": 0.4,
-    "summary": "Facilitate anonymous, staked social deduction games on Starknet.",
-    "description_long": "Players buy seats and stake through a privacy pool, ensuring their roles remain secret even from the operator. Each player's role is derived from a cryptographic commitment, allowing for independent role assignment, while voting remains anonymous to prevent bribery. A unique Detective Pool rewards players for accurately identifying impostors, adding a new strategic layer to the gameplay.",
-    "latest_push": "Launched Poker on the hub and updated the REFERENCES.md file.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 54,
-    "deletions": 4,
+    "additions": 672,
+    "deletions": 46,
     "assessment": {
       "innovative": true,
       "complex": true,
-      "why_innovative": "The game allows players to draw secret roles through cryptographic commitments, preserving confidentiality.",
-      "why_complex": "Uses Cairo contracts to implement role randomness, ballot notes, and the Detective Pool payout mechanism.",
-      "reason": "Participants play a deduction game where roles and votes remain confidential, enhancing strategy.",
+      "why_innovative": "It enables metadata-resistant messaging and private payments using ZK proofs in a novel way.",
+      "why_complex": "The project implements STARK Dual-Key Stealth Addresses and Complex Decryption Schemes in Cairo contracts.",
+      "reason": "StarkWhisper combines cutting-edge cryptography with advanced privacy solutions for messaging.",
       "facts_v2": true
     },
-    "star_evidence": "2 contracts deployed, Cairo in the repository"
+    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "philoxenia",
@@ -174,7 +103,7 @@
     "inspired_by": "",
     "affiliation": "",
     "starred": true,
-    "star_reason": "Philoxenia implements a unique private hospitality model that leverages trust and anonymity.",
+    "star_reason": "It uniquely combines privacy with social trust in hospitality services.",
     "contracts": [
       {
         "address": "0x056a817104ad7544a55873584f3d8fb41a780e5466d152b3e1f12d578e75defb",
@@ -216,7 +145,7 @@
       "mainnet": true
     },
     "status": "finished",
-    "pushed_at": "2026-08-17T21:15:59Z",
+    "pushed_at": "2026-08-17T21:35:58Z",
     "stars": 0,
     "builders": [
       {
@@ -238,12 +167,12 @@
       "2026-08-16",
       "2026-08-17"
     ],
-    "head_sha": "6ee116e4780c9f235bc38a49c694118e03155d18",
+    "head_sha": "2cc0c3941d728c636e347d911e62637a8d58f771",
     "readme_hash": "9302:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
-    "churn_pct": 0.3,
+    "churn_pct": 0.1,
     "summary": "Create a private hospitality network for secure peer-to-peer stays.",
     "description_long": "Utilizing Starknet's Cairo for trustless payments, this project facilitates private hospitality connections among users without a public marketplace. It enables friend-based discovery to enhance privacy while offering sealed chat and escrow functionalities, solving the challenges of trust and safety in peer-to-peer accommodation.",
-    "latest_push": "Enabled booking and payment with STRK or DAI on various platform pages.",
+    "latest_push": "Modified invite links, listings, and metadata to say 'Book & pay'.",
     "tooling": [
       {
         "label": "Cairo",
@@ -252,17 +181,92 @@
       }
     ],
     "has_readme": true,
-    "additions": 23,
-    "deletions": 21,
+    "additions": 8,
+    "deletions": 8,
     "assessment": {
       "innovative": true,
       "complex": true,
-      "why_innovative": "It enables a private peer-to-peer hospitality protocol through a trust network and escrow mechanisms.",
-      "why_complex": "The project utilizes multiple Cairo contracts for payment escrow, including BookingEscrow and an anonymizer.",
-      "reason": "Philoxenia implements a unique private hospitality model that leverages trust and anonymity.",
+      "why_innovative": "It enables private peer-to-peer hospitality using friend-based discovery.",
+      "why_complex": "It implements a Cairo escrow mechanism across multiple contracts for trustless settlements.",
+      "reason": "It uniquely combines privacy with social trust in hospitality services.",
       "facts_v2": true
     },
     "star_evidence": "3 contracts deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "crewkill-strk20",
+    "name": "CrewKill",
+    "one_liner": "Staked social deduction where privacy is the game mechanic: buy a seat through the STRK20 pool, draw a role nobody can read, vote anonymously, settle on-chain.",
+    "category": "Other",
+    "repo_url": "https://github.com/nickthelegend/crewkill-strk20",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": true,
+    "star_reason": "CrewKill transforms social deduction gaming with real-time privacy and innovative on-chain mechanics.",
+    "contracts": [
+      {
+        "address": "0x55ac4a110992e9ced1f3133a9bff040adaaa6aeee4ed57e9b9cb89cb7586ca",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x38cea8475ecba6984807bf50eebc2d6174672f567d709d8b74c661904ec3bb8",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-17T21:34:56Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "nickthelegend",
+        "name": "nickthelegend",
+        "avatar_url": "https://avatars.githubusercontent.com/u/82558763?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-17"
+    ],
+    "head_sha": "167957da247a7a57b06dfe869a7f3c2a967a25bd",
+    "readme_hash": "12483:# CrewKill\n\n**Staked social deduction on Starknet. Your wallet never touches the table, your role is a\nsecret even we can't read, and reading the room correctly pays even when you lose.**\n\nBuilt for t",
+    "churn_pct": 5.7,
+    "summary": "Facilitate anonymous social deduction gaming on-chain with private role assignments.",
+    "description_long": "Players stake through a privacy pool to buy seats, with roles generated from a commitment-based seed that the server cannot access, ensuring confidentiality. The game allows players to cast anonymous votes and also introduces a unique Detective Pool that rewards players for correctly identifying impostors, even if their side loses. The approach minimizes central control and enhances gameplay by keeping role assignments hidden, while ensuring a fair progressive gameplay experience through technology.",
+    "latest_push": "Split the monorepo, creating a separate app for molfi.fun.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 831,
+    "deletions": 31,
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "It enables staked social deduction with role confidentiality and independent impostor detection.",
+      "why_complex": "It includes multiple Cairo contracts and unique role assignment via commitment schemes.",
+      "reason": "CrewKill transforms social deduction gaming with real-time privacy and innovative on-chain mechanics.",
+      "facts_v2": true
+    },
+    "star_evidence": "2 contracts deployed, Cairo in the repository"
   },
   {
     "slug": "sealed",
@@ -276,7 +280,7 @@
     "inspired_by": "RFP-08",
     "affiliation": "",
     "starred": true,
-    "star_reason": "This auction design ensures both bidder identity and bid amount remain private until reveal.",
+    "star_reason": "Sealed creates an unlinkable auction mechanism leveraging privacy to ensure honest bidding.",
     "contracts": [
       {
         "address": "0x00bb79c9cbc96a04ef1bac51805de8642dd20f98ecd980dd208b03c931e6be87",
@@ -291,7 +295,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-17T21:09:43Z",
+    "pushed_at": "2026-08-17T21:27:04Z",
     "stars": 0,
     "builders": [
       {
@@ -306,12 +310,12 @@
       "2026-08-16",
       "2026-08-17"
     ],
-    "head_sha": "05ce50d934222663fea12dfa8e0b30f2329197b6",
+    "head_sha": "2c7bdc18b8435e2f5a3bdc39372797209732c836",
     "readme_hash": "6683:# Sealed\n\nA deployable Vickrey variant of RFP-08 on Starknet. Bidder identities stay unlinkable, bid values stay hidden until reveal, every bidder locks identical STRK20-funded collateral, and failing",
-    "churn_pct": 9.4,
+    "churn_pct": 4.4,
     "summary": "Enable private sealed-bid auctions on Starknet with unlinkable bidders.",
     "description_long": "A sealed-bid auction protocol that keeps bidder identities and bid values hidden until a reveal, utilizing STRK20 as collateral. Each bidder makes a commitment to their bid using a Poseidon hash, with identical amounts escrowed to maintain privacy and prevent bid leaks. The system aims to ensure honest bidding under a second-price auction rule while addressing the complexities of anonymity and collateral management.",
-    "latest_push": "Refused a zero seller handle at construction and deployed a fresh auction.",
+    "latest_push": "Announced every auction at construction and added auction discovery scanning.",
     "tooling": [
       {
         "label": "Cairo",
@@ -325,65 +329,60 @@
       }
     ],
     "has_readme": true,
-    "additions": 420,
-    "deletions": 2,
+    "additions": 201,
+    "deletions": 5,
     "assessment": {
       "innovative": true,
       "complex": true,
-      "why_innovative": "Sealed allows private bidding in a second-price auction using unlinkable identities through a pool.",
-      "why_complex": "The project employs multiple contracts with a Poseidon commitment scheme for bid confidentiality.",
-      "reason": "This auction design ensures both bidder identity and bid amount remain private until reveal.",
+      "why_innovative": "It enables sealed-bid second-price auctions while keeping bidder identities unlinkable.",
+      "why_complex": "The project uses multiple contracts to manage bidding and settlement with a complex collar scheme and Poseidon commitments.",
+      "reason": "Sealed creates an unlinkable auction mechanism leveraging privacy to ensure honest bidding.",
       "facts_v2": true
     },
     "star_evidence": "1 contract deployed, Cairo in the repository"
   },
   {
-    "slug": "starkwhisper",
-    "name": "StarkWhisper",
-    "one_liner": "Metadata-resistant, end-to-end encrypted messaging & private payment memos on Starknet.",
-    "category": "Consumer",
-    "repo_url": "https://github.com/dino1x/starkwhisper",
-    "demo_url": "https://starkwhisper.vercel.app",
+    "slug": "veilpay",
+    "name": "VeilPay",
+    "one_liner": "Private payroll with scoped disclosure. Public can verify a run; only the payee or auditor can open a slice.",
+    "category": "Payments",
+    "repo_url": "https://github.com/OpenDagri/veilpay",
+    "demo_url": "",
     "demo_video": "",
     "x_handle": "",
-    "inspired_by": "RFP-01",
+    "inspired_by": "",
     "affiliation": "",
-    "starred": true,
-    "star_reason": "StarkWhisper combines private messaging and payments with advanced cryptographic techniques.",
-    "contracts": [
-      {
-        "address": "0x78ae662e0cc6d1ab2cfeaf2a51ba8783d88e31886f88a794d142f95a6f8735b",
-        "network": "mainnet"
-      }
-    ],
+    "starred": false,
+    "star_reason": "VeilPay applies privacy to a common payroll system without innovative mechanisms.",
+    "contracts": [],
     "transactions": [],
     "verified_txs": 0,
     "requirements": {
-      "demo": true,
+      "demo": false,
       "video": false,
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-17T21:07:41Z",
+    "pushed_at": "2026-08-17T21:21:59Z",
     "stars": 0,
     "builders": [
       {
-        "login": "dino1x",
-        "name": "dino1x",
-        "avatar_url": "https://avatars.githubusercontent.com/u/140521069?v=4"
+        "login": "OpenDagri",
+        "name": "OpenDagri",
+        "avatar_url": "https://avatars.githubusercontent.com/u/317329795?v=4"
       }
     ],
     "agents": [],
     "active_days": [
+      "2026-08-15",
       "2026-08-16",
       "2026-08-17"
     ],
-    "head_sha": "ceedbabc1676671e037de9f6f45f8fe11d110ea5",
-    "readme_hash": "4396:# StarkWhisper\n\n> **Metadata-Resistant, End-to-End Encrypted On-Chain Messaging & Private Payment Memos on Starknet**\n\n![Starknet](https://img.shields.io/badge/Starknet-Mainnet%20%2F%20Sepolia-c53400?",
-    "churn_pct": 6.1,
-    "summary": "Facilitate secure, anonymous messaging and payment memos on Starknet.",
-    "description_long": "This project uses the STRK20 Privacy Pool to create metadata-resistant communication by securely routing messages through a pool to obscure sender identities. It incorporates end-to-end encryption via ECDH key agreement and ensures that private payment memos can be included atomically in the same transaction, addressing the challenge of maintaining privacy on public blockchains.",
-    "latest_push": "Implemented StarkWhisperCore's Cairo 2.x architecture and integration methods.",
+    "head_sha": "5e5f278d1fda922e1058ada884824a593ff1cd1a",
+    "readme_hash": "1492:# VeilPay\n\n**Private Payroll on Starknet.**\n\nVeilPay is a hackathon project that demonstrates paying multiple recipients privately on Starknet using the STRK20 privacy primitives (privacy pool + STRK2",
+    "summary": "Facilitate private payroll processing on Starknet.",
+    "description_long": "This project demonstrates how to pay multiple recipients privately using Starknet's STRK20 privacy features. The main challenge is ensuring that public observers cannot easily infer the recipient-to-amount mapping in a payroll batch, maintaining confidentiality while allowing for public verification.",
+    "latest_push": "Added a snapshot for the private-balance payroll flow.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -417,17 +416,18 @@
       }
     ],
     "has_readme": true,
-    "additions": 195,
-    "deletions": 61,
+    "additions": 14,
+    "deletions": 12,
+    "churn_pct": 1.1,
     "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "It enables metadata-resistant messaging and private payment memos in an on-chain context using zero-knowledge proofs.",
-      "why_complex": "It includes a custom `MessagingAnonymizer` contract implementing replay protection and dynamic payloads.",
-      "reason": "StarkWhisper combines private messaging and payments with advanced cryptographic techniques.",
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project implements private payroll, which is a standard application of privacy tech.",
+      "why_complex": "The project primarily features frontend code without substantial Cairo contracts.",
+      "reason": "VeilPay applies privacy to a common payroll system without innovative mechanisms.",
       "facts_v2": true
     },
-    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
+    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "ghostorder",
@@ -467,7 +467,6 @@
     ],
     "head_sha": "e93804a20fa75f152935e34cdcf100145c2dffa9",
     "readme_hash": "1414:# Ghost Orders\n\nGhost Orders is a privacy-focused conditional trading layer built on Starknet using STRK20.\n\nIt explores IDEA-04 from the STRK20 Private Sprint: hidden and conditional orders.\n\nThe goa",
-    "churn_pct": 100,
     "summary": "Create hidden conditional trading orders on Starknet.",
     "description_long": "The project builds a privacy-focused trading layer that allows users to set conditional trading instructions while keeping their order intent private. It uses STRK20 for asset handling and settlement, focusing on a public ETH price trigger, and aims to maintain user-controlled execution and condition monitoring while highlighting the limitations of its privacy model.",
     "latest_push": "Formatted STRK20 shield amounts in the wallet API.",
@@ -486,6 +485,7 @@
     "has_readme": true,
     "additions": 2126,
     "deletions": 58,
+    "churn_pct": 100,
     "assessment": {
       "innovative": true,
       "complex": false,
@@ -536,7 +536,6 @@
     ],
     "head_sha": "d0b6e3a0a2a27a1acd052c43bf2d38f3f8a7b2e6",
     "readme_hash": "3171:# StakeWars\n\nStakeWars is a persistent, non-custodial strategy game built around Starknet\nvalidator delegation. Operators choose how much of their real delegated STRK to\nallocate to Control Points and",
-    "churn_pct": 17.2,
     "summary": "Create a persistent strategy game leveraging validator delegation on Starknet.",
     "description_long": "This project builds a non-custodial strategy game that utilizes validator delegation of STRK without introducing a separate power currency. Players allocate their real delegated STRK to control points and engage in challenges with public commitments, while managing escalating contributions and permanent loss of power upon defeat. The application comprises a Go API, a React frontend, and deployed Cairo contracts for the gaming logic.",
     "latest_push": "Excluded enemy points from marquee selection and added Control Point artwork.",
@@ -550,6 +549,7 @@
     "has_readme": true,
     "additions": 3075,
     "deletions": 100,
+    "churn_pct": 17.2,
     "assessment": {
       "innovative": false,
       "complex": false,
