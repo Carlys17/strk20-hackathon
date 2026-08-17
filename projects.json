@@ -1,5 +1,336 @@
 [
   {
+    "slug": "sealed",
+    "name": "Sealed",
+    "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/tinoxbt/sealed",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-08",
+    "affiliation": "",
+    "starred": true,
+    "star_reason": "Bids are hidden via commitments, making auction mechanics depend on privacy.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-17T19:47:58Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "tinoxbt",
+        "name": "tinoxbt",
+        "avatar_url": "https://avatars.githubusercontent.com/u/202869881?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17"
+    ],
+    "head_sha": "f77c27cde20a781ebf1621ce80f20c65a20bf0df",
+    "readme_hash": "6683:# Sealed\n\nA deployable Vickrey variant of RFP-08 on Starknet. Bidder identities stay unlinkable, bid values stay hidden until reveal, every bidder locks identical STRK20-funded collateral, and failing",
+    "churn_pct": 3.7,
+    "summary": "Enable private sealed-bid auctions on Starknet with unlinkable bidders.",
+    "description_long": "A sealed-bid auction protocol that keeps bidder identities and bid values hidden until a reveal, utilizing STRK20 as collateral. Each bidder makes a commitment to their bid using a Poseidon hash, with identical amounts escrowed to maintain privacy and prevent bid leaks. The system aims to ensure honest bidding under a second-price auction rule while addressing the complexities of anonymity and collateral management.",
+    "latest_push": "Stopped sellers from setting an unmeetable reveal window and documented collateral.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 131,
+    "deletions": 1,
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "It enables unlinkable bidding in sealed-bid auctions through a unique mechanism of uniform collateral.",
+      "why_complex": "It features a dual-engineering approach for bidder anonymity and bid concealment using Cairo contracts.",
+      "reason": "Sealed allows true Vickrey auctions with private identities and bid values, leveraging unique privacy techniques.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "portage",
+    "name": "Portage.fun",
+    "one_liner": "Provably-fair idle creature-collecting on Starknet — hatch, evolve, and trade original creatures.",
+    "category": "Gaming",
+    "repo_url": "https://github.com/joaoolucas/portage-strk",
+    "demo_url": "https://portage-topaz.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-17T19:39:19Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "joaoolucas",
+        "name": "joaoolucas",
+        "avatar_url": "https://avatars.githubusercontent.com/u/83239762?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 1
+      }
+    ],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17"
+    ],
+    "head_sha": "e3063cea12fe290d836dd2ffe555cf46d667c05f",
+    "readme_hash": "3958:# Portage.fun\n\n**Live demo:** https://portage-topaz.vercel.app\n\n![Portage kickoff](docs/screenshots/kickoff.png)\n\n![Portage game dashboard](docs/screenshots/dashboard.png)\n\n![Portage spatial auto-hunt",
+    "churn_pct": 2.2,
+    "summary": "Create and evolve creatures in a cozy idle RPG on Starknet.",
+    "description_long": "The project offers a playable top-down idle RPG with features like tile movement, NPCs, and spatial combat. It integrates local storage for progress and employs Cairo for creature mechanics and evolution, while preparing for future Starknet interactions and privacy features. The challenging aspect lies in securely managing offline progress and ensuring private transactions through STRK20 integration.",
+    "latest_push": "Displayed the simulation as a tile RPG client on the screen.",
+    "tooling": [
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 288,
+    "deletions": 11,
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project is an idle creature-collecting RPG, which does not apply privacy in a non-obvious way.",
+      "why_complex": "There are no deployed contracts or depth in Cairo code at this stage.",
+      "reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "conditionalpay",
+    "name": "ConditionalPay",
+    "one_liner": "Programmable private settlement infrastructure for STRK20.",
+    "category": "Infra",
+    "repo_url": "https://github.com/eugenennamdi/ConditionalPay",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project consists mainly of frontend code without substantial Cairo contracts.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-17T19:36:51Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "eugenennamdi",
+        "name": "eugenennamdi",
+        "avatar_url": "https://avatars.githubusercontent.com/u/85407620?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-17"
+    ],
+    "head_sha": "ed792517cb8f50098bc7ee8d43ed5cd1220a4e48",
+    "readme_hash": "2372:# Starknet Privacy Starter Kit\n\nA lean Next.js starter for building privacy dApps on Starknet with [STRK20](https://eprint.iacr.org/2026/474) via `WalletAccountV6` (starknet.js v10). Shield, unshield,",
+    "churn_pct": 65,
+    "summary": "Build privacy dApps on Starknet using STRK20 for settlement.",
+    "description_long": "This project provides a Next.js starter kit that enables developers to create privacy-focused decentralized applications (dApps) using the STRK20 token. It encompasses features like shielding, unshielding, private transfers, and reading shielded balances while maintaining user privacy through a wallet interface. Key technical challenges include ensuring that placeholder strings for wallet actions are handled correctly and allowing developers to easily integrate their own actions into the demo framework.",
+    "latest_push": "Fixed compatibility between Starknet.js v10.7.0 and STRK20 Wallet API v0.10.4.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1173,
+    "deletions": 63,
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project includes actions like shielding and private transfers, which are common applications of privacy.",
+      "why_complex": "There are no deployed contracts or complex Cairo logic present in the project.",
+      "reason": "The project consists mainly of frontend code without substantial Cairo contracts.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "philoxenia",
+    "name": "philoxenia",
+    "one_liner": "Private P2P hospitality on Starknet — STRK20 Private Sprint",
+    "category": "Other",
+    "repo_url": "https://github.com/SergioSSantiago/philoxenia",
+    "demo_url": "https://philoxenia-iota.vercel.app",
+    "demo_video": "https://philoxenia-iota.vercel.app/demo/philoxenia-commercial.mp4",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": true,
+    "star_reason": "A trustless, private peer-to-peer hospitality network leveraging unique social trust.",
+    "contracts": [
+      {
+        "address": "0x056a817104ad7544a55873584f3d8fb41a780e5466d152b3e1f12d578e75defb",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x030533c6110ee5c414a5678bd71115be738852d709c74d8136fa965271c2e1f3",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x004c0322af24bb710f3aa0e48293517777188b42d9c4428b77304008ad0ea712",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x7ef1e214d5c5e99a4f8d27ba459326f4ec0bfaba8525824d1a36754608b60f9",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x5bac436e2a9775719de94e0ec1ea62f1cbc9737b23dd780230df66a53cc7813",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x4902a7a2702b9533cf8992f5bf6953947e0d9616f8dbc9bc5b1976e0082f494",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      }
+    ],
+    "verified_txs": 3,
+    "requirements": {
+      "demo": true,
+      "video": true,
+      "mainnet": true
+    },
+    "status": "finished",
+    "pushed_at": "2026-08-17T19:36:33Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "SergioSSantiago",
+        "name": "Sergio Sapina Santiago",
+        "avatar_url": "https://avatars.githubusercontent.com/u/44295455?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Cursor",
+        "name": "Cursor",
+        "avatar_url": "",
+        "commits": 100
+      }
+    ],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17"
+    ],
+    "head_sha": "0a5e31d3ebfc522fd4fc4c4f6feff7376ea244f5",
+    "readme_hash": "9302:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
+    "churn_pct": 0.1,
+    "summary": "Create a private hospitality network for secure peer-to-peer stays.",
+    "description_long": "Utilizing Starknet's Cairo for trustless payments, this project facilitates private hospitality connections among users without a public marketplace. It enables friend-based discovery to enhance privacy while offering sealed chat and escrow functionalities, solving the challenges of trust and safety in peer-to-peer accommodation.",
+    "latest_push": "Instructed guests to avoid double payments during on-chain stay bookings.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 11,
+    "deletions": 8,
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "It's a private hospitality protocol with friend-based discovery, not publicly listed.",
+      "why_complex": "It includes payment escrow via multiple Cairo contracts and an anonymizer scheme.",
+      "reason": "A trustless, private peer-to-peer hospitality network leveraging unique social trust.",
+      "facts_v2": true
+    },
+    "star_evidence": "3 contracts deployed on mainnet, Cairo in the repository"
+  },
+  {
     "slug": "vinss",
     "name": "VINSS",
     "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
@@ -43,7 +374,6 @@
     ],
     "head_sha": "2537fd9a4518b0e463e312cf7e30887d8929b22a",
     "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
-    "churn_pct": 6.7,
     "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
     "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
     "latest_push": "Added recipient-bound messaging v2 and wired its routing.",
@@ -57,6 +387,7 @@
     "has_readme": true,
     "additions": 503,
     "deletions": 135,
+    "churn_pct": 6.7,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -130,7 +461,6 @@
     ],
     "head_sha": "72cc32d3637af589486eda28c1dee2cdba7f3474",
     "readme_hash": "8922:# Cutout\n\n**Cutout is a wallet-native signing guard that uses deterministic public STRK20\nevidence to help users avoid predictable deposit amounts before they sign.**\n\nBefore a user signs a shield tra",
-    "churn_pct": 3.6,
     "summary": "Avoid predictable deposit amounts with on-chain evidence checks.",
     "description_long": "Cutout leverages deterministic public STRK20 evidence to ensure users do not sign token transactions with easily predicted amounts. It evaluates proposed transaction amounts against historical deposit patterns, allowing for small adjustments that enhance user privacy. The real challenge is accessing and interpreting off-chain data to recommend safer deposit amounts while ensuring no sensitive information is handled.",
     "latest_push": "Prepared for Cutout v0.1.1 patch release with documentation updates.",
@@ -164,6 +494,7 @@
     "has_readme": true,
     "additions": 204,
     "deletions": 248,
+    "churn_pct": 3.6,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -220,7 +551,6 @@
     ],
     "head_sha": "b649787f8c89cdc2566a4267f9e40b845745504f",
     "readme_hash": "12131:# CrewKill\n\n**Staked social deduction on Starknet. Your wallet never touches the table, your role is a\nsecret even we can't read, and reading the room correctly pays even when you lose.**\n\nBuilt for t",
-    "churn_pct": 3.4,
     "summary": "Facilitate anonymous, staked social deduction games on Starknet.",
     "description_long": "Players buy seats and stake through a privacy pool, ensuring their roles remain secret even from the operator. Each player's role is derived from a cryptographic commitment, allowing for independent role assignment, while voting remains anonymous to prevent bribery. A unique Detective Pool rewards players for accurately identifying impostors, adding a new strategic layer to the gameplay.",
     "latest_push": "Fixed gaps identified in the browser and recorded test plan execution.",
@@ -239,6 +569,7 @@
     "has_readme": true,
     "additions": 427,
     "deletions": 192,
+    "churn_pct": 3.4,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -248,251 +579,6 @@
       "facts_v2": true
     },
     "star_evidence": "2 contracts deployed, Cairo in the repository"
-  },
-  {
-    "slug": "portage",
-    "name": "Portage.fun",
-    "one_liner": "Provably-fair idle creature-collecting on Starknet — hatch, evolve, and trade original creatures.",
-    "category": "Gaming",
-    "repo_url": "https://github.com/joaoolucas/portage-strk",
-    "demo_url": "https://portage-topaz.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project lacks unique privacy features and substantial Cairo engineering.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-17T19:16:04Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "joaoolucas",
-        "name": "joaoolucas",
-        "avatar_url": "https://avatars.githubusercontent.com/u/83239762?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 1
-      }
-    ],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17"
-    ],
-    "head_sha": "e95c4893ca06cd0a8ec61392c0115a428391d956",
-    "readme_hash": "3958:# Portage.fun\n\n**Live demo:** https://portage-topaz.vercel.app\n\n![Portage kickoff](docs/screenshots/kickoff.png)\n\n![Portage game dashboard](docs/screenshots/dashboard.png)\n\n![Portage spatial auto-hunt",
-    "churn_pct": 29,
-    "summary": "Create and evolve creatures in a cozy idle RPG on Starknet.",
-    "description_long": "The project offers a playable top-down idle RPG with features like tile movement, NPCs, and spatial combat. It integrates local storage for progress and employs Cairo for creature mechanics and evolution, while preparing for future Starknet interactions and privacy features. The challenging aspect lies in securely managing offline progress and ensuring private transactions through STRK20 integration.",
-    "latest_push": "Rendered PixelLab art instead of canvas primitives for the game world.",
-    "tooling": [
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 3095,
-    "deletions": 261,
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "It is a classic idle RPG focusing on creature collection without unique privacy mechanisms.",
-      "why_complex": "No deployed contracts and only basic Cairo integration without complex interactions.",
-      "reason": "The project lacks unique privacy features and substantial Cairo engineering.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "sealed",
-    "name": "Sealed",
-    "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
-    "category": "DeFi",
-    "repo_url": "https://github.com/tinoxbt/sealed",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-08",
-    "affiliation": "",
-    "starred": true,
-    "star_reason": "Sealed allows true Vickrey auctions with private identities and bid values, leveraging unique privacy techniques.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-17T19:08:39Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "tinoxbt",
-        "name": "tinoxbt",
-        "avatar_url": "https://avatars.githubusercontent.com/u/202869881?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17"
-    ],
-    "head_sha": "bb0021ab254d13b0ddfa6de34d97ba6c0d04c3a7",
-    "readme_hash": "6683:# Sealed\n\nA deployable Vickrey variant of RFP-08 on Starknet. Bidder identities stay unlinkable, bid values stay hidden until reveal, every bidder locks identical STRK20-funded collateral, and failing",
-    "churn_pct": 0.3,
-    "summary": "Enable private sealed-bid auctions on Starknet with unlinkable bidders.",
-    "description_long": "A sealed-bid auction protocol that keeps bidder identities and bid values hidden until a reveal, utilizing STRK20 as collateral. Each bidder makes a commitment to their bid using a Poseidon hash, with identical amounts escrowed to maintain privacy and prevent bid leaks. The system aims to ensure honest bidding under a second-price auction rule while addressing the complexities of anonymity and collateral management.",
-    "latest_push": "Gated the Pages deploy in the web.yml workflow until Pages is enabled.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 8,
-    "deletions": 1,
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "It enables unlinkable bidding in sealed-bid auctions through a unique mechanism of uniform collateral.",
-      "why_complex": "It features a dual-engineering approach for bidder anonymity and bid concealment using Cairo contracts.",
-      "reason": "Sealed allows true Vickrey auctions with private identities and bid values, leveraging unique privacy techniques.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "philoxenia",
-    "name": "philoxenia",
-    "one_liner": "Private P2P hospitality on Starknet — STRK20 Private Sprint",
-    "category": "Other",
-    "repo_url": "https://github.com/SergioSSantiago/philoxenia",
-    "demo_url": "https://philoxenia-iota.vercel.app",
-    "demo_video": "https://philoxenia-iota.vercel.app/demo/philoxenia-commercial.mp4",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": true,
-    "star_reason": "The project reimagines hospitality with privacy-focused peer-to-peer interactions and trust mechanisms.",
-    "contracts": [
-      {
-        "address": "0x056a817104ad7544a55873584f3d8fb41a780e5466d152b3e1f12d578e75defb",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x030533c6110ee5c414a5678bd71115be738852d709c74d8136fa965271c2e1f3",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x004c0322af24bb710f3aa0e48293517777188b42d9c4428b77304008ad0ea712",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [
-      {
-        "hash": "0x7ef1e214d5c5e99a4f8d27ba459326f4ec0bfaba8525824d1a36754608b60f9",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      },
-      {
-        "hash": "0x5bac436e2a9775719de94e0ec1ea62f1cbc9737b23dd780230df66a53cc7813",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      },
-      {
-        "hash": "0x4902a7a2702b9533cf8992f5bf6953947e0d9616f8dbc9bc5b1976e0082f494",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      }
-    ],
-    "verified_txs": 3,
-    "requirements": {
-      "demo": true,
-      "video": true,
-      "mainnet": true
-    },
-    "status": "finished",
-    "pushed_at": "2026-08-17T18:48:31Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "SergioSSantiago",
-        "name": "Sergio Sapina Santiago",
-        "avatar_url": "https://avatars.githubusercontent.com/u/44295455?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Cursor",
-        "name": "Cursor",
-        "avatar_url": "",
-        "commits": 100
-      }
-    ],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17"
-    ],
-    "head_sha": "4f12c458f4685c549880d72cbab2c5280d2b5b61",
-    "readme_hash": "9302:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
-    "churn_pct": 2.8,
-    "summary": "Create a private hospitality network for secure peer-to-peer stays.",
-    "description_long": "Utilizing Starknet's Cairo for trustless payments, this project facilitates private hospitality connections among users without a public marketplace. It enables friend-based discovery to enhance privacy while offering sealed chat and escrow functionalities, solving the challenges of trust and safety in peer-to-peer accommodation.",
-    "latest_push": "Locked booking recording to pending on-chain transactions only.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 286,
-    "deletions": 130,
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "It enables private hospitality bookings through a social trust network instead of a public marketplace.",
-      "why_complex": "It includes multiple contracts like BookingEscrow and the Anonymizer, utilizing Cairo for payment escrow.",
-      "reason": "The project reimagines hospitality with privacy-focused peer-to-peer interactions and trust mechanisms.",
-      "facts_v2": true
-    },
-    "star_evidence": "3 contracts deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "stk402",
@@ -2390,92 +2476,6 @@
       "facts_v2": true
     },
     "star_evidence": ""
-  },
-  {
-    "slug": "conditionalpay",
-    "name": "ConditionalPay",
-    "one_liner": "Programmable private settlement infrastructure for STRK20.",
-    "category": "Infra",
-    "repo_url": "https://github.com/eugenennamdi/ConditionalPay",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project relies on standard privacy actions without deeper engineering.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-17T04:55:56Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "eugenennamdi",
-        "name": "eugenennamdi",
-        "avatar_url": "https://avatars.githubusercontent.com/u/85407620?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-17"
-    ],
-    "head_sha": "cd0830d079501d9eee92b8f5ea2c9bb05deec3aa",
-    "readme_hash": "2372:# Starknet Privacy Starter Kit\n\nA lean Next.js starter for building privacy dApps on Starknet with [STRK20](https://eprint.iacr.org/2026/474) via `WalletAccountV6` (starknet.js v10). Shield, unshield,",
-    "summary": "Build privacy dApps on Starknet using STRK20 for settlement.",
-    "description_long": "This project provides a Next.js starter kit that enables developers to create privacy-focused decentralized applications (dApps) using the STRK20 token. It encompasses features like shielding, unshielding, private transfers, and reading shielded balances while maintaining user privacy through a wallet interface. Key technical challenges include ensuring that placeholder strings for wallet actions are handled correctly and allowing developers to easily integrate their own actions into the demo framework.",
-    "latest_push": "Bootstrapped the ConditionalPay project.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 2940,
-    "deletions": 0,
-    "churn_pct": 100,
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "The project implements private transfer functionalities, which is an obvious use of privacy.",
-      "why_complex": "There are no deployed contracts or complex engineering present in the stack.",
-      "reason": "The project relies on standard privacy actions without deeper engineering.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "deceptiveos",
