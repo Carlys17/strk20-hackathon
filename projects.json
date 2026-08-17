@@ -11,7 +11,7 @@
     "inspired_by": "RFP-08",
     "affiliation": "",
     "starred": true,
-    "star_reason": "Sealed implements privacy to create a functional sealed-bid auction system beyond typical use cases.",
+    "star_reason": "The project provides true bid privacy, preventing bidder identities and amounts from leaking.",
     "contracts": [
       {
         "address": "0x00bb79c9cbc96a04ef1bac51805de8642dd20f98ecd980dd208b03c931e6be87",
@@ -26,7 +26,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-17T20:23:35Z",
+    "pushed_at": "2026-08-17T20:51:53Z",
     "stars": 0,
     "builders": [
       {
@@ -41,12 +41,12 @@
       "2026-08-16",
       "2026-08-17"
     ],
-    "head_sha": "edb4f0b2485c6d6466137eb6770f8a036dc1c2c6",
+    "head_sha": "3d34ef4dbcf67746428f1080d63c40eee846d002",
     "readme_hash": "6683:# Sealed\n\nA deployable Vickrey variant of RFP-08 on Starknet. Bidder identities stay unlinkable, bid values stay hidden until reveal, every bidder locks identical STRK20-funded collateral, and failing",
-    "churn_pct": 13.4,
+    "churn_pct": 5,
     "summary": "Enable private sealed-bid auctions on Starknet with unlinkable bidders.",
     "description_long": "A sealed-bid auction protocol that keeps bidder identities and bid values hidden until a reveal, utilizing STRK20 as collateral. Each bidder makes a commitment to their bid using a Poseidon hash, with identical amounts escrowed to maintain privacy and prevent bid leaks. The system aims to ensure honest bidding under a second-price auction rule while addressing the complexities of anonymity and collateral management.",
-    "latest_push": "Upgraded the pool-reveal assumption and routed reveal and claim through the pool.",
+    "latest_push": "Refused zero as a commitment and recorded entry before reading token balance.",
     "tooling": [
       {
         "label": "Cairo",
@@ -60,17 +60,194 @@
       }
     ],
     "has_readme": true,
-    "additions": 407,
-    "deletions": 116,
+    "additions": 197,
+    "deletions": 8,
     "assessment": {
       "innovative": true,
       "complex": true,
-      "why_innovative": "Sealed enables unlinkable bidders in a sealed-bid auction where both bid values and identities remain private.",
-      "why_complex": "The project involves multiple contracts and a specialized commitment scheme using Poseidon hashes in Cairo.",
-      "reason": "Sealed implements privacy to create a functional sealed-bid auction system beyond typical use cases.",
+      "why_innovative": "It enables unlinkable bids in auctions, ensuring privacy in competitive bidding.",
+      "why_complex": "It implements a Vickrey auction with a custom commitment scheme and collateral mechanism in Cairo.",
+      "reason": "The project provides true bid privacy, preventing bidder identities and amounts from leaking.",
       "facts_v2": true
     },
     "star_evidence": "1 contract deployed, Cairo in the repository"
+  },
+  {
+    "slug": "crewkill-strk20",
+    "name": "CrewKill",
+    "one_liner": "Staked social deduction where privacy is the game mechanic: buy a seat through the STRK20 pool, draw a role nobody can read, vote anonymously, settle on-chain.",
+    "category": "Other",
+    "repo_url": "https://github.com/nickthelegend/crewkill-strk20",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": true,
+    "star_reason": "A unique approach to privacy in gaming with cryptographic mechanisms that preserve role confidentiality.",
+    "contracts": [
+      {
+        "address": "0x55ac4a110992e9ced1f3133a9bff040adaaa6aeee4ed57e9b9cb89cb7586ca",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x38cea8475ecba6984807bf50eebc2d6174672f567d709d8b74c661904ec3bb8",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-17T20:46:36Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "nickthelegend",
+        "name": "nickthelegend",
+        "avatar_url": "https://avatars.githubusercontent.com/u/82558763?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-17"
+    ],
+    "head_sha": "aac74937a877bf2aa9e767a175d7185e2d4f2588",
+    "readme_hash": "12131:# CrewKill\n\n**Staked social deduction on Starknet. Your wallet never touches the table, your role is a\nsecret even we can't read, and reading the room correctly pays even when you lose.**\n\nBuilt for t",
+    "churn_pct": 28.2,
+    "summary": "Facilitate anonymous, staked social deduction games on Starknet.",
+    "description_long": "Players buy seats and stake through a privacy pool, ensuring their roles remain secret even from the operator. Each player's role is derived from a cryptographic commitment, allowing for independent role assignment, while voting remains anonymous to prevent bribery. A unique Detective Pool rewards players for accurately identifying impostors, adding a new strategic layer to the gameplay.",
+    "latest_push": "Positioned CrewKill on the molfi.fun hub and cleared the anti-pattern detector.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 284,
+    "deletions": 3816,
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "It allows completely opaque role assignments in a social deduction game using cryptographic commitments.",
+      "why_complex": "The implementation involves multiple Cairo contracts and a unique commit-reveal mechanism for role secrecy.",
+      "reason": "A unique approach to privacy in gaming with cryptographic mechanisms that preserve role confidentiality.",
+      "facts_v2": true
+    },
+    "star_evidence": "2 contracts deployed, Cairo in the repository"
+  },
+  {
+    "slug": "philoxenia",
+    "name": "philoxenia",
+    "one_liner": "Private P2P hospitality on Starknet — STRK20 Private Sprint",
+    "category": "Other",
+    "repo_url": "https://github.com/SergioSSantiago/philoxenia",
+    "demo_url": "https://philoxenia-iota.vercel.app",
+    "demo_video": "https://philoxenia-iota.vercel.app/demo/philoxenia-commercial.mp4",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": true,
+    "star_reason": "It enables private hospitality connections while preserving user trust and anonymity.",
+    "contracts": [
+      {
+        "address": "0x056a817104ad7544a55873584f3d8fb41a780e5466d152b3e1f12d578e75defb",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x030533c6110ee5c414a5678bd71115be738852d709c74d8136fa965271c2e1f3",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x004c0322af24bb710f3aa0e48293517777188b42d9c4428b77304008ad0ea712",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x7ef1e214d5c5e99a4f8d27ba459326f4ec0bfaba8525824d1a36754608b60f9",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x5bac436e2a9775719de94e0ec1ea62f1cbc9737b23dd780230df66a53cc7813",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x4902a7a2702b9533cf8992f5bf6953947e0d9616f8dbc9bc5b1976e0082f494",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      }
+    ],
+    "verified_txs": 3,
+    "requirements": {
+      "demo": true,
+      "video": true,
+      "mainnet": true
+    },
+    "status": "finished",
+    "pushed_at": "2026-08-17T20:36:44Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "SergioSSantiago",
+        "name": "Sergio Sapina Santiago",
+        "avatar_url": "https://avatars.githubusercontent.com/u/44295455?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Cursor",
+        "name": "Cursor",
+        "avatar_url": "",
+        "commits": 100
+      }
+    ],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17"
+    ],
+    "head_sha": "4c4d142a89124b2254cc066ef7de2672e7794117",
+    "readme_hash": "9302:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
+    "churn_pct": 0.2,
+    "summary": "Create a private hospitality network for secure peer-to-peer stays.",
+    "description_long": "Utilizing Starknet's Cairo for trustless payments, this project facilitates private hospitality connections among users without a public marketplace. It enables friend-based discovery to enhance privacy while offering sealed chat and escrow functionalities, solving the challenges of trust and safety in peer-to-peer accommodation.",
+    "latest_push": "Added landing page and invite features for Book & Pay.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 12,
+    "deletions": 12,
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "It is a private peer-to-peer hospitality protocol for trust-based booking without public listings.",
+      "why_complex": "It implements a Cairo escrow system for trustless settlement and has multiple interaction contracts.",
+      "reason": "It enables private hospitality connections while preserving user trust and anonymity.",
+      "facts_v2": true
+    },
+    "star_evidence": "3 contracts deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "chaoskeyplus-appbuild",
@@ -116,7 +293,6 @@
     ],
     "head_sha": "ae0369711dc33677ac8bcd0254641306e043a45d",
     "readme_hash": "10303:# ChaosKey+ M3\n\n**A camera-entropy cryptographic device with STRK20 privacy on Starknet.**\n\nChaosKey+ turns your phone into a physical randomness generator. Every second, it hashes visual noise from y",
-    "churn_pct": 0.7,
     "summary": "Generate physical randomness for secure cryptographic tokens and STRK20 transactions.",
     "description_long": "This project captures visual noise from the camera to create a secure randomness generator for cryptographic operations. It generates various types of tokens bound to a signed ledger of entropy, ensuring tamper-proof expiry and verification capabilities. The integration with STRK20 allows private shielded transactions on Starknet, where security and privacy concerns are effectively managed.",
     "latest_push": "Created a GitHub Actions workflow for Node.js.",
@@ -124,6 +300,7 @@
     "has_readme": true,
     "additions": 31,
     "deletions": 0,
+    "churn_pct": 0.7,
     "assessment": {
       "innovative": true,
       "complex": false,
@@ -133,108 +310,6 @@
       "facts_v2": true
     },
     "star_evidence": ""
-  },
-  {
-    "slug": "philoxenia",
-    "name": "philoxenia",
-    "one_liner": "Private P2P hospitality on Starknet — STRK20 Private Sprint",
-    "category": "Other",
-    "repo_url": "https://github.com/SergioSSantiago/philoxenia",
-    "demo_url": "https://philoxenia-iota.vercel.app",
-    "demo_video": "https://philoxenia-iota.vercel.app/demo/philoxenia-commercial.mp4",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": true,
-    "star_reason": "Philoxenia enables trustless private hospitality transactions with unique peer-to-peer interactions.",
-    "contracts": [
-      {
-        "address": "0x056a817104ad7544a55873584f3d8fb41a780e5466d152b3e1f12d578e75defb",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x030533c6110ee5c414a5678bd71115be738852d709c74d8136fa965271c2e1f3",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x004c0322af24bb710f3aa0e48293517777188b42d9c4428b77304008ad0ea712",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [
-      {
-        "hash": "0x7ef1e214d5c5e99a4f8d27ba459326f4ec0bfaba8525824d1a36754608b60f9",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      },
-      {
-        "hash": "0x5bac436e2a9775719de94e0ec1ea62f1cbc9737b23dd780230df66a53cc7813",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      },
-      {
-        "hash": "0x4902a7a2702b9533cf8992f5bf6953947e0d9616f8dbc9bc5b1976e0082f494",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      }
-    ],
-    "verified_txs": 3,
-    "requirements": {
-      "demo": true,
-      "video": true,
-      "mainnet": true
-    },
-    "status": "finished",
-    "pushed_at": "2026-08-17T20:16:21Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "SergioSSantiago",
-        "name": "Sergio Sapina Santiago",
-        "avatar_url": "https://avatars.githubusercontent.com/u/44295455?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Cursor",
-        "name": "Cursor",
-        "avatar_url": "",
-        "commits": 100
-      }
-    ],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17"
-    ],
-    "head_sha": "32f2e1fcca1dc08b04772354f5a8e32bea63c5a6",
-    "readme_hash": "9302:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
-    "churn_pct": 0.4,
-    "summary": "Create a private hospitality network for secure peer-to-peer stays.",
-    "description_long": "Utilizing Starknet's Cairo for trustless payments, this project facilitates private hospitality connections among users without a public marketplace. It enables friend-based discovery to enhance privacy while offering sealed chat and escrow functionalities, solving the challenges of trust and safety in peer-to-peer accommodation.",
-    "latest_push": "Enabled booking with STRK or DAI for stay and say invites.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 33,
-    "deletions": 27,
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "It creates a private hospitality protocol using trust-based discovery instead of public listings.",
-      "why_complex": "It implements escrow contracts and a custom privacy layer via the STRK20 Wallet API and BookingEscrow.",
-      "reason": "Philoxenia enables trustless private hospitality transactions with unique peer-to-peer interactions.",
-      "facts_v2": true
-    },
-    "star_evidence": "3 contracts deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "ownerz",
@@ -280,7 +355,6 @@
     ],
     "head_sha": "192663cacd80ab5ad6dda267735eff467c78c1a2",
     "readme_hash": "2265:# Ownerz — Sell Files. Post-Quantum Delivery.\n\n## Core Value\nA marketplace where anyone can monetize private data on blockchain with anonymous transactions, no intermediaries, no hidden costs.\n\n## How",
-    "churn_pct": 97.9,
     "summary": "Facilitates anonymous data transactions using Starknet and post-quantum encryption.",
     "description_long": "Users upload encrypted files to Filecoin, connect their Starknet wallet, and only share a CID and price on the smart contract. Purchases are made anonymously using ZK-proofs, with buyers receiving decryption keys securely after payment. The system ensures that data remains encrypted on IPFS and is only accessible to verified buyers.",
     "latest_push": "Split index.js into components and fixed mobile scrolling issues.",
@@ -319,6 +393,7 @@
     "has_readme": true,
     "additions": 1773,
     "deletions": 1981,
+    "churn_pct": 97.9,
     "assessment": {
       "innovative": true,
       "complex": false,
@@ -328,81 +403,6 @@
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "crewkill-strk20",
-    "name": "CrewKill",
-    "one_liner": "Staked social deduction where privacy is the game mechanic: buy a seat through the STRK20 pool, draw a role nobody can read, vote anonymously, settle on-chain.",
-    "category": "Other",
-    "repo_url": "https://github.com/nickthelegend/crewkill-strk20",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": true,
-    "star_reason": "CrewKill uniquely protects player roles and voting through sophisticated cryptographic methods.",
-    "contracts": [
-      {
-        "address": "0x55ac4a110992e9ced1f3133a9bff040adaaa6aeee4ed57e9b9cb89cb7586ca",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x38cea8475ecba6984807bf50eebc2d6174672f567d709d8b74c661904ec3bb8",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-17T19:57:32Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "nickthelegend",
-        "name": "nickthelegend",
-        "avatar_url": "https://avatars.githubusercontent.com/u/82558763?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-17"
-    ],
-    "head_sha": "46896e4fec8a09f5c8473a4cf9c7674704890d97",
-    "readme_hash": "12131:# CrewKill\n\n**Staked social deduction on Starknet. Your wallet never touches the table, your role is a\nsecret even we can't read, and reading the room correctly pays even when you lose.**\n\nBuilt for t",
-    "churn_pct": 1.2,
-    "summary": "Facilitate anonymous, staked social deduction games on Starknet.",
-    "description_long": "Players buy seats and stake through a privacy pool, ensuring their roles remain secret even from the operator. Each player's role is derived from a cryptographic commitment, allowing for independent role assignment, while voting remains anonymous to prevent bribery. A unique Detective Pool rewards players for accurately identifying impostors, adding a new strategic layer to the gameplay.",
-    "latest_push": "Added the mainnet preflight script and documented the deployment process.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 219,
-    "deletions": 0,
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "It enables social deduction mechanics where role assignments and votes remain confidential even from the operator.",
-      "why_complex": "The implementation involves Cairo contracts managing role commitments, balloting notes, and anti-bribery properties.",
-      "reason": "CrewKill uniquely protects player roles and voting through sophisticated cryptographic methods.",
-      "facts_v2": true
-    },
-    "star_evidence": "2 contracts deployed, Cairo in the repository"
   },
   {
     "slug": "portage",
