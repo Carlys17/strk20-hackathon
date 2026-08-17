@@ -1,5 +1,144 @@
 [
   {
+    "slug": "aegis-rescue",
+    "name": "Aegis Rescue",
+    "one_liner": "Whitehat rescue bot: sweeps exposed on-chain funds into the STRK20 shielded pool before attackers can, returns them to verified GitHub owners.",
+    "category": "Tooling",
+    "repo_url": "https://github.com/justbiar/aegis",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-17T09:58:39Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "justbiar",
+        "name": "Biar",
+        "avatar_url": "https://avatars.githubusercontent.com/u/160464890?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-17"
+    ],
+    "head_sha": "1e782b8922d127dffab9dba9c7b7cd5ac8d53dff",
+    "readme_hash": "1733:# Aegis\n\nA whitehat rescue service for exposed on-chain funds on Starknet.\n\n## What it does\n\nAegis continuously scans public repositories for accidentally committed secrets (private keys, seed phrases",
+    "churn_pct": 0,
+    "summary": "Scan exposed keys and protect funds from thieves.",
+    "description_long": "Aegis continuously monitors public repositories for accidentally shared secrets that could compromise on-chain funds. Upon discovery, it transfers the exposed assets to a STRK20 shielded pool, ensuring privacy and security during the rescue process. This project aims to empower developers, particularly those without a strong security background, by providing a reliable method to recover their funds.",
+    "latest_push": "Added the Next.js scaffold and rebranded the UI to Aegis.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1911,
+    "deletions": 6,
+    "assessment": null
+  },
+  {
+    "slug": "strkworld",
+    "name": "STRKWORLD",
+    "one_liner": "A 2D top-down city where the buildings are Starknet privacy protocols",
+    "category": "Gaming",
+    "repo_url": "https://github.com/Calcutatator/STRKWORLD",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "starkware",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-17T09:58:11Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Calcutatator",
+        "name": "Calcutator",
+        "avatar_url": "https://avatars.githubusercontent.com/u/114863662?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 30
+      }
+    ],
+    "active_days": [
+      "2026-08-16",
+      "2026-08-17"
+    ],
+    "head_sha": "aa637411b0ed5847f668081e1207c9ebd9016368",
+    "readme_hash": "4928:# STRKWORLD\n\n**A 2D top-down city where the buildings are Starknet privacy protocols.**\n\nWalk around a shared pseudonymous world, step into a building, and use a real\nprivacy-preserving protocol with ",
+    "churn_pct": 36.7,
+    "summary": "Create a 2D city that simulates Starknet privacy protocols.",
+    "description_long": "This project involves building a 2D top-down city where each building represents a privacy protocol on Starknet. The challenge lies in implementing a system where financial buildings can only operate if they have an approved privacy execution path, ensuring that no sensitive data is exposed within the application. The architecture separates concerns among various packages, maintaining a clear boundary between the game mechanics and financial operations.",
+    "latest_push": "Implemented the Colyseus presence layer for the lobby.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 3861,
+    "deletions": 19,
+    "assessment": null
+  },
+  {
     "slug": "booty-bank",
     "name": "Booty Bank",
     "one_liner": "Private income credentials and credit eligibility for OnlyFans creators on Starknet.",
@@ -38,7 +177,6 @@
     ],
     "head_sha": "f6057883050936ed00b2e8743346b8762a420516",
     "readme_hash": "8995:# Booty Bank\n\n> BORROW AGAINST YOUR BBL.\n\nBooty Bank is the primary money account built for OnlyFans creators. The product combines daily banking, creator income, private credit, fan perks, and a post",
-    "churn_pct": 0.1,
     "summary": "Facilitate income credentialing and credit eligibility for creators.",
     "description_long": "This project enables OnlyFans creators to manage their income and credit profile using a single account on Starknet. It leverages custom Cairo contracts for secure income credentialing and implements various banking features, which include payments, budgeting, and privacy controls. The challenge lies in ensuring secure and private data validation while complying with the needs of creators beyond traditional banking platforms.",
     "latest_push": "Documented qualifying shield and unshield pool transactions in strk20.json.",
@@ -57,6 +195,7 @@
     "has_readme": true,
     "additions": 6,
     "deletions": 2,
+    "churn_pct": 0.1,
     "assessment": null
   },
   {
@@ -425,53 +564,6 @@
     "additions": 641,
     "deletions": 24,
     "churn_pct": 3.7,
-    "assessment": null
-  },
-  {
-    "slug": "aegis-rescue",
-    "name": "Aegis Rescue",
-    "one_liner": "Whitehat rescue bot: sweeps exposed on-chain funds into the STRK20 shielded pool before attackers can, returns them to verified GitHub owners.",
-    "category": "Tooling",
-    "repo_url": "https://github.com/justbiar/aegis",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-17T09:15:18Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "justbiar",
-        "name": "Biar",
-        "avatar_url": "https://avatars.githubusercontent.com/u/160464890?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-17"
-    ],
-    "head_sha": "9b13f3237afb14086e0e2e8a0dda2d4748f1f5c6",
-    "readme_hash": "1476:# Aegis\n\nA whitehat rescue service for exposed on-chain funds on Starknet.\n\n## What it does\n\nAegis continuously scans public repositories for accidentally committed secrets (private keys, seed phrases",
-    "summary": "Sweep exposed on-chain funds into a shielded pool for safe recovery.",
-    "description_long": "The project continuously scans public repositories for accidentally committed secrets that control funds. When it detects exposed balances, it sweeps them into a private Starknet STRK20 shielded position to prevent malicious actors from accessing them. This ensures that original owners can recover their funds privately by proving control of their repositories, while also protecting the holding address from becoming a target.",
-    "latest_push": "Created the initial project scaffold for Aegis Rescue.",
-    "tooling": [],
-    "has_readme": true,
-    "additions": 54,
-    "deletions": 0,
-    "churn_pct": 0,
     "assessment": null
   },
   {
@@ -1698,71 +1790,6 @@
     "additions": 42,
     "deletions": 6,
     "churn_pct": 1.2,
-    "assessment": null
-  },
-  {
-    "slug": "strkworld",
-    "name": "STRKWORLD",
-    "one_liner": "A 2D top-down city where the buildings are Starknet privacy protocols",
-    "category": "Gaming",
-    "repo_url": "https://github.com/Calcutatator/STRKWORLD",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "starkware",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T20:27:56Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Calcutatator",
-        "name": "Calcutator",
-        "avatar_url": "https://avatars.githubusercontent.com/u/114863662?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 27
-      }
-    ],
-    "active_days": [
-      "2026-08-16"
-    ],
-    "head_sha": "32fded9d1a2937b634f6d9bbe1e028d529627449",
-    "readme_hash": "4928:# STRKWORLD\n\n**A 2D top-down city where the buildings are Starknet privacy protocols.**\n\nWalk around a shared pseudonymous world, step into a building, and use a real\nprivacy-preserving protocol with ",
-    "summary": "Create a 2D city that simulates Starknet privacy protocols.",
-    "description_long": "This project involves building a 2D top-down city where each building represents a privacy protocol on Starknet. The challenge lies in implementing a system where financial buildings can only operate if they have an approved privacy execution path, ensuring that no sensitive data is exposed within the application. The architecture separates concerns among various packages, maintaining a clear boundary between the game mechanics and financial operations.",
-    "latest_push": "Deployed scaffolding with header gate, backend container, and ops runbook.",
-    "tooling": [
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1633,
-    "deletions": 8,
-    "churn_pct": 18.8,
     "assessment": null
   },
   {
