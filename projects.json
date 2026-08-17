@@ -1,13 +1,109 @@
 [
   {
-    "slug": "booty-bank",
-    "name": "Booty Bank",
-    "one_liner": "Private income credentials and credit eligibility for OnlyFans creators on Starknet.",
-    "category": "Consumer",
-    "repo_url": "https://github.com/welttowelt/booty-bank",
-    "demo_url": "https://bootybank.app/",
+    "slug": "aperture-strk20",
+    "name": "Aperture",
+    "one_liner": "Sealed-ballot governance and a shielded treasury for DAOs, native to STRK20.",
+    "category": "Infra",
+    "repo_url": "https://github.com/OoJae/aperture-strk20",
+    "demo_url": "https://aperture-strk20.vercel.app",
     "demo_video": "",
-    "x_handle": "",
+    "x_handle": "_OoJae",
+    "inspired_by": "IDEA-27",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x045c7c6d4bbea680dadd7ea248ec793d84ad55f3d381be7c5710b12c900e1cf9",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x00533fedd104a3dd4097a6ad58f9a5637553f1a83f976867866cb60c02d7466d",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x0371e11c7cae61bc2fd5ce6b75153d59746ecf2d88b286be6ebe9c7c001e330c",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x05cc31d13d5901347d009f70f59abacb22b76e84963286004b67bf4644546890",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x05331694f88f34223c8c1a5445e449b552dfe2b28c93ae26bb6d5699e8443ec1",
+        "ok": true,
+        "pool": true
+      },
+      {
+        "hash": "0x02e3cee5560517e9472d977fe11d4c81ddbe0087df6ce2562d4711fe8a28e947",
+        "ok": true,
+        "pool": true
+      },
+      {
+        "hash": "0x020cc7f861d8c455df4b4f84c284ff3dcb96a6f1f94898e95a4a1a2ec919803b",
+        "ok": true,
+        "pool": true
+      }
+    ],
+    "verified_txs": 3,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": true
+    },
+    "status": "building",
+    "pushed_at": "2026-08-17T08:36:06Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "OoJae",
+        "name": "OoJae",
+        "avatar_url": "https://avatars.githubusercontent.com/u/73647277?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-16",
+      "2026-08-17"
+    ],
+    "head_sha": "62ad922a50e6ee6684b885520796a80a3cb1d097",
+    "readme_hash": "3815:# Aperture\n\n**Sealed-ballot governance and a shielded treasury for DAOs, native to STRK20.**\n\nBuilt for the STRK20 Private Sprint, August 2026. Day 1 — this repository is\nunder active construction and",
+    "churn_pct": 29.5,
+    "summary": "Enable private voting and treasury payouts for DAOs using STRK20's shielded pool.",
+    "description_long": "This project implements a private voting system where votes are represented as private transfers, ensuring that choices and weights remain hidden until the tally is published. It also integrates a treasury payout mechanism that anonymizes grant recipients while still revealing payout amounts, addressing the problems of transparency and front-running in traditional on-chain governance.",
+    "latest_push": "Deployed both contracts to mainnet and shipped the public demo.",
+    "tooling": [
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 879,
+    "deletions": 22,
+    "assessment": null
+  },
+  {
+    "slug": "facet",
+    "name": "Facet",
+    "one_liner": "Private identities for Starknet DeFi. One shielded balance, unlimited unlinkable facets, one per protocol.",
+    "category": "Infra",
+    "repo_url": "https://github.com/Jennycruzy/facet",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "jennyoliver57",
     "inspired_by": "",
     "starred": false,
     "star_reason": "",
@@ -15,18 +111,18 @@
     "transactions": [],
     "verified_txs": 0,
     "requirements": {
-      "demo": true,
+      "demo": false,
       "video": false,
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-17T07:48:56Z",
+    "pushed_at": "2026-08-17T08:31:00Z",
     "stars": 0,
     "builders": [
       {
-        "login": "welttowelt",
-        "name": "welttowelt",
-        "avatar_url": "https://avatars.githubusercontent.com/u/58338510?v=4"
+        "login": "Jennycruzy",
+        "name": "jennycruzy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/103373316?v=4"
       }
     ],
     "agents": [],
@@ -35,12 +131,12 @@
       "2026-08-16",
       "2026-08-17"
     ],
-    "head_sha": "796ab7968d2111aeda3943908e6c9e18f4c4ca7d",
-    "readme_hash": "8995:# Booty Bank\n\n> BORROW AGAINST YOUR BBL.\n\nBooty Bank is the primary money account built for OnlyFans creators. The product combines daily banking, creator income, private credit, fan perks, and a post",
-    "churn_pct": 0.1,
-    "summary": "Facilitate income credentialing and credit eligibility for creators.",
-    "description_long": "This project enables OnlyFans creators to manage their income and credit profile using a single account on Starknet. It leverages custom Cairo contracts for secure income credentialing and implements various banking features, which include payments, budgeting, and privacy controls. The challenge lies in ensuring secure and private data validation while complying with the needs of creators beyond traditional banking platforms.",
-    "latest_push": "Recorded the current verification status in the security review document.",
+    "head_sha": "c69372f7f5cfa3475be24de1cde8376dcfaac6c0",
+    "readme_hash": "8380:# Facet\n\n**Private identities for Starknet DeFi.**\n\nOne shielded balance. Unlimited unlinkable facets. Trade on one protocol as one\nidentity, lend on another as a different one, and nothing on-chain c",
+    "churn_pct": 57.2,
+    "summary": "Create private identities for Starknet DeFi through unlinkable facets.",
+    "description_long": "The project builds on STRK20 shadow accounts to allow users to perform DeFi transactions without revealing their identity. It generates distinct identity keys for each protocol interaction, ensuring that no on-chain activities can be traced back to the original user. The main challenge is funding these shadow accounts securely without exposing any real addresses that could link back to the user.",
+    "latest_push": "Added self-hosted prover build files and documented prover tooling.",
     "tooling": [
       {
         "label": "Cairo",
@@ -54,8 +150,8 @@
       }
     ],
     "has_readme": true,
-    "additions": 9,
-    "deletions": 1,
+    "additions": 473,
+    "deletions": 3,
     "assessment": null
   },
   {
@@ -84,7 +180,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-17T07:35:22Z",
+    "pushed_at": "2026-08-17T08:24:15Z",
     "stars": 0,
     "builders": [
       {
@@ -100,12 +196,12 @@
       "2026-08-16",
       "2026-08-17"
     ],
-    "head_sha": "0178a6d487e6b8bdeb6a890b070f2237ad38c07f",
+    "head_sha": "2e493fea1d732228763ef9d85fd99dcccdf568f7",
     "readme_hash": "6803:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
-    "churn_pct": 1.7,
+    "churn_pct": 3.9,
     "summary": "Send private money through a link with Envelope's anonymizer contract.",
     "description_long": "Envelope uses a STRK20 anonymizer contract to enable private token transfers via unique URLs. It allows users to shield tokens, seal them in an envelope, and send them without revealing the funder’s identity, addressing the challenge of anonymous payments in Starknet. The system ensures that front-running cannot occur through clever cryptographic signatures tied to the recipient, ensuring security and privacy.",
-    "latest_push": "Added failed transactions and finished envelopes tabs.",
+    "latest_push": "Redesigned the mobile app shell and tightened the mobile sealing flow.",
     "tooling": [
       {
         "label": "Cairo",
@@ -119,8 +215,139 @@
       }
     ],
     "has_readme": true,
-    "additions": 92,
-    "deletions": 70,
+    "additions": 242,
+    "deletions": 139,
+    "assessment": null
+  },
+  {
+    "slug": "sotto",
+    "name": "Sotto",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/drained69/Sotto",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-17T08:07:30Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Chinwuba081",
+        "name": "drained",
+        "avatar_url": "https://avatars.githubusercontent.com/u/97135600?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-17"
+    ],
+    "head_sha": "20a8eca0912db111305ebe14e7bb2dff92f25665",
+    "readme_hash": "3643:# Sotto\n\nSotto is a private yield account built for the [STRK20 Private Sprint](https://strk20.starknet.io/hackathon). It gives users one shielded account from which they can allocate capital across S",
+    "churn_pct": 100,
+    "summary": "Manage private yield accounts for Starknet DeFi users.",
+    "description_long": "This project creates a responsive dashboard that enables users to manage shielded yield accounts without exposing their wallet information. It leverages Starknet's privacy pool to keep transaction details hidden while allowing users to interact with multiple DeFi protocols through secure, audited anonymizers and dynamically generated proofs.",
+    "latest_push": "Initialized the project with the first commit.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 5209,
+    "deletions": 0,
+    "assessment": null
+  },
+  {
+    "slug": "booty-bank",
+    "name": "Booty Bank",
+    "one_liner": "Private income credentials and credit eligibility for OnlyFans creators on Starknet.",
+    "category": "Consumer",
+    "repo_url": "https://github.com/welttowelt/booty-bank",
+    "demo_url": "https://bootybank.app/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-17T08:00:29Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "welttowelt",
+        "name": "welttowelt",
+        "avatar_url": "https://avatars.githubusercontent.com/u/58338510?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17"
+    ],
+    "head_sha": "9cebe5acf5d1c6a00ac1343a66defc37a09819fe",
+    "readme_hash": "8995:# Booty Bank\n\n> BORROW AGAINST YOUR BBL.\n\nBooty Bank is the primary money account built for OnlyFans creators. The product combines daily banking, creator income, private credit, fan perks, and a post",
+    "churn_pct": 1.6,
+    "summary": "Facilitate income credentialing and credit eligibility for creators.",
+    "description_long": "This project enables OnlyFans creators to manage their income and credit profile using a single account on Starknet. It leverages custom Cairo contracts for secure income credentialing and implements various banking features, which include payments, budgeting, and privacy controls. The challenge lies in ensuring secure and private data validation while complying with the needs of creators beyond traditional banking platforms.",
+    "latest_push": "Fixed wallet to run private actions in one step with waiting states.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 38,
+    "deletions": 73,
     "assessment": null
   },
   {
@@ -165,7 +392,6 @@
     ],
     "head_sha": "a0fb3b425d50dadc9b00446efe5bbe29560be641",
     "readme_hash": "8224:# zkPayslip\n\nPrivate payroll on Starknet: salaries move invisibly inside the STRK20 privacy pool while any employee can still prove their income to exactly one verifier, once.\n\n## Live deployment\n\n| C",
-    "churn_pct": 3.8,
     "summary": "Enable private payroll verification on Starknet through zk technology.",
     "description_long": "This project allows employees to receive their salaries from a privacy pool while still proving their income to a specific verifier. It achieves privacy for the salary transfers inside the pool, while the contract ensures necessary disclosures for verification without revealing sensitive data. The challenge lies in managing timing correlations and ensuring a larger anonymity set as more transactions occur, addressing these concerns with a structured layer of disclosure.",
     "latest_push": "Deployed the contract to Sepolia and updated related documentation.",
@@ -209,6 +435,7 @@
     "has_readme": true,
     "additions": 129,
     "deletions": 41,
+    "churn_pct": 3.8,
     "assessment": null
   },
   {
@@ -1249,93 +1476,6 @@
     "assessment": null
   },
   {
-    "slug": "aperture-strk20",
-    "name": "Aperture",
-    "one_liner": "Sealed-ballot governance and a shielded treasury for DAOs, native to STRK20.",
-    "category": "Infra",
-    "repo_url": "https://github.com/OoJae/aperture-strk20",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "_OoJae",
-    "inspired_by": "IDEA-27",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x045c7c6d4bbea680dadd7ea248ec793d84ad55f3d381be7c5710b12c900e1cf9",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x00533fedd104a3dd4097a6ad58f9a5637553f1a83f976867866cb60c02d7466d",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [
-      {
-        "hash": "0x05331694f88f34223c8c1a5445e449b552dfe2b28c93ae26bb6d5699e8443ec1",
-        "ok": true,
-        "pool": true
-      },
-      {
-        "hash": "0x02e3cee5560517e9472d977fe11d4c81ddbe0087df6ce2562d4711fe8a28e947",
-        "ok": true,
-        "pool": true
-      },
-      {
-        "hash": "0x020cc7f861d8c455df4b4f84c284ff3dcb96a6f1f94898e95a4a1a2ec919803b",
-        "ok": true,
-        "pool": true
-      }
-    ],
-    "verified_txs": 3,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": true
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T21:44:49Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "OoJae",
-        "name": "OoJae",
-        "avatar_url": "https://avatars.githubusercontent.com/u/73647277?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-16"
-    ],
-    "head_sha": "61ae4e34847a0be7a652330d1113f92155c4c84f",
-    "readme_hash": "3815:# Aperture\n\n**Sealed-ballot governance and a shielded treasury for DAOs, native to STRK20.**\n\nBuilt for the STRK20 Private Sprint, August 2026. Day 1 — this repository is\nunder active construction and",
-    "churn_pct": 3,
-    "summary": "Enable private voting and treasury payouts for DAOs using STRK20's shielded pool.",
-    "description_long": "This project implements a private voting system where votes are represented as private transfers, ensuring that choices and weights remain hidden until the tally is published. It also integrates a treasury payout mechanism that anonymizes grant recipients while still revealing payout amounts, addressing the problems of transparency and front-running in traditional on-chain governance.",
-    "latest_push": "Fixed ballot identities against a deployable account class.",
-    "tooling": [
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 56,
-    "deletions": 19,
-    "assessment": null
-  },
-  {
     "slug": "strkworld",
     "name": "STRKWORLD",
     "one_liner": "A 2D top-down city where the buildings are Starknet privacy protocols",
@@ -1456,64 +1596,6 @@
     "additions": 999,
     "deletions": 47,
     "churn_pct": 6.8,
-    "assessment": null
-  },
-  {
-    "slug": "facet",
-    "name": "Facet",
-    "one_liner": "Private identities for Starknet DeFi. One shielded balance, unlimited unlinkable facets, one per protocol.",
-    "category": "Infra",
-    "repo_url": "https://github.com/Jennycruzy/facet",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "jennyoliver57",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T19:47:52Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Jennycruzy",
-        "name": "jennycruzy",
-        "avatar_url": "https://avatars.githubusercontent.com/u/103373316?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16"
-    ],
-    "head_sha": "f858156f5adf8b8260eb590272f53fc243500d74",
-    "readme_hash": "5649:# Facet\n\n**Private identities for Starknet DeFi.**\n\nOne shielded balance. Unlimited unlinkable facets. Trade on one protocol as one\nidentity, lend on another as a different one, and nothing on-chain c",
-    "summary": "Enable private identities for DeFi on Starknet through unlinkable facets.",
-    "description_long": "This project implements a system of shadow accounts that allows users to interact with DeFi protocols without revealing their real identities. It uniquely generates a separate identity for each user, protocol, and interaction, preventing any links between them. By funding shadow accounts through shielded notes rather than public approvals, Facet ensures enhanced privacy for users while operating within existing StarkWare technology.",
-    "latest_push": "Recorded local prover build and validation results in documentation.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 107,
-    "deletions": 17,
-    "churn_pct": 15.7,
     "assessment": null
   },
   {
