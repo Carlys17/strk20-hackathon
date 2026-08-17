@@ -1,5 +1,64 @@
 [
   {
+    "slug": "booty-bank",
+    "name": "Booty Bank",
+    "one_liner": "Private income credentials and credit eligibility for OnlyFans creators on Starknet.",
+    "category": "Consumer",
+    "repo_url": "https://github.com/welttowelt/booty-bank",
+    "demo_url": "https://bootybank.app/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-17T07:48:56Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "welttowelt",
+        "name": "welttowelt",
+        "avatar_url": "https://avatars.githubusercontent.com/u/58338510?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17"
+    ],
+    "head_sha": "796ab7968d2111aeda3943908e6c9e18f4c4ca7d",
+    "readme_hash": "8995:# Booty Bank\n\n> BORROW AGAINST YOUR BBL.\n\nBooty Bank is the primary money account built for OnlyFans creators. The product combines daily banking, creator income, private credit, fan perks, and a post",
+    "churn_pct": 0.1,
+    "summary": "Facilitate income credentialing and credit eligibility for creators.",
+    "description_long": "This project enables OnlyFans creators to manage their income and credit profile using a single account on Starknet. It leverages custom Cairo contracts for secure income credentialing and implements various banking features, which include payments, budgeting, and privacy controls. The challenge lies in ensuring secure and private data validation while complying with the needs of creators beyond traditional banking platforms.",
+    "latest_push": "Recorded the current verification status in the security review document.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 9,
+    "deletions": 1,
+    "assessment": null
+  },
+  {
     "slug": "envelope",
     "name": "envelope",
     "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
@@ -25,7 +84,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-17T06:51:05Z",
+    "pushed_at": "2026-08-17T07:35:22Z",
     "stars": 0,
     "builders": [
       {
@@ -41,12 +100,12 @@
       "2026-08-16",
       "2026-08-17"
     ],
-    "head_sha": "440b23c25eba50c445f7e28b00eed65994875d92",
+    "head_sha": "0178a6d487e6b8bdeb6a890b070f2237ad38c07f",
     "readme_hash": "6803:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
-    "churn_pct": 4.4,
+    "churn_pct": 1.7,
     "summary": "Send private money through a link with Envelope's anonymizer contract.",
     "description_long": "Envelope uses a STRK20 anonymizer contract to enable private token transfers via unique URLs. It allows users to shield tokens, seal them in an envelope, and send them without revealing the funder’s identity, addressing the challenge of anonymous payments in Starknet. The system ensures that front-running cannot occur through clever cryptographic signatures tied to the recipient, ensuring security and privacy.",
-    "latest_push": "Made shielded envelopes private-claim-only and added Twitter link.",
+    "latest_push": "Added failed transactions and finished envelopes tabs.",
     "tooling": [
       {
         "label": "Cairo",
@@ -60,8 +119,96 @@
       }
     ],
     "has_readme": true,
-    "additions": 312,
-    "deletions": 107,
+    "additions": 92,
+    "deletions": 70,
+    "assessment": null
+  },
+  {
+    "slug": "zkpayslip",
+    "name": "zkpayslip",
+    "one_liner": "Private payroll on Starknet — shielded salary disbursements and one-time, verifier-bound income proofs on the STRK20 privacy pool.",
+    "category": "Payments",
+    "repo_url": "https://github.com/EndPx/zkpayslip",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-11",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x051c29216ddd5e9016fad4380db34e895dc8176f58ec4754cb3b4c4f14bda8b3",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-17T07:32:47Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "EndPx",
+        "name": "EndPx",
+        "avatar_url": "https://avatars.githubusercontent.com/u/127120051?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-16",
+      "2026-08-17"
+    ],
+    "head_sha": "a0fb3b425d50dadc9b00446efe5bbe29560be641",
+    "readme_hash": "8224:# zkPayslip\n\nPrivate payroll on Starknet: salaries move invisibly inside the STRK20 privacy pool while any employee can still prove their income to exactly one verifier, once.\n\n## Live deployment\n\n| C",
+    "churn_pct": 3.8,
+    "summary": "Enable private payroll verification on Starknet through zk technology.",
+    "description_long": "This project allows employees to receive their salaries from a privacy pool while still proving their income to a specific verifier. It achieves privacy for the salary transfers inside the pool, while the contract ensures necessary disclosures for verification without revealing sensitive data. The challenge lies in managing timing correlations and ensuring a larger anonymity set as more transactions occur, addressing these concerns with a structured layer of disclosure.",
+    "latest_push": "Deployed the contract to Sepolia and updated related documentation.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 129,
+    "deletions": 41,
     "assessment": null
   },
   {
@@ -108,7 +255,6 @@
     ],
     "head_sha": "1fb0bdf7cb077e192fa8ac6be793d446ebf4167b",
     "readme_hash": "1455:# ChaosKey+ M3 — STRK20 hackathon sprint\n\nPhysical-chaos entropy device (Harvest / Tokens / Ledger) plus a **Pool** tab that talks to the Starknet STRK20 privacy pool through the user's Ready wallet.\n",
-    "churn_pct": 11.4,
     "summary": "Create a physical-chaos entropy device with Ready Wallet API integration.",
     "description_long": "This project implements a physical-chaos entropy device that interacts with the Starknet STRK20 privacy pool via the user's Ready wallet. The challenge lies in ensuring that the dapp maintains privacy while facilitating actions like shielding and private transfers without holding a viewing key or dealing with ERC-20 tokens directly.",
     "latest_push": "Fixed Ready discovery and improved rescan functionality on Pool.",
@@ -116,6 +262,7 @@
     "has_readme": true,
     "additions": 509,
     "deletions": 65,
+    "churn_pct": 11.4,
     "assessment": null
   },
   {
@@ -157,7 +304,6 @@
     ],
     "head_sha": "1c8e7b03e403df5fae8b2b208c67bf277b0418c5",
     "readme_hash": "3990:# 🛡️ Cloakra\n\n**Shielded capital allocation on Starknet Mainnet, powered by the STRK20 Privacy Pool.**\n\nGrants, bug bounties, and contributor payouts are the most identity-revealing transactions an o",
-    "churn_pct": 45.4,
     "summary": "Enable private allocation of grants and bounties on Starknet.",
     "description_long": "Cloakra uses the STRK20 Privacy Pool to keep transactions like grants and bounties private, allowing organizations to disburse funds without revealing recipient information. It features modules like StealthSplit and GhostBounty, which facilitate anonymous payments while maintaining public visibility on the organization’s deposits. The technical challenge addressed is ensuring that the link between deposits and withdrawals remains private without losing essential on-chain traceability.",
     "latest_push": "Implemented transaction layer features including live fee and hash verifier.",
@@ -165,6 +311,7 @@
     "has_readme": true,
     "additions": 608,
     "deletions": 9,
+    "churn_pct": 45.4,
     "assessment": null
   },
   {
@@ -211,7 +358,6 @@
     ],
     "head_sha": "49bad85abc401136a95db99f6d1d4db4a7871736",
     "readme_hash": "9436:# Erebus\n\n**Negotiate in darkness, settle in silence.**\n\nErebus is experimental coordination and shielded-settlement infrastructure for AI agents.\n\n[Open the public demo](https://erebus-private-agents",
-    "churn_pct": 0.6,
     "summary": "Provide infrastructure for autonomous AI agent negotiations and settlements.",
     "description_long": "The project enables AI agents to negotiate and settle transactions securely through encrypted channels, ensuring that the negotiation process remains private. It aims to solve the issue of transparency in agent-to-agent commerce by providing atomic settlements and controlled disclosure of transaction details, preventing unauthorized observers from gleaning insights from metadata alone.",
     "latest_push": "Selected input and changed the payer in the client implementation.",
@@ -230,6 +376,7 @@
     "has_readme": true,
     "additions": 113,
     "deletions": 0,
+    "churn_pct": 0.6,
     "assessment": null
   },
   {
@@ -622,89 +769,6 @@
     "additions": 709,
     "deletions": 13,
     "churn_pct": 23.7,
-    "assessment": null
-  },
-  {
-    "slug": "zkpayslip",
-    "name": "zkpayslip",
-    "one_liner": "Private payroll on Starknet — shielded salary disbursements and one-time, verifier-bound income proofs on the STRK20 privacy pool.",
-    "category": "Payments",
-    "repo_url": "https://github.com/EndPx/zkpayslip",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-11",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-17T02:46:58Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "EndPx",
-        "name": "EndPx",
-        "avatar_url": "https://avatars.githubusercontent.com/u/127120051?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-16",
-      "2026-08-17"
-    ],
-    "head_sha": "d8345603a337350b2d220f4ef2f0271618caf666",
-    "readme_hash": "8056:# zkPayslip\n\nPrivate payroll on Starknet: salaries move invisibly inside the STRK20 privacy pool while any employee can still prove their income to exactly one verifier, once.\n\n## Live deployment\n\n| C",
-    "summary": "Facilitate private payroll processing on Starknet using zkSNARKs.",
-    "description_long": "The project creates a system where salaries are transferred privately within a STRK20 privacy pool, allowing employees to verify their income to a specific verifier. It focuses on using zkSNARKs to maintain confidentiality while still providing proof of income, addressing challenges like timing correlation and small anonymity sets. The architecture separates public and private layers, ensuring that sensitive details are obscured while still allowing necessary transparency in transactions.",
-    "latest_push": "Added shielded balance, fact reveal, and finalized progress documentation.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1076,
-    "deletions": 18,
-    "churn_pct": 24.7,
     "assessment": null
   },
   {
@@ -1243,11 +1307,12 @@
     "active_days": [
       "2026-08-16"
     ],
-    "head_sha": "ee71bc20c228daa865b417b879f0b89f1843fb8c",
+    "head_sha": "61ae4e34847a0be7a652330d1113f92155c4c84f",
     "readme_hash": "3815:# Aperture\n\n**Sealed-ballot governance and a shielded treasury for DAOs, native to STRK20.**\n\nBuilt for the STRK20 Private Sprint, August 2026. Day 1 — this repository is\nunder active construction and",
+    "churn_pct": 3,
     "summary": "Enable private voting and treasury payouts for DAOs using STRK20's shielded pool.",
     "description_long": "This project implements a private voting system where votes are represented as private transfers, ensuring that choices and weights remain hidden until the tally is published. It also integrates a treasury payout mechanism that anonymizes grant recipients while still revealing payout amounts, addressing the problems of transparency and front-running in traditional on-chain governance.",
-    "latest_push": "Recorded the tally service run against Sepolia in DEPLOYMENTS.md.",
+    "latest_push": "Fixed ballot identities against a deployable account class.",
     "tooling": [
       {
         "label": "starknet.js",
@@ -1266,9 +1331,8 @@
       }
     ],
     "has_readme": true,
-    "additions": 21,
-    "deletions": 0,
-    "churn_pct": 0.8,
+    "additions": 56,
+    "deletions": 19,
     "assessment": null
   },
   {
@@ -1392,64 +1456,6 @@
     "additions": 999,
     "deletions": 47,
     "churn_pct": 6.8,
-    "assessment": null
-  },
-  {
-    "slug": "booty-bank",
-    "name": "Booty Bank",
-    "one_liner": "Private income credentials and credit eligibility for OnlyFans creators on Starknet.",
-    "category": "Consumer",
-    "repo_url": "https://github.com/welttowelt/booty-bank",
-    "demo_url": "https://bootybank.app/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T19:52:23Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "welttowelt",
-        "name": "welttowelt",
-        "avatar_url": "https://avatars.githubusercontent.com/u/58338510?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16"
-    ],
-    "head_sha": "5ccaaeb12ded07f5e3c8a613fcbeec1aa70b77ee",
-    "readme_hash": "8995:# Booty Bank\n\n> BORROW AGAINST YOUR BBL.\n\nBooty Bank is the primary money account built for OnlyFans creators. The product combines daily banking, creator income, private credit, fan perks, and a post",
-    "summary": "Facilitate income credentialing and credit eligibility for creators.",
-    "description_long": "This project enables OnlyFans creators to manage their income and credit profile using a single account on Starknet. It leverages custom Cairo contracts for secure income credentialing and implements various banking features, which include payments, budgeting, and privacy controls. The challenge lies in ensuring secure and private data validation while complying with the needs of creators beyond traditional banking platforms.",
-    "latest_push": "Separated pool proof documentation from swap evidence.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 89,
-    "deletions": 18,
-    "churn_pct": 1.5,
     "assessment": null
   },
   {
