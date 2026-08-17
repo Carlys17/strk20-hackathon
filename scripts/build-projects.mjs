@@ -1070,8 +1070,14 @@ async function buildProject(entry, prev) {
     additions,
     deletions,
     /* Kept so the next run reuses the verdict for this head_sha rather than
-       asking again and risking a different answer over identical code. */
-    assessment,
+       asking again and risking a different answer over identical code.
+       When a sticky star outlives a judgement that has since flipped, the
+       reasoning that earned it is what gets kept: the card explains why a row
+       has a star, and booty-bank was about to explain, under its own star, why
+       it is the obvious version of itself. */
+    assessment: (!(assessment?.innovative && assessment?.complex) && prev?.starred && prev?.assessment?.why_complex)
+      ? prev.assessment
+      : assessment,
     starred: starOf(assessment, hasDepth(contracts, tooling), prev?.starred),
     star_evidence: depthEvidence(contracts, tooling),
     star_reason: assessment?.reason || prev?.star_reason || "",
