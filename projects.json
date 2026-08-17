@@ -1,5 +1,65 @@
 [
   {
+    "slug": "vinss",
+    "name": "VINSS",
+    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/DXJLabs/vinss",
+    "demo_url": "https://vinss-nu.vercel.app/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-01",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-17T09:29:04Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ntfound-dev",
+        "name": "ntfound-dev",
+        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
+      },
+      {
+        "login": "DXJLabs",
+        "name": "DXJ Labs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17"
+    ],
+    "head_sha": "29d5333ef1d30b585c89e06c3165995b73593e5b",
+    "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
+    "churn_pct": 0.2,
+    "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
+    "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
+    "latest_push": "Fixed the message helper tests for open note calldata.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 16,
+    "deletions": 2,
+    "assessment": null
+  },
+  {
     "slug": "airlock",
     "name": "Airlock",
     "one_liner": "One-click privacy from any chain: bridge in, hold private, withdraw to a different chain with no on-chain link.",
@@ -205,15 +265,15 @@
     "assessment": null
   },
   {
-    "slug": "vinss",
-    "name": "VINSS",
-    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/DXJLabs/vinss",
-    "demo_url": "https://vinss-nu.vercel.app/",
+    "slug": "aegis-rescue",
+    "name": "Aegis Rescue",
+    "one_liner": "Whitehat rescue bot: sweeps exposed on-chain funds into the STRK20 shielded pool before attackers can, returns them to verified GitHub owners.",
+    "category": "Tooling",
+    "repo_url": "https://github.com/justbiar/aegis",
+    "demo_url": "",
     "demo_video": "",
     "x_handle": "",
-    "inspired_by": "IDEA-01",
+    "inspired_by": "",
     "affiliation": "",
     "starred": false,
     "star_reason": "",
@@ -221,47 +281,34 @@
     "transactions": [],
     "verified_txs": 0,
     "requirements": {
-      "demo": true,
+      "demo": false,
       "video": false,
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-17T09:07:44Z",
+    "pushed_at": "2026-08-17T09:15:18Z",
     "stars": 0,
     "builders": [
       {
-        "login": "ntfound-dev",
-        "name": "ntfound-dev",
-        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
-      },
-      {
-        "login": "DXJLabs",
-        "name": "DXJ Labs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
+        "login": "justbiar",
+        "name": "Biar",
+        "avatar_url": "https://avatars.githubusercontent.com/u/160464890?v=4"
       }
     ],
     "agents": [],
     "active_days": [
-      "2026-08-15",
-      "2026-08-16",
       "2026-08-17"
     ],
-    "head_sha": "3670911bb5fe08bcaec68f83e0ff15d97959c0c2",
-    "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
-    "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
-    "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
-    "latest_push": "Fixed Starknet Foundry version pin in the deployment workflow.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1,
-    "deletions": 1,
+    "head_sha": "9b13f3237afb14086e0e2e8a0dda2d4748f1f5c6",
+    "readme_hash": "1476:# Aegis\n\nA whitehat rescue service for exposed on-chain funds on Starknet.\n\n## What it does\n\nAegis continuously scans public repositories for accidentally committed secrets (private keys, seed phrases",
     "churn_pct": 0,
+    "summary": "Sweep exposed on-chain funds into a shielded pool for safe recovery.",
+    "description_long": "The project continuously scans public repositories for accidentally committed secrets that control funds. When it detects exposed balances, it sweeps them into a private Starknet STRK20 shielded position to prevent malicious actors from accessing them. This ensures that original owners can recover their funds privately by proving control of their repositories, while also protecting the holding address from becoming a target.",
+    "latest_push": "Created the initial project scaffold for Aegis Rescue.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 54,
+    "deletions": 0,
     "assessment": null
   },
   {
