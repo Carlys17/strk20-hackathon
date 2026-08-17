@@ -207,7 +207,7 @@ const cleanAgentName = (raw) => raw
   .replace(/\s+/g, " ")
   .trim();
 
-async function detectBuilders(owner, repo, entry) {
+async function detectBuilders(owner, repo, entry, meta) {
   const seen = new Map();
   const counts = new Map();
   const agents = new Map();
@@ -293,9 +293,24 @@ async function detectBuilders(owner, repo, entry) {
    *
    * So everyone who has ever committed is named, ordered by what they have
    * done during the sprint. One request, and it carries the avatar. */
+  /* A fork carries the upstream's whole contributor list. Forking the starter
+     kit is a normal way to begin here, and it put the starter kit's authors on
+     a team they have never worked with - raj921's row credited Akashneelesh and
+     PhilippeR26, who wrote the thing it was forked from.
+   *
+   * So anyone the parent already had is dropped, unless they also pushed inside
+   * the sprint window - which is the case where they really did join in. */
+  const inherited = new Set();
+  if (meta?.fork && meta?.parent?.full_name) {
+    for (const c of (await gh(`/repos/${meta.parent.full_name}/contributors?per_page=100`)) || []) {
+      if (c?.login) inherited.add(c.login.toLowerCase());
+    }
+  }
+
   const lifetime = new Map();
   for (const c of (await gh(`/repos/${owner}/${repo}/contributors?per_page=100`)) || []) {
     if (!c?.login) continue;
+    if (inherited.has(c.login.toLowerCase()) && !seen.has(c.login)) continue;
     if (c.type === "Bot" || /\[bot\]$/i.test(c.login)) continue;
     const family = agentFamily(c.login);
     if (family) {
@@ -780,7 +795,7 @@ async function buildProject(entry, prev) {
     };
   }
 
-  const { builders, agents, active_days } = await detectBuilders(owner, repo, entry);
+  const { builders, agents, active_days } = await detectBuilders(owner, repo, entry, meta);
 
   const demoUrl = await resolveDemo(entry, meta, owner, repo);
   const contracts = await resolveContracts(entry);
