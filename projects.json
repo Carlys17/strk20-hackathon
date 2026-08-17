@@ -1,5 +1,78 @@
 [
   {
+    "slug": "strkworld",
+    "name": "STRKWORLD",
+    "one_liner": "A 2D top-down city where the buildings are Starknet privacy protocols",
+    "category": "Gaming",
+    "repo_url": "https://github.com/Calcutatator/STRKWORLD",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "starkware",
+    "starred": false,
+    "star_reason": "STRKWORLD introduces a gamified experience leveraging privacy protocols in an unconventional domain.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-17T13:42:08Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Calcutatator",
+        "name": "Calcutator",
+        "avatar_url": "https://avatars.githubusercontent.com/u/114863662?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 34
+      }
+    ],
+    "active_days": [
+      "2026-08-16",
+      "2026-08-17"
+    ],
+    "head_sha": "ede12b4ed1427f84f84aeee99cb9fa4e7900d535",
+    "readme_hash": "4928:# STRKWORLD\n\n**A 2D top-down city where the buildings are Starknet privacy protocols.**\n\nWalk around a shared pseudonymous world, step into a building, and use a real\nprivacy-preserving protocol with ",
+    "churn_pct": 0.6,
+    "summary": "Create a 2D city that simulates Starknet privacy protocols.",
+    "description_long": "This project involves building a 2D top-down city where each building represents a privacy protocol on Starknet. The challenge lies in implementing a system where financial buildings can only operate if they have an approved privacy execution path, ensuring that no sensitive data is exposed within the application. The architecture separates concerns among various packages, maintaining a clear boundary between the game mechanics and financial operations.",
+    "latest_push": "Added the building-panel framework, the Bank, and the batch accumulator.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 82,
+    "deletions": 1,
+    "assessment": {
+      "innovative": true,
+      "complex": false,
+      "why_innovative": "Creates an interactive city where users engage with privacy protocols in a gamified way.",
+      "why_complex": "There are no deployed contracts or complex Cairo constructs visible yet in the current build.",
+      "reason": "STRKWORLD introduces a gamified experience leveraging privacy protocols in an unconventional domain."
+    },
+    "star_evidence": ""
+  },
+  {
     "slug": "philoxenia",
     "name": "philoxenia",
     "one_liner": "Private P2P hospitality on Starknet — STRK20 Private Sprint",
@@ -11,7 +84,7 @@
     "inspired_by": "",
     "affiliation": "",
     "starred": true,
-    "star_reason": "A peer-to-peer hospitality protocol that prioritizes privacy and social connections.",
+    "star_reason": "Philoxenia combines privacy with social trust for a unique hospitality experience.",
     "contracts": [
       {
         "address": "0x056a817104ad7544a55873584f3d8fb41a780e5466d152b3e1f12d578e75defb",
@@ -40,7 +113,7 @@
         "mine": true
       },
       {
-        "hash": "0x7fa516fd2d847dbe45c5ae7d5c9bf3df08895a97a3ac3032c7a4a6a3229f7f3",
+        "hash": "0xd081e258a00fa10af08243e2ccf6d2e5cf28076002a499223a9e5258b0976d",
         "ok": true,
         "pool": true,
         "mine": false,
@@ -54,7 +127,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-17T12:37:35Z",
+    "pushed_at": "2026-08-17T13:38:52Z",
     "stars": 0,
     "builders": [
       {
@@ -68,7 +141,7 @@
         "family": "Cursor",
         "name": "Cursor",
         "avatar_url": "",
-        "commits": 88
+        "commits": 93
       }
     ],
     "active_days": [
@@ -77,12 +150,12 @@
       "2026-08-16",
       "2026-08-17"
     ],
-    "head_sha": "6a64a66e8d1e7ea3e3f5bcf5a58bac48d8881602",
+    "head_sha": "16c5f237d44ec481719d6af0df703f8c65b22db1",
     "readme_hash": "9258:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
-    "churn_pct": 0.5,
+    "churn_pct": 0.1,
     "summary": "Facilitate private peer-to-peer hospitality on Starknet.",
     "description_long": "This project creates a trust-based network for private hospitality where listings are only visible to selected individuals, ensuring privacy. It uses Cairo for trustless escrow settlements and enables private payments via STRK20 while managing various roles like Hosts and Connectors within the application.",
-    "latest_push": "Spell out STRK/DAI connector payouts and clarify wallet search rules.",
+    "latest_push": "Labeled Connect actions as Ready X and clarified private booking steps.",
     "tooling": [
       {
         "label": "Cairo",
@@ -91,16 +164,321 @@
       }
     ],
     "has_readme": true,
-    "additions": 40,
-    "deletions": 31,
+    "additions": 8,
+    "deletions": 7,
     "assessment": {
       "innovative": true,
       "complex": true,
-      "why_innovative": "Enables private hospitality through a social trust network with friend-based discovery.",
-      "why_complex": "Utilizes multiple Cairo contracts for escrow and STRK20 private payments alongside unique roles and agreements.",
-      "reason": "A peer-to-peer hospitality protocol that prioritizes privacy and social connections."
+      "why_innovative": "Enables private peer-to-peer hospitality without public listings, leveraging a social trust network.",
+      "why_complex": "Utilizes Cairo escrow contracts for trustless settlement and implements a custom connector reward mechanism.",
+      "reason": "Philoxenia combines privacy with social trust for a unique hospitality experience."
     },
     "star_evidence": "3 contracts deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "chaoskeyplus-appbuild",
+    "name": "ChaosKey+",
+    "one_liner": "Physical-chaos entropy device with a Ready Wallet API tab for STRK20 shield, private transfer, and unshield.",
+    "category": "Tooling",
+    "repo_url": "https://github.com/doodabug/Chaoskeyplus-appbuild",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Transforms physical chaos into cryptographic entropy for secure transactions and tokens.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-17T13:20:18Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "emergent-agent-e1",
+        "name": "emergent-agent-e1",
+        "avatar_url": "https://avatars.githubusercontent.com/u/222461215?v=4"
+      },
+      {
+        "login": "doodabug",
+        "name": "doodabug",
+        "avatar_url": "https://avatars.githubusercontent.com/u/272664821?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-16",
+      "2026-08-17"
+    ],
+    "head_sha": "7694044dc0488d790217c9dbd1dcef52afb42fd8",
+    "readme_hash": "9800:# ChaosKey+ M3\n\n**A camera-entropy cryptographic device with STRK20 privacy on Starknet.**\n\nChaosKey+ turns your phone into a physical randomness generator. Every second, it hashes visual noise from y",
+    "churn_pct": 0,
+    "summary": "Generate cryptographic tokens using camera-based entropy.",
+    "description_long": "This project utilizes a mobile device's camera to capture visual noise, which is then processed into cryptographic entropy. The entropy is used to mint various types of tokens that are signed and verified, ensuring secure and private transactions on the Starknet blockchain. The approach includes health tests for the entropy blocks, creating a robust system for managing secure transfers.",
+    "latest_push": "Created README.md and finalized STRK20 Pool Actions.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 1,
+    "deletions": 1,
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "Generates entropy for cryptographic tokens using real-time camera input, unlike standard methods.",
+      "why_complex": "Involves multiple components including FastAPI backend, MongoDB, and cryptographic key management.",
+      "reason": "Transforms physical chaos into cryptographic entropy for secure transactions and tokens."
+    },
+    "star_evidence": ""
+  },
+  {
+    "slug": "veyl",
+    "name": "Veyl",
+    "one_liner": "Private launch & trading terminal on Starknet — trade and launch tokens through unlinkable execution identities funded by the STRK20 pool.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/codeswithroh/veyl",
+    "demo_url": "https://veyl-tau.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-06",
+    "affiliation": "",
+    "starred": true,
+    "star_reason": "Veyl allows private trading and token launches without linkability to the funding wallet.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-17T13:07:21Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "codeswithroh",
+        "name": "codeswithroh",
+        "avatar_url": "https://avatars.githubusercontent.com/u/77570394?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17"
+    ],
+    "head_sha": "6c73d2a2b826b0c7e32a81128d52af57e79e2b29",
+    "readme_hash": "5690:<div align=\"center\">\n\n# Veyl\n\n**A private launch & trading terminal on Starknet.**\n\nTrade and launch tokens without your wallet becoming a target — funded through the [STRK20](https://strk20-by-exampl",
+    "churn_pct": 2,
+    "summary": "Trade and launch tokens privately on Starknet with unlinkable identities.",
+    "description_long": "This project creates a trading and launch terminal that allows users to execute trades without linking to their funding wallets. It utilizes shielded funding from the STRK20 privacy pool, enabling sealed-bid launches and private transfers, which ensure that users' trading strategies remain confidential and secure.",
+    "latest_push": "Deployed ShadowAccountAnonymizer to Sepolia and added private swap via AVNU SDK.",
+    "tooling": [
+      {
+        "label": "AVNU",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 39,
+    "deletions": 19,
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "Enables traders to execute unlinkable identities for trading strategies, protecting their intent.",
+      "why_complex": "Develops several interacting contracts, including a sealed-bid launch contract and privacy anonymizer.",
+      "reason": "Veyl allows private trading and token launches without linkability to the funding wallet."
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "sotto",
+    "name": "Sotto",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/drained69/Sotto",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project aims to shield asset movements to enhance user privacy in DeFi.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-17T13:05:36Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Chinwuba081",
+        "name": "drained",
+        "avatar_url": "https://avatars.githubusercontent.com/u/97135600?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-17"
+    ],
+    "head_sha": "0c3821fa3a6d81cd53ff37f75e32970b6c186378",
+    "readme_hash": "29486:# Sotto\n\nSotto is a privacy-focused yield account for Starknet. It gives users a single interface for shielding assets, viewing wallet-discovered private balances, moving funds into supported DeFi pos",
+    "churn_pct": 99.4,
+    "summary": "Manage shielded assets in a privacy-focused yield account on Starknet.",
+    "description_long": "This project provides a dashboard for connecting privacy-enabled Starknet wallets to manage shielded asset operations. It uses the STRK20 private token standard to encrypt balances and ensures all actions are dependent on configured integrations, preventing the display of fabricated data. Key challenges include ensuring strict privacy compliance and maintaining connections with decentralized finance protocols.",
+    "latest_push": "Added Sotto contracts.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1505,
+    "deletions": 294,
+    "assessment": {
+      "innovative": true,
+      "complex": false,
+      "why_innovative": "Sotto enables a privacy-focused yield account using STRK20, reducing wallet linkage in DeFi.",
+      "why_complex": "No deployed contracts or visible Cairo engineering; functionality relies on frontend and external integrations.",
+      "reason": "The project aims to shield asset movements to enhance user privacy in DeFi."
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "hidden",
+    "name": "Hidden",
+    "one_liner": "Hidden-information games on Starknet powered by STRK20 privacy.",
+    "category": "Other",
+    "repo_url": "https://github.com/DevTest-me/hidden-starknet",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project lacks the underlying smart contract implementation needed for complexity.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-17T12:59:41Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "DevTest-me",
+        "name": "DevTest-me",
+        "avatar_url": "https://avatars.githubusercontent.com/u/200008500?v=4"
+      },
+      {
+        "login": "h15629526027",
+        "name": "Your Name",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99627554?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-16",
+      "2026-08-17"
+    ],
+    "head_sha": "93f94a3ed347fe298d01d58a8e88f3634a12fb73",
+    "readme_hash": "3652:<div align=\"center\">\n  <img src=\"./icon.svg\" width=\"88\" height=\"88\" alt=\"HIDDEN logo\" />\n\n  # HIDDEN\n\n  **Games where your opponent can't see your move.**\n\n  Built on Starknet mainnet with **STRK20** ",
+    "churn_pct": 13.6,
+    "summary": "Enable private play in wagered games using STRK20 on Starknet.",
+    "description_long": "This project implements a suite of 1v1 wagered games where players' moves are hidden until revealed, utilizing STRK20 for privacy. The challenge is creating commitment hashes to ensure moves stay sealed, while also managing shielded transactions through the STRK20 privacy pool, allowing for unlinkable stakes and payouts.",
+    "latest_push": "Added the round lifecycle feature with timers, sharing, and My Cases.",
+    "tooling": [
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 199,
+    "deletions": 56,
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project implements standard game mechanics with privacy without introducing unique elements.",
+      "why_complex": "There are no deployed contracts or significant Cairo code; only frontend development is visible.",
+      "reason": "The project lacks the underlying smart contract implementation needed for complexity."
+    },
+    "star_evidence": ""
   },
   {
     "slug": "stk402",
@@ -216,7 +594,6 @@
     ],
     "head_sha": "506a16c3fcc009298a7f778adf1f562259d4fbca",
     "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
-    "churn_pct": 12.9,
     "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
     "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
     "latest_push": "Made the VINSS agent lifecycle more agentic.",
@@ -230,6 +607,7 @@
     "has_readme": true,
     "additions": 1038,
     "deletions": 156,
+    "churn_pct": 12.9,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -380,79 +758,6 @@
     "star_evidence": ""
   },
   {
-    "slug": "strkworld",
-    "name": "STRKWORLD",
-    "one_liner": "A 2D top-down city where the buildings are Starknet privacy protocols",
-    "category": "Gaming",
-    "repo_url": "https://github.com/Calcutatator/STRKWORLD",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "starkware",
-    "starred": false,
-    "star_reason": "The project's unique approach gamifies privacy protocols in a shared city layout.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-17T10:26:25Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Calcutatator",
-        "name": "Calcutator",
-        "avatar_url": "https://avatars.githubusercontent.com/u/114863662?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 33
-      }
-    ],
-    "active_days": [
-      "2026-08-16",
-      "2026-08-17"
-    ],
-    "head_sha": "39112b55e7fb4dda6eee80090c7e59646d946e6a",
-    "readme_hash": "4928:# STRKWORLD\n\n**A 2D top-down city where the buildings are Starknet privacy protocols.**\n\nWalk around a shared pseudonymous world, step into a building, and use a real\nprivacy-preserving protocol with ",
-    "summary": "Create a 2D city that simulates Starknet privacy protocols.",
-    "description_long": "This project involves building a 2D top-down city where each building represents a privacy protocol on Starknet. The challenge lies in implementing a system where financial buildings can only operate if they have an approved privacy execution path, ensuring that no sensitive data is exposed within the application. The architecture separates concerns among various packages, maintaining a clear boundary between the game mechanics and financial operations.",
-    "latest_push": "Built the building-panel framework, the Bank, and the batch accumulator.",
-    "tooling": [
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 4415,
-    "deletions": 5,
-    "churn_pct": 30.7,
-    "assessment": {
-      "innovative": true,
-      "complex": false,
-      "why_innovative": "Creates a gamified city using privacy protocols that interact via typed intents.",
-      "why_complex": "No actual deployed contracts or significant Cairo code present yet.",
-      "reason": "The project's unique approach gamifies privacy protocols in a shared city layout."
-    },
-    "star_evidence": ""
-  },
-  {
     "slug": "aperture-strk20",
     "name": "Aperture",
     "one_liner": "Sealed-ballot governance and a shielded treasury for DAOs, native to STRK20.",
@@ -585,7 +890,7 @@
     },
     "status": "building",
     "pushed_at": "2026-08-17T10:15:05Z",
-    "stars": 0,
+    "stars": 1,
     "builders": [
       {
         "login": "welttowelt",
@@ -1002,159 +1307,6 @@
     "star_evidence": "Cairo in the repository"
   },
   {
-    "slug": "envelope",
-    "name": "envelope",
-    "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
-    "category": "Payments",
-    "repo_url": "https://github.com/0xrlawrence/envelope",
-    "demo_url": "https://0xrlawrence.github.io/envelope/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-09",
-    "affiliation": "",
-    "starred": true,
-    "star_reason": "Offers an innovative approach to private payments using URL-linked envelopes.",
-    "contracts": [
-      {
-        "address": "0x04ff4f083a4667930efe14963645f9bda00bb10d44e4c13a9ee808e66c076211",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-17T08:24:15Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "0xrlawrence",
-        "name": "0xrlawrence",
-        "avatar_url": "https://avatars.githubusercontent.com/u/250132405?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17"
-    ],
-    "head_sha": "2e493fea1d732228763ef9d85fd99dcccdf568f7",
-    "readme_hash": "6803:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
-    "summary": "Send private money through a link with Envelope's anonymizer contract.",
-    "description_long": "Envelope uses a STRK20 anonymizer contract to enable private token transfers via unique URLs. It allows users to shield tokens, seal them in an envelope, and send them without revealing the funder’s identity, addressing the challenge of anonymous payments in Starknet. The system ensures that front-running cannot occur through clever cryptographic signatures tied to the recipient, ensuring security and privacy.",
-    "latest_push": "Added finished envelopes and failed transactions tabs to the mobile app.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 40,
-    "deletions": 40,
-    "churn_pct": 0.8,
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "Creates a sharable URL envelope for private transfers without prior registration.",
-      "why_complex": "Implements a unique signing mechanism with stark-curve public keys in the `EnvelopeAnonymizer` contract.",
-      "reason": "Offers an innovative approach to private payments using URL-linked envelopes."
-    },
-    "star_evidence": "1 contract deployed, Cairo in the repository"
-  },
-  {
-    "slug": "sotto",
-    "name": "Sotto",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/drained69/Sotto",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Project proposes a unique approach to privacy in DeFi interactions.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-17T08:07:30Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Chinwuba081",
-        "name": "drained",
-        "avatar_url": "https://avatars.githubusercontent.com/u/97135600?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-17"
-    ],
-    "head_sha": "20a8eca0912db111305ebe14e7bb2dff92f25665",
-    "readme_hash": "3643:# Sotto\n\nSotto is a private yield account built for the [STRK20 Private Sprint](https://strk20.starknet.io/hackathon). It gives users one shielded account from which they can allocate capital across S",
-    "summary": "Manage private yield accounts for Starknet DeFi users.",
-    "description_long": "This project creates a responsive dashboard that enables users to manage shielded yield accounts without exposing their wallet information. It leverages Starknet's privacy pool to keep transaction details hidden while allowing users to interact with multiple DeFi protocols through secure, audited anonymizers and dynamically generated proofs.",
-    "latest_push": "Initialized the project with the first commit.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 5209,
-    "deletions": 0,
-    "churn_pct": 100,
-    "assessment": {
-      "innovative": true,
-      "complex": false,
-      "why_innovative": "Enables users to interact with multiple DeFi protocols anonymously without revealing wallet positions.",
-      "why_complex": "No deployed contracts or complex Cairo engineering is presented for assessment.",
-      "reason": "Project proposes a unique approach to privacy in DeFi interactions."
-    },
-    "star_evidence": ""
-  },
-  {
     "slug": "zkpayslip",
     "name": "zkpayslip",
     "one_liner": "Private payroll on Starknet — shielded salary disbursements and one-time, verifier-bound income proofs on the STRK20 privacy pool.",
@@ -1249,68 +1401,6 @@
       "reason": "zkPayslip improves privacy in payroll by allowing selective income proof to a verifier."
     },
     "star_evidence": "1 contract deployed, Cairo in the repository"
-  },
-  {
-    "slug": "chaoskeyplus-appbuild",
-    "name": "ChaosKey+",
-    "one_liner": "Physical-chaos entropy device with a Ready Wallet API tab for STRK20 shield, private transfer, and unshield.",
-    "category": "Tooling",
-    "repo_url": "https://github.com/doodabug/Chaoskeyplus-appbuild",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The integration of a physical-chaos entropy device does not lead to unique privacy applications.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-17T06:00:05Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "emergent-agent-e1",
-        "name": "emergent-agent-e1",
-        "avatar_url": "https://avatars.githubusercontent.com/u/222461215?v=4"
-      },
-      {
-        "login": "doodabug",
-        "name": "doodabug",
-        "avatar_url": "https://avatars.githubusercontent.com/u/272664821?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17"
-    ],
-    "head_sha": "1fb0bdf7cb077e192fa8ac6be793d446ebf4167b",
-    "readme_hash": "1455:# ChaosKey+ M3 — STRK20 hackathon sprint\n\nPhysical-chaos entropy device (Harvest / Tokens / Ledger) plus a **Pool** tab that talks to the Starknet STRK20 privacy pool through the user's Ready wallet.\n",
-    "summary": "Create a physical-chaos entropy device with Ready Wallet API integration.",
-    "description_long": "This project implements a physical-chaos entropy device that interacts with the Starknet STRK20 privacy pool via the user's Ready wallet. The challenge lies in ensuring that the dapp maintains privacy while facilitating actions like shielding and private transfers without holding a viewing key or dealing with ERC-20 tokens directly.",
-    "latest_push": "Merged the token generator with the STRK20 Pool tab.",
-    "tooling": [],
-    "has_readme": true,
-    "additions": 59,
-    "deletions": 7,
-    "churn_pct": 1.3,
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "This project combines a physical-chaos entropy device with standard private transfers, making it an obvious version.",
-      "why_complex": "There are no deployed contracts or visible Cairo code, making it lack complexity.",
-      "reason": "The integration of a physical-chaos entropy device does not lead to unique privacy applications."
-    },
-    "star_evidence": ""
   },
   {
     "slug": "cloakra",
@@ -2521,163 +2611,6 @@
       "reason": "Whisper Pay routes payments privately but doesn't introduce new mechanisms beyond existing solutions."
     },
     "star_evidence": ""
-  },
-  {
-    "slug": "hidden",
-    "name": "Hidden",
-    "one_liner": "Hidden-information games on Starknet powered by STRK20 privacy.",
-    "category": "Other",
-    "repo_url": "https://github.com/DevTest-me/hidden-starknet",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project lacks deployed contracts and innovative use of privacy.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T14:37:30Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "DevTest-me",
-        "name": "DevTest-me",
-        "avatar_url": "https://avatars.githubusercontent.com/u/200008500?v=4"
-      },
-      {
-        "login": "h15629526027",
-        "name": "Your Name",
-        "avatar_url": "https://avatars.githubusercontent.com/u/99627554?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-16"
-    ],
-    "head_sha": "a4ca34125dd7dd98af07d5974601d0d53c6ca331",
-    "readme_hash": "3652:<div align=\"center\">\n  <img src=\"./icon.svg\" width=\"88\" height=\"88\" alt=\"HIDDEN logo\" />\n\n  # HIDDEN\n\n  **Games where your opponent can't see your move.**\n\n  Built on Starknet mainnet with **STRK20** ",
-    "summary": "Enable private play in wagered games using STRK20 on Starknet.",
-    "description_long": "This project implements a suite of 1v1 wagered games where players' moves are hidden until revealed, utilizing STRK20 for privacy. The challenge is creating commitment hashes to ensure moves stay sealed, while also managing shielded transactions through the STRK20 privacy pool, allowing for unlinkable stakes and payouts.",
-    "latest_push": "Added Vite setup and implemented the round lifecycle for timers and sharing.",
-    "tooling": [
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 809,
-    "deletions": 4,
-    "churn_pct": 46.2,
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "This project implements a standard game with privacy that doesn’t go beyond basic private transfers.",
-      "why_complex": "No deployed contracts exist; all chain interactions are stubs.",
-      "reason": "The project lacks deployed contracts and innovative use of privacy."
-    },
-    "star_evidence": ""
-  },
-  {
-    "slug": "veyl",
-    "name": "Veyl",
-    "one_liner": "Private launch & trading terminal on Starknet — trade and launch tokens through unlinkable execution identities funded by the STRK20 pool.",
-    "category": "DeFi",
-    "repo_url": "https://github.com/codeswithroh/veyl",
-    "demo_url": "https://veyl-tau.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-06",
-    "affiliation": "",
-    "starred": true,
-    "star_reason": "Veyl allows private trading through unlinkable identities and sealed-bid mechanisms.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T14:10:07Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "codeswithroh",
-        "name": "codeswithroh",
-        "avatar_url": "https://avatars.githubusercontent.com/u/77570394?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16"
-    ],
-    "head_sha": "242ce4a770849e23c6ee0918a01081f2c61d07a6",
-    "readme_hash": "5690:<div align=\"center\">\n\n# Veyl\n\n**A private launch & trading terminal on Starknet.**\n\nTrade and launch tokens without your wallet becoming a target — funded through the [STRK20](https://strk20-by-exampl",
-    "summary": "Trade and launch tokens privately on Starknet with unlinkable identities.",
-    "description_long": "This project creates a trading and launch terminal that allows users to execute trades without linking to their funding wallets. It utilizes shielded funding from the STRK20 privacy pool, enabling sealed-bid launches and private transfers, which ensure that users' trading strategies remain confidential and secure.",
-    "latest_push": "Added private swap feature via AVNU SDK and redesigned the landing page.",
-    "tooling": [
-      {
-        "label": "AVNU",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 297,
-    "deletions": 25,
-    "churn_pct": 11.1,
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "Enables closed-position trading via unlinkable execution identities from shielded funding.",
-      "why_complex": "The backend includes learnable trading strategies and a sealed-bid launch contract implemented in Cairo.",
-      "reason": "Veyl allows private trading through unlinkable identities and sealed-bid mechanisms."
-    },
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "ghostorder",
@@ -4785,6 +4718,79 @@
       "reason": "Currently lacks any implementation of Zylith's functionality."
     },
     "star_evidence": ""
+  },
+  {
+    "slug": "envelope",
+    "name": "envelope",
+    "one_liner": "",
+    "category": "Payments",
+    "repo_url": "https://github.com/0xrlawrence/envelope",
+    "demo_url": "https://0xrlawrence.github.io/envelope/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-09",
+    "affiliation": "",
+    "starred": true,
+    "star_reason": "Offers an innovative approach to private payments using URL-linked envelopes.",
+    "contracts": [
+      {
+        "address": "0x04ff4f083a4667930efe14963645f9bda00bb10d44e4c13a9ee808e66c076211",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": null,
+    "stars": 0,
+    "builders": [
+      {
+        "login": "0xrlawrence",
+        "name": "0xrlawrence",
+        "avatar_url": "https://avatars.githubusercontent.com/u/250132405?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17"
+    ],
+    "head_sha": "2e493fea1d732228763ef9d85fd99dcccdf568f7",
+    "readme_hash": "6803:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
+    "summary": "Send private money through a link with Envelope's anonymizer contract.",
+    "description_long": "Envelope uses a STRK20 anonymizer contract to enable private token transfers via unique URLs. It allows users to shield tokens, seal them in an envelope, and send them without revealing the funder’s identity, addressing the challenge of anonymous payments in Starknet. The system ensures that front-running cannot occur through clever cryptographic signatures tied to the recipient, ensuring security and privacy.",
+    "latest_push": "Added finished envelopes and failed transactions tabs to the mobile app.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 40,
+    "deletions": 40,
+    "churn_pct": 0.8,
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "Creates a sharable URL envelope for private transfers without prior registration.",
+      "why_complex": "Implements a unique signing mechanism with stark-curve public keys in the `EnvelopeAnonymizer` contract.",
+      "reason": "Offers an innovative approach to private payments using URL-linked envelopes."
+    },
+    "star_evidence": "1 contract deployed, Cairo in the repository"
   },
   {
     "slug": "veilance-market",
