@@ -1,79 +1,166 @@
 [
   {
-    "slug": "strkworld",
-    "name": "STRKWORLD",
-    "one_liner": "A 2D top-down city where the buildings are Starknet privacy protocols",
-    "category": "Gaming",
-    "repo_url": "https://github.com/Calcutatator/STRKWORLD",
-    "demo_url": "",
+    "slug": "morok-pay-starknet",
+    "name": "MorokPay",
+    "one_liner": "Private USDC treasury on Starknet, funded from Ethereum via CCTP.",
+    "category": "Payments",
+    "repo_url": "https://github.com/ssadkov/morok-pay-starknet",
+    "demo_url": "https://morok-pay-starknet.vercel.app",
     "demo_video": "",
     "x_handle": "",
     "inspired_by": "",
-    "affiliation": "starkware",
+    "affiliation": "",
     "starred": false,
-    "star_reason": "The concept exists but lacks implemented complexity or innovative privacy applications.",
+    "star_reason": "",
     "contracts": [],
     "transactions": [],
     "verified_txs": 0,
     "requirements": {
-      "demo": false,
+      "demo": true,
       "video": false,
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-18T19:46:57Z",
+    "pushed_at": "2026-08-18T20:15:55Z",
     "stars": 0,
     "builders": [
       {
-        "login": "Calcutatator",
-        "name": "Calcutator",
-        "avatar_url": "https://avatars.githubusercontent.com/u/114863662?v=4"
+        "login": "ssadkov",
+        "name": "ssadkov",
+        "avatar_url": "https://avatars.githubusercontent.com/u/6169475?v=4"
       }
     ],
     "agents": [
       {
-        "family": "Claude",
-        "name": "Claude Opus 5",
+        "family": "Cursor",
+        "name": "Cursor",
         "avatar_url": "",
-        "commits": 43
+        "commits": 10
       }
     ],
     "active_days": [
-      "2026-08-16",
       "2026-08-17",
       "2026-08-18"
     ],
-    "head_sha": "befda52a3fd193c6cfc0e5bb0911bf6b8565d1eb",
-    "readme_hash": "5443:# STRKWORLD\n\n**A 2D top-down city where the buildings are Starknet privacy protocols.**\n\nWalk around a shared pseudonymous world, step into a building, and use a real\nprivacy-preserving protocol with ",
+    "head_sha": "d6f801b433a3306d4f5b96a41130fbb2581b0b68",
+    "readme_hash": "4219:# MorokPay\n\nPrivate USDC payments on Starknet for the [STRK20 Private Sprint](https://strk20.starknet.io/hackathon).\n\n**Pay privately** from a shielded Ready balance, or **get paid** with a QR invoice",
     "desc_v3": true,
-    "churn_pct": 7.9,
-    "summary": "Explore a city built from Starknet privacy protocols using real funds.",
-    "description_long": "Players walk through a 2D top-down city where each building represents a privacy protocol. The game is developed with separate packages for application, backend, and logic, specifying actions via typed intents that pass through a privacy gate to execute financial transactions without handling sensitive key material.",
-    "latest_push": "Composed the fail-closed Bridge flow with associated tests.",
+    "churn_pct": 3.5,
+    "summary": "Make private USDC payments and invoices on Starknet.",
+    "description_long": "MorokPay enables private USDC payments via QR invoices or a shielded balance. It connects to the Ready wallet API, allowing users to create invoices and manage payments using the STRK20 transaction structure to keep details within the privacy pool. The application supports topping up through CCTP from Base and includes features for private receipt matching and payment tracking via a dedicated `MorokInvoices` contract.",
+    "latest_push": "Recorded a pending payment in Activity upon requesting Ready.",
     "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Privacy SDK",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
       {
         "label": "TypeScript",
         "live": false,
         "stack": false
       },
       {
-        "label": "Vite",
+        "label": "Cairo",
         "live": false,
         "stack": false
       }
     ],
     "has_readme": true,
-    "additions": 1955,
-    "deletions": 17,
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "The project applies privacy to buildings where financial actions are taken, which is a standard idea.",
-      "why_complex": "There are no deployed contracts or advanced Cairo code provided at this stage.",
-      "reason": "The concept exists but lacks implemented complexity or innovative privacy applications.",
-      "facts_v2": true
+    "additions": 157,
+    "deletions": 34,
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "game-shield",
+    "name": "GameShield",
+    "one_liner": "Private gaming bounty hub on Starknet: shielded prize pools, provable payout commitments and unlinkable rewards for tournaments, speedruns and PvP.",
+    "category": "Gaming",
+    "repo_url": "https://github.com/BlackAporia/game-shield",
+    "demo_url": "https://gameshield-dapp.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x03ce58babb9bc3651131657c273aae00cca554ffdccb13dba8b2d06ce60d61d5",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x034525253fd76049c7472059b522cdb51bc1963d35c30eee6deb20f6b4259256",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
     },
-    "star_evidence": ""
+    "status": "building",
+    "pushed_at": "2026-08-18T20:11:36Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "BlackAporia",
+        "name": "BlackAporia",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116606427?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-17",
+      "2026-08-18"
+    ],
+    "head_sha": "9a43797cebe955a815b020e6b9e2be11c61b8d18",
+    "readme_hash": "4101:# GameShield — Private Gaming Bounty Hub\n\nGameShield is a STRK20 prototype for private gaming reward flows on Starknet. It uses the STRK20 pool and an app-specific `privacy_invoke` helper so the dapp ",
+    "desc_v3": true,
+    "churn_pct": 2,
+    "summary": "Create private gaming tournaments with shielded prizes and verifiable payouts.",
+    "description_long": "GameShield allows users to create and participate in private gaming tournaments with shielded prize pools and verifiable payouts. It is built using Cairo contracts for a campaign registry and a `privacy_invoke` payout helper, ensuring that the dapp does not handle any sensitive keys. Users interact through a Next.js frontend, routing transactions through the STRK20 privacy pool to keep payment information confidential.",
+    "latest_push": "Added the STRK20 action probe to diagnose Ready X rejects.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 73,
+    "deletions": 0,
+    "assessment": null,
+    "star_evidence": "2 contracts deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "philoxenia",
@@ -129,7 +216,7 @@
       "mainnet": true
     },
     "status": "finished",
-    "pushed_at": "2026-08-18T19:41:58Z",
+    "pushed_at": "2026-08-18T20:02:03Z",
     "stars": 0,
     "builders": [
       {
@@ -151,13 +238,13 @@
       "2026-08-17",
       "2026-08-18"
     ],
-    "head_sha": "780bc85719ebf617391429f8702b0e753782c51e",
+    "head_sha": "ee0bd3b32ecca7a23ef92115628c5d8b72829d60",
     "readme_hash": "9319:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
     "desc_v3": true,
-    "churn_pct": 0.3,
+    "churn_pct": 0.2,
     "summary": "Book private accommodations through trusted connections.",
     "description_long": "Philoxenia is a peer-to-peer hospitality protocol that allows users to book accommodations privately using a social trust network. It consists of a frontend built with Next.js connected to a Fastify backend with a PostgreSQL database, and on-chain contracts written in Cairo for escrow and payment settlement.",
-    "latest_push": "Renamed 'Profile' and 'Connector' to 'Ready X and Earn' in various components.",
+    "latest_push": "Changed labels from Host or My friends to Publish places and Friends.",
     "tooling": [
       {
         "label": "Cairo",
@@ -167,7 +254,7 @@
     ],
     "has_readme": true,
     "additions": 20,
-    "deletions": 20,
+    "deletions": 17,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -200,7 +287,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-18T19:39:26Z",
+    "pushed_at": "2026-08-18T19:59:15Z",
     "stars": 0,
     "builders": [
       {
@@ -223,13 +310,13 @@
       "2026-08-17",
       "2026-08-18"
     ],
-    "head_sha": "85d6d934dbf08cf676cb0e581b055dc945b73ca4",
+    "head_sha": "269e31afd428e88d43f2891e73be5a4ddda5b8be",
     "readme_hash": "3958:# Portage.fun\n\n**Live demo:** https://portage-topaz.vercel.app\n\n![Portage kickoff](docs/screenshots/kickoff.png)\n\n![Portage game dashboard](docs/screenshots/dashboard.png)\n\n![Portage spatial auto-hunt",
     "desc_v3": true,
-    "churn_pct": 1,
+    "churn_pct": 1.5,
     "summary": "Collect, evolve, and trade creatures in a cozy idle RPG.",
     "description_long": "This project is an idle creature-collecting RPG with a focus on local gameplay. It features tile movement, spatial combat, and NPC interactions, while the underlying Starknet contracts handle creature minting and evolution logic in Cairo. The Next.js front end supports mock mode and integrates privacy options for compatible wallets, with local autosaving and a local-first gameplay loop.",
-    "latest_push": "Fixed animation logic to use motion and real time instead of clock ticks.",
+    "latest_push": "Fixed bramble and cinderling walking animations.",
     "tooling": [
       {
         "label": "starknet.js",
@@ -243,8 +330,8 @@
       }
     ],
     "has_readme": true,
-    "additions": 55,
-    "deletions": 55,
+    "additions": 83,
+    "deletions": 89,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -254,76 +341,6 @@
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "game-shield",
-    "name": "GameShield",
-    "one_liner": "Private gaming bounty hub on Starknet: shielded prize pools, provable payout commitments and unlinkable rewards for tournaments, speedruns and PvP.",
-    "category": "Gaming",
-    "repo_url": "https://github.com/BlackAporia/game-shield",
-    "demo_url": "https://gameshield-dapp.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x03ce58babb9bc3651131657c273aae00cca554ffdccb13dba8b2d06ce60d61d5",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x034525253fd76049c7472059b522cdb51bc1963d35c30eee6deb20f6b4259256",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-18T19:33:59Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "BlackAporia",
-        "name": "BlackAporia",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116606427?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-17",
-      "2026-08-18"
-    ],
-    "head_sha": "789d267ef1a728f77acc56e45c6130b12f815bd3",
-    "readme_hash": "4101:# GameShield — Private Gaming Bounty Hub\n\nGameShield is a STRK20 prototype for private gaming reward flows on Starknet. It uses the STRK20 pool and an app-specific `privacy_invoke` helper so the dapp ",
-    "desc_v3": true,
-    "churn_pct": 0.5,
-    "summary": "Create private gaming tournaments with shielded prizes and verifiable payouts.",
-    "description_long": "GameShield allows users to create and participate in private gaming tournaments with shielded prize pools and verifiable payouts. It is built using Cairo contracts for a campaign registry and a `privacy_invoke` payout helper, ensuring that the dapp does not handle any sensitive keys. Users interact through a Next.js frontend, routing transactions through the STRK20 privacy pool to keep payment information confidential.",
-    "latest_push": "Added STRK20 Wallet API method support to the wallet check panel.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 16,
-    "deletions": 4,
-    "assessment": null,
-    "star_evidence": "2 contracts deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "redpocket",
@@ -376,7 +393,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-18T19:10:36Z",
+    "pushed_at": "2026-08-18T19:56:21Z",
     "stars": 0,
     "builders": [
       {
@@ -390,7 +407,7 @@
         "family": "Cursor",
         "name": "Cursor",
         "avatar_url": "",
-        "commits": 19
+        "commits": 20
       }
     ],
     "active_days": [
@@ -399,12 +416,13 @@
       "2026-08-17",
       "2026-08-18"
     ],
-    "head_sha": "36acfaa22034618d0e587c2c4225c11b1a58a800",
+    "head_sha": "7637b7c4b843a81b56f689429d508c1ae8033614",
     "readme_hash": "6395:# Redpacket\n\nLive demo: [https://redpocket-virid.vercel.app/](https://redpocket-virid.vercel.app/) — Ready wallet, Starknet Mainnet.\n\nDrop a password into a group chat. People race to claim. Each shar",
     "desc_v3": true,
+    "churn_pct": 2.6,
     "summary": "Claim password-protected tokens sent in red packets with a single link.",
     "description_long": "Drops a password into a group chat and lets users race to claim shares that are sent to a shielded STRK20 balance. The project consists of a Next.js frontend and uses the Wallet API alongside a stateful `privacy_invoke` helper for transaction management, including creating and claiming shared tokens while preserving user privacy.",
-    "latest_push": "Added CI workflow configuration in ci.yml.",
+    "latest_push": "Measured page speed using the same URL redaction as page views.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -438,9 +456,8 @@
       }
     ],
     "has_readme": true,
-    "additions": 556,
-    "deletions": 1,
-    "churn_pct": 14.4,
+    "additions": 73,
+    "deletions": 26,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -450,6 +467,82 @@
       "facts_v2": true
     },
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "strkworld",
+    "name": "STRKWORLD",
+    "one_liner": "A 2D top-down city where the buildings are Starknet privacy protocols",
+    "category": "Gaming",
+    "repo_url": "https://github.com/Calcutatator/STRKWORLD",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "starkware",
+    "starred": false,
+    "star_reason": "The concept exists but lacks implemented complexity or innovative privacy applications.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-18T19:53:22Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Calcutatator",
+        "name": "Calcutator",
+        "avatar_url": "https://avatars.githubusercontent.com/u/114863662?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 43
+      }
+    ],
+    "active_days": [
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18"
+    ],
+    "head_sha": "a13e5241fcf72e9e74dccf9d0404b4f3ec72daf1",
+    "readme_hash": "5443:# STRKWORLD\n\n**A 2D top-down city where the buildings are Starknet privacy protocols.**\n\nWalk around a shared pseudonymous world, step into a building, and use a real\nprivacy-preserving protocol with ",
+    "desc_v3": true,
+    "churn_pct": 0.7,
+    "summary": "Explore a city built from Starknet privacy protocols using real funds.",
+    "description_long": "Players walk through a 2D top-down city where each building represents a privacy protocol. The game is developed with separate packages for application, backend, and logic, specifying actions via typed intents that pass through a privacy gate to execute financial transactions without handling sensitive key material.",
+    "latest_push": "Recorded the fail-closed Bridge composition in documentation.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 146,
+    "deletions": 52,
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project applies privacy to buildings where financial actions are taken, which is a standard idea.",
+      "why_complex": "There are no deployed contracts or advanced Cairo code provided at this stage.",
+      "reason": "The concept exists but lacks implemented complexity or innovative privacy applications.",
+      "facts_v2": true
+    },
+    "star_evidence": ""
   },
   {
     "slug": "envelope",
@@ -1459,10 +1552,9 @@
       },
       {
         "hash": "0x05bc97bd56952cc88a8df5a9bfdba4167a374b48df73ac6781e732bc59f1234d",
-        "ok": false,
-        "pool": false,
-        "mine": false,
-        "note": "not found on mainnet"
+        "ok": true,
+        "pool": true,
+        "mine": null
       },
       {
         "hash": "0x0664cc565fd645886bc0717fc2def36ba645ce00e3c7c8fb7206f2e051846b75",
@@ -1477,7 +1569,7 @@
         "mine": null
       }
     ],
-    "verified_txs": 3,
+    "verified_txs": 4,
     "requirements": {
       "demo": false,
       "video": false,
@@ -2040,99 +2132,6 @@
       "reason": "Airlock creates a cross-chain privacy solution without direct links between transactions.",
       "facts_v2": true
     },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "morok-pay-starknet",
-    "name": "MorokPay",
-    "one_liner": "Private USDC treasury on Starknet, funded from Ethereum via CCTP.",
-    "category": "Payments",
-    "repo_url": "https://github.com/ssadkov/morok-pay-starknet",
-    "demo_url": "https://morok-pay-starknet.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-18T13:12:43Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "ssadkov",
-        "name": "ssadkov",
-        "avatar_url": "https://avatars.githubusercontent.com/u/6169475?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Cursor",
-        "name": "Cursor",
-        "avatar_url": "",
-        "commits": 9
-      }
-    ],
-    "active_days": [
-      "2026-08-17",
-      "2026-08-18"
-    ],
-    "head_sha": "b7a85a3b6aa4308ceb429a8ad6f5c81fc539ce71",
-    "readme_hash": "4219:# MorokPay\n\nPrivate USDC payments on Starknet for the [STRK20 Private Sprint](https://strk20.starknet.io/hackathon).\n\n**Pay privately** from a shielded Ready balance, or **get paid** with a QR invoice",
-    "desc_v3": true,
-    "summary": "Make private USDC payments and invoices on Starknet.",
-    "description_long": "MorokPay enables private USDC payments via QR invoices or a shielded balance. It connects to the Ready wallet API, allowing users to create invoices and manage payments using the STRK20 transaction structure to keep details within the privacy pool. The application supports topping up through CCTP from Base and includes features for private receipt matching and payment tracking via a dedicated `MorokInvoices` contract.",
-    "latest_push": "Stopped polling for private balances and added options for USDC shielding.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Privacy SDK",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 165,
-    "deletions": 57,
-    "churn_pct": 4.1,
-    "assessment": null,
     "star_evidence": "Cairo in the repository"
   },
   {
