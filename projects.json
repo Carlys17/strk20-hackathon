@@ -1,5 +1,67 @@
 [
   {
+    "slug": "chaoskeyplus-appbuild",
+    "name": "ChaosKey+",
+    "one_liner": "Physical-chaos entropy device with a Ready Wallet API tab for STRK20 shield, private transfer, and unshield.",
+    "category": "Tooling",
+    "repo_url": "https://github.com/doodabug/Chaoskeyplus-appbuild",
+    "demo_url": "https://mobile-app-build-778.preview.emergentagent.com",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "ChaosKey+ combines physical randomness with STRK20 privacy mechanisms.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-18T02:29:13Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "emergent-agent-e1",
+        "name": "emergent-agent-e1",
+        "avatar_url": "https://avatars.githubusercontent.com/u/222461215?v=4"
+      },
+      {
+        "login": "doodabug",
+        "name": "doodabug",
+        "avatar_url": "https://avatars.githubusercontent.com/u/272664821?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-16",
+      "2026-08-17"
+    ],
+    "head_sha": "ae0369711dc33677ac8bcd0254641306e043a45d",
+    "readme_hash": "10303:# ChaosKey+ M3\n\n**A camera-entropy cryptographic device with STRK20 privacy on Starknet.**\n\nChaosKey+ turns your phone into a physical randomness generator. Every second, it hashes visual noise from y",
+    "summary": "Generate physical randomness for secure cryptographic tokens and STRK20 transactions.",
+    "description_long": "This project captures visual noise from the camera to create a secure randomness generator for cryptographic operations. It generates various types of tokens bound to a signed ledger of entropy, ensuring tamper-proof expiry and verification capabilities. The integration with STRK20 allows private shielded transactions on Starknet, where security and privacy concerns are effectively managed.",
+    "latest_push": "Created a GitHub Actions workflow for Node.js.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 31,
+    "deletions": 0,
+    "churn_pct": 0.7,
+    "assessment": {
+      "innovative": true,
+      "complex": false,
+      "why_innovative": "It captures physical randomness to generate cryptographic tokens bound to entropy.",
+      "why_complex": "No Cairo contracts were declared; it lacks interaction depth with existing pools.",
+      "reason": "ChaosKey+ combines physical randomness with STRK20 privacy mechanisms.",
+      "facts_v2": true
+    },
+    "star_evidence": ""
+  },
+  {
     "slug": "philoxenia",
     "name": "philoxenia",
     "one_liner": "Private P2P hospitality on Starknet — STRK20 Private Sprint",
@@ -11,7 +73,7 @@
     "inspired_by": "",
     "affiliation": "",
     "starred": true,
-    "star_reason": "The project creates private hospitality experiences through an innovative trust-based model.",
+    "star_reason": "Philoxenia provides a unique social trust network for secure hospitality transactions.",
     "contracts": [
       {
         "address": "0x056a817104ad7544a55873584f3d8fb41a780e5466d152b3e1f12d578e75defb",
@@ -53,7 +115,7 @@
       "mainnet": true
     },
     "status": "finished",
-    "pushed_at": "2026-08-18T00:56:20Z",
+    "pushed_at": "2026-08-18T02:16:19Z",
     "stars": 0,
     "builders": [
       {
@@ -76,12 +138,12 @@
       "2026-08-17",
       "2026-08-18"
     ],
-    "head_sha": "990bc27a2cf03449d1ca237ca150261922840235",
+    "head_sha": "f0f5b77c3e29966d7e90155595abef3e87434fdc",
     "readme_hash": "9313:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
-    "churn_pct": 0.9,
+    "churn_pct": 0.8,
     "summary": "Create a private hospitality protocol on Starknet for trust-based peer-to-peer connections.",
     "description_long": "The project offers a private peer-to-peer hospitality protocol where listings are visible exclusively to trusted connections, enhancing user privacy. It leverages Cairo for trustless escrow payments and includes roles for hosts, guests, and connectors to drive participation, while employing Next.js for the frontend and Fastify for the backend.",
-    "latest_push": "Updated terminology for booking actions across various components.",
+    "latest_push": "Changed all instances of 'Book & pay' in social and booking-related components.",
     "tooling": [
       {
         "label": "Cairo",
@@ -90,14 +152,14 @@
       }
     ],
     "has_readme": true,
-    "additions": 67,
-    "deletions": 69,
+    "additions": 60,
+    "deletions": 58,
     "assessment": {
       "innovative": true,
       "complex": true,
-      "why_innovative": "Philoxenia enables private peer-to-peer hospitality using a social trust network without public listings.",
-      "why_complex": "Features multiple contracts including BookingEscrow and uses complex privacy mechanisms in Cairo.",
-      "reason": "The project creates private hospitality experiences through an innovative trust-based model.",
+      "why_innovative": "It enables private peer-to-peer hospitality through a friend-based discovery model.",
+      "why_complex": "Involves multiple Cairo contracts like BookingEscrow and STRK20 integration for trustless payments.",
+      "reason": "Philoxenia provides a unique social trust network for secure hospitality transactions.",
       "facts_v2": true
     },
     "star_evidence": "3 contracts deployed on mainnet, Cairo in the repository"
@@ -147,7 +209,6 @@
     ],
     "head_sha": "888bea8edd8eec872f40948ecc8f9614992bc9e9",
     "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
-    "churn_pct": 4.7,
     "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
     "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
     "latest_push": "Encrypted private invite links and added invite expiry countdown.",
@@ -161,6 +222,7 @@
     "has_readme": true,
     "additions": 396,
     "deletions": 72,
+    "churn_pct": 4.7,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -215,7 +277,6 @@
     ],
     "head_sha": "989f02914c1d21801f6dea822e8d10616b03ab4c",
     "readme_hash": "2265:# Ownerz — Sell Files. Post-Quantum Delivery.\n\n## Core Value\nA marketplace where anyone can monetize private data on blockchain with anonymous transactions, no intermediaries, no hidden costs.\n\n## How",
-    "churn_pct": 2.3,
     "summary": "Facilitates anonymous data transactions using Starknet and post-quantum encryption.",
     "description_long": "Users upload encrypted files to Filecoin, connect their Starknet wallet, and only share a CID and price on the smart contract. Purchases are made anonymously using ZK-proofs, with buyers receiving decryption keys securely after payment. The system ensures that data remains encrypted on IPFS and is only accessible to verified buyers.",
     "latest_push": "Fixed the shield flow for instant modal close and balance panel polling.",
@@ -254,6 +315,7 @@
     "has_readme": true,
     "additions": 24,
     "deletions": 62,
+    "churn_pct": 2.3,
     "assessment": {
       "innovative": true,
       "complex": false,
@@ -435,68 +497,6 @@
       "facts_v2": true
     },
     "star_evidence": "1 contract deployed, Cairo in the repository"
-  },
-  {
-    "slug": "chaoskeyplus-appbuild",
-    "name": "ChaosKey+",
-    "one_liner": "Physical-chaos entropy device with a Ready Wallet API tab for STRK20 shield, private transfer, and unshield.",
-    "category": "Tooling",
-    "repo_url": "https://github.com/doodabug/Chaoskeyplus-appbuild",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "ChaosKey+ combines physical randomness with STRK20 privacy mechanisms.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-17T23:06:17Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "emergent-agent-e1",
-        "name": "emergent-agent-e1",
-        "avatar_url": "https://avatars.githubusercontent.com/u/222461215?v=4"
-      },
-      {
-        "login": "doodabug",
-        "name": "doodabug",
-        "avatar_url": "https://avatars.githubusercontent.com/u/272664821?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-16",
-      "2026-08-17"
-    ],
-    "head_sha": "ae0369711dc33677ac8bcd0254641306e043a45d",
-    "readme_hash": "10303:# ChaosKey+ M3\n\n**A camera-entropy cryptographic device with STRK20 privacy on Starknet.**\n\nChaosKey+ turns your phone into a physical randomness generator. Every second, it hashes visual noise from y",
-    "summary": "Generate physical randomness for secure cryptographic tokens and STRK20 transactions.",
-    "description_long": "This project captures visual noise from the camera to create a secure randomness generator for cryptographic operations. It generates various types of tokens bound to a signed ledger of entropy, ensuring tamper-proof expiry and verification capabilities. The integration with STRK20 allows private shielded transactions on Starknet, where security and privacy concerns are effectively managed.",
-    "latest_push": "Created a GitHub Actions workflow for Node.js.",
-    "tooling": [],
-    "has_readme": true,
-    "additions": 31,
-    "deletions": 0,
-    "churn_pct": 0.7,
-    "assessment": {
-      "innovative": true,
-      "complex": false,
-      "why_innovative": "It captures physical randomness to generate cryptographic tokens bound to entropy.",
-      "why_complex": "No Cairo contracts were declared; it lacks interaction depth with existing pools.",
-      "reason": "ChaosKey+ combines physical randomness with STRK20 privacy mechanisms.",
-      "facts_v2": true
-    },
-    "star_evidence": ""
   },
   {
     "slug": "starkwhisper",
