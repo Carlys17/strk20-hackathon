@@ -699,7 +699,7 @@ You are judging work in progress, halfway through a sprint. Depth of what has be
 
 Be sparing. Answering true to both should mean something. A project you are unsure about is false.
 
-why_innovative - ONE sentence, under 110 characters. State the fact that supports it: what this project does, in what domain, with what mechanism. Facts only, taken from the README and the stack above. No adjectives - "novel", "unique", "innovative", "sophisticated", "cutting-edge" are all banned, and so is any sentence that would still be true of a different project. Write what it is, not how good it is. If innovative is false, state the fact that makes it the obvious version.
+why_innovative - ONE sentence, under 110 characters. State the fact that supports it: what this project does, in what domain, with what mechanism. Facts only, taken from the README and the stack above. Every project here is built on STRK20, so never offer that as the answer - "applies privacy to X" is only worth writing when X is the surprising part. No adjectives: "novel", "unique", "innovative", "sophisticated", "cutting-edge", and no sentence that would still be true of a different project. Also banned: utilizes, leverages, employs, enables, seeks to, thereby, inherent in. Write what it is, not how good it is. If innovative is false, state the fact that makes it the obvious version.
 
 why_complex - ONE sentence, under 110 characters. Name the actual engineering: the contracts by name, what the Cairo does, the scheme or algorithm implemented. Facts only, and only ones visible in the contracts and stack above - never infer from the README's claims. No adjectives about quality. If complex is false, state what is absent.
 
@@ -763,10 +763,21 @@ function starOf(assessment, depth, wasStarred) {
 
 const DESC_SYSTEM = `You describe developer projects for a public hackathon board that other builders read.
 Return JSON: {"summary": string, "description_long": string}.
-summary: ONE sentence, under 110 characters, saying what the project does. Start with a verb or a noun phrase, never with the project's name or "This project".
-description_long: two or three sentences with the interesting technical substance - the approach, and the hard part they are solving.
-Plain English. No marketing adjectives, no "revolutionary", no "seamless", no exclamation marks.
-Never use an em dash. Use a comma, a colon, or two sentences instead. If the README is empty or says nothing, return empty strings.`;
+
+EVERY project on this board is built on STRK20, the Starknet privacy pool. That is the entry requirement, not an achievement. Never write that a project "utilizes the STRK20 Privacy Pool", "leverages privacy technology", or "addresses privacy concerns inherent in public blockchains" - it is true of all sixty of them and tells a reader nothing. Name STRK20 only where the specific thing being said would be wrong without it.
+
+summary: ONE sentence, under 110 characters, saying what someone can do with it. Start with a verb or a noun phrase, never with the project's name or "This project".
+
+description_long: two or three sentences. What it does, then how it is built - the contracts, the scheme, the actual pieces. Facts a reader could check by opening the repository.
+
+Write the way an engineer describes their own work to another engineer: flatly. Prefer the short word. "Sends" not "facilitates the transmission of". "Encrypts messages" not "employs client-side encryption to ensure confidentiality".
+
+BANNED - never use any of them: utilizes, leverages, employs, facilitates, empowers, enables (say what it does instead), seeks to, aims to, designed to, robust, seamless, cutting-edge, revolutionary, innovative, novel, sophisticated, comprehensive, solution, ecosystem, "thus", "thereby", "inherent in", "in the realm of", "addressing concerns", exclamation marks.
+
+Never use an em dash. Use a comma, a colon, or two sentences instead. If the README is empty or says nothing, return empty strings.
+
+Bad: "This project utilizes the STRK20 Privacy Pool for metadata-resistant communication, employing client-side encryption with ECDH key agreements, thus addressing privacy concerns inherent in public blockchain communications."
+Good: "Encrypted messaging with a payment attached to the message. Keys are agreed with ECDH in the browser, and the note spend and the message go on chain in one transaction."`;
 
 const PUSH_SYSTEM = `You summarise what a developer just pushed, for a live hackathon board.
 Return JSON: {"latest_push": string}.
@@ -932,12 +943,16 @@ async function buildProject(entry, prev) {
      change again on a project that has stopped pushing, so it would sit
      unjudged forever. */
   const assessmentUsable = !OPENAI_KEY || !!prev?.assessment?.facts_v2;
-  if (prev && headSha && prev.head_sha === headSha && summaryUsable && assessmentUsable) {
+  /* Same trap as the others: the wording changed, so what was written under the
+     old prompt has to be rewritten once even though nothing was pushed. */
+  const descUsable = !OPENAI_KEY || !!prev?.desc_v2 || !prev?.summary;
+  if (prev && headSha && prev.head_sha === headSha && summaryUsable && assessmentUsable && descUsable) {
     console.log(`  ${entry.slug}: unchanged`);
     return {
       ...base,
       head_sha: headSha,
       readme_hash: prev.readme_hash || "",
+      desc_v2: !!prev.desc_v2,
       summary: prev.summary || "",
       description_long: prev.description_long || "",
       latest_push: prev.latest_push || "",
@@ -970,7 +985,7 @@ async function buildProject(entry, prev) {
   /* Regenerate when the README changed, and also whenever we simply don't have
      a summary yet - same reasoning as the SHA cache. A README that never
      changes again would otherwise keep an empty description forever. */
-  if (readme && (readmeHash !== (prev?.readme_hash || "") || !summary)) {
+  if (readme && (readmeHash !== (prev?.readme_hash || "") || !summary || !prev?.desc_v2)) {
     const out = await openai(DESC_SYSTEM, `Project name: ${entry.name}\nTeam's own one-liner: ${entry.one_liner}\n\nREADME:\n${readme.slice(0, 6000)}`);
     if (out) {
       summary = out.summary || summary;
@@ -1064,6 +1079,10 @@ async function buildProject(entry, prev) {
     ...base,
     head_sha: headSha,
     readme_hash: readmeHash,
+    /* Written under the plain-language wording. Absent means the sentences came
+       from the prompt that let a project say it "utilizes the STRK20 Privacy
+       Pool", and they get rewritten once. */
+    desc_v2: true,
     churn_pct: churnPct,
     summary,
     description_long: descriptionLong,
