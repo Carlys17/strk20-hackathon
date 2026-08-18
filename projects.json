@@ -11,7 +11,7 @@
     "inspired_by": "IDEA-01",
     "affiliation": "",
     "starred": true,
-    "star_reason": "The project enables encrypted deal negotiation in a way that is not typically accessible.",
+    "star_reason": "Private deal negotiation and escrow settlement with integrated encryption on Starknet.",
     "contracts": [],
     "transactions": [],
     "verified_txs": 0,
@@ -21,7 +21,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-18T04:23:04Z",
+    "pushed_at": "2026-08-18T05:26:57Z",
     "stars": 0,
     "builders": [
       {
@@ -42,12 +42,12 @@
       "2026-08-17",
       "2026-08-18"
     ],
-    "head_sha": "518db931026e1b5dd01560b54b47c10dc42ef610",
+    "head_sha": "5cbcede0a940bcb728f900b94e682b5577737947",
     "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
-    "churn_pct": 6.1,
+    "churn_pct": 18.9,
     "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
     "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
-    "latest_push": "Added the VINSS invite helper and its corresponding tests.",
+    "latest_push": "Upgraded private offers with 1 STRK revenue and expanded escrow rekber flow.",
     "tooling": [
       {
         "label": "Cairo",
@@ -56,14 +56,14 @@
       }
     ],
     "has_readme": true,
-    "additions": 633,
-    "deletions": 0,
+    "additions": 1480,
+    "deletions": 536,
     "assessment": {
       "innovative": true,
       "complex": true,
-      "why_innovative": "It enables private negotiation and escrow in a single encrypted timeline.",
-      "why_complex": "It involves multiple Cairo helper contracts for messaging, offers, and escrow settlement.",
-      "reason": "The project facilitates encrypted negotiations and settlements, which isn't typically available.",
+      "why_innovative": "It enables encrypted negotiations and escrow in a private timeline between two parties.",
+      "why_complex": "The contracts include messaging, offers, escrow, and a custom indexer for event scanning.",
+      "reason": "Private deal negotiation and escrow settlement with integrated encryption on Starknet.",
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
@@ -80,7 +80,7 @@
     "inspired_by": "",
     "affiliation": "",
     "starred": true,
-    "star_reason": "Philoxenia offers trustless private payments within a unique peer-to-peer hospitality framework.",
+    "star_reason": "The project enables trustless private hospitality interactions through a unique social framework.",
     "contracts": [
       {
         "address": "0x056a817104ad7544a55873584f3d8fb41a780e5466d152b3e1f12d578e75defb",
@@ -122,7 +122,7 @@
       "mainnet": true
     },
     "status": "finished",
-    "pushed_at": "2026-08-18T04:16:55Z",
+    "pushed_at": "2026-08-18T05:16:32Z",
     "stars": 0,
     "builders": [
       {
@@ -140,17 +140,16 @@
       }
     ],
     "active_days": [
-      "2026-08-15",
       "2026-08-16",
       "2026-08-17",
       "2026-08-18"
     ],
-    "head_sha": "b8061bc2dbb5f240d8ba5511ceb6aa9bfa93de76",
+    "head_sha": "a9e6eaca76c6cfe0dccc5cb67fdeb7a0587728c5",
     "readme_hash": "9319:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
-    "churn_pct": 0.4,
+    "churn_pct": 0.6,
     "summary": "Facilitate private peer-to-peer hospitality on Starknet.",
     "description_long": "Philoxenia uses a social trust network for private hospitality, allowing hosts to share listings only with friends and guests through a valid introduction. The project integrates trustless payment settlement via Cairo escrow, focusing on privacy with STRK20 transactions while avoiding complexities of a public marketplace.",
-    "latest_push": "Updated messages for booking and payment flows across several pages.",
+    "latest_push": "Implemented Say Book & pay functionality across multiple pages.",
     "tooling": [
       {
         "label": "Cairo",
@@ -159,17 +158,187 @@
       }
     ],
     "has_readme": true,
-    "additions": 35,
-    "deletions": 29,
+    "additions": 52,
+    "deletions": 44,
     "assessment": {
       "innovative": true,
       "complex": true,
-      "why_innovative": "It creates a private hospitality protocol using a social trust network instead of public listings.",
-      "why_complex": "Utilizes multiple Cairo contracts like BookingEscrow and an anonymizer for privacy preservation.",
-      "reason": "Philoxenia offers trustless private payments within a unique peer-to-peer hospitality framework.",
+      "why_innovative": "It facilitates private hospitality connections among trusted individuals without public listings.",
+      "why_complex": "It utilizes multiple Cairo contracts including BookingEscrow and an anonymizer for secure payment processing.",
+      "reason": "The project enables trustless private hospitality interactions through a unique social framework.",
       "facts_v2": true
     },
     "star_evidence": "3 contracts deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "chaoskeyplus-appbuild",
+    "name": "ChaosKey+",
+    "one_liner": "Physical-chaos entropy device with a Ready Wallet API tab for STRK20 shield, private transfer, and unshield.",
+    "category": "Tooling",
+    "repo_url": "https://github.com/doodabug/Chaoskeyplus-appbuild",
+    "demo_url": "https://mobile-app-build-778.preview.emergentagent.com",
+    "demo_video": "https://www.youtube.com/watch?v=CHAOSKEY_DEMO_VIDEO",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project focuses on private transfer without any novel use of privacy technology.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": true,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-18T05:05:10Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "emergent-agent-e1",
+        "name": "emergent-agent-e1",
+        "avatar_url": "https://avatars.githubusercontent.com/u/222461215?v=4"
+      },
+      {
+        "login": "doodabug",
+        "name": "Doodlebug",
+        "avatar_url": "https://avatars.githubusercontent.com/u/272664821?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18"
+    ],
+    "head_sha": "44261e0480531de7f94d3398ba24ddcd36d1a0d2",
+    "readme_hash": "1974:# ChaosKey+ M3 — STRK20 hackathon sprint\n\nPhysical-chaos entropy device (Harvest / Tokens / Ledger) plus a **Pool** tab that talks to the Starknet STRK20 privacy pool through the user's Ready wallet.\n",
+    "churn_pct": 20.4,
+    "summary": "Integrate physical-chaos entropy device with STRK20 privacy features.",
+    "description_long": "This project combines a physical-chaos entropy device with a Ready Wallet API tab for interacting with the STRK20 privacy pool. It focuses on securely handling tokens generated by the device without holding a viewing key, which avoids the complexities of traditional ERC-20 management. The integration utilizes the Starknet Wallet API for enhanced communication and account abstraction, addressing the challenges of stable wallet connections.",
+    "latest_push": "Promoted starknetWalletUtils.js, starknetWallet.js, and PrivacyScreen.jsx to mainnet.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 156,
+    "deletions": 756,
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project implements a private transfer feature, which is an obvious application of privacy.",
+      "why_complex": "No deployed contracts or complex Cairo implementations are present.",
+      "reason": "The project focuses on private transfer without any novel use of privacy technology.",
+      "facts_v2": true
+    },
+    "star_evidence": ""
+  },
+  {
+    "slug": "morrow",
+    "name": "Morrow",
+    "one_liner": "A privacy preflight for STRK20 milestone payouts.",
+    "category": "Other",
+    "repo_url": "https://github.com/nftkingiii/Morrow",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Morrow's preflight uniquely clarifies privacy boundaries in milestone funding.",
+    "contracts": [],
+    "transactions": [
+      {
+        "hash": "0x074d1aa39677b6ac343631c828fb6cd0c7455aca04776cef27340c7b78635771",
+        "ok": true,
+        "pool": true,
+        "mine": null
+      },
+      {
+        "hash": "0x01426072154959aa0a3fb988c7757ccb19dc4c7e4b3794208e92c547167fd852",
+        "ok": true,
+        "pool": true,
+        "mine": null
+      }
+    ],
+    "verified_txs": 2,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-18T04:59:47Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "nftkingiii",
+        "name": "nftking",
+        "avatar_url": "https://avatars.githubusercontent.com/u/112104786?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-18"
+    ],
+    "head_sha": "0af998c0cf7f1f7955ea593d73d3cf34d0ac29a9",
+    "readme_hash": "5082:# Morrow\n\nMorrow is a privacy preflight for STRK20 milestone payouts. Before an operator funds a grant, it makes the transaction structure legible: what is public, what remains inside STRK20, and whet",
+    "churn_pct": 21.1,
+    "summary": "Facilitate privacy preflight for STRK20 milestone payouts.",
+    "description_long": "This project allows operators to evaluate funding routes while clarifying which transaction elements are public and which are private. It tackles the challenge of separating shielding and funding actions to prevent traceability, while ensuring compliance protocols are maintained without handling sensitive information like viewing keys or note secrets.",
+    "latest_push": "Hardened the Morrow escrow helper and fixed STRK20 fund amount encoding.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 440,
+    "deletions": 13,
+    "assessment": {
+      "innovative": true,
+      "complex": false,
+      "why_innovative": "Morrow provides a privacy preflight for milestone grants, determining funding structures distinctly.",
+      "why_complex": "No deployed contracts or significant engineering depth are demonstrated yet.",
+      "reason": "Morrow's preflight uniquely clarifies privacy boundaries in milestone funding.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "cloakra",
@@ -226,68 +395,6 @@
       "why_innovative": "The project merely applies privacy to grants and bounties, which is a conventional use.",
       "why_complex": "No actual Cairo contracts have been developed or deployed yet.",
       "reason": "Cloakra does not exemplify innovation or complexity in its current state.",
-      "facts_v2": true
-    },
-    "star_evidence": ""
-  },
-  {
-    "slug": "chaoskeyplus-appbuild",
-    "name": "ChaosKey+",
-    "one_liner": "Physical-chaos entropy device with a Ready Wallet API tab for STRK20 shield, private transfer, and unshield.",
-    "category": "Tooling",
-    "repo_url": "https://github.com/doodabug/Chaoskeyplus-appbuild",
-    "demo_url": "https://mobile-app-build-778.preview.emergentagent.com",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "ChaosKey+ combines physical randomness with STRK20 privacy mechanisms.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-18T02:29:13Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "emergent-agent-e1",
-        "name": "emergent-agent-e1",
-        "avatar_url": "https://avatars.githubusercontent.com/u/222461215?v=4"
-      },
-      {
-        "login": "doodabug",
-        "name": "doodabug",
-        "avatar_url": "https://avatars.githubusercontent.com/u/272664821?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-16",
-      "2026-08-17"
-    ],
-    "head_sha": "ae0369711dc33677ac8bcd0254641306e043a45d",
-    "readme_hash": "10303:# ChaosKey+ M3\n\n**A camera-entropy cryptographic device with STRK20 privacy on Starknet.**\n\nChaosKey+ turns your phone into a physical randomness generator. Every second, it hashes visual noise from y",
-    "summary": "Generate physical randomness for secure cryptographic tokens and STRK20 transactions.",
-    "description_long": "This project captures visual noise from the camera to create a secure randomness generator for cryptographic operations. It generates various types of tokens bound to a signed ledger of entropy, ensuring tamper-proof expiry and verification capabilities. The integration with STRK20 allows private shielded transactions on Starknet, where security and privacy concerns are effectively managed.",
-    "latest_push": "Created a GitHub Actions workflow for Node.js.",
-    "tooling": [],
-    "has_readme": true,
-    "additions": 31,
-    "deletions": 0,
-    "churn_pct": 0.7,
-    "assessment": {
-      "innovative": true,
-      "complex": false,
-      "why_innovative": "It captures physical randomness to generate cryptographic tokens bound to entropy.",
-      "why_complex": "No Cairo contracts were declared; it lacks interaction depth with existing pools.",
-      "reason": "ChaosKey+ combines physical randomness with STRK20 privacy mechanisms.",
       "facts_v2": true
     },
     "star_evidence": ""
@@ -3328,112 +3435,6 @@
       "why_innovative": "Project focuses on a private treasury control but is fundamentally a payment app with a private aspect.",
       "why_complex": "There are no deployed contracts or meaningful Cairo implementations present in the project.",
       "reason": "The project resembles existing private payment solutions without advanced privacy engineering.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "morrow",
-    "name": "Morrow",
-    "one_liner": "A privacy preflight for STRK20 milestone payouts.",
-    "category": "Other",
-    "repo_url": "https://github.com/nftkingiii/Morrow",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Morrow presents a static privacy preflight for milestone payouts without substantial underlying implementation.",
-    "contracts": [],
-    "transactions": [
-      {
-        "hash": "0x074d1aa39677b6ac343631c828fb6cd0c7455aca04776cef27340c7b78635771",
-        "ok": true,
-        "pool": true,
-        "mine": null
-      },
-      {
-        "hash": "0x01426072154959aa0a3fb988c7757ccb19dc4c7e4b3794208e92c547167fd852",
-        "ok": true,
-        "pool": true,
-        "mine": null
-      }
-    ],
-    "verified_txs": 2,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-16T13:11:54Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "nftkingiii",
-        "name": "nftking",
-        "avatar_url": "https://avatars.githubusercontent.com/u/112104786?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16"
-    ],
-    "head_sha": "11c08be193e93e38ce277d51808bde80e7a20e8e",
-    "readme_hash": "5082:# Morrow\n\nMorrow is a privacy preflight for STRK20 milestone payouts. Before an operator funds a grant, it makes the transaction structure legible: what is public, what remains inside STRK20, and whet",
-    "summary": "Facilitate privacy preflight for STRK20 milestone payouts.",
-    "description_long": "This project allows operators to evaluate funding routes while clarifying which transaction elements are public and which are private. It tackles the challenge of separating shielding and funding actions to prevent traceability, while ensuring compliance protocols are maintained without handling sensitive information like viewing keys or note secrets.",
-    "latest_push": "Completed phase one of STRK20 wallet and documented its verified evidence.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 5,
-    "deletions": 5,
-    "churn_pct": 0.5,
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "This project enables masking of grant recipient identity, but is essentially a privacy wrapper.",
-      "why_complex": "No deployed contracts or complex Cairo interactions exist yet.",
-      "reason": "Morrow presents a static privacy preflight for milestone payouts without substantial underlying implementation.",
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
