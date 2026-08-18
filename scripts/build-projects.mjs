@@ -772,12 +772,20 @@ description_long: two or three sentences. What it does, then how it is built - t
 
 Write the way an engineer describes their own work to another engineer: flatly. Prefer the short word. "Sends" not "facilitates the transmission of". "Encrypts messages" not "employs client-side encryption to ensure confidentiality".
 
-BANNED - never use any of them: utilizes, leverages, employs, facilitates, empowers, enables (say what it does instead), seeks to, aims to, designed to, robust, seamless, cutting-edge, revolutionary, innovative, novel, sophisticated, comprehensive, solution, ecosystem, "thus", "thereby", "inherent in", "in the realm of", "addressing concerns", exclamation marks.
+BANNED - never use any of them: utilizes, leverages, employs, facilitates, empowers, enables (say what it does instead), seeks to, aims to, designed to, provides, incorporates, offers, robust, seamless, cutting-edge, revolutionary, innovative, novel, sophisticated, comprehensive, solution, ecosystem, platform, architecture, "its architecture includes", "components like", "thus", "thereby", "inherent in", "in the realm of", "addressing concerns", exclamation marks.
+
+Do not say a project "provides a platform for" doing something. It does the thing. Do not introduce a list with "its architecture includes components like" - name the parts.
 
 Never use an em dash. Use a comma, a colon, or two sentences instead. If the README is empty or says nothing, return empty strings.
 
 Bad: "This project utilizes the STRK20 Privacy Pool for metadata-resistant communication, employing client-side encryption with ECDH key agreements, thus addressing privacy concerns inherent in public blockchain communications."
 Good: "Encrypted messaging with a payment attached to the message. Keys are agreed with ECDH in the browser, and the note spend and the message go on chain in one transaction."`;
+
+/* Checked in code after the call, because the prompt alone did not hold. */
+const BANNED_WORDS = ["utilizes", "utilize", "leverages", "leverage", "employs", "facilitates",
+  "empowers", "seeks to", "aims to", "provides", "incorporates", "offers", "robust", "seamless",
+  "cutting-edge", "revolutionary", "sophisticated", "comprehensive", "platform", "architecture",
+  "thereby", "inherent"];
 
 const PUSH_SYSTEM = `You summarise what a developer just pushed, for a live hackathon board.
 Return JSON: {"latest_push": string}.
@@ -945,14 +953,14 @@ async function buildProject(entry, prev) {
   const assessmentUsable = !OPENAI_KEY || !!prev?.assessment?.facts_v2;
   /* Same trap as the others: the wording changed, so what was written under the
      old prompt has to be rewritten once even though nothing was pushed. */
-  const descUsable = !OPENAI_KEY || !!prev?.desc_v2 || !prev?.summary;
+  const descUsable = !OPENAI_KEY || !!prev?.desc_v3 || !prev?.summary;
   if (prev && headSha && prev.head_sha === headSha && summaryUsable && assessmentUsable && descUsable) {
     console.log(`  ${entry.slug}: unchanged`);
     return {
       ...base,
       head_sha: headSha,
       readme_hash: prev.readme_hash || "",
-      desc_v2: !!prev.desc_v2,
+      desc_v3: !!prev.desc_v3,
       summary: prev.summary || "",
       description_long: prev.description_long || "",
       latest_push: prev.latest_push || "",
@@ -985,8 +993,24 @@ async function buildProject(entry, prev) {
   /* Regenerate when the README changed, and also whenever we simply don't have
      a summary yet - same reasoning as the SHA cache. A README that never
      changes again would otherwise keep an empty description forever. */
-  if (readme && (readmeHash !== (prev?.readme_hash || "") || !summary || !prev?.desc_v2)) {
-    const out = await openai(DESC_SYSTEM, `Project name: ${entry.name}\nTeam's own one-liner: ${entry.one_liner}\n\nREADME:\n${readme.slice(0, 6000)}`);
+  if (readme && (readmeHash !== (prev?.readme_hash || "") || !summary || !prev?.desc_v3)) {
+    const ask = (extra) => openai(
+      DESC_SYSTEM + extra,
+      `Project name: ${entry.name}\nTeam's own one-liner: ${entry.one_liner}\n\nREADME:\n${readme.slice(0, 6000)}`,
+    );
+
+    let out = await ask("");
+    /* The ban is checked rather than trusted. Asked once, the model still
+       reached for "provides a platform for" and "its architecture includes
+       components like" - so the offending words are handed back to it by name
+       and it gets one more go. */
+    const offenders = (text) => BANNED_WORDS.filter((w) => new RegExp(`\\b${w}\\b`, "i").test(text || ""));
+    let bad = offenders(`${out?.summary || ""} ${out?.description_long || ""}`);
+    if (out && bad.length) {
+      const retry = await ask(`\n\nYour previous answer used these banned words: ${bad.join(", ")}. Write it again without them, saying the same facts in plainer words.`);
+      if (retry && !offenders(`${retry.summary || ""} ${retry.description_long || ""}`).length) out = retry;
+      else warn(`${entry.slug}: description still uses ${bad.join(", ")}`);
+    }
     if (out) {
       summary = out.summary || summary;
       descriptionLong = out.description_long || descriptionLong;
@@ -1082,7 +1106,7 @@ async function buildProject(entry, prev) {
     /* Written under the plain-language wording. Absent means the sentences came
        from the prompt that let a project say it "utilizes the STRK20 Privacy
        Pool", and they get rewritten once. */
-    desc_v2: true,
+    desc_v3: true,
     churn_pct: churnPct,
     summary,
     description_long: descriptionLong,
