@@ -14,14 +14,47 @@
  */
 
 import { readFileSync } from "node:fs";
+import { execFileSync } from "node:child_process";
 
 const TOKEN = process.env.GITHUB_TOKEN || "";
 const CATEGORIES = ["Consumer", "DeFi", "Tooling", "Infra", "Payments", "Gaming", "Other"];
 const STATUSES = ["building", "finished"];
 
+/* Which entries were already on main before this change.
+ *
+ * A pull request adds one row. It has no way to fix a row somebody else
+ * registered, and no business being rejected for one - but this file is checked
+ * whole, so when Portablelle/veilance-market started answering 404 it failed
+ * every registration behind it: eighteen open pull requests, nothing applied
+ * for two days, four teams reporting the same wall.
+ *
+ * So a problem with a pre-existing entry is reported and does not fail the run.
+ * A problem with an entry this change introduces still does. Without a baseline
+ * to compare against - someone running the script by hand - everything is
+ * treated as new, which is the stricter reading. */
+const BASELINE_REF = process.env.BASELINE_REF || "origin/main";
+const preExisting = new Set();
+try {
+  const raw = execFileSync("git", ["show", `${BASELINE_REF}:registry.json`], { encoding: "utf8" });
+  for (const entry of JSON.parse(raw)) {
+    if (entry?.repo_url) preExisting.add(String(entry.repo_url).trim().toLowerCase());
+  }
+} catch {
+  /* No baseline reachable. Judge everything. */
+}
+const wasThereBefore = (entry) =>
+  preExisting.size > 0 && preExisting.has(String(entry?.repo_url || "").trim().toLowerCase());
+
 const errors = [];
+const inherited = [];
 const notes = [];
-const err = (where, msg) => errors.push(`${where}: ${msg}`);
+/* Every failure goes through here, and where it lands depends on whether the
+   entry was already on main: a fault someone else shipped is reported, a fault
+   this change introduces stops it. */
+const err = (where, msg, entry) => {
+  if (entry && wasThereBefore(entry)) inherited.push(`${where}: ${msg}`);
+  else errors.push(`${where}: ${msg}`);
+};
 
 let registry;
 try {
@@ -53,24 +86,24 @@ registry.forEach((entry, i) => {
   const where = entry?.slug ? `entry #${i + 1} "${entry.slug}"` : (entry?.repo_url ? `entry #${i + 1} (${entry.repo_url})` : `entry #${i + 1}`);
 
   if (typeof entry !== "object" || entry === null) {
-    err(where, "is not an object");
+    err(where, "is not an object", entry);
     return;
   }
 
   /* Only two things cannot be read from the repository. Everything else is
      derived, and the entry may override it. */
   if (!entry.repo_url || typeof entry.repo_url !== "string" || !entry.repo_url.trim()) {
-    err(where, '"repo_url" is required');
+    err(where, '"repo_url" is required', entry);
   }
 
   const parsed = parseRepo(entry.repo_url);
   const slug = entry.slug || (parsed ? parsed.repo.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") : "");
   if (entry.slug && !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(entry.slug)) {
-    err(where, `slug "${entry.slug}" must be lowercase and hyphenated, e.g. "zk-mail"`);
+    err(where, `slug "${entry.slug}" must be lowercase and hyphenated, e.g. "zk-mail"`, entry);
   }
   if (slug) {
     if (seen.has(slug)) {
-      err(where, `slug "${slug}" is already used by entry #${seen.get(slug) + 1}`);
+      err(where, `slug "${slug}" is already used by entry #${seen.get(slug) + 1}`, entry);
     } else {
       seen.set(slug, i);
     }
@@ -88,18 +121,18 @@ registry.forEach((entry, i) => {
   /* Optional: at registration the only valid value is "building", so requiring
      it would just be boilerplate. Absent means building. */
   if (entry.status && !STATUSES.includes(entry.status)) {
-    err(where, `status "${entry.status}" must be "building" or "finished"`);
+    err(where, `status "${entry.status}" must be "building" or "finished"`, entry);
   }
 
   /* Registrations merge unattended, so this is the only contact detail anyone
      collects. Without a reachable handle there is no way to reach a team about
      their entry, their submission, or a prize. */
   if (!Array.isArray(entry.telegram) || entry.telegram.length === 0) {
-    err(where, '"telegram" must be a non-empty array of Telegram usernames, one per person on the team');
+    err(where, '"telegram" must be a non-empty array of Telegram usernames, one per person on the team', entry);
   } else {
     for (const h of entry.telegram) {
       if (typeof h !== "string" || /^@|t\.me|https?:|\s/.test(h)) {
-        err(where, `telegram entry "${h}" should be a bare username without "@" or a t.me link`);
+        err(where, `telegram entry "${h}" should be a bare username without "@" or a t.me link`, entry);
       }
     }
     toAdd.push({ slug: entry.slug || `entry #${i + 1}`, handles: entry.telegram });
@@ -111,28 +144,28 @@ registry.forEach((entry, i) => {
   /* Optional: builders are detected from the commit history. The field is a
      top-up for anyone detection misses, so an empty one is fine. */
   if (entry.team !== undefined && !Array.isArray(entry.team)) {
-    err(where, '"team" must be an array of GitHub usernames, or left out entirely');
+    err(where, '"team" must be an array of GitHub usernames, or left out entirely', entry);
   } else if (Array.isArray(entry.team)) {
     for (const h of entry.team) {
       if (typeof h !== "string" || /^https?:|@|\s|\//.test(h)) {
-        err(where, `team entry "${h}" should be a bare GitHub handle, not a URL or @mention`);
+        err(where, `team entry "${h}" should be a bare GitHub handle, not a URL or @mention`, entry);
       }
     }
   }
 
   if (entry.x_handle && /^@|x\.com|twitter\.com/i.test(entry.x_handle)) {
-    err(where, `x_handle should be the bare handle without "@" or a URL - got "${entry.x_handle}"`);
+    err(where, `x_handle should be the bare handle without "@" or a URL - got "${entry.x_handle}"`, entry);
   }
 
   if (entry.demo_url && !/^https?:\/\//i.test(entry.demo_url)) {
-    err(where, `demo_url must start with http:// or https:// - got "${entry.demo_url}"`);
+    err(where, `demo_url must start with http:// or https:// - got "${entry.demo_url}"`, entry);
   }
 
   const repo = parseRepo(entry.repo_url);
   if (entry.repo_url && !repo) {
-    err(where, `repo_url "${entry.repo_url}" is not a GitHub repository URL`);
+    err(where, `repo_url "${entry.repo_url}" is not a GitHub repository URL`, entry);
   } else if (repo) {
-    repoChecks.push({ where, ...repo });
+    repoChecks.push({ where, entry, ...repo });
   }
 
   /* Nothing here enforces submission any more. Mainnet address, contracts and
@@ -159,7 +192,7 @@ registry.forEach((entry, i) => {
  * catching a private or misspelled repo at PR time rather than discovering it
  * when the hub renders a project nobody can open. */
 if (repoChecks.length && TOKEN) {
-  for (const { where, owner, repo } of repoChecks) {
+  for (const { where, entry, owner, repo } of repoChecks) {
     try {
       const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`, {
         headers: {
@@ -169,10 +202,10 @@ if (repoChecks.length && TOKEN) {
         },
       });
       if (res.status === 404) {
-        err(where, `${owner}/${repo} is not reachable - it must be public (or the URL has a typo)`);
+        err(where, `${owner}/${repo} is not reachable - it must be public (or the URL has a typo)`, entry);
       } else if (res.ok) {
         const meta = await res.json();
-        if (meta.private) err(where, `${owner}/${repo} is private - public repositories are required`);
+        if (meta.private) err(where, `${owner}/${repo} is private - public repositories are required`, entry);
         if (!meta.license) notes.push(`${where}: ${owner}/${repo} has no license. Add one before submitting - it counts toward the open-source score.`);
         /* Not a rejection: registering the minute the repository exists is
            fine and the place is kept. It just does not draw a row yet, and
@@ -196,6 +229,15 @@ for (const n of notes) console.log(`note: ${n}`);
 if (toAdd.length) {
   console.log("\nTelegram usernames in this registry:");
   for (const { slug, handles } of toAdd) console.log(`  ${slug}: ${handles.join(", ")}`);
+}
+
+/* Reported, not fatal. Somebody has to fix these, but not the person whose
+   registration happens to be next in the queue. */
+if (inherited.length) {
+  console.log(`\n${inherited.length} problem${inherited.length === 1 ? "" : "s"} with ${inherited.length === 1 ? "an entry" : "entries"} already on ${BASELINE_REF}, not caused by this change:\n`);
+  for (const e of inherited) console.log(`  ! ${e}`);
+  console.log("\nThese do not block this pull request. A repository that has gone for good is");
+  console.log('removed by adding it to registry-removals.json with a reason.');
 }
 
 if (errors.length) {

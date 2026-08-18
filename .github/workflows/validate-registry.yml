@@ -51,6 +51,10 @@ jobs:
       - name: Check registry.json
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # A problem with a row already on main is reported, not fatal: a pull
+          # request cannot fix somebody else's entry and should not be held for
+          # one.
+          BASELINE_REF: origin/main
         run: node scripts/validate-registry.mjs
 
       # Fails if a project that was ever accepted on main is not in this file.

@@ -170,7 +170,9 @@ jobs:
             for attempt in 1 2 3; do
               cp "$RUNNER_TEMP/merged.json" registry.json
 
-              if ! node scripts/validate-registry.mjs; then
+              # Judged against main, so a row somebody else broke is reported
+              # rather than rejecting a registration that never touched it.
+              if ! BASELINE_REF=origin/main node scripts/validate-registry.mjs; then
                 gh pr comment "$n" --body "\`registry.json\` does not validate, so this is not going in yet. Every problem is listed in the Registrations run - push a fix to this branch and it will be applied on its own."
                 git checkout --quiet -- registry.json
                 break
