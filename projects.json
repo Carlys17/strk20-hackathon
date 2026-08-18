@@ -1,95 +1,5 @@
 [
   {
-    "slug": "strk20-privacy-wallet",
-    "name": "strk20-privacy-wallet",
-    "one_liner": "Umbra-grade privacy wallet for Starknet powered by STRK20 privacy pool",
-    "category": "Other",
-    "repo_url": "https://github.com/SmratJay/strk20-privacy-wallet",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project lacks both innovation in privacy application and complexity in engineering.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-18T10:41:09Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "SmratJay",
-        "name": "SmratJay",
-        "avatar_url": "https://avatars.githubusercontent.com/u/74355410?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18"
-    ],
-    "head_sha": "03ccd459be982aab9bfa23d17366a95257622d66",
-    "readme_hash": "9286:# 🔒 STRK20 Privacy Wallet (Umbra Mode)\n\n> **Umbra-grade privacy UX on Starknet — fully powered by the native STRK20 Note-Based Privacy Pool.**\n\nBuilt by **Jai Bhati** ([@SmratJay](https://github.com/",
-    "desc_v3": true,
-    "churn_pct": 9.4,
-    "summary": "Manage encrypted transactions and stealth payments within a privacy wallet.",
-    "description_long": "STRK20 Privacy Wallet allows users to perform encrypted transactions and send stealth payments on Starknet. It features a universal wallet support using an in-browser UTXO vault engine, a dual balance dashboard for viewing both on-chain and encrypted balances, and dynamic QR payment invoices. The implementation consists of core UI components, a stealth engine, and integration with AVNU for DEX swaps, all backed by cryptographic primitives that match the STRK20 protocol.",
-    "latest_push": "Implemented a modern SaaS landing page with interactive cursor effects.",
-    "tooling": [
-      {
-        "label": "AVNU",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1372,
-    "deletions": 405,
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "applies privacy to a wallet but offers no new technology or mechanism beyond existing solutions.",
-      "why_complex": "no deployed contracts or innovative engineering work is present to assess.",
-      "reason": "The project lacks both innovation in privacy application and complexity in engineering.",
-      "facts_v2": true
-    },
-    "star_evidence": ""
-  },
-  {
     "slug": "philoxenia",
     "name": "philoxenia",
     "one_liner": "Private P2P hospitality on Starknet — STRK20 Private Sprint",
@@ -143,7 +53,7 @@
       "mainnet": true
     },
     "status": "finished",
-    "pushed_at": "2026-08-18T10:38:13Z",
+    "pushed_at": "2026-08-18T11:18:51Z",
     "stars": 0,
     "builders": [
       {
@@ -165,13 +75,13 @@
       "2026-08-17",
       "2026-08-18"
     ],
-    "head_sha": "97ed841c4b3ca178a562c1f476ce2664d657a1fa",
+    "head_sha": "dbd25aa6b1465bb231ef0329271640c89b004c30",
     "readme_hash": "9319:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
     "desc_v3": true,
-    "churn_pct": 0.7,
+    "churn_pct": 1.3,
     "summary": "Book private accommodations through trusted connections.",
     "description_long": "Philoxenia is a peer-to-peer hospitality protocol that allows users to book accommodations privately using a social trust network. It consists of a frontend built with Next.js connected to a Fastify backend with a PostgreSQL database, and on-chain contracts written in Cairo for escrow and payment settlement.",
-    "latest_push": "Changed the 'Booking not found' message to indicate availability status.",
+    "latest_push": "Changed error messages for connection and payment status.",
     "tooling": [
       {
         "label": "Cairo",
@@ -180,8 +90,8 @@
       }
     ],
     "has_readme": true,
-    "additions": 66,
-    "deletions": 45,
+    "additions": 114,
+    "deletions": 76,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -191,6 +101,172 @@
       "facts_v2": true
     },
     "star_evidence": "3 contracts deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "envelope",
+    "name": "envelope",
+    "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
+    "category": "Payments",
+    "repo_url": "https://github.com/0xrlawrence/envelope",
+    "demo_url": "https://0xrlawrence.github.io/envelope/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-09",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Envelopes allow anonymous payments without revealing the funder's identity.",
+    "contracts": [
+      {
+        "address": "0x04ff4f083a4667930efe14963645f9bda00bb10d44e4c13a9ee808e66c076211",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-18T10:58:43Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "0xrlawrence",
+        "name": "0xrlawrence",
+        "avatar_url": "https://avatars.githubusercontent.com/u/250132405?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18"
+    ],
+    "head_sha": "9e07cc7bf99a0648fb379444c08ac0e7a579fa40",
+    "readme_hash": "6803:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
+    "desc_v3": true,
+    "churn_pct": 10.8,
+    "summary": "Send private money through a link to any Starknet address.",
+    "description_long": "Envelope is an anonymizer contract and app that allows you to shield tokens and seal an amount into an envelope, which can then be sent as a URL. The system consists of an on-chain contract with a privacy invoke entry point, a public entry point for non-pool participants, and a JavaScript SDK to generate claim links. The envelope can be funded privately through a pool or publicly via any Starknet address, with features such as time locks and refund keys.",
+    "latest_push": "Added the Envelope product promo video and related assets.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1177,
+    "deletions": 0,
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "applies privacy to casual payments through URL-based envelope links for non-Starknet users.",
+      "why_complex": "implements the `EnvelopeAnonymizer` contract with non-public funding mechanisms and a secure release signature scheme.",
+      "reason": "Envelopes allow anonymous payments without revealing the funder's identity.",
+      "facts_v2": true
+    },
+    "star_evidence": "1 contract deployed, Cairo in the repository"
+  },
+  {
+    "slug": "strk20-privacy-wallet",
+    "name": "strk20-privacy-wallet",
+    "one_liner": "Umbra-grade privacy wallet for Starknet powered by STRK20 privacy pool",
+    "category": "Other",
+    "repo_url": "https://github.com/SmratJay/strk20-privacy-wallet",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project lacks both innovation in privacy application and complexity in engineering.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-18T10:41:09Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "SmratJay",
+        "name": "SmratJay",
+        "avatar_url": "https://avatars.githubusercontent.com/u/74355410?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18"
+    ],
+    "head_sha": "03ccd459be982aab9bfa23d17366a95257622d66",
+    "readme_hash": "9286:# 🔒 STRK20 Privacy Wallet (Umbra Mode)\n\n> **Umbra-grade privacy UX on Starknet — fully powered by the native STRK20 Note-Based Privacy Pool.**\n\nBuilt by **Jai Bhati** ([@SmratJay](https://github.com/",
+    "desc_v3": true,
+    "summary": "Manage encrypted transactions and stealth payments within a privacy wallet.",
+    "description_long": "STRK20 Privacy Wallet allows users to perform encrypted transactions and send stealth payments on Starknet. It features a universal wallet support using an in-browser UTXO vault engine, a dual balance dashboard for viewing both on-chain and encrypted balances, and dynamic QR payment invoices. The implementation consists of core UI components, a stealth engine, and integration with AVNU for DEX swaps, all backed by cryptographic primitives that match the STRK20 protocol.",
+    "latest_push": "Implemented a modern SaaS landing page with interactive cursor effects.",
+    "tooling": [
+      {
+        "label": "AVNU",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1372,
+    "deletions": 405,
+    "churn_pct": 9.4,
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "applies privacy to a wallet but offers no new technology or mechanism beyond existing solutions.",
+      "why_complex": "no deployed contracts or innovative engineering work is present to assess.",
+      "reason": "The project lacks both innovation in privacy application and complexity in engineering.",
+      "facts_v2": true
+    },
+    "star_evidence": ""
   },
   {
     "slug": "vinss",
@@ -238,7 +314,6 @@
     "head_sha": "fd8beb0f6ab4527bedc2cd67b5a19cb48c0c00d6",
     "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
     "desc_v3": true,
-    "churn_pct": 1.3,
     "summary": "Conduct private negotiations with encrypted messaging and escrow settlement.",
     "description_long": "Two parties can negotiate and settle payments inside one encrypted timeline. It is built with Cairo helper contracts for messaging, offers, private escrow, and escrow settlement, all interfacing through the STRK20 Privacy Pool's `InvokeExternal`.",
     "latest_push": "Fixed the withdrawal replay anchor for the invite contract.",
@@ -252,6 +327,7 @@
     "has_readme": true,
     "additions": 31,
     "deletions": 107,
+    "churn_pct": 1.3,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -304,7 +380,6 @@
     "head_sha": "c144c7454a39bf477a89f19aef8628316927f866",
     "readme_hash": "5690:<div align=\"center\">\n\n# Veyl\n\n**A private launch & trading terminal on Starknet.**\n\nTrade and launch tokens without your wallet becoming a target — funded through the [STRK20](https://strk20-by-exampl",
     "desc_v3": true,
-    "churn_pct": 0.3,
     "summary": "Trade and launch tokens without exposing wallet links.",
     "description_long": "Veyl is a trading and launch terminal where executed trades remain unlinkable to the user's wallet. It allows users to deposit into the STRK20 privacy pool, trade from anonymous execution identities, and conduct sealed-bid launches with escrowed STRK20 notes. The project consists of a frontend built with Next.js, a backend utilizing Cairo contracts, and integration with STRK20 for shielded funding and private transfers.",
     "latest_push": "Fixed the Trade tab being stuck on 'Loading tokens...' in Sepolia.",
@@ -348,6 +423,7 @@
     "has_readme": true,
     "additions": 13,
     "deletions": 1,
+    "churn_pct": 0.3,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -357,82 +433,6 @@
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "envelope",
-    "name": "envelope",
-    "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
-    "category": "Payments",
-    "repo_url": "https://github.com/0xrlawrence/envelope",
-    "demo_url": "https://0xrlawrence.github.io/envelope/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-09",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Envelopes allow anonymous payments without revealing the funder's identity.",
-    "contracts": [
-      {
-        "address": "0x04ff4f083a4667930efe14963645f9bda00bb10d44e4c13a9ee808e66c076211",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-18T08:28:20Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "0xrlawrence",
-        "name": "0xrlawrence",
-        "avatar_url": "https://avatars.githubusercontent.com/u/250132405?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18"
-    ],
-    "head_sha": "c488300083e9a71549235f85dcac3d6b97018a88",
-    "readme_hash": "6803:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
-    "desc_v3": true,
-    "summary": "Send private money through a link to any Starknet address.",
-    "description_long": "Envelope is an anonymizer contract and app that allows you to shield tokens and seal an amount into an envelope, which can then be sent as a URL. The system consists of an on-chain contract with a privacy invoke entry point, a public entry point for non-pool participants, and a JavaScript SDK to generate claim links. The envelope can be funded privately through a pool or publicly via any Starknet address, with features such as time locks and refund keys.",
-    "latest_push": "Dropped the rule above the on-chain receipt and clarified approval terminology.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 31,
-    "deletions": 14,
-    "churn_pct": 0.5,
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "applies privacy to casual payments through URL-based envelope links for non-Starknet users.",
-      "why_complex": "implements the `EnvelopeAnonymizer` contract with non-public funding mechanisms and a secure release signature scheme.",
-      "reason": "Envelopes allow anonymous payments without revealing the funder's identity.",
-      "facts_v2": true
-    },
-    "star_evidence": "1 contract deployed, Cairo in the repository"
   },
   {
     "slug": "crewkill-strk20",
