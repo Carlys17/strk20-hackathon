@@ -330,11 +330,21 @@ async function detectBuilders(owner, repo, entry, meta) {
     (lifetime.get(b.login) || 0) - (lifetime.get(a.login) || 0));
 
   /* Anyone the team listed by hand and detection missed: a different commit
-     email, a co-author, someone who hasn't pushed yet. */
+     email, a co-author, someone who hasn't pushed yet.
+     Matched without case, because GitHub handles are case-insensitive and the
+     two sources disagree about capitals: chaoskeyplus-appbuild declared
+     "doodabug" while the commits carry "Doodabug", and the row listed them
+     twice. */
+  const already = new Set([...detected, ...agents.values()].map((b) => (b.login || "").toLowerCase()));
   const declared = Array.isArray(entry.team) ? entry.team : [];
   for (const login of declared) {
-    if (typeof login !== "string" || seen.has(login)) continue;
-    detected.push(await resolveUser(login));
+    if (typeof login !== "string" || already.has(login.toLowerCase())) continue;
+    const user = await resolveUser(login);
+    /* resolveUser answers with GitHub's own spelling, which may differ again
+       from the one that was typed. */
+    if (already.has((user.login || "").toLowerCase())) continue;
+    already.add((user.login || "").toLowerCase());
+    detected.push(user);
   }
 
   /* A project whose every commit is signed by an agent has no human in its
@@ -347,8 +357,20 @@ async function detectBuilders(owner, repo, entry, meta) {
     if (account?.type === "User" && !agentFamily(owner)) detected.push(await resolveUser(owner));
   }
 
+  /* One row per person, whatever route they arrived by - sprint commits,
+     lifetime contributors, the declared team, or the owner fallback. Cheaper to
+     guarantee here than to reason about four sources agreeing on capitals. */
+  const unique = [];
+  const emitted = new Set();
+  for (const b of detected) {
+    const key = (b.login || "").toLowerCase();
+    if (!key || emitted.has(key)) continue;
+    emitted.add(key);
+    unique.push(b);
+  }
+
   return {
-    builders: detected,
+    builders: unique,
     agents: [...agents.values()].sort((x, y) => y.commits - x.commits),
     /* Sprint days only. The fallback query above reaches outside the window to
        find faces for a repository that has not pushed yet, and those commits
