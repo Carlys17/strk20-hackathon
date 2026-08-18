@@ -39,9 +39,9 @@
     "readme_hash": "5470:# GameShield — Private Gaming Bounty Hub\n\nGameShield is a STRK20 prototype for private gaming reward flows on Starknet. It uses the STRK20 pool directly — rewards are deposited, transferred and withdr",
     "desc_v3": true,
     "churn_pct": 74.2,
-    "summary": "Create and manage private gaming bounty campaigns with shielded rewards.",
-    "description_long": "GameShield is a private gaming bounty hub on Starknet that allows organizers to create campaigns with shielded rewards for winners. It consists of a Cairo contract for a multi-token campaign registry and a payout helper, and a Next.js dapp for managing campaigns, funding, and payouts. All transactions occur via the STRK20 pool using wallet API calls, ensuring no viewing keys or recipient private keys are exposed.",
-    "latest_push": "Implemented multi-token rewards and updated related tests for the registry.",
+    "summary": "Manage private gaming bounty campaigns with shielded prize payouts.",
+    "description_long": "GameShield is a prototype for private gaming reward flows. It includes a campaign registry for multiple tokens and a payout helper contract, both written in Cairo. Transactions for funding and payouts are executed via STRK20 shielded notes, ensuring that payment details remain confidential while maintaining verifiable records on-chain.",
+    "latest_push": "Implemented multi-token rewards and updated associated tests.",
     "tooling": [
       {
         "label": "Cairo",
@@ -191,10 +191,10 @@
     "head_sha": "853d58eb4d8ae3b71bb6bbb25cb8c2fd9b781b31",
     "readme_hash": "3236:# Rhizome\n\n**Private yield on Starknet that prices its own privacy.**\n\nBuilt for the [STRK20 Private Sprint](https://strk20.starknet.io/hackathon), against the live\nSTRK20 privacy pool on Starknet mai",
     "desc_v3": true,
-    "churn_pct": 0,
+    "churn_pct": 100,
     "summary": "Prices privacy for private yield scheduling on STRK20.",
     "description_long": "Rhizome computes the cost of unlinkability for private DeFi transactions. It reads live fees from the STRK20 pool, analyzes data for blending deposits, determines the optimal tranche count, and executes the chosen schedule through its own anonymizer contract. The setup includes the Starknet Wallet API, relevant Starknet discovery packages, and a Cairo anonymizer contract.",
-    "latest_push": "Added Vesu lending anonymizer skeleton and Cairo CI pipeline.",
+    "latest_push": "Added the Vesu lending anonymizer skeleton and Cairo CI pipeline.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -205,13 +205,18 @@
         "label": "starknet.js",
         "live": false,
         "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
       }
     ],
     "has_readme": true,
     "additions": 222,
     "deletions": 0,
     "assessment": null,
-    "star_evidence": ""
+    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "philoxenia",
@@ -294,7 +299,7 @@
     "churn_pct": 0.8,
     "summary": "Book private accommodations through trusted connections.",
     "description_long": "Philoxenia is a peer-to-peer hospitality protocol that allows users to book accommodations privately using a social trust network. It consists of a frontend built with Next.js connected to a Fastify backend with a PostgreSQL database, and on-chain contracts written in Cairo for escrow and payment settlement.",
-    "latest_push": "Renamed several social interaction and invitation-related terms.",
+    "latest_push": "Updated terminology for invitations and friendship actions.",
     "tooling": [
       {
         "label": "Cairo",
@@ -384,7 +389,7 @@
     "churn_pct": 0.6,
     "summary": "Manage payrolls with private payment records and selective disclosure.",
     "description_long": "VeilPay enables private payroll processing where only payees and auditors can access detailed payment information. It uses Next.js, starknet.js, and a Cairo helper contract to handle transactions on Starknet, allowing public verification of payment batches without revealing recipient identities or amounts.",
-    "latest_push": "Documented 3 recipient-wallet shields and updated strk20.json transactions.",
+    "latest_push": "Logged three recipient-wallet shields and filled transaction details in strk20.json.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -481,7 +486,7 @@
     "churn_pct": 0.9,
     "summary": "Collect, evolve, and trade creatures in a cozy idle RPG.",
     "description_long": "This project is an idle creature-collecting RPG with a focus on local gameplay. It features tile movement, spatial combat, and NPC interactions, while the underlying Starknet contracts handle creature minting and evolution logic in Cairo. The Next.js front end supports mock mode and integrates privacy options for compatible wallets, with local autosaving and a local-first gameplay loop.",
-    "latest_push": "Fixed a creature's sprite animations and corrected beast movement issues.",
+    "latest_push": "Fixed the movement of creatures and corrected sprite animations.",
     "tooling": [
       {
         "label": "starknet.js",
@@ -570,7 +575,7 @@
     "churn_pct": 1.1,
     "summary": "Track income credentials and credit for OnlyFans creators.",
     "description_long": "Booty Bank manages income credentials and credit eligibility for OnlyFans creators. It uses a Starknet account contract called `BootyFalconAccount` for security and posts transactions to the blockchain, including an `IncomeCredential` contract to publish public credentials for income reviews. The app supports wallet interactions and includes features like payments, cards, budgets, and privacy controls.",
-    "latest_push": "Added STRK20 balance shortcuts in the wallet control component.",
+    "latest_push": "Added STRK20 balance shortcuts to the wallet control component.",
     "tooling": [
       {
         "label": "Cairo",
