@@ -1,5 +1,67 @@
 [
   {
+    "slug": "georush",
+    "name": "GeoRush",
+    "one_liner": "Real Life AirDrops",
+    "category": "Other",
+    "repo_url": "https://github.com/inline-arc/GeoRush",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-18T18:23:04Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "inline-arc",
+        "name": "inline-arc",
+        "avatar_url": "https://avatars.githubusercontent.com/u/104635627?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18"
+    ],
+    "head_sha": "fdd164187823e097f5f8586fa894dc55dd12e843",
+    "readme_hash": "668:# GeoRush\n\nA location-based focus game on Starknet. Stake funds, physically navigate to a\ntarget zone on the map, and earn rewards when your session settles.\n\nBuilt with Expo / React Native, a termina",
+    "desc_v3": true,
+    "churn_pct": 2.5,
+    "summary": "Stake funds to earn rewards by navigating to target zones on a map.",
+    "description_long": "A location-based focus game that rewards players for navigating to target zones. The project contains a mobile app built with Expo and React Native, a Cairo escrow contract named `BlitzEscrow` for staking sessions, and a Node/Express relay for handling requests. Players stake funds, and upon reaching a target zone, their rewards settle using STRK20 for shielded payouts.",
+    "latest_push": "Added documentation for GeoRush and included an environment template.",
+    "tooling": [
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 25,
+    "deletions": 33,
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
     "slug": "philoxenia",
     "name": "philoxenia",
     "one_liner": "Private P2P hospitality on Starknet — STRK20 Private Sprint",
@@ -78,7 +140,6 @@
     "head_sha": "7f5cf7b7cba6e60b9c1eba7861ece545fd363252",
     "readme_hash": "9319:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
     "desc_v3": true,
-    "churn_pct": 0.2,
     "summary": "Book private accommodations through trusted connections.",
     "description_long": "Philoxenia is a peer-to-peer hospitality protocol that allows users to book accommodations privately using a social trust network. It consists of a frontend built with Next.js connected to a Fastify backend with a PostgreSQL database, and on-chain contracts written in Cairo for escrow and payment settlement.",
     "latest_push": "Replaced session prompts with clearer messaging throughout the app.",
@@ -92,6 +153,7 @@
     "has_readme": true,
     "additions": 15,
     "deletions": 15,
+    "churn_pct": 0.2,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -149,7 +211,6 @@
     "head_sha": "6b761c0f2f8c0cb2bb4cfb5155419a322c91b6ab",
     "readme_hash": "5443:# STRKWORLD\n\n**A 2D top-down city where the buildings are Starknet privacy protocols.**\n\nWalk around a shared pseudonymous world, step into a building, and use a real\nprivacy-preserving protocol with ",
     "desc_v3": true,
-    "churn_pct": 1.2,
     "summary": "Explore a city built from Starknet privacy protocols using real funds.",
     "description_long": "Players walk through a 2D top-down city where each building represents a privacy protocol. The game is developed with separate packages for application, backend, and logic, specifying actions via typed intents that pass through a privacy gate to execute financial transactions without handling sensitive key material.",
     "latest_push": "Hardened the Bridge settlement status parsing logic.",
@@ -168,6 +229,7 @@
     "has_readme": true,
     "additions": 280,
     "deletions": 11,
+    "churn_pct": 1.2,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -223,7 +285,6 @@
     "head_sha": "5beb89d4405d1535051acec7da8d9641510e1eb0",
     "readme_hash": "12951:# Aether\n\n**Shielded isn't private.**\n\nA privacy pool gives you an anonymity *set*. Your behaviour spends it.\n\nAether runs the real deanonymization attacks — amount correlation, timing\nwindows, round ",
     "desc_v3": true,
-    "churn_pct": 21,
     "summary": "Run private strategies like DCA and yield directly in the STRK20 pool.",
     "description_long": "Aether analyzes deanonymization risks from user activity and executes strategies in a private environment. It calculates an Effective Privacy Score based on user behavior and allows multi-asset balances to remain shielded without ever exposing public addresses. The application connects through the Starknet Wallet API, ensuring that private information is never visible to the dapp.",
     "latest_push": "Added AetherSplitter, a privacy_invoke anonymizer and wired into the action builder.",
@@ -272,6 +333,7 @@
     "has_readme": true,
     "additions": 1956,
     "deletions": 1,
+    "churn_pct": 21,
     "assessment": null,
     "star_evidence": "Cairo in the repository"
   },
@@ -335,7 +397,6 @@
     "head_sha": "7f7c45d32aaed3d53e76db250e5f47b6ba1953f1",
     "readme_hash": "8995:# Booty Bank\n\n> BORROW AGAINST YOUR BBL.\n\nBooty Bank is the primary money account built for OnlyFans creators. The product combines daily banking, creator income, private credit, fan perks, and a post",
     "desc_v3": true,
-    "churn_pct": 0.2,
     "summary": "Track income credentials and credit for OnlyFans creators.",
     "description_long": "Booty Bank manages income credentials and credit eligibility for OnlyFans creators. It uses a Starknet account contract called `BootyFalconAccount` for security and posts transactions to the blockchain, including an `IncomeCredential` contract to publish public credentials for income reviews. The app supports wallet interactions and includes features like payments, cards, budgets, and privacy controls.",
     "latest_push": "Fixed the STRK20 submission evidence in strk20.json.",
@@ -354,6 +415,7 @@
     "has_readme": true,
     "additions": 8,
     "deletions": 6,
+    "churn_pct": 0.2,
     "assessment": {
       "innovative": true,
       "complex": true,
