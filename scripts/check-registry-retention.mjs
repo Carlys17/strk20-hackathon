@@ -21,7 +21,7 @@
 
 import { execFileSync } from "node:child_process";
 import { readFileSync, existsSync } from "node:fs";
-import { normalize, canonical } from "./repo-key.mjs";
+import { normalize, canonical, aliases } from "./repo-key.mjs";
 
 const HISTORY_REF = process.env.HISTORY_REF || "origin/main";
 const REGISTRY_PATH = new URL("../registry.json", import.meta.url);
@@ -111,7 +111,15 @@ if (!Array.isArray(current)) {
   console.error("registry.json must be a JSON array of project objects.");
   process.exit(1);
 }
-const present = new Set(current.map((entry) => normalize(entry?.repo_url)).filter(Boolean));
+/* Indexed under every name each entry is known by, not just the one it is
+   written as. An owner can rename their account - welttowelt became odinfree
+   mid-sprint - and then a historical key resolves to the new owner while the
+   registry still says the old one. Both sides have to be resolved, or every
+   project that team registered reads as deleted. */
+const present = new Set();
+for (const entry of current) {
+  for (const key of await aliases(entry?.repo_url)) present.add(key);
+}
 
 const missing = [];
 const unresolved = [];
