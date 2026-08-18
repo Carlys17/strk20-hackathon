@@ -670,6 +670,14 @@ async function openai(system, user, maxTokens = 300) {
 
 /* ---------- the star ---------- */
 
+/* Off. The mark is not on the board at the moment, so there is no reason to ask
+   a model about sixty-three repositories every time one of them pushes.
+   Everything below stays as it was - the rubric, the depth floor, the
+   stickiness - and flipping this back on resumes it. Assessments already
+   written are kept in projects.json rather than dropped, so turning it on does
+   not start from nothing. */
+const STAR_ENABLED = false;
+
 /* Two criteria, both judgements only a reader of the code can make: is the idea
  * unusual, and is there real engineering under it.
  *
@@ -757,6 +765,7 @@ function hasDepth(contracts, tooling) {
 }
 
 function starOf(assessment, depth, wasStarred) {
+  if (!STAR_ENABLED) return false;
   if (!depth) return false;
   return !!(assessment?.innovative && assessment?.complex) || !!wasStarred;
 }
@@ -950,7 +959,7 @@ async function buildProject(entry, prev) {
      failed to get an answer, must not poison the cache - the SHA does not
      change again on a project that has stopped pushing, so it would sit
      unjudged forever. */
-  const assessmentUsable = !OPENAI_KEY || !!prev?.assessment?.facts_v2;
+  const assessmentUsable = !STAR_ENABLED || !OPENAI_KEY || !!prev?.assessment?.facts_v2;
   /* Same trap as the others: the wording changed, so what was written under the
      old prompt has to be rewritten once even though nothing was pushed. */
   const descUsable = !OPENAI_KEY || !!prev?.desc_v3 || !prev?.summary;
@@ -1070,8 +1079,8 @@ async function buildProject(entry, prev) {
      ran: the star was invisible for the half of the sprint when knowing who is
      building well is worth the most.
      Still one call per project per push, cached on head_sha. */
-  let assessment = (prev?.head_sha === headSha && prev?.assessment?.facts_v2 && prev.assessment) || null;
-  if (OPENAI_KEY && !assessment) {
+  let assessment = (prev?.head_sha === headSha && prev?.assessment?.facts_v2 && prev.assessment) || prev?.assessment || null;
+  if (STAR_ENABLED && OPENAI_KEY && !assessment?.facts_v2) {
     const contractList = contracts.length
       ? contracts.map((c) => `- ${c.address || c}${c.name ? ` (${c.name})` : ""}`).join("\n")
       : "none declared";
