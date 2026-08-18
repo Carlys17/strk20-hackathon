@@ -21,7 +21,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-18T16:31:37Z",
+    "pushed_at": "2026-08-18T16:36:28Z",
     "stars": 0,
     "builders": [
       {
@@ -43,13 +43,13 @@
       "2026-08-17",
       "2026-08-18"
     ],
-    "head_sha": "23053e8c695ff31db6937c37b314bdf9798ce418",
+    "head_sha": "4c2d798c80694ef7f31db3ea012bb9535d001623",
     "readme_hash": "5443:# STRKWORLD\n\n**A 2D top-down city where the buildings are Starknet privacy protocols.**\n\nWalk around a shared pseudonymous world, step into a building, and use a real\nprivacy-preserving protocol with ",
     "desc_v3": true,
-    "churn_pct": 5.6,
+    "churn_pct": 0.5,
     "summary": "Explore a city built from Starknet privacy protocols using real funds.",
     "description_long": "Players walk through a 2D top-down city where each building represents a privacy protocol. The game is developed with separate packages for application, backend, and logic, specifying actions via typed intents that pass through a privacy gate to execute financial transactions without handling sensitive key material.",
-    "latest_push": "Chose remote avatar source for replaying and rendered lobby avatars.",
+    "latest_push": "Chose reusable fixed Game Mode rooms in the project.",
     "tooling": [
       {
         "label": "TypeScript",
@@ -63,8 +63,8 @@
       }
     ],
     "has_readme": true,
-    "additions": 1155,
-    "deletions": 61,
+    "additions": 101,
+    "deletions": 4,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -123,7 +123,6 @@
     "head_sha": "907bdde836735a06b9be2c2cb402fce2f70588b4",
     "readme_hash": "4101:# GameShield — Private Gaming Bounty Hub\n\nGameShield is a STRK20 prototype for private gaming reward flows on Starknet. It uses the STRK20 pool and an app-specific `privacy_invoke` helper so the dapp ",
     "desc_v3": true,
-    "churn_pct": 1.6,
     "summary": "Create private gaming tournaments with shielded prizes and verifiable payouts.",
     "description_long": "GameShield allows users to create and participate in private gaming tournaments with shielded prize pools and verifiable payouts. It is built using Cairo contracts for a campaign registry and a `privacy_invoke` payout helper, ensuring that the dapp does not handle any sensitive keys. Users interact through a Next.js frontend, routing transactions through the STRK20 privacy pool to keep payment information confidential.",
     "latest_push": "Added Fund reward button to campaign actions and STRK20 tx verification script.",
@@ -142,6 +141,7 @@
     "has_readme": true,
     "additions": 57,
     "deletions": 0,
+    "churn_pct": 1.6,
     "assessment": null,
     "star_evidence": "2 contracts deployed on mainnet, Cairo in the repository"
   },
@@ -224,7 +224,6 @@
     "head_sha": "b9ce0b7787cfa9491c9f111700833c76dfcb7e7d",
     "readme_hash": "9319:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
     "desc_v3": true,
-    "churn_pct": 0.5,
     "summary": "Book private accommodations through trusted connections.",
     "description_long": "Philoxenia is a peer-to-peer hospitality protocol that allows users to book accommodations privately using a social trust network. It consists of a frontend built with Next.js connected to a Fastify backend with a PostgreSQL database, and on-chain contracts written in Cairo for escrow and payment settlement.",
     "latest_push": "Changed terminology for notes and invites in multiple files.",
@@ -238,6 +237,7 @@
     "has_readme": true,
     "additions": 39,
     "deletions": 39,
+    "churn_pct": 0.5,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -290,7 +290,6 @@
     "head_sha": "6384fe492b6953937faa90c2aa51ba0e9bf6a2bf",
     "readme_hash": "13171:# Veilcast\n\nPrivate prediction markets on Starknet. Visible odds, invisible bettors.\n\n> Built for the STRK20 Private Sprint, against the live STRK20 privacy pool.\n\n## What it is\n\nVeilcast is a predict",
     "desc_v3": true,
-    "churn_pct": 17.1,
     "summary": "Create private prediction markets where bettors remain anonymous.",
     "description_long": "Veilcast allows users to participate in prediction markets while keeping bettor identities private. It consists of a market contract that accepts bets with public amounts but no identifiable addresses. Bets are placed through a process where users first deposit into the STRK20 pool, generating a private note. The app uses a Stark keypair for security, ensuring that payouts are unlinkable and are distributed fairly among winners based on stake.",
     "latest_push": "Settled a market by a jury for questions without answers from the feed.",
@@ -334,6 +333,7 @@
     "has_readme": true,
     "additions": 1534,
     "deletions": 66,
+    "churn_pct": 17.1,
     "assessment": {
       "innovative": true,
       "complex": false,
@@ -383,7 +383,6 @@
     "head_sha": "cc1352f50cb2f79313a4f9f3b257e4ded2bc1af5",
     "readme_hash": "5278:# Oju\n\n> **The market that sees, without being seen.**\n\nOju (Yoruba: \"eye\") is a **privacy-first prediction market built on Nigerian specifics, open to the world**,\nrunning on Starknet's [STRK20 priva",
     "desc_v3": true,
-    "churn_pct": 2.7,
     "summary": "Create private prediction markets on local Nigerian topics.",
     "description_long": "Oju allows users to engage in prediction markets focused on Nigerian-specific questions, where positions and payouts remain confidential. Built with parimutuel pools for betting, private positions stored as encrypted notes in STRK20, and a trustless resolution process using the Pragma oracle, Oju ensures that the market's odds and resolutions are public, while personal involvement stays hidden.",
     "latest_push": "Marked milestone M0 as complete and confirmed registration is live.",
@@ -397,6 +396,7 @@
     "has_readme": true,
     "additions": 2,
     "deletions": 2,
+    "churn_pct": 2.7,
     "assessment": null,
     "star_evidence": "Cairo in the repository"
   },
@@ -477,7 +477,6 @@
     "head_sha": "828126aa4d24fb6a0f2a9ded3aa5990a818a7ef9",
     "readme_hash": "6395:# Redpacket\n\nLive demo: [https://redpocket-virid.vercel.app/](https://redpocket-virid.vercel.app/) — Ready wallet, Starknet Mainnet.\n\nDrop a password into a group chat. People race to claim. Each shar",
     "desc_v3": true,
-    "churn_pct": 2.2,
     "summary": "Claim password-protected tokens sent in red packets with a single link.",
     "description_long": "Drops a password into a group chat and lets users race to claim shares that are sent to a shielded STRK20 balance. The project consists of a Next.js frontend and uses the Wallet API alongside a stateful `privacy_invoke` helper for transaction management, including creating and claiming shared tokens while preserving user privacy.",
     "latest_push": "Counted page views without leaking claim links.",
@@ -516,6 +515,7 @@
     "has_readme": true,
     "additions": 79,
     "deletions": 4,
+    "churn_pct": 2.2,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -3943,7 +3943,6 @@
     "head_sha": "f973470696c43e5ad464019756ba8eca11403fcb",
     "readme_hash": "7602:<p align=\"center\">\n  <img src=\"logo.png\" alt=\"Adyton Logo\" width=\"120\" />\n</p>\n\n<h1 align=\"center\">Adyton</h1>\n\n<p align=\"center\">\n  <strong>Confidential Treasury Vaults with Cryptographic Policy Enfo",
     "desc_v3": true,
-    "churn_pct": 54.5,
     "summary": "Manage confidential treasury vaults with enforced spending policies.",
     "description_long": "This project creates a secure treasury vault on Starknet. It includes on-chain encrypted deposits, configurable spending policies, and cryptographic proofs for transaction compliance. The code consists of Cairo smart contracts for policy enforcement, a TypeScript frontend for interaction, and various utilities for auditing and verification.",
     "latest_push": "Added the Starknet Sepolia deployment and testing scripts.",
@@ -3977,6 +3976,7 @@
     "has_readme": true,
     "additions": 63,
     "deletions": 2882,
+    "churn_pct": 54.5,
     "assessment": null,
     "star_evidence": "Cairo in the repository"
   },
@@ -4751,7 +4751,6 @@
     "head_sha": "67b72c28597655211143ea1a50714dc75294fb00",
     "readme_hash": "1434:# Solmate\n\n**Your Intelligent DeFi Assistant on Solana**\n\nSolmate combines advanced AI with Solana's speed to deliver 24/7 yield optimization. Monitor positions, execute strategies, and maximize retur",
     "desc_v3": true,
-    "churn_pct": 100,
     "summary": "Score credit ratings on-chain and access undercollateralized loans.",
     "description_long": "On-chain credit scoring and undercollateralized lending. The system consists of smart contracts for credit evaluation, lending, and repayment processes. Key features include user-defined credit criteria and a lending protocol for pooling funds.",
     "latest_push": "Initialized the solmate project with the initial commit.",
@@ -4775,6 +4774,7 @@
     "has_readme": true,
     "additions": 42141,
     "deletions": 0,
+    "churn_pct": 100,
     "assessment": null,
     "star_evidence": ""
   },
