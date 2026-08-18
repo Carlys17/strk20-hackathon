@@ -1163,12 +1163,34 @@ if (!OPENAI_KEY) console.log("  (no OPENAI_API_KEY - generated sentences will be
 
 const seenSlugs = new Set();
 const projects = [];
+let rateLimited = false;
 for (const [i, entry] of registry.entries()) {
   if (!validate(entry, i, seenSlugs)) continue;
-  /* Null means the repository has no commits yet. The registration stands;
-     the row does not exist until there is something to show in it. */
-  const project = await buildProject(entry, prevBySlug.get(entry.slug));
-  if (project) projects.push(project);
+
+  /* Once the hour's requests are gone they are gone, and every project after
+     this one would raise the same error. Keep what each of them looked like on
+     the last run rather than losing the whole file: seventy-four projects no
+     longer fit in one hour's budget, and a run that throws republishes nothing,
+     so the hub was falling three projects behind the registry over a limit that
+     resets by itself. */
+  if (rateLimited) {
+    const prev = prevBySlug.get(entry.slug);
+    if (prev) projects.push(prev);
+    continue;
+  }
+
+  try {
+    /* Null means the repository has no commits yet. The registration stands;
+       the row does not exist until there is something to show in it. */
+    const project = await buildProject(entry, prevBySlug.get(entry.slug));
+    if (project) projects.push(project);
+  } catch (e) {
+    if (!/rate limited/.test(e.message)) throw e;
+    rateLimited = true;
+    warn(`${e.message} - the rest of this run reuses the last good data`);
+    const prev = prevBySlug.get(entry.slug);
+    if (prev) projects.push(prev);
+  }
 }
 
 /* Most recently pushed first. The hub re-sorts client-side too, so this is
@@ -1177,3 +1199,4 @@ projects.sort((a, b) => new Date(b.pushed_at || 0) - new Date(a.pushed_at || 0))
 
 writeFileSync(PROJECTS_URL, JSON.stringify(projects, null, 2) + "\n");
 console.log(`wrote projects.json - ${projects.length} projects, ${warnings.length} warnings`);
+if (rateLimited) console.log("some projects carry last run's data - the next tick picks them up");
