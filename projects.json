@@ -21,7 +21,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-18T21:18:08Z",
+    "pushed_at": "2026-08-18T21:20:14Z",
     "stars": 0,
     "builders": [
       {
@@ -46,7 +46,6 @@
     "head_sha": "aaf5f172c5220e75b824c84b6a9ea38865ffd1d0",
     "readme_hash": "1975:# ChaosKey+ M3 — STRK20 hackathon sprint\n\nPhysical-chaos entropy device (Harvest / Tokens / Ledger) plus a **Pool** tab that talks to the Starknet STRK20 privacy pool through the user's Ready wallet.\n",
     "desc_v3": true,
-    "churn_pct": 23.1,
     "summary": "Access chaos-derived entropy for STRK20 transfers and shield management.",
     "description_long": "ChaosKey+ is a physical-chaos entropy device that allows users to shield, transfer privately, and unshield tokens in the STRK20 pool through a Ready Wallet API tab. It integrates with the Starknet Wallet API, implementing core communication with the Starknet SDK and wallet detection via the Wallet Standard Discovery. The backend and frontend require specific setup steps, including MongoDB configuration and React app initialization.",
     "latest_push": "Added STRK20 Pool UI with wallet connect, shield, and transfer functionality.",
@@ -54,6 +53,7 @@
     "has_readme": true,
     "additions": 851,
     "deletions": 183,
+    "churn_pct": 23.1,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -86,26 +86,103 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-18T21:11:56Z",
+    "pushed_at": "2026-08-18T21:19:51Z",
     "stars": 0,
     "builders": [],
     "agents": [],
     "active_days": [
       "2026-08-18"
     ],
-    "head_sha": "5fb34f483086f7e421981f15c8d44392ce4a8bef",
-    "readme_hash": "4342:# Atrum — sealed-bid prediction markets on Starknet\n\nA prediction market where **your order is unreadable until it is already binding**, and\nwhere a position can be sold before the event resolves.\n\nBu",
+    "head_sha": "36397567485d9f9d257556d99e6f9d722f31344c",
+    "readme_hash": "5403:# Atrum — sealed-bid prediction markets on Starknet\n\nA prediction market where **your order is unreadable until it is already binding**, and\nwhere a position can be sold before the event resolves.\n\nBu",
     "desc_v3": true,
     "churn_pct": 0,
-    "summary": "Trade sealed-bid predictions in a private market.",
-    "description_long": "A sealed-bid prediction market where orders are kept secret until they are binding. It uses a batch auction with a uniform clearing price, allowing positions to be sold before an event resolves. The project contains contracts for order submission, clearing price calculation, and a conditional-token model for trading positions.",
-    "latest_push": "Implemented sealed-bid prediction markets on Starknet.",
+    "summary": "Create sealed-bid prediction markets where orders remain hidden until binding.",
+    "description_long": "Atrum implements sealed-bid batch auctions with a uniform clearing price for prediction markets. Orders are submitted as private notes, and only visible details are the size and clearing price after the batch closes, preventing front-running. The mechanism builds on STRK20, ensuring orders are hidden until committed, and uses a conditional-token model to allow trading positions before resolution.",
+    "latest_push": "Corrected the privacy claim in the README.md regarding STRK20.",
     "tooling": [],
     "has_readme": true,
-    "additions": 105,
-    "deletions": 0,
+    "additions": 25,
+    "deletions": 2,
     "assessment": null,
     "star_evidence": ""
+  },
+  {
+    "slug": "portage",
+    "name": "Portage.fun",
+    "one_liner": "Provably-fair idle creature-collecting on Starknet — hatch, evolve, and trade original creatures.",
+    "category": "Gaming",
+    "repo_url": "https://github.com/joaoolucas/portage-strk",
+    "demo_url": "https://portage-topaz.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-18T21:19:43Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "joaoolucas",
+        "name": "joaoolucas",
+        "avatar_url": "https://avatars.githubusercontent.com/u/83239762?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 1
+      }
+    ],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18"
+    ],
+    "head_sha": "0d8f85cb274f792ffb579f425cf1187a9e3e9b09",
+    "readme_hash": "3958:# Portage.fun\n\n**Live demo:** https://portage-topaz.vercel.app\n\n![Portage kickoff](docs/screenshots/kickoff.png)\n\n![Portage game dashboard](docs/screenshots/dashboard.png)\n\n![Portage spatial auto-hunt",
+    "desc_v3": true,
+    "churn_pct": 7.4,
+    "summary": "Collect, evolve, and trade creatures in a cozy idle RPG.",
+    "description_long": "This project is an idle creature-collecting RPG with a focus on local gameplay. It features tile movement, spatial combat, and NPC interactions, while the underlying Starknet contracts handle creature minting and evolution logic in Cairo. The Next.js front end supports mock mode and integrates privacy options for compatible wallets, with local autosaving and a local-first gameplay loop.",
+    "latest_push": "Implemented a one-screen GUI with a floating log and selectable potion.",
+    "tooling": [
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 376,
+    "deletions": 471,
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project is an idle creature-collecting RPG, which does not apply privacy in a non-obvious way.",
+      "why_complex": "There are no deployed contracts or depth in Cairo code at this stage.",
+      "reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "facet",
@@ -727,83 +804,6 @@
       "why_innovative": "The project implements private payroll, which is a standard application of privacy tech.",
       "why_complex": "The project primarily features frontend code without substantial Cairo contracts.",
       "reason": "VeilPay applies privacy to a common payroll system without innovative mechanisms.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "portage",
-    "name": "Portage.fun",
-    "one_liner": "Provably-fair idle creature-collecting on Starknet — hatch, evolve, and trade original creatures.",
-    "category": "Gaming",
-    "repo_url": "https://github.com/joaoolucas/portage-strk",
-    "demo_url": "https://portage-topaz.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-18T20:37:26Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "joaoolucas",
-        "name": "joaoolucas",
-        "avatar_url": "https://avatars.githubusercontent.com/u/83239762?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 1
-      }
-    ],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18"
-    ],
-    "head_sha": "200f6a95554dd2ac341c8c2d8bece0a88b9318cd",
-    "readme_hash": "3958:# Portage.fun\n\n**Live demo:** https://portage-topaz.vercel.app\n\n![Portage kickoff](docs/screenshots/kickoff.png)\n\n![Portage game dashboard](docs/screenshots/dashboard.png)\n\n![Portage spatial auto-hunt",
-    "desc_v3": true,
-    "summary": "Collect, evolve, and trade creatures in a cozy idle RPG.",
-    "description_long": "This project is an idle creature-collecting RPG with a focus on local gameplay. It features tile movement, spatial combat, and NPC interactions, while the underlying Starknet contracts handle creature minting and evolution logic in Cairo. The Next.js front end supports mock mode and integrates privacy options for compatible wallets, with local autosaving and a local-first gameplay loop.",
-    "latest_push": "Fixed the movement of creatures and corrected sprite animations.",
-    "tooling": [
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 50,
-    "deletions": 50,
-    "churn_pct": 0.9,
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "The project is an idle creature-collecting RPG, which does not apply privacy in a non-obvious way.",
-      "why_complex": "There are no deployed contracts or depth in Cairo code at this stage.",
-      "reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
