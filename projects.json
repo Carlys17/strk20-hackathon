@@ -1,5 +1,74 @@
 [
   {
+    "slug": "vinss",
+    "name": "VINSS",
+    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/DXJLabs/vinss",
+    "demo_url": "https://vinss-nu.vercel.app/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-01",
+    "affiliation": "",
+    "starred": true,
+    "star_reason": "The project enables encrypted deal negotiation in a way that is not typically accessible.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-18T04:23:04Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ntfound-dev",
+        "name": "ntfound-dev",
+        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
+      },
+      {
+        "login": "DXJLabs",
+        "name": "DXJ Labs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18"
+    ],
+    "head_sha": "518db931026e1b5dd01560b54b47c10dc42ef610",
+    "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
+    "churn_pct": 6.1,
+    "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
+    "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
+    "latest_push": "Added the VINSS invite helper and its corresponding tests.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 633,
+    "deletions": 0,
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "It enables private negotiation and escrow in a single encrypted timeline.",
+      "why_complex": "It involves multiple Cairo helper contracts for messaging, offers, and escrow settlement.",
+      "reason": "The project facilitates encrypted negotiations and settlements, which isn't typically available.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
     "slug": "philoxenia",
     "name": "philoxenia",
     "one_liner": "Private P2P hospitality on Starknet — STRK20 Private Sprint",
@@ -11,7 +80,7 @@
     "inspired_by": "",
     "affiliation": "",
     "starred": true,
-    "star_reason": "This project innovatively applies privacy to peer-to-peer hospitality through a trust network.",
+    "star_reason": "Philoxenia offers trustless private payments within a unique peer-to-peer hospitality framework.",
     "contracts": [
       {
         "address": "0x056a817104ad7544a55873584f3d8fb41a780e5466d152b3e1f12d578e75defb",
@@ -53,7 +122,7 @@
       "mainnet": true
     },
     "status": "finished",
-    "pushed_at": "2026-08-18T03:37:05Z",
+    "pushed_at": "2026-08-18T04:16:55Z",
     "stars": 0,
     "builders": [
       {
@@ -76,12 +145,12 @@
       "2026-08-17",
       "2026-08-18"
     ],
-    "head_sha": "a26f32ad578998f9af3603cdcd1021e5ee2e3d70",
+    "head_sha": "b8061bc2dbb5f240d8ba5511ceb6aa9bfa93de76",
     "readme_hash": "9319:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
-    "churn_pct": 0.9,
+    "churn_pct": 0.4,
     "summary": "Facilitate private peer-to-peer hospitality on Starknet.",
     "description_long": "Philoxenia uses a social trust network for private hospitality, allowing hosts to share listings only with friends and guests through a valid introduction. The project integrates trustless payment settlement via Cairo escrow, focusing on privacy with STRK20 transactions while avoiding complexities of a public marketplace.",
-    "latest_push": "Changed display text for booking buttons and related documentation.",
+    "latest_push": "Updated messages for booking and payment flows across several pages.",
     "tooling": [
       {
         "label": "Cairo",
@@ -90,14 +159,14 @@
       }
     ],
     "has_readme": true,
-    "additions": 67,
-    "deletions": 65,
+    "additions": 35,
+    "deletions": 29,
     "assessment": {
       "innovative": true,
       "complex": true,
-      "why_innovative": "It enables a trust-based service for private hospitality without public listings.",
-      "why_complex": "It includes multiple contracts like BookingEscrow and uses a custom trustless payment scheme with Cairo.",
-      "reason": "This project innovatively applies privacy to peer-to-peer hospitality through a trust network.",
+      "why_innovative": "It creates a private hospitality protocol using a social trust network instead of public listings.",
+      "why_complex": "Utilizes multiple Cairo contracts like BookingEscrow and an anonymizer for privacy preservation.",
+      "reason": "Philoxenia offers trustless private payments within a unique peer-to-peer hospitality framework.",
       "facts_v2": true
     },
     "star_evidence": "3 contracts deployed on mainnet, Cairo in the repository"
@@ -143,7 +212,6 @@
     ],
     "head_sha": "f6ff88c9ad1520894456c71da8f8824f0296f12c",
     "readme_hash": "3990:# 🛡️ Cloakra\n\n**Shielded capital allocation on Starknet Mainnet, powered by the STRK20 Privacy Pool.**\n\nGrants, bug bounties, and contributor payouts are the most identity-revealing transactions an o",
-    "churn_pct": 43.2,
     "summary": "Enable private allocation of grants and bounties on Starknet.",
     "description_long": "Cloakra uses the STRK20 Privacy Pool to keep transactions like grants and bounties private, allowing organizations to disburse funds without revealing recipient information. It features modules like StealthSplit and GhostBounty, which facilitate anonymous payments while maintaining public visibility on the organization’s deposits. The technical challenge addressed is ensuring that the link between deposits and withdrawals remains private without losing essential on-chain traceability.",
     "latest_push": "Added StealthSplit and private-transfer screens along with shared outcome UI.",
@@ -151,6 +219,7 @@
     "has_readme": true,
     "additions": 670,
     "deletions": 126,
+    "churn_pct": 43.2,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -222,75 +291,6 @@
       "facts_v2": true
     },
     "star_evidence": ""
-  },
-  {
-    "slug": "vinss",
-    "name": "VINSS",
-    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/DXJLabs/vinss",
-    "demo_url": "https://vinss-nu.vercel.app/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-01",
-    "affiliation": "",
-    "starred": true,
-    "star_reason": "The project facilitates encrypted negotiations and settlements, which isn't typically available.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-18T00:13:32Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "ntfound-dev",
-        "name": "ntfound-dev",
-        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
-      },
-      {
-        "login": "DXJLabs",
-        "name": "DXJ Labs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18"
-    ],
-    "head_sha": "888bea8edd8eec872f40948ecc8f9614992bc9e9",
-    "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
-    "summary": "Facilitate encrypted negotiation and settlement in a private deal room.",
-    "description_long": "Two parties can negotiate and settle payments within an encrypted timeline using STRK20's privacy pool. The project uses Cairo helper contracts to manage messaging, offers, and private escrow, while ensuring that sensitive information is encrypted client-side before being sent as calldata. It also includes a server-side agent for analysis and drafting, but without transaction-signing capabilities.",
-    "latest_push": "Encrypted private invite links and added invite expiry countdown.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 396,
-    "deletions": 72,
-    "churn_pct": 4.7,
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "It enables private negotiation and escrow in a single encrypted timeline.",
-      "why_complex": "It involves multiple Cairo helper contracts for messaging, offers, and escrow settlement.",
-      "reason": "The project facilitates encrypted negotiations and settlements, which isn't typically available.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "ownerz",
