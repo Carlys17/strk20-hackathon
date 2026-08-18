@@ -1,82 +1,5 @@
 [
   {
-    "slug": "crewkill-strk20",
-    "name": "CrewKill",
-    "one_liner": "Staked social deduction where privacy is the game mechanic: buy a seat through the STRK20 pool, draw a role nobody can read, vote anonymously, settle on-chain.",
-    "category": "Other",
-    "repo_url": "https://github.com/nickthelegend/crewkill-strk20",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": true,
-    "star_reason": "The project offers a unique application of privacy in a staked social deduction game.",
-    "contracts": [
-      {
-        "address": "0x55ac4a110992e9ced1f3133a9bff040adaaa6aeee4ed57e9b9cb89cb7586ca",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x38cea8475ecba6984807bf50eebc2d6174672f567d709d8b74c661904ec3bb8",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-18T08:01:00Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "nickthelegend",
-        "name": "nickthelegend",
-        "avatar_url": "https://avatars.githubusercontent.com/u/82558763?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-17",
-      "2026-08-18"
-    ],
-    "head_sha": "f918f3da1c8d3ed81751764de9f3c6a4c2081c95",
-    "readme_hash": "12483:# CrewKill\n\n**Staked social deduction on Starknet. Your wallet never touches the table, your role is a\nsecret even we can't read, and reading the room correctly pays even when you lose.**\n\nBuilt for t",
-    "desc_v3": true,
-    "churn_pct": 7.4,
-    "summary": "Play a staked social deduction game with hidden roles and anonymous voting.",
-    "description_long": "Players stake through the STRK20 pool to buy seats in a social deduction game. The roles are drawn privately and only reveal their secrets after the match ends, with voting done through ballot notes issued in the pool. A Cairo contract manages the game, ensuring confidential role assignments and tallying votes while providing a Detective Pool for those correctly identifying impostors.",
-    "latest_push": "Ported mental poker cryptography and created a dedicated poker page.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1203,
-    "deletions": 1,
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "applies privacy to social deduction games by hiding roles and votes from all participants.",
-      "why_complex": "features multiple Cairo contracts managing role randomness, commitment schemes, and vote anonymity.",
-      "reason": "The project offers a unique application of privacy in a staked social deduction game.",
-      "facts_v2": true
-    },
-    "star_evidence": "2 contracts deployed, Cairo in the repository"
-  },
-  {
     "slug": "envelope",
     "name": "envelope",
     "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
@@ -88,7 +11,7 @@
     "inspired_by": "IDEA-09",
     "affiliation": "",
     "starred": true,
-    "star_reason": "Envelopes can be sent privately without prior Starknet knowledge.",
+    "star_reason": "Envelopes allow anonymous payments without revealing the funder's identity.",
     "contracts": [
       {
         "address": "0x04ff4f083a4667930efe14963645f9bda00bb10d44e4c13a9ee808e66c076211",
@@ -103,7 +26,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-18T07:59:53Z",
+    "pushed_at": "2026-08-18T08:28:20Z",
     "stars": 0,
     "builders": [
       {
@@ -120,13 +43,13 @@
       "2026-08-17",
       "2026-08-18"
     ],
-    "head_sha": "32aec57973ff23a9a46f0929288ffda0ac4eda4f",
+    "head_sha": "c488300083e9a71549235f85dcac3d6b97018a88",
     "readme_hash": "6803:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.**\n\nEnvelope is a [STRK20](https://strk20.starknet.io) anonymizer contract and app.\nYou shield tokens, se",
     "desc_v3": true,
-    "churn_pct": 1.8,
+    "churn_pct": 0.5,
     "summary": "Send private money through a link to any Starknet address.",
     "description_long": "Envelope is an anonymizer contract and app that allows you to shield tokens and seal an amount into an envelope, which can then be sent as a URL. The system consists of an on-chain contract with a privacy invoke entry point, a public entry point for non-pool participants, and a JavaScript SDK to generate claim links. The envelope can be funded privately through a pool or publicly via any Starknet address, with features such as time locks and refund keys.",
-    "latest_push": "Set a turning envelope beside the sealed list in the UI.",
+    "latest_push": "Dropped the rule above the on-chain receipt and clarified approval terminology.",
     "tooling": [
       {
         "label": "Cairo",
@@ -140,17 +63,110 @@
       }
     ],
     "has_readme": true,
-    "additions": 157,
-    "deletions": 16,
+    "additions": 31,
+    "deletions": 14,
     "assessment": {
       "innovative": true,
       "complex": true,
-      "why_innovative": "allows sending money privately via a link to someone unfamiliar with Starknet.",
-      "why_complex": "includes a sophisticated signing mechanism in the `EnvelopeAnonymizer` contract to avoid front-running.",
-      "reason": "Envelopes can be sent privately without prior Starknet knowledge.",
+      "why_innovative": "applies privacy to casual payments through URL-based envelope links for non-Starknet users.",
+      "why_complex": "implements the `EnvelopeAnonymizer` contract with non-public funding mechanisms and a secure release signature scheme.",
+      "reason": "Envelopes allow anonymous payments without revealing the funder's identity.",
       "facts_v2": true
     },
     "star_evidence": "1 contract deployed, Cairo in the repository"
+  },
+  {
+    "slug": "crewkill-strk20",
+    "name": "CrewKill",
+    "one_liner": "Staked social deduction where privacy is the game mechanic: buy a seat through the STRK20 pool, draw a role nobody can read, vote anonymously, settle on-chain.",
+    "category": "Other",
+    "repo_url": "https://github.com/nickthelegend/crewkill-strk20",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": true,
+    "star_reason": "It transforms the social deduction genre by using cryptography to enhance confidentiality and fairness.",
+    "contracts": [
+      {
+        "address": "0x55ac4a110992e9ced1f3133a9bff040adaaa6aeee4ed57e9b9cb89cb7586ca",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x38cea8475ecba6984807bf50eebc2d6174672f567d709d8b74c661904ec3bb8",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x028fcd7d6937f5a2c1cefd07b6b26faedd0e99383b1f632e9754c4ba0941cbd9",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x01aa31ac4826ddbdc9bb2a95a6d334e81be7ff32f7bae604c88b7437252781a4",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x01b5e9a1b0f6550e62e18e3e397b9aded7d7b3dadfeb4f9f3653081c96d9c6c6",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x06e244442031a6a7f6dca61e3440f4989f6a2ee34bbf32e57bc6ccee8129c885",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-18T08:25:01Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "nickthelegend",
+        "name": "nickthelegend",
+        "avatar_url": "https://avatars.githubusercontent.com/u/82558763?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-17",
+      "2026-08-18"
+    ],
+    "head_sha": "5eeb0d0313c8189e066f9e954a9becad6b071590",
+    "readme_hash": "12483:# CrewKill\n\n**Staked social deduction on Starknet. Your wallet never touches the table, your role is a\nsecret even we can't read, and reading the room correctly pays even when you lose.**\n\nBuilt for t",
+    "desc_v3": true,
+    "churn_pct": 84.3,
+    "summary": "Play a staked social deduction game with hidden roles and anonymous voting.",
+    "description_long": "Players stake through the STRK20 pool to buy seats in a social deduction game. The roles are drawn privately and only reveal their secrets after the match ends, with voting done through ballot notes issued in the pool. A Cairo contract manages the game, ensuring confidential role assignments and tallying votes while providing a Detective Pool for those correctly identifying impostors.",
+    "latest_push": "Launched the poker game at poker.molfi.fun with live Sepolia contracts.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 17286,
+    "deletions": 1718,
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "applies privacy to social deduction by concealing roles and voting without revealing identities.",
+      "why_complex": "involves multiple contracts that implement a commit-reveal scheme for role assignment and voting.",
+      "reason": "It transforms the social deduction genre by using cryptography to enhance confidentiality and fairness.",
+      "facts_v2": true
+    },
+    "star_evidence": "6 contracts deployed, Cairo in the repository"
   },
   {
     "slug": "philoxenia",
@@ -164,7 +180,7 @@
     "inspired_by": "",
     "affiliation": "",
     "starred": true,
-    "star_reason": "A social trust network for private hospitality without public listings.",
+    "star_reason": "Philoxenia enables private hospitality interactions built on trust.",
     "contracts": [
       {
         "address": "0x056a817104ad7544a55873584f3d8fb41a780e5466d152b3e1f12d578e75defb",
@@ -206,7 +222,7 @@
       "mainnet": true
     },
     "status": "finished",
-    "pushed_at": "2026-08-18T07:57:00Z",
+    "pushed_at": "2026-08-18T08:16:50Z",
     "stars": 0,
     "builders": [
       {
@@ -228,13 +244,13 @@
       "2026-08-17",
       "2026-08-18"
     ],
-    "head_sha": "df59d45a4adec66abe18c0aa36d313ed08a3f079",
+    "head_sha": "a1de137eed91a5720e6fb43c9cd16844c4c12a86",
     "readme_hash": "9319:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
     "desc_v3": true,
-    "churn_pct": 0.4,
+    "churn_pct": 0.2,
     "summary": "Book private accommodations through trusted connections.",
     "description_long": "Philoxenia is a peer-to-peer hospitality protocol that allows users to book accommodations privately using a social trust network. It consists of a frontend built with Next.js connected to a Fastify backend with a PostgreSQL database, and on-chain contracts written in Cairo for escrow and payment settlement.",
-    "latest_push": "Changed wording to say 'Book & pay complete' on stays.",
+    "latest_push": "Changed the wording from 'Payment landed' to 'Book & pay landed' in stay records.",
     "tooling": [
       {
         "label": "Cairo",
@@ -243,14 +259,14 @@
       }
     ],
     "has_readme": true,
-    "additions": 39,
-    "deletions": 19,
+    "additions": 12,
+    "deletions": 12,
     "assessment": {
       "innovative": true,
       "complex": true,
-      "why_innovative": "introduces a private peer-to-peer hospitality protocol using social trust networks.",
-      "why_complex": "includes multiple contracts like BookingEscrow for trustless settlements and STRK20 private payments.",
-      "reason": "A social trust network for private hospitality without public listings.",
+      "why_innovative": "creates a private peer-to-peer hospitality protocol with friend-based listings.",
+      "why_complex": "involves multiple Cairo contracts for payment escrows and an anonymizer.",
+      "reason": "Philoxenia enables private hospitality interactions built on trust.",
       "facts_v2": true
     },
     "star_evidence": "3 contracts deployed on mainnet, Cairo in the repository"
@@ -302,7 +318,6 @@
     "head_sha": "4791fc5c7a7b603a8a145e6f7adc34de79d1aadd",
     "readme_hash": "10856:# Erebus\n\n**Negotiate in darkness, settle in silence.**\n\nErebus is experimental coordination and shielded-settlement infrastructure for AI agents.\n\n[Open the public demo](https://erebus-private-agents",
     "desc_v3": true,
-    "churn_pct": 5.7,
     "summary": "Negotiate confidentially and settle payments automatically between agents.",
     "description_long": "Erebus enables two AI agents to open an encrypted channel called Eleusis for structured negotiation. This is done using privacy-pool note salts to manage the communication while settling payments atomically through the shielded pool. Built on Starknet Sepolia, it combines AES-256-GCM-SIV encryption for offer confidentiality with a reference to transaction states for auditing, ensuring the negotiation and transaction processes are tightly linked.",
     "latest_push": "Closed the remaining P1 release work and documented key changes.",
@@ -321,6 +336,7 @@
     "has_readme": true,
     "additions": 1066,
     "deletions": 29,
+    "churn_pct": 5.7,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -373,7 +389,6 @@
     "head_sha": "b6c090091c5aba83642d2b9895219ab22dc39f92",
     "readme_hash": "5690:<div align=\"center\">\n\n# Veyl\n\n**A private launch & trading terminal on Starknet.**\n\nTrade and launch tokens without your wallet becoming a target — funded through the [STRK20](https://strk20-by-exampl",
     "desc_v3": true,
-    "churn_pct": 12.9,
     "summary": "Trade and launch tokens without exposing wallet links.",
     "description_long": "Veyl is a trading and launch terminal where executed trades remain unlinkable to the user's wallet. It allows users to deposit into the STRK20 privacy pool, trade from anonymous execution identities, and conduct sealed-bid launches with escrowed STRK20 notes. The project consists of a frontend built with Next.js, a backend utilizing Cairo contracts, and integration with STRK20 for shielded funding and private transfers.",
     "latest_push": "Added the Launch tab with sealed-bid fair-launch UI on the dashboard.",
@@ -417,6 +432,7 @@
     "has_readme": true,
     "additions": 508,
     "deletions": 7,
+    "churn_pct": 12.9,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -473,7 +489,6 @@
     "head_sha": "f67166905021ba69eecad090b640a2f1e7a7fc5a",
     "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
     "desc_v3": true,
-    "churn_pct": 0,
     "summary": "Conduct private negotiations with encrypted messaging and escrow settlement.",
     "description_long": "Two parties can negotiate and settle payments inside one encrypted timeline. It is built with Cairo helper contracts for messaging, offers, private escrow, and escrow settlement, all interfacing through the STRK20 Privacy Pool's `InvokeExternal`.",
     "latest_push": "Upgraded the private escrow helper to v2 routing.",
@@ -487,6 +502,7 @@
     "has_readme": true,
     "additions": 1,
     "deletions": 0,
+    "churn_pct": 0,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -543,7 +559,6 @@
     "head_sha": "a392cc2d2bb5b420a84250c8f5aa66dffc182128",
     "readme_hash": "2044:# ChaosKey+ M3 — STRK20 hackathon sprint\n\nPhysical-chaos entropy device (Harvest / Tokens / Ledger) plus a **Pool** tab that talks to the Starknet STRK20 privacy pool through the user's Ready wallet.\n",
     "desc_v3": true,
-    "churn_pct": 0.1,
     "summary": "Transfer tokens privately using a physical-chaos entropy device.",
     "description_long": "ChaosKey+ is a physical-chaos entropy device that integrates with the Ready Wallet for private transfers and unshielding tokens in the STRK20 privacy pool. It connects to the pool using the Starknet Wallet API v0.10, utilizing components such as Starknet SDK, Wallet Standard Discovery, Adapter, and API Types for core functionalities. The backend operates on FastAPI with MongoDB, while the frontend uses React to interface with the wallet and handle token management.",
     "latest_push": "Promoted PrivacyScreen.jsx, starknetWallet.js, and starknetWalletUtils.js to mainnet.",
@@ -551,6 +566,7 @@
     "has_readme": true,
     "additions": 3,
     "deletions": 1,
+    "churn_pct": 0.1,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -600,7 +616,6 @@
     "head_sha": "c6974337060c052423749d892df483ca43f0d4aa",
     "readme_hash": "2372:# Starknet Privacy Starter Kit\n\nA lean Next.js starter for building privacy dApps on Starknet with [STRK20](https://eprint.iacr.org/2026/474) via `WalletAccountV6` (starknet.js v10). Shield, unshield,",
     "desc_v3": true,
-    "churn_pct": 1.8,
     "summary": "Program programmable private payments with privacy dApps on Starknet.",
     "description_long": "This project allows users to build privacy dApps for private shielding, unshielding, and transferring funds. It includes a wallet picker using `get-starknet` for wallet connection, actions for token operations through `strk20InvokeTransaction`, and a minimal `privacy_invoke` contract for anonymization. Built with Next.js, React, and TypeScript, it sets up a local development environment and guides the deployment on Vercel.",
     "latest_push": "Removed unused starter tooling and validated STRK20 mainnet integration.",
@@ -639,6 +654,7 @@
     "has_readme": true,
     "additions": 0,
     "deletions": 34,
+    "churn_pct": 1.8,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -703,7 +719,6 @@
     "head_sha": "0af998c0cf7f1f7955ea593d73d3cf34d0ac29a9",
     "readme_hash": "5082:# Morrow\n\nMorrow is a privacy preflight for STRK20 milestone payouts. Before an operator funds a grant, it makes the transaction structure legible: what is public, what remains inside STRK20, and whet",
     "desc_v3": true,
-    "churn_pct": 1.4,
     "summary": "Prepares funding routes for milestone payouts in a privacy-conscious way.",
     "description_long": "Morrow analyzes transaction structures for grant funding on STRK20 milestones. It compares funding routes, drafts terms without revealing recipient addresses, and clarifies the privacy boundaries of various interactions. Built with a static preflight, it screens deposits without handling sensitive keys, ensuring transparent funding while maintaining privacy disclosures.",
     "latest_push": "Fixed STRK20 fund amount encoding and completed wallet phase one.",
@@ -747,6 +762,7 @@
     "has_readme": true,
     "additions": 28,
     "deletions": 2,
+    "churn_pct": 1.4,
     "assessment": {
       "innovative": true,
       "complex": false,
@@ -799,7 +815,6 @@
     "head_sha": "f6ff88c9ad1520894456c71da8f8824f0296f12c",
     "readme_hash": "3990:# 🛡️ Cloakra\n\n**Shielded capital allocation on Starknet Mainnet, powered by the STRK20 Privacy Pool.**\n\nGrants, bug bounties, and contributor payouts are the most identity-revealing transactions an o",
     "desc_v3": true,
-    "churn_pct": 43.2,
     "summary": "Processes private grants and bug bounties on-chain.",
     "description_long": "Cloakra manages capital allocation for organizations while preserving the privacy of transactions. It includes modules like StealthSplit for splitting funded notes and GhostBounty for anonymous bounty payments, all interacting with the STRK20 privacy pool. The implementation uses starknet.js to enable users to execute actions like `strk20InvokeTransaction`, with no key material stored server-side.",
     "latest_push": "Added StealthSplit and private-transfer screens with shared outcome UI.",
@@ -807,6 +822,7 @@
     "has_readme": true,
     "additions": 670,
     "deletions": 126,
+    "churn_pct": 43.2,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -862,7 +878,6 @@
     "head_sha": "989f02914c1d21801f6dea822e8d10616b03ab4c",
     "readme_hash": "2265:# Ownerz — Sell Files. Post-Quantum Delivery.\n\n## Core Value\nA marketplace where anyone can monetize private data on blockchain with anonymous transactions, no intermediaries, no hidden costs.\n\n## How",
     "desc_v3": true,
-    "churn_pct": 2.3,
     "summary": "Monetize private data with anonymous transactions.",
     "description_long": "Ownerz is a marketplace for selling encrypted files with anonymous transactions. Users upload files to Fil One, register the CID and price on a STRK20 smart contract, and buyers make purchases using ZK-proofs. The decryption key is delivered in a private blockchain event to the verified buyer, ensuring the data remains encrypted on IPFS.",
     "latest_push": "Fixed shield modal behavior and improved mobile scrolling.",
@@ -901,6 +916,7 @@
     "has_readme": true,
     "additions": 24,
     "deletions": 62,
+    "churn_pct": 2.3,
     "assessment": {
       "innovative": true,
       "complex": false,
@@ -962,7 +978,6 @@
     "head_sha": "7d52a650bbb32a9b822a8691712a3453b5f67ac4",
     "readme_hash": "30525:# Sotto\n\nSotto is a privacy-focused yield account for Starknet. It gives users a single interface for shielding assets, viewing wallet-discovered private balances, moving funds into supported DeFi pos",
     "desc_v3": true,
-    "churn_pct": 57.7,
     "summary": "Manage shielded assets in a privacy-focused yield account.",
     "description_long": "Sotto allows users to connect their Starknet wallets to shield assets and manage private balances. It uses STRK20 notes for encryption, requires Wallet API version 0.10.3 or newer, and does not display fabricated data, ensuring genuine user interactions through supported wallets.",
     "latest_push": "Fixed wallet connection issues and added Sotto contracts.",
@@ -1001,6 +1016,7 @@
     "has_readme": true,
     "additions": 1770,
     "deletions": 672,
+    "churn_pct": 57.7,
     "assessment": {
       "innovative": false,
       "complex": true,
@@ -1056,7 +1072,6 @@
     "head_sha": "43c228f10b141038559b209f4752f403ce451ec4",
     "readme_hash": "12723:# Sealed\n\nA deployable Vickrey variant of RFP-08 on Starknet. Bidder identities stay unlinkable, bid values stay hidden until reveal, every bidder locks identical STRK20-funded collateral, and failing",
     "desc_v3": true,
-    "churn_pct": 1.5,
     "summary": "Conduct sealed-bid, second-price auctions with anonymous bidders and private settlement.",
     "description_long": "Sealed implements a Vickrey variant auction where bidder identities remain anonymous and bid values are hidden until the reveal phase. Each bidder commits a Poseidon hash of their bid while locking uniform collateral from their STRK20 balance. The highest valid bid wins and pays the second-highest bid or the reserve price, with all interactions routed through the STRK20 privacy pool to ensure anonymity.",
     "latest_push": "Added the reveal keeper from Term Finance and enabled auction listing from the browser.",
@@ -1075,6 +1090,7 @@
     "has_readme": true,
     "additions": 74,
     "deletions": 0,
+    "churn_pct": 1.5,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -1129,7 +1145,6 @@
     "head_sha": "8a8bfc4a44254b1c9f126efd48d3d9001c574476",
     "readme_hash": "6384:# StarkWhisper\n\n> **Metadata-Resistant, End-to-End Encrypted On-Chain Messaging & Private Payment Memos on Starknet**\n\n![Starknet](https://img.shields.io/badge/Starknet-Mainnet%20%2F%20Sepolia-c53400?",
     "desc_v3": true,
-    "churn_pct": 0.3,
     "summary": "Send encrypted messages with private payment memos.",
     "description_long": "StarkWhisper enables encrypted messaging while attaching payments as memos. It uses ECDH key agreement for encryption and creates stealth addresses for sender identity protection through ZK note spend proofs. The core contracts include the StarkWhisperCore and the STRK20 Privacy Pool, allowing efficient atomic transactions.",
     "latest_push": "Added automatic runtime monkey-patch for strk20InvokeTransaction to prevent crashes.",
@@ -1168,6 +1183,7 @@
     "has_readme": true,
     "additions": 7,
     "deletions": 6,
+    "churn_pct": 0.3,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -1222,7 +1238,6 @@
     "head_sha": "4b57d15012dafe95e29ca5bc16fd654eee1bc085",
     "readme_hash": "3652:<div align=\"center\">\n  <img src=\"./icon.svg\" width=\"88\" height=\"88\" alt=\"HIDDEN logo\" />\n\n  # HIDDEN\n\n  **Games where your opponent can't see your move.**\n\n  Built on Starknet mainnet with **STRK20** ",
     "desc_v3": true,
-    "churn_pct": 0.1,
     "summary": "Play hidden-information games where opponents can't see your moves.",
     "description_long": "HIDDEN offers wagered games like Rock/Paper/Scissors and Bluff with private moves. Players lock their choices as commitment hashes before revealing them, ensuring no one can see an opponent's move until both have committed. The game backend includes a frontend interface and stubs for essential chain calls, while the integration with the STRK20 privacy pool is still in development.",
     "latest_push": "Added round lifecycle for timers, sharing, and My Cases.",
@@ -1236,6 +1251,7 @@
     "has_readme": true,
     "additions": 1,
     "deletions": 1,
+    "churn_pct": 0.1,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -1286,7 +1302,6 @@
     "head_sha": "5e5f278d1fda922e1058ada884824a593ff1cd1a",
     "readme_hash": "1492:# VeilPay\n\n**Private Payroll on Starknet.**\n\nVeilPay is a hackathon project that demonstrates paying multiple recipients privately on Starknet using the STRK20 privacy primitives (privacy pool + STRK2",
     "desc_v3": true,
-    "churn_pct": 0.2,
     "summary": "Manage payrolls with private payment records and selective disclosure.",
     "description_long": "VeilPay enables private payroll processing where only payees and auditors can access detailed payment information. It uses Next.js, starknet.js, and a Cairo helper contract to handle transactions on Starknet, allowing public verification of payment batches without revealing recipient identities or amounts.",
     "latest_push": "Added the VeilPay payroll tab, branding swap, and payroll executor.",
@@ -1325,6 +1340,7 @@
     "has_readme": true,
     "additions": 3,
     "deletions": 3,
+    "churn_pct": 0.2,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -1374,7 +1390,6 @@
     "head_sha": "e93804a20fa75f152935e34cdcf100145c2dffa9",
     "readme_hash": "1414:# Ghost Orders\n\nGhost Orders is a privacy-focused conditional trading layer built on Starknet using STRK20.\n\nIt explores IDEA-04 from the STRK20 Private Sprint: hidden and conditional orders.\n\nThe goa",
     "desc_v3": true,
-    "churn_pct": 100,
     "summary": "Create conditional trades with hidden order details.",
     "description_long": "This project allows users to make conditional trading instructions while keeping order intent private. It focuses on public ETH price triggers, with user parameters managed on the client side and STRK20 for asset handling and settlement. The repository contains experiments for STRK20 integration and testing of browser-based architectures.",
     "latest_push": "Fixed formatting of STRK20 shield amounts for the wallet API.",
@@ -1393,6 +1408,7 @@
     "has_readme": true,
     "additions": 2126,
     "deletions": 58,
+    "churn_pct": 100,
     "assessment": {
       "innovative": true,
       "complex": false,
@@ -1444,7 +1460,6 @@
     "head_sha": "d0b6e3a0a2a27a1acd052c43bf2d38f3f8a7b2e6",
     "readme_hash": "3171:# StakeWars\n\nStakeWars is a persistent, non-custodial strategy game built around Starknet\nvalidator delegation. Operators choose how much of their real delegated STRK to\nallocate to Control Points and",
     "desc_v3": true,
-    "churn_pct": 16.9,
     "summary": "Manage validator delegation in a strategy game.",
     "description_long": "StakeWars is a non-custodial strategy game focused on validator delegation of STRK. Players allocate delegated STRK to Control Points and engage in challenges, where losing commitments are permanently spent but STRK remains delegated. The project includes a Go API, a React and TypeScript frontend, and Cairo contracts with documentation available in the repository.",
     "latest_push": "Added camera-projected Control Point artwork and refined contest UI.",
@@ -1458,6 +1473,7 @@
     "has_readme": true,
     "additions": 3026,
     "deletions": 94,
+    "churn_pct": 16.9,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -1515,7 +1531,6 @@
     "head_sha": "e3063cea12fe290d836dd2ffe555cf46d667c05f",
     "readme_hash": "3958:# Portage.fun\n\n**Live demo:** https://portage-topaz.vercel.app\n\n![Portage kickoff](docs/screenshots/kickoff.png)\n\n![Portage game dashboard](docs/screenshots/dashboard.png)\n\n![Portage spatial auto-hunt",
     "desc_v3": true,
-    "churn_pct": 0.2,
     "summary": "Collect, evolve, and trade creatures in a cozy idle RPG.",
     "description_long": "This project is an idle creature-collecting RPG with a focus on local gameplay. It features tile movement, spatial combat, and NPC interactions, while the underlying Starknet contracts handle creature minting and evolution logic in Cairo. The Next.js front end supports mock mode and integrates privacy options for compatible wallets, with local autosaving and a local-first gameplay loop.",
     "latest_push": "Integrated PixelLab character sprites into the top-down world.",
@@ -1534,6 +1549,7 @@
     "has_readme": true,
     "additions": 18,
     "deletions": 6,
+    "churn_pct": 0.2,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -1608,7 +1624,6 @@
     "head_sha": "72cc32d3637af589486eda28c1dee2cdba7f3474",
     "readme_hash": "8922:# Cutout\n\n**Cutout is a wallet-native signing guard that uses deterministic public STRK20\nevidence to help users avoid predictable deposit amounts before they sign.**\n\nBefore a user signs a shield tra",
     "desc_v3": true,
-    "churn_pct": 3.6,
     "summary": "Checks deposit amounts to enhance user privacy before signing transactions.",
     "description_long": "Cutout verifies proposed token and amount against public cohort coverage to help users avoid predictable deposit amounts. Built using the Starknet Wallet API and public RPC data, it recommends amount adjustments based on the pool census, with a focus on deterministic checks offchain. No smart contracts are involved; only the Ready X component can request a signature and submit the STRK20 action.",
     "latest_push": "Recorded the completed private transfer flow and verified STRK20 transactions.",
@@ -1642,6 +1657,7 @@
     "has_readme": true,
     "additions": 204,
     "deletions": 248,
+    "churn_pct": 3.6,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -1699,7 +1715,6 @@
     "head_sha": "fae7de0f6812ffa5ed2eadfe32e46e8554b11a83",
     "readme_hash": "13778:# stk402\n\nAmount-confidential STRK20 payments for x402 agents on Starknet.\n\nSTK402 adds an encrypted x402 payment scheme for STRK20. The agent and server exchange encrypted payment terms and receipt m",
     "desc_v3": true,
-    "churn_pct": 0.1,
     "summary": "Send amount-confidential STRK20 payments for x402 agents.",
     "description_long": "STK402 implements an encrypted payment scheme for STRK20. It exchanges encrypted payment terms and receipt metadata between the agent and server. The contracts include checks for signed receipts, indexed payments, and replay prevention, while a React dApp delivers the consumer interface.",
     "latest_push": "Fixed Render Node 22 installs and made the Consumer web app build work.",
@@ -1723,6 +1738,7 @@
     "has_readme": true,
     "additions": 7,
     "deletions": 3,
+    "churn_pct": 0.1,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -1784,7 +1800,6 @@
     "head_sha": "31b9b71df54841d8cf88aba5925cfd886a033c39",
     "readme_hash": "8224:# zkPayslip\n\nPrivate payroll on Starknet: salaries move invisibly inside the STRK20 privacy pool while any employee can still prove their income to exactly one verifier, once.\n\n## Live deployment\n\n| C",
     "desc_v3": true,
-    "churn_pct": 1.9,
     "summary": "Proves employee income while keeping salaries private.",
     "description_long": "zkPayslip records payroll transactions in a way that employees can prove their income to a single verifier. It uses a helper contract to store commitments and verify disclosures without holding funds, and it operates with the STRK20 privacy pool for private transfers. The system generates a nullifier on proof redemption to ensure single-use identity verification.",
     "latest_push": "Added on-chain writing for invited channels and income proofs.",
@@ -1828,6 +1843,7 @@
     "has_readme": true,
     "additions": 63,
     "deletions": 43,
+    "churn_pct": 1.9,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -1884,7 +1900,6 @@
     "head_sha": "b56c229787fb3dd467082c44cb9ab3ff364ac9b6",
     "readme_hash": "6982:# Whisper Pay\n\nOne-link private payment requests on Starknet, powered by STRK20 shielded transfers.\n\n## What is this?\n\nWhisper Pay is a one-link private payment request tool built on STRK20. A user ge",
     "desc_v3": true,
-    "churn_pct": 12.6,
     "summary": "Create shareable private payment links for on-chain transfers.",
     "description_long": "Whisper Pay generates a unique link for private payment requests. Users create a request, share the link, and when a payer clicks it, the payment is sent through the STRK20 shielded flow, keeping transaction details private. The system uses Next.js for its frontend and backend, Starknet.js for blockchain interaction, and the STRK20 wallet API for privacy features.",
     "latest_push": "Created a public status page to prove payments without revealing details.",
@@ -1918,6 +1933,7 @@
     "has_readme": true,
     "additions": 507,
     "deletions": 17,
+    "churn_pct": 12.6,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -2004,7 +2020,6 @@
     "head_sha": "e3f7b90d9633fef5d1ca3e2e9a0fa87b10c689a0",
     "readme_hash": "6395:# Redpacket\n\nLive demo: [https://redpocket-virid.vercel.app/](https://redpocket-virid.vercel.app/) — Ready wallet, Starknet Mainnet.\n\nDrop a password into a group chat. People race to claim. Each shar",
     "desc_v3": true,
-    "churn_pct": 0.1,
     "summary": "Claim password-protected tokens sent in red packets with a single link.",
     "description_long": "Drops a password into a group chat and lets users race to claim shares that are sent to a shielded STRK20 balance. The project consists of a Next.js frontend and uses the Wallet API alongside a stateful `privacy_invoke` helper for transaction management, including creating and claiming shared tokens while preserving user privacy.",
     "latest_push": "Hardened the RPC proxy and fixed chat link previews.",
@@ -2043,6 +2058,7 @@
     "has_readme": true,
     "additions": 1,
     "deletions": 1,
+    "churn_pct": 0.1,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -2099,7 +2115,6 @@
     "head_sha": "f452d36b388be6a719038b30bcf58308ae032848",
     "readme_hash": "4928:# STRKWORLD\n\n**A 2D top-down city where the buildings are Starknet privacy protocols.**\n\nWalk around a shared pseudonymous world, step into a building, and use a real\nprivacy-preserving protocol with ",
     "desc_v3": true,
-    "churn_pct": 0.9,
     "summary": "Explore a 2D city using various privacy protocols on Starknet.",
     "description_long": "Walk in a shared world where financial buildings represent Starknet privacy protocols. Each building connects player actions to specific privacy routes without handling private keys or running provers. The game consists of several components, including a web app for the UI, a backend for paymaster functions, and distinct packages for privacy operations, cross-chain funding, and game mechanics.",
     "latest_push": "Locked game mode direction and made door tiles walkable for triggers.",
@@ -2118,6 +2133,7 @@
     "has_readme": true,
     "additions": 154,
     "deletions": 5,
+    "churn_pct": 0.9,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -2168,7 +2184,6 @@
     "head_sha": "e97b979da945f2071b38e1bf006e046e8bcb227f",
     "readme_hash": "9286:# 🔒 STRK20 Privacy Wallet (Umbra Mode)\n\n> **Umbra-grade privacy UX on Starknet — fully powered by the native STRK20 Note-Based Privacy Pool.**\n\nBuilt by **Jai Bhati** ([@SmratJay](https://github.com/",
     "desc_v3": true,
-    "churn_pct": 0.3,
     "summary": "Manage encrypted transactions and stealth payments within a privacy wallet.",
     "description_long": "STRK20 Privacy Wallet allows users to perform encrypted transactions and send stealth payments on Starknet. It features a universal wallet support using an in-browser UTXO vault engine, a dual balance dashboard for viewing both on-chain and encrypted balances, and dynamic QR payment invoices. The implementation consists of core UI components, a stealth engine, and integration with AVNU for DEX swaps, all backed by cryptographic primitives that match the STRK20 protocol.",
     "latest_push": "Added universal wallet compatibility and fixed ENTRYPOINT_NOT_FOUND error.",
@@ -2207,6 +2222,7 @@
     "has_readme": true,
     "additions": 14,
     "deletions": 0,
+    "churn_pct": 0.3,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -2258,7 +2274,6 @@
     "head_sha": "d3337790c1bcb6c45d313c7913380cccee41f0ea",
     "readme_hash": "12294:# Veilcast\n\nPrivate prediction markets on Starknet. Visible odds, invisible bettors.\n\n> Built for the STRK20 Private Sprint, against the live STRK20 privacy pool.\n\n## What it is\n\nVeilcast is a predict",
     "desc_v3": true,
-    "churn_pct": 8,
     "summary": "Place anonymous bets on prediction markets with visible odds.",
     "description_long": "Veilcast creates a prediction market where the details of bets stay private while odds and volumes are public. It consists of a market contract that tracks per-outcome volumes and public keys, while identity privacy is maintained through a rotating relayer that records transactions. Bets are made by depositing STRK into the pool, generating a fresh keypair for each bet, and payouts are handled through private note transfers, ensuring anonymity for bettors.",
     "latest_push": "Implemented a fee structure for markets and integrated event history display.",
@@ -2302,6 +2317,7 @@
     "has_readme": true,
     "additions": 587,
     "deletions": 71,
+    "churn_pct": 8,
     "assessment": {
       "innovative": true,
       "complex": false,
@@ -2352,7 +2368,6 @@
     "head_sha": "b34fb7fa9db27892918925f2ad21d3033e6000e6",
     "readme_hash": "2733:# Privora\n\nPrivora is a privacy-first payment platform for real-world financial transactions, beginning with rent and property payments.\n\nThe first STRK20 sprint flow is intentionally narrow: a tenant",
     "desc_v3": true,
-    "churn_pct": 15.2,
     "summary": "Enable private rent payments with verifiable receipts.",
     "description_long": "Privora allows tenants to pay rent privately on Starknet while providing landlords with verifiable receipts. The project consists of a Rust backend with PostgreSQL migrations, a React + TypeScript web client, and selective-disclosure proofs that are signed by the API without exposing sensitive keys. The backend verifies transaction hashes against Starknet Mainnet before updating payment statuses.",
     "latest_push": "Rebuilt the property listing and product visual system.",
@@ -2366,6 +2381,7 @@
     "has_readme": true,
     "additions": 684,
     "deletions": 42,
+    "churn_pct": 15.2,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -2439,7 +2455,6 @@
     "head_sha": "b0a0b3d891ab86898f33e4e3fca1f2307b4328f7",
     "readme_hash": "6606:# Airlock\n\n**One-click privacy from any chain.** Step in on one chain, the door seals behind you, step out on another. No on-chain link between the two sides.\n\nBuilt on the [STRK20](https://strk20-by-",
     "desc_v3": true,
-    "churn_pct": 29,
     "summary": "Bridge tokens across chains with privacy and no link.",
     "description_long": "Airlock allows users to deposit tokens on one chain, maintain privacy, and withdraw to a different chain without revealing links between transactions. Built with a deterministic Starknet account derived from an EVM signature, it uses the privacy-bridge for cross-chain movement and an anonymizer contract in Cairo for orchestration, ensuring that deposit and withdrawal transactions remain unlinkable.",
     "latest_push": "Rebuilt the transfer flow on the swap-card idiom and added a live privacy report.",
@@ -2447,6 +2462,7 @@
     "has_readme": true,
     "additions": 388,
     "deletions": 182,
+    "churn_pct": 29,
     "assessment": {
       "innovative": true,
       "complex": false,
@@ -2502,7 +2518,6 @@
     "head_sha": "bb5d3941389ea6fa8e4f75670967705d37bd91f2",
     "readme_hash": "17285:# Cipher21 · Starknet\n\n**Confidential Blackjack on Starknet — hidden hands via commitments, shielded stakes via STRK20.**\n\nYour hand is a commitment until showdown. The dealer's hole card is sealed be",
     "desc_v3": true,
-    "churn_pct": 0,
     "summary": "Play confidential blackjack with hidden hands and shielded stakes.",
     "description_long": "The game commits your hand until showdown, while the dealer's hole card is hidden behind a committed deck. It uses Merkle commitments for hands and distributes winnings through STRK20 notes to shield player identities on the blockchain.",
     "latest_push": "Added strk20.json for Private Sprint tracking.",
@@ -2516,6 +2531,7 @@
     "has_readme": true,
     "additions": 6,
     "deletions": 0,
+    "churn_pct": 0,
     "assessment": {
       "innovative": true,
       "complex": false,
@@ -2604,7 +2620,6 @@
     "head_sha": "48e5d63a15371f6c2abca4fde95a7499c1f9fa45",
     "readme_hash": "3815:# Aperture\n\n**Sealed-ballot governance and a shielded treasury for DAOs, native to STRK20.**\n\nBuilt for the STRK20 Private Sprint, August 2026. Day 1 — this repository is\nunder active construction and",
     "desc_v3": true,
-    "churn_pct": 8.4,
     "summary": "Manage sealed-ballot governance and treasury payouts for DAOs.",
     "description_long": "Aperture handles on-chain governance through private transfers that obscure vote details. Each vote transfers shielded weight to a unique identity per proposal, ensuring observers only see aggregate data. Treasury payouts conceal recipient identities using a Cairo anonymizer, with specific components like ProposalRegistry and GovernanceAnonymizer built in Cairo.",
     "latest_push": "Implemented the tally engine and registered ballot identities through the SDK.",
@@ -2628,6 +2643,7 @@
     "has_readme": true,
     "additions": 241,
     "deletions": 38,
+    "churn_pct": 8.4,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -2678,7 +2694,6 @@
     "head_sha": "2002a2ad0e767fc9b6848f396059ed802b2c17a9",
     "readme_hash": "8995:# Booty Bank\n\n> BORROW AGAINST YOUR BBL.\n\nBooty Bank is the primary money account built for OnlyFans creators. The product combines daily banking, creator income, private credit, fan perks, and a post",
     "desc_v3": true,
-    "churn_pct": 13.3,
     "summary": "Track income credentials and credit for OnlyFans creators.",
     "description_long": "Booty Bank manages income credentials and credit eligibility for OnlyFans creators. It uses a Starknet account contract called `BootyFalconAccount` for security and posts transactions to the blockchain, including an `IncomeCredential` contract to publish public credentials for income reviews. The app supports wallet interactions and includes features like payments, cards, budgets, and privacy controls.",
     "latest_push": "Fixed wallet to stop auto-reading balances after an order.",
@@ -2697,6 +2712,7 @@
     "has_readme": true,
     "additions": 417,
     "deletions": 530,
+    "churn_pct": 13.3,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -2745,7 +2761,6 @@
     "head_sha": "1e782b8922d127dffab9dba9c7b7cd5ac8d53dff",
     "readme_hash": "1733:# Aegis\n\nA whitehat rescue service for exposed on-chain funds on Starknet.\n\n## What it does\n\nAegis continuously scans public repositories for accidentally committed secrets (private keys, seed phrases",
     "desc_v3": true,
-    "churn_pct": 6.3,
     "summary": "Sweeps exposed on-chain funds into a private pool and returns them to verified owners.",
     "description_long": "Aegis scans public repositories for accidentally committed secrets that control funds. When it finds such secrets, it sweeps the exposed balance into a STRK20 shielded position, keeping the transaction private. Original owners prove control of the repository to recover their funds, with Aegis taking no portion of the balance.",
     "latest_push": "Simplified hero section and added dark theme.",
@@ -2784,6 +2799,7 @@
     "has_readme": true,
     "additions": 43,
     "deletions": 50,
+    "churn_pct": 6.3,
     "assessment": {
       "innovative": true,
       "complex": false,
@@ -2834,7 +2850,6 @@
     "head_sha": "c69372f7f5cfa3475be24de1cde8376dcfaac6c0",
     "readme_hash": "8380:# Facet\n\n**Private identities for Starknet DeFi.**\n\nOne shielded balance. Unlimited unlinkable facets. Trade on one protocol as one\nidentity, lend on another as a different one, and nothing on-chain c",
     "desc_v3": true,
-    "churn_pct": 6.7,
     "summary": "Manage multiple DeFi identities with separate balances.",
     "description_long": "Facet creates unlinkable identities for trading and lending in Starknet DeFi. It uses shadow accounts to generate unique identity keys for each interaction with a decentralized app, allowing distinct activities without linking transactions to the user. The project is built with a combination of Solidity contracts and a specific funding pattern that enables depositing in a shadow account from a shielded note.",
     "latest_push": "Added a prover environment template and fork tests against the live anonymizer.",
@@ -2853,6 +2868,7 @@
     "has_readme": true,
     "additions": 53,
     "deletions": 3,
+    "churn_pct": 6.7,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -2908,7 +2924,6 @@
     "head_sha": "4461ae8d15858b8e5a67e9c7ec959416f86745b8",
     "readme_hash": "8324:# CipherNest\n\n**Hybrid Local-First Security Platform & STRK20 Shielded Deception Network**\n\n> *\"CipherNest is a local-first cyber defense platform with a browser-based operations console, a defender-c",
     "desc_v3": true,
-    "churn_pct": 3.8,
     "summary": "Deploy digital decoys and extract attacker identity in real time.",
     "description_long": "CipherNest creates digital twin decoys and tracks attack behaviors using local security agents. It includes a Next.js web console for managing decoys, an Electron app for local defense operations, and uses Docker to isolate decoy environments, keeping telemetry local. Detailed contracts and transaction lifecycle can be found in `STRK20_INTEGRATION.md`.",
     "latest_push": "Implemented Interactive Live SSH Terminal Sandbox with OpenCode AI synthesis.",
@@ -2937,6 +2952,7 @@
     "has_readme": true,
     "additions": 131,
     "deletions": 133,
+    "churn_pct": 3.8,
     "assessment": {
       "innovative": true,
       "complex": false,
@@ -2986,7 +3002,6 @@
     "head_sha": "562cde24dfb7fc7d42c6261fb903c631e53738db",
     "readme_hash": "3900:# ShadowLedger\n\nPrivate payroll and treasury disbursements with public aggregate accountability on Starknet STRK20.\n\nShadowLedger is an entry for the STRK20 Private Sprint 2026, in the **Payments** ca",
     "desc_v3": true,
-    "churn_pct": 23.7,
     "summary": "Builds a private payroll system with public accountability.",
     "description_long": "This project manages private payroll and treasury disbursements using STRK20 notes while allowing for public aggregate accountability. It features a browser-only payroll builder, manual and CSV import options, and tools for recipient activation without logging sensitive data. Key components include error-report generation, wallet standard discovery, and a capped STRK20 private-transfer flow with on-chain verification.",
     "latest_push": "Documented live deployment and registration process.",
@@ -2994,6 +3009,7 @@
     "has_readme": true,
     "additions": 709,
     "deletions": 13,
+    "churn_pct": 23.7,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -3045,7 +3061,6 @@
     "head_sha": "06cbb270cd5e84b20637322ebc23a6d582968c39",
     "readme_hash": "17959:# Quietline\n\nEncrypted on-chain mail on Starknet.\n\nAddresses never appear on the message. Content decrypts only on the\nrecipient's device. A private transfer can carry a memo in the same\ntransaction —",
     "desc_v3": true,
-    "churn_pct": 4.3,
     "summary": "Send encrypted messages with payment memos on-chain.",
     "description_long": "Quietline enables users to send encrypted messages on Starknet, with optional payment memos attached to the same transaction. The project consists of two STRK20-capable wallets, a `privacy_invoke` helper for sending messages, and encryption using AES-GCM, with no plaintext held by the server. The wallet integration supports various wallets and includes a standalone payment link generator, while localStorage stores deal states without uploading data.",
     "latest_push": "Added standalone network-bound payment links and conversation tags.",
@@ -3089,6 +3104,7 @@
     "has_readme": true,
     "additions": 929,
     "deletions": 79,
+    "churn_pct": 4.3,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -3137,7 +3153,6 @@
     "head_sha": "27b50b1a7113323f53e426f465f46cbd52141887",
     "readme_hash": "778:# Variety\n\nCompliant selective disclosure for private yield on Starknet.\n\nVariety is a STRK20 native extension for yield vaults. It is designed to keep\npositions and activity private while allowing a ",
     "desc_v3": true,
-    "churn_pct": 0,
     "summary": "Manage private yield vaults with selective disclosure.",
     "description_long": "Variety allows users to maintain privacy for their yield positions and activities while selectively disclosing necessary information to auditors or counterparties. The first milestone focuses on creating a vault workflow with defined public and private fields. The project will finalize its integration plan, including disclosure proofs and deployment steps, before proceeding to implementation.",
     "latest_push": "Initialized Variety for the STRK20 sprint.",
@@ -3145,6 +3160,7 @@
     "has_readme": true,
     "additions": 27,
     "deletions": 0,
+    "churn_pct": 0,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -3195,7 +3211,6 @@
     "head_sha": "6fd902903312ee884fe38dbd5a4f969731e9c201",
     "readme_hash": "4454:# Nexora Protocol\n\n**Starknet as the privacy layer for the multichain economy.**\n\nNexora Protocol is a cross-chain privacy protocol that lets users deposit assets on any supported chain (Arbitrum, Bas",
     "desc_v3": true,
-    "churn_pct": 6.8,
     "summary": "Route assets privately across chains with minimized linkability.",
     "description_long": "Nexora Protocol transfers assets between supported chains while masking transactions as STRK20 shielded notes. The system consists of a frontend for user interaction, a relayer API for handling transactions, and a routing engine that optimizes routes based on privacy scores and fees.",
     "latest_push": "Completed the frontend redesign with a dark theme and animations.",
@@ -3214,6 +3229,7 @@
     "has_readme": true,
     "additions": 999,
     "deletions": 47,
+    "churn_pct": 6.8,
     "assessment": {
       "innovative": true,
       "complex": false,
@@ -3262,7 +3278,6 @@
     "head_sha": "c3348654f09e988f863e251f071db32cb2a07ebf",
     "readme_hash": "2748:# Nomos\n\nA private payment gateway for Starknet, built for the [STRK20 Private Sprint](https://strk20.starknet.io/hackathon). A business drops in a Payment Link or checkout widget; a customer pays wit",
     "desc_v3": true,
-    "churn_pct": 0.1,
     "summary": "Process private payments through a checkout widget.",
     "description_long": "A payment gateway for businesses that already accept stablecoins. It allows customers to pay without revealing their identity, while transactions are settled through the STRK20 pool on mainnet. Built using Next.js, it features a wallet picker, various actions for shielding and transferring funds, and a deployable anonymizer contract.",
     "latest_push": "Fixed wording from checkout gateway to payment gateway in documentation.",
@@ -3301,6 +3316,7 @@
     "has_readme": true,
     "additions": 1,
     "deletions": 1,
+    "churn_pct": 0.1,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -3349,7 +3365,6 @@
     "head_sha": "cadcab4a2472ebc60c57bf3d1f367fd7f3aa50b0",
     "readme_hash": "5837:# VeilPayouts 🎁\n\n**Private business payouts on Starknet — pay anyone by link, they claim into a shielded balance.**\n\nVeilPayouts is a privacy-native payouts rail built on [STRK20](https://strk20.star",
     "desc_v3": true,
-    "churn_pct": 2.6,
     "summary": "Send private payouts to anyone via claim link.",
     "description_long": "VeilPayouts allows companies to send payouts without collecting wallet addresses, using claim links for recipients. It uses the STRK20 privacy pool for escrow, where funds are hidden until claimed, and features a Next.js frontend and a Cairo contract for managing payout state and claims.",
     "latest_push": "Fixed Sepolia RPC by switching to verified free endpoints.",
@@ -3388,6 +3403,7 @@
     "has_readme": true,
     "additions": 46,
     "deletions": 0,
+    "churn_pct": 2.6,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -3437,7 +3453,6 @@
     "head_sha": "235fa232919631614958c2c686e639d87542e066",
     "readme_hash": "3160:# VeilOps\n\nVeilOps is a private treasury control plane for Starknet. It turns a STRK20 wallet rail into a simple operating ritual: fund a reserve, check a sample policy, simulate a second-operator rev",
     "desc_v3": true,
-    "churn_pct": 100,
     "summary": "Operate a private treasury with discrete disbursement workflows.",
     "description_long": "VeilOps acts as a control plane for private treasury management on Starknet. It allows users to fund a reserve, check sample policies, simulate second-operator reviews, and perform private disbursements through a workflow involving viewing keys and notes without exposing them to the dapp. The implementation uses the Privacy Wallet API with `WalletAccountV6`, and the MVP runs on Starknet Sepolia, relying on browser-side operations for validation and interaction without on-chain multisig enforcement.",
     "latest_push": "Built the VeilOps Sepolia treasury MVP and added STRK20 privacy plan.",
@@ -3476,6 +3491,7 @@
     "has_readme": true,
     "additions": 1040,
     "deletions": 1459,
+    "churn_pct": 100,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -3526,7 +3542,6 @@
     "head_sha": "eb8799a856af041b7f5ebed0d2d8750b26515b84",
     "readme_hash": "3108:# Noxis\n\n**Private payments on Starknet.**\n\nNoxis is a private payments app built for the [STRK20 Private Sprint](https://github.com/starkience/strk20-hackathon). It lets you hold, send, and receive S",
     "desc_v3": true,
-    "churn_pct": 0.1,
     "summary": "Send and receive private payments on Starknet.",
     "description_long": "Noxis allows users to hold, send, and receive STRK-backed value while keeping payment details private. Built with Next.js and Tailwind, the app implements features such as shielded payments, private transfers, and a wallet picker. It uses the STRK20 privacy pool for transaction processing, with functionalities like minting private notes and redeeming them to different accounts.",
     "latest_push": "Fixed stuck sending state on STRK20 transactions and surfaced actionable hints.",
@@ -3565,6 +3580,7 @@
     "has_readme": true,
     "additions": 3,
     "deletions": 0,
+    "churn_pct": 0.1,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -3624,7 +3640,6 @@
     "head_sha": "f505740b6e6683de5982ef3ba6dab928f36d3966",
     "readme_hash": "5240:# Offbook\n\nPrivate OTC settlement for Starknet.\n\nOffbook is an RFQ product for bilateral ERC-20 block trades. Counterparties agree terms offchain, then settle through the STRK20 privacy pool and an Of",
     "desc_v3": true,
-    "churn_pct": 0.2,
     "summary": "Settle OTC trades privately without revealing counterparties.",
     "description_long": "Offbook allows users to conduct private on-chain settlements for ERC-20 block trades. Counterparties agree on trade terms off-chain, then send their tokens to a privacy pool before locking them within the Offbook settlement helper, ensuring anonymity in the transaction graph. The project includes a web frontend built with Next.js and a smart contract written in Cairo, along with integration for STRK20 actions.",
     "latest_push": "Added docker-compose for local RFQ database.",
@@ -3643,6 +3658,7 @@
     "has_readme": true,
     "additions": 21,
     "deletions": 0,
+    "churn_pct": 0.2,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -3691,7 +3707,6 @@
     "head_sha": "8004445e5e19b90b51bdf88aa350d4349290cd45",
     "readme_hash": "2060:# SABLE — Private Invoicing & Payout Rail on STRK20\n\n> Send a client an invoice link. They pay it. The money lands **shielded** —\n> your client list, your rates, and your balance never appear on-chain",
     "desc_v3": true,
-    "churn_pct": 100,
     "summary": "Send an invoice link to clients for private payments with no on-chain visibility.",
     "description_long": "SABLE allows freelancers and creators to send invoice links to clients for payment without revealing on-chain client lists, rates, or balances. It connects wallets and shields payments into the STRK20 pool against each invoice, while providing a dashboard for freelancers to monitor paid invoices and balances using viewing keys. Built with Next.js and the Privacy SDK, it integrates with Starknet mainnet through Alchemy RPC.",
     "latest_push": "Added the STRK20 skill, documentation mirror, and sprint context.",
@@ -3699,6 +3714,7 @@
     "has_readme": true,
     "additions": 4032,
     "deletions": 0,
+    "churn_pct": 100,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -3747,7 +3763,6 @@
     "head_sha": "baa8e520d72f2a66db7c7c52fa3fff966cdce351",
     "readme_hash": "326:# Aegis\nPrivate, recurring subscription payments on Starknet. Creators and businesses get predictable revenue with publicly verifiable aggregates, while payer identity, amount, and billing cadence sta",
     "desc_v3": true,
-    "churn_pct": 100,
     "summary": "Manage private subscription payments with anonymous payer details.",
     "description_long": "Creates private, recurring subscription payments. The system allows for predictable revenue with public verification of aggregates while keeping payer identity and payment details confidential. It involves on-chain calculation of totals without revealing subscriber lists or individual transaction histories.",
     "latest_push": "Added the Aegis Next.js STRK20 demo app.",
@@ -3786,6 +3801,7 @@
     "has_readme": true,
     "additions": 2099,
     "deletions": 0,
+    "churn_pct": 100,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -3835,7 +3851,6 @@
     "head_sha": "e14b5ea97012e3201d5cc64fcbdce9de30e67a6c",
     "readme_hash": "5703:# Lens\n\nSee what a STRK20 action still reveals. A privacy briefing for anyone about to shield, send, or unshield on Starknet.\n\n**[Hidden vs visible](./docs/HIDDEN-VS-VISIBLE.md)** · **[Fixture the sco",
     "desc_v3": true,
-    "churn_pct": 2.3,
     "summary": "Grades actions for privacy risks before signing on Starknet.",
     "description_long": "Lens scores public edges based on a user's historical transactions and planned actions, indicating potential privacy leaks. It reads deposit and withdrawal data, assesses planned shield, send, or unshield scenarios with a deterministic grading system, and suggests modifications to actions. The project consists of modules for detecting leaks, deciding scores, and rewriting planned actions, built with TypeScript using the Privacy Wallet API.",
     "latest_push": "Polished the README and fixed the Veritable landing fixture card.",
@@ -3874,6 +3889,7 @@
     "has_readme": true,
     "additions": 73,
     "deletions": 19,
+    "churn_pct": 2.3,
     "assessment": {
       "innovative": true,
       "complex": false,
@@ -3922,7 +3938,6 @@
     "head_sha": "3c04c9d4a120da8a7cefcd5705715e0b7b5a0e13",
     "readme_hash": "978:# Ghoste for Starknet\n\nPrivate meta-routing and unlinkable settlement on Starknet.\n\nGhoste for Starknet compares privately executable liquidity routes, executes swaps from STRK20 shielded balances, re",
     "desc_v3": true,
-    "churn_pct": 0,
     "summary": "Compares private liquidity routes and executes swaps from shielded balances.",
     "description_long": "Ghoste for Starknet compares privately executable liquidity routes and performs swaps from STRK20 shielded balances. The project includes functionality for reshielding the output and settling to another Starknet wallet. It connects to wallets, executes private swaps, and records transaction evidence in `strk20.json`.",
     "latest_push": "Removed the internal product plan and added the Ghoste for Starknet product plan.",
@@ -3930,6 +3945,7 @@
     "has_readme": true,
     "additions": 0,
     "deletions": 829,
+    "churn_pct": 0,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -3978,7 +3994,6 @@
     "head_sha": "e993ad047882f82815b1f4b81aaaa5d31a8670f2",
     "readme_hash": "75:# Tacit — sealed-bid auctions (Vickrey, first-price, multi-unit) on STRK20\n",
     "desc_v3": true,
-    "churn_pct": 100,
     "summary": "Conduct sealed-bid auctions with private bids and settlement.",
     "description_long": "Tacit implements sealed-bid auctions including Vickrey, first-price, and multi-unit formats. It is built on STRK20 for encrypted note handling to keep bids private and secure settlements.",
     "latest_push": "Carried over the Tacit frontend design for STRK20 integration.",
@@ -3986,6 +4001,7 @@
     "has_readme": true,
     "additions": 12248,
     "deletions": 4657543,
+    "churn_pct": 100,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -4041,7 +4057,6 @@
     "head_sha": "91006b8df33ac9b7edd210851f5c7fffad8b542f",
     "readme_hash": "4875:# Tx404\n\nTx404 is a non-custodial shielding API/SDK: drop shield, unshield, and private-transfer into any app without touching a viewing key. It provides core STRK20 privacy primitives through the Sta",
     "desc_v3": true,
-    "churn_pct": 78.3,
     "summary": "Integrate non-custodial privacy features in any app with an API/SDK.",
     "description_long": "Tx404 offers a non-custodial shielding API/SDK for dropping, unshielding, and transferring privately without touching a viewing key. It includes core STRK20 privacy primitives, contracts for shield/unshield/private transfers, and a specific `privacy_invoke` DeFi flow. The backend does not hold private keys or funds, relying on the end user's privacy-enabled wallet for signing every action.",
     "latest_push": "Launched the Tx404 privacy SDK and redesigned the frontend.",
@@ -4085,6 +4100,7 @@
     "has_readme": true,
     "additions": 2012,
     "deletions": 602,
+    "churn_pct": 78.3,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -4133,7 +4149,6 @@
     "head_sha": "714147cdd8a220773e283520d7e7f36ad0956bf4",
     "readme_hash": "2895:# VeilCheck\n\nKnow what leaks before you sign.\n\nVeilCheck is a Starknet privacy and security developer tool for STRK20. It is designed to run a transaction privacy preflight before a user shields, priv",
     "desc_v3": true,
-    "churn_pct": 100,
     "summary": "Assess transaction privacy risks before signing with VeilCheck.",
     "description_long": "VeilCheck evaluates privacy risks for transactions involving STRK20 assets prior to execution. It analyzes factors like timing correlation, amount leakage, and public address exposure to score overall transaction privacy. The application is built using a Next.js shell, with support for STRK20 through the Starknet Wallet API, and maintains a separate logic layer for scoring outcomes.",
     "latest_push": "Initial commit of the VeilCheck project.",
@@ -4172,6 +4187,7 @@
     "has_readme": true,
     "additions": 5697,
     "deletions": 1,
+    "churn_pct": 100,
     "assessment": {
       "innovative": true,
       "complex": false,
@@ -4233,7 +4249,6 @@
     "head_sha": "934de89cb0cad5ebac394745f925755121451a7a",
     "readme_hash": "5255:# Mosby Pass\n\nPrivate event admission on Starknet.\n\nAn attendee scans an event QR, pays from shielded STRK, and receives a\ndevice-bound pass. At the door, a fresh challenge proves control of that pass",
     "desc_v3": true,
-    "churn_pct": 6,
     "summary": "Grants private admission to events using shielded STRK payments.",
     "description_long": "An attendee scans a QR code, pays with shielded STRK, and receives a pass tied to their device. The process includes generating a commitment from the event organizer, creating an access commitment in the attendee's browser, and verifying control of the pass at the gate using a random challenge. The main components involve a payment helper deployed on mainnet, various tests for reliability, and a public demo hosted on GitHub Pages.",
     "latest_push": "Pivoted Veilpass into Mosby Pass event admission.",
@@ -4252,6 +4267,7 @@
     "has_readme": true,
     "additions": 58,
     "deletions": 58,
+    "churn_pct": 6,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -4300,7 +4316,6 @@
     "head_sha": "47eac1fd26f8072a8646a23bfe42d9c62da49b40",
     "readme_hash": "6484:# Blindpool\n\n**Public odds. Invisible bettors.**\n\nA prediction market on Starknet where the order book is fully public and every\nposition is shielded. Anyone can read the odds, the volume and the sett",
     "desc_v3": true,
-    "churn_pct": 3.3,
     "summary": "Place private bets on public prediction markets.",
     "description_long": "This project builds a prediction market where the order book is public but individual positions remain private. Implemented with a public market registry and a private STRK20 privacy pool for position data, it allows users to shield their bets and claim payouts without revealing their addresses or amounts involved.",
     "latest_push": "Dropped TLC scratch state from the repo.",
@@ -4339,6 +4354,7 @@
     "has_readme": true,
     "additions": 156,
     "deletions": 0,
+    "churn_pct": 3.3,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -4387,7 +4403,6 @@
     "head_sha": "61730e5c8f5a3f3bc743249b8afa650d86bd96c8",
     "readme_hash": "2216:# ◈ Nomada\n\n<p align=\"center\">\n  <strong>The all-in-one private P2P transfer app on Starknet.</strong>\n</p>\n\nNomada is a privacy-first chat app built for the Starknet ecosystem using the **STRK20 priv",
     "desc_v3": true,
-    "churn_pct": 0.2,
     "summary": "Transfer money privately using chat commands.",
     "description_long": "Nomada is a private P2P transfer app that handles transactions through chat commands. It is built with a React frontend that parses commands and integrates with Starknet wallets using starknet.js to execute shielded transactions. Key modules include commandParser.ts for chat syntax and commandFlow.ts for linking commands to the Starknet Wallet API.",
     "latest_push": "Removed the whoami command from the application.",
@@ -4421,6 +4436,7 @@
     "has_readme": true,
     "additions": 2,
     "deletions": 14,
+    "churn_pct": 0.2,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -4470,7 +4486,6 @@
     "head_sha": "55e8427bd8507629efa599ca7ffeb85ce02b1901",
     "readme_hash": "4187:# Private money account\n\nHold and send on the live STRK20 pool without publishing salary or net worth. Yield is planned, not in this repo.\n\nFirst mainnet shield is live: [`0x04c4bea05417ce1062adef39b3",
     "desc_v3": true,
-    "churn_pct": 0.7,
     "summary": "Send and hold crypto without sharing your salary or net worth.",
     "description_long": "Users can shield and send USDC or STRK while keeping their financial information private. This non-custodial Starknet app uses the Wallet API via `WalletAccountV6` to manage accounts, and all transactions are logged. The repository includes deployment steps and confirmed transaction records, while the yield feature is planned for a future update.",
     "latest_push": "Added a public CCTP hop from native Starknet USDC to Base or Solana.",
@@ -4509,6 +4524,7 @@
     "has_readme": true,
     "additions": 27,
     "deletions": 0,
+    "churn_pct": 0.7,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -4557,7 +4573,6 @@
     "head_sha": "b5fd15f570f26aabaeb72578c0c90a93cfc1d73e",
     "readme_hash": "3134:# GhostBounty\n\n**Disclose vulnerabilities without disclosing yourself.**\n\nGhostBounty is an anonymous responsible-disclosure protocol on Starknet. Security researchers submit encrypted vulnerability r",
     "desc_v3": true,
-    "churn_pct": 0,
     "summary": "Submit encrypted vulnerability reports and receive anonymous bounties.",
     "description_long": "GhostBounty enables anonymous responsible disclosure of vulnerabilities. Researchers encrypt their reports and submit them through a case-specific identity, while protocols decrypt the reports and communicate without revealing identities. The system includes a Next.js interface, Cairo smart contracts for anonymity, client-side encryption for authorship proof, and SDK for STRK20 interactions.",
     "latest_push": "Documented the architecture for the GhostBounty project.",
@@ -4565,6 +4580,7 @@
     "has_readme": true,
     "additions": 553,
     "deletions": 0,
+    "churn_pct": 0,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -4613,7 +4629,6 @@
     "head_sha": "eb2718de7059e787f6823abb742b7d1ba22ee0d6",
     "readme_hash": "4089:# STRK20 Privacy Sentinel\n\n> An MCP-powered privacy analytics agent for monitoring and managing shielded DeFi positions on Starknet using the STRK20 privacy pool.\n\n## Problem\n\nDeFi users on Starknet w",
     "desc_v3": true,
-    "churn_pct": 100,
     "summary": "Monitor and manage shielded DeFi positions on Starknet.",
     "description_long": "STRK20 Privacy Sentinel tracks shielded balances, private transfers, and yield accrual. It uses a FastAPI backend, integrates with the Starknet Privacy SDK, and employs the Model Context Protocol for autonomous monitoring. The system includes features for anomaly detection, automated private transfers, and compliance reporting.",
     "latest_push": "Created the STRK20 Privacy Sentinel and its foundational architecture.",
@@ -4621,6 +4636,7 @@
     "has_readme": true,
     "additions": 469,
     "deletions": 0,
+    "churn_pct": 100,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -4669,7 +4685,6 @@
     "head_sha": "fcef6b5c352173484dbfe90f0f158f465dd891f3",
     "readme_hash": "795:# PrivKit\n\nPrivKit is an open-source developer toolkit for integrating STRK20 privacy features into Starknet applications. It helps developers add shielded transfers, confidential balances, and other ",
     "desc_v3": true,
-    "churn_pct": 0,
     "summary": "Integrate privacy features into Starknet applications with ease.",
     "description_long": "Adds shielded transfers and confidential balances to Starknet dapps. Currently in early development, it focuses on planning integration with the STRK20 Privacy Wallet API and starknet.js, without existing application code.",
     "latest_push": "Added the PrivKit README file.",
@@ -4677,6 +4692,7 @@
     "has_readme": true,
     "additions": 11,
     "deletions": 1,
+    "churn_pct": 0,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -4725,7 +4741,6 @@
     "head_sha": "b9598080ea35d0a64a967f607bee334533e1e0bd",
     "readme_hash": "6623:# CipherPay STRK20 Private Payroll\n\nCipherPay is a staged Starknet payroll-disbursement application. Phase 1 provides a real interactive STRK20 payroll flow through Starknet.js `WalletAccountV6`; real",
     "desc_v3": true,
-    "churn_pct": 0.1,
     "summary": "Disburses payroll with encrypted transaction confirmations.",
     "description_long": "CipherPay processes payroll through a staged disbursement method that combines interactive user engagement with backend validation. It features a confirmation worker to persist transactions in PostgreSQL and utilizes the Wallet API for payment hashing, enforcing strict checks for each payout phase to ensure validity. The implementation includes Next.js for the frontend, and all sensitive data management is handled securely, ensuring no confidential information is stored on the application server.",
     "latest_push": "Polished the landing page and improved the saved recipient flow.",
@@ -4769,6 +4784,7 @@
     "has_readme": true,
     "additions": 9,
     "deletions": 8,
+    "churn_pct": 0.1,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -4817,7 +4833,6 @@
     "head_sha": "a802c8c3fd1edb3b8e7fe55be9fe7d7b927394c6",
     "readme_hash": "2181:# Paybook\n\nPrivate payroll with scoped disclosure on [STRK20](https://strk20.starknet.io).\n\nA company pays people from a shielded treasury. The public can verify that a run happened and, optionally, t",
     "desc_v3": true,
-    "churn_pct": 1.6,
     "summary": "Manage private payroll with restricted information disclosure.",
     "description_long": "This project allows companies to process employee payroll privately while maintaining the ability to verify the transaction publicly. The implementation includes a `PayrollBook` smart contract for publishing payroll runs and various packages for handling enrollment, credentials, and disclosures alongside a web interface for users. It operates on Sepolia for testing, ensuring that actual funds are not used during development.",
     "latest_push": "Added the cinematic landing and shared app shell.",
@@ -4836,6 +4851,7 @@
     "has_readme": true,
     "additions": 34,
     "deletions": 21,
+    "churn_pct": 1.6,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -4884,7 +4900,6 @@
     "head_sha": "cae9e9edc6a532668afeb492319cf778fdac6d82",
     "readme_hash": "5896:# Veilfolio\n\n**One portfolio. Separate identities. Private by design.**\n\nA privacy-first portfolio layer for Starknet that lets users organize one unified portfolio into separate, privacy-aware execut",
     "desc_v3": true,
-    "churn_pct": 100,
     "summary": "Organize your portfolio into separate, private execution identities.",
     "description_long": "Veilfolio allows users to manage one unified portfolio while keeping different strategies and identities private. The project consists of a Next.js frontend for user interaction, along with Cairo smart contracts for executing privacy operations and portfolio management. Features include support for private transactions using STRK20, a privacy model outlining public and private elements, and tools for tracking performance and risk across multiple execution identities.",
     "latest_push": "Added project features and organized file structure.",
@@ -4898,6 +4913,7 @@
     "has_readme": true,
     "additions": 14853,
     "deletions": 4,
+    "churn_pct": 100,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -4944,7 +4960,6 @@
     "head_sha": "781fbfc49629cf88518e235888b2d164c8109b45",
     "readme_hash": "144:# Zylith Client\n\nTrading and liquidity web app for Zylith.\n\nThis public repository contains the Zylith client application and integration code.\n",
     "desc_v3": true,
-    "churn_pct": 3,
     "summary": "Trade and manage liquidity in a web app.",
     "description_long": "This project is a web app for trading and managing liquidity. The client application and integration code are included in this repository.",
     "latest_push": "Added managed maker runner and market data adapters.",
@@ -4983,6 +4998,7 @@
     "has_readme": true,
     "additions": 1408,
     "deletions": 95,
+    "churn_pct": 3,
     "assessment": {
       "innovative": false,
       "complex": false,
