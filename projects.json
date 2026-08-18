@@ -1,5 +1,113 @@
 [
   {
+    "slug": "chaoskeyplus-appbuild",
+    "name": "ChaosKey+",
+    "one_liner": "Physical-chaos entropy device with a Ready Wallet API tab for STRK20 shield, private transfer, and unshield.",
+    "category": "Tooling",
+    "repo_url": "https://github.com/Doodabug/Chaoskeyplus-appbuild",
+    "demo_url": "https://mobile-app-build-778.preview.emergentagent.com",
+    "demo_video": "https://www.youtube.com/watch?v=CHAOSKEY_DEMO_VIDEO",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project primarily focuses on standard private transfer features without unique implementation.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": true,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-18T21:18:08Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "emergent-agent-e1",
+        "name": "emergent-agent-e1",
+        "avatar_url": "https://avatars.githubusercontent.com/u/222461215?v=4"
+      },
+      {
+        "login": "Doodabug",
+        "name": "Doodlebug",
+        "avatar_url": "https://avatars.githubusercontent.com/u/272664821?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18"
+    ],
+    "head_sha": "aaf5f172c5220e75b824c84b6a9ea38865ffd1d0",
+    "readme_hash": "1975:# ChaosKey+ M3 — STRK20 hackathon sprint\n\nPhysical-chaos entropy device (Harvest / Tokens / Ledger) plus a **Pool** tab that talks to the Starknet STRK20 privacy pool through the user's Ready wallet.\n",
+    "desc_v3": true,
+    "churn_pct": 23.1,
+    "summary": "Access chaos-derived entropy for STRK20 transfers and shield management.",
+    "description_long": "ChaosKey+ is a physical-chaos entropy device that allows users to shield, transfer privately, and unshield tokens in the STRK20 pool through a Ready Wallet API tab. It integrates with the Starknet Wallet API, implementing core communication with the Starknet SDK and wallet detection via the Wallet Standard Discovery. The backend and frontend require specific setup steps, including MongoDB configuration and React app initialization.",
+    "latest_push": "Added STRK20 Pool UI with wallet connect, shield, and transfer functionality.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 851,
+    "deletions": 183,
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "This project's main features involve a private transfer and shield functionality, which is obvious.",
+      "why_complex": "No contracts have been declared or built, showing no engineering depth in Cairo.",
+      "reason": "The project primarily focuses on standard private transfer features without unique implementation.",
+      "facts_v2": true
+    },
+    "star_evidence": ""
+  },
+  {
+    "slug": "atrum",
+    "name": "Atrum",
+    "one_liner": "Sealed-bid prediction markets: orders stay unreadable until they are binding, clear at a uniform price, and positions are tradeable before resolution.",
+    "category": "Other",
+    "repo_url": "https://github.com/atrummarkets/atrum-starknet",
+    "demo_url": "https://strk20.atrum.fun",
+    "demo_video": "",
+    "x_handle": "AtrumMarkets",
+    "inspired_by": "RFP-07",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-18T21:11:56Z",
+    "stars": 0,
+    "builders": [],
+    "agents": [],
+    "active_days": [
+      "2026-08-18"
+    ],
+    "head_sha": "5fb34f483086f7e421981f15c8d44392ce4a8bef",
+    "readme_hash": "4342:# Atrum — sealed-bid prediction markets on Starknet\n\nA prediction market where **your order is unreadable until it is already binding**, and\nwhere a position can be sold before the event resolves.\n\nBu",
+    "desc_v3": true,
+    "churn_pct": 0,
+    "summary": "Trade sealed-bid predictions in a private market.",
+    "description_long": "A sealed-bid prediction market where orders are kept secret until they are binding. It uses a batch auction with a uniform clearing price, allowing positions to be sold before an event resolves. The project contains contracts for order submission, clearing price calculation, and a conditional-token model for trading positions.",
+    "latest_push": "Implemented sealed-bid prediction markets on Starknet.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 105,
+    "deletions": 0,
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
     "slug": "facet",
     "name": "Facet",
     "one_liner": "Private identities for Starknet DeFi. One shielded balance, unlimited unlinkable facets, one per protocol.",
@@ -40,7 +148,6 @@
     "head_sha": "e61984fde346a9c75e085b9354d16222b37e5250",
     "readme_hash": "8380:# Facet\n\n**Private identities for Starknet DeFi.**\n\nOne shielded balance. Unlimited unlinkable facets. Trade on one protocol as one\nidentity, lend on another as a different one, and nothing on-chain c",
     "desc_v3": true,
-    "churn_pct": 2.6,
     "summary": "Manage multiple DeFi identities with separate balances.",
     "description_long": "Facet creates unlinkable identities for trading and lending in Starknet DeFi. It uses shadow accounts to generate unique identity keys for each interaction with a decentralized app, allowing distinct activities without linking transactions to the user. The project is built with a combination of Solidity contracts and a specific funding pattern that enables depositing in a shadow account from a shielded note.",
     "latest_push": "Recorded findings from the live Sepolia replay in FINDINGS.md.",
@@ -59,6 +166,7 @@
     "has_readme": true,
     "additions": 21,
     "deletions": 1,
+    "churn_pct": 2.6,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -108,7 +216,6 @@
     "head_sha": "547518852fa90e5504867672d831827dd4385a4d",
     "readme_hash": "5470:# GameShield — Private Gaming Bounty Hub\n\nGameShield is a STRK20 prototype for private gaming reward flows on Starknet. It uses the STRK20 pool directly — rewards are deposited, transferred and withdr",
     "desc_v3": true,
-    "churn_pct": 0.2,
     "summary": "Manage private gaming bounty campaigns with shielded prize payouts.",
     "description_long": "GameShield is a prototype for private gaming reward flows. It includes a campaign registry for multiple tokens and a payout helper contract, both written in Cairo. Transactions for funding and payouts are executed via STRK20 shielded notes, ensuring that payment details remain confidential while maintaining verifiable records on-chain.",
     "latest_push": "Swapped to show estimated network fee and a Ready X fee-review hint on retry.",
@@ -127,6 +234,7 @@
     "has_readme": true,
     "additions": 9,
     "deletions": 0,
+    "churn_pct": 0.2,
     "assessment": null,
     "star_evidence": "Cairo in the repository"
   },
@@ -208,7 +316,6 @@
     "head_sha": "1d20213ebc5597fe60aeb4022e76a87bfa504f09",
     "readme_hash": "9319:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
     "desc_v3": true,
-    "churn_pct": 0.4,
     "summary": "Book private accommodations through trusted connections.",
     "description_long": "Philoxenia is a peer-to-peer hospitality protocol that allows users to book accommodations privately using a social trust network. It consists of a frontend built with Next.js connected to a Fastify backend with a PostgreSQL database, and on-chain contracts written in Cairo for escrow and payment settlement.",
     "latest_push": "Updated text prompts for booking and token swapping interactions.",
@@ -222,6 +329,7 @@
     "has_readme": true,
     "additions": 32,
     "deletions": 32,
+    "churn_pct": 0.4,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -277,7 +385,6 @@
     "head_sha": "06d30c9d774b3000c4b8b6553d7c6d76320aec98",
     "readme_hash": "3652:<div align=\"center\">\n  <img src=\"./icon.svg\" width=\"88\" height=\"88\" alt=\"HIDDEN logo\" />\n\n  # HIDDEN\n\n  **Games where your opponent can't see your move.**\n\n  Built on Starknet mainnet with **STRK20** ",
     "desc_v3": true,
-    "churn_pct": 41.7,
     "summary": "Play hidden-information games where opponents can't see your moves.",
     "description_long": "HIDDEN offers wagered games like Rock/Paper/Scissors and Bluff with private moves. Players lock their choices as commitment hashes before revealing them, ensuring no one can see an opponent's move until both have committed. The game backend includes a frontend interface and stubs for essential chain calls, while the integration with the STRK20 privacy pool is still in development.",
     "latest_push": "Removed case simulation and wired to real contract pull in app.js.",
@@ -291,6 +398,7 @@
     "has_readme": true,
     "additions": 585,
     "deletions": 321,
+    "churn_pct": 41.7,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -497,7 +605,6 @@
     "head_sha": "70582a197ffed40ec55cd93d516654388742993c",
     "readme_hash": "2550:# Sevrin\n\n> Tokenomics transparent. People private.\n\nSevrin is confidential token-allocation infrastructure for Starknet. It allows\ntoken issuers to publicly prove aggregate restricted supply, unlock ",
     "desc_v3": true,
-    "churn_pct": 0,
     "summary": "Manage confidential token allocations and claims with public verification.",
     "description_long": "Sevrin is a confidential token-allocation infrastructure that allows token issuers to publicly prove aggregate restricted supply and unlock schedules without disclosing beneficiary identities. It is built using two Cairo contracts: SevrinFloatVault, which manages token holding and accounting, and SevrinClaimAdapter, which connects claims to STRK20 private notes. Beneficiary ownership is represented by one-time Merkle credentials instead of onchain mappings.",
     "latest_push": "Initialized the Sevrin project with initial files and structure.",
@@ -505,6 +612,7 @@
     "has_readme": true,
     "additions": 85,
     "deletions": 0,
+    "churn_pct": 0,
     "assessment": null,
     "star_evidence": ""
   },
@@ -2836,70 +2944,6 @@
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "chaoskeyplus-appbuild",
-    "name": "ChaosKey+",
-    "one_liner": "Physical-chaos entropy device with a Ready Wallet API tab for STRK20 shield, private transfer, and unshield.",
-    "category": "Tooling",
-    "repo_url": "https://github.com/Doodabug/Chaoskeyplus-appbuild",
-    "demo_url": "https://mobile-app-build-778.preview.emergentagent.com",
-    "demo_video": "https://www.youtube.com/watch?v=CHAOSKEY_DEMO_VIDEO",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project primarily focuses on standard private transfer features without unique implementation.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": true,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-18T05:57:40Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "emergent-agent-e1",
-        "name": "emergent-agent-e1",
-        "avatar_url": "https://avatars.githubusercontent.com/u/222461215?v=4"
-      },
-      {
-        "login": "Doodabug",
-        "name": "Doodlebug",
-        "avatar_url": "https://avatars.githubusercontent.com/u/272664821?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18"
-    ],
-    "head_sha": "a392cc2d2bb5b420a84250c8f5aa66dffc182128",
-    "readme_hash": "2044:# ChaosKey+ M3 — STRK20 hackathon sprint\n\nPhysical-chaos entropy device (Harvest / Tokens / Ledger) plus a **Pool** tab that talks to the Starknet STRK20 privacy pool through the user's Ready wallet.\n",
-    "desc_v3": true,
-    "summary": "Transfer tokens privately using a physical-chaos entropy device.",
-    "description_long": "ChaosKey+ is a physical-chaos entropy device that integrates with the Ready Wallet for private transfers and unshielding tokens in the STRK20 privacy pool. It connects to the pool using the Starknet Wallet API v0.10, utilizing components such as Starknet SDK, Wallet Standard Discovery, Adapter, and API Types for core functionalities. The backend operates on FastAPI with MongoDB, while the frontend uses React to interface with the wallet and handle token management.",
-    "latest_push": "Promoted PrivacyScreen.jsx, starknetWallet.js, and starknetWalletUtils.js to mainnet.",
-    "tooling": [],
-    "has_readme": true,
-    "additions": 3,
-    "deletions": 1,
-    "churn_pct": 0.1,
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "This project's main features involve a private transfer and shield functionality, which is obvious.",
-      "why_complex": "No contracts have been declared or built, showing no engineering depth in Cairo.",
-      "reason": "The project primarily focuses on standard private transfer features without unique implementation.",
-      "facts_v2": true
-    },
-    "star_evidence": ""
   },
   {
     "slug": "conditionalpay",
