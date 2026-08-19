@@ -21,7 +21,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-19T10:24:08Z",
+    "pushed_at": "2026-08-19T10:27:34Z",
     "stars": 0,
     "builders": [
       {
@@ -36,13 +36,13 @@
       "2026-08-18",
       "2026-08-19"
     ],
-    "head_sha": "b4832ccc4374f3cf77ed6340cb89769283b81ad4",
+    "head_sha": "8175e077d8b7a73b22012ab3b4ab8be22801016e",
     "readme_hash": "6473:# GameShield — Private Gaming Bounty Hub\n\nGameShield is a STRK20 prototype for private gaming reward flows on Starknet. It uses the STRK20 pool directly — rewards are deposited, transferred and withdr",
     "desc_v3": true,
-    "churn_pct": 4,
-    "summary": "Create private gaming bounties with shielded rewards and verified payouts.",
-    "description_long": "GameShield is a prototype for private gaming reward flows allowing organizers to create shielded prize pools. It uses STRK20 for transactions where organizers fund campaigns with shielded notes, and winners receive rewards directly from these notes without revealing any recipient information. The system relies on Cairo contracts for the campaign registry and a Next.js dapp for user interactions, with a direct integration of STRK20 deposit and transfer actions.",
-    "latest_push": "Removed the handleLinkHelper and polished documentation.",
+    "churn_pct": 5,
+    "summary": "Create and fund private gaming tournaments with shielded payouts.",
+    "description_long": "GameShield allows users to organize and fund private gaming bounties with unlinkable prize distributions. It uses smart contracts for a campaign registry and direct STRK20 actions for deposits and transfers, ensuring payout commitments without revealing winner identities or amounts. The project supports multiple tokens and integrates with wallets that comply with the STRK20 Wallet API.",
+    "latest_push": "Added on-chain campaign title for better cross-browser discoverability.",
     "tooling": [
       {
         "label": "Cairo",
@@ -56,8 +56,8 @@
       }
     ],
     "has_readme": true,
-    "additions": 130,
-    "deletions": 51,
+    "additions": 171,
+    "deletions": 57,
     "assessment": null,
     "star_evidence": "Cairo in the repository"
   },
@@ -105,9 +105,9 @@
     "readme_hash": "5507:# APP20\n\nPrivate superapp on Starknet.\n\nFour features, in product order:\n\n1. **Vault** — shielded STRK wallet\n2. **Intents** — cross-chain review desk\n3. **Workflows** — advisory policy desk\n4. **Mail",
     "desc_v3": true,
     "churn_pct": 0.4,
-    "summary": "Send encrypted messages with payments through a private mail system.",
-    "description_long": "This project implements an encrypted mail system with payment context. It features a vault for managing shielded STRK wallets, intents for cross-chain quotes, workflows for advisory policies, and a mailbox for secured messaging. The contracts are organized into separate packages for accounts, intents, and policies, and the application runs as a Cloudflare Worker.",
-    "latest_push": "Ranked APP20 as Vault and moved Intents to the Vault desk.",
+    "summary": "Send encrypted mail with payment details on Starknet.",
+    "description_long": "This app enables users to send encrypted mail along with payment memos in the same transaction. It includes features like a shielded wallet (Vault), a cross-chain review desk (Intents), and advisory policy receipts (Workflows), all built using the existing Starknet privacy path. The private transfers and encrypted messages are handled through contracts such as `@app20/domain` for account management and `@app20/privacy-adapters` for network policy.",
+    "latest_push": "Ranked APP20 as Vault and placed Intents on the Vault desk.",
     "tooling": [
       {
         "label": "Privacy SDK",
@@ -240,10 +240,10 @@
     "head_sha": "1ed4ed7a761c228f5f3c188ab86a9a61ba40884a",
     "readme_hash": "7155:# Airlock\n\n**One-click privacy from any chain.** Step in on one chain, the door seals behind you, step out on another. No on-chain link between the two sides.\n\nBuilt on the [STRK20](https://strk20-by-",
     "desc_v3": true,
-    "churn_pct": 2.8,
+    "churn_pct": 2.7,
     "summary": "Bridge assets from any chain and withdraw privately to another.",
     "description_long": "Allows users to deposit assets into a privacy pool on one chain and withdraw them on a different chain without linking the two transactions. Built with a deterministic Starknet account derived from a user's signature, it orchestrates a multi-transaction flow that includes bridging over Circle CCTP and a custom anonymizer contract in Cairo for pool actions.",
-    "latest_push": "Diagnosed wallet picker issue and improved wallet announcement for slow connections.",
+    "latest_push": "Fixed wallet picker detection and improved re-announcement logic for wallets.",
     "tooling": [
       {
         "label": "Cairo",
@@ -320,9 +320,9 @@
     "readme_hash": "1437:# NIGHTSHIFT\n\nRecurring private authorization on the [STRK20 privacy pool](https://strk20.starknet.io)\n(Starknet mainnet). Subscribe once from inside the pool; get charged on schedule without your\nfun",
     "desc_v3": true,
     "churn_pct": 100,
-    "summary": "Perform private recurring payments without revealing identity or funds.",
-    "description_long": "Subscribers make a one-time commitment to a tier through a private action in the NIGHTSHIFT vault. Charges occur at scheduled intervals using a nullified period index, and settled notes return to the STRK20 pool without manual intervention. The code consists of smart contracts in Cairo for scheduling and tier management, and includes components for CI checks and message hashing.",
-    "latest_push": "Scaffolded the Cairo package with strk20.json manifest and CI check.",
+    "summary": "Authorize recurring payments privately on a schedule.",
+    "description_long": "Subscribers commit to a tier through a private action in the NIGHTSHIFT vault. Charges trigger automatically based on a periodic nullifier, with no need for manual wallet interactions, and settle back into the pool as open notes. Key components include `Schedule` and `Tier` types in `src/common.cairo` and the anonymizer vault in `src/`.",
+    "latest_push": "Scaffolded the Cairo package, added strk20.json manifest, and the CI check.",
     "tooling": [
       {
         "label": "Cairo",
@@ -1203,7 +1203,7 @@
     "churn_pct": 0,
     "summary": "",
     "description_long": "",
-    "latest_push": "Created strk20.json with the initial structure.",
+    "latest_push": "Created strk20.json with initial structure.",
     "tooling": [],
     "has_readme": false,
     "additions": 6,
