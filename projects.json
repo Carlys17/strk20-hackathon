@@ -1,5 +1,108 @@
 [
   {
+    "slug": "philoxenia",
+    "name": "philoxenia",
+    "one_liner": "Private P2P hospitality on Starknet — STRK20 Private Sprint",
+    "category": "Other",
+    "repo_url": "https://github.com/SergioSSantiago/philoxenia",
+    "demo_url": "https://philoxenia-iota.vercel.app",
+    "demo_video": "https://philoxenia-iota.vercel.app/demo/philoxenia-commercial.mp4",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "the project's architecture supports private transactions and unique social discovery in hospitality.",
+    "contracts": [
+      {
+        "address": "0x056a817104ad7544a55873584f3d8fb41a780e5466d152b3e1f12d578e75defb",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x030533c6110ee5c414a5678bd71115be738852d709c74d8136fa965271c2e1f3",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x004c0322af24bb710f3aa0e48293517777188b42d9c4428b77304008ad0ea712",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x7ef1e214d5c5e99a4f8d27ba459326f4ec0bfaba8525824d1a36754608b60f9",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x5bac436e2a9775719de94e0ec1ea62f1cbc9737b23dd780230df66a53cc7813",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x4902a7a2702b9533cf8992f5bf6953947e0d9616f8dbc9bc5b1976e0082f494",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      }
+    ],
+    "verified_txs": 3,
+    "requirements": {
+      "demo": true,
+      "video": true,
+      "mainnet": true
+    },
+    "status": "finished",
+    "pushed_at": "2026-08-19T05:21:37Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "SergioSSantiago",
+        "name": "Sergio Sapina Santiago",
+        "avatar_url": "https://avatars.githubusercontent.com/u/44295455?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Cursor",
+        "name": "Cursor",
+        "avatar_url": "",
+        "commits": 100
+      }
+    ],
+    "active_days": [
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19"
+    ],
+    "head_sha": "803d90da01196ea54ad34322a6b1cce706a6e115",
+    "readme_hash": "9319:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
+    "desc_v3": true,
+    "churn_pct": 0.2,
+    "summary": "Book private accommodations through trusted connections.",
+    "description_long": "Philoxenia is a peer-to-peer hospitality protocol that allows users to book accommodations privately using a social trust network. It consists of a frontend built with Next.js connected to a Fastify backend with a PostgreSQL database, and on-chain contracts written in Cairo for escrow and payment settlement.",
+    "latest_push": "Changed the phrasing of the wallet addition prompt in the Friends section.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 14,
+    "deletions": 14,
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "introduces private peer-to-peer hospitality without public listings or traditional marketplace features.",
+      "why_complex": "utilizes multiple Cairo contracts for escrow and privacy, including BookingEscrow and a custom anonymizer.",
+      "reason": "the project's architecture supports private transactions and unique social discovery in hospitality.",
+      "facts_v2": true
+    },
+    "star_evidence": "3 contracts deployed on mainnet, Cairo in the repository"
+  },
+  {
     "slug": "sotto",
     "name": "Sotto",
     "one_liner": "",
@@ -52,7 +155,6 @@
     "head_sha": "ab1a00cc03df1bb2cc4d115277400f4346244427",
     "readme_hash": "33761:# Sotto\n\nSotto is a private yield account for DeFi. It lets users hold shielded assets, lend, stake, and allocate capital across supported strategies without exposing their total holdings or making ev",
     "desc_v3": true,
-    "churn_pct": 41.1,
     "summary": "Manage private yield accounts for DeFi investments.",
     "description_long": "Sotto allows users to deposit shielded assets, lend, stake, and allocate capital without revealing total holdings. It is built with STRK20, where balances are represented as encrypted notes, and connects to a privacy-enabled wallet for note discovery and transaction authorization. Users can operate within a single account across multiple strategies while ensuring their financial activity remains private.",
     "latest_push": "Supported multi-chain functionality across several components.",
@@ -91,6 +193,7 @@
     "has_readme": true,
     "additions": 2108,
     "deletions": 580,
+    "churn_pct": 41.1,
     "assessment": {
       "innovative": false,
       "complex": true,
@@ -146,7 +249,6 @@
     "head_sha": "4f9bda48054767745002dd869038c911e778f2da",
     "readme_hash": "4124:# 🧊 Iceberg\n\n**Private accumulation and exit on Starknet.** Iceberg runs scheduled DCA and TWAP orders. The\nchain records only that the STRK20 pool made a swap. It never records who was accumulating,",
     "desc_v3": true,
-    "churn_pct": 10.9,
     "summary": "Execute private DCA and TWAP trades through an anonymous pool swap.",
     "description_long": "Iceberg runs scheduled dollar-cost averaging (DCA) and time-weighted average price (TWAP) trades by aggregating user orders into a single anonymous pool swap at each interval. It includes contracts for the core functionality and a batch executor for handling the trades, with tests for reliability. Users deposit into a shielded pool, and the metadata remains hidden while only the aggregated swap amount is visible on chain.",
     "latest_push": "Rewrote documentation in Simplified Technical English.",
@@ -165,111 +267,9 @@
     "has_readme": true,
     "additions": 202,
     "deletions": 179,
+    "churn_pct": 10.9,
     "assessment": null,
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "philoxenia",
-    "name": "philoxenia",
-    "one_liner": "Private P2P hospitality on Starknet — STRK20 Private Sprint",
-    "category": "Other",
-    "repo_url": "https://github.com/SergioSSantiago/philoxenia",
-    "demo_url": "https://philoxenia-iota.vercel.app",
-    "demo_video": "https://philoxenia-iota.vercel.app/demo/philoxenia-commercial.mp4",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "the project's architecture supports private transactions and unique social discovery in hospitality.",
-    "contracts": [
-      {
-        "address": "0x056a817104ad7544a55873584f3d8fb41a780e5466d152b3e1f12d578e75defb",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x030533c6110ee5c414a5678bd71115be738852d709c74d8136fa965271c2e1f3",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x004c0322af24bb710f3aa0e48293517777188b42d9c4428b77304008ad0ea712",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [
-      {
-        "hash": "0x7ef1e214d5c5e99a4f8d27ba459326f4ec0bfaba8525824d1a36754608b60f9",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      },
-      {
-        "hash": "0x5bac436e2a9775719de94e0ec1ea62f1cbc9737b23dd780230df66a53cc7813",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      },
-      {
-        "hash": "0x4902a7a2702b9533cf8992f5bf6953947e0d9616f8dbc9bc5b1976e0082f494",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      }
-    ],
-    "verified_txs": 3,
-    "requirements": {
-      "demo": true,
-      "video": true,
-      "mainnet": true
-    },
-    "status": "finished",
-    "pushed_at": "2026-08-19T05:01:50Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "SergioSSantiago",
-        "name": "Sergio Sapina Santiago",
-        "avatar_url": "https://avatars.githubusercontent.com/u/44295455?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Cursor",
-        "name": "Cursor",
-        "avatar_url": "",
-        "commits": 100
-      }
-    ],
-    "active_days": [
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19"
-    ],
-    "head_sha": "3480412db50b38f6c0d6566d77a0fd0ad4a5040c",
-    "readme_hash": "9319:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
-    "desc_v3": true,
-    "churn_pct": 0.3,
-    "summary": "Book private accommodations through trusted connections.",
-    "description_long": "Philoxenia is a peer-to-peer hospitality protocol that allows users to book accommodations privately using a social trust network. It consists of a frontend built with Next.js connected to a Fastify backend with a PostgreSQL database, and on-chain contracts written in Cairo for escrow and payment settlement.",
-    "latest_push": "Clarified messaging for social actions and booking functionality.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 24,
-    "deletions": 24,
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "introduces private peer-to-peer hospitality without public listings or traditional marketplace features.",
-      "why_complex": "utilizes multiple Cairo contracts for escrow and privacy, including BookingEscrow and a custom anonymizer.",
-      "reason": "the project's architecture supports private transactions and unique social discovery in hospitality.",
-      "facts_v2": true
-    },
-    "star_evidence": "3 contracts deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "vinss",
@@ -318,7 +318,6 @@
     "head_sha": "b65fe5db3497450e8d0bbbffcc0013daf7497c29",
     "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
     "desc_v3": true,
-    "churn_pct": 2.1,
     "summary": "Conduct private negotiations with encrypted messaging and escrow settlement.",
     "description_long": "Two parties can negotiate and settle payments inside one encrypted timeline. It is built with Cairo helper contracts for messaging, offers, private escrow, and escrow settlement, all interfacing through the STRK20 Privacy Pool's `InvokeExternal`.",
     "latest_push": "Separated group and direct conversations in the chat component.",
@@ -332,6 +331,7 @@
     "has_readme": true,
     "additions": 171,
     "deletions": 73,
+    "churn_pct": 2.1,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -433,7 +433,6 @@
     "head_sha": "3e07281a8251b67e397b63bbf1c9df234141eeb6",
     "readme_hash": "9286:# 🔒 STRK20 Privacy Wallet (Umbra Mode)\n\n> **Umbra-grade privacy UX on Starknet — fully powered by the native STRK20 Note-Based Privacy Pool.**\n\nBuilt by **Jai Bhati** ([@SmratJay](https://github.com/",
     "desc_v3": true,
-    "churn_pct": 0.2,
     "summary": "Manage encrypted transactions and stealth payments within a privacy wallet.",
     "description_long": "STRK20 Privacy Wallet allows users to perform encrypted transactions and send stealth payments on Starknet. It features a universal wallet support using an in-browser UTXO vault engine, a dual balance dashboard for viewing both on-chain and encrypted balances, and dynamic QR payment invoices. The implementation consists of core UI components, a stealth engine, and integration with AVNU for DEX swaps, all backed by cryptographic primitives that match the STRK20 protocol.",
     "latest_push": "Expanded the test suite to 21 tests and polished the RequestTab wallet gating.",
@@ -472,6 +471,7 @@
     "has_readme": true,
     "additions": 42,
     "deletions": 3,
+    "churn_pct": 0.2,
     "assessment": {
       "innovative": false,
       "complex": false,
