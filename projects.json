@@ -1,18 +1,31 @@
 [
   {
-    "slug": "ghostorder",
-    "name": "GhostOrder",
-    "one_liner": "A privacy-focused conditional intent layer on Starknet using STRK20, enabling users to create hidden trading conditions and execute them without exposing sensitive order parameters while they wait.",
+    "slug": "sotto",
+    "name": "Sotto",
+    "one_liner": "",
     "category": "Other",
-    "repo_url": "https://github.com/kaverimeshram/GhostOrder",
+    "repo_url": "https://github.com/drained69/Sotto",
     "demo_url": "",
     "demo_video": "",
     "x_handle": "",
     "inspired_by": "",
     "affiliation": "",
     "starred": false,
-    "star_reason": "Ghost Orders enables private conditional trading for STRK20, addressing privacy in order placements.",
-    "contracts": [],
+    "star_reason": "Sotto integrates privacy for DeFi actions but lacks innovation beyond basic private transfers.",
+    "contracts": [
+      {
+        "address": "0x040337b1af3c663e86e333bab5a4b28da8d4652a15a69beee2b677776ffe812a",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x04718f5a0fc34cc1af16a1cdee98ffb20c31f5cd61d6ab07201858f4287c938d",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x033068f6539f8e6e6b131e6b2b814e6c34a5224bc66947c47dab9dfee93b35fb",
+        "network": "mainnet"
+      }
+    ],
     "transactions": [],
     "verified_txs": 0,
     "requirements": {
@@ -21,30 +34,39 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-19T04:30:24Z",
+    "pushed_at": "2026-08-19T05:15:24Z",
     "stars": 0,
     "builders": [
       {
-        "login": "kaverimeshram",
-        "name": "kaverimeshram",
-        "avatar_url": "https://avatars.githubusercontent.com/u/182025207?v=4"
+        "login": "Chinwuba081",
+        "name": "drained",
+        "avatar_url": "https://avatars.githubusercontent.com/u/97135600?v=4"
       }
     ],
     "agents": [],
     "active_days": [
-      "2026-08-16",
       "2026-08-17",
       "2026-08-18",
       "2026-08-19"
     ],
-    "head_sha": "5d81f6931fba677fdbce32922d54a3183756551d",
-    "readme_hash": "1414:# Ghost Orders\n\nGhost Orders is a privacy-focused conditional trading layer built on Starknet using STRK20.\n\nIt explores IDEA-04 from the STRK20 Private Sprint: hidden and conditional orders.\n\nThe goa",
+    "head_sha": "ab1a00cc03df1bb2cc4d115277400f4346244427",
+    "readme_hash": "33761:# Sotto\n\nSotto is a private yield account for DeFi. It lets users hold shielded assets, lend, stake, and allocate capital across supported strategies without exposing their total holdings or making ev",
     "desc_v3": true,
-    "churn_pct": 28.2,
-    "summary": "Create conditional trades with hidden order details.",
-    "description_long": "This project allows users to make conditional trading instructions while keeping order intent private. It focuses on public ETH price triggers, with user parameters managed on the client side and STRK20 for asset handling and settlement. The repository contains experiments for STRK20 integration and testing of browser-based architectures.",
-    "latest_push": "Fixed validation for secure private transfer functionality.",
+    "churn_pct": 41.1,
+    "summary": "Manage private yield accounts for DeFi investments.",
+    "description_long": "Sotto allows users to deposit shielded assets, lend, stake, and allocate capital without revealing total holdings. It is built with STRK20, where balances are represented as encrypted notes, and connects to a privacy-enabled wallet for note discovery and transaction authorization. Users can operate within a single account across multiple strategies while ensuring their financial activity remains private.",
+    "latest_push": "Supported multi-chain functionality across several components.",
     "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
       {
         "label": "starknet.js",
         "live": false,
@@ -54,20 +76,97 @@
         "label": "TypeScript",
         "live": false,
         "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
       }
     ],
     "has_readme": true,
-    "additions": 439,
-    "deletions": 60,
+    "additions": 2108,
+    "deletions": 580,
     "assessment": {
-      "innovative": true,
-      "complex": false,
-      "why_innovative": "It creates private conditional trading orders that are generally not available in traditional markets.",
-      "why_complex": "No contracts or significant Cairo code have been implemented yet.",
-      "reason": "Ghost Orders enables private conditional trading for STRK20, addressing privacy in order placements.",
+      "innovative": false,
+      "complex": true,
+      "why_innovative": "Sotto provides privacy for yield accounts but applies known privacy mechanisms to asset transfers.",
+      "why_complex": "The project includes multiple deployed contracts for shielding and asset management, like STRK20.",
+      "reason": "Sotto integrates privacy for DeFi actions but lacks innovation beyond basic private transfers.",
       "facts_v2": true
     },
-    "star_evidence": ""
+    "star_evidence": "3 contracts deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "iceberg",
+    "name": "Iceberg",
+    "one_liner": "Private DCA and TWAP on Starknet. Many users' scheduled orders become one anonymous pool swap per interval.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/azeemshaik025/iceberg",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-05",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-19T05:08:57Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "sainathr19",
+        "name": "Sainath Reddy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/88471927?v=4"
+      },
+      {
+        "login": "azeemshaik025",
+        "name": "Azeem Shaik",
+        "avatar_url": "https://avatars.githubusercontent.com/u/108066377?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-16",
+      "2026-08-18",
+      "2026-08-19"
+    ],
+    "head_sha": "4f9bda48054767745002dd869038c911e778f2da",
+    "readme_hash": "4124:# 🧊 Iceberg\n\n**Private accumulation and exit on Starknet.** Iceberg runs scheduled DCA and TWAP orders. The\nchain records only that the STRK20 pool made a swap. It never records who was accumulating,",
+    "desc_v3": true,
+    "churn_pct": 10.9,
+    "summary": "Execute private DCA and TWAP trades through an anonymous pool swap.",
+    "description_long": "Iceberg runs scheduled dollar-cost averaging (DCA) and time-weighted average price (TWAP) trades by aggregating user orders into a single anonymous pool swap at each interval. It includes contracts for the core functionality and a batch executor for handling the trades, with tests for reliability. Users deposit into a shielded pool, and the metadata remains hidden while only the aggregated swap amount is visible on chain.",
+    "latest_push": "Rewrote documentation in Simplified Technical English.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 202,
+    "deletions": 179,
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "philoxenia",
@@ -123,7 +222,7 @@
       "mainnet": true
     },
     "status": "finished",
-    "pushed_at": "2026-08-19T04:20:51Z",
+    "pushed_at": "2026-08-19T05:01:50Z",
     "stars": 0,
     "builders": [
       {
@@ -145,13 +244,13 @@
       "2026-08-18",
       "2026-08-19"
     ],
-    "head_sha": "2686ed0017e83dbaa51ea73972136dd199d0bf8b",
+    "head_sha": "3480412db50b38f6c0d6566d77a0fd0ad4a5040c",
     "readme_hash": "9319:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
     "desc_v3": true,
-    "churn_pct": 0.4,
+    "churn_pct": 0.3,
     "summary": "Book private accommodations through trusted connections.",
     "description_long": "Philoxenia is a peer-to-peer hospitality protocol that allows users to book accommodations privately using a social trust network. It consists of a frontend built with Next.js connected to a Fastify backend with a PostgreSQL database, and on-chain contracts written in Cairo for escrow and payment settlement.",
-    "latest_push": "Updated wording for social interactions and documentation throughout the app.",
+    "latest_push": "Clarified messaging for social actions and booking functionality.",
     "tooling": [
       {
         "label": "Cairo",
@@ -160,8 +259,8 @@
       }
     ],
     "has_readme": true,
-    "additions": 31,
-    "deletions": 31,
+    "additions": 24,
+    "deletions": 24,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -194,7 +293,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-19T04:09:06Z",
+    "pushed_at": "2026-08-19T04:57:06Z",
     "stars": 0,
     "builders": [
       {
@@ -216,13 +315,13 @@
       "2026-08-18",
       "2026-08-19"
     ],
-    "head_sha": "13af48bf2449baf1108e907d43ccd9b9d583965f",
+    "head_sha": "b65fe5db3497450e8d0bbbffcc0013daf7497c29",
     "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
     "desc_v3": true,
-    "churn_pct": 56.4,
+    "churn_pct": 2.1,
     "summary": "Conduct private negotiations with encrypted messaging and escrow settlement.",
     "description_long": "Two parties can negotiate and settle payments inside one encrypted timeline. It is built with Cairo helper contracts for messaging, offers, private escrow, and escrow settlement, all interfacing through the STRK20 Privacy Pool's `InvokeExternal`.",
-    "latest_push": "Modularized the deal room architecture in the frontend.",
+    "latest_push": "Separated group and direct conversations in the chat component.",
     "tooling": [
       {
         "label": "Cairo",
@@ -231,8 +330,8 @@
       }
     ],
     "has_readme": true,
-    "additions": 3123,
-    "deletions": 3447,
+    "additions": 171,
+    "deletions": 73,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -242,6 +341,216 @@
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "ghostline",
+    "name": "GhostLine",
+    "one_liner": "A privacy firewall that detects transaction leakage before you sign on Starknet.",
+    "category": "Other",
+    "repo_url": "https://github.com/Leequidice/GhostLine",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-19T04:47:04Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Leequidice",
+        "name": "Leequidice",
+        "avatar_url": "https://avatars.githubusercontent.com/u/72930551?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-18"
+    ],
+    "head_sha": "f9887491ed24e702f3e73a034b93bb8ff6bdc773",
+    "readme_hash": "11327:# GhostLine\n\n> **A privacy firewall that detects transaction leakage before you sign on Starknet.**\n\nGhostline is a privacy-security layer for **Starknet** that analyzes transactions before execution,",
+    "desc_v3": true,
+    "summary": "Detects transaction leakage before signing to optimize privacy.",
+    "description_long": "GhostLine analyzes transactions before they are signed, calculating a privacy-risk score and identifying potential leakage. It is built as middleware between the user and the transaction, providing explanations for risks and recommending safer execution strategies based on timing, amounts, and historical context.",
+    "latest_push": "Added comprehensive project details to the README.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 505,
+    "deletions": 1,
+    "churn_pct": 0,
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
+    "slug": "strk20-privacy-wallet",
+    "name": "strk20-privacy-wallet",
+    "one_liner": "Umbra-grade privacy wallet for Starknet powered by STRK20 privacy pool",
+    "category": "Other",
+    "repo_url": "https://github.com/SmratJay/strk20-privacy-wallet",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project lacks both innovation in privacy application and complexity in engineering.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-19T04:37:29Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "SmratJay",
+        "name": "SmratJay",
+        "avatar_url": "https://avatars.githubusercontent.com/u/74355410?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19"
+    ],
+    "head_sha": "3e07281a8251b67e397b63bbf1c9df234141eeb6",
+    "readme_hash": "9286:# 🔒 STRK20 Privacy Wallet (Umbra Mode)\n\n> **Umbra-grade privacy UX on Starknet — fully powered by the native STRK20 Note-Based Privacy Pool.**\n\nBuilt by **Jai Bhati** ([@SmratJay](https://github.com/",
+    "desc_v3": true,
+    "churn_pct": 0.2,
+    "summary": "Manage encrypted transactions and stealth payments within a privacy wallet.",
+    "description_long": "STRK20 Privacy Wallet allows users to perform encrypted transactions and send stealth payments on Starknet. It features a universal wallet support using an in-browser UTXO vault engine, a dual balance dashboard for viewing both on-chain and encrypted balances, and dynamic QR payment invoices. The implementation consists of core UI components, a stealth engine, and integration with AVNU for DEX swaps, all backed by cryptographic primitives that match the STRK20 protocol.",
+    "latest_push": "Expanded the test suite to 21 tests and polished the RequestTab wallet gating.",
+    "tooling": [
+      {
+        "label": "AVNU",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 42,
+    "deletions": 3,
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "applies privacy to a wallet but offers no new technology or mechanism beyond existing solutions.",
+      "why_complex": "no deployed contracts or innovative engineering work is present to assess.",
+      "reason": "The project lacks both innovation in privacy application and complexity in engineering.",
+      "facts_v2": true
+    },
+    "star_evidence": ""
+  },
+  {
+    "slug": "ghostorder",
+    "name": "GhostOrder",
+    "one_liner": "A privacy-focused conditional intent layer on Starknet using STRK20, enabling users to create hidden trading conditions and execute them without exposing sensitive order parameters while they wait.",
+    "category": "Other",
+    "repo_url": "https://github.com/kaverimeshram/GhostOrder",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Ghost Orders enables private conditional trading for STRK20, addressing privacy in order placements.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-19T04:30:24Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "kaverimeshram",
+        "name": "kaverimeshram",
+        "avatar_url": "https://avatars.githubusercontent.com/u/182025207?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19"
+    ],
+    "head_sha": "5d81f6931fba677fdbce32922d54a3183756551d",
+    "readme_hash": "1414:# Ghost Orders\n\nGhost Orders is a privacy-focused conditional trading layer built on Starknet using STRK20.\n\nIt explores IDEA-04 from the STRK20 Private Sprint: hidden and conditional orders.\n\nThe goa",
+    "desc_v3": true,
+    "summary": "Create conditional trades with hidden order details.",
+    "description_long": "This project allows users to make conditional trading instructions while keeping order intent private. It focuses on public ETH price triggers, with user parameters managed on the client side and STRK20 for asset handling and settlement. The repository contains experiments for STRK20 integration and testing of browser-based architectures.",
+    "latest_push": "Fixed validation for secure private transfer functionality.",
+    "tooling": [
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 439,
+    "deletions": 60,
+    "churn_pct": 28.2,
+    "assessment": {
+      "innovative": true,
+      "complex": false,
+      "why_innovative": "It creates private conditional trading orders that are generally not available in traditional markets.",
+      "why_complex": "No contracts or significant Cairo code have been implemented yet.",
+      "reason": "Ghost Orders enables private conditional trading for STRK20, addressing privacy in order placements.",
+      "facts_v2": true
+    },
+    "star_evidence": ""
   },
   {
     "slug": "ghostdeal",
@@ -2251,55 +2560,6 @@
     "star_evidence": "Cairo in the repository"
   },
   {
-    "slug": "ghostline",
-    "name": "GhostLine",
-    "one_liner": "A privacy firewall that detects transaction leakage before you sign on Starknet.",
-    "category": "Other",
-    "repo_url": "https://github.com/Leequidice/GhostLine",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-18T18:03:40Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Leequidice",
-        "name": "Leequidice",
-        "avatar_url": "https://avatars.githubusercontent.com/u/72930551?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-18"
-    ],
-    "head_sha": "f9887491ed24e702f3e73a034b93bb8ff6bdc773",
-    "readme_hash": "11327:# GhostLine\n\n> **A privacy firewall that detects transaction leakage before you sign on Starknet.**\n\nGhostline is a privacy-security layer for **Starknet** that analyzes transactions before execution,",
-    "desc_v3": true,
-    "summary": "Detects transaction leakage before signing to optimize privacy.",
-    "description_long": "GhostLine analyzes transactions before they are signed, calculating a privacy-risk score and identifying potential leakage. It is built as middleware between the user and the transaction, providing explanations for risks and recommending safer execution strategies based on timing, amounts, and historical context.",
-    "latest_push": "Added comprehensive project details to the README.",
-    "tooling": [],
-    "has_readme": true,
-    "additions": 505,
-    "deletions": 1,
-    "churn_pct": 0,
-    "assessment": null,
-    "star_evidence": ""
-  },
-  {
     "slug": "aegis",
     "name": "Aegis",
     "one_liner": "Private subscriptions on Starknet: recurring payments with visible aggregates, invisible payer and amount.",
@@ -2693,96 +2953,6 @@
     "star_evidence": "Cairo in the repository"
   },
   {
-    "slug": "strk20-privacy-wallet",
-    "name": "strk20-privacy-wallet",
-    "one_liner": "Umbra-grade privacy wallet for Starknet powered by STRK20 privacy pool",
-    "category": "Other",
-    "repo_url": "https://github.com/SmratJay/strk20-privacy-wallet",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project lacks both innovation in privacy application and complexity in engineering.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-18T15:21:48Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "SmratJay",
-        "name": "SmratJay",
-        "avatar_url": "https://avatars.githubusercontent.com/u/74355410?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18"
-    ],
-    "head_sha": "b614b8d34b686fcaff0064e96f02d5ffc013b22b",
-    "readme_hash": "9286:# 🔒 STRK20 Privacy Wallet (Umbra Mode)\n\n> **Umbra-grade privacy UX on Starknet — fully powered by the native STRK20 Note-Based Privacy Pool.**\n\nBuilt by **Jai Bhati** ([@SmratJay](https://github.com/",
-    "desc_v3": true,
-    "summary": "Manage encrypted transactions and stealth payments within a privacy wallet.",
-    "description_long": "STRK20 Privacy Wallet allows users to perform encrypted transactions and send stealth payments on Starknet. It features a universal wallet support using an in-browser UTXO vault engine, a dual balance dashboard for viewing both on-chain and encrypted balances, and dynamic QR payment invoices. The implementation consists of core UI components, a stealth engine, and integration with AVNU for DEX swaps, all backed by cryptographic primitives that match the STRK20 protocol.",
-    "latest_push": "Fixed STRK20 privacy layer, ECDH key agreements, and pricing engine.",
-    "tooling": [
-      {
-        "label": "AVNU",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 579,
-    "deletions": 266,
-    "churn_pct": 4.4,
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "applies privacy to a wallet but offers no new technology or mechanism beyond existing solutions.",
-      "why_complex": "no deployed contracts or innovative engineering work is present to assess.",
-      "reason": "The project lacks both innovation in privacy application and complexity in engineering.",
-      "facts_v2": true
-    },
-    "star_evidence": ""
-  },
-  {
     "slug": "cutout",
     "name": "Cutout",
     "one_liner": "A privacy-liquidity router for STRK20. Before you sign, it checks whether your amount has meaningful public cover and routes flexible transactions toward healthier exact-amount cohorts.",
@@ -3093,107 +3263,6 @@
     "churn_pct": 0.3,
     "assessment": null,
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "sotto",
-    "name": "Sotto",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/drained69/Sotto",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Sotto integrates privacy for DeFi actions but lacks innovation beyond basic private transfers.",
-    "contracts": [
-      {
-        "address": "0x040337b1af3c663e86e333bab5a4b28da8d4652a15a69beee2b677776ffe812a",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x04718f5a0fc34cc1af16a1cdee98ffb20c31f5cd61d6ab07201858f4287c938d",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x033068f6539f8e6e6b131e6b2b814e6c34a5224bc66947c47dab9dfee93b35fb",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-18T13:16:33Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Chinwuba081",
-        "name": "drained",
-        "avatar_url": "https://avatars.githubusercontent.com/u/97135600?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-17",
-      "2026-08-18"
-    ],
-    "head_sha": "d3744d16bc467420b3b17afbc236562ff9bec6f1",
-    "readme_hash": "33047:# Sotto\n\nSotto is a private yield account for DeFi. It lets users hold shielded assets, lend, stake, and allocate capital across supported strategies without exposing their total holdings or making ev",
-    "desc_v3": true,
-    "summary": "Manage shielded DeFi investments privately and securely.",
-    "description_long": "Sotto allows users to hold and manage private yield accounts for DeFi investments, enabling capital allocation while keeping balances hidden. It implements contract interactions with STRK20 on Starknet to represent assets as encrypted notes, allows users to deposit from supported chains, and manages transactions through wallet-owned viewing keys for privacy. The application is designed to restrict actions based on integration availability, ensuring that only properly configured features are accessible.",
-    "latest_push": "Added support for more venue configurations in the app.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 775,
-    "deletions": 172,
-    "churn_pct": 19.4,
-    "assessment": {
-      "innovative": false,
-      "complex": true,
-      "why_innovative": "Sotto provides privacy for yield accounts but applies known privacy mechanisms to asset transfers.",
-      "why_complex": "The project includes multiple deployed contracts for shielding and asset management, like STRK20.",
-      "reason": "Sotto integrates privacy for DeFi actions but lacks innovation beyond basic private transfers.",
-      "facts_v2": true
-    },
-    "star_evidence": "3 contracts deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "airlock",
