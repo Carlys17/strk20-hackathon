@@ -1,5 +1,567 @@
 [
   {
+    "slug": "privacy-msg",
+    "name": "privacy_msg",
+    "one_liner": "Metadata-resistant private messaging on Starknet: visible payment memo, invisible sender-recipient link, settled through STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/Gaijin-01/privacy_msg",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-19T08:35:15Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Gaijin-01",
+        "name": "Sefirot",
+        "avatar_url": "https://avatars.githubusercontent.com/u/104550064?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-19"
+    ],
+    "head_sha": "ded315c2807480885844a79b0f32688ff9bc59a5",
+    "readme_hash": "812:# privacy_msg\n\nMetadata-resistant private messaging on Starknet.\n\n**In scope:** Content privacy via end-to-end encryption.  \n**NOT in scope by default:** Value/relationship privacy from the STRK20 poo",
+    "desc_v3": true,
+    "churn_pct": 100,
+    "summary": "Send private messages with visible payment memos.",
+    "description_long": "Creates a messaging system that encrypts messages for privacy. The project focuses on end-to-end encryption and is intended to settle transactions using STRK20. It is currently in active development with a target launch date for mainnet by August 31, 2026.",
+    "latest_push": "Implemented the privacy_msg MVP with home page and /messages UI scaffold.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Privacy SDK",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 2959,
+    "deletions": 37,
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "airlock",
+    "name": "Airlock",
+    "one_liner": "One-click privacy from any chain: bridge in, hold private, withdraw to a different chain with no on-chain link.",
+    "category": "Infra",
+    "repo_url": "https://github.com/kenkomu/airlock",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-09",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Airlock creates a cross-chain privacy solution without direct links between transactions.",
+    "contracts": [
+      {
+        "address": "0x004c368ae058ee81b61884c5c47ee57484c4348669b66ac606366bbd1fd1b1fb",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x00de39f79e7e8b0dcdafe955330e206990203d6047a22e853eab9df83c440e6b",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x78d391e720a1c34540be9416496834b830d3f2105b7cf798ab4ab1cd6169cca",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      },
+      {
+        "hash": "0x6c6b6a15f7e3065b0db3e7e49ec17871dbf90c2576e46c8bd045b6d4009ff82",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      },
+      {
+        "hash": "0x6beb4415dc14438f5870e1b37cabaf53e361cf09c8bc2e7a12fc83b2ce2887",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      }
+    ],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-19T08:34:20Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "renoschubert",
+        "name": "Kenneth Komu",
+        "avatar_url": "https://avatars.githubusercontent.com/u/46114615?v=4"
+      },
+      {
+        "login": "kenkomu",
+        "name": "Kenneth Njoroge",
+        "avatar_url": "https://avatars.githubusercontent.com/u/95502725?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19"
+    ],
+    "head_sha": "6e0e5121f8a0289645fef449be2fbd0ee8f69086",
+    "readme_hash": "7155:# Airlock\n\n**One-click privacy from any chain.** Step in on one chain, the door seals behind you, step out on another. No on-chain link between the two sides.\n\nBuilt on the [STRK20](https://strk20-by-",
+    "desc_v3": true,
+    "churn_pct": 16.7,
+    "summary": "Bridge assets from any chain and withdraw privately to another.",
+    "description_long": "Allows users to deposit assets into a privacy pool on one chain and withdraw them on a different chain without linking the two transactions. Built with a deterministic Starknet account derived from a user's signature, it orchestrates a multi-transaction flow that includes bridging over Circle CCTP and a custom anonymizer contract in Cairo for pool actions.",
+    "latest_push": "Built the STRK20 action array and deployed a STRK anonymizer.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Anonymizer contract",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 838,
+    "deletions": 25,
+    "assessment": {
+      "innovative": true,
+      "complex": false,
+      "why_innovative": "It enables unlinkable cross-chain asset movement using a privacy pool mechanism.",
+      "why_complex": "No deployed contracts or proven engineering components are present.",
+      "reason": "Airlock creates a cross-chain privacy solution without direct links between transactions.",
+      "facts_v2": true
+    },
+    "star_evidence": "2 contracts deployed, Cairo in the repository"
+  },
+  {
+    "slug": "quietline",
+    "name": "Quietline",
+    "one_liner": "Encrypted on-chain mail on Starknet. Payment memos ride the same private transfer.",
+    "category": "Other",
+    "repo_url": "https://github.com/gstohl/app20",
+    "demo_url": "https://github.com/gstohl/app20",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-01",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Quietline does not present a novel application of privacy technology in its current state.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-19T08:32:24Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "gstohl",
+        "name": "gstohl",
+        "avatar_url": "https://avatars.githubusercontent.com/u/191050810?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19"
+    ],
+    "head_sha": "0bd6a46ede933a98536517f414290c7cf7d2cc66",
+    "readme_hash": "4840:# APP20\n\nPrivate superapp on Starknet.\n\nAPP20 is a browser-owned workspace for shielded STRK, encrypted mail, and\nreview-only cross-chain and policy surfaces. Users connect a wallet, keep\nviewing keys",
+    "desc_v3": true,
+    "churn_pct": 13.9,
+    "summary": "Send encrypted emails and payment memos on Starknet.",
+    "description_long": "APP20 is an encrypted mail application that supports private STRK memos. Built with a client-side wallet connection, it uses end-to-end encryption for messages and payment requests, operating through designated routes like `/mail/inbox` for emails and `/pay` for payments. The repository features multiple packages that handle user accounts, intent processing, policy verification, and browser-owned asset integration.",
+    "latest_push": "Integrated sliced vault, Mail, intents, and workflows desks.",
+    "tooling": [
+      {
+        "label": "Privacy SDK",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 4445,
+    "deletions": 445,
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project focuses on encrypted mail, which is a common use case for privacy.",
+      "why_complex": "No deployed contracts or sophisticated Cairo code is present; lacks engineering depth.",
+      "reason": "Quietline does not present a novel application of privacy technology in its current state.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "doom",
+    "name": "Doom",
+    "one_liner": "Private decision markets on Starknet. Your DAO prices a question instead of voting on it: public odds, invisible participants.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/neromtoobad/doom",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "neromtoobad",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [
+      {
+        "hash": "0x4f5188af4248424e0ad25bec9df4ff96b0bd761fa1347ad9d3acb749befc516",
+        "ok": true,
+        "pool": true,
+        "mine": null
+      },
+      {
+        "hash": "0x450e8664a4570c0cb97d3cf22f949616a5f94200ed805f63825e34fcd724941",
+        "ok": true,
+        "pool": true,
+        "mine": null
+      }
+    ],
+    "verified_txs": 2,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-19T08:30:50Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "neromtoobad",
+        "name": "neromtoobad",
+        "avatar_url": "https://avatars.githubusercontent.com/u/102220536?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-18",
+      "2026-08-19"
+    ],
+    "head_sha": "327544a3fa96807b8e00d50a02c161f9b25ba638",
+    "readme_hash": "3597:# Doom\n\n**Private decision markets on Starknet. Your DAO prices a question instead of voting on it: public odds, invisible participants.**\n\nBuilt on [STRK20](https://strk20.starknet.io), the Starknet ",
+    "desc_v3": true,
+    "churn_pct": 24.3,
+    "summary": "Create private decision markets for your DAO without public participant visibility.",
+    "description_long": "Teams or DAOs can ask questions and price them through markets instead of voting. Participants stake shielded STRK on YES or NO via the STRK20 pool, keeping their identities hidden. The market contract records stakes against note IDs, and the settlement method relies on a single resolver without oracle integration.",
+    "latest_push": "Fixed mainnet check on deploy page and added market UI features.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 743,
+    "deletions": 4,
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "ghostline",
+    "name": "GhostLine",
+    "one_liner": "A privacy firewall that detects transaction leakage before you sign on Starknet.",
+    "category": "Other",
+    "repo_url": "https://github.com/Leequidice/GhostLine",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-19T08:17:39Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Leequidice",
+        "name": "Leequidice",
+        "avatar_url": "https://avatars.githubusercontent.com/u/72930551?v=4"
+      },
+      {
+        "login": "h15629526027",
+        "name": "Your Name",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99627554?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-18",
+      "2026-08-19"
+    ],
+    "head_sha": "66d6f1ebe9b24ae147d8fb1815713b81b2debe92",
+    "readme_hash": "11327:# GhostLine\n\n> **A privacy firewall that detects transaction leakage before you sign on Starknet.**\n\nGhostline is a privacy-security layer for **Starknet** that analyzes transactions before execution,",
+    "desc_v3": true,
+    "churn_pct": 100,
+    "summary": "Detects transaction leakage before signing to optimize privacy.",
+    "description_long": "GhostLine analyzes transactions before they are signed, calculating a privacy-risk score and identifying potential leakage. It is built as middleware between the user and the transaction, providing explanations for risks and recommending safer execution strategies based on timing, amounts, and historical context.",
+    "latest_push": "Scaffolded the GhostLine MVP and added STRK20 config and environment template.",
+    "tooling": [
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 5986,
+    "deletions": 0,
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
+    "slug": "morok-pay-starknet",
+    "name": "MorokPay",
+    "one_liner": "Private USDC treasury on Starknet, funded from Ethereum via CCTP.",
+    "category": "Payments",
+    "repo_url": "https://github.com/ssadkov/morok-pay-starknet",
+    "demo_url": "https://morok-pay-starknet.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-19T07:50:24Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ssadkov",
+        "name": "ssadkov",
+        "avatar_url": "https://avatars.githubusercontent.com/u/6169475?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Cursor",
+        "name": "Cursor",
+        "avatar_url": "",
+        "commits": 20
+      }
+    ],
+    "active_days": [
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19"
+    ],
+    "head_sha": "4ce20ab9a314fdef023d8ba4ac04df5c74efd0ae",
+    "readme_hash": "5033:# MorokPay\n\nPrivate USDC payments on Starknet for the [STRK20 Private Sprint](https://strk20.starknet.io/hackathon).\n\n**Pay privately** from a shielded Ready balance, or **get paid** with a QR invoice",
+    "desc_v3": true,
+    "churn_pct": 0.4,
+    "summary": "Make private USDC payments and invoices on Starknet.",
+    "description_long": "Handles private USDC payments via a QR invoice system. It connects to the Ready wallet, which holds the STRK20 viewing key, allowing merchants to create invoices and buyers to pay them while keeping transaction details private. The project uses contracts like `MorokInvoices` to manage invoice commitments and integrates CCTP for funding top-ups from Ethereum.",
+    "latest_push": "Clarified deposit fee logic and allowed direct shielding of USDC.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Privacy SDK",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 19,
+    "deletions": 4,
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
     "slug": "cloakpay",
     "name": "CloakPay",
     "one_liner": "Shielded payroll and discreet invoice settlements for freelancers on Starknet using STRK20 private notes.",
@@ -49,180 +611,6 @@
     "star_evidence": ""
   },
   {
-    "slug": "privacy-msg",
-    "name": "privacy_msg",
-    "one_liner": "Metadata-resistant private messaging on Starknet: visible payment memo, invisible sender-recipient link, settled through STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/Gaijin-01/privacy_msg",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-19T07:47:34Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Gaijin-01",
-        "name": "Sefirot",
-        "avatar_url": "https://avatars.githubusercontent.com/u/104550064?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-19"
-    ],
-    "head_sha": "82ad31e87d841c031a040bb4cf3d07ca75e444c6",
-    "readme_hash": "1056:# privacy_msg\n\nMetadata-resistant private messaging on Starknet.\n\n**Visible:** payment memo attached to every message.  \n**Invisible:** sender-recipient link, message content, recipient identity.  \n**",
-    "desc_v3": true,
-    "churn_pct": 3.1,
-    "summary": "Send private messages with visible payment memos on Starknet.",
-    "description_long": "Sends metadata-resistant private messages where the payment memo is visible, but the sender-recipient link and message content are not. Each session uses an ephemeral identity bundle derived from a master seed, with no persistent wallet linkage at the application layer. All transfers settle through the STRK20 pool.",
-    "latest_push": "Added STRK20 sprint context and build status to README.md.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 15,
-    "deletions": 32,
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "morok-pay-starknet",
-    "name": "MorokPay",
-    "one_liner": "Private USDC treasury on Starknet, funded from Ethereum via CCTP.",
-    "category": "Payments",
-    "repo_url": "https://github.com/ssadkov/morok-pay-starknet",
-    "demo_url": "https://morok-pay-starknet.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-19T07:43:50Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "ssadkov",
-        "name": "ssadkov",
-        "avatar_url": "https://avatars.githubusercontent.com/u/6169475?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Cursor",
-        "name": "Cursor",
-        "avatar_url": "",
-        "commits": 19
-      }
-    ],
-    "active_days": [
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19"
-    ],
-    "head_sha": "73bbcda39da41ad0b188b148de9c8e25a3ddc4e4",
-    "readme_hash": "5033:# MorokPay\n\nPrivate USDC payments on Starknet for the [STRK20 Private Sprint](https://strk20.starknet.io/hackathon).\n\n**Pay privately** from a shielded Ready balance, or **get paid** with a QR invoice",
-    "desc_v3": true,
-    "churn_pct": 0.9,
-    "summary": "Make private USDC payments and invoices on Starknet.",
-    "description_long": "Handles private USDC payments via a QR invoice system. It connects to the Ready wallet, which holds the STRK20 viewing key, allowing merchants to create invoices and buyers to pay them while keeping transaction details private. The project uses contracts like `MorokInvoices` to manage invoice commitments and integrates CCTP for funding top-ups from Ethereum.",
-    "latest_push": "Added a sweep helper to return idle deployer's STRK to a wallet.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Privacy SDK",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 52,
-    "deletions": 0,
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
-  },
-  {
     "slug": "strk20-privacy-wallet",
     "name": "strk20-privacy-wallet",
     "one_liner": "Umbra-grade privacy wallet for Starknet powered by STRK20 privacy pool",
@@ -264,7 +652,6 @@
     "head_sha": "3ef82e6c90fa4cceaecb273a530669f7e2d4771c",
     "readme_hash": "9286:# 🔒 STRK20 Privacy Wallet (Umbra Mode)\n\n> **Umbra-grade privacy UX on Starknet — fully powered by the native STRK20 Note-Based Privacy Pool.**\n\nBuilt by **Jai Bhati** ([@SmratJay](https://github.com/",
     "desc_v3": true,
-    "churn_pct": 0.6,
     "summary": "Manage encrypted transactions and stealth payments within a privacy wallet.",
     "description_long": "STRK20 Privacy Wallet allows users to perform encrypted transactions and send stealth payments on Starknet. It features a universal wallet support using an in-browser UTXO vault engine, a dual balance dashboard for viewing both on-chain and encrypted balances, and dynamic QR payment invoices. The implementation consists of core UI components, a stealth engine, and integration with AVNU for DEX swaps, all backed by cryptographic primitives that match the STRK20 protocol.",
     "latest_push": "Fixed the JupiterSidebar to have a redesigned unclipped header and smooth hover.",
@@ -303,6 +690,7 @@
     "has_readme": true,
     "additions": 68,
     "deletions": 43,
+    "churn_pct": 0.6,
     "assessment": {
       "innovative": false,
       "complex": false,
@@ -312,207 +700,6 @@
       "facts_v2": true
     },
     "star_evidence": ""
-  },
-  {
-    "slug": "doom",
-    "name": "Doom",
-    "one_liner": "Private decision markets on Starknet. Your DAO prices a question instead of voting on it: public odds, invisible participants.",
-    "category": "DeFi",
-    "repo_url": "https://github.com/neromtoobad/doom",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "neromtoobad",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [
-      {
-        "hash": "0x4f5188af4248424e0ad25bec9df4ff96b0bd761fa1347ad9d3acb749befc516",
-        "ok": true,
-        "pool": true,
-        "mine": null
-      },
-      {
-        "hash": "0x450e8664a4570c0cb97d3cf22f949616a5f94200ed805f63825e34fcd724941",
-        "ok": true,
-        "pool": true,
-        "mine": null
-      }
-    ],
-    "verified_txs": 2,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-19T07:42:28Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "neromtoobad",
-        "name": "neromtoobad",
-        "avatar_url": "https://avatars.githubusercontent.com/u/102220536?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-18",
-      "2026-08-19"
-    ],
-    "head_sha": "f314b6561026132ef252e2753f6c957e787f89c1",
-    "readme_hash": "3597:# Doom\n\n**Private decision markets on Starknet. Your DAO prices a question instead of voting on it: public odds, invisible participants.**\n\nBuilt on [STRK20](https://strk20.starknet.io), the Starknet ",
-    "desc_v3": true,
-    "churn_pct": 9.8,
-    "summary": "Create private decision markets for your DAO without public participant visibility.",
-    "description_long": "Teams or DAOs can ask questions and price them through markets instead of voting. Participants stake shielded STRK on YES or NO via the STRK20 pool, keeping their identities hidden. The market contract records stakes against note IDs, and the settlement method relies on a single resolver without oracle integration.",
-    "latest_push": "Added the browser deploy page for DoomMarket.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 234,
-    "deletions": 0,
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "quietline",
-    "name": "Quietline",
-    "one_liner": "Encrypted on-chain mail on Starknet. Payment memos ride the same private transfer.",
-    "category": "Other",
-    "repo_url": "https://github.com/gstohl/app20",
-    "demo_url": "https://github.com/gstohl/app20",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-01",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Quietline does not present a novel application of privacy technology in its current state.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-19T07:41:13Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "gstohl",
-        "name": "gstohl",
-        "avatar_url": "https://avatars.githubusercontent.com/u/191050810?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19"
-    ],
-    "head_sha": "ac3224795cbb01dda76c69f37cf895fe1feab2db",
-    "readme_hash": "4840:# APP20\n\nPrivate superapp on Starknet.\n\nAPP20 is a browser-owned workspace for shielded STRK, encrypted mail, and\nreview-only cross-chain and policy surfaces. Users connect a wallet, keep\nviewing keys",
-    "desc_v3": true,
-    "churn_pct": 0,
-    "summary": "Send encrypted emails and payment memos on Starknet.",
-    "description_long": "APP20 is an encrypted mail application that supports private STRK memos. Built with a client-side wallet connection, it uses end-to-end encryption for messages and payment requests, operating through designated routes like `/mail/inbox` for emails and `/pay` for payments. The repository features multiple packages that handle user accounts, intent processing, policy verification, and browser-owned asset integration.",
-    "latest_push": "Updated public about lines to state APP20 in documentation.",
-    "tooling": [
-      {
-        "label": "Privacy SDK",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 8,
-    "deletions": 8,
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "The project focuses on encrypted mail, which is a common use case for privacy.",
-      "why_complex": "No deployed contracts or sophisticated Cairo code is present; lacks engineering depth.",
-      "reason": "Quietline does not present a novel application of privacy technology in its current state.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "envelope",
@@ -562,7 +749,6 @@
     "head_sha": "0483344e7181e9202c9ba634770843f2cbb85d13",
     "readme_hash": "10791:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.\nAn AI agent can pay another agent that has no wallet and no address.**\n\n[![strk20-envelope-cli on npm](h",
     "desc_v3": true,
-    "churn_pct": 0.2,
     "summary": "Send money as a private link to anyone without a wallet.",
     "description_long": "Envelope seals a monetary payment into a link that can be shared with parties who do not have a Starknet wallet. It consists of a smart contract implementing an anonymizer mechanism and a command-line interface, allowing users to create and open envelopes while keeping the payer's identity hidden through a decentralized pool. The setup requires user-defined environment variables for account credentials and supports commands to seal, open, and check the status of envelopes.",
     "latest_push": "Folded the agent's limits into the section in the README.md file.",
@@ -581,6 +767,7 @@
     "has_readme": true,
     "additions": 8,
     "deletions": 18,
+    "churn_pct": 0.2,
     "assessment": {
       "innovative": true,
       "complex": true,
@@ -654,113 +841,6 @@
     "churn_pct": 1,
     "assessment": null,
     "star_evidence": ""
-  },
-  {
-    "slug": "airlock",
-    "name": "Airlock",
-    "one_liner": "One-click privacy from any chain: bridge in, hold private, withdraw to a different chain with no on-chain link.",
-    "category": "Infra",
-    "repo_url": "https://github.com/kenkomu/airlock",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-09",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Airlock creates a cross-chain privacy solution without direct links between transactions.",
-    "contracts": [
-      {
-        "address": "0x004c368ae058ee81b61884c5c47ee57484c4348669b66ac606366bbd1fd1b1fb",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [
-      {
-        "hash": "0x78d391e720a1c34540be9416496834b830d3f2105b7cf798ab4ab1cd6169cca",
-        "ok": true,
-        "pool": true,
-        "mine": false,
-        "note": "touched the pool, but not through this project's contracts"
-      },
-      {
-        "hash": "0x6c6b6a15f7e3065b0db3e7e49ec17871dbf90c2576e46c8bd045b6d4009ff82",
-        "ok": true,
-        "pool": true,
-        "mine": false,
-        "note": "touched the pool, but not through this project's contracts"
-      },
-      {
-        "hash": "0x6beb4415dc14438f5870e1b37cabaf53e361cf09c8bc2e7a12fc83b2ce2887",
-        "ok": true,
-        "pool": true,
-        "mine": false,
-        "note": "touched the pool, but not through this project's contracts"
-      }
-    ],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-19T07:22:54Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "renoschubert",
-        "name": "Kenneth Komu",
-        "avatar_url": "https://avatars.githubusercontent.com/u/46114615?v=4"
-      },
-      {
-        "login": "kenkomu",
-        "name": "Kenneth Njoroge",
-        "avatar_url": "https://avatars.githubusercontent.com/u/95502725?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19"
-    ],
-    "head_sha": "23bd8bc59dbfb11adda27ae121e23989d2f36b50",
-    "readme_hash": "7155:# Airlock\n\n**One-click privacy from any chain.** Step in on one chain, the door seals behind you, step out on another. No on-chain link between the two sides.\n\nBuilt on the [STRK20](https://strk20-by-",
-    "desc_v3": true,
-    "summary": "Bridge assets from any chain and withdraw privately to another.",
-    "description_long": "Allows users to deposit assets into a privacy pool on one chain and withdraw them on a different chain without linking the two transactions. Built with a deterministic Starknet account derived from a user's signature, it orchestrates a multi-transaction flow that includes bridging over Circle CCTP and a custom anonymizer contract in Cairo for pool actions.",
-    "latest_push": "Deployed AirlockBucketer on Sepolia and verified the Sepolia class on Voyager.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Anonymizer contract",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 99,
-    "deletions": 21,
-    "churn_pct": 2.6,
-    "assessment": {
-      "innovative": true,
-      "complex": false,
-      "why_innovative": "It enables unlinkable cross-chain asset movement using a privacy pool mechanism.",
-      "why_complex": "No deployed contracts or proven engineering components are present.",
-      "reason": "Airlock creates a cross-chain privacy solution without direct links between transactions.",
-      "facts_v2": true
-    },
-    "star_evidence": "1 contract deployed, Cairo in the repository"
   },
   {
     "slug": "cloakra",
@@ -1184,55 +1264,6 @@
       "facts_v2": true
     },
     "star_evidence": "3 contracts deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "ghostline",
-    "name": "GhostLine",
-    "one_liner": "A privacy firewall that detects transaction leakage before you sign on Starknet.",
-    "category": "Other",
-    "repo_url": "https://github.com/Leequidice/GhostLine",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-19T04:47:04Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Leequidice",
-        "name": "Leequidice",
-        "avatar_url": "https://avatars.githubusercontent.com/u/72930551?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-18"
-    ],
-    "head_sha": "f9887491ed24e702f3e73a034b93bb8ff6bdc773",
-    "readme_hash": "11327:# GhostLine\n\n> **A privacy firewall that detects transaction leakage before you sign on Starknet.**\n\nGhostline is a privacy-security layer for **Starknet** that analyzes transactions before execution,",
-    "desc_v3": true,
-    "summary": "Detects transaction leakage before signing to optimize privacy.",
-    "description_long": "GhostLine analyzes transactions before they are signed, calculating a privacy-risk score and identifying potential leakage. It is built as middleware between the user and the transaction, providing explanations for risks and recommending safer execution strategies based on timing, amounts, and historical context.",
-    "latest_push": "Added comprehensive project details to the README.",
-    "tooling": [],
-    "has_readme": true,
-    "additions": 505,
-    "deletions": 1,
-    "churn_pct": 0,
-    "assessment": null,
-    "star_evidence": ""
   },
   {
     "slug": "ghostorder",
