@@ -1,5 +1,388 @@
 [
   {
+    "slug": "game-shield",
+    "name": "GameShield",
+    "one_liner": "Private gaming bounty hub on Starknet: shielded prize pools, provable payout commitments and unlinkable rewards for tournaments, speedruns and PvP.",
+    "category": "Gaming",
+    "repo_url": "https://github.com/BlackAporia/game-shield",
+    "demo_url": "https://gameshield-dapp.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-19T21:24:18Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "BlackAporia",
+        "name": "BlackAporia",
+        "avatar_url": "https://avatars.githubusercontent.com/u/116606427?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19"
+    ],
+    "head_sha": "8d9493ccc771fd869669553cd16a2f5137a7671b",
+    "readme_hash": "6473:# GameShield — Private Gaming Bounty Hub\n\nGameShield is a STRK20 prototype for private gaming reward flows on Starknet. It uses the STRK20 pool directly — rewards are deposited, transferred and withdr",
+    "desc_v3": true,
+    "churn_pct": 10.1,
+    "summary": "Create and fund private gaming tournaments with shielded payouts.",
+    "description_long": "GameShield allows users to organize and fund private gaming bounties with unlinkable prize distributions. It uses smart contracts for a campaign registry and direct STRK20 actions for deposits and transfers, ensuring payout commitments without revealing winner identities or amounts. The project supports multiple tokens and integrates with wallets that comply with the STRK20 Wallet API.",
+    "latest_push": "Adapted the dapp to deploy v1 contracts on mainnet with a legacy registry.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 445,
+    "deletions": 52,
+    "sprint": {
+      "pushes": 62,
+      "additions": 16134,
+      "deletions": 29,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "ghost-book",
+    "name": "GhostBook",
+    "one_liner": "Private limit orders and TWAP on Starknet: order terms committed once and enforced on-chain, filled through Ekubo, settled into STRK20 private notes.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/JemIIahh/ghostbook-starknet",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x0254fc4294398776cab056becb9630b996af2c10628e225ac7559e2d9069bacb",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x005d02f76073e0c4c811d2cf43d0a52956366a35300c23248361f0a1dad6915b",
+        "ok": true,
+        "pool": false,
+        "mine": false,
+        "note": "did not touch the pool"
+      },
+      {
+        "hash": "0x03391fac6441050a04e4abe214113968356c95e5f99f257a1e820cfceeeb356c",
+        "ok": true,
+        "pool": false,
+        "mine": false,
+        "note": "did not touch the pool"
+      },
+      {
+        "hash": "0x0468b1ae56e5301edb5546a1a60807cad24e428975c0de4fc6dda4398aca48cf",
+        "ok": true,
+        "pool": false,
+        "mine": false,
+        "note": "did not touch the pool"
+      }
+    ],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-19T21:22:08Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "JemIIahh",
+        "name": "JemIIahh",
+        "avatar_url": "https://avatars.githubusercontent.com/u/275022204?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-18",
+      "2026-08-19"
+    ],
+    "head_sha": "799ed3ad2872627b3b191fc3c3132a295a6ea225",
+    "readme_hash": "9448:# GhostBook\n\n> **Private limit orders & TWAPs on Starknet** — an STRK20 invoke anonymizer that fills user-committed order plans on Ekubo and returns the output straight into a private note.\n\n![Starkne",
+    "desc_v3": true,
+    "churn_pct": 3.2,
+    "summary": "Create private limit orders and TWAPs with enforced terms on Starknet.",
+    "description_long": "GhostBook is a private order book for limit orders and TWAPs on Starknet. Users commit to an OrderPlan specifying terms like limit price and maximum slices, which are enforced on-chain for all fills. Built using Cairo contracts, Ekubo as the DEX, and a Next.js frontend, it allows the execution of trades while keeping user plans and trading identities private.",
+    "latest_push": "Fixed token marks in UI and indicated the connected wallet.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 144,
+    "deletions": 41,
+    "sprint": {
+      "pushes": 17,
+      "additions": 26104,
+      "deletions": 14245,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "morok-pay-starknet",
+    "name": "MorokPay",
+    "one_liner": "Private USDC treasury on Starknet, funded from Ethereum via CCTP.",
+    "category": "Payments",
+    "repo_url": "https://github.com/ssadkov/morok-pay-starknet",
+    "demo_url": "https://morok-pay-starknet.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [
+      {
+        "hash": "0x713ffeebec069111eead005c294c8c409b3569c0f4e39231f5e3d549d9050e1",
+        "ok": true,
+        "pool": true,
+        "mine": null
+      },
+      {
+        "hash": "0x5622d6617aee8a26195f26657cc4bca9e3c64ef5f5564f78ff2632d7d2927df",
+        "ok": true,
+        "pool": true,
+        "mine": null
+      },
+      {
+        "hash": "0x29328374e483246e685d649222316a24cc6c3998702f0c561fc00578ff59bfb",
+        "ok": true,
+        "pool": true,
+        "mine": null
+      }
+    ],
+    "verified_txs": 3,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": true
+    },
+    "status": "building",
+    "pushed_at": "2026-08-19T21:17:05Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ssadkov",
+        "name": "ssadkov",
+        "avatar_url": "https://avatars.githubusercontent.com/u/6169475?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Cursor",
+        "name": "Cursor",
+        "avatar_url": "",
+        "commits": 27
+      }
+    ],
+    "active_days": [
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19"
+    ],
+    "head_sha": "70588b047e813a3d17eb93e426980063aee86846",
+    "readme_hash": "5460:# MorokPay\n\nPrivate USDC payments on Starknet for the [STRK20 Private Sprint](https://strk20.starknet.io/hackathon).\n\n**Pay privately** from a shielded Ready balance, or **get paid** with a QR for an ",
+    "desc_v3": true,
+    "churn_pct": 16.9,
+    "summary": "Send and receive private USDC payments on Starknet.",
+    "description_long": "MorokPay allows users to make private USDC payments and create invoices on Starknet. It connects to the Ready wallet to handle payment requests, ensuring transaction details remain confidential. The app features QR codes for transactions, integrates with the Base network for balance management, and supports funding through CCTP from Ethereum.",
+    "latest_push": "Added private payment requests, the MorokPay mark, and updated campaign rules.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Privacy SDK",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 821,
+    "deletions": 431,
+    "sprint": {
+      "pushes": 33,
+      "additions": 35215,
+      "deletions": 3756,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "nexora-protocol",
+    "name": "Nexora-Protocol",
+    "one_liner": "One-click privacy for the multichain economy - powered by Starknet + STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/Gedion08/Nexora-Protocol",
+    "demo_url": "https://nexora-protocol.vercel.app",
+    "demo_video": "REPLACE_WITH_YOUTUBE_URL",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The protocol allows for cross-chain privacy routing, not just a bridge wrapper.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": true,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-19T21:15:02Z",
+    "stars": 1,
+    "builders": [
+      {
+        "login": "Gedion08",
+        "name": "Gedion08",
+        "avatar_url": "https://avatars.githubusercontent.com/u/102872099?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-18",
+      "2026-08-19"
+    ],
+    "head_sha": "dcbf7be17dc2d9425c5e44b37cfcf720c5c9a629",
+    "readme_hash": "4780:# Nexora Protocol\n\n**Starknet as the privacy layer for the multichain economy.**\n\nNexora Protocol is a cross-chain privacy protocol that lets users deposit assets on any supported chain (Arbitrum, Bas",
+    "desc_v3": true,
+    "churn_pct": 3.7,
+    "summary": "Route assets privately across multiple blockchains.",
+    "description_long": "Nexora Protocol allows users to deposit assets from supported chains, hold them as STRK20 shielded notes, and withdraw to a new chain with reduced linkability. It consists of a frontend in React, a relayer built with Node.js, and contracts tested in Cairo 2.20, managing transactions and privacy metrics efficiently.",
+    "latest_push": "Standardized the contract to use snforge as the test runner.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 569,
+    "deletions": 53,
+    "sprint": {
+      "pushes": 14,
+      "additions": 19859,
+      "deletions": 1,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": false,
+      "why_innovative": "It enables private cross-chain asset transfers via STRK20 shielded notes with minimized linkability.",
+      "why_complex": "No deployed contracts or complex Cairo implementations are present yet.",
+      "reason": "The protocol allows for cross-chain privacy routing, not just a bridge wrapper.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
     "slug": "tony-strk",
     "name": "Tony-Strk",
     "one_liner": "",
@@ -42,7 +425,6 @@
     "head_sha": "6f95f0d95a383fc4a905a5047656c3270b0a8b70",
     "readme_hash": "8961:# Tony Strk\n\n**A private browsing interface for AI agents.**\n\nThe current Web2 demo maps an MCP request through an ephemeral worker and Tor egress. It intentionally does **not** implement STRK20 or x4",
     "desc_v3": true,
-    "churn_pct": 100,
     "summary": "Browse and pay anonymously with AI agents using Tor and STRK20.",
     "description_long": "This project creates a private browsing interface for AI agents, allowing them to browse the web and make payments without revealing user identity. The system consists of a remote server that spawns cloud headless browsers that exit through Tor, and a payment worker that handles private transactions using a shielded STRK20 pool. Each agent's requests are processed independently to ensure no single party can link actions to the user.",
     "latest_push": "Made the repository installable for public access.",
@@ -71,6 +453,7 @@
     "has_readme": true,
     "additions": 5513,
     "deletions": 537,
+    "churn_pct": 100,
     "sprint": {
       "pushes": 17,
       "additions": 13268,
@@ -79,74 +462,6 @@
     },
     "assessment": null,
     "star_evidence": ""
-  },
-  {
-    "slug": "game-shield",
-    "name": "GameShield",
-    "one_liner": "Private gaming bounty hub on Starknet: shielded prize pools, provable payout commitments and unlinkable rewards for tournaments, speedruns and PvP.",
-    "category": "Gaming",
-    "repo_url": "https://github.com/BlackAporia/game-shield",
-    "demo_url": "https://gameshield-dapp.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-19T20:49:07Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "BlackAporia",
-        "name": "BlackAporia",
-        "avatar_url": "https://avatars.githubusercontent.com/u/116606427?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19"
-    ],
-    "head_sha": "51b75d2142124494afa6b2ba623ffc3d166a45fe",
-    "readme_hash": "6473:# GameShield — Private Gaming Bounty Hub\n\nGameShield is a STRK20 prototype for private gaming reward flows on Starknet. It uses the STRK20 pool directly — rewards are deposited, transferred and withdr",
-    "desc_v3": true,
-    "churn_pct": 4.6,
-    "summary": "Create and fund private gaming tournaments with shielded payouts.",
-    "description_long": "GameShield allows users to organize and fund private gaming bounties with unlinkable prize distributions. It uses smart contracts for a campaign registry and direct STRK20 actions for deposits and transfers, ensuring payout commitments without revealing winner identities or amounts. The project supports multiple tokens and integrates with wallets that comply with the STRK20 Wallet API.",
-    "latest_push": "Fixed deploy-starkli.sh to parse plain-text output and added auto-detection.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 174,
-    "deletions": 50,
-    "sprint": {
-      "pushes": 60,
-      "additions": 15741,
-      "deletions": 29,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "philoxenia",
@@ -227,7 +542,6 @@
     "head_sha": "87f4553323ce73d2d9e67f9402e2645856bb1094",
     "readme_hash": "9319:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
     "desc_v3": true,
-    "churn_pct": 0,
     "summary": "Book private accommodations through trusted connections.",
     "description_long": "Philoxenia is a peer-to-peer hospitality protocol that allows users to book accommodations privately using a social trust network. It consists of a frontend built with Next.js connected to a Fastify backend with a PostgreSQL database, and on-chain contracts written in Cairo for escrow and payment settlement.",
     "latest_push": "Changed wording to specify places within countries.",
@@ -251,6 +565,7 @@
     "has_readme": true,
     "additions": 3,
     "deletions": 3,
+    "churn_pct": 0,
     "sprint": {
       "pushes": 100,
       "additions": 1234,
@@ -266,125 +581,6 @@
       "facts_v2": true
     },
     "star_evidence": "3 contracts deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "ghost-book",
-    "name": "GhostBook",
-    "one_liner": "Private limit orders and TWAP on Starknet: order terms committed once and enforced on-chain, filled through Ekubo, settled into STRK20 private notes.",
-    "category": "DeFi",
-    "repo_url": "https://github.com/JemIIahh/ghostbook-starknet",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x0254fc4294398776cab056becb9630b996af2c10628e225ac7559e2d9069bacb",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [
-      {
-        "hash": "0x005d02f76073e0c4c811d2cf43d0a52956366a35300c23248361f0a1dad6915b",
-        "ok": true,
-        "pool": false,
-        "mine": false,
-        "note": "did not touch the pool"
-      },
-      {
-        "hash": "0x03391fac6441050a04e4abe214113968356c95e5f99f257a1e820cfceeeb356c",
-        "ok": true,
-        "pool": false,
-        "mine": false,
-        "note": "did not touch the pool"
-      },
-      {
-        "hash": "0x0468b1ae56e5301edb5546a1a60807cad24e428975c0de4fc6dda4398aca48cf",
-        "ok": true,
-        "pool": false,
-        "mine": false,
-        "note": "did not touch the pool"
-      }
-    ],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-19T20:31:14Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "JemIIahh",
-        "name": "JemIIahh",
-        "avatar_url": "https://avatars.githubusercontent.com/u/275022204?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-18",
-      "2026-08-19"
-    ],
-    "head_sha": "94bbc0ad6de3bba5a86e01679266f8db7e51b28e",
-    "readme_hash": "9448:# GhostBook\n\n> **Private limit orders & TWAPs on Starknet** — an STRK20 invoke anonymizer that fills user-committed order plans on Ekubo and returns the output straight into a private note.\n\n![Starkne",
-    "desc_v3": true,
-    "churn_pct": 0.3,
-    "summary": "Create private limit orders and TWAPs with enforced terms on Starknet.",
-    "description_long": "GhostBook is a private order book for limit orders and TWAPs on Starknet. Users commit to an OrderPlan specifying terms like limit price and maximum slices, which are enforced on-chain for all fills. Built using Cairo contracts, Ekubo as the DEX, and a Next.js frontend, it allows the execution of trades while keeping user plans and trading identities private.",
-    "latest_push": "Deployed the anonymizer on Starknet mainnet.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 15,
-    "deletions": 4,
-    "sprint": {
-      "pushes": 16,
-      "additions": 25969,
-      "deletions": 14213,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "nightshift",
@@ -1837,77 +2033,6 @@
     "star_evidence": "2 contracts deployed on mainnet, Cairo in the repository"
   },
   {
-    "slug": "privora",
-    "name": "Privora",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/Dapperdavidd/Privora",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project is a privacy payment platform, an obvious use case in the blockchain space.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-19T17:14:04Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Dapperdavidd",
-        "name": "Dapper",
-        "avatar_url": "https://avatars.githubusercontent.com/u/218753802?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-19"
-    ],
-    "head_sha": "ea4921cbbf5442314b1501947c5f99a43afc8605",
-    "readme_hash": "2619:# Privora\n\nPrivora is a privacy-first payment platform for real-world financial transactions, beginning with rent and property payments.\n\nThe first STRK20 payment flow is intentionally narrow: a tenan",
-    "desc_v3": true,
-    "summary": "Process private rent payments and generate verifiable receipts.",
-    "description_long": "Privora allows tenants to pay rent privately on Starknet and generates a verifiable payment receipt for landlords. The project consists of a Rust-based backend, a React + TypeScript web client, and PostgreSQL migrations for data storage. It implements a privacy receipt model and verifies transactions against the Starknet Mainnet, ensuring no private keys are stored in the repository.",
-    "latest_push": "Consolidated wallet and listings navigation in the application.",
-    "tooling": [
-      {
-        "label": "Rust",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 408,
-    "deletions": 170,
-    "churn_pct": 10.7,
-    "sprint": {
-      "pushes": 64,
-      "additions": 10363,
-      "deletions": 1,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "This project operates as a payment platform prioritizing privacy for rent transactions.",
-      "why_complex": "No complex contracts or Cairo code are implemented in the project as of now.",
-      "reason": "The project is a privacy payment platform, an obvious use case in the blockchain space.",
-      "facts_v2": true
-    },
-    "star_evidence": ""
-  },
-  {
     "slug": "facet",
     "name": "Facet",
     "one_liner": "Private identities for Starknet DeFi. One shielded balance, unlimited unlinkable facets, one per protocol.",
@@ -2830,106 +2955,6 @@
       "reason": "VeilPay applies privacy to a common payroll system without innovative mechanisms.",
       "facts_v2": true
     },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "morok-pay-starknet",
-    "name": "MorokPay",
-    "one_liner": "Private USDC treasury on Starknet, funded from Ethereum via CCTP.",
-    "category": "Payments",
-    "repo_url": "https://github.com/ssadkov/morok-pay-starknet",
-    "demo_url": "https://morok-pay-starknet.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-19T14:04:49Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "ssadkov",
-        "name": "ssadkov",
-        "avatar_url": "https://avatars.githubusercontent.com/u/6169475?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Cursor",
-        "name": "Cursor",
-        "avatar_url": "",
-        "commits": 26
-      }
-    ],
-    "active_days": [
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19"
-    ],
-    "head_sha": "68c58ac807b283e1a7d0843308849be161bed850",
-    "readme_hash": "5337:# MorokPay\n\nPrivate USDC payments on Starknet for the [STRK20 Private Sprint](https://strk20.starknet.io/hackathon).\n\n**Pay privately** from a shielded Ready balance, or **get paid** with a QR invoice",
-    "desc_v3": true,
-    "summary": "Make private USDC payments on Starknet with QR invoices.",
-    "description_long": "Private payments for USDC on Starknet, allowing users to pay from a shielded balance or receive payments via QR invoices. Built with the Ready wallet, invoices are created with a specific amount and account number, and transactions are processed through the STRK20 pool. Features include topping up via CCTP and a helper contract for invoice reconciliation.",
-    "latest_push": "Documented the claim-link giveaway case for agent review.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Privacy SDK",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 153,
-    "deletions": 0,
-    "churn_pct": 2.1,
-    "sprint": {
-      "pushes": 30,
-      "additions": 35155,
-      "deletions": 3742,
-      "computed": 2
-    },
-    "assessment": null,
     "star_evidence": "Cairo in the repository"
   },
   {
@@ -4941,82 +4966,6 @@
       "facts_v2": true
     },
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "nexora-protocol",
-    "name": "Nexora-Protocol",
-    "one_liner": "One-click privacy for the multichain economy - powered by Starknet + STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/Gedion08/Nexora-Protocol",
-    "demo_url": "https://nexora-protocol.vercel.app",
-    "demo_video": "REPLACE_WITH_YOUTUBE_URL",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The protocol allows for cross-chain privacy routing, not just a bridge wrapper.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": true,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-18T12:21:03Z",
-    "stars": 1,
-    "builders": [
-      {
-        "login": "Gedion08",
-        "name": "Gedion08",
-        "avatar_url": "https://avatars.githubusercontent.com/u/102872099?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-18"
-    ],
-    "head_sha": "779190ec1523f07035260d793acb26c382cc9d88",
-    "readme_hash": "4780:# Nexora Protocol\n\n**Starknet as the privacy layer for the multichain economy.**\n\nNexora Protocol is a cross-chain privacy protocol that lets users deposit assets on any supported chain (Arbitrum, Bas",
-    "desc_v3": true,
-    "summary": "Route assets privately across multiple blockchains.",
-    "description_long": "Nexora Protocol allows users to deposit assets from supported chains, hold them as STRK20 shielded notes, and withdraw to a new chain with reduced linkability. It consists of a frontend in React, a relayer built with Node.js, and contracts tested in Cairo 2.20, managing transactions and privacy metrics efficiently.",
-    "latest_push": "Added PrivacyHub Cairo contract and deployment scripts.",
-    "tooling": [
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1352,
-    "deletions": 404,
-    "churn_pct": 10.8,
-    "sprint": {
-      "pushes": 13,
-      "additions": 19714,
-      "deletions": 1,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": false,
-      "why_innovative": "It enables private cross-chain asset transfers via STRK20 shielded notes with minimized linkability.",
-      "why_complex": "No deployed contracts or complex Cairo implementations are present yet.",
-      "reason": "The protocol allows for cross-chain privacy routing, not just a bridge wrapper.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "crewkill-strk20",
@@ -7795,6 +7744,66 @@
       "why_innovative": "Project is a trading and liquidity web app without privacy features.",
       "why_complex": "No deployed contracts or complex engineering present in the stack.",
       "reason": "The project lacks privacy application and real engineering depth.",
+      "facts_v2": true
+    },
+    "star_evidence": ""
+  },
+  {
+    "slug": "privora",
+    "name": "privora",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/Dapperdavidd/Privora",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project is a privacy payment platform, an obvious use case in the blockchain space.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": null,
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Dapperdavidd",
+        "name": "Dapper👾",
+        "avatar_url": "https://avatars.githubusercontent.com/u/218753802?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [],
+    "head_sha": null,
+    "readme_hash": "",
+    "desc_v3": true,
+    "churn_pct": 0,
+    "summary": "Process private rent payments and generate verifiable receipts.",
+    "description_long": "Privora allows tenants to pay rent privately on Starknet and generates a verifiable payment receipt for landlords. The project consists of a Rust-based backend, a React + TypeScript web client, and PostgreSQL migrations for data storage. It implements a privacy receipt model and verifies transactions against the Starknet Mainnet, ensuring no private keys are stored in the repository.",
+    "latest_push": "",
+    "tooling": [],
+    "has_readme": false,
+    "additions": 0,
+    "deletions": 0,
+    "sprint": {
+      "pushes": 0,
+      "additions": 10363,
+      "deletions": 1,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "This project operates as a payment platform prioritizing privacy for rent transactions.",
+      "why_complex": "No complex contracts or Cairo code are implemented in the project as of now.",
+      "reason": "The project is a privacy payment platform, an obvious use case in the blockchain space.",
       "facts_v2": true
     },
     "star_evidence": ""
