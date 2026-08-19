@@ -81,7 +81,7 @@
     "churn_pct": 0.9,
     "summary": "Book private accommodations through trusted connections.",
     "description_long": "Philoxenia is a peer-to-peer hospitality protocol that allows users to book accommodations privately using a social trust network. It consists of a frontend built with Next.js connected to a Fastify backend with a PostgreSQL database, and on-chain contracts written in Cairo for escrow and payment settlement.",
-    "latest_push": "Configured the landing footer to link to GitHub, Telegram, LinkedIn, and email.",
+    "latest_push": "Enabled landing footer to open GitHub, Telegram, LinkedIn, or email.",
     "tooling": [
       {
         "label": "AVNU",
@@ -163,7 +163,7 @@
     "churn_pct": 6.5,
     "summary": "Manage encrypted transactions and stealth payments within a privacy wallet.",
     "description_long": "STRK20 Privacy Wallet allows users to perform encrypted transactions and send stealth payments on Starknet. It features a universal wallet support using an in-browser UTXO vault engine, a dual balance dashboard for viewing both on-chain and encrypted balances, and dynamic QR payment invoices. The implementation consists of core UI components, a stealth engine, and integration with AVNU for DEX swaps, all backed by cryptographic primitives that match the STRK20 protocol.",
-    "latest_push": "Completed the real on-chain PEL perps protocol on Starknet Sepolia.",
+    "latest_push": "Completed real on-chain PEL perps protocol implementation on Starknet Sepolia.",
     "tooling": [
       {
         "label": "AVNU",
@@ -271,7 +271,7 @@
     "churn_pct": 2.4,
     "summary": "Explore a city built from Starknet privacy protocols using real funds.",
     "description_long": "Players walk through a 2D top-down city where each building represents a privacy protocol. The game is developed with separate packages for application, backend, and logic, specifying actions via typed intents that pass through a privacy gate to execute financial transactions without handling sensitive key material.",
-    "latest_push": "Fixed the Fly staging smoke contract.",
+    "latest_push": "Fixed the Fly staging smoke contract and improved CI guidance.",
     "tooling": [
       {
         "label": "TypeScript",
@@ -351,8 +351,8 @@
     "readme_hash": "9394:# Whisper Pay\n\nOne-link private payment requests on Starknet, powered by STRK20 shielded transfers.\n\n## Innovation\n\nWhisper Pay routes each payment by reading the payer's shielded balance first —\nfund",
     "desc_v3": true,
     "churn_pct": 10.8,
-    "summary": "Create private payment requests with shareable links.",
-    "description_long": "Whisper Pay is a tool for generating private payment requests through shareable links. When the payer clicks the link, the payment is routed through transactions that use STRK20 actions, maintaining privacy for the amount paid and the sender/receiver details. The app reads the payer's shielded balance to determine the payment route, offering to round deposits when necessary and confirming the transaction's public impact before the payer signs.",
+    "summary": "Generate private payment requests with a shareable link.",
+    "description_long": "Whisper Pay allows users to create one-link private payment requests on Starknet. Built with Next.js, React, and TypeScript, the project routes payments through STRK20's shielded flow, ensuring the amount, sender, and receiver details stay private. The payment flow includes creating a request, opening a link, connecting a wallet, and shielding payments while only the recipient sees their incoming private balance.",
     "latest_push": "Implemented privacy assessment for payment plans and added a privacy meter component.",
     "tooling": [
       {
@@ -442,9 +442,9 @@
     "readme_hash": "2619:# Privora\n\nPrivora is a privacy-first payment platform for real-world financial transactions, beginning with rent and property payments.\n\nThe first STRK20 payment flow is intentionally narrow: a tenan",
     "desc_v3": true,
     "churn_pct": 10.7,
-    "summary": "Process private rent payments with verifiable receipts.",
-    "description_long": "Privora allows tenants to pay rent privately on Starknet while giving landlords verifiable payment receipts. The backend is built in Rust with PostgreSQL for data persistence and includes a privacy treasury sidecar for user keys. The web interface is implemented with React and TypeScript, while payment verifications are done against Starknet Mainnet.",
-    "latest_push": "Consolidated wallet and listings navigation for a smoother user experience.",
+    "summary": "Process private rent payments and generate verifiable receipts.",
+    "description_long": "Privora allows tenants to pay rent privately on Starknet and generates a verifiable payment receipt for landlords. The project consists of a Rust-based backend, a React + TypeScript web client, and PostgreSQL migrations for data storage. It implements a privacy receipt model and verifies transactions against the Starknet Mainnet, ensuring no private keys are stored in the repository.",
+    "latest_push": "Consolidated wallet and listings navigation in the application.",
     "tooling": [
       {
         "label": "Rust",
@@ -523,7 +523,7 @@
     "churn_pct": 4.8,
     "summary": "Create multiple unlinkable identities for DeFi transactions.",
     "description_long": "Users can manage separate identities for different DeFi protocols, ensuring no linkage across transactions. It uses STRK20 shadow accounts to deploy unique identity keys per user and protocol, which are generated through a series of poseidon hash functions. The system allows funding of shadow accounts through shielded notes in a single transaction, avoiding public links to personal identities.",
-    "latest_push": "Retired the compromised Sepolia signer and documented the replacement account.",
+    "latest_push": "Retired the compromised Sepolia signer and recorded its replacement.",
     "tooling": [
       {
         "label": "Cairo",
@@ -689,7 +689,7 @@
     "churn_pct": 13.3,
     "summary": "Conduct private negotiations with encrypted messaging and escrow settlement.",
     "description_long": "Two parties can negotiate and settle payments inside one encrypted timeline. It is built with Cairo helper contracts for messaging, offers, private escrow, and escrow settlement, all interfacing through the STRK20 Privacy Pool's `InvokeExternal`.",
-    "latest_push": "Fixed the live offer discovery range in the backend.",
+    "latest_push": "Fixed live offer discovery range in the backend.",
     "tooling": [
       {
         "label": "Cairo",
@@ -846,7 +846,7 @@
     "churn_pct": 6.1,
     "summary": "Detects transaction leakage before signing to optimize privacy.",
     "description_long": "GhostLine analyzes transactions before they are signed, calculating a privacy-risk score and identifying potential leakage. It is built as middleware between the user and the transaction, providing explanations for risks and recommending safer execution strategies based on timing, amounts, and historical context.",
-    "latest_push": "Added a runner-local Cairo install fallback in the compile workflow.",
+    "latest_push": "Added runner-local Cairo install fallback in the compile-cairo.yml workflow.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -4482,10 +4482,9 @@
       },
       {
         "hash": "0x05bc97bd56952cc88a8df5a9bfdba4167a374b48df73ac6781e732bc59f1234d",
-        "ok": false,
-        "pool": false,
-        "mine": false,
-        "note": "not found on mainnet"
+        "ok": true,
+        "pool": true,
+        "mine": null
       },
       {
         "hash": "0x0664cc565fd645886bc0717fc2def36ba645ce00e3c7c8fb7206f2e051846b75",
@@ -4500,7 +4499,7 @@
         "mine": null
       }
     ],
-    "verified_txs": 3,
+    "verified_txs": 4,
     "requirements": {
       "demo": false,
       "video": false,
