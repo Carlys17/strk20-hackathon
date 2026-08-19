@@ -1,5 +1,134 @@
 [
   {
+    "slug": "cloakpay",
+    "name": "CloakPay",
+    "one_liner": "Shielded payroll and discreet invoice settlements for freelancers on Starknet using STRK20 private notes.",
+    "category": "Payments",
+    "repo_url": "https://github.com/noisyboy08/CloakPay",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-11",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-19T07:49:44Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "noisyboy08",
+        "name": "Uday Dolas",
+        "avatar_url": "https://avatars.githubusercontent.com/u/180315819?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-19"
+    ],
+    "head_sha": "9b1d2826cba40aa892be8ba27b23f10574fc4f5c",
+    "readme_hash": "",
+    "desc_v3": true,
+    "churn_pct": 0,
+    "summary": "",
+    "description_long": "",
+    "latest_push": "Created strk20.json with initial structure.",
+    "tooling": [],
+    "has_readme": false,
+    "additions": 6,
+    "deletions": 0,
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
+    "slug": "privacy-msg",
+    "name": "privacy_msg",
+    "one_liner": "Metadata-resistant private messaging on Starknet: visible payment memo, invisible sender-recipient link, settled through STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/Gaijin-01/privacy_msg",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-19T07:47:34Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Gaijin-01",
+        "name": "Sefirot",
+        "avatar_url": "https://avatars.githubusercontent.com/u/104550064?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-19"
+    ],
+    "head_sha": "82ad31e87d841c031a040bb4cf3d07ca75e444c6",
+    "readme_hash": "1056:# privacy_msg\n\nMetadata-resistant private messaging on Starknet.\n\n**Visible:** payment memo attached to every message.  \n**Invisible:** sender-recipient link, message content, recipient identity.  \n**",
+    "desc_v3": true,
+    "churn_pct": 3.1,
+    "summary": "Send private messages with visible payment memos on Starknet.",
+    "description_long": "Sends metadata-resistant private messages where the payment memo is visible, but the sender-recipient link and message content are not. Each session uses an ephemeral identity bundle derived from a master seed, with no persistent wallet linkage at the application layer. All transfers settle through the STRK20 pool.",
+    "latest_push": "Added STRK20 sprint context and build status to README.md.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 15,
+    "deletions": 32,
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
     "slug": "morok-pay-starknet",
     "name": "MorokPay",
     "one_liner": "Private USDC treasury on Starknet, funded from Ethereum via CCTP.",
@@ -49,7 +178,7 @@
     "churn_pct": 0.9,
     "summary": "Make private USDC payments and invoices on Starknet.",
     "description_long": "Handles private USDC payments via a QR invoice system. It connects to the Ready wallet, which holds the STRK20 viewing key, allowing merchants to create invoices and buyers to pay them while keeping transaction details private. The project uses contracts like `MorokInvoices` to manage invoice commitments and integrates CCTP for funding top-ups from Ethereum.",
-    "latest_push": "Added a sweep helper to return idle deployer's STRK to a wallet after deploy.",
+    "latest_push": "Added a sweep helper to return idle deployer's STRK to a wallet.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -138,7 +267,7 @@
     "churn_pct": 0.6,
     "summary": "Manage encrypted transactions and stealth payments within a privacy wallet.",
     "description_long": "STRK20 Privacy Wallet allows users to perform encrypted transactions and send stealth payments on Starknet. It features a universal wallet support using an in-browser UTXO vault engine, a dual balance dashboard for viewing both on-chain and encrypted balances, and dynamic QR payment invoices. The implementation consists of core UI components, a stealth engine, and integration with AVNU for DEX swaps, all backed by cryptographic primitives that match the STRK20 protocol.",
-    "latest_push": "Redesigned the JupiterSidebar with a clean unclipped header and smooth hover.",
+    "latest_push": "Fixed the JupiterSidebar to have a redesigned unclipped header and smooth hover.",
     "tooling": [
       {
         "label": "AVNU",
@@ -329,7 +458,7 @@
     "churn_pct": 0,
     "summary": "Send encrypted emails and payment memos on Starknet.",
     "description_long": "APP20 is an encrypted mail application that supports private STRK memos. Built with a client-side wallet connection, it uses end-to-end encryption for messages and payment requests, operating through designated routes like `/mail/inbox` for emails and `/pay` for payments. The repository features multiple packages that handle user accounts, intent processing, policy verification, and browser-owned asset integration.",
-    "latest_push": "Changed public about line in documentation to say APP20.",
+    "latest_push": "Updated public about lines to state APP20 in documentation.",
     "tooling": [
       {
         "label": "Privacy SDK",
@@ -434,9 +563,9 @@
     "readme_hash": "10791:# Envelope\n\n**Private money you can send as a link, to someone who has never heard of Starknet.\nAn AI agent can pay another agent that has no wallet and no address.**\n\n[![strk20-envelope-cli on npm](h",
     "desc_v3": true,
     "churn_pct": 0.2,
-    "summary": "Send private money as a link without needing a wallet or address.",
-    "description_long": "Envelope allows users to seal tokens into an envelope and send a URL for redemption. It includes a smart contract that enables private transactions funded either from a Starknet pool or a regular wallet, which determines how the recipient can claim the funds. The package consists of a CLI tool for sealing, opening, and checking the status of envelopes, stored in the repository under `packages/envelope-cli/`.",
-    "latest_push": "Folded the agent's limits into the section in README.md.",
+    "summary": "Send money as a private link to anyone without a wallet.",
+    "description_long": "Envelope seals a monetary payment into a link that can be shared with parties who do not have a Starknet wallet. It consists of a smart contract implementing an anonymizer mechanism and a command-line interface, allowing users to create and open envelopes while keeping the payer's identity hidden through a decentralized pool. The setup requires user-defined environment variables for account credentials and supports commands to seal, open, and check the status of envelopes.",
+    "latest_push": "Folded the agent's limits into the section in the README.md file.",
     "tooling": [
       {
         "label": "Cairo",
@@ -461,130 +590,6 @@
       "facts_v2": true
     },
     "star_evidence": "1 contract deployed, Cairo in the repository"
-  },
-  {
-    "slug": "privacy-msg",
-    "name": "privacy_msg",
-    "one_liner": "Metadata-resistant private messaging on Starknet: visible payment memo, invisible sender-recipient link, settled through STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/Gaijin-01/privacy_msg",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-19T07:40:43Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Gaijin-01",
-        "name": "Sefirot",
-        "avatar_url": "https://avatars.githubusercontent.com/u/104550064?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-19"
-    ],
-    "head_sha": "7c9e25d3c47765c45cd9792e8a37652581929400",
-    "readme_hash": "2372:# Starknet Privacy Starter Kit\n\nA lean Next.js starter for building privacy dApps on Starknet with [STRK20](https://eprint.iacr.org/2026/474) via `WalletAccountV6` (starknet.js v10). Shield, unshield,",
-    "desc_v3": true,
-    "summary": "Send private messages with visible payment memos on Starknet.",
-    "description_long": "This application supports metadata-resistant private messaging where the payment memo is visible but the sender-recipient link remains hidden. It is built using Next.js, integrating the WalletAccountV6 from starknet.js, allowing users to shield, unshield, and conduct private transfers, all without exposing their viewing keys.",
-    "latest_push": "Forked the Akashneelesh/strk20-starter-kit repository.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 2006,
-    "deletions": 0,
-    "churn_pct": 0,
-    "assessment": null,
-    "star_evidence": ""
-  },
-  {
-    "slug": "cloakpay",
-    "name": "CloakPay",
-    "one_liner": "Shielded payroll and discreet invoice settlements for freelancers on Starknet using STRK20 private notes.",
-    "category": "Payments",
-    "repo_url": "https://github.com/noisyboy08/CloakPay",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-11",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-19T07:37:28Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "noisyboy08",
-        "name": "Uday Dolas",
-        "avatar_url": "https://avatars.githubusercontent.com/u/180315819?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-19"
-    ],
-    "head_sha": "8946d4a09c575b72f896f632f58e829baeefd3ac",
-    "readme_hash": "",
-    "desc_v3": true,
-    "churn_pct": 0,
-    "summary": "",
-    "description_long": "",
-    "latest_push": "Created the initial project structure and files.",
-    "tooling": [],
-    "has_readme": false,
-    "additions": 21,
-    "deletions": 0,
-    "assessment": null,
-    "star_evidence": ""
   },
   {
     "slug": "stealth-checkout",
