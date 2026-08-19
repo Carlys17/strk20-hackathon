@@ -1,5 +1,79 @@
 [
   {
+    "slug": "strkworld",
+    "name": "STRKWORLD",
+    "one_liner": "A 2D top-down city where the buildings are Starknet privacy protocols",
+    "category": "Gaming",
+    "repo_url": "https://github.com/Calcutatator/STRKWORLD",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "starkware",
+    "starred": false,
+    "star_reason": "The concept exists but lacks implemented complexity or innovative privacy applications.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-19T23:21:00Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Calcutatator",
+        "name": "Calcutator",
+        "avatar_url": "https://avatars.githubusercontent.com/u/114863662?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-18",
+      "2026-08-19"
+    ],
+    "head_sha": "dfb1d4ea02bb5932cedbbe1cc102b8ebfef5a6e3",
+    "readme_hash": "5443:# STRKWORLD\n\n**A 2D top-down city where the buildings are Starknet privacy protocols.**\n\nWalk around a shared pseudonymous world, step into a building, and use a real\nprivacy-preserving protocol with ",
+    "desc_v3": true,
+    "churn_pct": 9.4,
+    "summary": "Explore a city built from Starknet privacy protocols using real funds.",
+    "description_long": "Players walk through a 2D top-down city where each building represents a privacy protocol. The game is developed with separate packages for application, backend, and logic, specifying actions via typed intents that pass through a privacy gate to execute financial transactions without handling sensitive key material.",
+    "latest_push": "Fixed the final avatar art handoff layout.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 3302,
+    "deletions": 12,
+    "sprint": {
+      "pushes": 100,
+      "additions": 17502,
+      "deletions": 397,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project applies privacy to buildings where financial actions are taken, which is a standard idea.",
+      "why_complex": "There are no deployed contracts or advanced Cairo code provided at this stage.",
+      "reason": "The concept exists but lacks implemented complexity or innovative privacy applications.",
+      "facts_v2": true
+    },
+    "star_evidence": ""
+  },
+  {
     "slug": "atrum",
     "name": "Atrum",
     "one_liner": "Sealed-bid prediction markets: orders stay unreadable until they are binding, clear at a uniform price, and positions are tradeable before resolution.",
@@ -21,7 +95,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-19T22:52:20Z",
+    "pushed_at": "2026-08-19T23:20:53Z",
     "stars": 0,
     "builders": [
       {
@@ -35,13 +109,13 @@
       "2026-08-18",
       "2026-08-19"
     ],
-    "head_sha": "3bf6cc2a670d1847e69639f2286f83fd219bfcb1",
-    "readme_hash": "5896:# Atrum — sealed-bid prediction markets on Starknet\n\nA prediction market where **your order is unreadable until it is already binding**, and\nwhere a position can be sold before the event resolves.\n\nBu",
+    "head_sha": "27b3fcf1d4c697af7ca7dfeffdbc8c01664635e3",
+    "readme_hash": "6689:# Atrum — sealed-bid prediction markets on Starknet\n\nA prediction market where **your order is unreadable until it is already binding**, and\nwhere a position can be sold before the event resolves.\n\nBu",
     "desc_v3": true,
-    "churn_pct": 72,
-    "summary": "Manage sealed-bid prediction markets with private orders and tradeable positions.",
-    "description_long": "This project implements sealed-bid prediction markets where orders remain unreadable until binding. It employs a sealed-bid batch auction model with a uniform clearing price; orders are submitted as private notes, and only after the batch closes does the price and volume become visible. The resulting mechanism prevents front-running by ensuring orders are committed before they are revealed, while the conditional-token model allows for immediate, permissionless exits.",
-    "latest_push": "Added STRK20 wallet integration and deployed the Sepolia market.",
+    "churn_pct": 45.9,
+    "summary": "Trade in sealed-bid prediction markets with unreadable orders until binding.",
+    "description_long": "A sealed-bid prediction market where orders remain hidden until they are binding, allowing users to trade positions before event resolution. Built with a sealed-bid batch auction mechanism, orders are submitted as private notes, closed and cleared uniformly before the clearing price is published. The contracts manage private bids and facilitate trades without revealing user identities until necessary, employing a conditional-token model for position exits.",
+    "latest_push": "Launched a working market UI and organized deployment documentation.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -75,11 +149,11 @@
       }
     ],
     "has_readme": true,
-    "additions": 1816,
-    "deletions": 17,
+    "additions": 1836,
+    "deletions": 6,
     "sprint": {
-      "pushes": 15,
-      "additions": 5435,
+      "pushes": 20,
+      "additions": 7265,
       "deletions": 8,
       "computed": 2
     },
@@ -92,7 +166,7 @@
     "one_liner": "Unlinkable cross-chain payouts: fund a shielded balance on Starknet, pay anyone on any chain, and neither the public nor the recipient can trace it back to you.",
     "category": "Payments",
     "repo_url": "https://github.com/CaptainDiv/crosslink",
-    "demo_url": "",
+    "demo_url": "https://captaindiv.github.io/crosslink/",
     "demo_video": "",
     "x_handle": "",
     "inspired_by": "IDEA-22",
@@ -103,12 +177,12 @@
     "transactions": [],
     "verified_txs": 0,
     "requirements": {
-      "demo": false,
+      "demo": true,
       "video": false,
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-19T22:51:11Z",
+    "pushed_at": "2026-08-19T23:12:03Z",
     "stars": 0,
     "builders": [
       {
@@ -122,19 +196,19 @@
         "family": "Claude",
         "name": "Claude Sonnet 5",
         "avatar_url": "",
-        "commits": 1
+        "commits": 4
       }
     ],
     "active_days": [
       "2026-08-19"
     ],
-    "head_sha": "8b1d93b73660e9c21a8261a3259fe81a89c6d0b3",
-    "readme_hash": "571:# Crosslink\n\n**Unlinkable cross-chain payouts on STRK20.**\n\n`starkware-libs/privacy-bridge` moves your own funds across chains.\nCrosslink pays *someone else* — Alice funds a shielded balance, Bob rece",
+    "head_sha": "8ce616d571b7ba5ac28fa06d0d7b2350ce5833ce",
+    "readme_hash": "863:# Crosslink\n\n**Unlinkable cross-chain payouts on STRK20.**\n\n`starkware-libs/privacy-bridge` moves your own funds across chains.\nCrosslink pays *someone else* — Alice funds a shielded balance, Bob rece",
     "desc_v3": true,
-    "churn_pct": 48,
-    "summary": "Send unlinkable payouts across different blockchains.",
-    "description_long": "Crosslink pays someone else by sending funds from a shielded balance on Starknet to a recipient on any chain. It uses `starkware-libs/privacy-bridge` to move the funds, ensuring that neither the public nor the recipient can trace the transaction back to the sender. The project also includes a Linkability Meter that assesses the privacy of pending payouts and prevents sending when privacy might be compromised.",
-    "latest_push": "Added the Linkability Meter scoring engine with RPC support.",
+    "churn_pct": 100,
+    "summary": "Send unlinkable cross-chain payouts from Starknet to any blockchain.",
+    "description_long": "Crosslink sends funds to another chain while maintaining the sender's privacy. It uses the `starkware-libs/privacy-bridge` to transfer a shielded balance on Starknet, allowing a user to fund a balance for someone else to receive as native USDC on their chain. The Linkability Meter scores a pending payout based on various factors and blocks the send if privacy would be compromised.",
+    "latest_push": "Created a minimal Linkability Meter web page and deployed it to GitHub Pages.",
     "tooling": [
       {
         "label": "TypeScript",
@@ -143,89 +217,15 @@
       }
     ],
     "has_readme": true,
-    "additions": 829,
-    "deletions": 0,
+    "additions": 2055,
+    "deletions": 444,
     "sprint": {
-      "pushes": 12,
-      "additions": 8688,
-      "deletions": 1,
+      "pushes": 15,
+      "additions": 10300,
+      "deletions": 2,
       "computed": 2
     },
     "assessment": null,
-    "star_evidence": ""
-  },
-  {
-    "slug": "strkworld",
-    "name": "STRKWORLD",
-    "one_liner": "A 2D top-down city where the buildings are Starknet privacy protocols",
-    "category": "Gaming",
-    "repo_url": "https://github.com/Calcutatator/STRKWORLD",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "starkware",
-    "starred": false,
-    "star_reason": "The concept exists but lacks implemented complexity or innovative privacy applications.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-19T22:40:46Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Calcutatator",
-        "name": "Calcutator",
-        "avatar_url": "https://avatars.githubusercontent.com/u/114863662?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-18",
-      "2026-08-19"
-    ],
-    "head_sha": "71cbce13d471cac56e78e546a6bfda1c042c8088",
-    "readme_hash": "5443:# STRKWORLD\n\n**A 2D top-down city where the buildings are Starknet privacy protocols.**\n\nWalk around a shared pseudonymous world, step into a building, and use a real\nprivacy-preserving protocol with ",
-    "desc_v3": true,
-    "churn_pct": 0.7,
-    "summary": "Explore a city built from Starknet privacy protocols using real funds.",
-    "description_long": "Players walk through a 2D top-down city where each building represents a privacy protocol. The game is developed with separate packages for application, backend, and logic, specifying actions via typed intents that pass through a privacy gate to execute financial transactions without handling sensitive key material.",
-    "latest_push": "Rejected colliding Fly service ports and authorized avatar art production.",
-    "tooling": [
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 196,
-    "deletions": 48,
-    "sprint": {
-      "pushes": 100,
-      "additions": 17046,
-      "deletions": 617,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "The project applies privacy to buildings where financial actions are taken, which is a standard idea.",
-      "why_complex": "There are no deployed contracts or advanced Cairo code provided at this stage.",
-      "reason": "The concept exists but lacks implemented complexity or innovative privacy applications.",
-      "facts_v2": true
-    },
     "star_evidence": ""
   },
   {
@@ -282,7 +282,7 @@
       "mainnet": true
     },
     "status": "finished",
-    "pushed_at": "2026-08-19T22:39:26Z",
+    "pushed_at": "2026-08-19T23:11:16Z",
     "stars": 0,
     "builders": [
       {
@@ -303,13 +303,13 @@
       "2026-08-18",
       "2026-08-19"
     ],
-    "head_sha": "a0b4df9ff4b39ce874f2248b7a3ba7b9fdbded66",
+    "head_sha": "73c2299ba2509eddba9a806d5ae9897f279fdf61",
     "readme_hash": "9319:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
     "desc_v3": true,
-    "churn_pct": 0,
+    "churn_pct": 2.1,
     "summary": "Book private accommodations through trusted connections.",
     "description_long": "Philoxenia is a peer-to-peer hospitality protocol that allows users to book accommodations privately using a social trust network. It consists of a frontend built with Next.js connected to a Fastify backend with a PostgreSQL database, and on-chain contracts written in Cairo for escrow and payment settlement.",
-    "latest_push": "Changed branding terminology in wallet-connectors and architecture documentation.",
+    "latest_push": "Fixed friend search states and renamed the add button for Ready X wallets.",
     "tooling": [
       {
         "label": "AVNU",
@@ -328,12 +328,12 @@
       }
     ],
     "has_readme": true,
-    "additions": 2,
-    "deletions": 2,
+    "additions": 284,
+    "deletions": 36,
     "sprint": {
       "pushes": 100,
-      "additions": 1210,
-      "deletions": 990,
+      "additions": 1472,
+      "deletions": 1005,
       "computed": 2
     },
     "assessment": {
@@ -345,6 +345,101 @@
       "facts_v2": true
     },
     "star_evidence": "3 contracts deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "nomos",
+    "name": "Nomos",
+    "one_liner": "A private payment gateway for Starknet: businesses that already accept stablecoins integrate once and get several ways to take money, shielded and settled on mainnet through the STRK20 pool.",
+    "category": "Payments",
+    "repo_url": "https://github.com/wheval/nomos",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-11",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project lacks any unique application of privacy technology.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-19T23:08:11Z",
+    "stars": 1,
+    "builders": [
+      {
+        "login": "wheval",
+        "name": "wheval",
+        "avatar_url": "https://avatars.githubusercontent.com/u/179390421?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-16",
+      "2026-08-18",
+      "2026-08-19"
+    ],
+    "head_sha": "d761e518ff78eaeef04bb0273157b63a24e79d45",
+    "readme_hash": "2748:# Nomos\n\nA private payment gateway for Starknet, built for the [STRK20 Private Sprint](https://strk20.starknet.io/hackathon). A business drops in a Payment Link or checkout widget; a customer pays wit",
+    "desc_v3": true,
+    "churn_pct": 13.1,
+    "summary": "Process private payments through a checkout widget.",
+    "description_long": "A payment gateway for businesses that already accept stablecoins. It allows customers to pay without revealing their identity, while transactions are settled through the STRK20 pool on mainnet. Built using Next.js, it features a wallet picker, various actions for shielding and transferring funds, and a deployable anonymizer contract.",
+    "latest_push": "Redesigned the app’s layout for a consistent user experience across components.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 237,
+    "deletions": 144,
+    "sprint": {
+      "pushes": 9,
+      "additions": 3804,
+      "deletions": 198,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project is a private payment gateway, similar in concept to existing private transfer applications.",
+      "why_complex": "There are no deployed contracts to assess engineering complexity.",
+      "reason": "The project lacks any unique application of privacy technology.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "stake-wars",
@@ -368,7 +463,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-19T22:31:48Z",
+    "pushed_at": "2026-08-19T23:01:45Z",
     "stars": 0,
     "builders": [
       {
@@ -386,13 +481,13 @@
       "2026-08-18",
       "2026-08-19"
     ],
-    "head_sha": "9dc5228c2cbd7deedf6b5d25b7b52da0255a6d79",
+    "head_sha": "c740e6243d9b26a7ff96a5bc4d5428763e18cd0e",
     "readme_hash": "3357:# Stake Wars\n\nStake Wars is a persistent, non-custodial strategy game that turns Starknet\nvalidator delegation into a battle for territory. Players deploy their\ndelegated STRK as FORCE to capture and ",
     "desc_v3": true,
-    "churn_pct": 0.3,
+    "churn_pct": 2,
     "summary": "Engage in strategy battles for territory using STRK delegation.",
     "description_long": "Stake Wars is a non-custodial strategy game where players use delegated STRK as FORCE to capture and defend Sectors. The project includes a web application built with React and TypeScript, a Go API, and Cairo contracts for gameplay mechanics, all organized in structured directories. Planned STRK20 integration will support shielded undeployed STRK reserves and player anonymity through shadow accounts.",
-    "latest_push": "Added official validator link to the staking page.",
+    "latest_push": "Improved the transaction toast stack in the TransactionToastContext.",
     "tooling": [
       {
         "label": "Cairo",
@@ -401,12 +496,12 @@
       }
     ],
     "has_readme": true,
-    "additions": 50,
-    "deletions": 1,
+    "additions": 343,
+    "deletions": 46,
     "sprint": {
-      "pushes": 36,
-      "additions": 34755,
-      "deletions": 4034,
+      "pushes": 37,
+      "additions": 34647,
+      "deletions": 4079,
       "computed": 2
     },
     "assessment": {
@@ -473,7 +568,6 @@
     "head_sha": "1710494855dfa2bce7b1c369f2388bfdad8025b2",
     "readme_hash": "6730:# StarkWhisper\n\n> **Metadata-Resistant, End-to-End Encrypted On-Chain Messaging & Private Payment Memos on Starknet**\n\n![Starknet](https://img.shields.io/badge/Starknet-Mainnet%20%2F%20Sepolia-c53400?",
     "desc_v3": true,
-    "churn_pct": 8.5,
     "summary": "Send encrypted messages with attached private payments on Starknet.",
     "description_long": "StarkWhisper enables encrypted messaging and private payment memos on Starknet. It uses ECDH for key agreement and combines messaging and payment in a single transaction with ZK proofs. Key components include the StarkWhisperCore contract and the integration of a stealth address mechanism.",
     "latest_push": "Added the autonomous agent CLI, benchmark profiler, and privacy cover traffic.",
@@ -512,6 +606,7 @@
     "has_readme": true,
     "additions": 518,
     "deletions": 13,
+    "churn_pct": 8.5,
     "sprint": {
       "pushes": 44,
       "additions": 6361,
@@ -575,7 +670,6 @@
     "head_sha": "179dd937250dee79e9af076f0680f66c9fd159aa",
     "readme_hash": "2265:# Ownerz — Sell Files. Post-Quantum Delivery.\n\n## Core Value\nA marketplace where anyone can monetize private data on blockchain with anonymous transactions, no intermediaries, no hidden costs.\n\n## How",
     "desc_v3": true,
-    "churn_pct": 0,
     "summary": "Monetize private data with anonymous transactions.",
     "description_long": "Ownerz is a marketplace for selling encrypted files with anonymous transactions. Users upload files to Fil One, register the CID and price on a STRK20 smart contract, and buyers make purchases using ZK-proofs. The decryption key is delivered in a private blockchain event to the verified buyer, ensuring the data remains encrypted on IPFS.",
     "latest_push": "Formatting and dependency bumps only.",
@@ -614,6 +708,7 @@
     "has_readme": true,
     "additions": 0,
     "deletions": 0,
+    "churn_pct": 0,
     "sprint": {
       "pushes": 24,
       "additions": 12676,
@@ -626,101 +721,6 @@
       "why_innovative": "A marketplace for monetizing private data with encrypted files and ZK-proofed anonymous purchases.",
       "why_complex": "No deployed contracts are provided, which limits the complexity assessment.",
       "reason": "The project introduces a privacy-first data marketplace leveraging ZK-proofs in a new domain.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "nomos",
-    "name": "Nomos",
-    "one_liner": "A private payment gateway for Starknet: businesses that already accept stablecoins integrate once and get several ways to take money, shielded and settled on mainnet through the STRK20 pool.",
-    "category": "Payments",
-    "repo_url": "https://github.com/wheval/nomos",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-11",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project lacks any unique application of privacy technology.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-19T22:27:54Z",
-    "stars": 1,
-    "builders": [
-      {
-        "login": "wheval",
-        "name": "wheval",
-        "avatar_url": "https://avatars.githubusercontent.com/u/179390421?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-16",
-      "2026-08-18",
-      "2026-08-19"
-    ],
-    "head_sha": "5a25f8b56e0510c889ee8c45c8e6280f3dda1b38",
-    "readme_hash": "2748:# Nomos\n\nA private payment gateway for Starknet, built for the [STRK20 Private Sprint](https://strk20.starknet.io/hackathon). A business drops in a Payment Link or checkout widget; a customer pays wit",
-    "desc_v3": true,
-    "churn_pct": 1.6,
-    "summary": "Process private payments through a checkout widget.",
-    "description_long": "A payment gateway for businesses that already accept stablecoins. It allows customers to pay without revealing their identity, while transactions are settled through the STRK20 pool on mainnet. Built using Next.js, it features a wallet picker, various actions for shielding and transferring funds, and a deployable anonymizer contract.",
-    "latest_push": "Added the real logo mark with a bold N inside flat corner brackets.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 32,
-    "deletions": 14,
-    "sprint": {
-      "pushes": 8,
-      "additions": 3641,
-      "deletions": 128,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "The project is a private payment gateway, similar in concept to existing private transfer applications.",
-      "why_complex": "There are no deployed contracts to assess engineering complexity.",
-      "reason": "The project lacks any unique application of privacy technology.",
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
@@ -1660,7 +1660,7 @@
       },
       {
         "address": "0x05898fb214fb5c2c23f12601b8f4350612fc614642942ea80adb7145dba6ae48",
-        "network": "mainnet"
+        "network": "unknown"
       },
       {
         "address": "0x06e052635f96b98184cffa3a5d2e416ec0a3d288ac54a66b23a41e8c149b30b5",
@@ -1780,7 +1780,7 @@
       "computed": 2
     },
     "assessment": null,
-    "star_evidence": "6 contracts deployed on mainnet, Cairo in the repository"
+    "star_evidence": "5 contracts deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "whisperpay",
