@@ -1,5 +1,93 @@
 [
   {
+    "slug": "rhizome",
+    "name": "Rhizome",
+    "one_liner": "Prices what privacy costs on STRK20, then executes it: fee-aware tranche scheduling for private Vesu position through its own anonymizer.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/cipoklean/rhizome",
+    "demo_url": "https://rhizome-indol.vercel.app",
+    "demo_video": "",
+    "x_handle": "David63694631",
+    "inspired_by": "IDEA-16",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x552d747e90eb70e52e9c5f9d9150b97e46ac9b25989a36e7eee96a2e45c5e20",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-20T16:25:37Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "cipoklean",
+        "name": "Aghazie David",
+        "avatar_url": "https://avatars.githubusercontent.com/u/82593998?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20"
+    ],
+    "head_sha": "98616cb59495bab287c8240350247bbb7cc6b6ad",
+    "readme_hash": "7a49fe2a06ccbf71",
+    "desc_v6": true,
+    "churn_pct": 4.9,
+    "summary": "A fee-aware tranching scheduler for private actions on the STRK20 pool.",
+    "description_long": "Rhizome calculates the cost of unlinkability and executes a scheduled strategy for private transactions. It reads the current fee and transaction history from the STRK20 privacy pool, assesses amounts for blending in, and determines an optimal tranche count for privacy while considering fees and timing. The tool executes payments through its own anonymizer contract, ensuring multiple indistinguishable deposits instead of a singular identifiable transaction.",
+    "latest_push": "Allowed Sepolia to dry-run a shield without a frontier schedule.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 234,
+    "deletions": 11,
+    "sprint": {
+      "pushes": 30,
+      "additions": 8759,
+      "deletions": 32,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "1 contract deployed, Cairo in the repository"
+  },
+  {
     "slug": "strkworld",
     "name": "STRKWORLD",
     "one_liner": "A 2D top-down city where the buildings are Starknet privacy protocols",
@@ -21,7 +109,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-20T16:03:09Z",
+    "pushed_at": "2026-08-20T16:24:57Z",
     "stars": 0,
     "builders": [
       {
@@ -35,20 +123,20 @@
         "family": "Claude",
         "name": "Claude Opus 5",
         "avatar_url": "",
-        "commits": 4
+        "commits": 8
       }
     ],
     "active_days": [
       "2026-08-19",
       "2026-08-20"
     ],
-    "head_sha": "15331b9c2b87ff86616b742e58f1a733d33eca7b",
+    "head_sha": "9038583ac100e5f9566f13f0d894fda543a084d1",
     "readme_hash": "a1224bcf8f67733b",
     "desc_v6": true,
-    "churn_pct": 1.2,
+    "churn_pct": 2.1,
     "summary": "Explore a 2D city where buildings represent Starknet privacy protocols.",
     "description_long": "STRKWORLD is a 2D top-down city allowing users to navigate a shared pseudonymous world and interact with privacy-preserving protocols using real funds on Starknet mainnet. The project includes facilities like a bank for privacy transfers, an exchange for private swaps, and a post office for address-to-address transfers, among others. It is structured with separate packages for the application shell, privacy operations, cross-chain funding, and game world management, all built around the STRK20 confidential token standard.",
-    "latest_push": "Fixed player reconnection handling in the lobby.",
+    "latest_push": "Fixed stale fee classification reads and improved swap action binding.",
     "tooling": [
       {
         "label": "TypeScript",
@@ -62,12 +150,12 @@
       }
     ],
     "has_readme": true,
-    "additions": 418,
-    "deletions": 41,
+    "additions": 769,
+    "deletions": 8,
     "sprint": {
       "pushes": 100,
-      "additions": 17531,
-      "deletions": 612,
+      "additions": 15960,
+      "deletions": 619,
       "computed": 2
     },
     "assessment": {
@@ -118,7 +206,6 @@
     "head_sha": "44dd5a1566d0d60b1aceddcab578b6d924a8b5e6",
     "readme_hash": "b3d94e0fe3b1309f",
     "desc_v6": true,
-    "churn_pct": 100,
     "summary": "A private tip jar for creators that hides individual supporter identities.",
     "description_long": "PATRON allows fans to send private tips to creators while keeping the public view limited to the number of supporters and the total amount received. The application features a wallet connection for private transfers, an aggregate demo book for creators, and a proof bench for shielded and private transfer interactions. Built on Starknet, it uses the STRK20 pool for handling transactions, with endpoints for tipping, creator aggregation, and pool interactions.",
     "latest_push": "Scaffolded the private creator tip jar.",
@@ -152,6 +239,7 @@
     "has_readme": true,
     "additions": 3099,
     "deletions": 0,
+    "churn_pct": 100,
     "sprint": {
       "pushes": 1,
       "additions": 3099,
@@ -234,7 +322,6 @@
     "head_sha": "f8b939f0a1f6eb3c82ba6f8cac7544d89e3b8eca",
     "readme_hash": "e22515b81c295819",
     "desc_v6": true,
-    "churn_pct": 0.5,
     "summary": "End-to-end encrypted messaging with private payment memos.",
     "description_long": "StarkWhisper enables metadata-resistant communication on Starknet by encrypting messages and allowing private payments. It protects sender identity with ZK note spend proofs and uses ECDH key agreement for encryption. The implementation includes features like dual-key stealth addresses, fast indexing for transaction scanning, and a CLI for generating keys and processing transactions.",
     "latest_push": "Aligned landing page and provider defaults to Starknet Mainnet.",
@@ -273,6 +360,7 @@
     "has_readme": true,
     "additions": 20,
     "deletions": 18,
+    "churn_pct": 0.5,
     "sprint": {
       "pushes": 56,
       "additions": 7327,
@@ -288,94 +376,6 @@
       "facts_v2": true
     },
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "rhizome",
-    "name": "Rhizome",
-    "one_liner": "Prices what privacy costs on STRK20, then executes it: fee-aware tranche scheduling for private Vesu position through its own anonymizer.",
-    "category": "DeFi",
-    "repo_url": "https://github.com/cipoklean/rhizome",
-    "demo_url": "https://rhizome-indol.vercel.app",
-    "demo_video": "",
-    "x_handle": "David63694631",
-    "inspired_by": "IDEA-16",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x552d747e90eb70e52e9c5f9d9150b97e46ac9b25989a36e7eee96a2e45c5e20",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-20T15:49:21Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "cipoklean",
-        "name": "Aghazie David",
-        "avatar_url": "https://avatars.githubusercontent.com/u/82593998?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20"
-    ],
-    "head_sha": "86baeeb4065968c8e6391fc17f20c9926e7c8a73",
-    "readme_hash": "7a49fe2a06ccbf71",
-    "desc_v6": true,
-    "churn_pct": 0.6,
-    "summary": "A fee-aware tranching scheduler for private actions on the STRK20 pool.",
-    "description_long": "Rhizome calculates the cost of unlinkability and executes a scheduled strategy for private transactions. It reads the current fee and transaction history from the STRK20 privacy pool, assesses amounts for blending in, and determines an optimal tranche count for privacy while considering fees and timing. The tool executes payments through its own anonymizer contract, ensuring multiple indistinguishable deposits instead of a singular identifiable transaction.",
-    "latest_push": "Added explanation for locked execution controls in ExecutePanel.jsx.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 29,
-    "deletions": 0,
-    "sprint": {
-      "pushes": 28,
-      "additions": 8536,
-      "deletions": 32,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "1 contract deployed, Cairo in the repository"
   },
   {
     "slug": "georush",
@@ -419,7 +419,6 @@
     "head_sha": "52727cd73c55a6e778f6677ed4a0011dcdcb09a4",
     "readme_hash": "72d92655f8640580",
     "desc_v6": true,
-    "churn_pct": 35.6,
     "summary": "Navigate to target zones in a location-based game to earn rewards.",
     "description_long": "GeoRush is a location-based focus game where players stake funds, navigate to specific target zones on a map, and earn rewards upon session completion. It is built with an Expo/React Native mobile app, featuring a terminal-style map UI, a Cairo escrow contract for managing staked sessions, and a server relay for wallet connections. The core of the project is the BlitzEscrow contract, which allows users to securely claim their stakes while maintaining privacy through the STRK20 mechanism.",
     "latest_push": "Added the wallet hook in the features/wallet folder.",
@@ -448,6 +447,7 @@
     "has_readme": true,
     "additions": 885,
     "deletions": 73,
+    "churn_pct": 35.6,
     "sprint": {
       "pushes": 8,
       "additions": 14805,
@@ -6267,10 +6267,9 @@
       },
       {
         "hash": "0x4cf7d05c97aebd2fc4912b11d886bfa07579bd60dfd7be2733616dfe9c2e706",
-        "ok": false,
-        "pool": false,
-        "mine": false,
-        "note": "not found on mainnet"
+        "ok": true,
+        "pool": true,
+        "mine": true
       },
       {
         "hash": "0x14ba68aff2dfb46189433b1ea6c2afa586665e06c3c9fcf945a07627f5f6904",
@@ -6279,7 +6278,7 @@
         "mine": true
       }
     ],
-    "verified_txs": 3,
+    "verified_txs": 4,
     "requirements": {
       "demo": false,
       "video": false,
