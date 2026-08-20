@@ -1,5 +1,66 @@
 [
   {
+    "slug": "kese",
+    "name": "Kese",
+    "one_liner": "Private money for AI agents: a policy-guarded MCP wallet on the STRK20 pool - private payments within hard limits, Telegram human-approval, claim-link escrow for unregistered recipients, and viewing-key audit reports.",
+    "category": "Payments",
+    "repo_url": "https://github.com/ahmetenesdur/kese",
+    "demo_url": "TODO_public_demo_url",
+    "demo_video": "TODO_3min_video_url",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": true,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-20T22:45:37Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ahmetenesdur",
+        "name": "Enes",
+        "avatar_url": "https://avatars.githubusercontent.com/u/70810472?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-20"
+    ],
+    "head_sha": "88d9c0de153cfd9528681b68376f64c5b07f73c8",
+    "readme_hash": "be03f84a768b1ef0",
+    "desc_v6": true,
+    "churn_pct": 100,
+    "summary": "Private spending accounts for AI agents with policy controls and audit trails.",
+    "description_long": "Kese provides AI agents with a spending account that enforces policy guardrails on transactions, allowing private payments through the STRK20 privacy pool. It features a policy engine for approval and denial, idempotency to prevent double payments, and viewing-key reports for owners, enabling them to track spending without compromising privacy. The system includes an escrow contract for payments to unregistered recipients and management tools for transaction limits and compliance.",
+    "latest_push": "Added documentation and scripts for the strk20 privacy integration.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 960,
+    "deletions": 13,
+    "sprint": {
+      "pushes": 3,
+      "additions": 1616,
+      "deletions": 13,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
     "slug": "aperture-strk20",
     "name": "Aperture",
     "one_liner": "Sealed-ballot governance and a shielded treasury for DAOs, native to STRK20.",
@@ -103,7 +164,6 @@
     "head_sha": "25f5205dc8a6a50738ec7e9b1b9d4316b058c2f9",
     "readme_hash": "e59444c104270d99",
     "desc_v6": true,
-    "churn_pct": 7.8,
     "summary": "Sealed-ballot governance with a shielded treasury for DAOs.",
     "description_long": "Aperture enables private voting in governance where a vote is a private transfer, obscuring the choice, weight, and voter identity. It is built with Cairo contracts for a `ProposalRegistry` and a `GovernanceAnonymizer`, handling funding through a STRK20 pool, while supporting a complete sealed-vote lifecycle on Sepolia. The system prevents double voting, and only the aggregate results are published, ensuring anonymity for voters and treasury recipients.",
     "latest_push": "Fixed the app page to match the site's design language.",
@@ -127,6 +187,7 @@
     "has_readme": true,
     "additions": 265,
     "deletions": 112,
+    "churn_pct": 7.8,
     "sprint": {
       "pushes": 38,
       "additions": 9650,
@@ -189,7 +250,6 @@
     "head_sha": "056909c42a51c512f07bbf7514ec9396644d31c4",
     "readme_hash": "b236873a684988aa",
     "desc_v6": true,
-    "churn_pct": 95.2,
     "summary": "Confidential blackjack with hidden hands and shielded stakes on Starknet.",
     "description_long": "The project implements a confidential blackjack game where player hands and stakes are hidden from observers via cryptographic commitments and the STRK20 privacy pool. Players' hands are revealed only at showdown, while the dealer's hole card is sealed during play, and stakes are managed through shielded notes. The game is structured using two-sided commit-reveal mechanics and Merkle proofs to ensure fairness and determinism in dealer actions.",
     "latest_push": "Implemented the settlement core in Cipher21Table and added tests.",
@@ -208,6 +268,7 @@
     "has_readme": true,
     "additions": 948,
     "deletions": 4,
+    "churn_pct": 95.2,
     "sprint": {
       "pushes": 7,
       "additions": 6050,
@@ -264,7 +325,6 @@
     "head_sha": "95a99f7bf507c73743cdbb2fd97e5457912e15e7",
     "readme_hash": "4fadf47bae5a32b2",
     "desc_v6": true,
-    "churn_pct": 15.8,
     "summary": "A whitehat rescue bot that sweeps exposed on-chain funds to safety.",
     "description_long": "Aegis scans public repositories for accidentally leaked private keys and API keys, checks their liveness and real balances, then sweeps any found funds to a secure address. It operates automatically without human intervention using Next.js and Starknet.js for account management and transactions, with a claim flow for returning funds to verified owners under development.",
     "latest_push": "Added claim requests and implemented private payment for claims.",
@@ -308,6 +368,7 @@
     "has_readme": true,
     "additions": 537,
     "deletions": 22,
+    "churn_pct": 15.8,
     "sprint": {
       "pushes": 35,
       "additions": 4307,
@@ -545,67 +606,6 @@
       "reason": "StakeWars lacks innovative privacy features and engineering depth.",
       "facts_v2": true
     },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "kese",
-    "name": "Kese",
-    "one_liner": "Private money for AI agents: a policy-guarded MCP wallet on the STRK20 pool - private payments within hard limits, Telegram human-approval, claim-link escrow for unregistered recipients, and viewing-key audit reports.",
-    "category": "Payments",
-    "repo_url": "https://github.com/ahmetenesdur/kese",
-    "demo_url": "TODO_public_demo_url",
-    "demo_video": "TODO_3min_video_url",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": true,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-20T21:44:21Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "ahmetenesdur",
-        "name": "Enes",
-        "avatar_url": "https://avatars.githubusercontent.com/u/70810472?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-20"
-    ],
-    "head_sha": "f398121f6245b64b34907e1b59d875c11075901a",
-    "readme_hash": "be03f84a768b1ef0",
-    "desc_v6": true,
-    "summary": "Private spending accounts for AI agents with policy controls and audit trails.",
-    "description_long": "Kese provides AI agents with a spending account that enforces policy guardrails on transactions, allowing private payments through the STRK20 privacy pool. It features a policy engine for approval and denial, idempotency to prevent double payments, and viewing-key reports for owners, enabling them to track spending without compromising privacy. The system includes an escrow contract for payments to unregistered recipients and management tools for transaction limits and compliance.",
-    "latest_push": "Created the Kese project skeleton.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 656,
-    "deletions": 0,
-    "churn_pct": 100,
-    "sprint": {
-      "pushes": 1,
-      "additions": 656,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": null,
     "star_evidence": "Cairo in the repository"
   },
   {
