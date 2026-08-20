@@ -152,6 +152,40 @@ async function getTextFile(owner, repo, path) {
   } catch { return null; }
 }
 
+/* Whether the README in a repository is about this project at all.
+ *
+ * Two teams shipped a row describing somebody else's work. welson-ai never
+ * replaced the Solana README they started from, so the board announced their
+ * Starknet project as yield optimization on Solana. eugenennamdi's README is
+ * still the starter kit's, word for word, so ConditionalPay was described as a
+ * Next.js starter kit. Telling the model to notice this itself did not hold -
+ * a README that names the same project and only has the wrong chain reads as
+ * genuine, and boilerplate reads as a description of something.
+ *
+ * So it is decided here, on two signals that do not need judgement. Every
+ * project on this board is built on STRK20: a README that never once says
+ * Starknet or STRK20 is not describing the thing that was registered. And a
+ * README whose opening is the starter kit's opening is the starter kit's.
+ * Either way the team's registration line is all we have, and it is used. */
+let kitOpening = null;
+async function starterKitOpening() {
+  if (kitOpening === null) {
+    const kit = await getTextFile("Akashneelesh", "strk20-starter-kit", "README.md");
+    kitOpening = kit ? kit.replace(/\s+/g, " ").trim().slice(0, 300).toLowerCase() : "";
+  }
+  return kitOpening;
+}
+
+async function forkLeftover(readme) {
+  if (!readme) return "";
+  if (!/starknet|strk20/i.test(readme)) return "never mentions Starknet or STRK20";
+  const opening = await starterKitOpening();
+  if (opening && readme.replace(/\s+/g, " ").trim().slice(0, 300).toLowerCase() === opening) {
+    return "is the starter kit's README, unchanged";
+  }
+  return "";
+}
+
 const userCache = new Map();
 async function resolveUser(login) {
   if (userCache.has(login)) return userCache.get(login);
@@ -840,7 +874,7 @@ BANNED - never use any of them: utilizes, leverages, employs, facilitates, empow
 
 Do not say a project "provides a platform for" doing something. It does the thing. Do not introduce a list with "its architecture includes components like" - name the parts.
 
-Never use an em dash. Use a comma, a colon, or two sentences instead. If the README is empty or says nothing, return empty strings.
+Never use an em dash. Use a comma, a colon, or two sentences instead. If the README is empty or says nothing, return empty strings - unless you are told the registration line is the only source, in which case write from that line alone.
 
 Bad: "This project utilizes the STRK20 Privacy Pool for metadata-resistant communication, employing client-side encryption with ECDH key agreements, thus addressing privacy concerns inherent in public blockchain communications."
 Good: "Encrypted messaging with a payment attached to the message. Keys are agreed with ECDH in the browser, and the note spend and the message go on chain in one transaction."`;
@@ -1020,7 +1054,7 @@ async function buildProject(entry, prev) {
   const assessmentUsable = !STAR_ENABLED || !OPENAI_KEY || !!prev?.assessment?.facts_v2;
   /* Same trap as the others: the wording changed, so what was written under the
      old prompt has to be rewritten once even though nothing was pushed. */
-  const descUsable = !OPENAI_KEY || !!prev?.desc_v5 || !prev?.summary;
+  const descUsable = !OPENAI_KEY || !!prev?.desc_v6 || !prev?.summary;
   /* Sprint totals were added after most projects had already been indexed, and
      a project that has stopped pushing never changes SHA again - so without
      this they would sit at zero for the rest of the sprint. */
@@ -1031,7 +1065,7 @@ async function buildProject(entry, prev) {
       ...base,
       head_sha: headSha,
       readme_hash: prev.readme_hash || "",
-      desc_v5: !!prev.desc_v5,
+      desc_v6: !!prev.desc_v6,
       summary: prev.summary || "",
       description_long: prev.description_long || "",
       latest_push: prev.latest_push || "",
@@ -1081,17 +1115,20 @@ async function buildProject(entry, prev) {
      recorded as done, or the next run reads a matching hash and a v4 flag and
      never asks again. That is how a summary written under an older prompt,
      against an older README, outlives both. */
-  let descWritten = !!prev?.desc_v5;
+  let descWritten = !!prev?.desc_v6;
   /* Regenerate when the README changed, and also whenever we simply don't have
      a summary yet - same reasoning as the SHA cache. A README that never
      changes again would otherwise keep an empty description forever. */
-  if (readme && (readmeHash !== (prev?.readme_hash || "") || !summary || !prev?.desc_v5)) {
-    const ask = (extra) => openai(
-      DESC_SYSTEM + extra,
-      `README (what the project is now):\n${readme.slice(0, 6000)}\n\n`
-      + `Registered on day 0 as "${entry.name}": ${entry.one_liner}\n`
-      + "(That line is a snapshot from before the code existed. Use it only where the README is silent.)",
-    );
+  if (readme && (readmeHash !== (prev?.readme_hash || "") || !summary || !prev?.desc_v6)) {
+    const leftover = await forkLeftover(readme);
+    if (leftover) console.log(`  ${entry.slug}: README ${leftover} - describing from the registration line`);
+    const source = leftover
+      ? `This project has no README of its own. The one in its repository ${leftover}, so it is a leftover from whatever the team started out from and says nothing about what they built. The line below is the only thing there is to go on. Write from it, and say nothing you cannot get from it.\n\n`
+        + `Registered as "${entry.name}": ${entry.one_liner}`
+      : `README (what the project is now):\n${readme.slice(0, 6000)}\n\n`
+        + `Registered on day 0 as "${entry.name}": ${entry.one_liner}\n`
+        + "(That line is a snapshot from before the code existed. Use it only where the README is silent.)";
+    const ask = (extra) => openai(DESC_SYSTEM + extra, source);
 
     /* The ban is checked rather than trusted. Asked once, the model still
        reached for "provides a platform for" and "its architecture includes
@@ -1112,11 +1149,18 @@ async function buildProject(entry, prev) {
        and it stands as the answer for this README, rather than being retried
        every half hour for the rest of the sprint. The next edit to the README
        asks again. */
-    if (out && bad.length && summary) {
-      warn(`${entry.slug}: kept the previous description, the new one still uses ${bad.join(", ")}`);
-      out = { summary, description_long: descriptionLong };
-    } else if (out && bad.length) {
-      warn(`${entry.slug}: description still uses ${bad.join(", ")} - published anyway, there was nothing to keep`);
+    if (out && bad.length) {
+      /* Only when what is already there is actually clean. Keeping "the
+         previous one" unconditionally kept three descriptions that were
+         themselves written before the checker was complete, so the words it
+         was rejecting stayed on the board anyway. */
+      const wasBad = offenders(`${summary} ${descriptionLong}`);
+      if (summary && !wasBad.length) {
+        warn(`${entry.slug}: kept the previous description, the new one still uses ${bad.join(", ")}`);
+        out = { summary, description_long: descriptionLong };
+      } else {
+        warn(`${entry.slug}: description still uses ${bad.join(", ")} - published, nothing cleaner to keep`);
+      }
     }
     if (out?.summary || out?.description_long) {
       summary = out.summary || summary;
@@ -1239,7 +1283,7 @@ async function buildProject(entry, prev) {
     /* Written under the plain-language wording. Absent means the sentences came
        from the prompt that let a project say it "utilizes the STRK20 Privacy
        Pool", and they get rewritten once. */
-    desc_v5: descWritten,
+    desc_v6: descWritten,
     churn_pct: churnPct,
     summary,
     description_long: descriptionLong,
