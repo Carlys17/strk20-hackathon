@@ -824,6 +824,10 @@ THE README IS THE PROJECT. The name and one-liner you are given were written by 
 
 If the README presents several features, say what the whole thing is. Naming one of four as though it were the project is the worst mistake you can make here: the team reads this row and does not recognise their own work.
 
+THE ONE EXCEPTION. Some teams start from a template and have not replaced its README yet, so the file in front of you describes a starter kit, or another product entirely, or a different blockchain. You can tell: it names a product that is not this one, or it reads as instructions for building something rather than a description of something built. In that case the README is not about this project at all - ignore it completely and write from the registration line instead. Describing somebody's forked boilerplate back to them is as wrong as describing one feature of four.
+
+Every project on this board is built on Starknet. If a README talks about Solana, Ethereum, or any other chain, it is a leftover from a fork. Never write that a project runs on another chain.
+
 EVERY project on this board is built on STRK20, the Starknet privacy pool. That is the entry requirement, not an achievement. Never write that a project "utilizes the STRK20 Privacy Pool", "leverages privacy technology", or "addresses privacy concerns inherent in public blockchains" - it is true of all sixty of them and tells a reader nothing. Name STRK20 only where the specific thing being said would be wrong without it.
 
 summary: ONE sentence, under 110 characters, saying what someone can do with it. Start with a verb or a noun phrase, never with the project's name or "This project". For a project with several features, name the shape of the whole - "A shielded wallet, cross-chain intents and encrypted mail" - rather than picking one and leaving the rest unsaid.
@@ -845,7 +849,10 @@ Good: "Encrypted messaging with a payment attached to the message. Keys are agre
 const BANNED_WORDS = ["utilizes", "utilize", "leverages", "leverage", "employs", "facilitates",
   "empowers", "seeks to", "aims to", "provides", "incorporates", "offers", "robust", "seamless",
   "cutting-edge", "revolutionary", "sophisticated", "comprehensive", "platform", "architecture",
-  "thereby", "inherent"];
+  "thereby", "inherent",
+  /* The prompt banned these too and the checker did not, so they went out on
+     the board: "a comprehensive banking solution", "seamless transactions". */
+  "solution", "ecosystem", "designed to", "in the realm of"];
 
 const PUSH_SYSTEM = `You summarise what a developer just pushed, for a live hackathon board.
 Return JSON: {"latest_push": string}.
@@ -1013,7 +1020,7 @@ async function buildProject(entry, prev) {
   const assessmentUsable = !STAR_ENABLED || !OPENAI_KEY || !!prev?.assessment?.facts_v2;
   /* Same trap as the others: the wording changed, so what was written under the
      old prompt has to be rewritten once even though nothing was pushed. */
-  const descUsable = !OPENAI_KEY || !!prev?.desc_v4 || !prev?.summary;
+  const descUsable = !OPENAI_KEY || !!prev?.desc_v5 || !prev?.summary;
   /* Sprint totals were added after most projects had already been indexed, and
      a project that has stopped pushing never changes SHA again - so without
      this they would sit at zero for the rest of the sprint. */
@@ -1024,7 +1031,7 @@ async function buildProject(entry, prev) {
       ...base,
       head_sha: headSha,
       readme_hash: prev.readme_hash || "",
-      desc_v4: !!prev.desc_v4,
+      desc_v5: !!prev.desc_v5,
       summary: prev.summary || "",
       description_long: prev.description_long || "",
       latest_push: prev.latest_push || "",
@@ -1074,11 +1081,11 @@ async function buildProject(entry, prev) {
      recorded as done, or the next run reads a matching hash and a v4 flag and
      never asks again. That is how a summary written under an older prompt,
      against an older README, outlives both. */
-  let descWritten = !!prev?.desc_v4;
+  let descWritten = !!prev?.desc_v5;
   /* Regenerate when the README changed, and also whenever we simply don't have
      a summary yet - same reasoning as the SHA cache. A README that never
      changes again would otherwise keep an empty description forever. */
-  if (readme && (readmeHash !== (prev?.readme_hash || "") || !summary || !prev?.desc_v4)) {
+  if (readme && (readmeHash !== (prev?.readme_hash || "") || !summary || !prev?.desc_v5)) {
     const ask = (extra) => openai(
       DESC_SYSTEM + extra,
       `README (what the project is now):\n${readme.slice(0, 6000)}\n\n`
@@ -1086,17 +1093,30 @@ async function buildProject(entry, prev) {
       + "(That line is a snapshot from before the code existed. Use it only where the README is silent.)",
     );
 
-    let out = await ask("");
     /* The ban is checked rather than trusted. Asked once, the model still
        reached for "provides a platform for" and "its architecture includes
        components like" - so the offending words are handed back to it by name
-       and it gets one more go. */
+       and it gets another go. Two of them: one correction left fifteen of
+       ninety-nine still offending, and they went out on the board. */
     const offenders = (text) => BANNED_WORDS.filter((w) => new RegExp(`\\b${w}\\b`, "i").test(text || ""));
+    let out = await ask("");
     let bad = offenders(`${out?.summary || ""} ${out?.description_long || ""}`);
-    if (out && bad.length) {
+    for (let go = 0; out && bad.length && go < 2; go++) {
       const retry = await ask(`\n\nYour previous answer used these banned words: ${bad.join(", ")}. Write it again without them, saying the same facts in plainer words.`);
-      if (retry && !offenders(`${retry.summary || ""} ${retry.description_long || ""}`).length) out = retry;
-      else warn(`${entry.slug}: description still uses ${bad.join(", ")}`);
+      if (!retry) break;
+      out = retry;
+      bad = offenders(`${out.summary || ""} ${out.description_long || ""}`);
+    }
+    /* Still offending after three tries. A clean sentence already written is
+       better than a fresh one that breaks the rules, so the old one stands -
+       and it stands as the answer for this README, rather than being retried
+       every half hour for the rest of the sprint. The next edit to the README
+       asks again. */
+    if (out && bad.length && summary) {
+      warn(`${entry.slug}: kept the previous description, the new one still uses ${bad.join(", ")}`);
+      out = { summary, description_long: descriptionLong };
+    } else if (out && bad.length) {
+      warn(`${entry.slug}: description still uses ${bad.join(", ")} - published anyway, there was nothing to keep`);
     }
     if (out?.summary || out?.description_long) {
       summary = out.summary || summary;
@@ -1219,7 +1239,7 @@ async function buildProject(entry, prev) {
     /* Written under the plain-language wording. Absent means the sentences came
        from the prompt that let a project say it "utilizes the STRK20 Privacy
        Pool", and they get rewritten once. */
-    desc_v4: descWritten,
+    desc_v5: descWritten,
     churn_pct: churnPct,
     summary,
     description_long: descriptionLong,
