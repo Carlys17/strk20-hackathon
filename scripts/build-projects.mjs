@@ -25,6 +25,13 @@
  */
 
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { createHash } from "node:crypto";
+
+/* The whole README, not its length and first 200 bytes. The old key missed an
+   edit that left the length unchanged and touched nothing near the top, which
+   is exactly what a team does when they add a feature to a table halfway down
+   the file. */
+const digest = (text) => createHash("sha1").update(text).digest("hex").slice(0, 16);
 
 const API = "https://api.github.com";
 const TOKEN = process.env.GITHUB_TOKEN || "";
@@ -813,9 +820,13 @@ function starOf(assessment, depth, wasStarred) {
 const DESC_SYSTEM = `You describe developer projects for a public hackathon board that other builders read.
 Return JSON: {"summary": string, "description_long": string}.
 
+THE README IS THE PROJECT. The name and one-liner you are given were written by the team on the day they registered, before they wrote any code, and they are never revised - teams rename their repository, drop a feature, or grow from one idea into four. Where the README and the registration line disagree, the README is right and the registration line is out of date. Do not reconcile them. Do not let a one-liner that names a single feature stop you describing a README that presents several.
+
+If the README presents several features, say what the whole thing is. Naming one of four as though it were the project is the worst mistake you can make here: the team reads this row and does not recognise their own work.
+
 EVERY project on this board is built on STRK20, the Starknet privacy pool. That is the entry requirement, not an achievement. Never write that a project "utilizes the STRK20 Privacy Pool", "leverages privacy technology", or "addresses privacy concerns inherent in public blockchains" - it is true of all sixty of them and tells a reader nothing. Name STRK20 only where the specific thing being said would be wrong without it.
 
-summary: ONE sentence, under 110 characters, saying what someone can do with it. Start with a verb or a noun phrase, never with the project's name or "This project".
+summary: ONE sentence, under 110 characters, saying what someone can do with it. Start with a verb or a noun phrase, never with the project's name or "This project". For a project with several features, name the shape of the whole - "A shielded wallet, cross-chain intents and encrypted mail" - rather than picking one and leaving the rest unsaid.
 
 description_long: two or three sentences. What it does, then how it is built - the contracts, the scheme, the actual pieces. Facts a reader could check by opening the repository.
 
@@ -1002,7 +1013,7 @@ async function buildProject(entry, prev) {
   const assessmentUsable = !STAR_ENABLED || !OPENAI_KEY || !!prev?.assessment?.facts_v2;
   /* Same trap as the others: the wording changed, so what was written under the
      old prompt has to be rewritten once even though nothing was pushed. */
-  const descUsable = !OPENAI_KEY || !!prev?.desc_v3 || !prev?.summary;
+  const descUsable = !OPENAI_KEY || !!prev?.desc_v4 || !prev?.summary;
   /* Sprint totals were added after most projects had already been indexed, and
      a project that has stopped pushing never changes SHA again - so without
      this they would sit at zero for the rest of the sprint. */
@@ -1013,7 +1024,7 @@ async function buildProject(entry, prev) {
       ...base,
       head_sha: headSha,
       readme_hash: prev.readme_hash || "",
-      desc_v3: !!prev.desc_v3,
+      desc_v4: !!prev.desc_v4,
       summary: prev.summary || "",
       description_long: prev.description_long || "",
       latest_push: prev.latest_push || "",
@@ -1041,16 +1052,36 @@ async function buildProject(entry, prev) {
 
   /* Description is regenerated only when the README actually changed - a push
    * that touches only source shouldn't rewrite the project's description. */
+  /* The row is titled from registry.json, which is what the team typed on day
+     0. When their README has since been retitled, the board is calling their
+     project by a name they have stopped using - and the sentences underneath
+     were written from the same stale line. Nothing is overridden here, because
+     a project may legitimately be named differently from its repository, but
+     every case is named in the log so it can be taken up with the team. */
+  const readmeTitle = (readme || "").match(/^#\s+(.+)$/m)?.[1]?.trim() || "";
+  const plain = (t) => t.toLowerCase().replace(/[^a-z0-9]/g, "");
+  if (readmeTitle && plain(readmeTitle) && plain(entry.name) && !plain(readmeTitle).includes(plain(entry.name)) && !plain(entry.name).includes(plain(readmeTitle))) {
+    console.log(`  ${entry.slug}: name drift - registry says "${entry.name}", README says "${readmeTitle}"`);
+  }
+
   let summary = prev?.summary || "";
   let descriptionLong = prev?.description_long || "";
-  const readmeHash = readme ? readme.length + ":" + readme.slice(0, 200) : "";
+  const readmeHash = readme ? digest(readme) : "";
+  /* Whether the sentences below this README were actually written. A call that
+     came back empty - no key, a rate limit, a bad response - must not be
+     recorded as done, or the next run reads a matching hash and a v4 flag and
+     never asks again. That is how a summary written under an older prompt,
+     against an older README, outlives both. */
+  let descWritten = !!prev?.desc_v4;
   /* Regenerate when the README changed, and also whenever we simply don't have
      a summary yet - same reasoning as the SHA cache. A README that never
      changes again would otherwise keep an empty description forever. */
-  if (readme && (readmeHash !== (prev?.readme_hash || "") || !summary || !prev?.desc_v3)) {
+  if (readme && (readmeHash !== (prev?.readme_hash || "") || !summary || !prev?.desc_v4)) {
     const ask = (extra) => openai(
       DESC_SYSTEM + extra,
-      `Project name: ${entry.name}\nTeam's own one-liner: ${entry.one_liner}\n\nREADME:\n${readme.slice(0, 6000)}`,
+      `README (what the project is now):\n${readme.slice(0, 6000)}\n\n`
+      + `Registered on day 0 as "${entry.name}": ${entry.one_liner}\n`
+      + "(That line is a snapshot from before the code existed. Use it only where the README is silent.)",
     );
 
     let out = await ask("");
@@ -1065,9 +1096,13 @@ async function buildProject(entry, prev) {
       if (retry && !offenders(`${retry.summary || ""} ${retry.description_long || ""}`).length) out = retry;
       else warn(`${entry.slug}: description still uses ${bad.join(", ")}`);
     }
-    if (out) {
+    if (out?.summary || out?.description_long) {
       summary = out.summary || summary;
       descriptionLong = out.description_long || descriptionLong;
+      descWritten = true;
+    } else {
+      descWritten = false;
+      warn(`${entry.slug}: no description written this run - will retry`);
     }
   }
 
@@ -1176,11 +1211,13 @@ async function buildProject(entry, prev) {
   return {
     ...base,
     head_sha: headSha,
-    readme_hash: readmeHash,
+    /* Only moved on when the sentences under it were rewritten, so a failed
+       run retries instead of silently adopting the new README. */
+    readme_hash: descWritten ? readmeHash : (prev?.readme_hash || ""),
     /* Written under the plain-language wording. Absent means the sentences came
        from the prompt that let a project say it "utilizes the STRK20 Privacy
        Pool", and they get rewritten once. */
-    desc_v3: true,
+    desc_v4: descWritten,
     churn_pct: churnPct,
     summary,
     description_long: descriptionLong,
