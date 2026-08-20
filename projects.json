@@ -42,7 +42,7 @@
     "churn_pct": 23.2,
     "summary": "Explore a 2D city where buildings represent Starknet privacy protocols.",
     "description_long": "STRKWORLD is a 2D top-down city allowing users to navigate a shared pseudonymous world and interact with privacy-preserving protocols using real funds on Starknet mainnet. The project includes facilities like a bank for privacy transfers, an exchange for private swaps, and a post office for address-to-address transfers, among others. It is structured with separate packages for the application shell, privacy operations, cross-chain funding, and game world management, all built around the STRK20 confidential token standard.",
-    "latest_push": "Fixed avatar animation and corrected pixel art details.",
+    "latest_push": "Fixed avatar pixel art, gait motion, and animation handoff.",
     "tooling": [
       {
         "label": "TypeScript",
@@ -114,8 +114,8 @@
     "desc_v6": true,
     "churn_pct": 0.2,
     "summary": "A shielded margin account layer for trading on Extended DEX.",
-    "description_long": "This project allows users to shield USDC using the STRK20 privacy pool, unshield it to a stealth address, and fund an Extended trading account. Users can trade normally via the Extended REST API, withdraw to a fresh address, and optionally re-shield. It involves a user wallet interacting with the Starknet Wallet API, the STRK20 Pool, and the Extended DEX, along with several account management steps.",
-    "latest_push": "Added the initial Blindside codebase with STRK20 privacy pool integration.",
+    "description_long": "This project adds a privacy layer to margin trading on the Extended decentralized exchange. Users can shield USDC through the STRK20 privacy pool, convert it to a stealth address, fund an Extended trading account, trade, and withdraw to a fresh address, with an option to re-shield. It uses the Starknet Wallet API for shielding, unshielding, and private transfers, interacting with the Extended REST API for trading.",
+    "latest_push": "Added the initial Blindside codebase with STRK20 privacy pool and Extended DEX integration.",
     "tooling": [
       {
         "label": "Next.js",
@@ -197,7 +197,7 @@
     "churn_pct": 0,
     "summary": "Generate scoped, single-use payment credentials for autonomous agents.",
     "description_long": "OXA is a protocol for creating one-time payment credentials, allowing owners to fund transactions from a shielded STRK20 balance. These credentials can be issued on demand for specific amounts of ERC-20 tokens and can settle either privately or publicly. As of now, the project is in the pre-build phase with no contracts deployed.",
-    "latest_push": "Grounded the OxaCredentialIssuer interface against the real privacy package source.",
+    "latest_push": "Grounded the OxaCredentialIssuer interface against the real privacy package.",
     "tooling": [],
     "has_readme": true,
     "additions": 67,
@@ -257,7 +257,7 @@
     "churn_pct": 0.8,
     "summary": "A privacy wallet supporting stealth transactions and decentralized finance on Starknet.",
     "description_long": "STRK20 Privacy Wallet enables anonymous transactions and private spending using a note-based privacy system on Starknet. It includes features like a dual balance viewer, stealth payment invoices, real-time DEX swaps, and an encrypted address book, all built without adding new contracts. The application utilizes existing zero-knowledge cryptography and integrates with wallets like Braavos and Argent X.",
-    "latest_push": "Completed audit hardening for perps, focusing on admin role minimization.",
+    "latest_push": "Minimized admin role, added zero-fallback keeper, and created smoke test suite.",
     "tooling": [
       {
         "label": "AVNU",
@@ -365,7 +365,7 @@
     "churn_pct": 9.7,
     "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
     "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
-    "latest_push": "Strengthened technical documentation for the smart contracts.",
+    "latest_push": "Strengthened smart contract technical documentation across multiple files.",
     "tooling": [
       {
         "label": "Cairo",
@@ -8575,11 +8575,11 @@
     "active_days": [],
     "head_sha": "781fbfc49629cf88518e235888b2d164c8109b45",
     "readme_hash": "5039c8bbe4e7e278",
-    "desc_v6": false,
+    "desc_v6": true,
     "churn_pct": 3,
     "summary": "A trading and liquidity web app for Zylith.",
-    "description_long": "Zylith Client is a web application for trading and managing liquidity. It includes integration code to connect with the Zylith network.",
-    "latest_push": "Added managed maker runner and market data adapters.",
+    "description_long": "undefined",
+    "latest_push": "Added the managed maker runner and market data adapters.",
     "tooling": [
       {
         "label": "Privacy SDK",
