@@ -178,10 +178,10 @@ async function starterKitOpening() {
 
 async function forkLeftover(readme) {
   if (!readme) return "";
-  if (!/starknet|strk20/i.test(readme)) return "never mentions Starknet or STRK20";
+  if (!/starknet|strk20/i.test(readme)) return "its README never mentions Starknet or STRK20";
   const opening = await starterKitOpening();
   if (opening && readme.replace(/\s+/g, " ").trim().slice(0, 300).toLowerCase() === opening) {
-    return "is the starter kit's README, unchanged";
+    return "its README is the starter kit's, unchanged";
   }
   return "";
 }
@@ -1107,9 +1107,16 @@ async function buildProject(entry, prev) {
     console.log(`  ${entry.slug}: name drift - registry says "${entry.name}", README says "${readmeTitle}"`);
   }
 
-  let summary = prev?.summary || "";
-  let descriptionLong = prev?.description_long || "";
+  let summary = junk(prev?.summary) ? "" : prev.summary;
+  let descriptionLong = junk(prev?.description_long) ? "" : prev.description_long;
   const readmeHash = readme ? digest(readme) : "";
+  /* "Offers" was banned and "offering" went out on the board the same day. The
+     stems are matched with their endings rather than the exact word. */
+  const offenders = (text) => BANNED_WORDS.filter((w) => new RegExp(`\\b${w}(?:s|es|ing|ed)?\\b`, "i").test(text || ""));
+  /* A model that answers "undefined" has answered nothing, and the word went
+     out as a project's summary. Treated as absent, so it is asked again. */
+  const junk = (t) => !String(t || "").trim() || /^(undefined|null|none|n\/a|unknown)\.?$/i.test(String(t).trim());
+
   /* Whether the sentences below this README were actually written. A call that
      came back empty - no key, a rate limit, a bad response - must not be
      recorded as done, or the next run reads a matching hash and a v4 flag and
@@ -1119,11 +1126,15 @@ async function buildProject(entry, prev) {
   /* Regenerate when the README changed, and also whenever we simply don't have
      a summary yet - same reasoning as the SHA cache. A README that never
      changes again would otherwise keep an empty description forever. */
-  if (readme && (readmeHash !== (prev?.readme_hash || "") || !summary || !prev?.desc_v6)) {
-    const leftover = await forkLeftover(readme);
-    if (leftover) console.log(`  ${entry.slug}: README ${leftover} - describing from the registration line`);
+  /* Five projects had no README at all and so never reached this block, which
+     was gated on one existing - their rows sat blank on the board for the whole
+     sprint. A registration line is thin, but it is what the team wrote about
+     their own project, and it beats an empty row. */
+  const leftover = readme ? await forkLeftover(readme) : "there is no README in the repository";
+  if ((readme || entry.one_liner) && (readmeHash !== (prev?.readme_hash || "") || !summary || !prev?.desc_v6)) {
+    if (leftover) console.log(`  ${entry.slug}: ${leftover} - describing from the registration line`);
     const source = leftover
-      ? `This project has no README of its own. The one in its repository ${leftover}, so it is a leftover from whatever the team started out from and says nothing about what they built. The line below is the only thing there is to go on. Write from it, and say nothing you cannot get from it.\n\n`
+      ? `This project has no README of its own to describe: ${leftover}. The line below is the only thing there is to go on. Write from it, and say nothing you cannot get from it.\n\n`
         + `Registered as "${entry.name}": ${entry.one_liner}`
       : `README (what the project is now):\n${readme.slice(0, 6000)}\n\n`
         + `Registered on day 0 as "${entry.name}": ${entry.one_liner}\n`
@@ -1135,7 +1146,6 @@ async function buildProject(entry, prev) {
        components like" - so the offending words are handed back to it by name
        and it gets another go. Two of them: one correction left fifteen of
        ninety-nine still offending, and they went out on the board. */
-    const offenders = (text) => BANNED_WORDS.filter((w) => new RegExp(`\\b${w}\\b`, "i").test(text || ""));
     let out = await ask("");
     let bad = offenders(`${out?.summary || ""} ${out?.description_long || ""}`);
     for (let go = 0; out && bad.length && go < 2; go++) {
@@ -1162,6 +1172,7 @@ async function buildProject(entry, prev) {
         warn(`${entry.slug}: description still uses ${bad.join(", ")} - published, nothing cleaner to keep`);
       }
     }
+    if (junk(out?.summary)) out = out && { ...out, summary: "" };
     if (out?.summary || out?.description_long) {
       summary = out.summary || summary;
       descriptionLong = out.description_long || descriptionLong;
