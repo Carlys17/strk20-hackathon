@@ -1059,8 +1059,10 @@ async function buildProject(entry, prev) {
      a project may legitimately be named differently from its repository, but
      every case is named in the log so it can be taken up with the team. */
   const readmeTitle = (readme || "").match(/^#\s+(.+)$/m)?.[1]?.trim() || "";
-  const plain = (t) => t.toLowerCase().replace(/[^a-z0-9]/g, "");
-  if (readmeTitle && plain(readmeTitle) && plain(entry.name) && !plain(readmeTitle).includes(plain(entry.name)) && !plain(entry.name).includes(plain(readmeTitle))) {
+  /* An entry without a name is a registration that skipped the field, not a
+     drift - it is left to the validator to complain about. */
+  const plain = (t) => String(t || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  if (plain(readmeTitle) && plain(entry.name) && !plain(readmeTitle).includes(plain(entry.name)) && !plain(entry.name).includes(plain(readmeTitle))) {
     console.log(`  ${entry.slug}: name drift - registry says "${entry.name}", README says "${readmeTitle}"`);
   }
 
