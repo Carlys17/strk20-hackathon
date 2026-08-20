@@ -1,5 +1,315 @@
 [
   {
+    "slug": "chaoskeyplus-appbuild",
+    "name": "ChaosKey+",
+    "one_liner": "Physical-chaos entropy device with a Ready Wallet API tab for STRK20 shield, private transfer, and unshield.",
+    "category": "Tooling",
+    "repo_url": "https://github.com/Doodabug/Chaoskeyplus-appbuild",
+    "demo_url": "https://mobile-app-build-778.preview.emergentagent.com",
+    "demo_video": "https://www.youtube.com/watch?v=CHAOSKEY_DEMO_VIDEO",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project primarily focuses on standard private transfer features without unique implementation.",
+    "contracts": [
+      {
+        "address": "0x0459f679305796588ce074c2366a62d2503b5a447b4027ba9b7d820d91ce040d",
+        "network": "unknown"
+      },
+      {
+        "address": "0x07a77c21fc19398bdad4f01dec17457cc9d5f7f6df71806903bb3914d70380d0",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": true,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-20T04:35:21Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Doodabug",
+        "name": "Doodlebug",
+        "avatar_url": "https://avatars.githubusercontent.com/u/272664821?v=4"
+      },
+      {
+        "login": "emergent-agent-e1",
+        "name": "emergent-agent-e1",
+        "avatar_url": "https://avatars.githubusercontent.com/u/222461215?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20"
+    ],
+    "head_sha": "94c43a54ce372c40206b8c7e0d611a572b371feb",
+    "readme_hash": "2014:# ChaosKey+ M3 — STRK20 hackathon sprint\n\nPhysical-chaos entropy device (Harvest / Tokens / Ledger) plus a **Pool** tab that talks to the Starknet STRK20 privacy pool through the user's Ready wallet.\n",
+    "desc_v3": true,
+    "churn_pct": 32.4,
+    "summary": "Generate physical chaos entropy for secure transactions.",
+    "description_long": "Creates a physical-chaos entropy device for secure transactions, integrating with the STRK20 privacy pool through the Ready wallet. The backend uses Uvicorn for server running and MongoDB for data storage. The project implements the Starknet Wallet API with specific SDKs and adapters for wallet compatibility.",
+    "latest_push": "Restored and cleaned multiple files including starknetWallet.js and PrivacyScreen.jsx.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 5,
+    "deletions": 1523,
+    "sprint": {
+      "pushes": 79,
+      "additions": 4548,
+      "deletions": 24,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "This project's main features involve a private transfer and shield functionality, which is obvious.",
+      "why_complex": "No contracts have been declared or built, showing no engineering depth in Cairo.",
+      "reason": "The project primarily focuses on standard private transfer features without unique implementation.",
+      "facts_v2": true
+    },
+    "star_evidence": "1 contract deployed on mainnet"
+  },
+  {
+    "slug": "cipher21",
+    "name": "Cipher21",
+    "one_liner": "Confidential blackjack on Starknet: hidden hands via deck commitments, shielded stakes and payouts through the STRK20 pool.",
+    "category": "Gaming",
+    "repo_url": "https://github.com/manoahLinks/Cipher21_starknet",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Cipher21 utilizes privacy mechanisms to enhance confidentiality in online blackjack.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-20T04:27:19Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "manoahLinks",
+        "name": "Mano.dev",
+        "avatar_url": "https://avatars.githubusercontent.com/u/100848212?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 1
+      }
+    ],
+    "active_days": [
+      "2026-08-17"
+    ],
+    "head_sha": "bb5d3941389ea6fa8e4f75670967705d37bd91f2",
+    "readme_hash": "17285:# Cipher21 · Starknet\n\n**Confidential Blackjack on Starknet — hidden hands via commitments, shielded stakes via STRK20.**\n\nYour hand is a commitment until showdown. The dealer's hole card is sealed be",
+    "desc_v3": true,
+    "summary": "Play confidential blackjack with hidden hands and shielded stakes.",
+    "description_long": "The game commits your hand until showdown, while the dealer's hole card is hidden behind a committed deck. It uses Merkle commitments for hands and distributes winnings through STRK20 notes to shield player identities on the blockchain.",
+    "latest_push": "Added strk20.json for Private Sprint tracking.",
+    "tooling": [
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 6,
+    "deletions": 0,
+    "churn_pct": 0,
+    "sprint": {
+      "pushes": 2,
+      "additions": 391,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": false,
+      "why_innovative": "This project applies privacy to a real-time gaming scenario, using commitments to hide player hands.",
+      "why_complex": "No contracts have been deployed or coded yet; it's still in the design phase.",
+      "reason": "Cipher21 utilizes privacy mechanisms to enhance confidentiality in online blackjack.",
+      "facts_v2": true
+    },
+    "star_evidence": ""
+  },
+  {
+    "slug": "vinss",
+    "name": "VINSS",
+    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/DXJLabs/vinss",
+    "demo_url": "https://vinss-nu.vercel.app/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-01",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-20T04:05:49Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ntfound-dev",
+        "name": "ntfound-dev",
+        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
+      },
+      {
+        "login": "DXJLabs",
+        "name": "DXJ Labs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20"
+    ],
+    "head_sha": "7b2f5b8b033de3662dce60ddb533cee2406387ec",
+    "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
+    "desc_v3": true,
+    "churn_pct": 5,
+    "summary": "Conduct private negotiations with encrypted messaging and escrow settlement.",
+    "description_long": "Two parties can negotiate and settle payments inside one encrypted timeline. It is built with Cairo helper contracts for messaging, offers, private escrow, and escrow settlement, all interfacing through the STRK20 Privacy Pool's `InvokeExternal`.",
+    "latest_push": "Added multi-LLM provider routing to the agent module.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 839,
+    "deletions": 25,
+    "sprint": {
+      "pushes": 100,
+      "additions": 32569,
+      "deletions": 4310,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "creates a private deal room for encrypted negotiations and offers, not typical in this domain.",
+      "why_complex": "includes multiple Cairo helper contracts for messaging, escrow, and requires event decryption via an indexer.",
+      "reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "strkworld",
+    "name": "STRKWORLD",
+    "one_liner": "A 2D top-down city where the buildings are Starknet privacy protocols",
+    "category": "Gaming",
+    "repo_url": "https://github.com/Calcutatator/STRKWORLD",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "starkware",
+    "starred": false,
+    "star_reason": "The concept exists but lacks implemented complexity or innovative privacy applications.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-20T04:04:28Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Calcutatator",
+        "name": "Calcutator",
+        "avatar_url": "https://avatars.githubusercontent.com/u/114863662?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20"
+    ],
+    "head_sha": "c75fa324dca3883fcd7a428d6d9f2087438ee66b",
+    "readme_hash": "5443:# STRKWORLD\n\n**A 2D top-down city where the buildings are Starknet privacy protocols.**\n\nWalk around a shared pseudonymous world, step into a building, and use a real\nprivacy-preserving protocol with ",
+    "desc_v3": true,
+    "churn_pct": 0.2,
+    "summary": "Explore a city built from Starknet privacy protocols using real funds.",
+    "description_long": "Players walk through a 2D top-down city where each building represents a privacy protocol. The game is developed with separate packages for application, backend, and logic, specifying actions via typed intents that pass through a privacy gate to execute financial transactions without handling sensitive key material.",
+    "latest_push": "Hid submission uncertainty mutation capability in relevant files.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 58,
+    "deletions": 16,
+    "sprint": {
+      "pushes": 100,
+      "additions": 17277,
+      "deletions": 408,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project applies privacy to buildings where financial actions are taken, which is a standard idea.",
+      "why_complex": "There are no deployed contracts or advanced Cairo code provided at this stage.",
+      "reason": "The concept exists but lacks implemented complexity or innovative privacy applications.",
+      "facts_v2": true
+    },
+    "star_evidence": ""
+  },
+  {
     "slug": "stake-wars",
     "name": "stake-wars",
     "one_liner": "",
@@ -43,7 +353,6 @@
     "head_sha": "28651bf967afbb3dfc4ee7a8f296561ce942f3b8",
     "readme_hash": "3357:# Stake Wars\n\nStake Wars is a persistent, non-custodial strategy game that turns Starknet\nvalidator delegation into a battle for territory. Players deploy their\ndelegated STRK as FORCE to capture and ",
     "desc_v3": true,
-    "churn_pct": 0.7,
     "summary": "Engage in strategy battles for territory using STRK delegation.",
     "description_long": "Stake Wars is a non-custodial strategy game where players use delegated STRK as FORCE to capture and defend Sectors. The project includes a web application built with React and TypeScript, a Go API, and Cairo contracts for gameplay mechanics, all organized in structured directories. Planned STRK20 integration will support shielded undeployed STRK reserves and player anonymity through shadow accounts.",
     "latest_push": "Added staking FAQ to the landing page.",
@@ -57,6 +366,7 @@
     "has_readme": true,
     "additions": 125,
     "deletions": 7,
+    "churn_pct": 0.7,
     "sprint": {
       "pushes": 40,
       "additions": 34192,
@@ -69,84 +379,6 @@
       "why_innovative": "This project operates as a game without unique private mechanisms.",
       "why_complex": "There are no deployed contracts or complex Cairo implementations.",
       "reason": "StakeWars lacks innovative privacy features and engineering depth.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "vinss",
-    "name": "VINSS",
-    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/DXJLabs/vinss",
-    "demo_url": "https://vinss-nu.vercel.app/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-01",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-20T03:27:31Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "ntfound-dev",
-        "name": "ntfound-dev",
-        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
-      },
-      {
-        "login": "DXJLabs",
-        "name": "DXJ Labs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20"
-    ],
-    "head_sha": "9551e3fb96c56d837ea3aa02f2260414b762428e",
-    "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
-    "desc_v3": true,
-    "churn_pct": 5.8,
-    "summary": "Conduct private negotiations with encrypted messaging and escrow settlement.",
-    "description_long": "Two parties can negotiate and settle payments inside one encrypted timeline. It is built with Cairo helper contracts for messaging, offers, private escrow, and escrow settlement, all interfacing through the STRK20 Privacy Pool's `InvokeExternal`.",
-    "latest_push": "Optimized private chat functionality and added offer receipts.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 899,
-    "deletions": 91,
-    "sprint": {
-      "pushes": 99,
-      "additions": 32455,
-      "deletions": 4288,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "creates a private deal room for encrypted negotiations and offers, not typical in this domain.",
-      "why_complex": "includes multiple Cairo helper contracts for messaging, escrow, and requires event decryption via an indexer.",
-      "reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
@@ -192,7 +424,6 @@
     "head_sha": "3e367360e0de5a98523db8dfcb7f816d57783b33",
     "readme_hash": "33761:# Sotto\n\nSotto is a private yield account for DeFi. It lets users hold shielded assets, lend, stake, and allocate capital across supported strategies without exposing their total holdings or making ev",
     "desc_v3": true,
-    "churn_pct": 6.7,
     "summary": "Manage private yield accounts for DeFi investments.",
     "description_long": "Sotto allows users to deposit shielded assets, lend, stake, and allocate capital without revealing total holdings. It is built with STRK20, where balances are represented as encrypted notes, and connects to a privacy-enabled wallet for note discovery and transaction authorization. Users can operate within a single account across multiple strategies while ensuring their financial activity remains private.",
     "latest_push": "Made withdrawals go directly to users' connected wallets.",
@@ -231,6 +462,7 @@
     "has_readme": true,
     "additions": 330,
     "deletions": 128,
+    "churn_pct": 6.7,
     "sprint": {
       "pushes": 7,
       "additions": 13235,
@@ -287,7 +519,6 @@
     "head_sha": "cb2bed500a5f055a3a1aed8621a5404735e8a44f",
     "readme_hash": "4557:# Independent Project\n\nThis workspace is the extracted `poker_texas_air` project. It includes the minimal L1/VM and\nmental-poker protocol crates required to build the AIR crate without the `zchain` or",
     "desc_v3": true,
-    "churn_pct": 0.2,
     "summary": "Builds a mental-poker protocol with Texas Hold'em features.",
     "description_long": "This project implements a mental-poker protocol specifically for Texas Hold'em using minimal L1/VM and protocol crates. The primary components include the `texas_tagged` for mid-round betting transitions and the `texas_canonical_air` for handling fixed-width ABI across all Texas transition selectors. It includes documents for trust models and migration notes, as well as functions for authenticating receipts and verifying state openings.",
     "latest_push": "Timeout limb range decomposition was added in the core logic.",
@@ -301,6 +532,7 @@
     "has_readme": true,
     "additions": 355,
     "deletions": 98,
+    "churn_pct": 0.2,
     "sprint": {
       "pushes": 7,
       "additions": 207633,
@@ -444,7 +676,7 @@
     "churn_pct": 0,
     "summary": "",
     "description_long": "",
-    "latest_push": "Created project documentation and basic hackathon scaffolding.",
+    "latest_push": "Added project documentation and hackathon scaffolding.",
     "tooling": [],
     "has_readme": false,
     "additions": 1172,
@@ -963,80 +1195,6 @@
     },
     "assessment": null,
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "strkworld",
-    "name": "STRKWORLD",
-    "one_liner": "A 2D top-down city where the buildings are Starknet privacy protocols",
-    "category": "Gaming",
-    "repo_url": "https://github.com/Calcutatator/STRKWORLD",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "starkware",
-    "starred": false,
-    "star_reason": "The concept exists but lacks implemented complexity or innovative privacy applications.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-19T23:40:27Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Calcutatator",
-        "name": "Calcutator",
-        "avatar_url": "https://avatars.githubusercontent.com/u/114863662?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-18",
-      "2026-08-19"
-    ],
-    "head_sha": "70a3941dab5274f1e9efa2496d2c4b2f8e658c75",
-    "readme_hash": "5443:# STRKWORLD\n\n**A 2D top-down city where the buildings are Starknet privacy protocols.**\n\nWalk around a shared pseudonymous world, step into a building, and use a real\nprivacy-preserving protocol with ",
-    "desc_v3": true,
-    "summary": "Explore a city built from Starknet privacy protocols using real funds.",
-    "description_long": "Players walk through a 2D top-down city where each building represents a privacy protocol. The game is developed with separate packages for application, backend, and logic, specifying actions via typed intents that pass through a privacy gate to execute financial transactions without handling sensitive key material.",
-    "latest_push": "Authorized final avatar runtime integration and documented findings.",
-    "tooling": [
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 221,
-    "deletions": 51,
-    "churn_pct": 0.8,
-    "sprint": {
-      "pushes": 100,
-      "additions": 17289,
-      "deletions": 388,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "The project applies privacy to buildings where financial actions are taken, which is a standard idea.",
-      "why_complex": "There are no deployed contracts or advanced Cairo code provided at this stage.",
-      "reason": "The concept exists but lacks implemented complexity or innovative privacy applications.",
-      "facts_v2": true
-    },
-    "star_evidence": ""
   },
   {
     "slug": "crosslink",
@@ -3325,83 +3483,6 @@
     },
     "assessment": null,
     "star_evidence": ""
-  },
-  {
-    "slug": "chaoskeyplus-appbuild",
-    "name": "ChaosKey+",
-    "one_liner": "Physical-chaos entropy device with a Ready Wallet API tab for STRK20 shield, private transfer, and unshield.",
-    "category": "Tooling",
-    "repo_url": "https://github.com/Doodabug/Chaoskeyplus-appbuild",
-    "demo_url": "https://mobile-app-build-778.preview.emergentagent.com",
-    "demo_video": "https://www.youtube.com/watch?v=CHAOSKEY_DEMO_VIDEO",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project primarily focuses on standard private transfer features without unique implementation.",
-    "contracts": [
-      {
-        "address": "0x07a77c21fc19398bdad4f01dec17457cc9d5f7f6df71806903bb3914d70380d0",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": true,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-19T16:35:19Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "emergent-agent-e1",
-        "name": "emergent-agent-e1",
-        "avatar_url": "https://avatars.githubusercontent.com/u/222461215?v=4"
-      },
-      {
-        "login": "Doodabug",
-        "name": "Doodlebug",
-        "avatar_url": "https://avatars.githubusercontent.com/u/272664821?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19"
-    ],
-    "head_sha": "2c367ffc8162b85fdfc1c3955055fb25635fd059",
-    "readme_hash": "2014:# ChaosKey+ M3 — STRK20 hackathon sprint\n\nPhysical-chaos entropy device (Harvest / Tokens / Ledger) plus a **Pool** tab that talks to the Starknet STRK20 privacy pool through the user's Ready wallet.\n",
-    "desc_v3": true,
-    "summary": "Generate physical chaos entropy for secure transactions.",
-    "description_long": "Creates a physical-chaos entropy device for secure transactions, integrating with the STRK20 privacy pool through the Ready wallet. The backend uses Uvicorn for server running and MongoDB for data storage. The project implements the Starknet Wallet API with specific SDKs and adapters for wallet compatibility.",
-    "latest_push": "Added project address to contracts in strk20.json.",
-    "tooling": [],
-    "has_readme": true,
-    "additions": 3,
-    "deletions": 1,
-    "churn_pct": 0.1,
-    "sprint": {
-      "pushes": 71,
-      "additions": 6066,
-      "deletions": 24,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "This project's main features involve a private transfer and shield functionality, which is obvious.",
-      "why_complex": "No contracts have been declared or built, showing no engineering depth in Cairo.",
-      "reason": "The project primarily focuses on standard private transfer features without unique implementation.",
-      "facts_v2": true
-    },
-    "star_evidence": "1 contract deployed on mainnet"
   },
   {
     "slug": "sevrin",
@@ -6055,81 +6136,6 @@
     },
     "assessment": null,
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "cipher21",
-    "name": "Cipher21",
-    "one_liner": "Confidential blackjack on Starknet: hidden hands via deck commitments, shielded stakes and payouts through the STRK20 pool.",
-    "category": "Gaming",
-    "repo_url": "https://github.com/manoahLinks/Cipher21_starknet",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Cipher21 utilizes privacy mechanisms to enhance confidentiality in online blackjack.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-17T10:52:52Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "manoahLinks",
-        "name": "Mano.dev",
-        "avatar_url": "https://avatars.githubusercontent.com/u/100848212?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 1
-      }
-    ],
-    "active_days": [
-      "2026-08-17"
-    ],
-    "head_sha": "bb5d3941389ea6fa8e4f75670967705d37bd91f2",
-    "readme_hash": "17285:# Cipher21 · Starknet\n\n**Confidential Blackjack on Starknet — hidden hands via commitments, shielded stakes via STRK20.**\n\nYour hand is a commitment until showdown. The dealer's hole card is sealed be",
-    "desc_v3": true,
-    "summary": "Play confidential blackjack with hidden hands and shielded stakes.",
-    "description_long": "The game commits your hand until showdown, while the dealer's hole card is hidden behind a committed deck. It uses Merkle commitments for hands and distributes winnings through STRK20 notes to shield player identities on the blockchain.",
-    "latest_push": "Added strk20.json for Private Sprint tracking.",
-    "tooling": [
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 6,
-    "deletions": 0,
-    "churn_pct": 0,
-    "sprint": {
-      "pushes": 2,
-      "additions": 391,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": false,
-      "why_innovative": "This project applies privacy to a real-time gaming scenario, using commitments to hide player hands.",
-      "why_complex": "No contracts have been deployed or coded yet; it's still in the design phase.",
-      "reason": "Cipher21 utilizes privacy mechanisms to enhance confidentiality in online blackjack.",
-      "facts_v2": true
-    },
-    "star_evidence": ""
   },
   {
     "slug": "deceptiveos",
