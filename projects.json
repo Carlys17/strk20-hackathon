@@ -44,7 +44,6 @@
     "head_sha": "63c4a20f1cf98973c59eb70378ec32b6f2497042",
     "readme_hash": "7a49fe2a06ccbf71",
     "desc_v6": true,
-    "churn_pct": 2.5,
     "summary": "A fee-aware tranching scheduler for private actions on the STRK20 pool.",
     "description_long": "Rhizome calculates the cost of unlinkability and executes a scheduled strategy for private transactions. It reads the current fee and transaction history from the STRK20 privacy pool, assesses amounts for blending in, and determines an optimal tranche count for privacy while considering fees and timing. The tool executes payments through its own anonymizer contract, ensuring multiple indistinguishable deposits instead of a singular identifiable transaction.",
     "latest_push": "Clarified the vault shape dry runs in the ExecutePanel component.",
@@ -78,6 +77,7 @@
     "has_readme": true,
     "additions": 96,
     "deletions": 31,
+    "churn_pct": 2.5,
     "sprint": {
       "pushes": 31,
       "additions": 8824,
@@ -173,7 +173,6 @@
     "head_sha": "c9bfcaf38c27b59e21175b215d2a9c4f692e0623",
     "readme_hash": "3f4417e879a7369a",
     "desc_v6": true,
-    "churn_pct": 2.2,
     "summary": "Sealed-ballot governance with anonymous treasury disbursements for DAOs.",
     "description_long": "Aperture enables private governance voting and a shielded treasury for decentralized autonomous organizations. Votes are cast as private transfers of shielded weight, with only aggregate results published when voting closes. The system is built with Cairo contracts for proposal management and an anonymizer for treasury payouts, along with a tally service that ensures the integrity of the voting process without revealing individual ballots.",
     "latest_push": "Added a lower-cost path for a struggling proving relay and a cheap pool transaction.",
@@ -197,6 +196,7 @@
     "has_readme": true,
     "additions": 75,
     "deletions": 7,
+    "churn_pct": 2.2,
     "sprint": {
       "pushes": 33,
       "additions": 7981,
@@ -253,7 +253,6 @@
     "head_sha": "6b5be1c24ab2616c385ecf7c1c2b8e73e46f0053",
     "readme_hash": "e1a85a09e32b1e1b",
     "desc_v6": true,
-    "churn_pct": 18.6,
     "summary": "A whitehat rescue bot for exposed on-chain funds on Starknet.",
     "description_long": "Aegis watches public repositories for accidentally committed private keys and API keys, verifying whether they control live funds before sweeping them to a safe address. It scans projects for sensitive filenames, checks real balances, derives Starknet accounts, and automates the rescue process, all without human intervention. The system is built with Next.js, TypeScript, and starknet.js, with an upcoming claim flow for owners to retrieve their funds.",
     "latest_push": "Checked and rescued leaked funds on mainnet, added network tracking.",
@@ -292,6 +291,7 @@
     "has_readme": true,
     "additions": 356,
     "deletions": 181,
+    "churn_pct": 18.6,
     "sprint": {
       "pushes": 27,
       "additions": 3634,
@@ -348,7 +348,6 @@
     "head_sha": "261820cc009ca701632c0cbbd993b49dc628283a",
     "readme_hash": "f978281a01449603",
     "desc_v6": true,
-    "churn_pct": 4.5,
     "summary": "Builds a minimal L1/VM framework for implementing mental poker protocols.",
     "description_long": "This project creates a minimal framework for implementing mental poker protocols and includes the necessary L1/VM and mental-poker protocol crates to build the AIR crate. It features a fixed-width ABI for various Texas poker transitions and focuses on state transitions, batching, and protocol-specific constraints. The project also integrates advanced Ristretto cryptographic operations for efficient proof generation, although some components are not yet implemented for production use.",
     "latest_push": "Added the ristretto air files and documentation.",
@@ -362,6 +361,7 @@
     "has_readme": true,
     "additions": 8605,
     "deletions": 203,
+    "churn_pct": 4.5,
     "sprint": {
       "pushes": 8,
       "additions": 205951,
@@ -417,7 +417,6 @@
     "head_sha": "2915b171d8badeeb9005feb1335e7201029d92a5",
     "readme_hash": "dedb331b68aa2d67",
     "desc_v6": true,
-    "churn_pct": 15.9,
     "summary": "A hybrid local-first security system with deception networks and threat intelligence sharing.",
     "description_long": "CipherNest connects local security measures with zero-knowledge economic coordination. It deploys containerized digital twin decoys and generates lure documents with tracking watermarks, while maintaining private telemetry on defender machines. The setup includes a web-based operations console, a defender agent with Docker for isolation, and a GhostBounty mechanism for anonymous bounty rewards using Starknet's STRK20 notes.",
     "latest_push": "Added the env template, Zod schema, and STRK20 constants with tests.",
@@ -446,6 +445,7 @@
     "has_readme": true,
     "additions": 1145,
     "deletions": 2,
+    "churn_pct": 15.9,
     "sprint": {
       "pushes": 54,
       "additions": 10551,
@@ -583,7 +583,6 @@
     "head_sha": "a2f2ae5857031f020790e995d4605ea9accfcf4d",
     "readme_hash": "0621fb5cfd6c46f5",
     "desc_v6": true,
-    "churn_pct": 1.2,
     "summary": "Manage confidential treasury vaults with cryptographic policy enforcement.",
     "description_long": "Adyton is a confidential treasury vault that keeps funds privately shielded within the STRK20 privacy pool. It enforces spending policies for outgoing transfers through cryptographic verification, ensuring compliance without manual oversight. The project is built with Cairo 2.x smart contracts, integrating React 18 for the user interface and features onchain policy management, zero-knowledge proof mechanisms, and selective auditor disclosures.",
     "latest_push": "Added a mermaid diagram and fixed its syntax in the README.",
@@ -617,6 +616,7 @@
     "has_readme": true,
     "additions": 88,
     "deletions": 14,
+    "churn_pct": 1.2,
     "sprint": {
       "pushes": 13,
       "additions": 27634,
@@ -684,7 +684,6 @@
     "head_sha": "229c9cdd6f6b2d9b00ba0371e6ec5b4dec817ce9",
     "readme_hash": "06a5294711d6b365",
     "desc_v6": true,
-    "churn_pct": 8.1,
     "summary": "A physical-chaos entropy device for managing STRK20 tokens and transactions.",
     "description_long": "This project integrates a physical-chaos entropy device with a Pool tab that interacts with the Starknet STRK20 privacy pool through the user's Ready wallet. It uses the Starknet Wallet API v0.10 and includes components such as the Starknet SDK for core communication, wallet standard discovery and adapter for wallet detection and compatibility, and wallet API types for safe STRK20 actions. The application supports functions like shielding, private transfers, and unshielding while ensuring that the dapp never holds a viewing key.",
     "latest_push": "Fixed passing actions array directly to strk20InvokeTransaction.",
@@ -692,6 +691,7 @@
     "has_readme": true,
     "additions": 404,
     "deletions": 1,
+    "churn_pct": 8.1,
     "sprint": {
       "pushes": 80,
       "additions": 4951,
@@ -746,7 +746,6 @@
     "head_sha": "daaa43830334feecb1b20146ee50467f824efb5b",
     "readme_hash": "e2a35acfc7b9a547",
     "desc_v6": true,
-    "churn_pct": 16.6,
     "summary": "Private payroll with unlinkable note transfers for team payments.",
     "description_long": "ShadowPay allows organizations to handle payroll privately on Starknet. It shields STRK into the STRK20 privacy pool, facilitating unlinkable note→note transfers to pay team members and enabling them to unshield their funds on demand. The project is built using Next.js, React, TypeScript, and starknet.js, using a three-transaction flow: public deposit, private transfers, and withdrawal or invocation of the echo helper.",
     "latest_push": "Added a 10-block guard and payroll screening copy to the payroll panel.",
@@ -785,6 +784,7 @@
     "has_readme": true,
     "additions": 329,
     "deletions": 6,
+    "churn_pct": 16.6,
     "sprint": {
       "pushes": 4,
       "additions": 2306,
@@ -908,7 +908,6 @@
     "head_sha": "5934cb84ad2ded459d3661efd74a60ff023b8f55",
     "readme_hash": "709363b44ceb8140",
     "desc_v6": true,
-    "churn_pct": 0,
     "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
     "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
     "latest_push": "Updated the deployment report in DEPLOYMENTS.md.",
@@ -922,6 +921,7 @@
     "has_readme": true,
     "additions": 1,
     "deletions": 0,
+    "churn_pct": 0,
     "sprint": {
       "pushes": 100,
       "additions": 13496,
@@ -1144,7 +1144,6 @@
     "head_sha": "c4ed2b22af32645a9ee3304fb078eaa0cefc2c8b",
     "readme_hash": "7c0bbf813c1629dc",
     "desc_v6": true,
-    "churn_pct": 100,
     "summary": "Private campaign funding for protected-source rewards on Starknet.",
     "description_long": "QuietProof enables campaigns to receive funding while ensuring the privacy of the sources. It is built on Starknet, implementing mechanisms to protect the identities of funders and the rewards associated with their contributions.",
     "latest_push": "Started the initial QuietProof application.",
@@ -1183,6 +1182,7 @@
     "has_readme": true,
     "additions": 1775,
     "deletions": 0,
+    "churn_pct": 100,
     "sprint": {
       "pushes": 1,
       "additions": 1775,
@@ -5246,10 +5246,9 @@
       },
       {
         "hash": "0x5875580f10aec7c0d90fcf531908f14323caad0685842b8515282c0fcfb2ba9",
-        "ok": false,
-        "pool": false,
-        "mine": false,
-        "note": "not found on mainnet"
+        "ok": true,
+        "pool": true,
+        "mine": null
       },
       {
         "hash": "0x568f522b9c66714afd2b7f7bbb614ef78749510d49bce015bd16add408c2c4c",
@@ -5258,11 +5257,11 @@
         "mine": null
       }
     ],
-    "verified_txs": 2,
+    "verified_txs": 3,
     "requirements": {
       "demo": false,
       "video": false,
-      "mainnet": false
+      "mainnet": true
     },
     "status": "building",
     "pushed_at": "2026-08-19T19:35:42Z",
