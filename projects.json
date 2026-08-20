@@ -53,7 +53,7 @@
       "mainnet": true
     },
     "status": "finished",
-    "pushed_at": "2026-08-20T00:30:17Z",
+    "pushed_at": "2026-08-20T00:43:01Z",
     "stars": 0,
     "builders": [
       {
@@ -75,13 +75,13 @@
       "2026-08-19",
       "2026-08-20"
     ],
-    "head_sha": "0142ab2abbfef64cb14e5c61736b933017ccebc8",
+    "head_sha": "a6fffc0c833e88be44b6d5a31db4570492551c9b",
     "readme_hash": "12573:<p align=\"center\">\n  <img src=\"apps/web/public/philoxenia-mark.png\" alt=\"Philoxenia — a sleeping head resting on joined hands\" width=\"96\" height=\"96\" />\n</p>\n\n# Philoxenia\n\n**Trust who you trust. Pay ",
     "desc_v3": true,
-    "churn_pct": 3.1,
+    "churn_pct": 8.6,
     "summary": "Book stays with trusted friends and pay privately in STRK or DAI.",
     "description_long": "Philoxenia is a private hospitality protocol for peer-to-peer stays. Hosts publish listings visible only to friends and guests they invite. Payments are held in a smart contract, enabling direct transactions with no protocol fees, while optional private payments keep transaction amounts hidden from on-chain observers.",
-    "latest_push": "Maximized STRK20 privacy and revised documentation with a commercial introduction.",
+    "latest_push": "Added unit tests across shared, API, web, and the message mailbox.",
     "tooling": [
       {
         "label": "AVNU",
@@ -100,12 +100,12 @@
       }
     ],
     "has_readme": true,
-    "additions": 390,
-    "deletions": 104,
+    "additions": 1413,
+    "deletions": 19,
     "sprint": {
       "pushes": 100,
-      "additions": 2198,
-      "deletions": 1046,
+      "additions": 3604,
+      "deletions": 1058,
       "computed": 2
     },
     "assessment": {
@@ -157,7 +157,6 @@
     "head_sha": "746c4ddc3c322d96bfdf8b0fccbb6c64e0443727",
     "readme_hash": "8371:# DignityRail\n\n> Private delivery. Public purpose.\n\nDignityRail is a privacy-preserving humanitarian-aid and community-grant rail on Starknet. It lets an NGO or local response fund distribute assets t",
     "desc_v3": true,
-    "churn_pct": 100,
     "summary": "Distributes humanitarian aid while preserving donor and beneficiary privacy.",
     "description_long": "DignityRail allows NGOs to send humanitarian aid through private channels without revealing beneficiary identities. It uses STRK20 transactions for funding, with a commitment process that creates off-chain claim links for recipients. Key components include the DignityRail helper contract for managing claims and public commitments along with a privacy-enabled wallet integration using `starknet.js`.",
     "latest_push": "Shipped the DignityRail mainnet submission path.",
@@ -196,6 +195,7 @@
     "has_readme": true,
     "additions": 1452,
     "deletions": 585,
+    "churn_pct": 100,
     "sprint": {
       "pushes": 4,
       "additions": 5821,
@@ -246,7 +246,6 @@
     "head_sha": "c4866c426e222a022309224fb231752c3aea2ed1",
     "readme_hash": "2748:# Nomos\n\nA private payment gateway for Starknet, built for the [STRK20 Private Sprint](https://strk20.starknet.io/hackathon). A business drops in a Payment Link or checkout widget; a customer pays wit",
     "desc_v3": true,
-    "churn_pct": 19.6,
     "summary": "Process private payments through a checkout widget.",
     "description_long": "A payment gateway for businesses that already accept stablecoins. It allows customers to pay without revealing their identity, while transactions are settled through the STRK20 pool on mainnet. Built using Next.js, it features a wallet picker, various actions for shielding and transferring funds, and a deployable anonymizer contract.",
     "latest_push": "Applied a design pass for a production-grade visual system across the app.",
@@ -285,6 +284,7 @@
     "has_readme": true,
     "additions": 485,
     "deletions": 145,
+    "churn_pct": 19.6,
     "sprint": {
       "pushes": 10,
       "additions": 4167,
@@ -340,7 +340,6 @@
     "head_sha": "4753097c3c6f97632f710665eba357a61b198cc8",
     "readme_hash": "6689:# Atrum — sealed-bid prediction markets on Starknet\n\nA prediction market where **your order is unreadable until it is already binding**, and\nwhere a position can be sold before the event resolves.\n\nBu",
     "desc_v3": true,
-    "churn_pct": 4.5,
     "summary": "Trade in sealed-bid prediction markets with unreadable orders until binding.",
     "description_long": "A sealed-bid prediction market where orders remain hidden until they are binding, allowing users to trade positions before event resolution. Built with a sealed-bid batch auction mechanism, orders are submitted as private notes, closed and cleared uniformly before the clearing price is published. The contracts manage private bids and facilitate trades without revealing user identities until necessary, employing a conditional-token model for position exits.",
     "latest_push": "Implemented the Autopilot feature to streamline user interactions.",
@@ -379,6 +378,7 @@
     "has_readme": true,
     "additions": 217,
     "deletions": 4,
+    "churn_pct": 4.5,
     "sprint": {
       "pushes": 25,
       "additions": 8374,
@@ -431,7 +431,6 @@
     "head_sha": "24a6c38ed4dca3df3983fa5ffe3159426fd6de85",
     "readme_hash": "3357:# Stake Wars\n\nStake Wars is a persistent, non-custodial strategy game that turns Starknet\nvalidator delegation into a battle for territory. Players deploy their\ndelegated STRK as FORCE to capture and ",
     "desc_v3": true,
-    "churn_pct": 1.9,
     "summary": "Engage in strategy battles for territory using STRK delegation.",
     "description_long": "Stake Wars is a non-custodial strategy game where players use delegated STRK as FORCE to capture and defend Sectors. The project includes a web application built with React and TypeScript, a Go API, and Cairo contracts for gameplay mechanics, all organized in structured directories. Planned STRK20 integration will support shielded undeployed STRK reserves and player anonymity through shadow accounts.",
     "latest_push": "Renamed the profile page to operator and added staking FAQ to landing page.",
@@ -445,6 +444,7 @@
     "has_readme": true,
     "additions": 256,
     "deletions": 116,
+    "churn_pct": 1.9,
     "sprint": {
       "pushes": 40,
       "additions": 34192,
@@ -1883,7 +1883,6 @@
     "head_sha": "49e37fd8b0a8d53528fe02cb05466f327b9071ab",
     "readme_hash": "4250:# BlindPay\n\n**Privacy-first invoice and payment protocol on Starknet STRK20**\n\nBlindPay lets merchants create invoices and receive payments through the [STRK20 privacy pool](https://strk20.starknet.io",
     "desc_v3": true,
-    "churn_pct": 100,
     "summary": "Create confidential invoices and accept payments privately.",
     "description_long": "BlindPay allows merchants to generate invoices and receive payments through shielded notes. It uses a backend built with Node.js for invoice indexation and a React frontend for user interaction, along with STRK20 escrow for handling payments while keeping sender and recipient information hidden.",
     "latest_push": "Built BlindPay on Starknet for STRK20 private payments.",
@@ -1891,6 +1890,7 @@
     "has_readme": true,
     "additions": 41871,
     "deletions": 0,
+    "churn_pct": 100,
     "sprint": {
       "pushes": 1,
       "additions": 41871,
@@ -2334,6 +2334,61 @@
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "oxa-protocol",
+    "name": "oxa-protocol",
+    "one_liner": "Privacy-preserving, policy-controlled payments for autonomous agents on Starknet.",
+    "category": "Other",
+    "repo_url": "https://github.com/phllp-tanstic/oxa-protocol",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-19T18:22:53Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "phllp-tanstic",
+        "name": "Phllptanstic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/95053491?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-19"
+    ],
+    "head_sha": "05a2f221f765df5e227cba5e5d4a0dce0bd38075",
+    "readme_hash": "1110:# OXA — Scoped Payment Credentials for Autonomous Agents\n\n**Status:** Pre-build. Architecture validation (Phase 0) in progress. No contracts deployed yet.\n\nOXA is a scoped, single-use payment credenti",
+    "desc_v3": true,
+    "churn_pct": 0,
+    "summary": "Create single-use payment credentials for autonomous agents.",
+    "description_long": "An OXA credential is a one-time claim right for a specific ERC-20, locked behind a cryptographic commitment. Owners shield funds in the STRK20 pool, then issue scoped, single-use payment credentials, selecting whether to settle privately or publicly. No contracts are deployed yet; check `strk20.json` for updates.",
+    "latest_push": "Resolved authority mechanism to Design B in Blueprint §2.12.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 45,
+    "deletions": 0,
+    "sprint": {
+      "pushes": 3,
+      "additions": 126,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
   },
   {
     "slug": "georush",
