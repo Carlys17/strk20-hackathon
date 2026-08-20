@@ -87,7 +87,7 @@ jobs:
           for n in $numbers; do
             echo "::group::PR #$n"
 
-            meta=$(gh pr view "$n" --json files,labels,isDraft,state,author)
+            meta=$(gh pr view "$n" --json files,labels,isDraft,state,author,body)
             if [ "$(jq -r '.state' <<< "$meta")" != "OPEN" ] || [ "$(jq -r '.isDraft' <<< "$meta")" = "true" ]; then
               echo "not an open, ready pull request - skipped"; echo "::endgroup::"; continue
             fi
@@ -144,6 +144,31 @@ jobs:
                    node scripts/check-row-ownership.mjs; then
                 gh pr comment "$n" --body "This changes rows that are already in the table (\`${updated}\`), and I cannot tell that they are yours - you are not listed in their \`team\` on main, and you do not own the repositories they point at. Leaving this for a maintainer. If it is your project, say so here."
                 echo "changes rows it does not own - left for a maintainer"; echo "::endgroup::"; continue
+              fi
+            fi
+
+            # The sprint is STRK20, and nothing else here notices a project that
+            # has nothing to do with it - one registration went in against a
+            # repository whose README is a Solana yield optimizer, forked and
+            # unchanged. Building on another chain and bridging into the pool is
+            # exactly what this wants, so the question asked is only whether
+            # anything they have written mentions the pool at all.
+            if [ -n "$added" ]; then
+              if ! MERGED="$RUNNER_TEMP/merged.json" ADDED="$added" \
+                   PR_BODY="$(jq -r '.body // ""' <<< "$meta")" \
+                   node scripts/check-strk20-claim.mjs; then
+                # Said once. It is re-checked on every push to the branch, and
+                # a run that keeps repeating itself in the thread is noise.
+                if ! gh pr view "$n" --json comments --jq '.comments[].body' | grep -q "strk20-claim"; then
+                  gh pr comment "$n" --body "$(printf '%s\n' \
+                    '<!-- strk20-claim -->' \
+                    'Nothing in this registration says how the project touches STRK20, so it is waiting for a maintainer rather than going in on its own. That is all this is, not a rejection.' \
+                    '' \
+                    'The sprint is the STRK20 pool. Building on another chain is fine, and bridging into the pool from one is exactly the kind of thing it is for. What it cannot be is a project that never reaches the pool at all.' \
+                    '' \
+                    'A sentence saying which part of it does, in the application above or in the `one_liner`, and the next run picks this up by itself.')"
+                fi
+                echo "no STRK20 claim - left for a maintainer"; echo "::endgroup::"; continue
               fi
             fi
 
