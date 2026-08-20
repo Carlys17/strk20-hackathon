@@ -1,5 +1,68 @@
 [
   {
+    "slug": "poker-texas-air",
+    "name": "poker_texas_air",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/linqining/poker_texas_air",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-20T01:16:09Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "linqining",
+        "name": "linqining",
+        "avatar_url": "https://avatars.githubusercontent.com/u/18323181?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-16",
+      "2026-08-19",
+      "2026-08-20"
+    ],
+    "head_sha": "ef68502176eb6aa2b06af02b6278060e6d67205b",
+    "readme_hash": "3969:# Independent Project\n\nThis workspace is the extracted `poker_texas_air` project. It includes the minimal L1/VM and\nmental-poker protocol crates required to build the AIR crate without the `zchain` or",
+    "desc_v3": true,
+    "churn_pct": 0.1,
+    "summary": "Build a mental-poker protocol using minimal required crates.",
+    "description_long": "This project focuses on creating a mental-poker protocol with essential L1/VM components and supporting crates. It pulls from the `poker_texas_air` project and includes specified pathways for direct state transitions, while some VM semantics and proofs remain unimplemented. Relevant contract files include `texas_canonical.rs` for fixed-width ABIs and various documentation regarding trust boundaries and constraints.",
+    "latest_push": "Added the autofold fix and updated the strk20json file.",
+    "tooling": [
+      {
+        "label": "Rust",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 205,
+    "deletions": 27,
+    "sprint": {
+      "pushes": 6,
+      "additions": 207366,
+      "deletions": 287,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
     "slug": "cutout",
     "name": "Cutout",
     "one_liner": "A privacy-liquidity router for STRK20. Before you sign, it checks whether your amount has meaningful public cover and routes flexible transactions toward healthier exact-amount cohorts.",
@@ -66,7 +129,6 @@
     "head_sha": "b9b3ff1bd782cd627f61065f800cdbd9a3e5481a",
     "readme_hash": "10443:# Cutout\n\n**Cutout is a wallet-native signing guard that uses deterministic public STRK20\nevidence to help users avoid predictable deposit amounts before they sign.**\n\nBefore a user signs a shield tra",
     "desc_v3": true,
-    "churn_pct": 1.3,
     "summary": "Checks user deposits for cover before signing transactions.",
     "description_long": "Cutout verifies deposit amounts against a public cohort before a user signs a shield transaction. It uses deterministic evaluations based on public STRK20 data, incorporating a supervised incremental indexer, SQLite for state reading, and a Next.js signing client for user interactions. The contract is not required; all evidence and recommendations come from offchain checks.",
     "latest_push": "Recorded production evidence for version 0.1.4.",
@@ -100,6 +162,7 @@
     "has_readme": true,
     "additions": 169,
     "deletions": 13,
+    "churn_pct": 1.3,
     "sprint": {
       "pushes": 13,
       "additions": 20420,
