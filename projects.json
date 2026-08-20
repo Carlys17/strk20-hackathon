@@ -1,5 +1,60 @@
 [
   {
+    "slug": "mirage",
+    "name": "Mirage",
+    "one_liner": "One wallet, every chain, no trace. Shield any ERC-20 on Starknet, exit privately to 35+ chains via NEAR Intents.",
+    "category": "Consumer",
+    "repo_url": "https://github.com/YanYuanFE/mirage",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-09",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-20T07:46:54Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "EvanYan1024",
+        "name": "Evan",
+        "avatar_url": "https://avatars.githubusercontent.com/u/136288110?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-20"
+    ],
+    "head_sha": "90a4e42b1176dce6d32b797d542b7d6eb9d613ba",
+    "readme_hash": "1478:# Mirage\n\n**One wallet, every chain, no trace.**\n\nMirage is a privacy superapp built for the [STRK20 Private Sprint](https://strk20.starknet.io/hackathon). It turns the STRK20 shielded pool on Starkne",
+    "desc_v3": true,
+    "churn_pct": 0,
+    "summary": "Shield ERC-20 tokens and exit privately to multiple chains.",
+    "description_long": "Mirage shields any ERC-20 token on Starknet and allows users to send value to over 35 chains without linking their main wallet to the destination address. It uses the STRK20 pool for privacy, utilizes NEAR Intents for cross-chain execution with one-time deposit addresses, and incorporates a workflow engine that randomizes transfer timing to prevent re-linking. Key components include STRK20 Shielded Pool, NEAR Intents API, and a workflow engine running in a TEE.",
+    "latest_push": "Switched web app to Vite + React and created initial project documentation.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 17,
+    "deletions": 9,
+    "sprint": {
+      "pushes": 2,
+      "additions": 236,
+      "deletions": 9,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
     "slug": "morrow",
     "name": "Morrow",
     "one_liner": "A privacy preflight for STRK20 milestone payouts.",
@@ -47,7 +102,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-20T07:46:22Z",
+    "pushed_at": "2026-08-20T07:46:31Z",
     "stars": 0,
     "builders": [
       {
@@ -67,7 +122,6 @@
     "head_sha": "7b2842676a1d6ee26f9c9a61fe4e77ec7443aea5",
     "readme_hash": "5082:# Morrow\n\nMorrow is a privacy preflight for STRK20 milestone payouts. Before an operator funds a grant, it makes the transaction structure legible: what is public, what remains inside STRK20, and whet",
     "desc_v3": true,
-    "churn_pct": 28.5,
     "summary": "Prepares funding routes for milestone payouts in a privacy-conscious way.",
     "description_long": "Morrow analyzes transaction structures for grant funding on STRK20 milestones. It compares funding routes, drafts terms without revealing recipient addresses, and clarifies the privacy boundaries of various interactions. Built with a static preflight, it screens deposits without handling sensitive keys, ensuring transparent funding while maintaining privacy disclosures.",
     "latest_push": "Shipped verified Morrow funding evidence along with related documentation.",
@@ -111,6 +165,7 @@
     "has_readme": true,
     "additions": 515,
     "deletions": 97,
+    "churn_pct": 28.5,
     "sprint": {
       "pushes": 10,
       "additions": 6933,
@@ -175,7 +230,6 @@
     "head_sha": "88f711ab82ef78234c63622b394aeaf5ce524121",
     "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
     "desc_v3": true,
-    "churn_pct": 4.6,
     "summary": "Conduct private negotiations with encrypted messaging and escrow settlement.",
     "description_long": "Two parties can negotiate and settle payments inside one encrypted timeline. It is built with Cairo helper contracts for messaging, offers, private escrow, and escrow settlement, all interfacing through the STRK20 Privacy Pool's `InvokeExternal`.",
     "latest_push": "Documented the architecture of private chat and offer features.",
@@ -189,6 +243,7 @@
     "has_readme": true,
     "additions": 738,
     "deletions": 88,
+    "churn_pct": 4.6,
     "sprint": {
       "pushes": 100,
       "additions": 13201,
@@ -249,7 +304,6 @@
     "head_sha": "5e4ee4a9539d1b5fcf827020ab6cb57f209b4edc",
     "readme_hash": "5690:<div align=\"center\">\n\n# Veyl\n\n**A private launch & trading terminal on Starknet.**\n\nTrade and launch tokens without your wallet becoming a target — funded through the [STRK20](https://strk20-by-exampl",
     "desc_v3": true,
-    "churn_pct": 4.4,
     "summary": "Trade and launch tokens without exposing wallet links.",
     "description_long": "Veyl is a trading and launch terminal where executed trades remain unlinkable to the user's wallet. It allows users to deposit into the STRK20 privacy pool, trade from anonymous execution identities, and conduct sealed-bid launches with escrowed STRK20 notes. The project consists of a frontend built with Next.js, a backend utilizing Cairo contracts, and integration with STRK20 for shielded funding and private transfers.",
     "latest_push": "Verified Phase 2 end-to-end real shield to shadow-account trade on Sepolia.",
@@ -293,6 +347,7 @@
     "has_readme": true,
     "additions": 177,
     "deletions": 14,
+    "churn_pct": 4.4,
     "sprint": {
       "pushes": 28,
       "additions": 6716,
@@ -353,7 +408,6 @@
     "head_sha": "f9e9a5a0424b91437abdad50dcae9155a572da8d",
     "readme_hash": "5592:# APP20\n\nPrivate superapp on Starknet.\n\nFour features, in product order:\n\n1. **Vault** — shielded STRK wallet\n2. **Intents** — cross-chain review desk\n3. **Workflows** — advisory policy desk\n4. **Mail",
     "desc_v3": true,
-    "churn_pct": 1.8,
     "summary": "Send encrypted messages with payments attached.",
     "description_long": "Users can send private messages with payment context through an encrypted mailbox. The application consists of four components: a shielded wallet (Vault), a cross-chain review desk (Intents), an advisory policy desk (Workflows), and the encrypted Mailbox for communication. It is built with various packages for accounts, policy verification, and integration with the STRK20 privacy pool, all deploying to a Cloudflare Worker.",
     "latest_push": "Added the @app20/private-intents solver core and its tests.",
@@ -402,6 +456,7 @@
     "has_readme": true,
     "additions": 705,
     "deletions": 2,
+    "churn_pct": 1.8,
     "sprint": {
       "pushes": 100,
       "additions": 29518,
@@ -463,7 +518,6 @@
     "head_sha": "807e866c9817f7f6b6e9f804f071520faacbdf0d",
     "readme_hash": "1070:# Velpod\n\nPrivate concentrated liquidity on [Ekubo](https://docs.ekubo.org/) via [STRK20](https://strk20.starknet.io/hackathon).\n\nYou zap one shielded asset into a full-range Ekubo position. The Posit",
     "desc_v3": true,
-    "churn_pct": 100,
     "summary": "Manage private concentrated liquidity on Ekubo.",
     "description_long": "Zaps a shielded asset into a full-range position on Ekubo. The Positions NFT is stored on a pool-only helper, ensuring anonymity for the liquidity provider while keeping the ticks and size of the pool public. The project is scaffolded from the STRK20 starter kit and will implement Deposit and Withdraw features in place of the current `privacy_invoke` helper.",
     "latest_push": "Created the initial Velpod scaffold for the STRK20 Private Sprint.",
@@ -502,6 +556,7 @@
     "has_readme": true,
     "additions": 4232,
     "deletions": 0,
+    "churn_pct": 100,
     "sprint": {
       "pushes": 1,
       "additions": 4232,
@@ -976,7 +1031,7 @@
     "churn_pct": 0,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added Wotta documentation, implementation plan, and .gitignore.",
+    "latest_push": "Added Wotta documentation, an implementation plan, and .gitignore.",
     "tooling": [],
     "has_readme": false,
     "additions": 1117,
@@ -1766,7 +1821,7 @@
     "churn_pct": 0,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added project documentation and hackathon scaffolding.",
+    "latest_push": "Created project documentation and basic hackathon scaffolding.",
     "tooling": [],
     "has_readme": false,
     "additions": 1172,
