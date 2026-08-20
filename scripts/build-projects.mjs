@@ -1107,9 +1107,6 @@ async function buildProject(entry, prev) {
     console.log(`  ${entry.slug}: name drift - registry says "${entry.name}", README says "${readmeTitle}"`);
   }
 
-  let summary = junk(prev?.summary) ? "" : prev.summary;
-  let descriptionLong = junk(prev?.description_long) ? "" : prev.description_long;
-  const readmeHash = readme ? digest(readme) : "";
   /* "Offers" was banned and "offering" went out on the board the same day. The
      stems are matched with their endings rather than the exact word. */
   const offenders = (text) => BANNED_WORDS.filter((w) => new RegExp(`\\b${w}(?:s|es|ing|ed)?\\b`, "i").test(text || ""));
@@ -1117,6 +1114,9 @@ async function buildProject(entry, prev) {
      out as a project's summary. Treated as absent, so it is asked again. */
   const junk = (t) => !String(t || "").trim() || /^(undefined|null|none|n\/a|unknown)\.?$/i.test(String(t).trim());
 
+  let summary = junk(prev?.summary) ? "" : prev.summary;
+  let descriptionLong = junk(prev?.description_long) ? "" : prev.description_long;
+  const readmeHash = readme ? digest(readme) : "";
   /* Whether the sentences below this README were actually written. A call that
      came back empty - no key, a rate limit, a bad response - must not be
      recorded as done, or the next run reads a matching hash and a v4 flag and
