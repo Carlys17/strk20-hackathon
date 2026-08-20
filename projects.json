@@ -1,5 +1,144 @@
 [
   {
+    "slug": "wotta",
+    "name": "Wotta",
+    "one_liner": "Pay anyone, from any chain, to an @handle or email - and let them receive privately on Starknet.",
+    "category": "Payments",
+    "repo_url": "https://github.com/wurli-sh/wotta-strk",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-09",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-20T06:26:41Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "wurli-sh",
+        "name": "wurli-sh",
+        "avatar_url": "https://avatars.githubusercontent.com/u/261630289?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-20"
+    ],
+    "head_sha": "41bc0cfa210d5e088115ad9508b58fce329ddb32",
+    "readme_hash": "",
+    "desc_v3": true,
+    "churn_pct": 0,
+    "summary": "",
+    "description_long": "",
+    "latest_push": "Added Wotta documentation, implementation plan, and .gitignore.",
+    "tooling": [],
+    "has_readme": false,
+    "additions": 1117,
+    "deletions": 0,
+    "sprint": {
+      "pushes": 2,
+      "additions": 1318,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
+    "slug": "erebus",
+    "name": "Erebus",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/PoulavBhowmick03/Erebus",
+    "demo_url": "https://erebus-private-agents.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Erebus enables privacy in autonomous agent transactions with novel encrypted negotiation.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-20T06:19:34Z",
+    "stars": 2,
+    "builders": [
+      {
+        "login": "PoulavBhowmick03",
+        "name": "PoulavBhowmick03",
+        "avatar_url": "https://avatars.githubusercontent.com/u/133862694?v=4"
+      },
+      {
+        "login": "ishitab02",
+        "name": "Ishita",
+        "avatar_url": "https://avatars.githubusercontent.com/u/139248026?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20"
+    ],
+    "head_sha": "7f590467d4136cdcae7c63a243ce293c3d140e73",
+    "readme_hash": "15291:# Erebus\n\n**Negotiate in darkness, settle in silence.**\n\nErebus is experimental coordination and shielded-settlement infrastructure for AI agents.\n\n[Open the public demo](https://erebus-private-agents",
+    "desc_v3": true,
+    "churn_pct": 2.2,
+    "summary": "Conduct secure negotiations and settlements for AI agents.",
+    "description_long": "Erebus allows AI agents to negotiate and settle transactions through encrypted channels and a shielded pool. It uses a channel primitive to establish communication, encrypts negotiation payloads with AES-256-GCM-SIV, and settles payments atomically in one transaction. The system encompasses an Erebus SDK, wire design for payload encryption, and a discovery service, with contracts and a data model outlined in the repository.",
+    "latest_push": "Transformed the README into SDK documentation and created a reference file.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Rust",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 381,
+    "deletions": 58,
+    "sprint": {
+      "pushes": 35,
+      "additions": 7497,
+      "deletions": 2997,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "applies privacy to agent-to-agent commerce using encrypted negotiation channels.",
+      "why_complex": "implements AES-256-GCM-SIV for wire v2 and includes multiple interacting agents and roles.",
+      "reason": "Erebus enables privacy in autonomous agent transactions with novel encrypted negotiation.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
     "slug": "cloakra",
     "name": "Cloakra",
     "one_liner": "",
@@ -62,7 +201,6 @@
     "head_sha": "7fa268796952e0af13327cfcf24bdaa832f607e1",
     "readme_hash": "4459:# 🛡️ Cloakra\n\n**Shielded capital allocation on Starknet Mainnet, powered by the STRK20 Privacy Pool.**\n\nGrants, bug bounties, and contributor payouts are the most identity-revealing transactions an o",
     "desc_v3": true,
-    "churn_pct": 14,
     "summary": "Conduct anonymous capital allocations for grants and bounties.",
     "description_long": "Cloakra manages capital allocation while keeping recipient identities private. It includes modules such as StealthSplit for splitting funds, GhostBounty for anonymous bounty payouts, and StealthGrant for shielded grant disbursement. The application integrates with the STRK20 pool through WalletAccountV6, executing actions in a single transaction without holding key material server-side.",
     "latest_push": "Added module tabs for StealthSplit, GhostBounty, StealthGrant, and Treasury.",
@@ -70,6 +208,7 @@
     "has_readme": true,
     "additions": 266,
     "deletions": 88,
+    "churn_pct": 14,
     "sprint": {
       "pushes": 14,
       "additions": 7063,
@@ -134,7 +273,6 @@
     "head_sha": "1ae8754525f21e7698d58d6e67ec3835286ad329",
     "readme_hash": "2777:# VINSS — Private Deal Room on Starknet\n\nTwo parties negotiate, agree on terms, and settle payment inside one\nencrypted timeline. Built on STRK20's privacy pool via application-specific\nCairo helper c",
     "desc_v3": true,
-    "churn_pct": 12.6,
     "summary": "Conduct private negotiations with encrypted messaging and escrow settlement.",
     "description_long": "Two parties can negotiate and settle payments inside one encrypted timeline. It is built with Cairo helper contracts for messaging, offers, private escrow, and escrow settlement, all interfacing through the STRK20 Privacy Pool's `InvokeExternal`.",
     "latest_push": "Added production technical documentation and OpenAPI definitions.",
@@ -148,6 +286,7 @@
     "has_readme": true,
     "additions": 2193,
     "deletions": 55,
+    "churn_pct": 12.6,
     "sprint": {
       "pushes": 100,
       "additions": 12485,
@@ -769,7 +908,7 @@
     "churn_pct": 0,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added project documentation and hackathon scaffolding.",
+    "latest_push": "Created project documentation and initial hackathon scaffolding.",
     "tooling": [],
     "has_readme": false,
     "additions": 1172,
@@ -2891,89 +3030,6 @@
     "star_evidence": "Cairo in the repository"
   },
   {
-    "slug": "erebus",
-    "name": "Erebus",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/PoulavBhowmick03/Erebus",
-    "demo_url": "https://erebus-private-agents.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Erebus enables privacy in autonomous agent transactions with novel encrypted negotiation.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-19T18:59:54Z",
-    "stars": 2,
-    "builders": [
-      {
-        "login": "PoulavBhowmick03",
-        "name": "PoulavBhowmick03",
-        "avatar_url": "https://avatars.githubusercontent.com/u/133862694?v=4"
-      },
-      {
-        "login": "ishitab02",
-        "name": "Ishita",
-        "avatar_url": "https://avatars.githubusercontent.com/u/139248026?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19"
-    ],
-    "head_sha": "0d1fea2585f10739e9a9bfa0340f0acce8e5d348",
-    "readme_hash": "11409:# Erebus\n\n**Negotiate in darkness, settle in silence.**\n\nErebus is experimental coordination and shielded-settlement infrastructure for AI agents.\n\n[Open the public demo](https://erebus-private-agents",
-    "desc_v3": true,
-    "summary": "Facilitates encrypted negotiation and settlement for AI agents.",
-    "description_long": "Erebus allows two AI agents to open an encrypted channel for structured offers and settle payments atomically. Built on Starknet Sepolia, it uses wire-v2 for negotiation payload encryption with AES-256-GCM-SIV, linking transactions to shielded pool notes and allowing selective disclosure for later access by third parties.",
-    "latest_push": "Released version 0.1.0 and restored status.md.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Rust",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 205,
-    "deletions": 15,
-    "churn_pct": 1.1,
-    "sprint": {
-      "pushes": 33,
-      "additions": 7140,
-      "deletions": 2963,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "applies privacy to agent-to-agent commerce using encrypted negotiation channels.",
-      "why_complex": "implements AES-256-GCM-SIV for wire v2 and includes multiple interacting agents and roles.",
-      "reason": "Erebus enables privacy in autonomous agent transactions with novel encrypted negotiation.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
     "slug": "oxa-protocol",
     "name": "oxa-protocol",
     "one_liner": "Privacy-preserving, policy-controlled payments for autonomous agents on Starknet.",
@@ -3308,7 +3364,7 @@
       },
       {
         "address": "0x0371e11c7cae61bc2fd5ce6b75153d59746ecf2d88b286be6ebe9c7c001e330c",
-        "network": "unknown"
+        "network": "mainnet"
       },
       {
         "address": "0x05cc31d13d5901347d009f70f59abacb22b76e84963286004b67bf4644546890",
@@ -3407,7 +3463,7 @@
       "reason": "Aperture provides a private governance solution leveraging shielded transactions for DAOs.",
       "facts_v2": true
     },
-    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
+    "star_evidence": "2 contracts deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "facet",
