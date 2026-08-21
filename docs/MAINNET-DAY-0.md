@@ -10,7 +10,7 @@ The sprint is mainnet-only. Prizes require **three real transactions** against t
 
 | | |
 |---|---|
-| A Starknet wallet | Ready (formerly Argent) or Braavos, switched to **Mainnet** |
+| A Starknet wallet | Ready (formerly Argent) or Braavos, switched to **Mainnet**. Enough for everything on this page - registering a viewing key, shielding, and the three transactions. Building *on* the Wallet API route is a higher bar: see the note below. |
 | STRK for gas and for shielding | From a centralized exchange that supports Starknet withdrawals, or bridged from Ethereum |
 | Three mainnet transaction hashes | Go in `strk20.json` in your own repository. Each is checked on-chain: it must exist, have succeeded, and carry a STRK20 pool event. |
 
@@ -28,7 +28,7 @@ Pool on Voyager: [voyager.online/contract/0x040337b1af3c663e86e333bab5a4b28da8d4
 
 > **Do you actually need a proving service URL?** Every private transaction is proved. What decides this is *who* reaches the proving service - the user's wallet, or you.
 >
-> - **Private dapp through the Wallet API** - the user's privacy-enabled wallet holds the keys and reaches a proving service itself. You need a Starknet RPC URL and nothing else. This is the route most teams here are on, and the only one that needs no proving service URL of your own.
+> - **Private dapp through the Wallet API** - the user's privacy-enabled wallet holds the keys and reaches a proving service itself. You need a Starknet RPC URL and nothing else, and it is the only route that needs no proving service URL of your own. **It does need the user's wallet to implement the STRK20 methods, and not every Starknet wallet does yet.** There is no published list of which ones do; until there is, probe rather than assume - `wallet_strk20Balances` is read-only, so it is safe to call against an arbitrary wallet, and a wallet that answers "not implemented" has told you to show a different path. [PugarHuda's probe](https://github.com/PugarHuda/jalin/blob/main/app/app/page.tsx) is about twenty lines, MIT, and reported in [#121](https://github.com/starkience/strk20-hackathon/issues/121).
 > - **Privacy SDK holding your own keys** - you reach the proving service, so you need its URL. `MockProofProvider` is for tests only; real proofs go through `ProvingServiceProofProvider(proverUrl, chainId)`.
 > - **Cairo anonymizer contracts** - these do **not** avoid the prover. An anonymizer is called *by the pool contract*, through `privacy_invoke`, from inside a private transaction that was proved like any other. Writing one is orthogonal to which of the two routes above you are on.
 >
