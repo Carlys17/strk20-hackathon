@@ -1,5 +1,317 @@
 [
   {
+    "slug": "almoner",
+    "name": "Almoner",
+    "one_liner": "Private batch disbursement on STRK20: pay many people from a shielded balance for one flat pool fee, including people who have never registered.",
+    "category": "Infra",
+    "repo_url": "https://github.com/leojay-net/almoner",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-10",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T21:26:38Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "leojay-net",
+        "name": "leojay",
+        "avatar_url": "https://avatars.githubusercontent.com/u/102752992?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-21"
+    ],
+    "head_sha": "99c5db9e718e3fe7e790e3e14f025554a993bf4d",
+    "readme_hash": "9c5e86bc7fbfcfaa",
+    "desc_v6": true,
+    "churn_pct": 0,
+    "summary": "Batch payment disbursement to registered and unregistered recipients.",
+    "description_long": "Almoner allows users to make batch payments from a shielded balance to multiple recipients at once. It handles funds in escrow for those who have not registered, ensuring they can receive payments prior to joining the STRK20 pool. The process involves a funding step requiring a ZK proof, followed by unattended operations by an Almoner server for managing recipients and tracking claims.",
+    "latest_push": "Added a living state document and delivery plan for project handoff.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 8,
+    "deletions": 5,
+    "sprint": {
+      "pushes": 9,
+      "additions": 467,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
+    "slug": "airlock",
+    "name": "Airlock",
+    "one_liner": "One-click privacy from any chain: bridge in, hold private, withdraw to a different chain with no on-chain link.",
+    "category": "Infra",
+    "repo_url": "https://github.com/kenkomu/airlock",
+    "demo_url": "https://kenkomu.github.io/airlock/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-09",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Airlock creates a cross-chain privacy solution without direct links between transactions.",
+    "contracts": [
+      {
+        "address": "0x004c368ae058ee81b61884c5c47ee57484c4348669b66ac606366bbd1fd1b1fb",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x00de39f79e7e8b0dcdafe955330e206990203d6047a22e853eab9df83c440e6b",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x78d391e720a1c34540be9416496834b830d3f2105b7cf798ab4ab1cd6169cca",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      },
+      {
+        "hash": "0x6c6b6a15f7e3065b0db3e7e49ec17871dbf90c2576e46c8bd045b6d4009ff82",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      },
+      {
+        "hash": "0x6beb4415dc14438f5870e1b37cabaf53e361cf09c8bc2e7a12fc83b2ce2887",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      }
+    ],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T21:21:04Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "renoschubert",
+        "name": "Kenneth Komu",
+        "avatar_url": "https://avatars.githubusercontent.com/u/46114615?v=4"
+      },
+      {
+        "login": "kenkomu",
+        "name": "Kenneth Njoroge",
+        "avatar_url": "https://avatars.githubusercontent.com/u/95502725?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "head_sha": "097b6e4d48145d9d83c818bbaee74d5c5ed9e5a6",
+    "readme_hash": "0d2d6b1641142387",
+    "desc_v6": true,
+    "churn_pct": 0.6,
+    "summary": "A cross-chain privacy tool that bridges assets with no on-chain link.",
+    "description_long": "Airlock allows users to move assets between different chains while maintaining privacy, ensuring that deposit and withdrawal addresses are not linkable. It includes a live demo and features such as the `AirlockBucketer` anonymizer to split withdrawals into standard denominations, preserving anonymity by avoiding distinctive amounts. Built on the STRK20 privacy pool, the project uses Cairo for its contracts and integrates wallet support for privacy-enabled Starknet wallets.",
+    "latest_push": "Corrected the anonymizer documentation regarding the pool's call status.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Anonymizer contract",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 39,
+    "deletions": 8,
+    "sprint": {
+      "pushes": 50,
+      "additions": 12436,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": false,
+      "why_innovative": "It enables unlinkable cross-chain asset movement using a privacy pool mechanism.",
+      "why_complex": "No deployed contracts or proven engineering components are present.",
+      "reason": "Airlock creates a cross-chain privacy solution without direct links between transactions.",
+      "facts_v2": true
+    },
+    "star_evidence": "2 contracts deployed, Cairo in the repository"
+  },
+  {
+    "slug": "strk20-privacy-wallet",
+    "name": "strk20-privacy-wallet",
+    "one_liner": "Umbra-grade privacy wallet for Starknet powered by STRK20 privacy pool",
+    "category": "Other",
+    "repo_url": "https://github.com/SmratJay/strk20-privacy-wallet",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project lacks both innovation in privacy application and complexity in engineering.",
+    "contracts": [
+      {
+        "address": "0x15235e8b34aa38baed771bf74ca966f63bbbd0509844098ff63f5adef2a4a96",
+        "network": "unknown"
+      },
+      {
+        "address": "0x658e68d9a311bcdd56d98d3ebbcebff2ddd43463547bab859d4d12092444c2b",
+        "network": "sepolia"
+      },
+      {
+        "address": "0xb0eefeb3c52b062ab63736e93355034058688cbfb8ccba7b7f75261b3f4897",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x29e641f5fa56d527a08b22a65bbc27d9cb27694fa983fa150329ade094e1f",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x0254a6b2997ef52e9f830ce1f543f6b29768295e8d17e2267d672c552cfe0d91",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x040337b1af3c663e86e333bab5a4b28da8d4652a15a69beee2b677776ffe812a",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x053c91253bc9682c04929ca02ed00b3e423f6710d2ee7e0d5ebb06f3ecf368a8",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T21:19:51Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "SmratJay",
+        "name": "SmratJay",
+        "avatar_url": "https://avatars.githubusercontent.com/u/74355410?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "head_sha": "4d5390c0c1599d7bb1b5abd80e92d7e709a5cca4",
+    "readme_hash": "eded08229639161f",
+    "desc_v6": true,
+    "churn_pct": 0.2,
+    "summary": "Private perpetual futures trading with shielded collateral on Starknet.",
+    "description_long": "This project implements a zero-knowledge perpetual futures protocol on Starknet, allowing traders to deposit shielded collateral and open leveraged positions without disclosing any details about size, entry price, direction, or results. The core components include Groth16 zk-SNARK proofs for state transitions, interaction with the STRK20 privacy pool for spending shielded notes, and on-chain verification via dedicated verifiers, ensuring both privacy and solvency during trading operations.",
+    "latest_push": "Implemented real STRK20 collateral spending and operator health features.",
+    "tooling": [
+      {
+        "label": "AVNU",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Rust",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 217,
+    "deletions": 64,
+    "sprint": {
+      "pushes": 75,
+      "additions": 20115,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "applies privacy to a wallet but offers no new technology or mechanism beyond existing solutions.",
+      "why_complex": "no deployed contracts or innovative engineering work is present to assess.",
+      "reason": "The project lacks both innovation in privacy application and complexity in engineering.",
+      "facts_v2": true
+    },
+    "star_evidence": "2 contracts deployed on mainnet, Cairo in the repository"
+  },
+  {
     "slug": "aegis-rescue",
     "name": "Aegis Rescue",
     "one_liner": "Whitehat rescue bot: sweeps exposed on-chain funds into the STRK20 shielded pool before attackers can, returns them to verified GitHub owners.",
@@ -74,7 +386,6 @@
     "head_sha": "5fabfd88c618f63e88481b597c68df1937350362",
     "readme_hash": "a871f5ff1107fb3c",
     "desc_v6": true,
-    "churn_pct": 18.3,
     "summary": "A whitehat rescue bot that sweeps exposed on-chain funds to safety.",
     "description_long": "Aegis monitors public repositories for accidentally leaked private keys and API keys, verifies if they control actual funds, and automatically sweeps those funds to a secure address before they can be exploited. It scans registered projects for sensitive filenames, checks for real balances, derives the Starknet account, deploys if necessary, and conducts sweeping operations entirely automated. Owners prove their identity through GitHub to reclaim their funds, which are transferred through the STRK20 shielded pool for enhanced privacy.",
     "latest_push": "Made the registry list collapsible and improved claim card clarity.",
@@ -118,6 +429,7 @@
     "has_readme": true,
     "additions": 593,
     "deletions": 209,
+    "churn_pct": 18.3,
     "sprint": {
       "pushes": 59,
       "additions": 5115,
@@ -133,125 +445,6 @@
       "facts_v2": true
     },
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "airlock",
-    "name": "Airlock",
-    "one_liner": "One-click privacy from any chain: bridge in, hold private, withdraw to a different chain with no on-chain link.",
-    "category": "Infra",
-    "repo_url": "https://github.com/kenkomu/airlock",
-    "demo_url": "https://kenkomu.github.io/airlock/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-09",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Airlock creates a cross-chain privacy solution without direct links between transactions.",
-    "contracts": [
-      {
-        "address": "0x004c368ae058ee81b61884c5c47ee57484c4348669b66ac606366bbd1fd1b1fb",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x00de39f79e7e8b0dcdafe955330e206990203d6047a22e853eab9df83c440e6b",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [
-      {
-        "hash": "0x78d391e720a1c34540be9416496834b830d3f2105b7cf798ab4ab1cd6169cca",
-        "ok": true,
-        "pool": true,
-        "mine": false,
-        "note": "touched the pool, but not through this project's contracts"
-      },
-      {
-        "hash": "0x6c6b6a15f7e3065b0db3e7e49ec17871dbf90c2576e46c8bd045b6d4009ff82",
-        "ok": true,
-        "pool": true,
-        "mine": false,
-        "note": "touched the pool, but not through this project's contracts"
-      },
-      {
-        "hash": "0x6beb4415dc14438f5870e1b37cabaf53e361cf09c8bc2e7a12fc83b2ce2887",
-        "ok": true,
-        "pool": true,
-        "mine": false,
-        "note": "touched the pool, but not through this project's contracts"
-      }
-    ],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T21:16:29Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "renoschubert",
-        "name": "Kenneth Komu",
-        "avatar_url": "https://avatars.githubusercontent.com/u/46114615?v=4"
-      },
-      {
-        "login": "kenkomu",
-        "name": "Kenneth Njoroge",
-        "avatar_url": "https://avatars.githubusercontent.com/u/95502725?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21"
-    ],
-    "head_sha": "baa348e88ebdce4571eb731050178e1b928c6278",
-    "readme_hash": "0d2d6b1641142387",
-    "desc_v6": true,
-    "churn_pct": 2.1,
-    "summary": "A cross-chain privacy tool that bridges assets with no on-chain link.",
-    "description_long": "Airlock allows users to move assets between different chains while maintaining privacy, ensuring that deposit and withdrawal addresses are not linkable. It includes a live demo and features such as the `AirlockBucketer` anonymizer to split withdrawals into standard denominations, preserving anonymity by avoiding distinctive amounts. Built on the STRK20 privacy pool, the project uses Cairo for its contracts and integrates wallet support for privacy-enabled Starknet wallets.",
-    "latest_push": "Rewrote the README to clarify the project execution details.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Anonymizer contract",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 107,
-    "deletions": 49,
-    "sprint": {
-      "pushes": 49,
-      "additions": 12405,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": false,
-      "why_innovative": "It enables unlinkable cross-chain asset movement using a privacy pool mechanism.",
-      "why_complex": "No deployed contracts or proven engineering components are present.",
-      "reason": "Airlock creates a cross-chain privacy solution without direct links between transactions.",
-      "facts_v2": true
-    },
-    "star_evidence": "2 contracts deployed, Cairo in the repository"
   },
   {
     "slug": "atrum",
@@ -293,7 +486,6 @@
     "head_sha": "7be5c301b7675921e6bea6bc08154b92471499cd",
     "readme_hash": "7b27f20512b31966",
     "desc_v6": true,
-    "churn_pct": 15.9,
     "summary": "A sealed-bid prediction market with hidden orders and tradable positions.",
     "description_long": "This project creates a prediction market where orders are submitted as private notes and are unreadable until the batch closes. Utilizing a sealed-bid batch auction mechanism, it computes a uniform clearing price post-closure, allowing bound orders to remain confidential and mitigates front-running risks. The system is built on previous experience with the Monad project and consists of a factory contract that deploys markets securely and permissionlessly while ensuring that creators cannot misuse their control over resolutions.",
     "latest_push": "Added a portfolio feature that recognizes finished bets and counts unclaimed pairs.",
@@ -332,6 +524,7 @@
     "has_readme": true,
     "additions": 994,
     "deletions": 16,
+    "churn_pct": 15.9,
     "sprint": {
       "pushes": 43,
       "additions": 10649,
@@ -380,7 +573,6 @@
     "head_sha": "d762aec8fc79a65e10845218118244ce328fe0e3",
     "readme_hash": "bc66988732da5f09",
     "desc_v6": true,
-    "churn_pct": 0.2,
     "summary": "Play heads-up poker with encrypted STRK20 cards.",
     "description_long": "This project implements a heads-up poker game using encrypted STRK20 `CARD` notes for hole cards. It features a trusted off-chain dealer in the current version, with plans for a trustless mental poker setup in a future version. The project includes local SDK validation and specifies requirements and local checks for development.",
     "latest_push": "Fixed pnpm configuration in CI and built Private Poker phase 0 scaffold.",
@@ -399,6 +591,7 @@
     "has_readme": true,
     "additions": 1,
     "deletions": 0,
+    "churn_pct": 0.2,
     "sprint": {
       "pushes": 4,
       "additions": 5295,
@@ -594,144 +787,6 @@
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "strk20-privacy-wallet",
-    "name": "strk20-privacy-wallet",
-    "one_liner": "Umbra-grade privacy wallet for Starknet powered by STRK20 privacy pool",
-    "category": "Other",
-    "repo_url": "https://github.com/SmratJay/strk20-privacy-wallet",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project lacks both innovation in privacy application and complexity in engineering.",
-    "contracts": [
-      {
-        "address": "0x15235e8b34aa38baed771bf74ca966f63bbbd0509844098ff63f5adef2a4a96",
-        "network": "unknown"
-      },
-      {
-        "address": "0x658e68d9a311bcdd56d98d3ebbcebff2ddd43463547bab859d4d12092444c2b",
-        "network": "sepolia"
-      },
-      {
-        "address": "0xb0eefeb3c52b062ab63736e93355034058688cbfb8ccba7b7f75261b3f4897",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x29e641f5fa56d527a08b22a65bbc27d9cb27694fa983fa150329ade094e1f",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x0254a6b2997ef52e9f830ce1f543f6b29768295e8d17e2267d672c552cfe0d91",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x040337b1af3c663e86e333bab5a4b28da8d4652a15a69beee2b677776ffe812a",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x053c91253bc9682c04929ca02ed00b3e423f6710d2ee7e0d5ebb06f3ecf368a8",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T20:25:51Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "SmratJay",
-        "name": "SmratJay",
-        "avatar_url": "https://avatars.githubusercontent.com/u/74355410?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21"
-    ],
-    "head_sha": "401547e6ad48b44d3a3576efb4ab462f08f55eb1",
-    "readme_hash": "937ad049a9cb7680",
-    "desc_v6": true,
-    "summary": "Private perpetual futures trading with shielded transactions and zk-SNARK verification.",
-    "description_long": "The project enables trading of private perpetual futures on Starknet using shielded collateral, ensuring that all trade details remain confidential. Built with Groth16 zk-SNARKs for proof verification, it allows users to open, fund, and close positions without public disclosures of sensitive information, while utilizing the STRK20 privacy pool for collateral management.",
-    "latest_push": "Implemented the STRK20 user-facing OPEN via bridge and its payout configuration.",
-    "tooling": [
-      {
-        "label": "AVNU",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Rust",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 436,
-    "deletions": 87,
-    "churn_pct": 0.3,
-    "sprint": {
-      "pushes": 74,
-      "additions": 20115,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "applies privacy to a wallet but offers no new technology or mechanism beyond existing solutions.",
-      "why_complex": "no deployed contracts or innovative engineering work is present to assess.",
-      "reason": "The project lacks both innovation in privacy application and complexity in engineering.",
-      "facts_v2": true
-    },
-    "star_evidence": "2 contracts deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "one-way",
