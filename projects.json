@@ -1,14 +1,139 @@
 [
   {
-    "slug": "atrum",
-    "name": "Atrum",
-    "one_liner": "Sealed-bid prediction markets: orders stay unreadable until they are binding, clear at a uniform price, and positions are tradeable before resolution.",
-    "category": "Other",
-    "repo_url": "https://github.com/atrummarkets/atrum-starknet",
-    "demo_url": "https://strk20.atrum.fun",
+    "slug": "almoner",
+    "name": "Almoner",
+    "one_liner": "Private batch disbursement on STRK20: pay many people from a shielded balance for one flat pool fee, including people who have never registered.",
+    "category": "Infra",
+    "repo_url": "https://github.com/leojay-net/almoner",
+    "demo_url": "",
     "demo_video": "",
-    "x_handle": "AtrumMarkets",
-    "inspired_by": "RFP-07",
+    "x_handle": "",
+    "inspired_by": "IDEA-10",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T22:32:49Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "leojay-net",
+        "name": "leojay",
+        "avatar_url": "https://avatars.githubusercontent.com/u/102752992?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-21"
+    ],
+    "head_sha": "b408c8b30a81ded8e458099350e23bfaf55ffd19",
+    "readme_hash": "d9e7510050a1c703",
+    "desc_v6": true,
+    "churn_pct": 24.3,
+    "summary": "Batch pay many users from a shielded balance with anonymity.",
+    "description_long": "Almoner allows users to batch pay multiple recipients at once from a shielded balance while keeping the specifics of each payment confidential. It operates by splitting payments at the proof boundary, where funds are moved into an escrow contract and then allocated to registered recipients or issued as claims for unregistered ones. The application is built using Next.js for the frontend and includes mechanisms for scheduling, claim management, and notifications.",
+    "latest_push": "Added recipient list parsing, registration detection, and UI gating for claims.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 847,
+    "deletions": 2,
+    "sprint": {
+      "pushes": 48,
+      "additions": 19256,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "one-way",
+    "name": "OneWay",
+    "one_liner": "A one-way door for any ERC-20. Get paid without sharing a wallet, or leave a known wallet and exit on another chain.",
+    "category": "Payments",
+    "repo_url": "https://github.com/d4m014/one-way",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "d4m014",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T22:31:30Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "d4m014",
+        "name": "d4m014",
+        "avatar_url": "https://avatars.githubusercontent.com/u/271264252?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-21"
+    ],
+    "head_sha": "7c5365ff092cca7226eaa22f9e515cbb995b28e8",
+    "readme_hash": "d6e46ace8afaa189",
+    "desc_v6": true,
+    "churn_pct": 14.9,
+    "summary": "A one-way door for ERC-20 tokens that enables private transfers and anonymous payments.",
+    "description_long": "OneWay allows users to get paid anonymously via a ghost address that does not reveal their identity. Users can also transfer funds from a known wallet to a private balance, and later exit to a fresh address on the same chain or another. The system is built using EVM-compatible contracts and a privacy layer, with security provided by a unique commitment derived from the user's signature.",
+    "latest_push": "Added EVM CREATE2 factory and receivers with corresponding tests.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 154,
+    "deletions": 0,
+    "sprint": {
+      "pushes": 8,
+      "additions": 5577,
+      "deletions": 184,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "ghostline",
+    "name": "GhostLine",
+    "one_liner": "A privacy firewall that detects transaction leakage before you sign on Starknet.",
+    "category": "Other",
+    "repo_url": "https://github.com/Leequidice/GhostLine",
+    "demo_url": "https://ghostline-weld.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
     "affiliation": "",
     "starred": false,
     "star_reason": "",
@@ -21,35 +146,33 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-21T22:18:01Z",
+    "pushed_at": "2026-08-21T22:29:13Z",
     "stars": 0,
     "builders": [
       {
-        "login": "TechnicallyKiller",
-        "name": "Divyanshh Kalra",
-        "avatar_url": "https://avatars.githubusercontent.com/u/86044867?v=4"
-      }
-    ],
-    "agents": [
+        "login": "Leequidice",
+        "name": "Leequidice",
+        "avatar_url": "https://avatars.githubusercontent.com/u/72930551?v=4"
+      },
       {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 1
+        "login": "h15629526027",
+        "name": "Your Name",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99627554?v=4"
       }
     ],
+    "agents": [],
     "active_days": [
       "2026-08-18",
       "2026-08-19",
       "2026-08-21"
     ],
-    "head_sha": "ccb88f1101bb3e040bca36fa7d9ee1db068c6477",
-    "readme_hash": "7b27f20512b31966",
+    "head_sha": "0a1ab69268ecb15c70dbe99ddcafd12927b24c49",
+    "readme_hash": "7f12b7954767c841",
     "desc_v6": true,
-    "churn_pct": 13.3,
-    "summary": "A sealed-bid prediction market with hidden orders and tradable positions.",
-    "description_long": "This project creates a prediction market where orders are submitted as private notes and are unreadable until the batch closes. Utilizing a sealed-bid batch auction mechanism, it computes a uniform clearing price post-closure, allowing bound orders to remain confidential and mitigates front-running risks. The system is built on previous experience with the Monad project and consists of a factory contract that deploys markets securely and permissionlessly while ensuring that creators cannot misuse their control over resolutions.",
-    "latest_push": "Moved the reveal window from the keeper's memory onto the chain.",
+    "churn_pct": 0.5,
+    "summary": "A privacy firewall that assesses transaction risks before signing on Starknet.",
+    "description_long": "GhostLine analyzes transactions to identify potential privacy leakage and recommends safer execution strategies. It calculates a privacy-risk score based on various signals like timing, amount similarity, and address reuse. Users receive actionable insights to make informed decisions before signing transactions.",
+    "latest_push": "Encoded STRK20 amounts as wallet felts in lib/strk20.ts.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -83,11 +206,106 @@
       }
     ],
     "has_readme": true,
-    "additions": 827,
-    "deletions": 97,
+    "additions": 3,
+    "deletions": 1,
     "sprint": {
-      "pushes": 44,
-      "additions": 11379,
+      "pushes": 29,
+      "additions": 7922,
+      "deletions": 1,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "atrum",
+    "name": "Atrum",
+    "one_liner": "Sealed-bid prediction markets: orders stay unreadable until they are binding, clear at a uniform price, and positions are tradeable before resolution.",
+    "category": "Other",
+    "repo_url": "https://github.com/atrummarkets/atrum-starknet",
+    "demo_url": "https://strk20.atrum.fun",
+    "demo_video": "",
+    "x_handle": "AtrumMarkets",
+    "inspired_by": "RFP-07",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T22:27:42Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "TechnicallyKiller",
+        "name": "Divyanshh Kalra",
+        "avatar_url": "https://avatars.githubusercontent.com/u/86044867?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 2
+      }
+    ],
+    "active_days": [
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-21"
+    ],
+    "head_sha": "f84314f20d2704d8c49fadea2545ccb463fd88bf",
+    "readme_hash": "7b27f20512b31966",
+    "desc_v6": true,
+    "churn_pct": 1.5,
+    "summary": "A sealed-bid prediction market with hidden orders and tradable positions.",
+    "description_long": "This project creates a prediction market where orders are submitted as private notes and are unreadable until the batch closes. Utilizing a sealed-bid batch auction mechanism, it computes a uniform clearing price post-closure, allowing bound orders to remain confidential and mitigates front-running risks. The system is built on previous experience with the Monad project and consists of a factory contract that deploys markets securely and permissionlessly while ensuring that creators cannot misuse their control over resolutions.",
+    "latest_push": "Redeployed Sepolia with enhancements to the reveal window enforcement.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 78,
+    "deletions": 29,
+    "sprint": {
+      "pushes": 45,
+      "additions": 11428,
       "deletions": 8,
       "computed": 2
     },
@@ -95,15 +313,114 @@
     "star_evidence": "Cairo in the repository"
   },
   {
-    "slug": "almoner",
-    "name": "Almoner",
-    "one_liner": "Private batch disbursement on STRK20: pay many people from a shielded balance for one flat pool fee, including people who have never registered.",
-    "category": "Infra",
-    "repo_url": "https://github.com/leojay-net/almoner",
+    "slug": "ghost-book",
+    "name": "GhostBook",
+    "one_liner": "Private limit orders and TWAP on Starknet: order terms committed once and enforced on-chain, filled through Ekubo, settled into STRK20 private notes.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/JemIIahh/ghostbook-starknet",
+    "demo_url": "https://ghostbook-starknet.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x0254fc4294398776cab056becb9630b996af2c10628e225ac7559e2d9069bacb",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T22:26:20Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "JemIIahh",
+        "name": "JemIIahh",
+        "avatar_url": "https://avatars.githubusercontent.com/u/275022204?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "head_sha": "c9c91ba003aa0e4e312fbb3ea39dbefceeeb9dbd",
+    "readme_hash": "27febe172da730fb",
+    "desc_v6": true,
+    "churn_pct": 0.5,
+    "summary": "Private limit orders with enforced on-chain terms and TWAPs through Ekubo.",
+    "description_long": "GhostBook creates a private order book on Starknet, allowing users to commit to an OrderPlan with specific terms like limit price and budget, which are enforced on-chain for every fill. The application uses a combination of Cairo contracts and interacts with the Ekubo DEX to handle swaps, returning the results as private notes in the STRK20 privacy pool.",
+    "latest_push": "Documented NOT_REGISTERED attribute and recorded the proving gate.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 21,
+    "deletions": 8,
+    "sprint": {
+      "pushes": 24,
+      "additions": 26433,
+      "deletions": 14259,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "nyalthe",
+    "name": "nyalthe",
+    "one_liner": "Privacy-preserving parametric claims on Starknet using STRK20",
+    "category": "Other",
+    "repo_url": "https://github.com/mystiquemide/nyalthe",
     "demo_url": "",
     "demo_video": "",
     "x_handle": "",
-    "inspired_by": "IDEA-10",
+    "inspired_by": "",
     "affiliation": "",
     "starred": false,
     "star_reason": "",
@@ -116,27 +433,52 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-21T22:15:56Z",
+    "pushed_at": "2026-08-21T22:23:56Z",
     "stars": 0,
     "builders": [
       {
-        "login": "leojay-net",
-        "name": "leojay",
-        "avatar_url": "https://avatars.githubusercontent.com/u/102752992?v=4"
+        "login": "mystiquemide",
+        "name": "MystiqueMide",
+        "avatar_url": "https://avatars.githubusercontent.com/u/176629124?v=4"
       }
     ],
     "agents": [],
     "active_days": [
       "2026-08-21"
     ],
-    "head_sha": "e583c557aba027ef552977225316a716352a277e",
-    "readme_hash": "d9e7510050a1c703",
+    "head_sha": "05cf949c1888c7812bfd24ba5ddba80e38d58995",
+    "readme_hash": "5936785fa9e94c4d",
     "desc_v6": true,
-    "churn_pct": 100,
-    "summary": "Batch pay many users from a shielded balance with anonymity.",
-    "description_long": "Almoner allows users to batch pay multiple recipients at once from a shielded balance while keeping the specifics of each payment confidential. It operates by splitting payments at the proof boundary, where funds are moved into an escrow contract and then allocated to registered recipients or issued as claims for unregistered ones. The application is built using Next.js for the frontend and includes mechanisms for scheduling, claim management, and notifications.",
-    "latest_push": "Added escrow anonymizer draft with funding and claim mechanisms.",
+    "churn_pct": 5,
+    "summary": "A privacy-preserving claims rail for public verification of private payouts.",
+    "description_long": "Nyalthe allows for the creation of a funded event policy that settles private claimant payouts while enabling public verification of the policy and the transactions involved. The project consists of contracts that manage the policy creation, funding reserves, event acceptance, claim authorization, and private settlement. It is currently in early public build, with ongoing implementation and testing tracked in the repository.",
+    "latest_push": "Added the Nyalthe policy lifecycle contract.",
     "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
       {
         "label": "Cairo",
         "live": false,
@@ -144,11 +486,11 @@
       }
     ],
     "has_readme": true,
-    "additions": 2958,
+    "additions": 84,
     "deletions": 0,
     "sprint": {
-      "pushes": 44,
-      "additions": 18411,
+      "pushes": 9,
+      "additions": 4462,
       "deletions": 0,
       "computed": 2
     },
@@ -201,7 +543,6 @@
     "head_sha": "1875fbe4ae9dfb951e98606bf2575e055cd1ad7d",
     "readme_hash": "a2cae4fa4741c3e1",
     "desc_v6": true,
-    "churn_pct": 52.8,
     "summary": "Unlinkable cross-chain payouts and a Linkability Meter for privacy assurance.",
     "description_long": "Crosslink allows users to fund a shielded balance on STRK20 and pay someone else, enabling unlinkable payouts across chains. The Linkability Meter evaluates pending payouts based on amount uniqueness, timing correlation, and pool depth, blocking transactions that do not preserve privacy. The project includes components like `starkware-libs/privacy-bridge` and is built for the STRK20 Private Sprint.",
     "latest_push": "Added Wallet API integration page and side-by-side demo for privacy options.",
@@ -215,6 +556,7 @@
     "has_readme": true,
     "additions": 1425,
     "deletions": 0,
+    "churn_pct": 52.8,
     "sprint": {
       "pushes": 20,
       "additions": 11728,
@@ -223,70 +565,6 @@
     },
     "assessment": null,
     "star_evidence": ""
-  },
-  {
-    "slug": "one-way",
-    "name": "OneWay",
-    "one_liner": "A one-way door for any ERC-20. Get paid without sharing a wallet, or leave a known wallet and exit on another chain.",
-    "category": "Payments",
-    "repo_url": "https://github.com/d4m014/one-way",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "d4m014",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T22:08:25Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "d4m014",
-        "name": "d4m014",
-        "avatar_url": "https://avatars.githubusercontent.com/u/271264252?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-21"
-    ],
-    "head_sha": "e5326d49cafb627a1db6d906b417bf4c61a14b0b",
-    "readme_hash": "d6e46ace8afaa189",
-    "desc_v6": true,
-    "churn_pct": 16.5,
-    "summary": "A one-way door for ERC-20 tokens that enables private transfers and anonymous payments.",
-    "description_long": "OneWay allows users to get paid anonymously via a ghost address that does not reveal their identity. Users can also transfer funds from a known wallet to a private balance, and later exit to a fresh address on the same chain or another. The system is built using EVM-compatible contracts and a privacy layer, with security provided by a unique commitment derived from the user's signature.",
-    "latest_push": "Added copy, QR, and invoice ghosts to the app and crypto package.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 133,
-    "deletions": 20,
-    "sprint": {
-      "pushes": 7,
-      "additions": 5423,
-      "deletions": 184,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "nexora-protocol",
@@ -332,7 +610,6 @@
     "head_sha": "374426c00ab762cbae564200805a8608cb150ac9",
     "readme_hash": "80fcf501d5eb99ac",
     "desc_v6": true,
-    "churn_pct": 7.3,
     "summary": "A cross-chain privacy routing protocol for asset transfers.",
     "description_long": "Nexora Protocol allows users to deposit assets on various supported chains and hold them privately as STRK20 shielded notes. Users can withdraw to any destination chain with minimized public linkability. It is built using Starknet with a frontend for user interaction, a relayer for transaction handling, and a privacy core that manages encryption and selective disclosure.",
     "latest_push": "Fixed private transfer orchestration, prover integration, and StarkGate fallback.",
@@ -351,6 +628,7 @@
     "has_readme": true,
     "additions": 1243,
     "deletions": 49,
+    "churn_pct": 7.3,
     "sprint": {
       "pushes": 16,
       "additions": 19855,
@@ -365,99 +643,6 @@
       "reason": "The protocol allows for cross-chain privacy routing, not just a bridge wrapper.",
       "facts_v2": true
     },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "ghostline",
-    "name": "GhostLine",
-    "one_liner": "A privacy firewall that detects transaction leakage before you sign on Starknet.",
-    "category": "Other",
-    "repo_url": "https://github.com/Leequidice/GhostLine",
-    "demo_url": "https://ghostline-weld.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T21:50:40Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "h15629526027",
-        "name": "Your Name",
-        "avatar_url": "https://avatars.githubusercontent.com/u/99627554?v=4"
-      },
-      {
-        "login": "Leequidice",
-        "name": "Leequidice",
-        "avatar_url": "https://avatars.githubusercontent.com/u/72930551?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-21"
-    ],
-    "head_sha": "b09952a620d31d856030ad685be18947cbf1425a",
-    "readme_hash": "7f12b7954767c841",
-    "desc_v6": true,
-    "summary": "A privacy firewall that assesses transaction risks before signing on Starknet.",
-    "description_long": "GhostLine analyzes transactions to identify potential privacy leakage and recommends safer execution strategies. It calculates a privacy-risk score based on various signals like timing, amount similarity, and address reuse. Users receive actionable insights to make informed decisions before signing transactions.",
-    "latest_push": "Validated STRK20 action payloads before submission.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 26,
-    "deletions": 2,
-    "churn_pct": 3.3,
-    "sprint": {
-      "pushes": 27,
-      "additions": 7920,
-      "deletions": 1,
-      "computed": 2
-    },
-    "assessment": null,
     "star_evidence": "Cairo in the repository"
   },
   {
@@ -4709,104 +4894,6 @@
     "star_evidence": "Cairo in the repository"
   },
   {
-    "slug": "ghost-book",
-    "name": "GhostBook",
-    "one_liner": "Private limit orders and TWAP on Starknet: order terms committed once and enforced on-chain, filled through Ekubo, settled into STRK20 private notes.",
-    "category": "DeFi",
-    "repo_url": "https://github.com/JemIIahh/ghostbook-starknet",
-    "demo_url": "https://ghostbook-starknet.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x0254fc4294398776cab056becb9630b996af2c10628e225ac7559e2d9069bacb",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-20T20:31:56Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "JemIIahh",
-        "name": "JemIIahh",
-        "avatar_url": "https://avatars.githubusercontent.com/u/275022204?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20"
-    ],
-    "head_sha": "4d8ebf21cf49cde232aad1acc99465745de9eb41",
-    "readme_hash": "54720b54576dcea5",
-    "desc_v6": true,
-    "summary": "Private limit orders and TWAPs using an STRK20 anonymizer on Starknet.",
-    "description_long": "GhostBook creates a private order book for limit orders and time-weighted average prices (TWAPs) on Starknet. Users commit to an 'OrderPlan' detailing terms like limit price and total budget, and this plan is enforced on-chain for every order fill through the GhostBookAnonymizer. The application is built using Cairo contracts, integrated with the Ekubo DEX for transaction execution, and features a frontend developed in Next.js.",
-    "latest_push": "Audited the strk20.json file and deployed a hosted demo at Vercel.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 117,
-    "deletions": 37,
-    "churn_pct": 2.5,
-    "sprint": {
-      "pushes": 23,
-      "additions": 26420,
-      "deletions": 14259,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
-  },
-  {
     "slug": "morok-pay-starknet",
     "name": "MorokPay",
     "one_liner": "Private USDC treasury on Starknet, funded from Ethereum via CCTP.",
@@ -5684,10 +5771,9 @@
       },
       {
         "hash": "0x5bac436e2a9775719de94e0ec1ea62f1cbc9737b23dd780230df66a53cc7813",
-        "ok": false,
-        "pool": false,
-        "mine": false,
-        "note": "not found on mainnet"
+        "ok": true,
+        "pool": true,
+        "mine": true
       },
       {
         "hash": "0x4902a7a2702b9533cf8992f5bf6953947e0d9616f8dbc9bc5b1976e0082f494",
@@ -5696,13 +5782,13 @@
         "mine": true
       }
     ],
-    "verified_txs": 2,
+    "verified_txs": 3,
     "requirements": {
       "demo": true,
       "video": true,
-      "mainnet": false
+      "mainnet": true
     },
-    "status": "building",
+    "status": "finished",
     "pushed_at": "2026-08-20T11:48:33Z",
     "stars": 0,
     "builders": [
