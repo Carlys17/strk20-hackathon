@@ -1,5 +1,72 @@
 [
   {
+    "slug": "jalin",
+    "name": "Jalin",
+    "one_liner": "A programmable execution router for the STRK20 pool: arbitrary multi-step, multi-token plans executed inside a single privacy_invoke, with safety carried by on-chain invariants rather than a whitelist.",
+    "category": "Infra",
+    "repo_url": "https://github.com/PugarHuda/jalin",
+    "demo_url": "https://jalin-five.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T03:08:12Z",
+    "stars": 1,
+    "builders": [
+      {
+        "login": "PugarHuda",
+        "name": "PugarHuda",
+        "avatar_url": "https://avatars.githubusercontent.com/u/94729172?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "head_sha": "85d5c91be17da0cc192f54cb7b29113764cf46b0",
+    "readme_hash": "a1a3e033c7a75857",
+    "desc_v6": true,
+    "churn_pct": 100,
+    "summary": "Execute multi-step, multi-token transactions in a single private action.",
+    "description_long": "Jalin allows private transactions to execute complex multi-step plans involving multiple tokens, such as swaps, lending, and bridging, all within a single `privacy_invoke`. It is built with Cairo contracts that define a series of steps for each transaction, ensuring safety through enforced invariants without requiring a whitelist of actions. The repository contains contracts, a TypeScript SDK for plan encoding, a demo application, and documentation on deployment and threat models.",
+    "latest_push": "Recorded the mainnet declare blockers and updated the runbook with bounds.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 3701,
+    "deletions": 2972,
+    "sprint": {
+      "pushes": 18,
+      "additions": 22346,
+      "deletions": 10,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
     "slug": "chaoskeyplus-appbuild",
     "name": "ChaosKey+",
     "one_liner": "Physical-chaos entropy device with a Ready Wallet API tab for STRK20 shield, private transfer, and unshield.",
@@ -58,7 +125,6 @@
     "head_sha": "5dc7342b1e4923394354813f3f172bd7e1e38de0",
     "readme_hash": "06a5294711d6b365",
     "desc_v6": true,
-    "churn_pct": 100,
     "summary": "A physical-chaos entropy device for managing STRK20 tokens and transactions.",
     "description_long": "This project integrates a physical-chaos entropy device with a Pool tab that interacts with the Starknet STRK20 privacy pool through the user's Ready wallet. It uses the Starknet Wallet API v0.10 and includes components such as the Starknet SDK for core communication, wallet standard discovery and adapter for wallet detection and compatibility, and wallet API types for safe STRK20 actions. The application supports functions like shielding, private transfers, and unshielding while ensuring that the dapp never holds a viewing key.",
     "latest_push": "Fixed cache-dependency-path and updated lockfile for CI.",
@@ -66,6 +132,7 @@
     "has_readme": true,
     "additions": 15514,
     "deletions": 14,
+    "churn_pct": 100,
     "sprint": {
       "pushes": 85,
       "additions": 20455,
@@ -140,7 +207,6 @@
     "head_sha": "975ce87fac61d07072c2cf362ad2a4b8c8d0d787",
     "readme_hash": "5fb9c87d7dabf411",
     "desc_v6": true,
-    "churn_pct": 12,
     "summary": "A privacy superapp for cross-chain transfers with no on-chain links.",
     "description_long": "Mirage is a privacy superapp that transforms the STRK20 shielded pool on Starknet into a gateway for transferring assets across 35+ blockchains. Users can shield any ERC-20 token, execute private swaps, and send funds to fresh addresses on supported chains like BTC, Solana, and Arbitrum, effectively unlinking their main wallet from outgoing transactions. The implementation includes STRK20 for shielding, NEAR Intents for cross-chain execution, and a workflow engine for amount splitting and timing randomization, all running in a TEE.",
     "latest_push": "Implemented bidirectional return for shielded STRK in the WalletApp.",
@@ -148,6 +214,7 @@
     "has_readme": true,
     "additions": 292,
     "deletions": 17,
+    "churn_pct": 12,
     "sprint": {
       "pushes": 16,
       "additions": 10547,
@@ -156,73 +223,6 @@
     },
     "assessment": null,
     "star_evidence": ""
-  },
-  {
-    "slug": "jalin",
-    "name": "Jalin",
-    "one_liner": "A programmable execution router for the STRK20 pool: arbitrary multi-step, multi-token plans executed inside a single privacy_invoke, with safety carried by on-chain invariants rather than a whitelist.",
-    "category": "Infra",
-    "repo_url": "https://github.com/PugarHuda/jalin",
-    "demo_url": "https://jalin-five.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T02:07:44Z",
-    "stars": 1,
-    "builders": [
-      {
-        "login": "PugarHuda",
-        "name": "PugarHuda",
-        "avatar_url": "https://avatars.githubusercontent.com/u/94729172?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-20",
-      "2026-08-21"
-    ],
-    "head_sha": "837f178a96ed29cd327fb55596cc4543a58b71e0",
-    "readme_hash": "a1a3e033c7a75857",
-    "desc_v6": true,
-    "churn_pct": 12,
-    "summary": "Execute multi-step, multi-token transactions in a single private action.",
-    "description_long": "Jalin allows private transactions to execute complex multi-step plans involving multiple tokens, such as swaps, lending, and bridging, all within a single `privacy_invoke`. It is built with Cairo contracts that define a series of steps for each transaction, ensuring safety through enforced invariants without requiring a whitelist of actions. The repository contains contracts, a TypeScript SDK for plan encoding, a demo application, and documentation on deployment and threat models.",
-    "latest_push": "Widened the account check for both networks and balances.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 365,
-    "deletions": 49,
-    "sprint": {
-      "pushes": 15,
-      "additions": 21642,
-      "deletions": 10,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "atrum",
@@ -264,7 +264,6 @@
     "head_sha": "3f313767ca50b960c814292c09ffc16348ce7bef",
     "readme_hash": "7b27f20512b31966",
     "desc_v6": true,
-    "churn_pct": 11.4,
     "summary": "A sealed-bid prediction market with hidden orders and tradable positions.",
     "description_long": "This project creates a prediction market where orders are submitted as private notes and are unreadable until the batch closes. Utilizing a sealed-bid batch auction mechanism, it computes a uniform clearing price post-closure, allowing bound orders to remain confidential and mitigates front-running risks. The system is built on previous experience with the Monad project and consists of a factory contract that deploys markets securely and permissionlessly while ensuring that creators cannot misuse their control over resolutions.",
     "latest_push": "Corrected the registration claim and added a price history chart component.",
@@ -303,6 +302,7 @@
     "has_readme": true,
     "additions": 576,
     "deletions": 34,
+    "churn_pct": 11.4,
     "sprint": {
       "pushes": 29,
       "additions": 8916,
@@ -361,7 +361,6 @@
     "head_sha": "7d2bb24fe4b0cb57b83d09f3d27357c02f859cda",
     "readme_hash": "709363b44ceb8140",
     "desc_v6": true,
-    "churn_pct": 8.3,
     "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
     "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
     "latest_push": "Fixed the escrow start for the rekber single-helper flow.",
@@ -375,6 +374,7 @@
     "has_readme": true,
     "additions": 1224,
     "deletions": 401,
+    "churn_pct": 8.3,
     "sprint": {
       "pushes": 100,
       "additions": 13498,
@@ -436,7 +436,6 @@
     "head_sha": "aca080bb1fa0189b8145f2601684a93f5909b235",
     "readme_hash": "7f12b7954767c841",
     "desc_v6": true,
-    "churn_pct": 7.1,
     "summary": "A privacy firewall that assesses transaction risks before signing on Starknet.",
     "description_long": "GhostLine analyzes transactions to identify potential privacy leakage and recommends safer execution strategies. It calculates a privacy-risk score based on various signals like timing, amount similarity, and address reuse. Users receive actionable insights to make informed decisions before signing transactions.",
     "latest_push": "Tried compatible privacy wallets before connecting.",
@@ -475,6 +474,7 @@
     "has_readme": true,
     "additions": 39,
     "deletions": 19,
+    "churn_pct": 7.1,
     "sprint": {
       "pushes": 23,
       "additions": 7896,
@@ -529,7 +529,6 @@
     "head_sha": "a93a89475c2e0d932d3e19fa0990d4937268f316",
     "readme_hash": "a62d642117c81606",
     "desc_v6": true,
-    "churn_pct": 3.3,
     "summary": "A non-custodial strategy game using validator delegation for territory battles.",
     "description_long": "Players deploy their delegated STRK as FORCE to capture and defend Sectors, challenge rivals, and manage their strength without creating a separate game token. The project includes a web application, a Go API, and Cairo contracts organized in directories for apps and contracts, using React, TypeScript, and Dojo for the frontend and backend.",
     "latest_push": "Animated sector relief transitions in Planet component.",
@@ -543,6 +542,7 @@
     "has_readme": true,
     "additions": 580,
     "deletions": 95,
+    "churn_pct": 3.3,
     "sprint": {
       "pushes": 49,
       "additions": 34641,
@@ -610,7 +610,6 @@
     "head_sha": "f971ca45bc31437cc8e70fcd0e0e70a3e2aafb15",
     "readme_hash": "d2c61cc064aa3a89",
     "desc_v6": true,
-    "churn_pct": 5.2,
     "summary": "A shielded margin-account layer for trading on Extended DEX.",
     "description_long": "Blindside acts as a private funding and exit layer for the Extended DEX on Starknet. Users can shield USDC into the STRK20 privacy pool, fund an Extended account from a stealth address, trade using Extended's UI, and withdraw to another stealth address. The project consists of several application routes for shielding, funding, trading, and withdrawing, detailed in the provided product-map and integration setup documents.",
     "latest_push": "Fixed the Extended/STRK20 privacy-pool integration using real APIs.",
@@ -644,6 +643,7 @@
     "has_readme": true,
     "additions": 270,
     "deletions": 135,
+    "churn_pct": 5.2,
     "sprint": {
       "pushes": 9,
       "additions": 18409,
