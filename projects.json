@@ -1,5 +1,363 @@
 [
   {
+    "slug": "kese",
+    "name": "Kese",
+    "one_liner": "Private money for AI agents: a policy-guarded MCP wallet on the STRK20 pool - private payments within hard limits, Telegram human-approval, claim-link escrow for unregistered recipients, and viewing-key audit reports.",
+    "category": "Payments",
+    "repo_url": "https://github.com/ahmetenesdur/kese",
+    "demo_url": "https://kese-claim.vercel.app",
+    "demo_video": "TODO_3min_video_url",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x4b41a5648796ce290fcba3f5630a66f9fe737f58de6b9589a5d780a2c4999f3",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": true,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T18:00:32Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ahmetenesdur",
+        "name": "Enes",
+        "avatar_url": "https://avatars.githubusercontent.com/u/70810472?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 63
+      }
+    ],
+    "active_days": [
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "head_sha": "ae9c1b49d035347c936ea31c10391faa1796c056",
+    "readme_hash": "d08d1551ca7d4731",
+    "desc_v6": true,
+    "churn_pct": 4,
+    "summary": "A policy-guarded spending account for AI agents on Starknet.",
+    "description_long": "Kese allows AI agents to make private payments with strict spending limits and human oversight. It features a deterministic policy engine for transaction caps and approvals, along with a viewing key audit trail for owners. Built on TypeScript and Cairo, it integrates with the STRK20 privacy pool and includes an escrow contract for payments to unregistered recipients.",
+    "latest_push": "Clarified claim page texts and added a wallet capability check.",
+    "tooling": [
+      {
+        "label": "Privacy SDK",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 474,
+    "deletions": 44,
+    "sprint": {
+      "pushes": 67,
+      "additions": 20424,
+      "deletions": 254,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "erebus",
+    "name": "Erebus",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/PoulavBhowmick03/Erebus",
+    "demo_url": "https://erebus-private-agents.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Erebus enables privacy in autonomous agent transactions with novel encrypted negotiation.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T17:50:02Z",
+    "stars": 2,
+    "builders": [
+      {
+        "login": "PoulavBhowmick03",
+        "name": "PoulavBhowmick03",
+        "avatar_url": "https://avatars.githubusercontent.com/u/133862694?v=4"
+      },
+      {
+        "login": "ishitab02",
+        "name": "Ishita",
+        "avatar_url": "https://avatars.githubusercontent.com/u/139248026?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "head_sha": "7d476898ea8fe9bb7dc69b8e19340ee182481e07",
+    "readme_hash": "62fd460b162e8a43",
+    "desc_v6": true,
+    "summary": "Encrypted negotiation and atomic settlement for AI agents.",
+    "description_long": "Erebus enables AI agents to negotiate in encrypted channels and settle transactions atomically without revealing the negotiation details. It consists of a reference agent flow running in the browser, using the STRK20 privacy pool to manage encrypted note salts and offering selective disclosure capabilities through viewing keys. The system is structured for agent autonomy, employing Starknet's account abstraction for gasless operations, and focuses on message and relationship privacy.",
+    "latest_push": "Decided that D3 and repeat deals are in scope in the roadmap documentation.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Rust",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 3,
+    "deletions": 2,
+    "churn_pct": 0,
+    "sprint": {
+      "pushes": 38,
+      "additions": 7945,
+      "deletions": 2997,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "applies privacy to agent-to-agent commerce using encrypted negotiation channels.",
+      "why_complex": "implements AES-256-GCM-SIV for wire v2 and includes multiple interacting agents and roles.",
+      "reason": "Erebus enables privacy in autonomous agent transactions with novel encrypted negotiation.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "veilfolio",
+    "name": "Veilfolio",
+    "one_liner": "One portfolio. Separate identities. Private by design.",
+    "category": "Other",
+    "repo_url": "https://github.com/obiJohnbosco163/Veilfolio",
+    "demo_url": "https://veilfolio.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Veilfolio focuses on private execution identities for an existing portfolio.",
+    "contracts": [],
+    "transactions": [
+      {
+        "hash": "0x05e9b7866bb7a77a8c9881e46847963eae20b5d7222c99c5f9f0985560d4d1fb",
+        "ok": false,
+        "pool": false,
+        "mine": false,
+        "note": "not found on mainnet"
+      },
+      {
+        "hash": "0x0066bb5b454d5a8488cd3988afd9a6790e38dc6f9e51e7ba162237a903c44ab3",
+        "ok": false,
+        "pool": false,
+        "mine": false,
+        "note": "not found on mainnet"
+      }
+    ],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T17:41:27Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "obiJohnbosco163",
+        "name": "obijohnbosco163",
+        "avatar_url": "https://avatars.githubusercontent.com/u/123234391?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-21"
+    ],
+    "head_sha": "996f47bcd4793b521673a20c047c5dab21096b29",
+    "readme_hash": "9594b25364287d18",
+    "desc_v6": true,
+    "churn_pct": 2.4,
+    "summary": "Manage multiple private identities for DeFi and trading activities.",
+    "description_long": "Veilfolio is a privacy-first portfolio management layer that allows users to create and manage multiple isolated execution identities on Starknet. Each identity is maintained through the IdentityManager contract, providing unique contexts for trading and other activities without leaking information to other identities. Built with Next.js and React, it features a dashboard for identity management, integrated privacy operations, and support for STRK20 privacy pools.",
+    "latest_push": "Added a privacy-themed SVG background to the dashboard.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 124,
+    "deletions": 3,
+    "sprint": {
+      "pushes": 13,
+      "additions": 23058,
+      "deletions": 124,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "It offers private transfers and balances using STRK20, which is an obvious application of privacy.",
+      "why_complex": "No complex contracts are built yet; only TypeScript and a minimal Cairo presence.",
+      "reason": "Veilfolio focuses on private execution identities for an existing portfolio.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "portage",
+    "name": "Portage.fun",
+    "one_liner": "Provably-fair idle creature-collecting on Starknet — hatch, evolve, and trade original creatures.",
+    "category": "Gaming",
+    "repo_url": "https://github.com/joaoolucas/portage-strk",
+    "demo_url": "https://portage-topaz.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T17:31:05Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "joaoolucas",
+        "name": "joaoolucas",
+        "avatar_url": "https://avatars.githubusercontent.com/u/83239762?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 15
+      }
+    ],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-21"
+    ],
+    "head_sha": "004b109a2c51b722338a9d4d2c24e0b921a39111",
+    "readme_hash": "5b94ae03d44a7f16",
+    "desc_v6": true,
+    "churn_pct": 3.8,
+    "summary": "A cozy idle RPG for creature collecting, evolving, and trading.",
+    "description_long": "This project is a browser-based idle RPG focused on collecting and evolving creatures. It features tile movement, NPC interaction, offline progress, and local automatic saving. The game engine is built with Next.js, while creature mechanics are implemented in Cairo smart contracts. Local-first gameplay is prioritized, and the on-chain integration with STRK20 for privacy features is still under development.",
+    "latest_push": "Fixed issues with the caravan response, camera centering, and hunt failures.",
+    "tooling": [
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 393,
+    "deletions": 160,
+    "sprint": {
+      "pushes": 100,
+      "additions": 3430,
+      "deletions": 202,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project is an idle creature-collecting RPG, which does not apply privacy in a non-obvious way.",
+      "why_complex": "There are no deployed contracts or depth in Cairo code at this stage.",
+      "reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
     "slug": "strk20-privacy-wallet",
     "name": "strk20-privacy-wallet",
     "one_liner": "Umbra-grade privacy wallet for Starknet powered by STRK20 privacy pool",
@@ -43,7 +401,6 @@
     "head_sha": "6947b59b628323f22c6c9edee99be048aa3e58b9",
     "readme_hash": "cf1e35452b1d6053",
     "desc_v6": true,
-    "churn_pct": 0.2,
     "summary": "A privacy-first DeFi platform with stealth payments and confidential perpetual futures.",
     "description_long": "ORRANGE is a decentralized financial platform focusing on privacy built on Starknet. It features a STRK20 privacy wallet for confidential token transactions and PEL private perpetual futures for trading with hidden parameters. The platform includes an automated keeper system, a DEX aggregator for live swaps, and is implemented using Starknet Cairo smart contracts, ensuring secure and efficient execution of its features.",
     "latest_push": "Fixed test suites to align with async witness store and 5-input open circuit.",
@@ -92,6 +449,7 @@
     "has_readme": true,
     "additions": 134,
     "deletions": 281,
+    "churn_pct": 0.2,
     "sprint": {
       "pushes": 71,
       "additions": 20115,
@@ -154,7 +512,6 @@
     "head_sha": "08b2f661d3359a29a536a4d16c927dfbdb68ae3a",
     "readme_hash": "ac9ac192b71369e5",
     "desc_v6": true,
-    "churn_pct": 4.5,
     "summary": "A sealed-bid auction for a single item with unlinkable bidders and hidden bid values.",
     "description_long": "Sealed implements a variant of a Vickrey auction on Starknet where bidders' identities remain hidden and bid values are concealed until they are revealed. Each bidder locks in identical amounts of STRK20 collateral, and the auction settles at the second-highest bid or reserve price. The system uses Poseidon commitments to obscure bid values, and the STRK20 pool ensures that no bidder's address appears on-chain during the bidding process.",
     "latest_push": "Stored an encrypted backup blob with each entry in the auction contract.",
@@ -173,6 +530,7 @@
     "has_readme": true,
     "additions": 253,
     "deletions": 23,
+    "churn_pct": 4.5,
     "sprint": {
       "pushes": 74,
       "additions": 15001,
@@ -230,7 +588,6 @@
     "head_sha": "d5065936470fd822dbd42f691cecff2f9d62bf3b",
     "readme_hash": "7f26b6c4bbf8469d",
     "desc_v6": true,
-    "churn_pct": 39.9,
     "summary": "Private payroll processing with aggregate accountability on Starknet STRK20.",
     "description_long": "ShadowLedger enables organizations to execute private payroll and treasury disbursements while maintaining public aggregate accountability. It features a payroll builder with CSV import, aggregate calculations, and Merkle tree-proof generation for each entry, alongside a cairo `PayrollRegistry` to manage payroll states securely. The application operates entirely in the browser and supports real mainnet transactions with strict privacy measures for recipient data.",
     "latest_push": "Completed the registry and implemented encrypted receipts.",
@@ -244,6 +601,7 @@
     "has_readme": true,
     "additions": 2352,
     "deletions": 13,
+    "churn_pct": 39.9,
     "sprint": {
       "pushes": 9,
       "additions": 16423,
@@ -383,7 +741,6 @@
     "head_sha": "c827c75560d455b753062dbf535e6b43ce8f9769",
     "readme_hash": "93028ec0e7477992",
     "desc_v6": true,
-    "churn_pct": 71.5,
     "summary": "A private prediction market with public odds and anonymous bettors.",
     "description_long": "Doom is a private prediction market that allows users to place bets while hiding their identities. It consists of the `DoomMarketV2` contract for managing the market and bets, and the `DoomDecision` contract serving as a governance layer for decision-making through conditional markets. It enforces anonymity through an innovative approach, where the bet amounts and current odds are public while bettor identities are masked, thus eliminating manipulation typically associated with visible betting.",
     "latest_push": "Added the demo video and the Remotion project to the submission manifest.",
@@ -427,6 +784,7 @@
     "has_readme": true,
     "additions": 6232,
     "deletions": 2,
+    "churn_pct": 71.5,
     "sprint": {
       "pushes": 42,
       "additions": 15494,
@@ -435,91 +793,6 @@
     },
     "assessment": null,
     "star_evidence": "14 contracts deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "portage",
-    "name": "Portage.fun",
-    "one_liner": "Provably-fair idle creature-collecting on Starknet — hatch, evolve, and trade original creatures.",
-    "category": "Gaming",
-    "repo_url": "https://github.com/joaoolucas/portage-strk",
-    "demo_url": "https://portage-topaz.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T16:53:26Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "joaoolucas",
-        "name": "joaoolucas",
-        "avatar_url": "https://avatars.githubusercontent.com/u/83239762?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 12
-      }
-    ],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-21"
-    ],
-    "head_sha": "51bf4fe514a295dc0daab8a7b7d08831ffabfa8e",
-    "readme_hash": "5b94ae03d44a7f16",
-    "desc_v6": true,
-    "churn_pct": 1.3,
-    "summary": "A cozy idle RPG for creature collecting, evolving, and trading.",
-    "description_long": "This project is a browser-based idle RPG focused on collecting and evolving creatures. It features tile movement, NPC interaction, offline progress, and local automatic saving. The game engine is built with Next.js, while creature mechanics are implemented in Cairo smart contracts. Local-first gameplay is prioritized, and the on-chain integration with STRK20 for privacy features is still under development.",
-    "latest_push": "Fixed tab behavior to prevent fast-forwarding the hunt.",
-    "tooling": [
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 185,
-    "deletions": 8,
-    "sprint": {
-      "pushes": 98,
-      "additions": 6338,
-      "deletions": 202,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "The project is an idle creature-collecting RPG, which does not apply privacy in a non-obvious way.",
-      "why_complex": "There are no deployed contracts or depth in Cairo code at this stage.",
-      "reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "vinss",
@@ -569,7 +842,6 @@
     "head_sha": "28cd445e14e5b919e8984cbaa65320aa9469dac8",
     "readme_hash": "709363b44ceb8140",
     "desc_v6": true,
-    "churn_pct": 0.4,
     "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
     "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
     "latest_push": "Refined deal room messaging UX across multiple components.",
@@ -583,6 +855,7 @@
     "has_readme": true,
     "additions": 2,
     "deletions": 92,
+    "churn_pct": 0.4,
     "sprint": {
       "pushes": 100,
       "additions": 15834,
@@ -1037,95 +1310,6 @@
     "star_evidence": ""
   },
   {
-    "slug": "veilfolio",
-    "name": "Veilfolio",
-    "one_liner": "One portfolio. Separate identities. Private by design.",
-    "category": "Other",
-    "repo_url": "https://github.com/obiJohnbosco163/Veilfolio",
-    "demo_url": "https://veilfolio.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Veilfolio focuses on private execution identities for an existing portfolio.",
-    "contracts": [],
-    "transactions": [
-      {
-        "hash": "0x05e9b7866bb7a77a8c9881e46847963eae20b5d7222c99c5f9f0985560d4d1fb",
-        "ok": false,
-        "pool": false,
-        "mine": false,
-        "note": "not found on mainnet"
-      },
-      {
-        "hash": "0x0066bb5b454d5a8488cd3988afd9a6790e38dc6f9e51e7ba162237a903c44ab3",
-        "ok": false,
-        "pool": false,
-        "mine": false,
-        "note": "not found on mainnet"
-      }
-    ],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T15:50:58Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "obiJohnbosco163",
-        "name": "obijohnbosco163",
-        "avatar_url": "https://avatars.githubusercontent.com/u/123234391?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-21"
-    ],
-    "head_sha": "9d7018cd1c9285be0e635b6239616ef4bc4a012c",
-    "readme_hash": "9594b25364287d18",
-    "desc_v6": true,
-    "summary": "Manage multiple private identities for DeFi and trading activities.",
-    "description_long": "Veilfolio is a privacy-first portfolio management layer that allows users to create and manage multiple isolated execution identities on Starknet. Each identity is maintained through the IdentityManager contract, providing unique contexts for trading and other activities without leaking information to other identities. Built with Next.js and React, it features a dashboard for identity management, integrated privacy operations, and support for STRK20 privacy pools.",
-    "latest_push": "Displayed identity name and purpose on dashboard cards.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 59,
-    "deletions": 15,
-    "churn_pct": 1.5,
-    "sprint": {
-      "pushes": 11,
-      "additions": 22937,
-      "deletions": 124,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "It offers private transfers and balances using STRK20, which is an obvious application of privacy.",
-      "why_complex": "No complex contracts are built yet; only TypeScript and a minimal Cairo presence.",
-      "reason": "Veilfolio focuses on private execution identities for an existing portfolio.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
     "slug": "envelope",
     "name": "envelope",
     "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
@@ -1209,105 +1393,6 @@
       "facts_v2": true
     },
     "star_evidence": "1 contract deployed, Cairo in the repository"
-  },
-  {
-    "slug": "kese",
-    "name": "Kese",
-    "one_liner": "Private money for AI agents: a policy-guarded MCP wallet on the STRK20 pool - private payments within hard limits, Telegram human-approval, claim-link escrow for unregistered recipients, and viewing-key audit reports.",
-    "category": "Payments",
-    "repo_url": "https://github.com/ahmetenesdur/kese",
-    "demo_url": "https://kese-claim.vercel.app",
-    "demo_video": "TODO_3min_video_url",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x4b41a5648796ce290fcba3f5630a66f9fe737f58de6b9589a5d780a2c4999f3",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": true,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T15:17:35Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "ahmetenesdur",
-        "name": "Enes",
-        "avatar_url": "https://avatars.githubusercontent.com/u/70810472?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 60
-      }
-    ],
-    "active_days": [
-      "2026-08-20",
-      "2026-08-21"
-    ],
-    "head_sha": "e15fcfe505623c3fac0278494dad055a76bdbe9e",
-    "readme_hash": "d08d1551ca7d4731",
-    "desc_v6": true,
-    "summary": "A policy-guarded spending account for AI agents on Starknet.",
-    "description_long": "Kese allows AI agents to make private payments with strict spending limits and human oversight. It features a deterministic policy engine for transaction caps and approvals, along with a viewing key audit trail for owners. Built on TypeScript and Cairo, it integrates with the STRK20 privacy pool and includes an escrow contract for payments to unregistered recipients.",
-    "latest_push": "Created a landing page with policy decision at its center.",
-    "tooling": [
-      {
-        "label": "Privacy SDK",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1054,
-    "deletions": 111,
-    "churn_pct": 9.3,
-    "sprint": {
-      "pushes": 63,
-      "additions": 19994,
-      "deletions": 254,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "jalin",
@@ -2196,91 +2281,6 @@
       "why_innovative": "It allows anonymous betting in prediction markets while keeping visible odds.",
       "why_complex": "No deployed contracts or signs of engineering complexity are present.",
       "reason": "Veilcast enables private bettors to participate in public prediction markets.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "erebus",
-    "name": "Erebus",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/PoulavBhowmick03/Erebus",
-    "demo_url": "https://erebus-private-agents.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Erebus enables privacy in autonomous agent transactions with novel encrypted negotiation.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T12:02:09Z",
-    "stars": 2,
-    "builders": [
-      {
-        "login": "PoulavBhowmick03",
-        "name": "PoulavBhowmick03",
-        "avatar_url": "https://avatars.githubusercontent.com/u/133862694?v=4"
-      },
-      {
-        "login": "ishitab02",
-        "name": "Ishita",
-        "avatar_url": "https://avatars.githubusercontent.com/u/139248026?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21"
-    ],
-    "head_sha": "7d476898ea8fe9bb7dc69b8e19340ee182481e07",
-    "readme_hash": "62fd460b162e8a43",
-    "desc_v6": true,
-    "summary": "Encrypted negotiation and atomic settlement for AI agents.",
-    "description_long": "Erebus enables AI agents to negotiate in encrypted channels and settle transactions atomically without revealing the negotiation details. It consists of a reference agent flow running in the browser, using the STRK20 privacy pool to manage encrypted note salts and offering selective disclosure capabilities through viewing keys. The system is structured for agent autonomy, employing Starknet's account abstraction for gasless operations, and focuses on message and relationship privacy.",
-    "latest_push": "Decided that D3 and repeat deals are in scope in the roadmap documentation.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Rust",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 3,
-    "deletions": 2,
-    "churn_pct": 0,
-    "sprint": {
-      "pushes": 38,
-      "additions": 7945,
-      "deletions": 2997,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "applies privacy to agent-to-agent commerce using encrypted negotiation channels.",
-      "why_complex": "implements AES-256-GCM-SIV for wire v2 and includes multiple interacting agents and roles.",
-      "reason": "Erebus enables privacy in autonomous agent transactions with novel encrypted negotiation.",
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
