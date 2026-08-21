@@ -26,7 +26,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-21T12:57:17Z",
+    "pushed_at": "2026-08-21T13:30:21Z",
     "stars": 0,
     "builders": [
       {
@@ -40,20 +40,20 @@
         "family": "Claude",
         "name": "Claude Opus 5",
         "avatar_url": "",
-        "commits": 44
+        "commits": 46
       }
     ],
     "active_days": [
       "2026-08-20",
       "2026-08-21"
     ],
-    "head_sha": "c6069e2d9085b62fb29042c358c26a66752f1817",
+    "head_sha": "bd77b17571b407190809089b1fecdc2bbc9bdef0",
     "readme_hash": "6e48b739a6e13797",
     "desc_v6": true,
-    "churn_pct": 6.2,
+    "churn_pct": 0.9,
     "summary": "A policy-guarded spending account for AI agents on Starknet's STRK20 privacy pool.",
     "description_long": "Kese enables AI agents to manage private transactions with spending limits and human approval. It features a policy engine to enforce transaction caps, recipient allows, and accountability through viewing-key reports. Built with TypeScript and Cairo, it integrates with the STRK20 privacy pool, utilizing an escrow-claim contract to handle payments while ensuring user privacy and transaction accountability.",
-    "latest_push": "Deployed the escrow and wrote the day-8 runbook that corrects itself.",
+    "latest_push": "Fixed G1's fallback ordering and documented memo withholding in list_activity.",
     "tooling": [
       {
         "label": "Privacy SDK",
@@ -87,16 +87,431 @@
       }
     ],
     "has_readme": true,
-    "additions": 612,
-    "deletions": 98,
+    "additions": 104,
+    "deletions": 2,
     "sprint": {
-      "pushes": 47,
-      "additions": 18589,
+      "pushes": 49,
+      "additions": 18691,
       "deletions": 253,
       "computed": 2
     },
     "assessment": null,
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "rhizome",
+    "name": "Rhizome",
+    "one_liner": "Prices what privacy costs on STRK20, then executes it: fee-aware tranche scheduling for private Vesu position through its own anonymizer.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/cipoklean/rhizome",
+    "demo_url": "https://rhizome-indol.vercel.app",
+    "demo_video": "",
+    "x_handle": "David63694631",
+    "inspired_by": "IDEA-16",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x552d747e90eb70e52e9c5f9d9150b97e46ac9b25989a36e7eee96a2e45c5e20",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T13:26:59Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "cipoklean",
+        "name": "Aghazie David",
+        "avatar_url": "https://avatars.githubusercontent.com/u/82593998?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "head_sha": "8d57ccd6b40a33713e653d60c1ab2272b6f456cf",
+    "readme_hash": "44b90590f7a90743",
+    "desc_v6": true,
+    "churn_pct": 11.9,
+    "summary": "A tool for calculating and executing private positions in DeFi with fee-aware tranche scheduling.",
+    "description_long": "Rhizome computes the cost of unlinkability in transactions within the STRK20 privacy pool and executes the necessary actions to maintain privacy. It reads real-time fees and transaction history, scores amounts to avoid distinctive patterns, and schedules transactions to enhance privacy through its own anonymizer contract, facilitating multiple indistinguishable deposits. Key contract functionalities include the mechanism for fee collection and transaction handling, reflecting detailed insights into the underlying pool's operations.",
+    "latest_push": "Decoupled wallet from pool synchronization and optimized mainnet path.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 326,
+    "deletions": 360,
+    "sprint": {
+      "pushes": 41,
+      "additions": 9567,
+      "deletions": 32,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "1 contract deployed, Cairo in the repository"
+  },
+  {
+    "slug": "portage",
+    "name": "Portage.fun",
+    "one_liner": "Provably-fair idle creature-collecting on Starknet — hatch, evolve, and trade original creatures.",
+    "category": "Gaming",
+    "repo_url": "https://github.com/joaoolucas/portage-strk",
+    "demo_url": "https://portage-topaz.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T13:26:58Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "joaoolucas",
+        "name": "joaoolucas",
+        "avatar_url": "https://avatars.githubusercontent.com/u/83239762?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 11
+      }
+    ],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-21"
+    ],
+    "head_sha": "9a03f8fa5e9c18626b9a1cb18730a3a9e7140f62",
+    "readme_hash": "5b94ae03d44a7f16",
+    "desc_v6": true,
+    "churn_pct": 2.2,
+    "summary": "A cozy idle RPG for creature collecting, evolving, and trading.",
+    "description_long": "This project is a browser-based idle RPG focused on collecting and evolving creatures. It features tile movement, NPC interaction, offline progress, and local automatic saving. The game engine is built with Next.js, while creature mechanics are implemented in Cairo smart contracts. Local-first gameplay is prioritized, and the on-chain integration with STRK20 for privacy features is still under development.",
+    "latest_push": "Fixed a monster's behavior in simulation to prevent pinning the Porter.",
+    "tooling": [
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 261,
+    "deletions": 51,
+    "sprint": {
+      "pushes": 97,
+      "additions": 6338,
+      "deletions": 202,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project is an idle creature-collecting RPG, which does not apply privacy in a non-obvious way.",
+      "why_complex": "There are no deployed contracts or depth in Cairo code at this stage.",
+      "reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "stealth-checkout",
+    "name": "Stealth Checkout",
+    "one_liner": "Accept private payments on Starknet: drop-in checkout widget, hosted invoices, webhook confirmations, honest privacy receipts.",
+    "category": "Tooling",
+    "repo_url": "https://github.com/bongbongcrypto/stealth-checkout",
+    "demo_url": "https://bongbongcrypto.github.io/stealth-checkout/apps/demo-arcade/index.html",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-11",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T13:19:12Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "bongbongcrypto",
+        "name": "bongbongcrypto",
+        "avatar_url": "https://avatars.githubusercontent.com/u/194173583?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 13
+      }
+    ],
+    "active_days": [
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-21"
+    ],
+    "head_sha": "f734d2f43b3304757ad779dc421e887e11266a29",
+    "readme_hash": "6642ee8cd33e9144",
+    "desc_v6": true,
+    "churn_pct": 0.1,
+    "summary": "Accept private payments with an embeddable checkout and hosted invoices.",
+    "description_long": "Stealth Checkout allows storefronts and dapps to accept private payments on Starknet. It includes a TS widget for private payments, hosted invoice pages that keep payer details confidential, a backend watcher with webhook confirmations, and receipt management. Key components include the `strk20-pay` widget, a coin-op arcade demo, and a dashboard for managing invoices and payments.",
+    "latest_push": "Fixed message for outdated-extension users to suggest updating instead of reinstalling.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 9,
+    "deletions": 8,
+    "sprint": {
+      "pushes": 17,
+      "additions": 37481,
+      "deletions": 40,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
+    "slug": "cipherbill",
+    "name": "CipherBill",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/Nitish-1303/CipherBill",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T13:18:40Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Nitish-1303",
+        "name": "Nitish-1303",
+        "avatar_url": "https://avatars.githubusercontent.com/u/141549775?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-21"
+    ],
+    "head_sha": "931a994210a15b73362496fcf90f3c6d1a098765",
+    "readme_hash": "36f8d4bb7c12a3e8",
+    "desc_v6": true,
+    "summary": "Privacy-first invoicing and settlement for independent workers and global teams.",
+    "description_long": "ShadowPay AI allows independent workers and teams to issue invoices and settle payments privately using STRK20 shielded balances. It integrates with Starknet and uses a Next.js front end alongside the STRK20 Privacy SDK for secure transactions. Users can create invoices, connect their Starknet wallet, and export selective financial evidence without exposing their complete financial graph.",
+    "latest_push": "Completed STRK20 payment and invoice flows in multiple files.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 8091,
+    "deletions": 267,
+    "churn_pct": 100,
+    "sprint": {
+      "pushes": 2,
+      "additions": 14680,
+      "deletions": 267,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
+    "slug": "veilfolio",
+    "name": "Veilfolio",
+    "one_liner": "One portfolio. Separate identities. Private by design.",
+    "category": "Other",
+    "repo_url": "https://github.com/obiJohnbosco163/Veilfolio",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Veilfolio focuses on private execution identities for an existing portfolio.",
+    "contracts": [],
+    "transactions": [
+      {
+        "hash": "0x05e9b7866bb7a77a8c9881e46847963eae20b5d7222c99c5f9f0985560d4d1fb",
+        "ok": false,
+        "pool": false,
+        "mine": false,
+        "note": "not found on mainnet"
+      },
+      {
+        "hash": "0x0066bb5b454d5a8488cd3988afd9a6790e38dc6f9e51e7ba162237a903c44ab3",
+        "ok": false,
+        "pool": false,
+        "mine": false,
+        "note": "not found on mainnet"
+      }
+    ],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T13:09:13Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "obiJohnbosco163",
+        "name": "obijohnbosco163",
+        "avatar_url": "https://avatars.githubusercontent.com/u/123234391?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-21"
+    ],
+    "head_sha": "96a52b173cb120d31530548cffef35cb0c64c40a",
+    "readme_hash": "9594b25364287d18",
+    "desc_v6": true,
+    "churn_pct": 100,
+    "summary": "Manage multiple private identities for DeFi and trading activities.",
+    "description_long": "Veilfolio is a privacy-first portfolio management layer that allows users to create and manage multiple isolated execution identities on Starknet. Each identity is maintained through the IdentityManager contract, providing unique contexts for trading and other activities without leaking information to other identities. Built with Next.js and React, it features a dashboard for identity management, integrated privacy operations, and support for STRK20 privacy pools.",
+    "latest_push": "Implemented the Veilfolio MVP with new privacy features for Starknet.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 8822,
+    "deletions": 1045,
+    "sprint": {
+      "pushes": 4,
+      "additions": 22928,
+      "deletions": 124,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "It offers private transfers and balances using STRK20, which is an obvious application of privacy.",
+      "why_complex": "No complex contracts are built yet; only TypeScript and a minimal Cairo presence.",
+      "reason": "Veilfolio focuses on private execution identities for an existing portfolio.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "oblivionprotocol",
@@ -120,7 +535,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-21T12:56:15Z",
+    "pushed_at": "2026-08-21T13:08:37Z",
     "stars": 0,
     "builders": [
       {
@@ -133,13 +548,13 @@
     "active_days": [
       "2026-08-21"
     ],
-    "head_sha": "0f954391fbf826a60615e0e2c739974e68697403",
-    "readme_hash": "aa8d645ba62f2087",
+    "head_sha": "c505931656fdf198734a914887303d0b18461b10",
+    "readme_hash": "fbbf3893802bb909",
     "desc_v6": true,
-    "churn_pct": 100,
-    "summary": "A dark financial engine for shielded concentrated liquidity and batch swaps.",
-    "description_long": "Oblivion Protocol transforms the STRK20 pool into a high-throughput financial engine for liquidity providers and traders. It includes features like shielded concentrated liquidity provision, zero-MEV batch swaps, automatic collateral routing to money markets, and an ATTEST compliance engine for verifiable proofs of solvency and provenance. The protocol is built on the STRK20 Privacy Pool and consists of multiple contracts including OblivionVault for liquidity management and CoWMatcher for batch auction processes.",
-    "latest_push": "Overhauled the production frontend with a light theme and live on-chain data.",
+    "churn_pct": 12.9,
+    "summary": "A confidential liquidity engine with shielded swaps and compliance attestations.",
+    "description_long": "Oblivion Protocol creates a privacy-focused liquidity engine on Starknet, featuring shielded concentrated liquidity, dark batch swaps, automated yield management, and ZK compliance attestations. It uses a core structure of contracts, including OblivionVault for liquidity management, CoWMatcher for auctions, YieldRouter for yield routing, and AttestEngine for compliance records. The protocol ensures privacy through ZK notes and allows various clients to interact via a web frontend and command-line tools.",
+    "latest_push": "Added comprehensive protocol documentation and refreshed the README.",
     "tooling": [
       {
         "label": "Cairo",
@@ -153,16 +568,97 @@
       }
     ],
     "has_readme": true,
-    "additions": 4567,
-    "deletions": 7732,
+    "additions": 733,
+    "deletions": 104,
     "sprint": {
-      "pushes": 6,
-      "additions": 11966,
-      "deletions": 2097,
+      "pushes": 7,
+      "additions": 12699,
+      "deletions": 2201,
       "computed": 2
     },
     "assessment": null,
     "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "sealed",
+    "name": "Sealed",
+    "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/tinoxbt/sealed",
+    "demo_url": "https://tinoxbt.github.io/sealed/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-08",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
+    "contracts": [
+      {
+        "address": "0x076a5480f7359b8a8db0245c603c78e108a89442fb3b71aea2a3e7cc976b133d",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T13:00:38Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "tinoxbt",
+        "name": "tinoxbt",
+        "avatar_url": "https://avatars.githubusercontent.com/u/202869881?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-21"
+    ],
+    "head_sha": "50c34e3be9b3a833e742237132f77c197aa465d5",
+    "readme_hash": "ac9ac192b71369e5",
+    "desc_v6": true,
+    "churn_pct": 6.4,
+    "summary": "A sealed-bid auction for a single item with unlinkable bidders and hidden bid values.",
+    "description_long": "Sealed implements a variant of a Vickrey auction on Starknet where bidders' identities remain hidden and bid values are concealed until they are revealed. Each bidder locks in identical amounts of STRK20 collateral, and the auction settles at the second-highest bid or reserve price. The system uses Poseidon commitments to obscure bid values, and the STRK20 pool ensures that no bidder's address appears on-chain during the bidding process.",
+    "latest_push": "Displayed the complete public state of an auction and marked it public.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 232,
+    "deletions": 102,
+    "sprint": {
+      "pushes": 72,
+      "additions": 14092,
+      "deletions": 103,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "It enables unlinkable sealed-bid auctions with privacy for both bids and identities using STRK20.",
+      "why_complex": "The project implements multiple contracts with Poseidon commitments and uniform collateral mechanisms.",
+      "reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
+      "facts_v2": true
+    },
+    "star_evidence": "1 contract deployed, Cairo in the repository"
   },
   {
     "slug": "strk20",
@@ -202,7 +698,6 @@
     "head_sha": "4e5650b391b796930426fb1f800a685973620ec2",
     "readme_hash": "0b06e17f0dc078f4",
     "desc_v6": true,
-    "churn_pct": 0,
     "summary": "A token protocol and tooling suite for lightweight token deployment and operations on Starknet.",
     "description_long": "STRK-20 allows for the deployment, minting, and transferring of custom tokens on the Starknet network with low transaction costs. It operates by embedding JSON payloads in Starknet transactions, facilitating smooth token operations. The toolkit includes specifications for deploying tokens, minting operations, and efficient indexing for off-chain services.",
     "latest_push": "Added strk20.json and initial README.md for documentation.",
@@ -210,6 +705,7 @@
     "has_readme": true,
     "additions": 6,
     "deletions": 0,
+    "churn_pct": 0,
     "sprint": {
       "pushes": 2,
       "additions": 108,
@@ -264,7 +760,6 @@
     "head_sha": "a1c5998c13a03d6da338987e61d1c13a0833d811",
     "readme_hash": "d1539211008af311",
     "desc_v6": true,
-    "churn_pct": 2.4,
     "summary": "A persistent strategy game for capturing sectors and battling rivals with delegated STRK.",
     "description_long": "Stake Wars is a non-custodial strategy game where players use their delegated STRK as FORCE to capture and defend Sectors on the Core. The game combines elements of territory management and strategic challenges without creating a separate game token. It includes a web application built with React, TypeScript, and Vite; a Go API; and contracts written in Cairo and Dojo.",
     "latest_push": "Stabilized projection sector rendering and served game from play route.",
@@ -278,6 +773,7 @@
     "has_readme": true,
     "additions": 407,
     "deletions": 95,
+    "churn_pct": 2.4,
     "sprint": {
       "pushes": 51,
       "additions": 34755,
@@ -342,7 +838,6 @@
     "head_sha": "e71ceb18c7d3ec9d9a8e3bd33650f94d7fae4ae5",
     "readme_hash": "709363b44ceb8140",
     "desc_v6": true,
-    "churn_pct": 0,
     "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
     "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
     "latest_push": "Fixed bigint casts in the backend indexer checkpoint.",
@@ -356,6 +851,7 @@
     "has_readme": true,
     "additions": 4,
     "deletions": 4,
+    "churn_pct": 0,
     "sprint": {
       "pushes": 100,
       "additions": 15349,
@@ -454,176 +950,6 @@
     "star_evidence": ""
   },
   {
-    "slug": "cipherbill",
-    "name": "CipherBill",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/Nitish-1303/CipherBill",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T12:35:29Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Nitish-1303",
-        "name": "Nitish-1303",
-        "avatar_url": "https://avatars.githubusercontent.com/u/141549775?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-21"
-    ],
-    "head_sha": "931a994210a15b73362496fcf90f3c6d1a098765",
-    "readme_hash": "36f8d4bb7c12a3e8",
-    "desc_v6": true,
-    "summary": "Privacy-first invoicing and settlement for independent workers and global teams.",
-    "description_long": "ShadowPay AI allows independent workers and teams to issue invoices and settle payments privately using STRK20 shielded balances. It integrates with Starknet and uses a Next.js front end alongside the STRK20 Privacy SDK for secure transactions. Users can create invoices, connect their Starknet wallet, and export selective financial evidence without exposing their complete financial graph.",
-    "latest_push": "Completed STRK20 payment and invoice flows in multiple files.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 8091,
-    "deletions": 267,
-    "churn_pct": 100,
-    "sprint": {
-      "pushes": 2,
-      "additions": 14680,
-      "deletions": 267,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
-  },
-  {
-    "slug": "rhizome",
-    "name": "Rhizome",
-    "one_liner": "Prices what privacy costs on STRK20, then executes it: fee-aware tranche scheduling for private Vesu position through its own anonymizer.",
-    "category": "DeFi",
-    "repo_url": "https://github.com/cipoklean/rhizome",
-    "demo_url": "https://rhizome-indol.vercel.app",
-    "demo_video": "",
-    "x_handle": "David63694631",
-    "inspired_by": "IDEA-16",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x552d747e90eb70e52e9c5f9d9150b97e46ac9b25989a36e7eee96a2e45c5e20",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T12:26:21Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "cipoklean",
-        "name": "Aghazie David",
-        "avatar_url": "https://avatars.githubusercontent.com/u/82593998?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21"
-    ],
-    "head_sha": "98ef08980a2cd12c0d47c782d054c96d5280278b",
-    "readme_hash": "44b90590f7a90743",
-    "desc_v6": true,
-    "summary": "A tool for calculating and executing private positions in DeFi with fee-aware tranche scheduling.",
-    "description_long": "Rhizome computes the cost of unlinkability in transactions within the STRK20 privacy pool and executes the necessary actions to maintain privacy. It reads real-time fees and transaction history, scores amounts to avoid distinctive patterns, and schedules transactions to enhance privacy through its own anonymizer contract, facilitating multiple indistinguishable deposits. Key contract functionalities include the mechanism for fee collection and transaction handling, reflecting detailed insights into the underlying pool's operations.",
-    "latest_push": "Fixed the wizard step 3 gate logic for wallet and schedule.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1034,
-    "deletions": 713,
-    "churn_pct": 30.1,
-    "sprint": {
-      "pushes": 39,
-      "additions": 9601,
-      "deletions": 32,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "1 contract deployed, Cairo in the repository"
-  },
-  {
     "slug": "xence",
     "name": "Xence",
     "one_liner": "Proof you were right, before it happened - seal a probabilistic forecast, bond it privately through the STRK20 pool, and let the chain score your calibration. Public record, invisible position.",
@@ -688,87 +1014,6 @@
     },
     "assessment": null,
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "sealed",
-    "name": "Sealed",
-    "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
-    "category": "DeFi",
-    "repo_url": "https://github.com/tinoxbt/sealed",
-    "demo_url": "https://tinoxbt.github.io/sealed/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-08",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
-    "contracts": [
-      {
-        "address": "0x076a5480f7359b8a8db0245c603c78e108a89442fb3b71aea2a3e7cc976b133d",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T12:16:32Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "tinoxbt",
-        "name": "tinoxbt",
-        "avatar_url": "https://avatars.githubusercontent.com/u/202869881?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-21"
-    ],
-    "head_sha": "787a717500fc38baa50a8e6351dbce4c3852085f",
-    "readme_hash": "ac9ac192b71369e5",
-    "desc_v6": true,
-    "summary": "A sealed-bid auction for a single item with unlinkable bidders and hidden bid values.",
-    "description_long": "Sealed implements a variant of a Vickrey auction on Starknet where bidders' identities remain hidden and bid values are concealed until they are revealed. Each bidder locks in identical amounts of STRK20 collateral, and the auction settles at the second-highest bid or reserve price. The system uses Poseidon commitments to obscure bid values, and the STRK20 pool ensures that no bidder's address appears on-chain during the bidding process.",
-    "latest_push": "Added a reveal keeper and implemented first-price auction functionality.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 488,
-    "deletions": 14,
-    "churn_pct": 9.9,
-    "sprint": {
-      "pushes": 71,
-      "additions": 13962,
-      "deletions": 103,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "It enables unlinkable sealed-bid auctions with privacy for both bids and identities using STRK20.",
-      "why_complex": "The project implements multiple contracts with Poseidon commitments and uniform collateral mechanisms.",
-      "reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
-      "facts_v2": true
-    },
-    "star_evidence": "1 contract deployed, Cairo in the repository"
   },
   {
     "slug": "strk20-privacy-wallet",
@@ -1851,77 +2096,6 @@
       "reason": "Cloakra does not exemplify innovation or complexity in its current state.",
       "facts_v2": true
     },
-    "star_evidence": ""
-  },
-  {
-    "slug": "stealth-checkout",
-    "name": "Stealth Checkout",
-    "one_liner": "Accept private payments on Starknet: drop-in checkout widget, hosted invoices, webhook confirmations, honest privacy receipts.",
-    "category": "Tooling",
-    "repo_url": "https://github.com/bongbongcrypto/stealth-checkout",
-    "demo_url": "https://bongbongcrypto.github.io/stealth-checkout/apps/demo-arcade/index.html",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-11",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T06:10:47Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "bongbongcrypto",
-        "name": "bongbongcrypto",
-        "avatar_url": "https://avatars.githubusercontent.com/u/194173583?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 12
-      }
-    ],
-    "active_days": [
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-21"
-    ],
-    "head_sha": "6c1b12c5c42f7de29eb91af0ac1cbe5143975cde",
-    "readme_hash": "6642ee8cd33e9144",
-    "desc_v6": true,
-    "summary": "Accept private payments with an embeddable checkout and hosted invoices.",
-    "description_long": "Stealth Checkout allows storefronts and dapps to accept private payments on Starknet. It includes a TS widget for private payments, hosted invoice pages that keep payer details confidential, a backend watcher with webhook confirmations, and receipt management. Key components include the `strk20-pay` widget, a coin-op arcade demo, and a dashboard for managing invoices and payments.",
-    "latest_push": "Added the wallet compatibility panel before the pay button.",
-    "tooling": [
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 66,
-    "deletions": 0,
-    "churn_pct": 0.2,
-    "sprint": {
-      "pushes": 16,
-      "additions": 37480,
-      "deletions": 40,
-      "computed": 2
-    },
-    "assessment": null,
     "star_evidence": ""
   },
   {
@@ -3141,6 +3315,92 @@
       "reason": "Cipher21 utilizes privacy mechanisms to enhance confidentiality in online blackjack.",
       "facts_v2": true
     },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "mirage-zk",
+    "name": "Mirage ZK",
+    "one_liner": "A fully shielded DeFi pool + dark order book on Starknet.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/Shijas786/Mirage",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-20T21:57:53Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Shijas786",
+        "name": "Shijas T",
+        "avatar_url": "https://avatars.githubusercontent.com/u/86018183?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-20"
+    ],
+    "head_sha": "f392187d0a6bd6cb6c6a92a572fdd843aef54dbf",
+    "readme_hash": "365992efbf91ba61",
+    "desc_v6": true,
+    "churn_pct": 4.5,
+    "summary": "A fully shielded DeFi pool with a dark order book.",
+    "description_long": "This project is a fully shielded DeFi pool that includes a dark order book. It is built on Starknet.",
+    "latest_push": "Redesigned landing page UI with Starknet themes and custom geometry diagrams.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 123,
+    "deletions": 114,
+    "sprint": {
+      "pushes": 2,
+      "additions": 6403,
+      "deletions": 114,
+      "computed": 2
+    },
+    "assessment": null,
     "star_evidence": "Cairo in the repository"
   },
   {
@@ -6063,90 +6323,6 @@
       "computed": 2
     },
     "assessment": null,
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "portage",
-    "name": "Portage.fun",
-    "one_liner": "Provably-fair idle creature-collecting on Starknet — hatch, evolve, and trade original creatures.",
-    "category": "Gaming",
-    "repo_url": "https://github.com/joaoolucas/portage-strk",
-    "demo_url": "https://portage-topaz.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-19T21:30:26Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "joaoolucas",
-        "name": "joaoolucas",
-        "avatar_url": "https://avatars.githubusercontent.com/u/83239762?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 9
-      }
-    ],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19"
-    ],
-    "head_sha": "6949a189ca5aab016536f5e5fa7f91b47ac9c4ea",
-    "readme_hash": "eb7d57df4460edd7",
-    "desc_v6": true,
-    "summary": "A cozy idle RPG with creature collecting, evolution, and party management.",
-    "description_long": "The project is a playable top-down idle RPG where players collect and evolve creatures while managing their party. It features tile movement, NPCs, spatial combat, and a minimap, with progress autosaving locally. The repository includes Starknet contracts for future integration, but the current build runs entirely in the browser, using Next.js for the client and Cairo for game logic.",
-    "latest_push": "Integrated STRK20 privacy UI into the Marketplace tab.",
-    "tooling": [
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 257,
-    "deletions": 3,
-    "churn_pct": 1.9,
-    "sprint": {
-      "pushes": 94,
-      "additions": 6336,
-      "deletions": 202,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "The project is an idle creature-collecting RPG, which does not apply privacy in a non-obvious way.",
-      "why_complex": "There are no deployed contracts or depth in Cairo code at this stage.",
-      "reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
-      "facts_v2": true
-    },
     "star_evidence": "Cairo in the repository"
   },
   {
@@ -9380,74 +9556,6 @@
       "why_innovative": "The project implements a private payroll system, which is an obvious application of privacy.",
       "why_complex": "There are no actual deployed contracts or significant engineering in Cairo as of now.",
       "reason": "The project is in early progress with no deployed contracts or engineering depth visible.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "veilfolio",
-    "name": "Veilfolio",
-    "one_liner": "One portfolio. Separate identities. Private by design.",
-    "category": "Other",
-    "repo_url": "https://github.com/obiJohnbosco163/Veilfolio",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Veilfolio focuses on private execution identities for an existing portfolio.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-14T12:49:38Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "obiJohnbosco163",
-        "name": "obijohnbosco163",
-        "avatar_url": "https://avatars.githubusercontent.com/u/123234391?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14"
-    ],
-    "head_sha": "cae9e9edc6a532668afeb492319cf778fdac6d82",
-    "readme_hash": "883d2609d135c104",
-    "desc_v6": true,
-    "summary": "A privacy-first portfolio layer for organizing separate execution identities.",
-    "description_long": "Veilfolio allows users to manage a unified portfolio with distinct, privacy-aware execution identities for various applications and strategies. Built using Next.js for the frontend and Cairo for the smart contracts, it integrates with the STRK20 privacy pool to facilitate private transactions and balances. Key components include a User Wallet for Starknet integration, an Execution Identity Manager for portfolio abstraction, and a Portfolio Aggregation Engine for tracking performance and risk metrics.",
-    "latest_push": "Added project-specific functionality.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 14853,
-    "deletions": 4,
-    "churn_pct": 100,
-    "sprint": {
-      "pushes": 3,
-      "additions": 15031,
-      "deletions": 4,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "It offers private transfers and balances using STRK20, which is an obvious application of privacy.",
-      "why_complex": "No complex contracts are built yet; only TypeScript and a minimal Cairo presence.",
-      "reason": "Veilfolio focuses on private execution identities for an existing portfolio.",
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
