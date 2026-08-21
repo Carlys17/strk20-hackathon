@@ -21,7 +21,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-21T10:31:05Z",
+    "pushed_at": "2026-08-21T10:46:39Z",
     "stars": 0,
     "builders": [
       {
@@ -35,13 +35,13 @@
       "2026-08-20",
       "2026-08-21"
     ],
-    "head_sha": "4d1a92ea4a21a6d0681228a961439158534977d0",
+    "head_sha": "1e7b2d4185fddcdc6fe32749535203afd36b8d93",
     "readme_hash": "3764f04545f31feb",
     "desc_v6": true,
-    "churn_pct": 88,
+    "churn_pct": 19,
     "summary": "An anonymous lending protocol for collateralized borrowing on Starknet.",
     "description_long": "Lien allows users to deposit collateral, borrow assets, and manage loans without linking their wallet identity to their transactions. The protocol masks borrowing, repayment, and liquidation actions through the STRK20 Privacy Pool, ensuring that positions are unlinked from wallet addresses with hash-based secrets. Built with smart contracts in Cairo, it features a frontend developed in Next.js, and includes functionalities for managing loan positions while maintaining privacy.",
-    "latest_push": "Defined protocol types and implemented risk math for lending operations.",
+    "latest_push": "Added MockPrivacyPool and an integration test suite for STRK20 Privacy Pool.",
     "tooling": [
       {
         "label": "Cairo",
@@ -55,16 +55,175 @@
       }
     ],
     "has_readme": true,
-    "additions": 2959,
-    "deletions": 369,
+    "additions": 892,
+    "deletions": 0,
     "sprint": {
-      "pushes": 43,
-      "additions": 4442,
+      "pushes": 46,
+      "additions": 5334,
       "deletions": 0,
       "computed": 2
     },
     "assessment": null,
     "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "vinss",
+    "name": "VINSS",
+    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/DXJLabs/vinss",
+    "demo_url": "https://vinss-nu.vercel.app/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-01",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T10:44:28Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ntfound-dev",
+        "name": "ntfound-dev",
+        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
+      },
+      {
+        "login": "DXJLabs",
+        "name": "DXJ Labs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "head_sha": "c2eaec082edb97c4c8567b15a74b8b39b2f5328c",
+    "readme_hash": "709363b44ceb8140",
+    "desc_v6": true,
+    "churn_pct": 15.2,
+    "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
+    "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
+    "latest_push": "Refactored the backend persistent network-aware discovery indexer.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 2829,
+    "deletions": 445,
+    "sprint": {
+      "pushes": 100,
+      "additions": 15349,
+      "deletions": 2598,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "creates a private deal room for encrypted negotiations and offers, not typical in this domain.",
+      "why_complex": "includes multiple Cairo helper contracts for messaging, escrow, and requires event decryption via an indexer.",
+      "reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "sealed",
+    "name": "Sealed",
+    "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/tinoxbt/sealed",
+    "demo_url": "https://tinoxbt.github.io/sealed/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-08",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
+    "contracts": [
+      {
+        "address": "0x076a5480f7359b8a8db0245c603c78e108a89442fb3b71aea2a3e7cc976b133d",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T10:42:33Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "tinoxbt",
+        "name": "tinoxbt",
+        "avatar_url": "https://avatars.githubusercontent.com/u/202869881?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-21"
+    ],
+    "head_sha": "ca4c6501bb8bb90d43e59c101b55c7443ebd497d",
+    "readme_hash": "acf40c153688c646",
+    "desc_v6": true,
+    "churn_pct": 0.2,
+    "summary": "A sealed-bid auction with unlinkable bidders and hidden bid values.",
+    "description_long": "Sealed is a single-item, single-round sealed-bid auction using a Vickrey mechanism. It allows bidders to submit commitments to their bids while keeping their identities and bid amounts private until a reveal phase. The auction is executed using a pool that manages collateral in the STRK20 privacy pool, ensuring that no address linked to a bidder appears on-chain during the bidding process.",
+    "latest_push": "Closed the class hash drift and redeployed the contract.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 4,
+    "deletions": 4,
+    "sprint": {
+      "pushes": 70,
+      "additions": 13964,
+      "deletions": 103,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "It enables unlinkable sealed-bid auctions with privacy for both bids and identities using STRK20.",
+      "why_complex": "The project implements multiple contracts with Poseidon commitments and uniform collateral mechanisms.",
+      "reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
+      "facts_v2": true
+    },
+    "star_evidence": "1 contract deployed, Cairo in the repository"
   },
   {
     "slug": "rhizome",
@@ -112,7 +271,6 @@
     "head_sha": "0aa61c96fb976d9af698f3a8abafec97c94f9258",
     "readme_hash": "7a49fe2a06ccbf71",
     "desc_v6": true,
-    "churn_pct": 3.2,
     "summary": "A fee-aware tranching scheduler for private actions on the STRK20 pool.",
     "description_long": "Rhizome calculates the cost of unlinkability and executes a scheduled strategy for private transactions. It reads the current fee and transaction history from the STRK20 privacy pool, assesses amounts for blending in, and determines an optimal tranche count for privacy while considering fees and timing. The tool executes payments through its own anonymizer contract, ensuring multiple indistinguishable deposits instead of a singular identifiable transaction.",
     "latest_push": "Canonicalized the STRK20 Wallet API felts in wallet.mjs.",
@@ -146,6 +304,7 @@
     "has_readme": true,
     "additions": 155,
     "deletions": 12,
+    "churn_pct": 3.2,
     "sprint": {
       "pushes": 35,
       "additions": 9063,
@@ -196,7 +355,6 @@
     "head_sha": "cffb6322a46ab8743c15435c5756af026ab0c461",
     "readme_hash": "d6e46ace8afaa189",
     "desc_v6": true,
-    "churn_pct": 90.4,
     "summary": "A one-way door for ERC-20 tokens that enables private transfers and anonymous payments.",
     "description_long": "OneWay allows users to get paid anonymously via a ghost address that does not reveal their identity. Users can also transfer funds from a known wallet to a private balance, and later exit to a fresh address on the same chain or another. The system is built using EVM-compatible contracts and a privacy layer, with security provided by a unique commitment derived from the user's signature.",
     "latest_push": "Added the shield-into-pool function after claim in page.tsx.",
@@ -210,6 +368,7 @@
     "has_readme": true,
     "additions": 609,
     "deletions": 70,
+    "churn_pct": 90.4,
     "sprint": {
       "pushes": 5,
       "additions": 5193,
@@ -218,87 +377,6 @@
     },
     "assessment": null,
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "sealed",
-    "name": "Sealed",
-    "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
-    "category": "DeFi",
-    "repo_url": "https://github.com/tinoxbt/sealed",
-    "demo_url": "https://tinoxbt.github.io/sealed/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-08",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
-    "contracts": [
-      {
-        "address": "0x01a691c524299a7cdcde1e49680564fa35a8ac64fdf37c7e71f261e88eb03f62",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T10:18:03Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "tinoxbt",
-        "name": "tinoxbt",
-        "avatar_url": "https://avatars.githubusercontent.com/u/202869881?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-21"
-    ],
-    "head_sha": "91bb1dd3bb54f26c61d86c3cb627fc8e43e4640d",
-    "readme_hash": "acf40c153688c646",
-    "desc_v6": true,
-    "churn_pct": 3.8,
-    "summary": "A sealed-bid auction with unlinkable bidders and hidden bid values.",
-    "description_long": "Sealed is a single-item, single-round sealed-bid auction using a Vickrey mechanism. It allows bidders to submit commitments to their bids while keeping their identities and bid amounts private until a reveal phase. The auction is executed using a pool that manages collateral in the STRK20 privacy pool, ensuring that no address linked to a bidder appears on-chain during the bidding process.",
-    "latest_push": "Added first-price auction type and stopped tracking TypeScript build cache.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 186,
-    "deletions": 10,
-    "sprint": {
-      "pushes": 69,
-      "additions": 13964,
-      "deletions": 103,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "It enables unlinkable sealed-bid auctions with privacy for both bids and identities using STRK20.",
-      "why_complex": "The project implements multiple contracts with Poseidon commitments and uniform collateral mechanisms.",
-      "reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
-      "facts_v2": true
-    },
-    "star_evidence": "1 contract deployed, Cairo in the repository"
   },
   {
     "slug": "oblivionprotocol",
@@ -373,7 +451,6 @@
     "head_sha": "4067dba26e9da3de880a49342be9e1647fdc82f1",
     "readme_hash": "aa8d645ba62f2087",
     "desc_v6": true,
-    "churn_pct": 100,
     "summary": "A dark financial engine for shielded concentrated liquidity and batch swaps.",
     "description_long": "Oblivion Protocol transforms the STRK20 pool into a high-throughput financial engine for liquidity providers and traders. It includes features like shielded concentrated liquidity provision, zero-MEV batch swaps, automatic collateral routing to money markets, and an ATTEST compliance engine for verifiable proofs of solvency and provenance. The protocol is built on the STRK20 Privacy Pool and consists of multiple contracts including OblivionVault for liquidity management and CoWMatcher for batch auction processes.",
     "latest_push": "Completed the Oblivion Protocol suite and implemented several tools.",
@@ -392,6 +469,7 @@
     "has_readme": true,
     "additions": 7940,
     "deletions": 541,
+    "churn_pct": 100,
     "sprint": {
       "pushes": 3,
       "additions": 13575,
@@ -460,7 +538,6 @@
     "head_sha": "fd3fbb3e68a5e72d28be0d28584dde09a78a8b78",
     "readme_hash": "06a5294711d6b365",
     "desc_v6": true,
-    "churn_pct": 16.4,
     "summary": "A physical-chaos entropy device for managing STRK20 tokens and transactions.",
     "description_long": "This project integrates a physical-chaos entropy device with a Pool tab that interacts with the Starknet STRK20 privacy pool through the user's Ready wallet. It uses the Starknet Wallet API v0.10 and includes components such as the Starknet SDK for core communication, wallet standard discovery and adapter for wallet detection and compatibility, and wallet API types for safe STRK20 actions. The application supports functions like shielding, private transfers, and unshielding while ensuring that the dapp never holds a viewing key.",
     "latest_push": "Fixed Alchemy RPC handling and improved PrivacyScreen functionality.",
@@ -468,6 +545,7 @@
     "has_readme": true,
     "additions": 809,
     "deletions": 28,
+    "churn_pct": 16.4,
     "sprint": {
       "pushes": 89,
       "additions": 21236,
@@ -576,84 +654,6 @@
       "computed": 2
     },
     "assessment": null,
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "vinss",
-    "name": "VINSS",
-    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/DXJLabs/vinss",
-    "demo_url": "https://vinss-nu.vercel.app/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-01",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T09:16:56Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "ntfound-dev",
-        "name": "ntfound-dev",
-        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
-      },
-      {
-        "login": "DXJLabs",
-        "name": "DXJ Labs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21"
-    ],
-    "head_sha": "9755eb51866473c9cabd8a6c88c34b3c3e6c640c",
-    "readme_hash": "709363b44ceb8140",
-    "desc_v6": true,
-    "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
-    "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
-    "latest_push": "Added encrypted freelance work submission and reduced deal room sync overhead.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 959,
-    "deletions": 43,
-    "churn_pct": 4.9,
-    "sprint": {
-      "pushes": 100,
-      "additions": 13500,
-      "deletions": 4139,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "creates a private deal room for encrypted negotiations and offers, not typical in this domain.",
-      "why_complex": "includes multiple Cairo helper contracts for messaging, escrow, and requires event decryption via an indexer.",
-      "reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
-      "facts_v2": true
-    },
     "star_evidence": "Cairo in the repository"
   },
   {
