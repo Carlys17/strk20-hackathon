@@ -110,9 +110,9 @@
     "readme_hash": "a18d0d6b2872adaa",
     "desc_v6": true,
     "churn_pct": 100,
-    "summary": "A policy-guarded spending account for AI agents on the Starknet STRK20 privacy pool.",
-    "description_long": "Kese enables AI agents to make private payments with defined policies, including spending limits and human approval via Telegram. It consists of a policy engine, an escrow-claim contract for unregistered recipients, and integrates with the STRK20 privacy pool for secure transactions. The owner can manage settings and view audit reports through the Kese dashboard.",
-    "latest_push": "Implemented the KeseWallet for money-moving operations.",
+    "summary": "A policy-guarded spending account for AI agents using STRK20.",
+    "description_long": "Kese allows LLM agents to manage spending with privacy, safety, and accountability. It includes a policy engine for spending limits, human approval, and a viewing key for owners to audit transactions. Built on Starknet's STRK20 privacy pool, it features private transfers, a claim-link escrow for unregistered recipients, and a dashboard for monitoring activity.",
+    "latest_push": "Implemented the KeseWallet money-moving primitive in the core.",
     "tooling": [
       {
         "label": "Privacy SDK",
@@ -208,7 +208,7 @@
     "churn_pct": 4.9,
     "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
     "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
-    "latest_push": "Implemented encrypted freelance work submission and reduced sync overhead.",
+    "latest_push": "Added encrypted freelance work submission and reduced deal room sync overhead.",
     "tooling": [
       {
         "label": "Cairo",
@@ -282,7 +282,7 @@
     "churn_pct": 29.5,
     "summary": "A privacy-first DeFi platform with stealth payments and confidential perpetual futures.",
     "description_long": "ORRANGE is a decentralized financial platform focusing on privacy built on Starknet. It features a STRK20 privacy wallet for confidential token transactions and PEL private perpetual futures for trading with hidden parameters. The platform includes an automated keeper system, a DEX aggregator for live swaps, and is implemented using Starknet Cairo smart contracts, ensuring secure and efficient execution of its features.",
-    "latest_push": "Added production Garaga Cairo verifiers and E2E adversarial test matrix.",
+    "latest_push": "Implemented production Garaga Cairo verifiers and E2E test matrix.",
     "tooling": [
       {
         "label": "AVNU",
@@ -470,7 +470,7 @@
     "churn_pct": 2.8,
     "summary": "A private prediction market with public odds and anonymous bettors.",
     "description_long": "Doom is a private prediction market that allows users to place bets while hiding their identities. It consists of the `DoomMarketV2` contract for managing the market and bets, and the `DoomDecision` contract serving as a governance layer for decision-making through conditional markets. It enforces anonymity through an innovative approach, where the bet amounts and current odds are public while bettor identities are masked, thus eliminating manipulation typically associated with visible betting.",
-    "latest_push": "Implemented a search feature and a resolution panel for pre-bet answers.",
+    "latest_push": "Added a search function and a resolution panel to the betting feature.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -660,8 +660,8 @@
     "readme_hash": "aa8d645ba62f2087",
     "desc_v6": true,
     "churn_pct": 100,
-    "summary": "A privacy-focused liquidity engine with batch swaps and compliance features.",
-    "description_long": "Oblivion Protocol transforms Starknet's STRK20 pool into a high-throughput financial engine for liquidity providers and traders. It includes shielded concentrated liquidity pools, zero-MEV batch swaps with internal matching, and automatic yield compounding in Starknet money markets, as well as a compliance engine that exports verifiable proofs of solvency and provenance. Key components are the Oblivion Vault for liquidity management, CoW Matcher for batch auctions, and the ATTEST Compliance Engine for regulatory purposes.",
+    "summary": "A dark financial engine for shielded concentrated liquidity and batch swaps.",
+    "description_long": "Oblivion Protocol transforms the STRK20 pool into a high-throughput financial engine for liquidity providers and traders. It includes features like shielded concentrated liquidity provision, zero-MEV batch swaps, automatic collateral routing to money markets, and an ATTEST compliance engine for verifiable proofs of solvency and provenance. The protocol is built on the STRK20 Privacy Pool and consists of multiple contracts including OblivionVault for liquidity management and CoWMatcher for batch auction processes.",
     "latest_push": "Launched the Oblivion Protocol with contracts, frontend, spec, and manifest.",
     "tooling": [
       {
