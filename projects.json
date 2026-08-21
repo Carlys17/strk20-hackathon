@@ -1,5 +1,135 @@
 [
   {
+    "slug": "almoner",
+    "name": "Almoner",
+    "one_liner": "Private batch disbursement on STRK20: pay many people from a shielded balance for one flat pool fee, including people who have never registered.",
+    "category": "Infra",
+    "repo_url": "https://github.com/leojay-net/almoner",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-10",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T23:34:13Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "leojay-net",
+        "name": "leojay",
+        "avatar_url": "https://avatars.githubusercontent.com/u/102752992?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-21"
+    ],
+    "head_sha": "f54ea58305da8d5b3e73f482a10d582cb8f2f335",
+    "readme_hash": "d9e7510050a1c703",
+    "desc_v6": true,
+    "churn_pct": 27.4,
+    "summary": "Batch pay many users from a shielded balance with anonymity.",
+    "description_long": "Almoner allows users to batch pay multiple recipients at once from a shielded balance while keeping the specifics of each payment confidential. It operates by splitting payments at the proof boundary, where funds are moved into an escrow contract and then allocated to registered recipients or issued as claims for unregistered ones. The application is built using Next.js for the frontend and includes mechanisms for scheduling, claim management, and notifications.",
+    "latest_push": "Added the keeper package with dry-run mode and various event decoding features.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1169,
+    "deletions": 15,
+    "sprint": {
+      "pushes": 55,
+      "additions": 20410,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "crosslink",
+    "name": "Crosslink",
+    "one_liner": "Unlinkable cross-chain payouts: fund a shielded balance on Starknet, pay anyone on any chain, and neither the public nor the recipient can trace it back to you.",
+    "category": "Payments",
+    "repo_url": "https://github.com/CaptainDiv/crosslink",
+    "demo_url": "https://captaindiv.github.io/crosslink/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-22",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T23:27:57Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "CaptainDiv",
+        "name": "Captain",
+        "avatar_url": "https://avatars.githubusercontent.com/u/207330336?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Sonnet 5",
+        "avatar_url": "",
+        "commits": 11
+      }
+    ],
+    "active_days": [
+      "2026-08-19",
+      "2026-08-21"
+    ],
+    "head_sha": "6f0e8e5a76028350557339c29039c1be8ebafa78",
+    "readme_hash": "a2cae4fa4741c3e1",
+    "desc_v6": true,
+    "churn_pct": 4.8,
+    "summary": "Unlinkable cross-chain payouts and a Linkability Meter for privacy assurance.",
+    "description_long": "Crosslink allows users to fund a shielded balance on STRK20 and pay someone else, enabling unlinkable payouts across chains. The Linkability Meter evaluates pending payouts based on amount uniqueness, timing correlation, and pool depth, blocking transactions that do not preserve privacy. The project includes components like `starkware-libs/privacy-bridge` and is built for the STRK20 Private Sprint.",
+    "latest_push": "Fixed the explicit Register step to prevent free registration calls.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 127,
+    "deletions": 8,
+    "sprint": {
+      "pushes": 22,
+      "additions": 11980,
+      "deletions": 2,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
     "slug": "aegis-rescue",
     "name": "Aegis Rescue",
     "one_liner": "Whitehat rescue bot: sweeps exposed on-chain funds into the STRK20 shielded pool before attackers can, returns them to verified GitHub owners.",
@@ -74,7 +204,6 @@
     "head_sha": "66b0e45ac78d896eddab0667a31becdcc8fc56db",
     "readme_hash": "a871f5ff1107fb3c",
     "desc_v6": true,
-    "churn_pct": 1.3,
     "summary": "A whitehat rescue bot that sweeps exposed on-chain funds to safety.",
     "description_long": "Aegis monitors public repositories for accidentally leaked private keys and API keys, verifies if they control actual funds, and automatically sweeps those funds to a secure address before they can be exploited. It scans registered projects for sensitive filenames, checks for real balances, derives the Starknet account, deploys if necessary, and conducts sweeping operations entirely automated. Owners prove their identity through GitHub to reclaim their funds, which are transferred through the STRK20 shielded pool for enhanced privacy.",
     "latest_push": "Restricted claim payouts to the actual safe wallet.",
@@ -118,6 +247,7 @@
     "has_readme": true,
     "additions": 51,
     "deletions": 7,
+    "churn_pct": 1.3,
     "sprint": {
       "pushes": 62,
       "additions": 5186,
@@ -133,75 +263,6 @@
       "facts_v2": true
     },
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "crosslink",
-    "name": "Crosslink",
-    "one_liner": "Unlinkable cross-chain payouts: fund a shielded balance on Starknet, pay anyone on any chain, and neither the public nor the recipient can trace it back to you.",
-    "category": "Payments",
-    "repo_url": "https://github.com/CaptainDiv/crosslink",
-    "demo_url": "https://captaindiv.github.io/crosslink/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-22",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T22:58:20Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "CaptainDiv",
-        "name": "Captain",
-        "avatar_url": "https://avatars.githubusercontent.com/u/207330336?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Sonnet 5",
-        "avatar_url": "",
-        "commits": 10
-      }
-    ],
-    "active_days": [
-      "2026-08-19",
-      "2026-08-21"
-    ],
-    "head_sha": "08edd66195a0ce079cfbe7a66ffc2e9af29874ba",
-    "readme_hash": "a2cae4fa4741c3e1",
-    "desc_v6": true,
-    "churn_pct": 4.9,
-    "summary": "Unlinkable cross-chain payouts and a Linkability Meter for privacy assurance.",
-    "description_long": "Crosslink allows users to fund a shielded balance on STRK20 and pay someone else, enabling unlinkable payouts across chains. The Linkability Meter evaluates pending payouts based on amount uniqueness, timing correlation, and pool depth, blocking transactions that do not preserve privacy. The project includes components like `starkware-libs/privacy-bridge` and is built for the STRK20 Private Sprint.",
-    "latest_push": "Added the PRIVACY.md document outlining honest limitations.",
-    "tooling": [
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 133,
-    "deletions": 0,
-    "sprint": {
-      "pushes": 21,
-      "additions": 11861,
-      "deletions": 2,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
   },
   {
     "slug": "nyalthe",
@@ -377,67 +438,6 @@
       "pushes": 32,
       "additions": 7951,
       "deletions": 1,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "almoner",
-    "name": "Almoner",
-    "one_liner": "Private batch disbursement on STRK20: pay many people from a shielded balance for one flat pool fee, including people who have never registered.",
-    "category": "Infra",
-    "repo_url": "https://github.com/leojay-net/almoner",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-10",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T22:32:49Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "leojay-net",
-        "name": "leojay",
-        "avatar_url": "https://avatars.githubusercontent.com/u/102752992?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-21"
-    ],
-    "head_sha": "b408c8b30a81ded8e458099350e23bfaf55ffd19",
-    "readme_hash": "d9e7510050a1c703",
-    "desc_v6": true,
-    "summary": "Batch pay many users from a shielded balance with anonymity.",
-    "description_long": "Almoner allows users to batch pay multiple recipients at once from a shielded balance while keeping the specifics of each payment confidential. It operates by splitting payments at the proof boundary, where funds are moved into an escrow contract and then allocated to registered recipients or issued as claims for unregistered ones. The application is built using Next.js for the frontend and includes mechanisms for scheduling, claim management, and notifications.",
-    "latest_push": "Added recipient list parsing, registration detection, and UI gating for claims.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 847,
-    "deletions": 2,
-    "churn_pct": 24.3,
-    "sprint": {
-      "pushes": 48,
-      "additions": 19256,
-      "deletions": 0,
       "computed": 2
     },
     "assessment": null,
