@@ -1,5 +1,161 @@
 [
   {
+    "slug": "lien",
+    "name": "Lien",
+    "one_liner": "Private lending on Starknet: shield your collateral, borrow, and hide your liquidation risk through the STRK20 pool.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/SudheerKondamuri/lien",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T10:31:05Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "SudheerKondamuri",
+        "name": "Sudheer Kondamuri",
+        "avatar_url": "https://avatars.githubusercontent.com/u/147792492?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "head_sha": "4d1a92ea4a21a6d0681228a961439158534977d0",
+    "readme_hash": "3764f04545f31feb",
+    "desc_v6": true,
+    "churn_pct": 88,
+    "summary": "An anonymous lending protocol for collateralized borrowing on Starknet.",
+    "description_long": "Lien allows users to deposit collateral, borrow assets, and manage loans without linking their wallet identity to their transactions. The protocol masks borrowing, repayment, and liquidation actions through the STRK20 Privacy Pool, ensuring that positions are unlinked from wallet addresses with hash-based secrets. Built with smart contracts in Cairo, it features a frontend developed in Next.js, and includes functionalities for managing loan positions while maintaining privacy.",
+    "latest_push": "Defined protocol types and implemented risk math for lending operations.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 2959,
+    "deletions": 369,
+    "sprint": {
+      "pushes": 43,
+      "additions": 4442,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "rhizome",
+    "name": "Rhizome",
+    "one_liner": "Prices what privacy costs on STRK20, then executes it: fee-aware tranche scheduling for private Vesu position through its own anonymizer.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/cipoklean/rhizome",
+    "demo_url": "https://rhizome-indol.vercel.app",
+    "demo_video": "",
+    "x_handle": "David63694631",
+    "inspired_by": "IDEA-16",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x552d747e90eb70e52e9c5f9d9150b97e46ac9b25989a36e7eee96a2e45c5e20",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T10:30:06Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "cipoklean",
+        "name": "Aghazie David",
+        "avatar_url": "https://avatars.githubusercontent.com/u/82593998?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "head_sha": "0aa61c96fb976d9af698f3a8abafec97c94f9258",
+    "readme_hash": "7a49fe2a06ccbf71",
+    "desc_v6": true,
+    "churn_pct": 3.2,
+    "summary": "A fee-aware tranching scheduler for private actions on the STRK20 pool.",
+    "description_long": "Rhizome calculates the cost of unlinkability and executes a scheduled strategy for private transactions. It reads the current fee and transaction history from the STRK20 privacy pool, assesses amounts for blending in, and determines an optimal tranche count for privacy while considering fees and timing. The tool executes payments through its own anonymizer contract, ensuring multiple indistinguishable deposits instead of a singular identifiable transaction.",
+    "latest_push": "Canonicalized the STRK20 Wallet API felts in wallet.mjs.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 155,
+    "deletions": 12,
+    "sprint": {
+      "pushes": 35,
+      "additions": 9063,
+      "deletions": 32,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "1 contract deployed, Cairo in the repository"
+  },
+  {
     "slug": "one-way",
     "name": "OneWay",
     "one_liner": "A one-way door for any ERC-20. Get paid without sharing a wallet, or leave a known wallet and exit on another chain.",
@@ -21,7 +177,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-21T09:32:27Z",
+    "pushed_at": "2026-08-21T10:21:51Z",
     "stars": 0,
     "builders": [
       {
@@ -37,13 +193,13 @@
       "2026-08-19",
       "2026-08-21"
     ],
-    "head_sha": "f92b1ec614ad5f731ce5d08f13c326cc138d89a3",
+    "head_sha": "cffb6322a46ab8743c15435c5756af026ab0c461",
     "readme_hash": "d6e46ace8afaa189",
     "desc_v6": true,
-    "churn_pct": 23.1,
+    "churn_pct": 90.4,
     "summary": "A one-way door for ERC-20 tokens that enables private transfers and anonymous payments.",
     "description_long": "OneWay allows users to get paid anonymously via a ghost address that does not reveal their identity. Users can also transfer funds from a known wallet to a private balance, and later exit to a fresh address on the same chain or another. The system is built using EVM-compatible contracts and a privacy layer, with security provided by a unique commitment derived from the user's signature.",
-    "latest_push": "Deployed the ghost on Sepolia and enabled token claiming.",
+    "latest_push": "Added the shield-into-pool function after claim in page.tsx.",
     "tooling": [
       {
         "label": "Cairo",
@@ -52,16 +208,281 @@
       }
     ],
     "has_readme": true,
-    "additions": 134,
-    "deletions": 28,
+    "additions": 609,
+    "deletions": 70,
     "sprint": {
-      "pushes": 4,
-      "additions": 4563,
-      "deletions": 90,
+      "pushes": 5,
+      "additions": 5193,
+      "deletions": 181,
       "computed": 2
     },
     "assessment": null,
     "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "sealed",
+    "name": "Sealed",
+    "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/tinoxbt/sealed",
+    "demo_url": "https://tinoxbt.github.io/sealed/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-08",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
+    "contracts": [
+      {
+        "address": "0x01a691c524299a7cdcde1e49680564fa35a8ac64fdf37c7e71f261e88eb03f62",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T10:18:03Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "tinoxbt",
+        "name": "tinoxbt",
+        "avatar_url": "https://avatars.githubusercontent.com/u/202869881?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-21"
+    ],
+    "head_sha": "91bb1dd3bb54f26c61d86c3cb627fc8e43e4640d",
+    "readme_hash": "acf40c153688c646",
+    "desc_v6": true,
+    "churn_pct": 3.8,
+    "summary": "A sealed-bid auction with unlinkable bidders and hidden bid values.",
+    "description_long": "Sealed is a single-item, single-round sealed-bid auction using a Vickrey mechanism. It allows bidders to submit commitments to their bids while keeping their identities and bid amounts private until a reveal phase. The auction is executed using a pool that manages collateral in the STRK20 privacy pool, ensuring that no address linked to a bidder appears on-chain during the bidding process.",
+    "latest_push": "Added first-price auction type and stopped tracking TypeScript build cache.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 186,
+    "deletions": 10,
+    "sprint": {
+      "pushes": 69,
+      "additions": 13964,
+      "deletions": 103,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "It enables unlinkable sealed-bid auctions with privacy for both bids and identities using STRK20.",
+      "why_complex": "The project implements multiple contracts with Poseidon commitments and uniform collateral mechanisms.",
+      "reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
+      "facts_v2": true
+    },
+    "star_evidence": "1 contract deployed, Cairo in the repository"
+  },
+  {
+    "slug": "oblivionprotocol",
+    "name": "OblivionProtocol",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/ScriptedBro/OblivionProtocol",
+    "demo_url": "https://oblivion-protocol.vercel.app",
+    "demo_video": "https://www.youtube.com/watch?v=OBLIVION_DEMO_VIDEO",
+    "x_handle": "OblivionZK",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x0419a4e321a48be389812a74c1092a748c12a84b01e92a83e028b182a938e102",
+        "network": "unknown"
+      },
+      {
+        "address": "0x0428b1092a83e028b182a938e10219a4e321a48be389812a74c1092a748c12a8",
+        "network": "unknown"
+      },
+      {
+        "address": "0x0437c8912a74c1092a748c12a84b01e92a83e028b182a938e10219a4e321a48b",
+        "network": "unknown"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x07f419460965d6d83b2cc919a0f08d11dee212fe367849cfb1afe124ed14b511",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      },
+      {
+        "hash": "0x07d643ebd88f2894b2733628fcc7363fd082e30a0ea0b47c3608149a7bbfc86c",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      },
+      {
+        "hash": "0x03f556eafedae96409b43b7e20b0e2f56199cc74a1ea97b8e09a63c80e4ec0f2",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      }
+    ],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": true,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T10:06:45Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ScriptedBro",
+        "name": "ScriptedBro",
+        "avatar_url": "https://avatars.githubusercontent.com/u/45717428?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-21"
+    ],
+    "head_sha": "4067dba26e9da3de880a49342be9e1647fdc82f1",
+    "readme_hash": "aa8d645ba62f2087",
+    "desc_v6": true,
+    "churn_pct": 100,
+    "summary": "A dark financial engine for shielded concentrated liquidity and batch swaps.",
+    "description_long": "Oblivion Protocol transforms the STRK20 pool into a high-throughput financial engine for liquidity providers and traders. It includes features like shielded concentrated liquidity provision, zero-MEV batch swaps, automatic collateral routing to money markets, and an ATTEST compliance engine for verifiable proofs of solvency and provenance. The protocol is built on the STRK20 Privacy Pool and consists of multiple contracts including OblivionVault for liquidity management and CoWMatcher for batch auction processes.",
+    "latest_push": "Completed the Oblivion Protocol suite and implemented several tools.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 7940,
+    "deletions": 541,
+    "sprint": {
+      "pushes": 3,
+      "additions": 13575,
+      "deletions": 541,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "3 contracts deployed, Cairo in the repository"
+  },
+  {
+    "slug": "chaoskeyplus-appbuild",
+    "name": "ChaosKey+",
+    "one_liner": "Physical-chaos entropy device with a Ready Wallet API tab for STRK20 shield, private transfer, and unshield.",
+    "category": "Tooling",
+    "repo_url": "https://github.com/Doodabug/Chaoskeyplus-appbuild",
+    "demo_url": "https://mobile-app-build-778.preview.emergentagent.com",
+    "demo_video": "https://www.youtube.com/watch?v=CHAOSKEY_DEMO_VIDEO",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project primarily focuses on standard private transfer features without unique implementation.",
+    "contracts": [
+      {
+        "address": "0x0459f679305796588ce074c2366a62d2503b5a447b4027ba9b7d820d91ce040d",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x07a77c21fc19398bdad4f01dec17457cc9d5f7f6df71806903bb3914d70380d0",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": true,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T10:01:03Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Doodabug",
+        "name": "Doodlebug",
+        "avatar_url": "https://avatars.githubusercontent.com/u/272664821?v=4"
+      },
+      {
+        "login": "emergent-agent-e1",
+        "name": "emergent-agent-e1",
+        "avatar_url": "https://avatars.githubusercontent.com/u/222461215?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "head_sha": "fd3fbb3e68a5e72d28be0d28584dde09a78a8b78",
+    "readme_hash": "06a5294711d6b365",
+    "desc_v6": true,
+    "churn_pct": 16.4,
+    "summary": "A physical-chaos entropy device for managing STRK20 tokens and transactions.",
+    "description_long": "This project integrates a physical-chaos entropy device with a Pool tab that interacts with the Starknet STRK20 privacy pool through the user's Ready wallet. It uses the Starknet Wallet API v0.10 and includes components such as the Starknet SDK for core communication, wallet standard discovery and adapter for wallet detection and compatibility, and wallet API types for safe STRK20 actions. The application supports functions like shielding, private transfers, and unshielding while ensuring that the dapp never holds a viewing key.",
+    "latest_push": "Fixed Alchemy RPC handling and improved PrivacyScreen functionality.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 809,
+    "deletions": 28,
+    "sprint": {
+      "pushes": 89,
+      "additions": 21236,
+      "deletions": 24,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "This project's main features involve a private transfer and shield functionality, which is obvious.",
+      "why_complex": "No contracts have been declared or built, showing no engineering depth in Cairo.",
+      "reason": "The project primarily focuses on standard private transfer features without unique implementation.",
+      "facts_v2": true
+    },
+    "star_evidence": "2 contracts deployed on mainnet"
   },
   {
     "slug": "kese",
@@ -109,7 +530,6 @@
     "head_sha": "d175811a79efa664753de177bca9913558a0eb42",
     "readme_hash": "a18d0d6b2872adaa",
     "desc_v6": true,
-    "churn_pct": 100,
     "summary": "A policy-guarded spending account for AI agents using STRK20.",
     "description_long": "Kese allows LLM agents to manage spending with privacy, safety, and accountability. It includes a policy engine for spending limits, human approval, and a viewing key for owners to audit transactions. Built on Starknet's STRK20 privacy pool, it features private transfers, a claim-link escrow for unregistered recipients, and a dashboard for monitoring activity.",
     "latest_push": "Implemented the KeseWallet money-moving primitive in the core.",
@@ -148,6 +568,7 @@
     "has_readme": true,
     "additions": 13685,
     "deletions": 143,
+    "churn_pct": 100,
     "sprint": {
       "pushes": 25,
       "additions": 15301,
@@ -205,7 +626,6 @@
     "head_sha": "9755eb51866473c9cabd8a6c88c34b3c3e6c640c",
     "readme_hash": "709363b44ceb8140",
     "desc_v6": true,
-    "churn_pct": 4.9,
     "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
     "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
     "latest_push": "Added encrypted freelance work submission and reduced deal room sync overhead.",
@@ -219,6 +639,7 @@
     "has_readme": true,
     "additions": 959,
     "deletions": 43,
+    "churn_pct": 4.9,
     "sprint": {
       "pushes": 100,
       "additions": 13500,
@@ -279,7 +700,6 @@
     "head_sha": "b9f988f21b0d08a5806f55be44666ae119906f8f",
     "readme_hash": "cf1e35452b1d6053",
     "desc_v6": true,
-    "churn_pct": 29.5,
     "summary": "A privacy-first DeFi platform with stealth payments and confidential perpetual futures.",
     "description_long": "ORRANGE is a decentralized financial platform focusing on privacy built on Starknet. It features a STRK20 privacy wallet for confidential token transactions and PEL private perpetual futures for trading with hidden parameters. The platform includes an automated keeper system, a DEX aggregator for live swaps, and is implemented using Starknet Cairo smart contracts, ensuring secure and efficient execution of its features.",
     "latest_push": "Implemented production Garaga Cairo verifiers and E2E test matrix.",
@@ -328,6 +748,7 @@
     "has_readme": true,
     "additions": 48695,
     "deletions": 0,
+    "churn_pct": 29.5,
     "sprint": {
       "pushes": 67,
       "additions": 20115,
@@ -467,7 +888,6 @@
     "head_sha": "7b2ff9f539c2def3c1a2f50f86c7e689da105ff8",
     "readme_hash": "93028ec0e7477992",
     "desc_v6": true,
-    "churn_pct": 2.8,
     "summary": "A private prediction market with public odds and anonymous bettors.",
     "description_long": "Doom is a private prediction market that allows users to place bets while hiding their identities. It consists of the `DoomMarketV2` contract for managing the market and bets, and the `DoomDecision` contract serving as a governance layer for decision-making through conditional markets. It enforces anonymity through an innovative approach, where the bet amounts and current odds are public while bettor identities are masked, thus eliminating manipulation typically associated with visible betting.",
     "latest_push": "Added a search function and a resolution panel to the betting feature.",
@@ -511,6 +931,7 @@
     "has_readme": true,
     "additions": 175,
     "deletions": 19,
+    "churn_pct": 2.8,
     "sprint": {
       "pushes": 37,
       "additions": 9108,
@@ -558,7 +979,6 @@
     "head_sha": "b97edc3d3fcf499054cadf44cb7b1f8858e042b0",
     "readme_hash": "02a6e416be7d0abe",
     "desc_v6": true,
-    "churn_pct": 14.4,
     "summary": "A private, stake-backed reputation layer for foresight and accountability.",
     "description_long": "Xence allows users to make probabilistic forecasts that are privately backed by stakes hidden in the STRK20 privacy pool. It records the commitment publicly, while ensuring the underlying position and stake amounts remain confidential, scoring users on their forecasting accuracy using Brier scores. Built using Cairo and various web technologies, it integrates with the Starknet Wallet API to maintain user privacy and facilitate secure transactions.",
     "latest_push": "Made the palette literal and fixed non-rendering headlines.",
@@ -577,6 +997,7 @@
     "has_readme": true,
     "additions": 742,
     "deletions": 81,
+    "churn_pct": 14.4,
     "sprint": {
       "pushes": 6,
       "additions": 16575,
@@ -585,107 +1006,6 @@
     },
     "assessment": null,
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "oblivionprotocol",
-    "name": "OblivionProtocol",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/ScriptedBro/OblivionProtocol",
-    "demo_url": "https://oblivion-protocol.vercel.app",
-    "demo_video": "https://www.youtube.com/watch?v=OBLIVION_DEMO_VIDEO",
-    "x_handle": "OblivionZK",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x0419a4e321a48be389812a74c1092a748c12a84b01e92a83e028b182a938e102",
-        "network": "unknown"
-      },
-      {
-        "address": "0x0428b1092a83e028b182a938e10219a4e321a48be389812a74c1092a748c12a8",
-        "network": "unknown"
-      },
-      {
-        "address": "0x0437c8912a74c1092a748c12a84b01e92a83e028b182a938e10219a4e321a48b",
-        "network": "unknown"
-      }
-    ],
-    "transactions": [
-      {
-        "hash": "0x07f419460965d6d83b2cc919a0f08d11dee212fe367849cfb1afe124ed14b511",
-        "ok": true,
-        "pool": true,
-        "mine": false,
-        "note": "touched the pool, but not through this project's contracts"
-      },
-      {
-        "hash": "0x07d643ebd88f2894b2733628fcc7363fd082e30a0ea0b47c3608149a7bbfc86c",
-        "ok": true,
-        "pool": true,
-        "mine": false,
-        "note": "touched the pool, but not through this project's contracts"
-      },
-      {
-        "hash": "0x03f556eafedae96409b43b7e20b0e2f56199cc74a1ea97b8e09a63c80e4ec0f2",
-        "ok": true,
-        "pool": true,
-        "mine": false,
-        "note": "touched the pool, but not through this project's contracts"
-      }
-    ],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": true,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T08:45:34Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "ScriptedBro",
-        "name": "ScriptedBro",
-        "avatar_url": "https://avatars.githubusercontent.com/u/45717428?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-21"
-    ],
-    "head_sha": "0eebbab7f075b9977651561342e6b372a3f76bcd",
-    "readme_hash": "aa8d645ba62f2087",
-    "desc_v6": true,
-    "churn_pct": 100,
-    "summary": "A dark financial engine for shielded concentrated liquidity and batch swaps.",
-    "description_long": "Oblivion Protocol transforms the STRK20 pool into a high-throughput financial engine for liquidity providers and traders. It includes features like shielded concentrated liquidity provision, zero-MEV batch swaps, automatic collateral routing to money markets, and an ATTEST compliance engine for verifiable proofs of solvency and provenance. The protocol is built on the STRK20 Privacy Pool and consists of multiple contracts including OblivionVault for liquidity management and CoWMatcher for batch auction processes.",
-    "latest_push": "Launched the Oblivion Protocol with contracts, frontend, spec, and manifest.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 5635,
-    "deletions": 0,
-    "sprint": {
-      "pushes": 1,
-      "additions": 5635,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "3 contracts deployed, Cairo in the repository"
   },
   {
     "slug": "mirage",
@@ -1014,89 +1334,6 @@
       "facts_v2": true
     },
     "star_evidence": ""
-  },
-  {
-    "slug": "chaoskeyplus-appbuild",
-    "name": "ChaosKey+",
-    "one_liner": "Physical-chaos entropy device with a Ready Wallet API tab for STRK20 shield, private transfer, and unshield.",
-    "category": "Tooling",
-    "repo_url": "https://github.com/Doodabug/Chaoskeyplus-appbuild",
-    "demo_url": "https://mobile-app-build-778.preview.emergentagent.com",
-    "demo_video": "https://www.youtube.com/watch?v=CHAOSKEY_DEMO_VIDEO",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project primarily focuses on standard private transfer features without unique implementation.",
-    "contracts": [
-      {
-        "address": "0x0459f679305796588ce074c2366a62d2503b5a447b4027ba9b7d820d91ce040d",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x07a77c21fc19398bdad4f01dec17457cc9d5f7f6df71806903bb3914d70380d0",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": true,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T06:18:01Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Doodabug",
-        "name": "doodabug",
-        "avatar_url": "https://avatars.githubusercontent.com/u/272664821?v=4"
-      },
-      {
-        "login": "emergent-agent-e1",
-        "name": "emergent-agent-e1",
-        "avatar_url": "https://avatars.githubusercontent.com/u/222461215?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21"
-    ],
-    "head_sha": "5dc7342b1e4923394354813f3f172bd7e1e38de0",
-    "readme_hash": "06a5294711d6b365",
-    "desc_v6": true,
-    "summary": "A physical-chaos entropy device for managing STRK20 tokens and transactions.",
-    "description_long": "This project integrates a physical-chaos entropy device with a Pool tab that interacts with the Starknet STRK20 privacy pool through the user's Ready wallet. It uses the Starknet Wallet API v0.10 and includes components such as the Starknet SDK for core communication, wallet standard discovery and adapter for wallet detection and compatibility, and wallet API types for safe STRK20 actions. The application supports functions like shielding, private transfers, and unshielding while ensuring that the dapp never holds a viewing key.",
-    "latest_push": "Fixed cache-dependency-path and updated lockfile for CI.",
-    "tooling": [],
-    "has_readme": true,
-    "additions": 15514,
-    "deletions": 14,
-    "churn_pct": 100,
-    "sprint": {
-      "pushes": 85,
-      "additions": 20455,
-      "deletions": 24,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "This project's main features involve a private transfer and shield functionality, which is obvious.",
-      "why_complex": "No contracts have been declared or built, showing no engineering depth in Cairo.",
-      "reason": "The project primarily focuses on standard private transfer features without unique implementation.",
-      "facts_v2": true
-    },
-    "star_evidence": "2 contracts deployed on mainnet"
   },
   {
     "slug": "stealth-checkout",
@@ -3375,94 +3612,6 @@
     "star_evidence": "1 contract deployed, Cairo in the repository"
   },
   {
-    "slug": "rhizome",
-    "name": "Rhizome",
-    "one_liner": "Prices what privacy costs on STRK20, then executes it: fee-aware tranche scheduling for private Vesu position through its own anonymizer.",
-    "category": "DeFi",
-    "repo_url": "https://github.com/cipoklean/rhizome",
-    "demo_url": "https://rhizome-indol.vercel.app",
-    "demo_video": "",
-    "x_handle": "David63694631",
-    "inspired_by": "IDEA-16",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x552d747e90eb70e52e9c5f9d9150b97e46ac9b25989a36e7eee96a2e45c5e20",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-20T17:54:30Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "cipoklean",
-        "name": "Aghazie David",
-        "avatar_url": "https://avatars.githubusercontent.com/u/82593998?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20"
-    ],
-    "head_sha": "8a838e717f2553b06ca0d5381854e3a1edc4dd07",
-    "readme_hash": "7a49fe2a06ccbf71",
-    "desc_v6": true,
-    "summary": "A fee-aware tranching scheduler for private actions on the STRK20 pool.",
-    "description_long": "Rhizome calculates the cost of unlinkability and executes a scheduled strategy for private transactions. It reads the current fee and transaction history from the STRK20 privacy pool, assesses amounts for blending in, and determines an optimal tranche count for privacy while considering fees and timing. The tool executes payments through its own anonymizer contract, ensuring multiple indistinguishable deposits instead of a singular identifiable transaction.",
-    "latest_push": "Made the Sepolia vault wallet-discoverable and adjusted tests accordingly.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 118,
-    "deletions": 22,
-    "churn_pct": 2.7,
-    "sprint": {
-      "pushes": 34,
-      "additions": 8920,
-      "deletions": 32,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "1 contract deployed, Cairo in the repository"
-  },
-  {
     "slug": "quietproof",
     "name": "QuietProof",
     "one_liner": "Private campaign funding for protected-source rewards on Starknet.",
@@ -3725,7 +3874,7 @@
     },
     "status": "building",
     "pushed_at": "2026-08-20T16:57:15Z",
-    "stars": 0,
+    "stars": 1,
     "builders": [
       {
         "login": "Habuskid",
@@ -4334,67 +4483,6 @@
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "lien",
-    "name": "Lien",
-    "one_liner": "Private lending on Starknet: shield your collateral, borrow, and hide your liquidation risk through the STRK20 pool.",
-    "category": "DeFi",
-    "repo_url": "https://github.com/SudheerKondamuri/lien",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-20T15:01:24Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "SudheerKondamuri",
-        "name": "Sudheer Kondamuri",
-        "avatar_url": "https://avatars.githubusercontent.com/u/147792492?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-20"
-    ],
-    "head_sha": "9b74eb038076ff5f321ef6e6938fe8ddd34eb74f",
-    "readme_hash": "ef4afa734d311471",
-    "desc_v6": true,
-    "summary": "A private lending protocol enabling shielded collateral and hidden loan details.",
-    "description_long": "Lien allows users to deposit collateral, borrow assets, and manage loans while keeping their wallet address, position sizes, loan-to-value ratios, and liquidation proximity private. It is built using Cairo contracts that handle lending operations, with an emphasis on privacy through the STRK20 shielded pool, which stores positions as cryptographic commitments, maintains private collateral balances, and evaluates loan health using zero-knowledge proofs.",
-    "latest_push": "Implemented the shielded lending pool contract and added associated tests.",
-    "tooling": [
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1846,
-    "deletions": 0,
-    "churn_pct": 0,
-    "sprint": {
-      "pushes": 19,
-      "additions": 1852,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
   },
   {
     "slug": "airlock",
@@ -7250,86 +7338,6 @@
       "facts_v2": true
     },
     "star_evidence": "6 contracts deployed, Cairo in the repository"
-  },
-  {
-    "slug": "sealed",
-    "name": "Sealed",
-    "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
-    "category": "DeFi",
-    "repo_url": "https://github.com/tinoxbt/sealed",
-    "demo_url": "https://tinoxbt.github.io/sealed/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-08",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
-    "contracts": [
-      {
-        "address": "0x01a691c524299a7cdcde1e49680564fa35a8ac64fdf37c7e71f261e88eb03f62",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-17T23:16:24Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "tinoxbt",
-        "name": "tinoxbt",
-        "avatar_url": "https://avatars.githubusercontent.com/u/202869881?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17"
-    ],
-    "head_sha": "43c228f10b141038559b209f4752f403ce451ec4",
-    "readme_hash": "acf40c153688c646",
-    "desc_v6": true,
-    "summary": "A sealed-bid auction with unlinkable bidders and hidden bid values.",
-    "description_long": "Sealed is a single-item, single-round sealed-bid auction using a Vickrey mechanism. It allows bidders to submit commitments to their bids while keeping their identities and bid amounts private until a reveal phase. The auction is executed using a pool that manages collateral in the STRK20 privacy pool, ensuring that no address linked to a bidder appears on-chain during the bidding process.",
-    "latest_push": "Added the ability for sellers to list auctions directly from the browser.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 74,
-    "deletions": 0,
-    "churn_pct": 1.5,
-    "sprint": {
-      "pushes": 67,
-      "additions": 13788,
-      "deletions": 103,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "It enables unlinkable sealed-bid auctions with privacy for both bids and identities using STRK20.",
-      "why_complex": "The project implements multiple contracts with Poseidon commitments and uniform collateral mechanisms.",
-      "reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
-      "facts_v2": true
-    },
-    "star_evidence": "1 contract deployed, Cairo in the repository"
   },
   {
     "slug": "stk402",
