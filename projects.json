@@ -1,14 +1,14 @@
 [
   {
-    "slug": "atrum",
-    "name": "Atrum",
-    "one_liner": "Sealed-bid prediction markets: orders stay unreadable until they are binding, clear at a uniform price, and positions are tradeable before resolution.",
-    "category": "Other",
-    "repo_url": "https://github.com/atrummarkets/atrum-starknet",
-    "demo_url": "https://strk20.atrum.fun",
+    "slug": "ghostdeal",
+    "name": "GhostDeal",
+    "one_liner": "Pay in person without showing your balance. P2P marketplace escrow on STRK20.",
+    "category": "Consumer",
+    "repo_url": "https://github.com/JaDi03/GhostDeal",
+    "demo_url": "",
     "demo_video": "",
-    "x_handle": "AtrumMarkets",
-    "inspired_by": "RFP-07",
+    "x_handle": "",
+    "inspired_by": "IDEA-12",
     "affiliation": "",
     "starred": false,
     "star_reason": "",
@@ -16,33 +16,38 @@
     "transactions": [],
     "verified_txs": 0,
     "requirements": {
-      "demo": true,
+      "demo": false,
       "video": false,
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-21T19:50:19Z",
+    "pushed_at": "2026-08-21T20:22:05Z",
     "stars": 0,
     "builders": [
       {
-        "login": "TechnicallyKiller",
-        "name": "Divyanshh Kalra",
-        "avatar_url": "https://avatars.githubusercontent.com/u/86044867?v=4"
+        "login": "JaDi03",
+        "name": "JA VI",
+        "avatar_url": "https://avatars.githubusercontent.com/u/127710324?v=4"
+      },
+      {
+        "login": "TESTPERSONAL",
+        "name": "Test User",
+        "avatar_url": "https://avatars.githubusercontent.com/u/6664588?v=4"
       }
     ],
     "agents": [],
     "active_days": [
-      "2026-08-18",
       "2026-08-19",
+      "2026-08-20",
       "2026-08-21"
     ],
-    "head_sha": "cdaa49dd1cd75cdcfbdb33b56088fd72e85a6d20",
-    "readme_hash": "7b27f20512b31966",
+    "head_sha": "746968cec87097c47121602f0dfe228889be628b",
+    "readme_hash": "e128b856f43d9169",
     "desc_v6": true,
-    "churn_pct": 13.6,
-    "summary": "A sealed-bid prediction market with hidden orders and tradable positions.",
-    "description_long": "This project creates a prediction market where orders are submitted as private notes and are unreadable until the batch closes. Utilizing a sealed-bid batch auction mechanism, it computes a uniform clearing price post-closure, allowing bound orders to remain confidential and mitigates front-running risks. The system is built on previous experience with the Monad project and consists of a factory contract that deploys markets securely and permissionlessly while ensuring that creators cannot misuse their control over resolutions.",
-    "latest_push": "Scoped the order list to the market and adjusted order existence checks.",
+    "churn_pct": 21.9,
+    "summary": "P2P marketplace escrow for anonymous payments in person.",
+    "description_long": "GhostDeal is a mobile-first progressive web app (PWA) that allows users to make payments anonymously during in-person transactions. The seller displays a QR code for the item, the buyer taps to pay, and funds are locked in a private escrow. After the item is delivered, the buyer can release the payment into a shielded note. The application is built using Next.js, React, and TypeScript, connecting with Starknet via starknet.js and includes a cairo helper for privacy interactions.",
+    "latest_push": "Trimmed unused starter CSS from uni.module.css.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -65,6 +70,11 @@
         "stack": false
       },
       {
+        "label": "Starknetkit",
+        "live": false,
+        "stack": false
+      },
+      {
         "label": "TypeScript",
         "live": false,
         "stack": false
@@ -76,12 +86,76 @@
       }
     ],
     "has_readme": true,
-    "additions": 624,
-    "deletions": 130,
+    "additions": 4,
+    "deletions": 333,
     "sprint": {
-      "pushes": 36,
-      "additions": 9474,
-      "deletions": 8,
+      "pushes": 5,
+      "additions": 9526,
+      "deletions": 1164,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "one-way",
+    "name": "OneWay",
+    "one_liner": "A one-way door for any ERC-20. Get paid without sharing a wallet, or leave a known wallet and exit on another chain.",
+    "category": "Payments",
+    "repo_url": "https://github.com/d4m014/one-way",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "d4m014",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T20:10:51Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "d4m014",
+        "name": "d4m014",
+        "avatar_url": "https://avatars.githubusercontent.com/u/271264252?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-21"
+    ],
+    "head_sha": "fb4361d64585a22e75217a318b415e9a34f00fee",
+    "readme_hash": "d6e46ace8afaa189",
+    "desc_v6": true,
+    "churn_pct": 13.8,
+    "summary": "A one-way door for ERC-20 tokens that enables private transfers and anonymous payments.",
+    "description_long": "OneWay allows users to get paid anonymously via a ghost address that does not reveal their identity. Users can also transfer funds from a known wallet to a private balance, and later exit to a fresh address on the same chain or another. The system is built using EVM-compatible contracts and a privacy layer, with security provided by a unique commitment derived from the user's signature.",
+    "latest_push": "Added private send functionality and leave after shield to page.tsx.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 115,
+    "deletions": 1,
+    "sprint": {
+      "pushes": 6,
+      "additions": 5307,
+      "deletions": 181,
       "computed": 2
     },
     "assessment": null,
@@ -143,7 +217,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-21T19:49:56Z",
+    "pushed_at": "2026-08-21T20:10:13Z",
     "stars": 0,
     "builders": [
       {
@@ -159,13 +233,13 @@
       "2026-08-20",
       "2026-08-21"
     ],
-    "head_sha": "863850b3957380eb5d923e4b23efd095c94ec783",
+    "head_sha": "462a6779a4a0f972163343dd2f2af5a91a5c4542",
     "readme_hash": "25a636106f22bc0e",
     "desc_v6": true,
-    "churn_pct": 4.5,
+    "churn_pct": 5.7,
     "summary": "A whitehat rescue bot sweeping exposed on-chain funds to a safe address.",
     "description_long": "Aegis scans public repositories for accidentally committed private keys and API keys, verifies their validity, and sweeps any found assets to a secure address before malicious actors can access them. Built with Next.js, React, TypeScript, and starknet.js, it detects sensitive files, checks for actual funds, and ensures a private return of assets via the STRK20 shielded pool. The project operates automatically through Vercel Cron, requiring no human intervention during the asset rescue process.",
-    "latest_push": "Consolidated claims into one section and filtered them by the connected wallet's network.",
+    "latest_push": "Allowed correction of a pending claim's payout address.",
     "tooling": [
       {
         "label": "AVNU",
@@ -204,11 +278,11 @@
       }
     ],
     "has_readme": true,
-    "additions": 81,
-    "deletions": 84,
+    "additions": 182,
+    "deletions": 36,
     "sprint": {
-      "pushes": 49,
-      "additions": 4408,
+      "pushes": 51,
+      "additions": 4554,
       "deletions": 16,
       "computed": 2
     },
@@ -223,15 +297,15 @@
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
   },
   {
-    "slug": "ghostdeal",
-    "name": "GhostDeal",
-    "one_liner": "Pay in person without showing your balance. P2P marketplace escrow on STRK20.",
-    "category": "Consumer",
-    "repo_url": "https://github.com/JaDi03/GhostDeal",
-    "demo_url": "",
+    "slug": "atrum",
+    "name": "Atrum",
+    "one_liner": "Sealed-bid prediction markets: orders stay unreadable until they are binding, clear at a uniform price, and positions are tradeable before resolution.",
+    "category": "Other",
+    "repo_url": "https://github.com/atrummarkets/atrum-starknet",
+    "demo_url": "https://strk20.atrum.fun",
     "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-12",
+    "x_handle": "AtrumMarkets",
+    "inspired_by": "RFP-07",
     "affiliation": "",
     "starred": false,
     "star_reason": "",
@@ -239,37 +313,33 @@
     "transactions": [],
     "verified_txs": 0,
     "requirements": {
-      "demo": false,
+      "demo": true,
       "video": false,
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-21T19:46:20Z",
+    "pushed_at": "2026-08-21T19:59:29Z",
     "stars": 0,
     "builders": [
       {
-        "login": "JaDi03",
-        "name": "JA VI",
-        "avatar_url": "https://avatars.githubusercontent.com/u/127710324?v=4"
-      },
-      {
-        "login": "TESTPERSONAL",
-        "name": "Test User",
-        "avatar_url": "https://avatars.githubusercontent.com/u/6664588?v=4"
+        "login": "TechnicallyKiller",
+        "name": "Divyanshh Kalra",
+        "avatar_url": "https://avatars.githubusercontent.com/u/86044867?v=4"
       }
     ],
     "agents": [],
     "active_days": [
+      "2026-08-18",
       "2026-08-19",
-      "2026-08-20",
       "2026-08-21"
     ],
-    "head_sha": "c124a820feb58710dceb83a0a4112d5e2276ecf5",
-    "readme_hash": "e128b856f43d9169",
+    "head_sha": "5554e63c6a6de26307ab9721966969f9d3c0f024",
+    "readme_hash": "7b27f20512b31966",
     "desc_v6": true,
-    "summary": "P2P marketplace escrow for anonymous payments in person.",
-    "description_long": "GhostDeal is a mobile-first progressive web app (PWA) that allows users to make payments anonymously during in-person transactions. The seller displays a QR code for the item, the buyer taps to pay, and funds are locked in a private escrow. After the item is delivered, the buyer can release the payment into a shielded note. The application is built using Next.js, React, and TypeScript, connecting with Starknet via starknet.js and includes a cairo helper for privacy interactions.",
-    "latest_push": "Connected the app components to the new back-end listing logic.",
+    "churn_pct": 4.5,
+    "summary": "A sealed-bid prediction market with hidden orders and tradable positions.",
+    "description_long": "This project creates a prediction market where orders are submitted as private notes and are unreadable until the batch closes. Utilizing a sealed-bid batch auction mechanism, it computes a uniform clearing price post-closure, allowing bound orders to remain confidential and mitigates front-running risks. The system is built on previous experience with the Monad project and consists of a factory contract that deploys markets securely and permissionlessly while ensuring that creators cannot misuse their control over resolutions.",
+    "latest_push": "Portfolio now displays open bets in addition to settled ones.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -292,11 +362,6 @@
         "stack": false
       },
       {
-        "label": "Starknetkit",
-        "live": false,
-        "stack": false
-      },
-      {
         "label": "TypeScript",
         "live": false,
         "stack": false
@@ -308,13 +373,12 @@
       }
     ],
     "has_readme": true,
-    "additions": 7426,
-    "deletions": 194,
-    "churn_pct": 100,
+    "additions": 208,
+    "deletions": 60,
     "sprint": {
-      "pushes": 4,
-      "additions": 9522,
-      "deletions": 831,
+      "pushes": 38,
+      "additions": 9622,
+      "deletions": 8,
       "computed": 2
     },
     "assessment": null,
@@ -393,7 +457,6 @@
     "head_sha": "47cfd9a9300a8d03f7293f440ddca5a2e699172a",
     "readme_hash": "663a9df6f5d733e5",
     "desc_v6": true,
-    "churn_pct": 0.1,
     "summary": "Private perpetual futures trading with shielded transactions and zk-SNARK verification.",
     "description_long": "The project enables trading of private perpetual futures on Starknet using shielded collateral, ensuring that all trade details remain confidential. Built with Groth16 zk-SNARKs for proof verification, it allows users to open, fund, and close positions without public disclosures of sensitive information, while utilizing the STRK20 privacy pool for collateral management.",
     "latest_push": "Fixed transaction state and updated bridge market ID in contracts.",
@@ -442,6 +505,7 @@
     "has_readme": true,
     "additions": 121,
     "deletions": 47,
+    "churn_pct": 0.1,
     "sprint": {
       "pushes": 73,
       "additions": 20115,
@@ -589,7 +653,6 @@
     "head_sha": "8add733ba9c296214f0f497340c5900387eb55ca",
     "readme_hash": "51d951ad554c3d60",
     "desc_v6": true,
-    "churn_pct": 0,
     "summary": "Enables private, recurring authorization for payments without revealing subscriber details.",
     "description_long": "Private standing authorization on Starknet that allows subscribers to commit escrow once and be charged on a schedule without exposing their wallet or details again. Built using an anonymizer contract for the vault, integrating with the Ready wallet's privacy API, it avoids standard proving services by relying on cryptographic gates and escrow commitments to control payment. This approach allows for private transactions through the STRK20 privacy pool while managing recurring payments securely.",
     "latest_push": "Updated README.md with npm package names and new consumer details.",
@@ -623,6 +686,7 @@
     "has_readme": true,
     "additions": 4,
     "deletions": 1,
+    "churn_pct": 0,
     "sprint": {
       "pushes": 43,
       "additions": 19442,
@@ -3041,70 +3105,6 @@
     "star_evidence": "Cairo in the repository"
   },
   {
-    "slug": "one-way",
-    "name": "OneWay",
-    "one_liner": "A one-way door for any ERC-20. Get paid without sharing a wallet, or leave a known wallet and exit on another chain.",
-    "category": "Payments",
-    "repo_url": "https://github.com/d4m014/one-way",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "d4m014",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T10:21:51Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "d4m014",
-        "name": "d4m014",
-        "avatar_url": "https://avatars.githubusercontent.com/u/271264252?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-21"
-    ],
-    "head_sha": "cffb6322a46ab8743c15435c5756af026ab0c461",
-    "readme_hash": "d6e46ace8afaa189",
-    "desc_v6": true,
-    "summary": "A one-way door for ERC-20 tokens that enables private transfers and anonymous payments.",
-    "description_long": "OneWay allows users to get paid anonymously via a ghost address that does not reveal their identity. Users can also transfer funds from a known wallet to a private balance, and later exit to a fresh address on the same chain or another. The system is built using EVM-compatible contracts and a privacy layer, with security provided by a unique commitment derived from the user's signature.",
-    "latest_push": "Added the shield-into-pool function after claim in page.tsx.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 609,
-    "deletions": 70,
-    "churn_pct": 90.4,
-    "sprint": {
-      "pushes": 5,
-      "additions": 5193,
-      "deletions": 181,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
-  },
-  {
     "slug": "mirage",
     "name": "Mirage",
     "one_liner": "One wallet, every chain, no trace. Shield any ERC-20 on Starknet, exit privately to 35+ chains via NEAR Intents.",
@@ -3282,10 +3282,9 @@
       },
       {
         "hash": "0x3f4819ae9bf1db30cf6dca75128bfe7b68d767f25249705e8a3d77aff1a3900",
-        "ok": false,
-        "pool": false,
-        "mine": false,
-        "note": "not found on mainnet"
+        "ok": true,
+        "pool": true,
+        "mine": null
       },
       {
         "hash": "0x39ca2ea1b07036a2cc30931fd0c23139fc54134529000b945b94d8a18b82463",
@@ -3294,11 +3293,11 @@
         "mine": null
       }
     ],
-    "verified_txs": 2,
+    "verified_txs": 3,
     "requirements": {
       "demo": false,
       "video": false,
-      "mainnet": false
+      "mainnet": true
     },
     "status": "building",
     "pushed_at": "2026-08-21T07:42:42Z",
@@ -3888,12 +3887,13 @@
       },
       {
         "hash": "0x4ed6e16702fe98bea43e7a26bc54bf76353ab4fa49f9341dc39cf20bd4e390d",
-        "ok": true,
-        "pool": true,
-        "mine": true
+        "ok": false,
+        "pool": false,
+        "mine": false,
+        "note": "not found on mainnet"
       }
     ],
-    "verified_txs": 4,
+    "verified_txs": 3,
     "requirements": {
       "demo": true,
       "video": false,
