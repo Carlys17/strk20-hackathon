@@ -1,5 +1,141 @@
 [
   {
+    "slug": "strk20-indexer",
+    "name": "strk20-indexer",
+    "one_liner": "Open, self-hostable note indexer and explorer for the STRK20 pool. Wallets sync without handing over a viewing key.",
+    "category": "Infra",
+    "repo_url": "https://github.com/kfastov/strk20-indexer",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-23",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T16:36:44Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "kfastov",
+        "name": "Konstantin Fastov",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1312744?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-21"
+    ],
+    "head_sha": "4185afec41eb2a66a495ef860c8e21478d04ce5c",
+    "readme_hash": "bfb9121297bed56f",
+    "desc_v6": true,
+    "churn_pct": 0,
+    "summary": "An open, self-hostable note indexer and explorer for the STRK20 privacy pool.",
+    "description_long": "This project ingests and stores state updates from the STRK20 pool contract in PostgreSQL, enabling efficient access to storage diffs, nullifiers, and public shield/unshield operations. It features a compatible discovery API that mimics the reference service endpoints, a keyless mode that keeps all sensitive keys on the local device, and real-time slot updates via a WebSocket. The project also includes an explorer for displaying transaction metrics and a CLI for various wallet operations.",
+    "latest_push": "Created the initial README file and added the license.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 277,
+    "deletions": 0,
+    "sprint": {
+      "pushes": 1,
+      "additions": 277,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
+    "slug": "sealed",
+    "name": "Sealed",
+    "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/tinoxbt/sealed",
+    "demo_url": "https://tinoxbt.github.io/sealed/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-08",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
+    "contracts": [
+      {
+        "address": "0x076a5480f7359b8a8db0245c603c78e108a89442fb3b71aea2a3e7cc976b133d",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T16:32:30Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "tinoxbt",
+        "name": "tinoxbt",
+        "avatar_url": "https://avatars.githubusercontent.com/u/202869881?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-21"
+    ],
+    "head_sha": "bfc61251ca866473a5cdfdc918f0fb9a273fd147",
+    "readme_hash": "ac9ac192b71369e5",
+    "desc_v6": true,
+    "churn_pct": 25.1,
+    "summary": "A sealed-bid auction for a single item with unlinkable bidders and hidden bid values.",
+    "description_long": "Sealed implements a variant of a Vickrey auction on Starknet where bidders' identities remain hidden and bid values are concealed until they are revealed. Each bidder locks in identical amounts of STRK20 collateral, and the auction settles at the second-highest bid or reserve price. The system uses Poseidon commitments to obscure bid values, and the STRK20 pool ensures that no bidder's address appears on-chain during the bidding process.",
+    "latest_push": "Built the full interface with landing page, shell, and brand.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1081,
+    "deletions": 402,
+    "sprint": {
+      "pushes": 73,
+      "additions": 14771,
+      "deletions": 103,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "It enables unlinkable sealed-bid auctions with privacy for both bids and identities using STRK20.",
+      "why_complex": "The project implements multiple contracts with Poseidon commitments and uniform collateral mechanisms.",
+      "reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
+      "facts_v2": true
+    },
+    "star_evidence": "1 contract deployed, Cairo in the repository"
+  },
+  {
     "slug": "shadowledger",
     "name": "ShadowLedger",
     "one_liner": "Private payroll with public aggregate accountability on STRK20.",
@@ -40,7 +176,6 @@
     "head_sha": "e2dbcd9ec1a44f14a0cc2d3b48be4651606f0073",
     "readme_hash": "c95316dc5abb97e8",
     "desc_v6": true,
-    "churn_pct": 16.2,
     "summary": "Private payroll and treasury disbursements with selective verification.",
     "description_long": "ShadowLedger allows organizations to manage private payroll runs and treasury disbursements while maintaining public aggregate accountability. The web app features a payroll builder, token conversion, Merkle tree proofs for verification, and a secure transfer mechanism, all built with Cairo contracts and tested against numerous edge cases. It checks recipient readiness and ensures no private information is logged or sent to servers.",
     "latest_push": "Built the August 19 payroll registry contract with associated tests.",
@@ -48,6 +183,7 @@
     "has_readme": true,
     "additions": 614,
     "deletions": 1,
+    "churn_pct": 16.2,
     "sprint": {
       "pushes": 8,
       "additions": 14078,
@@ -109,7 +245,6 @@
     "head_sha": "643daf74e88e93600f860ba77224c34839f8b137",
     "readme_hash": "090ea69c8fe01444",
     "desc_v6": true,
-    "churn_pct": 1,
     "summary": "A private trading terminal with shielded funding and sealed-bid launches.",
     "description_long": "Veyl is a terminal for trading and launching tokens, where trader identities are unlinkable while positions remain public. It uses the STRK20 privacy pool for shielded funding, executes trades through unlinkable identities, and allows sealed-bid token launches to avoid sniping bots. The system is built with a combination of Next.js for the frontend and Cairo for the smart contracts.",
     "latest_push": "Documented live fair-launch round test with 3 out of 4 steps verified.",
@@ -153,6 +288,7 @@
     "has_readme": true,
     "additions": 31,
     "deletions": 14,
+    "churn_pct": 1,
     "sprint": {
       "pushes": 30,
       "additions": 6816,
@@ -248,7 +384,6 @@
     "head_sha": "d8e1eba5c973ec948f523ea0a9c47c3263025c63",
     "readme_hash": "86e9b0dd8835f9b3",
     "desc_v6": true,
-    "churn_pct": 2,
     "summary": "Accept private payments with an embeddable checkout, invoices, and webhook confirmations.",
     "description_long": "Stealth Checkout allows merchants to accept private payments on Starknet through an embeddable payment widget, hosted invoice pages, and webhook-based payment confirmations. It includes a payment widget that functions across frameworks, sharable invoice pages that keep payer identities private, and a server component that monitors payments and sends notifications. The setup ensures that privacy is maintained throughout the transaction process while providing necessary visibility for merchants.",
     "latest_push": "Fixed payer shielding behavior and ensured note maturity handling.",
@@ -262,6 +397,7 @@
     "has_readme": true,
     "additions": 537,
     "deletions": 111,
+    "churn_pct": 2,
     "sprint": {
       "pushes": 25,
       "additions": 38024,
@@ -330,7 +466,6 @@
     "head_sha": "dabb58d86bea28b3d99e1a22f0fd4674b803a728",
     "readme_hash": "78b2f041066fb22a",
     "desc_v6": true,
-    "churn_pct": 0.5,
     "summary": "A physical-chaos entropy device with a Ready Wallet API for STRK20 transactions.",
     "description_long": "ChaosKey+ combines a physical-chaos entropy device with a user interface that interacts with the STRK20 privacy pool through the Ready wallet. It features a backend powered by Uvicorn and a CRA React frontend, supporting actions such as shield, private transfer, and unshield. The project integrates with Starknet using specific libraries for wallet standard discovery and account abstraction.",
     "latest_push": "Added the Binder screen for user interactions.",
@@ -338,6 +473,7 @@
     "has_readme": true,
     "additions": 24,
     "deletions": 1,
+    "churn_pct": 0.5,
     "sprint": {
       "pushes": 95,
       "additions": 21217,
@@ -401,7 +537,6 @@
     "head_sha": "2a5f175d30a03a9c7885bc2fe1b3f61f829b4e86",
     "readme_hash": "dedb331b68aa2d67",
     "desc_v6": true,
-    "churn_pct": 6.4,
     "summary": "A hybrid local-first security system with deception networks and threat intelligence sharing.",
     "description_long": "CipherNest connects local security measures with zero-knowledge economic coordination. It deploys containerized digital twin decoys and generates lure documents with tracking watermarks, while maintaining private telemetry on defender machines. The setup includes a web-based operations console, a defender agent with Docker for isolation, and a GhostBounty mechanism for anonymous bounty rewards using Starknet's STRK20 notes.",
     "latest_push": "Added SDK client singleton with DEV_MODE support.",
@@ -430,6 +565,7 @@
     "has_readme": true,
     "additions": 471,
     "deletions": 2,
+    "churn_pct": 6.4,
     "sprint": {
       "pushes": 55,
       "additions": 11020,
@@ -500,7 +636,6 @@
     "head_sha": "9d7018cd1c9285be0e635b6239616ef4bc4a012c",
     "readme_hash": "9594b25364287d18",
     "desc_v6": true,
-    "churn_pct": 1.5,
     "summary": "Manage multiple private identities for DeFi and trading activities.",
     "description_long": "Veilfolio is a privacy-first portfolio management layer that allows users to create and manage multiple isolated execution identities on Starknet. Each identity is maintained through the IdentityManager contract, providing unique contexts for trading and other activities without leaking information to other identities. Built with Next.js and React, it features a dashboard for identity management, integrated privacy operations, and support for STRK20 privacy pools.",
     "latest_push": "Displayed identity name and purpose on dashboard cards.",
@@ -519,6 +654,7 @@
     "has_readme": true,
     "additions": 59,
     "deletions": 15,
+    "churn_pct": 1.5,
     "sprint": {
       "pushes": 11,
       "additions": 22937,
@@ -579,7 +715,6 @@
     "head_sha": "9a9364dbc3e3997e352f365568ffaddfdc6bcf9b",
     "readme_hash": "cf1e35452b1d6053",
     "desc_v6": true,
-    "churn_pct": 1.5,
     "summary": "A privacy-first DeFi platform with stealth payments and confidential perpetual futures.",
     "description_long": "ORRANGE is a decentralized financial platform focusing on privacy built on Starknet. It features a STRK20 privacy wallet for confidential token transactions and PEL private perpetual futures for trading with hidden parameters. The platform includes an automated keeper system, a DEX aggregator for live swaps, and is implemented using Starknet Cairo smart contracts, ensuring secure and efficient execution of its features.",
     "latest_push": "Added economic correctness for phase 2 and security hardening for phase 4.",
@@ -628,6 +763,7 @@
     "has_readme": true,
     "additions": 1991,
     "deletions": 447,
+    "churn_pct": 1.5,
     "sprint": {
       "pushes": 70,
       "additions": 20115,
@@ -692,7 +828,6 @@
     "head_sha": "37e3c83fe9056187d730eba7d9fde8dd002fbadf",
     "readme_hash": "709363b44ceb8140",
     "desc_v6": true,
-    "churn_pct": 7.3,
     "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
     "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
     "latest_push": "Refactored the frontend deal room UX for improved user experience.",
@@ -706,6 +841,7 @@
     "has_readme": true,
     "additions": 1032,
     "deletions": 605,
+    "churn_pct": 7.3,
     "sprint": {
       "pushes": 100,
       "additions": 15834,
@@ -1500,87 +1636,6 @@
     },
     "assessment": null,
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "sealed",
-    "name": "Sealed",
-    "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
-    "category": "DeFi",
-    "repo_url": "https://github.com/tinoxbt/sealed",
-    "demo_url": "https://tinoxbt.github.io/sealed/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-08",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
-    "contracts": [
-      {
-        "address": "0x076a5480f7359b8a8db0245c603c78e108a89442fb3b71aea2a3e7cc976b133d",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T13:00:38Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "tinoxbt",
-        "name": "tinoxbt",
-        "avatar_url": "https://avatars.githubusercontent.com/u/202869881?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-21"
-    ],
-    "head_sha": "50c34e3be9b3a833e742237132f77c197aa465d5",
-    "readme_hash": "ac9ac192b71369e5",
-    "desc_v6": true,
-    "summary": "A sealed-bid auction for a single item with unlinkable bidders and hidden bid values.",
-    "description_long": "Sealed implements a variant of a Vickrey auction on Starknet where bidders' identities remain hidden and bid values are concealed until they are revealed. Each bidder locks in identical amounts of STRK20 collateral, and the auction settles at the second-highest bid or reserve price. The system uses Poseidon commitments to obscure bid values, and the STRK20 pool ensures that no bidder's address appears on-chain during the bidding process.",
-    "latest_push": "Displayed the complete public state of an auction and marked it public.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 232,
-    "deletions": 102,
-    "churn_pct": 6.4,
-    "sprint": {
-      "pushes": 72,
-      "additions": 14092,
-      "deletions": 103,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "It enables unlinkable sealed-bid auctions with privacy for both bids and identities using STRK20.",
-      "why_complex": "The project implements multiple contracts with Poseidon commitments and uniform collateral mechanisms.",
-      "reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
-      "facts_v2": true
-    },
-    "star_evidence": "1 contract deployed, Cairo in the repository"
   },
   {
     "slug": "strk20",
