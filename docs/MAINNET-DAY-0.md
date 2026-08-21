@@ -26,13 +26,15 @@ POOL_ADDRESS=0x040337b1af3c663e86e333bab5a4b28da8d4652a15a69beee2b677776ffe812a
 
 Pool on Voyager: [voyager.online/contract/0x040337b1af3c663e86e333bab5a4b28da8d4652a15a69beee2b677776ffe812a](https://voyager.online/contract/0x040337b1af3c663e86e333bab5a4b28da8d4652a15a69beee2b677776ffe812a)
 
-> **Do you actually need a proving service URL?** Only one of the three routes does, and most projects shipping mainnet transactions today are not on it.
+> **Do you actually need a proving service URL?** Every private transaction is proved. What decides this is *who* reaches the proving service - the user's wallet, or you.
 >
-> - **Private dapp through the Wallet API** - the user's privacy-enabled wallet holds the keys and does the proving. You need a Starknet RPC URL and nothing else. This is the route most teams here are on.
-> - **Cairo anonymizer contracts** - `privacy_invoke` runs on-chain. No prover, no indexer.
-> - **Privacy SDK holding your own keys** - this is the one that needs a proving service. `MockProofProvider` is for tests only; real proofs go through `ProvingServiceProofProvider(proverUrl, chainId)`.
+> - **Private dapp through the Wallet API** - the user's privacy-enabled wallet holds the keys and reaches a proving service itself. You need a Starknet RPC URL and nothing else. This is the route most teams here are on, and the only one that needs no proving service URL of your own.
+> - **Privacy SDK holding your own keys** - you reach the proving service, so you need its URL. `MockProofProvider` is for tests only; real proofs go through `ProvingServiceProofProvider(proverUrl, chainId)`.
+> - **Cairo anonymizer contracts** - these do **not** avoid the prover. An anonymizer is called *by the pool contract*, through `privacy_invoke`, from inside a private transaction that was proved like any other. Writing one is orthogonal to which of the two routes above you are on.
 >
-> **Discovery is optional on every route.** `IndexerDiscoveryProvider(apiUrl, poolAddress)` wants a hosted indexer, but `ContractDiscoveryProvider(poolContract)` reads your notes from the pool contract over ordinary Starknet RPC instead. Slower, no service to wait for.
+> **What needs no proof at all:** registering a viewing key, and shielding. Both are ordinary public transactions. A headless service can move value *into* the pool today with nothing but an RPC URL - it is spending notes privately that needs a proof.
+>
+> **Discovery.** `IndexerDiscoveryProvider(apiUrl, poolAddress)` wants a hosted indexer. `ContractDiscoveryProvider` reads the same notes from the pool contract over ordinary Starknet RPC, and would be the way to work without one - but as of SDK `0.14.3-rc.5` it is not re-exported from the package entry, and the `exports` map has no `./internal/*` subpath, so it cannot be deep-imported either. Tracked in [#121](https://github.com/starkience/strk20-hackathon/issues/121). Until that lands, discovery on the SDK route means a hosted indexer.
 >
 > The mainnet **proving service URL** is not published here yet. If your design needs the SDK route on mainnet, open an issue and say so - that is the one blocker a team cannot work around on its own. Don't guess at endpoints: a wrong proving service fails in ways that look like your bug.
 
