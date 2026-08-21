@@ -38,9 +38,9 @@
     "readme_hash": "9c5e86bc7fbfcfaa",
     "desc_v6": true,
     "churn_pct": 0,
-    "summary": "Batch payment disbursement to registered and unregistered recipients.",
-    "description_long": "Almoner allows users to make batch payments from a shielded balance to multiple recipients at once. It handles funds in escrow for those who have not registered, ensuring they can receive payments prior to joining the STRK20 pool. The process involves a funding step requiring a ZK proof, followed by unattended operations by an Almoner server for managing recipients and tracking claims.",
-    "latest_push": "Added a living state document and delivery plan for project handoff.",
+    "summary": "Execute private batch disbursements to multiple recipients from a shielded balance.",
+    "description_long": "Almoner allows users to make private batch payments in a single transaction, minimizing fees by amortizing the costs across multiple recipients, including those who have not registered with the STRK20 pool. The system splits payments at the proof boundary, requiring proof only from the payer and the recipients when they claim their funds, while managing recipient notifications and claims off-chain. The project is in development and is built on Starknet with a focus on utilizing the STRK20 privacy infrastructure.",
+    "latest_push": "Added a MIT license, gitignore, and pinned STRK20 skill lockfile.",
     "tooling": [],
     "has_readme": true,
     "additions": 8,
@@ -136,7 +136,7 @@
     "churn_pct": 0.6,
     "summary": "A cross-chain privacy tool that bridges assets with no on-chain link.",
     "description_long": "Airlock allows users to move assets between different chains while maintaining privacy, ensuring that deposit and withdrawal addresses are not linkable. It includes a live demo and features such as the `AirlockBucketer` anonymizer to split withdrawals into standard denominations, preserving anonymity by avoiding distinctive amounts. Built on the STRK20 privacy pool, the project uses Cairo for its contracts and integrates wallet support for privacy-enabled Starknet wallets.",
-    "latest_push": "Corrected the anonymizer documentation regarding the pool's call status.",
+    "latest_push": "Fixed the anonymizer documentation to clarify pool usage.",
     "tooling": [
       {
         "label": "Cairo",
@@ -248,8 +248,8 @@
     "desc_v6": true,
     "churn_pct": 0.2,
     "summary": "Private perpetual futures trading with shielded collateral on Starknet.",
-    "description_long": "This project implements a zero-knowledge perpetual futures protocol on Starknet, allowing traders to deposit shielded collateral and open leveraged positions without disclosing any details about size, entry price, direction, or results. The core components include Groth16 zk-SNARK proofs for state transitions, interaction with the STRK20 privacy pool for spending shielded notes, and on-chain verification via dedicated verifiers, ensuring both privacy and solvency during trading operations.",
-    "latest_push": "Implemented real STRK20 collateral spending and operator health features.",
+    "description_long": "This project implements a privacy-focused perpetual futures trading protocol called PEL (Private Execution Layer) on Starknet. Traders can open leveraged positions with shielded collateral, concealing their position details while ensuring cryptographic proof via Groth16 zk-SNARKs. The core components include the `PELPerpsSTRK20Bridge` for managing shielded notes within the STRK20 privacy pool, which exchanges notes in a single transaction to maintain privacy throughout the lifecycle of the trading operations.",
+    "latest_push": "Implemented real STRK20 collateral spend and isolated legacy relayer.",
     "tooling": [
       {
         "label": "AVNU",
