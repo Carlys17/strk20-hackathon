@@ -26,7 +26,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-21T13:30:21Z",
+    "pushed_at": "2026-08-21T13:42:22Z",
     "stars": 0,
     "builders": [
       {
@@ -40,20 +40,20 @@
         "family": "Claude",
         "name": "Claude Opus 5",
         "avatar_url": "",
-        "commits": 46
+        "commits": 47
       }
     ],
     "active_days": [
       "2026-08-20",
       "2026-08-21"
     ],
-    "head_sha": "bd77b17571b407190809089b1fecdc2bbc9bdef0",
+    "head_sha": "17f5131b118de668abdc9e1599747b4976b2ad8f",
     "readme_hash": "6e48b739a6e13797",
     "desc_v6": true,
-    "churn_pct": 0.9,
+    "churn_pct": 1,
     "summary": "A policy-guarded spending account for AI agents on Starknet's STRK20 privacy pool.",
     "description_long": "Kese enables AI agents to manage private transactions with spending limits and human approval. It features a policy engine to enforce transaction caps, recipient allows, and accountability through viewing-key reports. Built with TypeScript and Cairo, it integrates with the STRK20 privacy pool, utilizing an escrow-claim contract to handle payments while ensuring user privacy and transaction accountability.",
-    "latest_push": "Fixed G1's fallback ordering and documented memo withholding in list_activity.",
+    "latest_push": "Tested pool verification of proofs in chain and updated related documentation.",
     "tooling": [
       {
         "label": "Privacy SDK",
@@ -87,16 +87,94 @@
       }
     ],
     "has_readme": true,
-    "additions": 104,
-    "deletions": 2,
+    "additions": 120,
+    "deletions": 0,
     "sprint": {
-      "pushes": 49,
-      "additions": 18691,
+      "pushes": 50,
+      "additions": 18811,
       "deletions": 253,
       "computed": 2
     },
     "assessment": null,
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "ghostorder",
+    "name": "GhostOrder",
+    "one_liner": "A privacy-focused conditional intent layer on Starknet using STRK20, enabling users to create hidden trading conditions and execute them without exposing sensitive order parameters while they wait.",
+    "category": "Other",
+    "repo_url": "https://github.com/kaverimeshram/GhostOrder",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Ghost Orders enables private conditional trading for STRK20, addressing privacy in order placements.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T13:38:35Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "kaverimeshram",
+        "name": "kaverimeshram",
+        "avatar_url": "https://avatars.githubusercontent.com/u/182025207?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "head_sha": "1f00e940b8f0c440e690f502e02a7031f632dfed",
+    "readme_hash": "d18c40c8383d55dd",
+    "desc_v6": true,
+    "churn_pct": 21.8,
+    "summary": "Conditional trading with hidden order parameters and private execution.",
+    "description_long": "Ghost Orders is a privacy-focused conditional trading layer that allows users to create conditional trading instructions while keeping sensitive order details private. The project is built on Starknet and includes features such as private conditional order creation, hidden trigger parameters, and client-side condition monitoring, with a focus on integrating STRK20 for asset handling and settlement.",
+    "latest_push": "Fixed the STRK20 private transfer flow and diagnostics in App.tsx.",
+    "tooling": [
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 426,
+    "deletions": 121,
+    "sprint": {
+      "pushes": 6,
+      "additions": 8301,
+      "deletions": 420,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": false,
+      "why_innovative": "It creates private conditional trading orders that are generally not available in traditional markets.",
+      "why_complex": "No contracts or significant Cairo code have been implemented yet.",
+      "reason": "Ghost Orders enables private conditional trading for STRK20, addressing privacy in order placements.",
+      "facts_v2": true
+    },
+    "star_evidence": ""
   },
   {
     "slug": "rhizome",
@@ -144,7 +222,6 @@
     "head_sha": "8d57ccd6b40a33713e653d60c1ab2272b6f456cf",
     "readme_hash": "44b90590f7a90743",
     "desc_v6": true,
-    "churn_pct": 11.9,
     "summary": "A tool for calculating and executing private positions in DeFi with fee-aware tranche scheduling.",
     "description_long": "Rhizome computes the cost of unlinkability in transactions within the STRK20 privacy pool and executes the necessary actions to maintain privacy. It reads real-time fees and transaction history, scores amounts to avoid distinctive patterns, and schedules transactions to enhance privacy through its own anonymizer contract, facilitating multiple indistinguishable deposits. Key contract functionalities include the mechanism for fee collection and transaction handling, reflecting detailed insights into the underlying pool's operations.",
     "latest_push": "Decoupled wallet from pool synchronization and optimized mainnet path.",
@@ -178,6 +255,7 @@
     "has_readme": true,
     "additions": 326,
     "deletions": 360,
+    "churn_pct": 11.9,
     "sprint": {
       "pushes": 41,
       "additions": 9567,
@@ -237,7 +315,6 @@
     "head_sha": "9a03f8fa5e9c18626b9a1cb18730a3a9e7140f62",
     "readme_hash": "5b94ae03d44a7f16",
     "desc_v6": true,
-    "churn_pct": 2.2,
     "summary": "A cozy idle RPG for creature collecting, evolving, and trading.",
     "description_long": "This project is a browser-based idle RPG focused on collecting and evolving creatures. It features tile movement, NPC interaction, offline progress, and local automatic saving. The game engine is built with Next.js, while creature mechanics are implemented in Cairo smart contracts. Local-first gameplay is prioritized, and the on-chain integration with STRK20 for privacy features is still under development.",
     "latest_push": "Fixed a monster's behavior in simulation to prevent pinning the Porter.",
@@ -256,6 +333,7 @@
     "has_readme": true,
     "additions": 261,
     "deletions": 51,
+    "churn_pct": 2.2,
     "sprint": {
       "pushes": 97,
       "additions": 6338,
@@ -320,7 +398,6 @@
     "head_sha": "f734d2f43b3304757ad779dc421e887e11266a29",
     "readme_hash": "6642ee8cd33e9144",
     "desc_v6": true,
-    "churn_pct": 0.1,
     "summary": "Accept private payments with an embeddable checkout and hosted invoices.",
     "description_long": "Stealth Checkout allows storefronts and dapps to accept private payments on Starknet. It includes a TS widget for private payments, hosted invoice pages that keep payer details confidential, a backend watcher with webhook confirmations, and receipt management. Key components include the `strk20-pay` widget, a coin-op arcade demo, and a dashboard for managing invoices and payments.",
     "latest_push": "Fixed message for outdated-extension users to suggest updating instead of reinstalling.",
@@ -334,6 +411,7 @@
     "has_readme": true,
     "additions": 9,
     "deletions": 8,
+    "churn_pct": 0.1,
     "sprint": {
       "pushes": 17,
       "additions": 37481,
@@ -478,7 +556,6 @@
     "head_sha": "96a52b173cb120d31530548cffef35cb0c64c40a",
     "readme_hash": "9594b25364287d18",
     "desc_v6": true,
-    "churn_pct": 100,
     "summary": "Manage multiple private identities for DeFi and trading activities.",
     "description_long": "Veilfolio is a privacy-first portfolio management layer that allows users to create and manage multiple isolated execution identities on Starknet. Each identity is maintained through the IdentityManager contract, providing unique contexts for trading and other activities without leaking information to other identities. Built with Next.js and React, it features a dashboard for identity management, integrated privacy operations, and support for STRK20 privacy pools.",
     "latest_push": "Implemented the Veilfolio MVP with new privacy features for Starknet.",
@@ -497,6 +574,7 @@
     "has_readme": true,
     "additions": 8822,
     "deletions": 1045,
+    "churn_pct": 100,
     "sprint": {
       "pushes": 4,
       "additions": 22928,
@@ -551,7 +629,6 @@
     "head_sha": "c505931656fdf198734a914887303d0b18461b10",
     "readme_hash": "fbbf3893802bb909",
     "desc_v6": true,
-    "churn_pct": 12.9,
     "summary": "A confidential liquidity engine with shielded swaps and compliance attestations.",
     "description_long": "Oblivion Protocol creates a privacy-focused liquidity engine on Starknet, featuring shielded concentrated liquidity, dark batch swaps, automated yield management, and ZK compliance attestations. It uses a core structure of contracts, including OblivionVault for liquidity management, CoWMatcher for auctions, YieldRouter for yield routing, and AttestEngine for compliance records. The protocol ensures privacy through ZK notes and allows various clients to interact via a web frontend and command-line tools.",
     "latest_push": "Added comprehensive protocol documentation and refreshed the README.",
@@ -570,6 +647,7 @@
     "has_readme": true,
     "additions": 733,
     "deletions": 104,
+    "churn_pct": 12.9,
     "sprint": {
       "pushes": 7,
       "additions": 12699,
@@ -625,7 +703,6 @@
     "head_sha": "50c34e3be9b3a833e742237132f77c197aa465d5",
     "readme_hash": "ac9ac192b71369e5",
     "desc_v6": true,
-    "churn_pct": 6.4,
     "summary": "A sealed-bid auction for a single item with unlinkable bidders and hidden bid values.",
     "description_long": "Sealed implements a variant of a Vickrey auction on Starknet where bidders' identities remain hidden and bid values are concealed until they are revealed. Each bidder locks in identical amounts of STRK20 collateral, and the auction settles at the second-highest bid or reserve price. The system uses Poseidon commitments to obscure bid values, and the STRK20 pool ensures that no bidder's address appears on-chain during the bidding process.",
     "latest_push": "Displayed the complete public state of an auction and marked it public.",
@@ -644,6 +721,7 @@
     "has_readme": true,
     "additions": 232,
     "deletions": 102,
+    "churn_pct": 6.4,
     "sprint": {
       "pushes": 72,
       "additions": 14092,
@@ -3355,7 +3433,6 @@
     "head_sha": "f392187d0a6bd6cb6c6a92a572fdd843aef54dbf",
     "readme_hash": "365992efbf91ba61",
     "desc_v6": true,
-    "churn_pct": 4.5,
     "summary": "A fully shielded DeFi pool with a dark order book.",
     "description_long": "This project is a fully shielded DeFi pool that includes a dark order book. It is built on Starknet.",
     "latest_push": "Redesigned landing page UI with Starknet themes and custom geometry diagrams.",
@@ -3394,6 +3471,7 @@
     "has_readme": true,
     "additions": 123,
     "deletions": 114,
+    "churn_pct": 4.5,
     "sprint": {
       "pushes": 2,
       "additions": 6403,
@@ -3402,83 +3480,6 @@
     },
     "assessment": null,
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "ghostorder",
-    "name": "GhostOrder",
-    "one_liner": "A privacy-focused conditional intent layer on Starknet using STRK20, enabling users to create hidden trading conditions and execute them without exposing sensitive order parameters while they wait.",
-    "category": "Other",
-    "repo_url": "https://github.com/kaverimeshram/GhostOrder",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Ghost Orders enables private conditional trading for STRK20, addressing privacy in order placements.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-20T21:18:35Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "kaverimeshram",
-        "name": "kaverimeshram",
-        "avatar_url": "https://avatars.githubusercontent.com/u/182025207?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20"
-    ],
-    "head_sha": "86591e829c6c1b1a2b5ba042cdd4d6599d0dff13",
-    "readme_hash": "d18c40c8383d55dd",
-    "desc_v6": true,
-    "summary": "Conditional trading with hidden order parameters and private execution.",
-    "description_long": "Ghost Orders is a privacy-focused conditional trading layer that allows users to create conditional trading instructions while keeping sensitive order details private. The project is built on Starknet and includes features such as private conditional order creation, hidden trigger parameters, and client-side condition monitoring, with a focus on integrating STRK20 for asset handling and settlement.",
-    "latest_push": "Refactored the workspace data flow and related UI components.",
-    "tooling": [
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1611,
-    "deletions": 552,
-    "churn_pct": 100,
-    "sprint": {
-      "pushes": 5,
-      "additions": 7961,
-      "deletions": 385,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": false,
-      "why_innovative": "It creates private conditional trading orders that are generally not available in traditional markets.",
-      "why_complex": "No contracts or significant Cairo code have been implemented yet.",
-      "reason": "Ghost Orders enables private conditional trading for STRK20, addressing privacy in order placements.",
-      "facts_v2": true
-    },
-    "star_evidence": ""
   },
   {
     "slug": "conditionalpay",
