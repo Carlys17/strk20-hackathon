@@ -1,5 +1,605 @@
 [
   {
+    "slug": "strk20-privacy-wallet",
+    "name": "strk20-privacy-wallet",
+    "one_liner": "Umbra-grade privacy wallet for Starknet powered by STRK20 privacy pool",
+    "category": "Other",
+    "repo_url": "https://github.com/SmratJay/strk20-privacy-wallet",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project lacks both innovation in privacy application and complexity in engineering.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T17:19:48Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "SmratJay",
+        "name": "SmratJay",
+        "avatar_url": "https://avatars.githubusercontent.com/u/74355410?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "head_sha": "6947b59b628323f22c6c9edee99be048aa3e58b9",
+    "readme_hash": "cf1e35452b1d6053",
+    "desc_v6": true,
+    "churn_pct": 0.2,
+    "summary": "A privacy-first DeFi platform with stealth payments and confidential perpetual futures.",
+    "description_long": "ORRANGE is a decentralized financial platform focusing on privacy built on Starknet. It features a STRK20 privacy wallet for confidential token transactions and PEL private perpetual futures for trading with hidden parameters. The platform includes an automated keeper system, a DEX aggregator for live swaps, and is implemented using Starknet Cairo smart contracts, ensuring secure and efficient execution of its features.",
+    "latest_push": "Fixed test suites to align with async witness store and 5-input open circuit.",
+    "tooling": [
+      {
+        "label": "AVNU",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Rust",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 134,
+    "deletions": 281,
+    "sprint": {
+      "pushes": 71,
+      "additions": 20115,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "applies privacy to a wallet but offers no new technology or mechanism beyond existing solutions.",
+      "why_complex": "no deployed contracts or innovative engineering work is present to assess.",
+      "reason": "The project lacks both innovation in privacy application and complexity in engineering.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "sealed",
+    "name": "Sealed",
+    "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/tinoxbt/sealed",
+    "demo_url": "https://tinoxbt.github.io/sealed/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-08",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
+    "contracts": [
+      {
+        "address": "0x076a5480f7359b8a8db0245c603c78e108a89442fb3b71aea2a3e7cc976b133d",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T17:09:16Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "tinoxbt",
+        "name": "tinoxbt",
+        "avatar_url": "https://avatars.githubusercontent.com/u/202869881?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-21"
+    ],
+    "head_sha": "08b2f661d3359a29a536a4d16c927dfbdb68ae3a",
+    "readme_hash": "ac9ac192b71369e5",
+    "desc_v6": true,
+    "churn_pct": 4.5,
+    "summary": "A sealed-bid auction for a single item with unlinkable bidders and hidden bid values.",
+    "description_long": "Sealed implements a variant of a Vickrey auction on Starknet where bidders' identities remain hidden and bid values are concealed until they are revealed. Each bidder locks in identical amounts of STRK20 collateral, and the auction settles at the second-highest bid or reserve price. The system uses Poseidon commitments to obscure bid values, and the STRK20 pool ensures that no bidder's address appears on-chain during the bidding process.",
+    "latest_push": "Stored an encrypted backup blob with each entry in the auction contract.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 253,
+    "deletions": 23,
+    "sprint": {
+      "pushes": 74,
+      "additions": 15001,
+      "deletions": 103,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "It enables unlinkable sealed-bid auctions with privacy for both bids and identities using STRK20.",
+      "why_complex": "The project implements multiple contracts with Poseidon commitments and uniform collateral mechanisms.",
+      "reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
+      "facts_v2": true
+    },
+    "star_evidence": "1 contract deployed, Cairo in the repository"
+  },
+  {
+    "slug": "shadowledger",
+    "name": "ShadowLedger",
+    "one_liner": "Private payroll with public aggregate accountability on STRK20.",
+    "category": "Payments",
+    "repo_url": "https://github.com/Avinash1286/shadowledger",
+    "demo_url": "https://shadowledger-six.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-11",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "ShadowLedger does not demonstrate unique innovation or engineering complexity.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T17:07:11Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Avinash1286",
+        "name": "Abinash Yadav",
+        "avatar_url": "https://avatars.githubusercontent.com/u/52949024?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-21"
+    ],
+    "head_sha": "d5065936470fd822dbd42f691cecff2f9d62bf3b",
+    "readme_hash": "7f26b6c4bbf8469d",
+    "desc_v6": true,
+    "churn_pct": 39.9,
+    "summary": "Private payroll processing with aggregate accountability on Starknet STRK20.",
+    "description_long": "ShadowLedger enables organizations to execute private payroll and treasury disbursements while maintaining public aggregate accountability. It features a payroll builder with CSV import, aggregate calculations, and Merkle tree-proof generation for each entry, alongside a cairo `PayrollRegistry` to manage payroll states securely. The application operates entirely in the browser and supports real mainnet transactions with strict privacy measures for recipient data.",
+    "latest_push": "Completed the registry and implemented encrypted receipts.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 2352,
+    "deletions": 13,
+    "sprint": {
+      "pushes": 9,
+      "additions": 16423,
+      "deletions": 55,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "This project is essentially a private payroll system, a common application of privacy.",
+      "why_complex": "No deployed contracts are declared and the stack lacks complex engineering elements.",
+      "reason": "ShadowLedger does not demonstrate unique innovation or engineering complexity.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "doom",
+    "name": "Doom",
+    "one_liner": "A private prediction market on Starknet: visible odds, invisible bettors. Bet sizes and prices are public so the market stays accurate; who is betting is not.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/neromtoobad/doom",
+    "demo_url": "https://neromtoobad.github.io/doom/",
+    "demo_video": "https://youtu.be/zUd1gX9ZN9Q",
+    "x_handle": "neromtoobad",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x0205a8ad149048619f6b8ee19968e119009848a7f6645d862e949bcf1ef432c4",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x05898fb214fb5c2c23f12601b8f4350612fc614642942ea80adb7145dba6ae48",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x06e052635f96b98184cffa3a5d2e416ec0a3d288ac54a66b23a41e8c149b30b5",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x04f8f4a1a90899b6b61b98cebc245fbb49a139a4be7448685593bb10be969d21",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x013c507ad43b4f2e61037cbd08ee3f15606d2dc538a17135b46c8c095415b0ab",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x073f3dddde000eeddfa0974385cecd36d91237c1efc5a6cab9a4039d543595db",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x026e1e64b1ed70983ff96d5f8605c0d3ad2ca13e4746e02875b0fa608932aa6b",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x00611045be3eb6172f9ca2603c1dfbdb1319151178c8aa8f990b02363f12730f",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x0754b7550d47441539fc2264e689d584f67e8667965240a98656230534cf4618",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x07450bbf75708b40107ba4210d80c3c13fe6e284087ab3401d9d26fdb9424afa",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x0734ffdb14dfe27a44ca3a4355a9cba2b522d888d6defc663617c0cfe6b4d0e8",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x06e5598cb11349ebd2254510c6107f10b755c7e025faea349223faa1de2cded2",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x02cf2324376fb1e01dfb9ea01438a794e7cf4b27505702cab88d4fe5d68f1296",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x02b48d0ab591cee1e1ee3877f46a20d39159ab5ba2d525b3df0dddeb62c37eab",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x261d9a8f3e950b672607d5ba3fa919aab3c705f304bae23f5e1fdac3b76cebb",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x6d1dc754a0317b212d362bec4b63def3a72954ffe90c4a3da942e1eca301c6e",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x66d791e028e0ce00460582a67076800176356120a6999052084627566730991",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x37de85b9c10e66d9f9e2851bfd44b557de398392d705191bfc8bfb63f27623e",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      }
+    ],
+    "verified_txs": 4,
+    "requirements": {
+      "demo": true,
+      "video": true,
+      "mainnet": true
+    },
+    "status": "finished",
+    "pushed_at": "2026-08-21T17:01:45Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "neromtoobad",
+        "name": "neromtoobad",
+        "avatar_url": "https://avatars.githubusercontent.com/u/102220536?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "head_sha": "c827c75560d455b753062dbf535e6b43ce8f9769",
+    "readme_hash": "93028ec0e7477992",
+    "desc_v6": true,
+    "churn_pct": 71.5,
+    "summary": "A private prediction market with public odds and anonymous bettors.",
+    "description_long": "Doom is a private prediction market that allows users to place bets while hiding their identities. It consists of the `DoomMarketV2` contract for managing the market and bets, and the `DoomDecision` contract serving as a governance layer for decision-making through conditional markets. It enforces anonymity through an innovative approach, where the bet amounts and current odds are public while bettor identities are masked, thus eliminating manipulation typically associated with visible betting.",
+    "latest_push": "Added the demo video and the Remotion project to the submission manifest.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 6232,
+    "deletions": 2,
+    "sprint": {
+      "pushes": 42,
+      "additions": 15494,
+      "deletions": 48,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "14 contracts deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "portage",
+    "name": "Portage.fun",
+    "one_liner": "Provably-fair idle creature-collecting on Starknet — hatch, evolve, and trade original creatures.",
+    "category": "Gaming",
+    "repo_url": "https://github.com/joaoolucas/portage-strk",
+    "demo_url": "https://portage-topaz.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T16:53:26Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "joaoolucas",
+        "name": "joaoolucas",
+        "avatar_url": "https://avatars.githubusercontent.com/u/83239762?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 12
+      }
+    ],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-21"
+    ],
+    "head_sha": "51bf4fe514a295dc0daab8a7b7d08831ffabfa8e",
+    "readme_hash": "5b94ae03d44a7f16",
+    "desc_v6": true,
+    "churn_pct": 1.3,
+    "summary": "A cozy idle RPG for creature collecting, evolving, and trading.",
+    "description_long": "This project is a browser-based idle RPG focused on collecting and evolving creatures. It features tile movement, NPC interaction, offline progress, and local automatic saving. The game engine is built with Next.js, while creature mechanics are implemented in Cairo smart contracts. Local-first gameplay is prioritized, and the on-chain integration with STRK20 for privacy features is still under development.",
+    "latest_push": "Fixed tab behavior to prevent fast-forwarding the hunt.",
+    "tooling": [
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 185,
+    "deletions": 8,
+    "sprint": {
+      "pushes": 98,
+      "additions": 6338,
+      "deletions": 202,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project is an idle creature-collecting RPG, which does not apply privacy in a non-obvious way.",
+      "why_complex": "There are no deployed contracts or depth in Cairo code at this stage.",
+      "reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "vinss",
+    "name": "VINSS",
+    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/DXJLabs/vinss",
+    "demo_url": "https://vinss-nu.vercel.app/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-01",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T16:44:36Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ntfound-dev",
+        "name": "ntfound-dev",
+        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
+      },
+      {
+        "login": "DXJLabs",
+        "name": "DXJ Labs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "head_sha": "28cd445e14e5b919e8984cbaa65320aa9469dac8",
+    "readme_hash": "709363b44ceb8140",
+    "desc_v6": true,
+    "churn_pct": 0.4,
+    "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
+    "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
+    "latest_push": "Refined deal room messaging UX across multiple components.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 2,
+    "deletions": 92,
+    "sprint": {
+      "pushes": 100,
+      "additions": 15834,
+      "deletions": 2028,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "creates a private deal room for encrypted negotiations and offers, not typical in this domain.",
+      "why_complex": "includes multiple Cairo helper contracts for messaging, escrow, and requires event decryption via an indexer.",
+      "reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
     "slug": "strk20-indexer",
     "name": "strk20-indexer",
     "one_liner": "Open, self-hostable note indexer and explorer for the STRK20 pool. Wallets sync without handing over a viewing key.",
@@ -37,7 +637,6 @@
     "head_sha": "4185afec41eb2a66a495ef860c8e21478d04ce5c",
     "readme_hash": "bfb9121297bed56f",
     "desc_v6": true,
-    "churn_pct": 0,
     "summary": "An open, self-hostable note indexer and explorer for the STRK20 privacy pool.",
     "description_long": "This project ingests and stores state updates from the STRK20 pool contract in PostgreSQL, enabling efficient access to storage diffs, nullifiers, and public shield/unshield operations. It features a compatible discovery API that mimics the reference service endpoints, a keyless mode that keeps all sensitive keys on the local device, and real-time slot updates via a WebSocket. The project also includes an explorer for displaying transaction metrics and a CLI for various wallet operations.",
     "latest_push": "Created the initial README file and added the license.",
@@ -45,6 +644,7 @@
     "has_readme": true,
     "additions": 277,
     "deletions": 0,
+    "churn_pct": 0,
     "sprint": {
       "pushes": 1,
       "additions": 277,
@@ -52,152 +652,6 @@
       "computed": 2
     },
     "assessment": null,
-    "star_evidence": ""
-  },
-  {
-    "slug": "sealed",
-    "name": "Sealed",
-    "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
-    "category": "DeFi",
-    "repo_url": "https://github.com/tinoxbt/sealed",
-    "demo_url": "https://tinoxbt.github.io/sealed/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-08",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
-    "contracts": [
-      {
-        "address": "0x076a5480f7359b8a8db0245c603c78e108a89442fb3b71aea2a3e7cc976b133d",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T16:32:30Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "tinoxbt",
-        "name": "tinoxbt",
-        "avatar_url": "https://avatars.githubusercontent.com/u/202869881?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-21"
-    ],
-    "head_sha": "bfc61251ca866473a5cdfdc918f0fb9a273fd147",
-    "readme_hash": "ac9ac192b71369e5",
-    "desc_v6": true,
-    "churn_pct": 25.1,
-    "summary": "A sealed-bid auction for a single item with unlinkable bidders and hidden bid values.",
-    "description_long": "Sealed implements a variant of a Vickrey auction on Starknet where bidders' identities remain hidden and bid values are concealed until they are revealed. Each bidder locks in identical amounts of STRK20 collateral, and the auction settles at the second-highest bid or reserve price. The system uses Poseidon commitments to obscure bid values, and the STRK20 pool ensures that no bidder's address appears on-chain during the bidding process.",
-    "latest_push": "Built the full interface with landing page, shell, and brand.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1081,
-    "deletions": 402,
-    "sprint": {
-      "pushes": 73,
-      "additions": 14771,
-      "deletions": 103,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "It enables unlinkable sealed-bid auctions with privacy for both bids and identities using STRK20.",
-      "why_complex": "The project implements multiple contracts with Poseidon commitments and uniform collateral mechanisms.",
-      "reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
-      "facts_v2": true
-    },
-    "star_evidence": "1 contract deployed, Cairo in the repository"
-  },
-  {
-    "slug": "shadowledger",
-    "name": "ShadowLedger",
-    "one_liner": "Private payroll with public aggregate accountability on STRK20.",
-    "category": "Payments",
-    "repo_url": "https://github.com/Avinash1286/shadowledger",
-    "demo_url": "https://shadowledger-six.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-11",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "ShadowLedger does not demonstrate unique innovation or engineering complexity.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T16:28:51Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Avinash1286",
-        "name": "Abinash Yadav",
-        "avatar_url": "https://avatars.githubusercontent.com/u/52949024?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-21"
-    ],
-    "head_sha": "e2dbcd9ec1a44f14a0cc2d3b48be4651606f0073",
-    "readme_hash": "c95316dc5abb97e8",
-    "desc_v6": true,
-    "summary": "Private payroll and treasury disbursements with selective verification.",
-    "description_long": "ShadowLedger allows organizations to manage private payroll runs and treasury disbursements while maintaining public aggregate accountability. The web app features a payroll builder, token conversion, Merkle tree proofs for verification, and a secure transfer mechanism, all built with Cairo contracts and tested against numerous edge cases. It checks recipient readiness and ensures no private information is logged or sent to servers.",
-    "latest_push": "Built the August 19 payroll registry contract with associated tests.",
-    "tooling": [],
-    "has_readme": true,
-    "additions": 614,
-    "deletions": 1,
-    "churn_pct": 16.2,
-    "sprint": {
-      "pushes": 8,
-      "additions": 14078,
-      "deletions": 49,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "This project is essentially a private payroll system, a common application of privacy.",
-      "why_complex": "No deployed contracts are declared and the stack lacks complex engineering elements.",
-      "reason": "ShadowLedger does not demonstrate unique innovation or engineering complexity.",
-      "facts_v2": true
-    },
     "star_evidence": ""
   },
   {
@@ -667,193 +1121,6 @@
       "why_innovative": "It offers private transfers and balances using STRK20, which is an obvious application of privacy.",
       "why_complex": "No complex contracts are built yet; only TypeScript and a minimal Cairo presence.",
       "reason": "Veilfolio focuses on private execution identities for an existing portfolio.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "strk20-privacy-wallet",
-    "name": "strk20-privacy-wallet",
-    "one_liner": "Umbra-grade privacy wallet for Starknet powered by STRK20 privacy pool",
-    "category": "Other",
-    "repo_url": "https://github.com/SmratJay/strk20-privacy-wallet",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project lacks both innovation in privacy application and complexity in engineering.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T15:48:25Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "SmratJay",
-        "name": "SmratJay",
-        "avatar_url": "https://avatars.githubusercontent.com/u/74355410?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21"
-    ],
-    "head_sha": "9a9364dbc3e3997e352f365568ffaddfdc6bcf9b",
-    "readme_hash": "cf1e35452b1d6053",
-    "desc_v6": true,
-    "summary": "A privacy-first DeFi platform with stealth payments and confidential perpetual futures.",
-    "description_long": "ORRANGE is a decentralized financial platform focusing on privacy built on Starknet. It features a STRK20 privacy wallet for confidential token transactions and PEL private perpetual futures for trading with hidden parameters. The platform includes an automated keeper system, a DEX aggregator for live swaps, and is implemented using Starknet Cairo smart contracts, ensuring secure and efficient execution of its features.",
-    "latest_push": "Added economic correctness for phase 2 and security hardening for phase 4.",
-    "tooling": [
-      {
-        "label": "AVNU",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Rust",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1991,
-    "deletions": 447,
-    "churn_pct": 1.5,
-    "sprint": {
-      "pushes": 70,
-      "additions": 20115,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "applies privacy to a wallet but offers no new technology or mechanism beyond existing solutions.",
-      "why_complex": "no deployed contracts or innovative engineering work is present to assess.",
-      "reason": "The project lacks both innovation in privacy application and complexity in engineering.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "vinss",
-    "name": "VINSS",
-    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/DXJLabs/vinss",
-    "demo_url": "https://vinss-nu.vercel.app/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-01",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T15:40:11Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "ntfound-dev",
-        "name": "ntfound-dev",
-        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
-      },
-      {
-        "login": "DXJLabs",
-        "name": "DXJ Labs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21"
-    ],
-    "head_sha": "37e3c83fe9056187d730eba7d9fde8dd002fbadf",
-    "readme_hash": "709363b44ceb8140",
-    "desc_v6": true,
-    "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
-    "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
-    "latest_push": "Refactored the frontend deal room UX for improved user experience.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1032,
-    "deletions": 605,
-    "churn_pct": 7.3,
-    "sprint": {
-      "pushes": 100,
-      "additions": 15834,
-      "deletions": 2028,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "creates a private deal room for encrypted negotiations and offers, not typical in this domain.",
-      "why_complex": "includes multiple Cairo helper contracts for messaging, escrow, and requires event decryption via an indexer.",
-      "reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
@@ -1487,91 +1754,6 @@
     "star_evidence": "1 contract deployed, Cairo in the repository"
   },
   {
-    "slug": "portage",
-    "name": "Portage.fun",
-    "one_liner": "Provably-fair idle creature-collecting on Starknet — hatch, evolve, and trade original creatures.",
-    "category": "Gaming",
-    "repo_url": "https://github.com/joaoolucas/portage-strk",
-    "demo_url": "https://portage-topaz.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T13:26:58Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "joaoolucas",
-        "name": "joaoolucas",
-        "avatar_url": "https://avatars.githubusercontent.com/u/83239762?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 11
-      }
-    ],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-21"
-    ],
-    "head_sha": "9a03f8fa5e9c18626b9a1cb18730a3a9e7140f62",
-    "readme_hash": "5b94ae03d44a7f16",
-    "desc_v6": true,
-    "summary": "A cozy idle RPG for creature collecting, evolving, and trading.",
-    "description_long": "This project is a browser-based idle RPG focused on collecting and evolving creatures. It features tile movement, NPC interaction, offline progress, and local automatic saving. The game engine is built with Next.js, while creature mechanics are implemented in Cairo smart contracts. Local-first gameplay is prioritized, and the on-chain integration with STRK20 for privacy features is still under development.",
-    "latest_push": "Fixed a monster's behavior in simulation to prevent pinning the Porter.",
-    "tooling": [
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 261,
-    "deletions": 51,
-    "churn_pct": 2.2,
-    "sprint": {
-      "pushes": 97,
-      "additions": 6338,
-      "deletions": 202,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "The project is an idle creature-collecting RPG, which does not apply privacy in a non-obvious way.",
-      "why_complex": "There are no deployed contracts or depth in Cairo code at this stage.",
-      "reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
     "slug": "oblivionprotocol",
     "name": "OblivionProtocol",
     "one_liner": "",
@@ -2102,182 +2284,6 @@
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "doom",
-    "name": "Doom",
-    "one_liner": "A private prediction market on Starknet: visible odds, invisible bettors. Bet sizes and prices are public so the market stays accurate; who is betting is not.",
-    "category": "DeFi",
-    "repo_url": "https://github.com/neromtoobad/doom",
-    "demo_url": "https://neromtoobad.github.io/doom/",
-    "demo_video": "",
-    "x_handle": "neromtoobad",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x0205a8ad149048619f6b8ee19968e119009848a7f6645d862e949bcf1ef432c4",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x05898fb214fb5c2c23f12601b8f4350612fc614642942ea80adb7145dba6ae48",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x06e052635f96b98184cffa3a5d2e416ec0a3d288ac54a66b23a41e8c149b30b5",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x04f8f4a1a90899b6b61b98cebc245fbb49a139a4be7448685593bb10be969d21",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x013c507ad43b4f2e61037cbd08ee3f15606d2dc538a17135b46c8c095415b0ab",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x073f3dddde000eeddfa0974385cecd36d91237c1efc5a6cab9a4039d543595db",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x026e1e64b1ed70983ff96d5f8605c0d3ad2ca13e4746e02875b0fa608932aa6b",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x00611045be3eb6172f9ca2603c1dfbdb1319151178c8aa8f990b02363f12730f",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x0754b7550d47441539fc2264e689d584f67e8667965240a98656230534cf4618",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x07450bbf75708b40107ba4210d80c3c13fe6e284087ab3401d9d26fdb9424afa",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x0734ffdb14dfe27a44ca3a4355a9cba2b522d888d6defc663617c0cfe6b4d0e8",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x06e5598cb11349ebd2254510c6107f10b755c7e025faea349223faa1de2cded2",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x02cf2324376fb1e01dfb9ea01438a794e7cf4b27505702cab88d4fe5d68f1296",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x02b48d0ab591cee1e1ee3877f46a20d39159ab5ba2d525b3df0dddeb62c37eab",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [
-      {
-        "hash": "0x261d9a8f3e950b672607d5ba3fa919aab3c705f304bae23f5e1fdac3b76cebb",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      },
-      {
-        "hash": "0x6d1dc754a0317b212d362bec4b63def3a72954ffe90c4a3da942e1eca301c6e",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      },
-      {
-        "hash": "0x66d791e028e0ce00460582a67076800176356120a6999052084627566730991",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      },
-      {
-        "hash": "0x37de85b9c10e66d9f9e2851bfd44b557de398392d705191bfc8bfb63f27623e",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      }
-    ],
-    "verified_txs": 4,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": true
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T11:42:01Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "neromtoobad",
-        "name": "neromtoobad",
-        "avatar_url": "https://avatars.githubusercontent.com/u/102220536?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21"
-    ],
-    "head_sha": "7fe5a672d536f9f174b550492994d0a5070a99d8",
-    "readme_hash": "93028ec0e7477992",
-    "desc_v6": true,
-    "summary": "A private prediction market with public odds and anonymous bettors.",
-    "description_long": "Doom is a private prediction market that allows users to place bets while hiding their identities. It consists of the `DoomMarketV2` contract for managing the market and bets, and the `DoomDecision` contract serving as a governance layer for decision-making through conditional markets. It enforces anonymity through an innovative approach, where the bet amounts and current odds are public while bettor identities are masked, thus eliminating manipulation typically associated with visible betting.",
-    "latest_push": "Scaled the hero type down in market.module.css.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 4,
-    "deletions": 4,
-    "churn_pct": 0.1,
-    "sprint": {
-      "pushes": 40,
-      "additions": 9263,
-      "deletions": 47,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "14 contracts deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "sevrin",
