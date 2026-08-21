@@ -1,5 +1,88 @@
 [
   {
+    "slug": "chaoskeyplus-appbuild",
+    "name": "ChaosKey+",
+    "one_liner": "Physical-chaos entropy device with a Ready Wallet API tab for STRK20 shield, private transfer, and unshield.",
+    "category": "Tooling",
+    "repo_url": "https://github.com/Doodabug/Chaoskeyplus-appbuild",
+    "demo_url": "https://mobile-app-build-778.preview.emergentagent.com",
+    "demo_video": "https://www.youtube.com/watch?v=CHAOSKEY_DEMO_VIDEO",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project primarily focuses on standard private transfer features without unique implementation.",
+    "contracts": [
+      {
+        "address": "0x0459f679305796588ce074c2366a62d2503b5a447b4027ba9b7d820d91ce040d",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x07a77c21fc19398bdad4f01dec17457cc9d5f7f6df71806903bb3914d70380d0",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": true,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T01:10:10Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Doodabug",
+        "name": "doodabug",
+        "avatar_url": "https://avatars.githubusercontent.com/u/272664821?v=4"
+      },
+      {
+        "login": "emergent-agent-e1",
+        "name": "emergent-agent-e1",
+        "avatar_url": "https://avatars.githubusercontent.com/u/222461215?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "head_sha": "ebd3605843612c2dc32dd9a1946ee46500f2fec6",
+    "readme_hash": "06a5294711d6b365",
+    "desc_v6": true,
+    "churn_pct": 0.7,
+    "summary": "A physical-chaos entropy device for managing STRK20 tokens and transactions.",
+    "description_long": "This project integrates a physical-chaos entropy device with a Pool tab that interacts with the Starknet STRK20 privacy pool through the user's Ready wallet. It uses the Starknet Wallet API v0.10 and includes components such as the Starknet SDK for core communication, wallet standard discovery and adapter for wallet detection and compatibility, and wallet API types for safe STRK20 actions. The application supports functions like shielding, private transfers, and unshielding while ensuring that the dapp never holds a viewing key.",
+    "latest_push": "Fixed CI to run inside the frontend folder.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 19,
+    "deletions": 15,
+    "sprint": {
+      "pushes": 81,
+      "additions": 4955,
+      "deletions": 24,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "This project's main features involve a private transfer and shield functionality, which is obvious.",
+      "why_complex": "No contracts have been declared or built, showing no engineering depth in Cairo.",
+      "reason": "The project primarily focuses on standard private transfer features without unique implementation.",
+      "facts_v2": true
+    },
+    "star_evidence": "2 contracts deployed on mainnet"
+  },
+  {
     "slug": "ghostline",
     "name": "GhostLine",
     "one_liner": "A privacy firewall that detects transaction leakage before you sign on Starknet.",
@@ -21,7 +104,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-21T00:52:58Z",
+    "pushed_at": "2026-08-21T01:02:42Z",
     "stars": 0,
     "builders": [
       {
@@ -41,13 +124,13 @@
       "2026-08-19",
       "2026-08-21"
     ],
-    "head_sha": "7fc6926a15439744b8e6e33d19001d23ee30797e",
+    "head_sha": "5c1620729c3b97ac8fe701c8e746bac85506cb70",
     "readme_hash": "7f12b7954767c841",
     "desc_v6": true,
-    "churn_pct": 0,
+    "churn_pct": 2.4,
     "summary": "A privacy firewall that assesses transaction risks before signing on Starknet.",
     "description_long": "GhostLine analyzes transactions to identify potential privacy leakage and recommends safer execution strategies. It calculates a privacy-risk score based on various signals like timing, amount similarity, and address reuse. Users receive actionable insights to make informed decisions before signing transactions.",
-    "latest_push": "Merged pull requests from Leequidice for wallet API changes.",
+    "latest_push": "Made wallet connection status visible in the application.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -81,11 +164,11 @@
       }
     ],
     "has_readme": true,
-    "additions": 0,
-    "deletions": 0,
+    "additions": 18,
+    "deletions": 1,
     "sprint": {
-      "pushes": 19,
-      "additions": 7859,
+      "pushes": 21,
+      "additions": 7876,
       "deletions": 1,
       "computed": 2
     },
@@ -114,7 +197,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-21T00:42:10Z",
+    "pushed_at": "2026-08-21T01:01:24Z",
     "stars": 0,
     "builders": [
       {
@@ -127,24 +210,108 @@
     "active_days": [
       "2026-08-21"
     ],
-    "head_sha": "1746280871b863e28ef1cb9f0393a4dbb978a04d",
+    "head_sha": "f85751b9a9f3499c8276c083c6324ed1ce5f40e0",
     "readme_hash": "02a6e416be7d0abe",
     "desc_v6": true,
-    "churn_pct": 100,
+    "churn_pct": 32,
     "summary": "A private, stake-backed reputation layer for foresight and accountability.",
     "description_long": "Xence allows users to make probabilistic forecasts that are privately backed by stakes hidden in the STRK20 privacy pool. It records the commitment publicly, while ensuring the underlying position and stake amounts remain confidential, scoring users on their forecasting accuracy using Brier scores. Built using Cairo and various web technologies, it integrates with the Starknet Wallet API to maintain user privacy and facilitate secure transactions.",
-    "latest_push": "Sealed forecasts, private bonds, and public calibration were added.",
-    "tooling": [],
+    "latest_push": "Implemented XenceVault anonymizer and XenceRegistry with hash parity.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
     "has_readme": true,
-    "additions": 8535,
+    "additions": 1313,
     "deletions": 0,
     "sprint": {
-      "pushes": 1,
-      "additions": 8535,
+      "pushes": 2,
+      "additions": 9848,
       "deletions": 0,
       "computed": 2
     },
     "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "hidden",
+    "name": "Hidden",
+    "one_liner": "Hidden-information games on Starknet powered by STRK20 privacy.",
+    "category": "Other",
+    "repo_url": "https://github.com/DevTest-me/hidden-starknet",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Currently, the project lacks any implemented privacy technology in contracts.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T00:59:10Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "DevTest-me",
+        "name": "DevTest-me",
+        "avatar_url": "https://avatars.githubusercontent.com/u/200008500?v=4"
+      },
+      {
+        "login": "h15629526027",
+        "name": "Your Name",
+        "avatar_url": "https://avatars.githubusercontent.com/u/99627554?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "head_sha": "75f9d49ff3379015e03cdef24e2e824e2f6264f3",
+    "readme_hash": "502ceeaba0267626",
+    "desc_v6": true,
+    "churn_pct": 10,
+    "summary": "1v1 wagered games where player moves remain hidden until revealed.",
+    "description_long": "HIDDEN is a suite of 1v1 wagered games incorporating privacy as a core mechanic. Players commit their moves as hashes before revealing them, and stakes are handled through STRK20's shielded pool to ensure anonymous transactions. The current implementation includes game logic, commit/reveal design, and user interface, ready for integration with real STRK20 transactions and contract deployment.",
+    "latest_push": "Modified the contract address and commit move logic in app.js.",
+    "tooling": [
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 213,
+    "deletions": 50,
+    "sprint": {
+      "pushes": 13,
+      "additions": 4316,
+      "deletions": 421,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project applies privacy to wager games, which isn't a typical domain for privacy tech.",
+      "why_complex": "No deployed contracts or engineering depth is present in the current build.",
+      "reason": "Currently, the project lacks any implemented privacy technology in contracts.",
+      "facts_v2": true
+    },
     "star_evidence": ""
   },
   {
@@ -192,7 +359,6 @@
     "head_sha": "dac7f4c12dfd9e5450d3afc071a4539c7c762634",
     "readme_hash": "a62d642117c81606",
     "desc_v6": true,
-    "churn_pct": 3.2,
     "summary": "A non-custodial strategy game using validator delegation for territory battles.",
     "description_long": "Players deploy their delegated STRK as FORCE to capture and defend Sectors, challenge rivals, and manage their strength without creating a separate game token. The project includes a web application, a Go API, and Cairo contracts organized in directories for apps and contracts, using React, TypeScript, and Dojo for the frontend and backend.",
     "latest_push": "Polished sector artwork projection flow and redesigned game error fallback.",
@@ -206,6 +372,7 @@
     "has_readme": true,
     "additions": 439,
     "deletions": 214,
+    "churn_pct": 3.2,
     "sprint": {
       "pushes": 48,
       "additions": 34263,
@@ -267,7 +434,6 @@
     "head_sha": "c124a820feb58710dceb83a0a4112d5e2276ecf5",
     "readme_hash": "e128b856f43d9169",
     "desc_v6": true,
-    "churn_pct": 100,
     "summary": "P2P marketplace escrow for anonymous payments in person.",
     "description_long": "GhostDeal is a mobile-first progressive web app (PWA) that allows users to make payments anonymously during in-person transactions. The seller displays a QR code for the item, the buyer taps to pay, and funds are locked in a private escrow. After the item is delivered, the buyer can release the payment into a shielded note. The application is built using Next.js, React, and TypeScript, connecting with Starknet via starknet.js and includes a cairo helper for privacy interactions.",
     "latest_push": "Connected the app components to the new back-end listing logic.",
@@ -311,6 +477,7 @@
     "has_readme": true,
     "additions": 7426,
     "deletions": 194,
+    "churn_pct": 100,
     "sprint": {
       "pushes": 4,
       "additions": 9522,
@@ -451,7 +618,6 @@
     "head_sha": "03bda9ab2c3b9ae40c6e77cf79b969a674a7bb6b",
     "readme_hash": "4d6a2e2100ebc965",
     "desc_v6": true,
-    "churn_pct": 51.9,
     "summary": "Manage private subscriptions with scheduled charges without revealing wallet details.",
     "description_long": "NIGHTSHIFT allows users to set up private subscriptions that handle scheduled charges against a committed escrow. This is accomplished through a vault mechanism that records the parameters of the subscription while ensuring that the subscriber's wallet remains anonymous and untouchable for unauthorized charges. The implementation consists of contracts for subscriptions, charges, and cancellations, alongside detailed lifecycle management for each transaction.",
     "latest_push": "Released the final pre-deploy ABI with critical vault and gate functionalities.",
@@ -485,6 +651,7 @@
     "has_readme": true,
     "additions": 3458,
     "deletions": 299,
+    "churn_pct": 51.9,
     "sprint": {
       "pushes": 35,
       "additions": 11582,
@@ -626,7 +793,6 @@
     "head_sha": "274b646f2bd32ac248a1c0843f33fad59b8f6c96",
     "readme_hash": "ef44dd6e9f506ea4",
     "desc_v6": true,
-    "churn_pct": 100,
     "summary": "Create private identities for Starknet DeFi with unlinkable facets.",
     "description_long": "Manage multiple unlinkable identities within Starknet DeFi using a single shielded balance. This is achieved through shadow accounts, which derive unique identity keys for transactions without linking to the user's real identity. The system is built on STRK20, utilizing a specific funding mechanism to ensure anonymity during DeFi interactions, all documented with transaction references and test coverage in the repository.",
     "latest_push": "Added Day 4 account, immutable anonymizer, and action set builder.",
@@ -645,6 +811,7 @@
     "has_readme": true,
     "additions": 2187,
     "deletions": 0,
+    "churn_pct": 100,
     "sprint": {
       "pushes": 25,
       "additions": 4974,
@@ -701,7 +868,6 @@
     "head_sha": "0989badd0cfb689dd77ee82f6af29255624cf8a5",
     "readme_hash": "4fadf47bae5a32b2",
     "desc_v6": true,
-    "churn_pct": 2.3,
     "summary": "A whitehat rescue bot that sweeps exposed on-chain funds to safety.",
     "description_long": "Aegis scans public repositories for accidentally leaked private keys and API keys, checks their liveness and real balances, then sweeps any found funds to a secure address. It operates automatically without human intervention using Next.js and Starknet.js for account management and transactions, with a claim flow for returning funds to verified owners under development.",
     "latest_push": "Automated claim payouts on submission instead of manual processing.",
@@ -745,6 +911,7 @@
     "has_readme": true,
     "additions": 74,
     "deletions": 8,
+    "churn_pct": 2.3,
     "sprint": {
       "pushes": 36,
       "additions": 4373,
@@ -1553,7 +1720,7 @@
       },
       {
         "address": "0x06e5598cb11349ebd2254510c6107f10b755c7e025faea349223faa1de2cded2",
-        "network": "mainnet"
+        "network": "unknown"
       },
       {
         "address": "0x02cf2324376fb1e01dfb9ea01438a794e7cf4b27505702cab88d4fe5d68f1296",
@@ -1666,7 +1833,7 @@
       "computed": 2
     },
     "assessment": null,
-    "star_evidence": "14 contracts deployed on mainnet, Cairo in the repository"
+    "star_evidence": "13 contracts deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "shadowpay",
@@ -2810,88 +2977,6 @@
     "star_evidence": "Cairo in the repository"
   },
   {
-    "slug": "chaoskeyplus-appbuild",
-    "name": "ChaosKey+",
-    "one_liner": "Physical-chaos entropy device with a Ready Wallet API tab for STRK20 shield, private transfer, and unshield.",
-    "category": "Tooling",
-    "repo_url": "https://github.com/Doodabug/Chaoskeyplus-appbuild",
-    "demo_url": "https://mobile-app-build-778.preview.emergentagent.com",
-    "demo_video": "https://www.youtube.com/watch?v=CHAOSKEY_DEMO_VIDEO",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project primarily focuses on standard private transfer features without unique implementation.",
-    "contracts": [
-      {
-        "address": "0x0459f679305796588ce074c2366a62d2503b5a447b4027ba9b7d820d91ce040d",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x07a77c21fc19398bdad4f01dec17457cc9d5f7f6df71806903bb3914d70380d0",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": true,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-20T16:57:02Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Doodabug",
-        "name": "Doodlebug",
-        "avatar_url": "https://avatars.githubusercontent.com/u/272664821?v=4"
-      },
-      {
-        "login": "emergent-agent-e1",
-        "name": "emergent-agent-e1",
-        "avatar_url": "https://avatars.githubusercontent.com/u/222461215?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20"
-    ],
-    "head_sha": "229c9cdd6f6b2d9b00ba0371e6ec5b4dec817ce9",
-    "readme_hash": "06a5294711d6b365",
-    "desc_v6": true,
-    "summary": "A physical-chaos entropy device for managing STRK20 tokens and transactions.",
-    "description_long": "This project integrates a physical-chaos entropy device with a Pool tab that interacts with the Starknet STRK20 privacy pool through the user's Ready wallet. It uses the Starknet Wallet API v0.10 and includes components such as the Starknet SDK for core communication, wallet standard discovery and adapter for wallet detection and compatibility, and wallet API types for safe STRK20 actions. The application supports functions like shielding, private transfers, and unshielding while ensuring that the dapp never holds a viewing key.",
-    "latest_push": "Fixed passing actions array directly to strk20InvokeTransaction.",
-    "tooling": [],
-    "has_readme": true,
-    "additions": 404,
-    "deletions": 1,
-    "churn_pct": 8.1,
-    "sprint": {
-      "pushes": 80,
-      "additions": 4951,
-      "deletions": 24,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "This project's main features involve a private transfer and shield functionality, which is obvious.",
-      "why_complex": "No contracts have been declared or built, showing no engineering depth in Cairo.",
-      "reason": "The project primarily focuses on standard private transfer features without unique implementation.",
-      "facts_v2": true
-    },
-    "star_evidence": "2 contracts deployed on mainnet"
-  },
-  {
     "slug": "vinss",
     "name": "VINSS",
     "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
@@ -3578,83 +3663,6 @@
       "computed": 2
     },
     "assessment": null,
-    "star_evidence": ""
-  },
-  {
-    "slug": "hidden",
-    "name": "Hidden",
-    "one_liner": "Hidden-information games on Starknet powered by STRK20 privacy.",
-    "category": "Other",
-    "repo_url": "https://github.com/DevTest-me/hidden-starknet",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Currently, the project lacks any implemented privacy technology in contracts.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-20T14:46:34Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "DevTest-me",
-        "name": "DevTest-me",
-        "avatar_url": "https://avatars.githubusercontent.com/u/200008500?v=4"
-      },
-      {
-        "login": "h15629526027",
-        "name": "Your Name",
-        "avatar_url": "https://avatars.githubusercontent.com/u/99627554?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20"
-    ],
-    "head_sha": "f63f1dfbc45af275814d8326c924232cf6e0ffb6",
-    "readme_hash": "502ceeaba0267626",
-    "desc_v6": true,
-    "summary": "1v1 wagered games where player moves remain hidden until revealed.",
-    "description_long": "HIDDEN is a suite of 1v1 wagered games incorporating privacy as a core mechanic. Players commit their moves as hashes before revealing them, and stakes are handled through STRK20's shielded pool to ensure anonymous transactions. The current implementation includes game logic, commit/reveal design, and user interface, ready for integration with real STRK20 transactions and contract deployment.",
-    "latest_push": "Implemented session management for wallet accounts.",
-    "tooling": [
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 291,
-    "deletions": 36,
-    "churn_pct": 13.4,
-    "sprint": {
-      "pushes": 12,
-      "additions": 4156,
-      "deletions": 424,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "The project applies privacy to wager games, which isn't a typical domain for privacy tech.",
-      "why_complex": "No deployed contracts or engineering depth is present in the current build.",
-      "reason": "Currently, the project lacks any implemented privacy technology in contracts.",
-      "facts_v2": true
-    },
     "star_evidence": ""
   },
   {
