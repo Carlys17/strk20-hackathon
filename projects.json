@@ -1,78 +1,239 @@
 [
   {
-    "slug": "mirage",
-    "name": "Mirage",
-    "one_liner": "One wallet, every chain, no trace. Shield any ERC-20 on Starknet, exit privately to 35+ chains via NEAR Intents.",
-    "category": "Consumer",
-    "repo_url": "https://github.com/YanYuanFE/mirage",
+    "slug": "one-way",
+    "name": "OneWay",
+    "one_liner": "A one-way door for any ERC-20. Get paid without sharing a wallet, or leave a known wallet and exit on another chain.",
+    "category": "Payments",
+    "repo_url": "https://github.com/d4m014/one-way",
     "demo_url": "",
     "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-09",
+    "x_handle": "d4m014",
+    "inspired_by": "",
     "affiliation": "",
     "starred": false,
     "star_reason": "",
     "contracts": [],
-    "transactions": [
-      {
-        "hash": "0x7f419460965d6d83b2cc919a0f08d11dee212fe367849cfb1afe124ed14b511",
-        "ok": true,
-        "pool": true,
-        "mine": null
-      },
-      {
-        "hash": "0x7d643ebd88f2894b2733628fcc7363fd082e30a0ea0b47c3608149a7bbfc86c",
-        "ok": true,
-        "pool": true,
-        "mine": null
-      },
-      {
-        "hash": "0x3f556eafedae96409b43b7e20b0e2f56199cc74a1ea97b8e09a63c80e4ec0f2",
-        "ok": true,
-        "pool": true,
-        "mine": null
-      }
-    ],
-    "verified_txs": 3,
+    "transactions": [],
+    "verified_txs": 0,
     "requirements": {
       "demo": false,
       "video": false,
-      "mainnet": true
+      "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-21T08:38:14Z",
+    "pushed_at": "2026-08-21T09:32:27Z",
     "stars": 0,
     "builders": [
       {
-        "login": "EvanYan1024",
-        "name": "Evan",
-        "avatar_url": "https://avatars.githubusercontent.com/u/136288110?v=4"
+        "login": "d4m014",
+        "name": "d4m014",
+        "avatar_url": "https://avatars.githubusercontent.com/u/271264252?v=4"
       }
     ],
     "agents": [],
     "active_days": [
-      "2026-08-20",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
       "2026-08-21"
     ],
-    "head_sha": "8b77d951f96502cb70c78883f67e95cdd8cdffe2",
-    "readme_hash": "5fb9c87d7dabf411",
+    "head_sha": "f92b1ec614ad5f731ce5d08f13c326cc138d89a3",
+    "readme_hash": "d6e46ace8afaa189",
     "desc_v6": true,
-    "churn_pct": 2.3,
-    "summary": "A privacy superapp for cross-chain transfers with no on-chain links.",
-    "description_long": "Mirage is a privacy superapp that transforms the STRK20 shielded pool on Starknet into a gateway for transferring assets across 35+ blockchains. Users can shield any ERC-20 token, execute private swaps, and send funds to fresh addresses on supported chains like BTC, Solana, and Arbitrum, effectively unlinking their main wallet from outgoing transactions. The implementation includes STRK20 for shielding, NEAR Intents for cross-chain execution, and a workflow engine for amount splitting and timing randomization, all running in a TEE.",
-    "latest_push": "Merged Out and Return into a single Swap tab with a direction toggle.",
-    "tooling": [],
+    "churn_pct": 23.1,
+    "summary": "A one-way door for ERC-20 tokens that enables private transfers and anonymous payments.",
+    "description_long": "OneWay allows users to get paid anonymously via a ghost address that does not reveal their identity. Users can also transfer funds from a known wallet to a private balance, and later exit to a fresh address on the same chain or another. The system is built using EVM-compatible contracts and a privacy layer, with security provided by a unique commitment derived from the user's signature.",
+    "latest_push": "Deployed the ghost on Sepolia and enabled token claiming.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
     "has_readme": true,
-    "additions": 40,
-    "deletions": 20,
+    "additions": 134,
+    "deletions": 28,
     "sprint": {
-      "pushes": 17,
-      "additions": 10567,
-      "deletions": 14,
+      "pushes": 4,
+      "additions": 4563,
+      "deletions": 90,
       "computed": 2
     },
     "assessment": null,
-    "star_evidence": ""
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "kese",
+    "name": "Kese",
+    "one_liner": "Private money for AI agents: a policy-guarded MCP wallet on the STRK20 pool - private payments within hard limits, Telegram human-approval, claim-link escrow for unregistered recipients, and viewing-key audit reports.",
+    "category": "Payments",
+    "repo_url": "https://github.com/ahmetenesdur/kese",
+    "demo_url": "TODO_public_demo_url",
+    "demo_video": "TODO_3min_video_url",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": true,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T09:22:23Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ahmetenesdur",
+        "name": "Enes",
+        "avatar_url": "https://avatars.githubusercontent.com/u/70810472?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 22
+      }
+    ],
+    "active_days": [
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "head_sha": "d175811a79efa664753de177bca9913558a0eb42",
+    "readme_hash": "a18d0d6b2872adaa",
+    "desc_v6": true,
+    "churn_pct": 100,
+    "summary": "A policy-guarded spending account for AI agents on the Starknet STRK20 privacy pool.",
+    "description_long": "Kese enables AI agents to make private payments with defined policies, including spending limits and human approval via Telegram. It consists of a policy engine, an escrow-claim contract for unregistered recipients, and integrates with the STRK20 privacy pool for secure transactions. The owner can manage settings and view audit reports through the Kese dashboard.",
+    "latest_push": "Implemented the KeseWallet for money-moving operations.",
+    "tooling": [
+      {
+        "label": "Privacy SDK",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 13685,
+    "deletions": 143,
+    "sprint": {
+      "pushes": 25,
+      "additions": 15301,
+      "deletions": 156,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "vinss",
+    "name": "VINSS",
+    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/DXJLabs/vinss",
+    "demo_url": "https://vinss-nu.vercel.app/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-01",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T09:16:56Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ntfound-dev",
+        "name": "ntfound-dev",
+        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
+      },
+      {
+        "login": "DXJLabs",
+        "name": "DXJ Labs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "head_sha": "9755eb51866473c9cabd8a6c88c34b3c3e6c640c",
+    "readme_hash": "709363b44ceb8140",
+    "desc_v6": true,
+    "churn_pct": 4.9,
+    "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
+    "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
+    "latest_push": "Implemented encrypted freelance work submission and reduced sync overhead.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 959,
+    "deletions": 43,
+    "sprint": {
+      "pushes": 100,
+      "additions": 13500,
+      "deletions": 4139,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "creates a private deal room for encrypted negotiations and offers, not typical in this domain.",
+      "why_complex": "includes multiple Cairo helper contracts for messaging, escrow, and requires event decryption via an indexer.",
+      "reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "strk20-privacy-wallet",
@@ -96,7 +257,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-21T08:28:54Z",
+    "pushed_at": "2026-08-21T09:12:51Z",
     "stars": 0,
     "builders": [
       {
@@ -115,13 +276,13 @@
       "2026-08-20",
       "2026-08-21"
     ],
-    "head_sha": "d539422b2d44929fccb2768010c5fef6767a08f7",
+    "head_sha": "b9f988f21b0d08a5806f55be44666ae119906f8f",
     "readme_hash": "cf1e35452b1d6053",
     "desc_v6": true,
-    "churn_pct": 1.3,
+    "churn_pct": 29.5,
     "summary": "A privacy-first DeFi platform with stealth payments and confidential perpetual futures.",
     "description_long": "ORRANGE is a decentralized financial platform focusing on privacy built on Starknet. It features a STRK20 privacy wallet for confidential token transactions and PEL private perpetual futures for trading with hidden parameters. The platform includes an automated keeper system, a DEX aggregator for live swaps, and is implemented using Starknet Cairo smart contracts, ensuring secure and efficient execution of its features.",
-    "latest_push": "Enforced Groth16 cryptographic boundary in the pel contract and circuits.",
+    "latest_push": "Added production Garaga Cairo verifiers and E2E adversarial test matrix.",
     "tooling": [
       {
         "label": "AVNU",
@@ -157,13 +318,18 @@
         "label": "Cairo",
         "live": false,
         "stack": false
+      },
+      {
+        "label": "Rust",
+        "live": false,
+        "stack": false
       }
     ],
     "has_readme": true,
-    "additions": 403,
-    "deletions": 80,
+    "additions": 48695,
+    "deletions": 0,
     "sprint": {
-      "pushes": 66,
+      "pushes": 67,
       "additions": 20115,
       "deletions": 0,
       "computed": 2
@@ -282,7 +448,7 @@
       "mainnet": true
     },
     "status": "building",
-    "pushed_at": "2026-08-21T08:22:45Z",
+    "pushed_at": "2026-08-21T09:08:02Z",
     "stars": 0,
     "builders": [
       {
@@ -298,13 +464,13 @@
       "2026-08-20",
       "2026-08-21"
     ],
-    "head_sha": "02d80f246e698f7370f9572df65273233947880a",
+    "head_sha": "7b2ff9f539c2def3c1a2f50f86c7e689da105ff8",
     "readme_hash": "93028ec0e7477992",
     "desc_v6": true,
-    "churn_pct": 3.4,
+    "churn_pct": 2.8,
     "summary": "A private prediction market with public odds and anonymous bettors.",
     "description_long": "Doom is a private prediction market that allows users to place bets while hiding their identities. It consists of the `DoomMarketV2` contract for managing the market and bets, and the `DoomDecision` contract serving as a governance layer for decision-making through conditional markets. It enforces anonymity through an innovative approach, where the bet amounts and current odds are public while bettor identities are masked, thus eliminating manipulation typically associated with visible betting.",
-    "latest_push": "Added a social preview card and fixed the connect button display issue.",
+    "latest_push": "Implemented a search feature and a resolution panel for pre-bet answers.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -343,16 +509,258 @@
       }
     ],
     "has_readme": true,
-    "additions": 206,
-    "deletions": 17,
+    "additions": 175,
+    "deletions": 19,
     "sprint": {
-      "pushes": 34,
-      "additions": 8952,
+      "pushes": 37,
+      "additions": 9108,
       "deletions": 47,
       "computed": 2
     },
     "assessment": null,
     "star_evidence": "14 contracts deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "xence",
+    "name": "Xence",
+    "one_liner": "Proof you were right, before it happened - seal a probabilistic forecast, bond it privately through the STRK20 pool, and let the chain score your calibration. Public record, invisible position.",
+    "category": "Infra",
+    "repo_url": "https://github.com/AustinChris1/xence",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T08:56:42Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "AustinChris1",
+        "name": "AustinChris1",
+        "avatar_url": "https://avatars.githubusercontent.com/u/87124517?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-21"
+    ],
+    "head_sha": "b97edc3d3fcf499054cadf44cb7b1f8858e042b0",
+    "readme_hash": "02a6e416be7d0abe",
+    "desc_v6": true,
+    "churn_pct": 14.4,
+    "summary": "A private, stake-backed reputation layer for foresight and accountability.",
+    "description_long": "Xence allows users to make probabilistic forecasts that are privately backed by stakes hidden in the STRK20 privacy pool. It records the commitment publicly, while ensuring the underlying position and stake amounts remain confidential, scoring users on their forecasting accuracy using Brier scores. Built using Cairo and various web technologies, it integrates with the Starknet Wallet API to maintain user privacy and facilitate secure transactions.",
+    "latest_push": "Made the palette literal and fixed non-rendering headlines.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 742,
+    "deletions": 81,
+    "sprint": {
+      "pushes": 6,
+      "additions": 16575,
+      "deletions": 140,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "oblivionprotocol",
+    "name": "OblivionProtocol",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/ScriptedBro/OblivionProtocol",
+    "demo_url": "https://oblivion-protocol.vercel.app",
+    "demo_video": "https://www.youtube.com/watch?v=OBLIVION_DEMO_VIDEO",
+    "x_handle": "OblivionZK",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x0419a4e321a48be389812a74c1092a748c12a84b01e92a83e028b182a938e102",
+        "network": "unknown"
+      },
+      {
+        "address": "0x0428b1092a83e028b182a938e10219a4e321a48be389812a74c1092a748c12a8",
+        "network": "unknown"
+      },
+      {
+        "address": "0x0437c8912a74c1092a748c12a84b01e92a83e028b182a938e10219a4e321a48b",
+        "network": "unknown"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x07f419460965d6d83b2cc919a0f08d11dee212fe367849cfb1afe124ed14b511",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      },
+      {
+        "hash": "0x07d643ebd88f2894b2733628fcc7363fd082e30a0ea0b47c3608149a7bbfc86c",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      },
+      {
+        "hash": "0x03f556eafedae96409b43b7e20b0e2f56199cc74a1ea97b8e09a63c80e4ec0f2",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      }
+    ],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": true,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T08:45:34Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ScriptedBro",
+        "name": "ScriptedBro",
+        "avatar_url": "https://avatars.githubusercontent.com/u/45717428?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-21"
+    ],
+    "head_sha": "0eebbab7f075b9977651561342e6b372a3f76bcd",
+    "readme_hash": "aa8d645ba62f2087",
+    "desc_v6": true,
+    "churn_pct": 100,
+    "summary": "A privacy-focused liquidity engine with batch swaps and compliance features.",
+    "description_long": "Oblivion Protocol transforms Starknet's STRK20 pool into a high-throughput financial engine for liquidity providers and traders. It includes shielded concentrated liquidity pools, zero-MEV batch swaps with internal matching, and automatic yield compounding in Starknet money markets, as well as a compliance engine that exports verifiable proofs of solvency and provenance. Key components are the Oblivion Vault for liquidity management, CoW Matcher for batch auctions, and the ATTEST Compliance Engine for regulatory purposes.",
+    "latest_push": "Launched the Oblivion Protocol with contracts, frontend, spec, and manifest.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 5635,
+    "deletions": 0,
+    "sprint": {
+      "pushes": 1,
+      "additions": 5635,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "3 contracts deployed, Cairo in the repository"
+  },
+  {
+    "slug": "mirage",
+    "name": "Mirage",
+    "one_liner": "One wallet, every chain, no trace. Shield any ERC-20 on Starknet, exit privately to 35+ chains via NEAR Intents.",
+    "category": "Consumer",
+    "repo_url": "https://github.com/YanYuanFE/mirage",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-09",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [
+      {
+        "hash": "0x7f419460965d6d83b2cc919a0f08d11dee212fe367849cfb1afe124ed14b511",
+        "ok": true,
+        "pool": true,
+        "mine": null
+      },
+      {
+        "hash": "0x7d643ebd88f2894b2733628fcc7363fd082e30a0ea0b47c3608149a7bbfc86c",
+        "ok": true,
+        "pool": true,
+        "mine": null
+      },
+      {
+        "hash": "0x3f556eafedae96409b43b7e20b0e2f56199cc74a1ea97b8e09a63c80e4ec0f2",
+        "ok": true,
+        "pool": true,
+        "mine": null
+      }
+    ],
+    "verified_txs": 3,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": true
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T08:38:14Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "EvanYan1024",
+        "name": "Evan",
+        "avatar_url": "https://avatars.githubusercontent.com/u/136288110?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-20",
+      "2026-08-21"
+    ],
+    "head_sha": "8b77d951f96502cb70c78883f67e95cdd8cdffe2",
+    "readme_hash": "5fb9c87d7dabf411",
+    "desc_v6": true,
+    "summary": "A privacy superapp for cross-chain transfers with no on-chain links.",
+    "description_long": "Mirage is a privacy superapp that transforms the STRK20 shielded pool on Starknet into a gateway for transferring assets across 35+ blockchains. Users can shield any ERC-20 token, execute private swaps, and send funds to fresh addresses on supported chains like BTC, Solana, and Arbitrum, effectively unlinking their main wallet from outgoing transactions. The implementation includes STRK20 for shielding, NEAR Intents for cross-chain execution, and a workflow engine for amount splitting and timing randomization, all running in a TEE.",
+    "latest_push": "Merged Out and Return into a single Swap tab with a direction toggle.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 40,
+    "deletions": 20,
+    "churn_pct": 2.3,
+    "sprint": {
+      "pushes": 17,
+      "additions": 10567,
+      "deletions": 14,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
   },
   {
     "slug": "strkworld",
@@ -484,7 +892,6 @@
     "head_sha": "7d476898ea8fe9bb7dc69b8e19340ee182481e07",
     "readme_hash": "62fd460b162e8a43",
     "desc_v6": true,
-    "churn_pct": 0,
     "summary": "Encrypted negotiation and atomic settlement for AI agents.",
     "description_long": "Erebus enables AI agents to negotiate in encrypted channels and settle transactions atomically without revealing the negotiation details. It consists of a reference agent flow running in the browser, using the STRK20 privacy pool to manage encrypted note salts and offering selective disclosure capabilities through viewing keys. The system is structured for agent autonomy, employing Starknet's account abstraction for gasless operations, and focuses on message and relationship privacy.",
     "latest_push": "Decided that D3 and repeat deals are in scope in the roadmap documentation.",
@@ -503,6 +910,7 @@
     "has_readme": true,
     "additions": 3,
     "deletions": 2,
+    "churn_pct": 0,
     "sprint": {
       "pushes": 38,
       "additions": 7945,
@@ -515,84 +923,6 @@
       "why_innovative": "applies privacy to agent-to-agent commerce using encrypted negotiation channels.",
       "why_complex": "implements AES-256-GCM-SIV for wire v2 and includes multiple interacting agents and roles.",
       "reason": "Erebus enables privacy in autonomous agent transactions with novel encrypted negotiation.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "vinss",
-    "name": "VINSS",
-    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/DXJLabs/vinss",
-    "demo_url": "https://vinss-nu.vercel.app/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-01",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T07:44:14Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "ntfound-dev",
-        "name": "ntfound-dev",
-        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
-      },
-      {
-        "login": "DXJLabs",
-        "name": "DXJ Labs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21"
-    ],
-    "head_sha": "855fa54eb6e45c5a7cf1d148b7246595d7777376",
-    "readme_hash": "709363b44ceb8140",
-    "desc_v6": true,
-    "churn_pct": 2.5,
-    "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
-    "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
-    "latest_push": "Fixed rekber payment proof and synchronized chat functionality.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 328,
-    "deletions": 159,
-    "sprint": {
-      "pushes": 100,
-      "additions": 13498,
-      "deletions": 4139,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "creates a private deal room for encrypted negotiations and offers, not typical in this domain.",
-      "why_complex": "includes multiple Cairo helper contracts for messaging, escrow, and requires event decryption via an indexer.",
-      "reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
@@ -661,7 +991,6 @@
     "head_sha": "58f01af18be462f379e854e39fc0b80de3494f49",
     "readme_hash": "81f00d5066a22704",
     "desc_v6": true,
-    "churn_pct": 58,
     "summary": "Shielded allocation for grants, bounties, and payouts on Starknet.",
     "description_long": "Cloakra enables secret capital distribution for contributions, grants, and bug bounties, concealing details like recipient identities and amounts in the STRK20 Privacy Pool. It includes modules for atomic splits of funds (StealthSplit), anonymous bounty payouts (GhostBounty), and shielded grant disbursements (StealthGrant), all built on Starknet using WalletAccountV6 for executing actions without server-side key storage.",
     "latest_push": "Added the self-verifying proof panel and CSV payroll import functionality.",
@@ -669,6 +998,7 @@
     "has_readme": true,
     "additions": 1706,
     "deletions": 49,
+    "churn_pct": 58,
     "sprint": {
       "pushes": 15,
       "additions": 8720,
@@ -684,72 +1014,6 @@
       "facts_v2": true
     },
     "star_evidence": ""
-  },
-  {
-    "slug": "xence",
-    "name": "Xence",
-    "one_liner": "Proof you were right, before it happened - seal a probabilistic forecast, bond it privately through the STRK20 pool, and let the chain score your calibration. Public record, invisible position.",
-    "category": "Infra",
-    "repo_url": "https://github.com/AustinChris1/xence",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T07:00:42Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "AustinChris1",
-        "name": "AustinChris1",
-        "avatar_url": "https://avatars.githubusercontent.com/u/87124517?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-21"
-    ],
-    "head_sha": "7263a6527b448ebdf9b7c8a06eafd178f2d6415b",
-    "readme_hash": "02a6e416be7d0abe",
-    "desc_v6": true,
-    "summary": "A private, stake-backed reputation layer for foresight and accountability.",
-    "description_long": "Xence allows users to make probabilistic forecasts that are privately backed by stakes hidden in the STRK20 privacy pool. It records the commitment publicly, while ensuring the underlying position and stake amounts remain confidential, scoring users on their forecasting accuracy using Brier scores. Built using Cairo and various web technologies, it integrates with the Starknet Wallet API to maintain user privacy and facilitate secure transactions.",
-    "latest_push": "Fixed external-state handling, added deployment script, and documentation.",
-    "tooling": [
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 5986,
-    "deletions": 60,
-    "churn_pct": 100,
-    "sprint": {
-      "pushes": 5,
-      "additions": 15834,
-      "deletions": 60,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "chaoskeyplus-appbuild",
@@ -2053,67 +2317,6 @@
       "reason": "Quietline does not present a novel application of privacy technology in its current state.",
       "facts_v2": true
     },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "kese",
-    "name": "Kese",
-    "one_liner": "Private money for AI agents: a policy-guarded MCP wallet on the STRK20 pool - private payments within hard limits, Telegram human-approval, claim-link escrow for unregistered recipients, and viewing-key audit reports.",
-    "category": "Payments",
-    "repo_url": "https://github.com/ahmetenesdur/kese",
-    "demo_url": "TODO_public_demo_url",
-    "demo_video": "TODO_3min_video_url",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": true,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-20T22:45:37Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "ahmetenesdur",
-        "name": "Enes",
-        "avatar_url": "https://avatars.githubusercontent.com/u/70810472?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-20"
-    ],
-    "head_sha": "88d9c0de153cfd9528681b68376f64c5b07f73c8",
-    "readme_hash": "be03f84a768b1ef0",
-    "desc_v6": true,
-    "summary": "Private spending accounts for AI agents with policy controls and audit trails.",
-    "description_long": "Kese provides AI agents with a spending account that enforces policy guardrails on transactions, allowing private payments through the STRK20 privacy pool. It features a policy engine for approval and denial, idempotency to prevent double payments, and viewing-key reports for owners, enabling them to track spending without compromising privacy. The system includes an escrow contract for payments to unregistered recipients and management tools for transaction limits and compliance.",
-    "latest_push": "Added documentation and scripts for the strk20 privacy integration.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 960,
-    "deletions": 13,
-    "churn_pct": 100,
-    "sprint": {
-      "pushes": 3,
-      "additions": 1616,
-      "deletions": 13,
-      "computed": 2
-    },
-    "assessment": null,
     "star_evidence": "Cairo in the repository"
   },
   {
@@ -6308,69 +6511,6 @@
     },
     "assessment": null,
     "star_evidence": ""
-  },
-  {
-    "slug": "one-way",
-    "name": "OneWay",
-    "one_liner": "A one-way door for any ERC-20. Get paid without sharing a wallet, or leave a known wallet and exit on another chain.",
-    "category": "Payments",
-    "repo_url": "https://github.com/d4m014/one-way",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "d4m014",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-19T11:26:30Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "d4m014",
-        "name": "d4m014",
-        "avatar_url": "https://avatars.githubusercontent.com/u/271264252?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19"
-    ],
-    "head_sha": "b4f396b171c4dd5fe33e01302cb3b0305c5c68d6",
-    "readme_hash": "d6e46ace8afaa189",
-    "desc_v6": true,
-    "summary": "A one-way door for ERC-20 tokens that enables private transfers and anonymous payments.",
-    "description_long": "OneWay allows users to get paid anonymously via a ghost address that does not reveal their identity. Users can also transfer funds from a known wallet to a private balance, and later exit to a fresh address on the same chain or another. The system is built using EVM-compatible contracts and a privacy layer, with security provided by a unique commitment derived from the user's signature.",
-    "latest_push": "Fixed ghost generation and recorded the Sepolia factory.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 97,
-    "deletions": 31,
-    "churn_pct": 20.8,
-    "sprint": {
-      "pushes": 3,
-      "additions": 4457,
-      "deletions": 90,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "cloakpay",
