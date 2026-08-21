@@ -21,7 +21,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-21T11:32:20Z",
+    "pushed_at": "2026-08-21T11:37:53Z",
     "stars": 0,
     "builders": [
       {
@@ -35,20 +35,20 @@
         "family": "Claude",
         "name": "Claude Opus 5",
         "avatar_url": "",
-        "commits": 34
+        "commits": 35
       }
     ],
     "active_days": [
       "2026-08-20",
       "2026-08-21"
     ],
-    "head_sha": "f8a9a85104f3393785229ee6e8f63e92250f8f6d",
+    "head_sha": "ec0c6175089049452dac20c0500b5302cc062bab",
     "readme_hash": "060b2b31778ec201",
     "desc_v6": true,
-    "churn_pct": 25.6,
+    "churn_pct": 1.8,
     "summary": "A policy-guarded spending account for AI agents on Starknet's STRK20 privacy pool.",
     "description_long": "Kese enables AI agents to manage private transactions with spending limits and human approval. It features a policy engine to enforce transaction caps, recipient allows, and accountability through viewing-key reports. Built with TypeScript and Cairo, it integrates with the STRK20 privacy pool, utilizing an escrow-claim contract to handle payments while ensuring user privacy and transaction accountability.",
-    "latest_push": "Added owner view of balances, limits, and activity to the dashboard.",
+    "latest_push": "Added a command to stand up our own prover for Gate G1.",
     "tooling": [
       {
         "label": "Privacy SDK",
@@ -82,11 +82,11 @@
       }
     ],
     "has_readme": true,
-    "additions": 2520,
-    "deletions": 242,
+    "additions": 192,
+    "deletions": 1,
     "sprint": {
-      "pushes": 37,
-      "additions": 17620,
+      "pushes": 38,
+      "additions": 17811,
       "deletions": 197,
       "computed": 2
     },
@@ -197,7 +197,7 @@
       "mainnet": true
     },
     "status": "building",
-    "pushed_at": "2026-08-21T11:32:10Z",
+    "pushed_at": "2026-08-21T11:36:29Z",
     "stars": 0,
     "builders": [
       {
@@ -213,13 +213,13 @@
       "2026-08-20",
       "2026-08-21"
     ],
-    "head_sha": "cdebfbf6005c7593a29eaf8e88f63c635d0c4c24",
+    "head_sha": "fccab2c8222075e375a99c811d278fe5ea50dc0f",
     "readme_hash": "93028ec0e7477992",
     "desc_v6": true,
-    "churn_pct": 2.5,
+    "churn_pct": 0.2,
     "summary": "A private prediction market with public odds and anonymous bettors.",
     "description_long": "Doom is a private prediction market that allows users to place bets while hiding their identities. It consists of the `DoomMarketV2` contract for managing the market and bets, and the `DoomDecision` contract serving as a governance layer for decision-making through conditional markets. It enforces anonymity through an innovative approach, where the bet amounts and current odds are public while bettor identities are masked, thus eliminating manipulation typically associated with visible betting.",
-    "latest_push": "Changed the board to open with a statement instead of a stats row.",
+    "latest_push": "Added a single hero image for the brand art.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -258,11 +258,11 @@
       }
     ],
     "has_readme": true,
-    "additions": 157,
-    "deletions": 17,
+    "additions": 16,
+    "deletions": 1,
     "sprint": {
-      "pushes": 38,
-      "additions": 9248,
+      "pushes": 39,
+      "additions": 9263,
       "deletions": 47,
       "computed": 2
     },
@@ -315,7 +315,6 @@
     "head_sha": "cb6cbdbf2b2345931f8d00eb6899d579f1434231",
     "readme_hash": "44b90590f7a90743",
     "desc_v6": true,
-    "churn_pct": 9.1,
     "summary": "A tool for calculating and executing private positions in DeFi with fee-aware tranche scheduling.",
     "description_long": "Rhizome computes the cost of unlinkability in transactions within the STRK20 privacy pool and executes the necessary actions to maintain privacy. It reads real-time fees and transaction history, scores amounts to avoid distinctive patterns, and schedules transactions to enhance privacy through its own anonymizer contract, facilitating multiple indistinguishable deposits. Key contract functionalities include the mechanism for fee collection and transaction handling, reflecting detailed insights into the underlying pool's operations.",
     "latest_push": "Locked vault leg to proven transfer and modified execution logic.",
@@ -349,6 +348,7 @@
     "has_readme": true,
     "additions": 358,
     "deletions": 141,
+    "churn_pct": 9.1,
     "sprint": {
       "pushes": 36,
       "additions": 9280,
@@ -399,7 +399,6 @@
     "head_sha": "993e83718fed0c0562493723adc4b11f46999838",
     "readme_hash": "eb6537785dabf325",
     "desc_v6": true,
-    "churn_pct": 100,
     "summary": "Confidential token allocation with public verification and private beneficiary details.",
     "description_long": "Sevrin is a confidential token-allocation infrastructure that allows token issuers to prove aggregate supply and unlock schedules while maintaining beneficiary privacy. Built with two Cairo contracts, `SevrinFloatVault` manages token restrictions and schedules, while `SevrinClaimAdapter` links valid claims to STRK20 pools. The project includes a web application and API for managing allocations and securely delivering encrypted claim links.",
     "latest_push": "Added private allocation issuance and claim platform functionality.",
@@ -413,6 +412,7 @@
     "has_readme": true,
     "additions": 5180,
     "deletions": 1251,
+    "churn_pct": 100,
     "sprint": {
       "pushes": 4,
       "additions": 14724,
@@ -421,6 +421,82 @@
     },
     "assessment": null,
     "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "cipherbill",
+    "name": "CipherBill",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/Nitish-1303/CipherBill",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-21T11:16:26Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Nitish-1303",
+        "name": "Nitish-1303",
+        "avatar_url": "https://avatars.githubusercontent.com/u/141549775?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-21"
+    ],
+    "head_sha": "589d2e324aa50c533e763eecabab04322813e8fd",
+    "readme_hash": "e60c224714f2263b",
+    "desc_v6": true,
+    "churn_pct": 100,
+    "summary": "Privacy-first invoicing and settlement for independent workers and global teams.",
+    "description_long": "ShadowPay AI allows independent workers and teams to issue invoices and settle payments privately using STRK20 shielded balances. It integrates with Starknet and uses a Next.js front end alongside the STRK20 Privacy SDK for secure transactions. Users can create invoices, connect their Starknet wallet, and export selective financial evidence without exposing their complete financial graph.",
+    "latest_push": "Created the initial project structure and added basic files.",
+    "tooling": [
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 6589,
+    "deletions": 0,
+    "sprint": {
+      "pushes": 1,
+      "additions": 6589,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
   },
   {
     "slug": "strk20-privacy-wallet",
@@ -466,7 +542,6 @@
     "head_sha": "c1d693a1b6967267b123863a2836dc4399e507f1",
     "readme_hash": "cf1e35452b1d6053",
     "desc_v6": true,
-    "churn_pct": 0.2,
     "summary": "A privacy-first DeFi platform with stealth payments and confidential perpetual futures.",
     "description_long": "ORRANGE is a decentralized financial platform focusing on privacy built on Starknet. It features a STRK20 privacy wallet for confidential token transactions and PEL private perpetual futures for trading with hidden parameters. The platform includes an automated keeper system, a DEX aggregator for live swaps, and is implemented using Starknet Cairo smart contracts, ensuring secure and efficient execution of its features.",
     "latest_push": "Implemented the authoritative real OPEN pipeline and on-chain Garaga Groth16 verification.",
@@ -515,6 +590,7 @@
     "has_readme": true,
     "additions": 338,
     "deletions": 46,
+    "churn_pct": 0.2,
     "sprint": {
       "pushes": 68,
       "additions": 20115,
@@ -576,7 +652,6 @@
     "head_sha": "01acfaf82301289f2d02ff2d05df5ae14dbb3a63",
     "readme_hash": "e768f9513c994d1a",
     "desc_v6": true,
-    "churn_pct": 25.6,
     "summary": "Browse the web anonymously and make private payments for AI agents.",
     "description_long": "Tony Strk is a remote MCP server that allows AI agents to browse the web and make payments without revealing the user's identity. It integrates a cloud headless browser operating on Tor for anonymous browsing and a wallet that uses shielded STRK20 transactions to ensure payment privacy. The system features distinct workers for browsing and payment, ensuring no single party can link both actions back to the user, maintaining privacy through a series of independent channels.",
     "latest_push": "Drafted the paywall anonymizer contract and added relevant tests.",
@@ -610,6 +685,7 @@
     "has_readme": true,
     "additions": 583,
     "deletions": 0,
+    "churn_pct": 25.6,
     "sprint": {
       "pushes": 27,
       "additions": 16822,
