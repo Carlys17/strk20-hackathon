@@ -21,7 +21,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-22T14:33:59Z",
+    "pushed_at": "2026-08-22T14:45:11Z",
     "stars": 0,
     "builders": [
       {
@@ -45,7 +45,6 @@
     "head_sha": "f41c08d75bb4af3ea52304eccdb7989c3c17b4ab",
     "readme_hash": "df3ba2d8be71fc10",
     "desc_v6": true,
-    "churn_pct": 4.8,
     "summary": "Privacy-first invoicing and settlement for independent workers and teams.",
     "description_long": "CipherBill enables users to connect a Starknet wallet, shield STRK, create invoices or payment requests, and settle through private transfers. It is built with Next.js, React, TypeScript, and the Starknet.js Wallet API, integrating the STRK20 privacy pool. The application supports selective evidence exports, allowing users to share metadata without exposing complete financial details.",
     "latest_push": "Added the zero-knowledge vendor reputation engine.",
@@ -79,6 +78,7 @@
     "has_readme": true,
     "additions": 876,
     "deletions": 0,
+    "churn_pct": 4.8,
     "sprint": {
       "pushes": 13,
       "additions": 25907,
@@ -87,6 +87,74 @@
     },
     "assessment": null,
     "star_evidence": ""
+  },
+  {
+    "slug": "gavel",
+    "name": "gavel",
+    "one_liner": "Sealed-bid auctions where the bids are actually sealed - Vickrey, first-price and multi-unit auctions on the STRK20 privacy pool",
+    "category": "DeFi",
+    "repo_url": "https://github.com/mohdafzal11/gavel",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-08",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T14:40:50Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "wagmi-together",
+        "name": "Mohd Afzal",
+        "avatar_url": "https://avatars.githubusercontent.com/u/257300282?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 2
+      }
+    ],
+    "active_days": [
+      "2026-08-22"
+    ],
+    "head_sha": "711c03efa89515b67ddd809d425b9d40ed87091c",
+    "readme_hash": "e62dee1de78bec8f",
+    "desc_v6": true,
+    "churn_pct": 44.7,
+    "summary": "Conduct sealed-bid auctions with true privacy and no trusted parties.",
+    "description_long": "Gavel implements Vickrey sealed-bid auctions on Starknet, where bids are shielded and private. Bids are placed through the STRK20 privacy pool, using a commitment scheme that escrow real funds upfront, ensuring that the identity and amounts of bids remain confidential until the reveal phase. The system includes contracts for managing commitments, revealing bids, and settling the auction, while operating safely and reliably without any trust in third parties.",
+    "latest_push": "Added auction tests and a mock ERC-20 fixture.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 492,
+    "deletions": 0,
+    "sprint": {
+      "pushes": 2,
+      "additions": 1401,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "vinss",
@@ -136,7 +204,6 @@
     "head_sha": "32980c4ecf9f0d6c1672a145cad1f53231901086",
     "readme_hash": "709363b44ceb8140",
     "desc_v6": true,
-    "churn_pct": 24.4,
     "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
     "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
     "latest_push": "Implemented Rekber V2 settlement and NFT certificate systems.",
@@ -150,6 +217,7 @@
     "has_readme": true,
     "additions": 5364,
     "deletions": 1215,
+    "churn_pct": 24.4,
     "sprint": {
       "pushes": 100,
       "additions": 16533,
@@ -164,74 +232,6 @@
       "reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
       "facts_v2": true
     },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "gavel",
-    "name": "gavel",
-    "one_liner": "Sealed-bid auctions where the bids are actually sealed - Vickrey, first-price and multi-unit auctions on the STRK20 privacy pool",
-    "category": "DeFi",
-    "repo_url": "https://github.com/mohdafzal11/gavel",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-08",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-22T14:24:14Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "wagmi-together",
-        "name": "Mohd Afzal",
-        "avatar_url": "https://avatars.githubusercontent.com/u/257300282?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 1
-      }
-    ],
-    "active_days": [
-      "2026-08-22"
-    ],
-    "head_sha": "356de3b133f1da63c2faad04825568741a8932d1",
-    "readme_hash": "e62dee1de78bec8f",
-    "desc_v6": true,
-    "churn_pct": 100,
-    "summary": "Conduct sealed-bid auctions with true privacy and no trusted parties.",
-    "description_long": "Gavel implements Vickrey sealed-bid auctions on Starknet, where bids are shielded and private. Bids are placed through the STRK20 privacy pool, using a commitment scheme that escrow real funds upfront, ensuring that the identity and amounts of bids remain confidential until the reveal phase. The system includes contracts for managing commitments, revealing bids, and settling the auction, while operating safely and reliably without any trust in third parties.",
-    "latest_push": "Implemented a sealed-bid auction anonymizer for the STRK20 privacy pool.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 909,
-    "deletions": 0,
-    "sprint": {
-      "pushes": 1,
-      "additions": 909,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": null,
     "star_evidence": "Cairo in the repository"
   },
   {
