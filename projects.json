@@ -1,5 +1,335 @@
 [
   {
+    "slug": "vinss",
+    "name": "VINSS",
+    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/DXJLabs/vinss",
+    "demo_url": "https://vinss-nu.vercel.app/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-01",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T02:17:23Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ntfound-dev",
+        "name": "ntfound-dev",
+        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
+      },
+      {
+        "login": "DXJLabs",
+        "name": "DXJ Labs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-22"
+    ],
+    "head_sha": "bc011f5f34f00839f8b0dcca25ac929ac24d82f3",
+    "readme_hash": "709363b44ceb8140",
+    "desc_v6": true,
+    "churn_pct": 4.7,
+    "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
+    "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
+    "latest_push": "Refactored the deal room UX for clarity in multiple components.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 738,
+    "deletions": 319,
+    "sprint": {
+      "pushes": 100,
+      "additions": 15834,
+      "deletions": 2028,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "creates a private deal room for encrypted negotiations and offers, not typical in this domain.",
+      "why_complex": "includes multiple Cairo helper contracts for messaging, escrow, and requires event decryption via an indexer.",
+      "reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "nyalthe",
+    "name": "nyalthe",
+    "one_liner": "Privacy-preserving parametric claims on Starknet using STRK20",
+    "category": "Other",
+    "repo_url": "https://github.com/mystiquemide/nyalthe",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x0265de2b20e459f1de5464a71fe9a73f436e5c3874fa9ae46bdc64d0bb779846",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T02:04:13Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "mystiquemide",
+        "name": "MystiqueMide",
+        "avatar_url": "https://avatars.githubusercontent.com/u/176629124?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-21",
+      "2026-08-22"
+    ],
+    "head_sha": "326904bbe0d6886154a00a787a6eedeff806d7ab",
+    "readme_hash": "5936785fa9e94c4d",
+    "desc_v6": true,
+    "churn_pct": 3.7,
+    "summary": "A privacy-preserving claims rail for public verification of private payouts.",
+    "description_long": "Nyalthe allows for the creation of a funded event policy that settles private claimant payouts while enabling public verification of the policy and the transactions involved. The project consists of contracts that manage the policy creation, funding reserves, event acceptance, claim authorization, and private settlement. It is currently in early public build, with ongoing implementation and testing tracked in the repository.",
+    "latest_push": "Added reproducible Cairo deployment tooling and recorded Nyalthe Sepolia deployment.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 67,
+    "deletions": 1,
+    "sprint": {
+      "pushes": 14,
+      "additions": 4665,
+      "deletions": 1,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "1 contract deployed, Cairo in the repository"
+  },
+  {
+    "slug": "crosslink",
+    "name": "Crosslink",
+    "one_liner": "Unlinkable cross-chain payouts: fund a shielded balance on Starknet, pay anyone on any chain, and neither the public nor the recipient can trace it back to you.",
+    "category": "Payments",
+    "repo_url": "https://github.com/CaptainDiv/crosslink",
+    "demo_url": "https://captaindiv.github.io/crosslink/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-22",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T01:28:32Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "CaptainDiv",
+        "name": "Captain",
+        "avatar_url": "https://avatars.githubusercontent.com/u/207330336?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Sonnet 5",
+        "avatar_url": "",
+        "commits": 12
+      }
+    ],
+    "active_days": [
+      "2026-08-19",
+      "2026-08-21",
+      "2026-08-22"
+    ],
+    "head_sha": "367a20fc49cea69c80212475ae7fbfb2eb47bb8a",
+    "readme_hash": "a2cae4fa4741c3e1",
+    "desc_v6": true,
+    "churn_pct": 1.4,
+    "summary": "Unlinkable cross-chain payouts and a Linkability Meter for privacy assurance.",
+    "description_long": "Crosslink allows users to fund a shielded balance on STRK20 and pay someone else, enabling unlinkable payouts across chains. The Linkability Meter evaluates pending payouts based on amount uniqueness, timing correlation, and pool depth, blocking transactions that do not preserve privacy. The project includes components like `starkware-libs/privacy-bridge` and is built for the STRK20 Private Sprint.",
+    "latest_push": "Wired in real mainnet transactions for registration, shield, and transfer.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 31,
+    "deletions": 8,
+    "sprint": {
+      "pushes": 23,
+      "additions": 12004,
+      "deletions": 3,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
+    "slug": "cloakra",
+    "name": "Cloakra",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/mrnetwork0001/Cloakra",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Cloakra does not exemplify innovation or complexity in its current state.",
+    "contracts": [],
+    "transactions": [
+      {
+        "hash": "0xcfc2e5fe5e2d5b56c7ba0c7300700b54269db0ac47b2d2a5c4b4bb7b6b1b93",
+        "ok": true,
+        "pool": true,
+        "mine": null
+      },
+      {
+        "hash": "0x3f4819ae9bf1db30cf6dca75128bfe7b68d767f25249705e8a3d77aff1a3900",
+        "ok": true,
+        "pool": true,
+        "mine": null
+      },
+      {
+        "hash": "0x39ca2ea1b07036a2cc30931fd0c23139fc54134529000b945b94d8a18b82463",
+        "ok": true,
+        "pool": true,
+        "mine": null
+      }
+    ],
+    "verified_txs": 3,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": true
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T01:21:50Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "mrnetwork0001",
+        "name": "mrnetwork0001",
+        "avatar_url": "https://avatars.githubusercontent.com/u/255576652?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-22"
+    ],
+    "head_sha": "911e1ea5e2204b2d2b32066e91069dd9da837156",
+    "readme_hash": "81f00d5066a22704",
+    "desc_v6": true,
+    "churn_pct": 2.7,
+    "summary": "Shielded allocation for grants, bounties, and payouts on Starknet.",
+    "description_long": "Cloakra enables secret capital distribution for contributions, grants, and bug bounties, concealing details like recipient identities and amounts in the STRK20 Privacy Pool. It includes modules for atomic splits of funds (StealthSplit), anonymous bounty payouts (GhostBounty), and shielded grant disbursements (StealthGrant), all built on Starknet using WalletAccountV6 for executing actions without server-side key storage.",
+    "latest_push": "Added the error boundary component and updated deployment documentation.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 80,
+    "deletions": 2,
+    "sprint": {
+      "pushes": 16,
+      "additions": 8798,
+      "deletions": 343,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project merely applies privacy to grants and bounties, which is a conventional use.",
+      "why_complex": "No actual Cairo contracts have been developed or deployed yet.",
+      "reason": "Cloakra does not exemplify innovation or complexity in its current state.",
+      "facts_v2": true
+    },
+    "star_evidence": ""
+  },
+  {
     "slug": "lantern",
     "name": "Lantern",
     "one_liner": "Sealed crowdfunding on Starknet: public goal and verifiable total, cryptographically private donors.",
@@ -58,7 +388,6 @@
     "head_sha": "4b04a6213f343ddff3cbc0693ab7e6a7d888eb55",
     "readme_hash": "6b45249924967d67",
     "desc_v6": true,
-    "churn_pct": 1.6,
     "summary": "Private crowdfunding with public goals and anonymous donors.",
     "description_long": "Lantern is a sealed fundraiser protocol that displays the funding goal, total raised, number of backers, and time remaining without revealing donor identities or amounts. It consists of a Lantern contract for managing campaign states and tallying donations, a frontend built with Next.js that allows users to interact without needing a wallet, and relies entirely on on-chain data with no backend involved.",
     "latest_push": "Fixed the wallet prompt to show only once per donation.",
@@ -77,6 +406,7 @@
     "has_readme": true,
     "additions": 17,
     "deletions": 31,
+    "churn_pct": 1.6,
     "sprint": {
       "pushes": 12,
       "additions": 15885,
@@ -232,75 +562,6 @@
     "star_evidence": "Cairo in the repository"
   },
   {
-    "slug": "crosslink",
-    "name": "Crosslink",
-    "one_liner": "Unlinkable cross-chain payouts: fund a shielded balance on Starknet, pay anyone on any chain, and neither the public nor the recipient can trace it back to you.",
-    "category": "Payments",
-    "repo_url": "https://github.com/CaptainDiv/crosslink",
-    "demo_url": "https://captaindiv.github.io/crosslink/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-22",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T23:27:57Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "CaptainDiv",
-        "name": "Captain",
-        "avatar_url": "https://avatars.githubusercontent.com/u/207330336?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Sonnet 5",
-        "avatar_url": "",
-        "commits": 11
-      }
-    ],
-    "active_days": [
-      "2026-08-19",
-      "2026-08-21"
-    ],
-    "head_sha": "6f0e8e5a76028350557339c29039c1be8ebafa78",
-    "readme_hash": "a2cae4fa4741c3e1",
-    "desc_v6": true,
-    "summary": "Unlinkable cross-chain payouts and a Linkability Meter for privacy assurance.",
-    "description_long": "Crosslink allows users to fund a shielded balance on STRK20 and pay someone else, enabling unlinkable payouts across chains. The Linkability Meter evaluates pending payouts based on amount uniqueness, timing correlation, and pool depth, blocking transactions that do not preserve privacy. The project includes components like `starkware-libs/privacy-bridge` and is built for the STRK20 Private Sprint.",
-    "latest_push": "Fixed the explicit Register step to prevent free registration calls.",
-    "tooling": [
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 127,
-    "deletions": 8,
-    "churn_pct": 4.8,
-    "sprint": {
-      "pushes": 22,
-      "additions": 11980,
-      "deletions": 2,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
-  },
-  {
     "slug": "aegis-rescue",
     "name": "Aegis Rescue",
     "one_liner": "Whitehat rescue bot: sweeps exposed on-chain funds into the STRK20 shielded pool before attackers can, returns them to verified GitHub owners.",
@@ -434,92 +695,6 @@
       "facts_v2": true
     },
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "nyalthe",
-    "name": "nyalthe",
-    "one_liner": "Privacy-preserving parametric claims on Starknet using STRK20",
-    "category": "Other",
-    "repo_url": "https://github.com/mystiquemide/nyalthe",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T22:45:24Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "mystiquemide",
-        "name": "MystiqueMide",
-        "avatar_url": "https://avatars.githubusercontent.com/u/176629124?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-21"
-    ],
-    "head_sha": "f47ef194b0f0df5ce8e6db6eccd4d9c1b59b9a82",
-    "readme_hash": "5936785fa9e94c4d",
-    "desc_v6": true,
-    "summary": "A privacy-preserving claims rail for public verification of private payouts.",
-    "description_long": "Nyalthe allows for the creation of a funded event policy that settles private claimant payouts while enabling public verification of the policy and the transactions involved. The project consists of contracts that manage the policy creation, funding reserves, event acceptance, claim authorization, and private settlement. It is currently in early public build, with ongoing implementation and testing tracked in the repository.",
-    "latest_push": "Required policy funding before event acceptance and tested STRK20 authorization.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 151,
-    "deletions": 15,
-    "churn_pct": 9.1,
-    "sprint": {
-      "pushes": 12,
-      "additions": 4598,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "ghostline",
@@ -2414,84 +2589,6 @@
     "star_evidence": "14 contracts deployed on mainnet, Cairo in the repository"
   },
   {
-    "slug": "vinss",
-    "name": "VINSS",
-    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/DXJLabs/vinss",
-    "demo_url": "https://vinss-nu.vercel.app/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-01",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T16:44:36Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "ntfound-dev",
-        "name": "ntfound-dev",
-        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
-      },
-      {
-        "login": "DXJLabs",
-        "name": "DXJ Labs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21"
-    ],
-    "head_sha": "28cd445e14e5b919e8984cbaa65320aa9469dac8",
-    "readme_hash": "709363b44ceb8140",
-    "desc_v6": true,
-    "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
-    "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
-    "latest_push": "Refined deal room messaging UX across multiple components.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 2,
-    "deletions": 92,
-    "churn_pct": 0.4,
-    "sprint": {
-      "pushes": 100,
-      "additions": 15834,
-      "deletions": 2028,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "creates a private deal room for encrypted negotiations and offers, not typical in this domain.",
-      "why_complex": "includes multiple Cairo helper contracts for messaging, escrow, and requires event decryption via an indexer.",
-      "reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
     "slug": "strk20-indexer",
     "name": "strk20-indexer",
     "one_liner": "Open, self-hostable note indexer and explorer for the STRK20 pool. Wallets sync without handing over a viewing key.",
@@ -4106,94 +4203,6 @@
       "why_innovative": "The project applies privacy to buildings where financial actions are taken, which is a standard idea.",
       "why_complex": "There are no deployed contracts or advanced Cairo code provided at this stage.",
       "reason": "The concept exists but lacks implemented complexity or innovative privacy applications.",
-      "facts_v2": true
-    },
-    "star_evidence": ""
-  },
-  {
-    "slug": "cloakra",
-    "name": "Cloakra",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/mrnetwork0001/Cloakra",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Cloakra does not exemplify innovation or complexity in its current state.",
-    "contracts": [],
-    "transactions": [
-      {
-        "hash": "0xcfc2e5fe5e2d5b56c7ba0c7300700b54269db0ac47b2d2a5c4b4bb7b6b1b93",
-        "ok": true,
-        "pool": true,
-        "mine": null
-      },
-      {
-        "hash": "0x3f4819ae9bf1db30cf6dca75128bfe7b68d767f25249705e8a3d77aff1a3900",
-        "ok": true,
-        "pool": true,
-        "mine": null
-      },
-      {
-        "hash": "0x39ca2ea1b07036a2cc30931fd0c23139fc54134529000b945b94d8a18b82463",
-        "ok": true,
-        "pool": true,
-        "mine": null
-      }
-    ],
-    "verified_txs": 3,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": true
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T07:42:42Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "mrnetwork0001",
-        "name": "mrnetwork0001",
-        "avatar_url": "https://avatars.githubusercontent.com/u/255576652?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21"
-    ],
-    "head_sha": "58f01af18be462f379e854e39fc0b80de3494f49",
-    "readme_hash": "81f00d5066a22704",
-    "desc_v6": true,
-    "summary": "Shielded allocation for grants, bounties, and payouts on Starknet.",
-    "description_long": "Cloakra enables secret capital distribution for contributions, grants, and bug bounties, concealing details like recipient identities and amounts in the STRK20 Privacy Pool. It includes modules for atomic splits of funds (StealthSplit), anonymous bounty payouts (GhostBounty), and shielded grant disbursements (StealthGrant), all built on Starknet using WalletAccountV6 for executing actions without server-side key storage.",
-    "latest_push": "Added the self-verifying proof panel and CSV payroll import functionality.",
-    "tooling": [],
-    "has_readme": true,
-    "additions": 1706,
-    "deletions": 49,
-    "churn_pct": 58,
-    "sprint": {
-      "pushes": 15,
-      "additions": 8720,
-      "deletions": 343,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "The project merely applies privacy to grants and bounties, which is a conventional use.",
-      "why_complex": "No actual Cairo contracts have been developed or deployed yet.",
-      "reason": "Cloakra does not exemplify innovation or complexity in its current state.",
       "facts_v2": true
     },
     "star_evidence": ""
