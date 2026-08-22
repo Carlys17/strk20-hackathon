@@ -21,7 +21,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-22T14:45:11Z",
+    "pushed_at": "2026-08-22T15:18:25Z",
     "stars": 0,
     "builders": [
       {
@@ -42,12 +42,13 @@
       "2026-08-21",
       "2026-08-22"
     ],
-    "head_sha": "f41c08d75bb4af3ea52304eccdb7989c3c17b4ab",
+    "head_sha": "d42d88a67407e207d784c0cf7be6f3e23b2766d4",
     "readme_hash": "df3ba2d8be71fc10",
     "desc_v6": true,
+    "churn_pct": 7.7,
     "summary": "Privacy-first invoicing and settlement for independent workers and teams.",
     "description_long": "CipherBill enables users to connect a Starknet wallet, shield STRK, create invoices or payment requests, and settle through private transfers. It is built with Next.js, React, TypeScript, and the Starknet.js Wallet API, integrating the STRK20 privacy pool. The application supports selective evidence exports, allowing users to share metadata without exposing complete financial details.",
-    "latest_push": "Added the zero-knowledge vendor reputation engine.",
+    "latest_push": "Added ephemeral invoices and subscription tiers features.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -76,12 +77,11 @@
       }
     ],
     "has_readme": true,
-    "additions": 876,
-    "deletions": 0,
-    "churn_pct": 4.8,
+    "additions": 1539,
+    "deletions": 23,
     "sprint": {
-      "pushes": 13,
-      "additions": 25907,
+      "pushes": 15,
+      "additions": 26142,
       "deletions": 44,
       "computed": 2
     },
@@ -110,12 +110,17 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-22T14:40:50Z",
+    "pushed_at": "2026-08-22T15:15:47Z",
     "stars": 0,
     "builders": [
       {
-        "login": "wagmi-together",
+        "login": "mohdafzal11",
         "name": "Mohd Afzal",
+        "avatar_url": "https://avatars.githubusercontent.com/u/78993009?v=4"
+      },
+      {
+        "login": "wagmi-together",
+        "name": "wagmi-together",
         "avatar_url": "https://avatars.githubusercontent.com/u/257300282?v=4"
       }
     ],
@@ -124,19 +129,93 @@
         "family": "Claude",
         "name": "Claude Opus 5",
         "avatar_url": "",
-        "commits": 2
+        "commits": 4
       }
     ],
     "active_days": [
       "2026-08-22"
     ],
-    "head_sha": "711c03efa89515b67ddd809d425b9d40ed87091c",
-    "readme_hash": "e62dee1de78bec8f",
+    "head_sha": "46655676206f757d3c597fd86225241c80c12305",
+    "readme_hash": "02c59a393126afd0",
     "desc_v6": true,
-    "churn_pct": 44.7,
-    "summary": "Conduct sealed-bid auctions with true privacy and no trusted parties.",
-    "description_long": "Gavel implements Vickrey sealed-bid auctions on Starknet, where bids are shielded and private. Bids are placed through the STRK20 privacy pool, using a commitment scheme that escrow real funds upfront, ensuring that the identity and amounts of bids remain confidential until the reveal phase. The system includes contracts for managing commitments, revealing bids, and settling the auction, while operating safely and reliably without any trust in third parties.",
-    "latest_push": "Added auction tests and a mock ERC-20 fixture.",
+    "churn_pct": 100,
+    "summary": "Conduct sealed-bid auctions with true privacy and no trusted third parties.",
+    "description_long": "Gavel implements Vickrey (second-price sealed-bid) auctions on Starknet, ensuring bids remain confidential using STRK20 encrypted notes. When a user places a bid, the collateral is withdrawn through the privacy pool and a commitment is recorded in a private transaction, preventing even the contract from knowing the bidder's identity. The system allows for only bid amounts to be revealed after the reveal window, while maintaining the anonymity of bidders and the integrity of the auction.",
+    "latest_push": "Added the client integration layer with commitment parity pinned to Cairo.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 2518,
+    "deletions": 5,
+    "sprint": {
+      "pushes": 4,
+      "additions": 4069,
+      "deletions": 8,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "stake-wars",
+    "name": "stake-wars",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/broody/stake-wars",
+    "demo_url": "https://stakewars.gg",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "StakeWars lacks innovative privacy features and engineering depth.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T15:13:29Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "broody",
+        "name": "broody",
+        "avatar_url": "https://avatars.githubusercontent.com/u/610224?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-22"
+    ],
+    "head_sha": "c2b8aa90846851b6e68c5089293139e10ec6e8f7",
+    "readme_hash": "d1539211008af311",
+    "desc_v6": true,
+    "churn_pct": 0.1,
+    "summary": "A persistent strategy game for capturing sectors and battling rivals with delegated STRK.",
+    "description_long": "Stake Wars is a non-custodial strategy game where players use their delegated STRK as FORCE to capture and defend Sectors on the Core. The game combines elements of territory management and strategic challenges without creating a separate game token. It includes a web application built with React, TypeScript, and Vite; a Go API; and contracts written in Cairo and Dojo.",
+    "latest_push": "Fixed autoplay to reset upon user interactions in the UI.",
     "tooling": [
       {
         "label": "Cairo",
@@ -145,15 +224,22 @@
       }
     ],
     "has_readme": true,
-    "additions": 492,
-    "deletions": 0,
+    "additions": 7,
+    "deletions": 6,
     "sprint": {
-      "pushes": 2,
-      "additions": 1401,
-      "deletions": 0,
+      "pushes": 52,
+      "additions": 34680,
+      "deletions": 4097,
       "computed": 2
     },
-    "assessment": null,
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "This project operates as a game without unique private mechanisms.",
+      "why_complex": "There are no deployed contracts or complex Cairo implementations.",
+      "reason": "StakeWars lacks innovative privacy features and engineering depth.",
+      "facts_v2": true
+    },
     "star_evidence": "Cairo in the repository"
   },
   {
@@ -4590,81 +4676,6 @@
     },
     "assessment": null,
     "star_evidence": ""
-  },
-  {
-    "slug": "stake-wars",
-    "name": "stake-wars",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/broody/stake-wars",
-    "demo_url": "https://stakewars.gg",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "StakeWars lacks innovative privacy features and engineering depth.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T12:54:48Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "broody",
-        "name": "broody",
-        "avatar_url": "https://avatars.githubusercontent.com/u/610224?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21"
-    ],
-    "head_sha": "a1c5998c13a03d6da338987e61d1c13a0833d811",
-    "readme_hash": "d1539211008af311",
-    "desc_v6": true,
-    "summary": "A persistent strategy game for capturing sectors and battling rivals with delegated STRK.",
-    "description_long": "Stake Wars is a non-custodial strategy game where players use their delegated STRK as FORCE to capture and defend Sectors on the Core. The game combines elements of territory management and strategic challenges without creating a separate game token. It includes a web application built with React, TypeScript, and Vite; a Go API; and contracts written in Cairo and Dojo.",
-    "latest_push": "Stabilized projection sector rendering and served game from play route.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 407,
-    "deletions": 95,
-    "churn_pct": 2.4,
-    "sprint": {
-      "pushes": 51,
-      "additions": 34755,
-      "deletions": 4091,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "This project operates as a game without unique private mechanisms.",
-      "why_complex": "There are no deployed contracts or complex Cairo implementations.",
-      "reason": "StakeWars lacks innovative privacy features and engineering depth.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "prism",
