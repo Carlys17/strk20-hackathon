@@ -1,5 +1,178 @@
 [
   {
+    "slug": "wotta",
+    "name": "Wotta",
+    "one_liner": "Pay anyone, from any chain, to an @handle or email - and let them receive privately on Starknet.",
+    "category": "Payments",
+    "repo_url": "https://github.com/wurli-sh/wotta-strk",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-09",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T11:55:08Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "wurli-sh",
+        "name": "wurli-sh",
+        "avatar_url": "https://avatars.githubusercontent.com/u/261630289?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Cursor",
+        "name": "Cursor",
+        "avatar_url": "",
+        "commits": 3
+      }
+    ],
+    "active_days": [
+      "2026-08-20",
+      "2026-08-22"
+    ],
+    "head_sha": "a9d96e465b409ecb82467209770414ce86674611",
+    "readme_hash": "",
+    "desc_v6": true,
+    "churn_pct": 10.4,
+    "summary": "Pay anyone from any chain to an @handle or email for private receipt on Starknet.",
+    "description_long": "Send payments to users identified by an @handle or email address. Recipients receive the funds privately on Starknet.",
+    "latest_push": "Added starknet-public quote signing and revised privacy vault UX.",
+    "tooling": [
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": false,
+    "additions": 1166,
+    "deletions": 798,
+    "sprint": {
+      "pushes": 14,
+      "additions": 19811,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "shadowagents",
+    "name": "ShadowAgents",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/mdlog/ShadowAgents",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T11:52:58Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "mdlog",
+        "name": "mdlog",
+        "avatar_url": "https://avatars.githubusercontent.com/u/17427126?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-22"
+    ],
+    "head_sha": "9c593c01d8979b27ed2c463c544f555e432337c3",
+    "readme_hash": "208e5d1a01b72917",
+    "desc_v6": true,
+    "churn_pct": 0.1,
+    "summary": "Manage private payroll for a team with secure, untraceable transactions.",
+    "description_long": "ShadowAgents allows employers to pay multiple team members in a single transaction without revealing details about who was paid or how much. It consists of a privacy-focused plan generator that splits payments into non-round amounts, and an escrow contract, `PayrollEscrow`, to manage fund commitments. Payments are structured so that only the hashes of individual claims reach the public layer, while actual amounts and recipient details remain hidden until they claim their funds.",
+    "latest_push": "Declared npm as the package manager in package.json.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1,
+    "deletions": 1,
+    "sprint": {
+      "pushes": 17,
+      "additions": 5871,
+      "deletions": 56,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
     "slug": "foretell",
     "name": "foretell",
     "one_liner": "Sealed-batch prediction markets on Starknet over the STRK20 privacy pool. Public forecast, private forecaster, verifiable settlement.",
@@ -45,9 +218,9 @@
     "readme_hash": "630f639809146c75",
     "desc_v6": true,
     "churn_pct": 0.3,
-    "summary": "Create private prediction markets with verified outcomes on Starknet.",
-    "description_long": "Foretell enables sealed-batch prediction markets where forecasts are public while trader identities remain private. The project consists of a commitment mechanism, ticket handling, and a market interface built with Cairo, TypeScript, and other tools. Key components include clearing algorithms, a ticket commitment system, and a web app for managing markets and trades, without revealing user identities.",
-    "latest_push": "Scaffolded the Foretell monorepo with Starknet/STRK20 setup.",
+    "summary": "Sealed-batch prediction markets with private forecaster anonymity.",
+    "description_long": "Foretell is a prediction market that publishes public forecasts while maintaining the privacy of individual forecasters. Built on Starknet, it uses a unique market mechanism to quantize both stakes and prices, ensuring that payouts are functions of public parameters while concealing user identities. The project includes smart contracts for market operations, a TypeScript client for pricing, and a web app for user interaction, all stored in a structured repository.",
+    "latest_push": "Scaffolded the Foretell monorepo with Starknet/STRK20 configuration.",
     "tooling": [
       {
         "label": "TypeScript",
@@ -131,7 +304,7 @@
     "churn_pct": 0.4,
     "summary": "Encrypted negotiation and atomic settlement for AI agents.",
     "description_long": "Erebus enables AI agents to negotiate in encrypted channels and settle transactions atomically without revealing the negotiation details. It consists of a reference agent flow running in the browser, using the STRK20 privacy pool to manage encrypted note salts and offering selective disclosure capabilities through viewing keys. The system is structured for agent autonomy, employing Starknet's account abstraction for gasless operations, and focuses on message and relationship privacy.",
-    "latest_push": "Documented definition-of-done for wire v3 in two markdown files.",
+    "latest_push": "Proved definition-of-done 1, 3, and 4 in the wire v3 documentation.",
     "tooling": [
       {
         "label": "Cairo",
@@ -233,9 +406,9 @@
     "readme_hash": "b3c1e710f67894c5",
     "desc_v6": true,
     "churn_pct": 4.9,
-    "summary": "A cross-chain privacy hub that anonymizes transactions with no on-chain links.",
-    "description_long": "Airlock allows users to step into one chain, hold private, and step out to another without creating an on-chain link between the two sides. The project includes an anonymizer in Cairo for denomination bucketing, deployed mainnet contracts, and a live demo that reads real-time data from the pool. It features a public anonymity panel that shows deposit counts and distinct addresses, while also providing a privacy report assessing timing and crowd density in relation to the anonymity set.",
-    "latest_push": "Added functionality to assess crowd authenticity and visualize splits.",
+    "summary": "A cross-chain privacy hub that enables anonymous transfers between blockchains.",
+    "description_long": "Airlock allows users to enter on one chain and exit on another without any on-chain link between the two sides. It features a live demo, a deployed STRK bucketer on mainnet and Sepolia, and a real mainnet round trip for converting STRK into smaller denominations while preserving privacy. The project includes an anonymity panel that reads live data from the mainnet pool, showcasing the distinct addresses and deposits to assess the privacy of transactions.",
+    "latest_push": "Added functionality to verify crowd authenticity and visual representation of splits.",
     "tooling": [
       {
         "label": "Cairo",
@@ -321,7 +494,7 @@
     "churn_pct": 22.1,
     "summary": "Privacy-first invoicing and settlement for independent workers and teams.",
     "description_long": "CipherBill enables users to connect a Starknet wallet, shield STRK, create invoices or payment requests, and settle through private transfers. It is built with Next.js, React, TypeScript, and the Starknet.js Wallet API, integrating the STRK20 privacy pool. The application supports selective evidence exports, allowing users to share metadata without exposing complete financial details.",
-    "latest_push": "Implemented the gasless relayer feature with corresponding tests.",
+    "latest_push": "Implemented gasless relayer functionality in multiple components and tests.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -458,7 +631,7 @@
     "churn_pct": 1.8,
     "summary": "A whitehat rescue bot that sweeps exposed on-chain funds to safety.",
     "description_long": "Aegis monitors public repositories for accidentally leaked private keys and API keys, verifies if they control actual funds, and automatically sweeps those funds to a secure address before they can be exploited. It scans registered projects for sensitive filenames, checks for real balances, derives the Starknet account, deploys if necessary, and conducts sweeping operations entirely automated. Owners prove their identity through GitHub to reclaim their funds, which are transferred through the STRK20 shielded pool for enhanced privacy.",
-    "latest_push": "Implemented pre-checks for pool registration in batch payout processing.",
+    "latest_push": "Added pre-checks for pool registration before processing batch payouts.",
     "tooling": [
       {
         "label": "AVNU",
@@ -514,78 +687,6 @@
       "facts_v2": true
     },
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "wotta",
-    "name": "Wotta",
-    "one_liner": "Pay anyone, from any chain, to an @handle or email - and let them receive privately on Starknet.",
-    "category": "Payments",
-    "repo_url": "https://github.com/wurli-sh/wotta-strk",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-09",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-22T10:49:45Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "wurli-sh",
-        "name": "wurli-sh",
-        "avatar_url": "https://avatars.githubusercontent.com/u/261630289?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-20",
-      "2026-08-22"
-    ],
-    "head_sha": "db003b5fa6ae85cf311905016b29cc440bca0402",
-    "readme_hash": "",
-    "desc_v6": true,
-    "summary": "Pay anyone from any chain to an @handle or email for private receipt on Starknet.",
-    "description_long": "Send payments to users identified by an @handle or email address. Recipients receive the funds privately on Starknet.",
-    "latest_push": "Added Wotta Starknet escrow and CCTP router contracts.",
-    "tooling": [
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": false,
-    "additions": 19155,
-    "deletions": 627,
-    "churn_pct": 100,
-    "sprint": {
-      "pushes": 11,
-      "additions": 19924,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "crosslink",
@@ -6660,99 +6761,6 @@
       "reason": "Sotto integrates privacy for DeFi actions but lacks innovation beyond basic private transfers.",
       "facts_v2": true
     },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "shadowagents",
-    "name": "ShadowAgents",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/mdlog/ShadowAgents",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-20T02:35:32Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "mdlog",
-        "name": "mdlog",
-        "avatar_url": "https://avatars.githubusercontent.com/u/17427126?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20"
-    ],
-    "head_sha": "81f62ba00f8bd36d1b002def044649bd6ada4b46",
-    "readme_hash": "208e5d1a01b72917",
-    "desc_v6": true,
-    "summary": "Manage private payroll for a team with secure, untraceable transactions.",
-    "description_long": "ShadowAgents allows employers to pay multiple team members in a single transaction without revealing details about who was paid or how much. It consists of a privacy-focused plan generator that splits payments into non-round amounts, and an escrow contract, `PayrollEscrow`, to manage fund commitments. Payments are structured so that only the hashes of individual claims reach the public layer, while actual amounts and recipient details remain hidden until they claim their funds.",
-    "latest_push": "Added the payroll intent form with plan preview and disclosure options.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 261,
-    "deletions": 42,
-    "churn_pct": 9.2,
-    "sprint": {
-      "pushes": 16,
-      "additions": 5870,
-      "deletions": 55,
-      "computed": 2
-    },
-    "assessment": null,
     "star_evidence": "Cairo in the repository"
   },
   {
