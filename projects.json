@@ -94,9 +94,9 @@
     "readme_hash": "6f33f9fa054a6d99",
     "desc_v6": true,
     "churn_pct": 13.1,
-    "summary": "Batch pay many users from a shielded balance with anonymity.",
-    "description_long": "Almoner allows users to batch pay multiple recipients at once from a shielded balance while keeping the specifics of each payment confidential. It operates by splitting payments at the proof boundary, where funds are moved into an escrow contract and then allocated to registered recipients or issued as claims for unregistered ones. The application is built using Next.js for the frontend and includes mechanisms for scheduling, claim management, and notifications.",
-    "latest_push": "Pinned calldata vectors to prevent encoder and signature drift.",
+    "summary": "Batch payment disbursement from a shielded balance to multiple recipients",
+    "description_long": "Almoner allows users to make batch payments from a shielded balance, ensuring anonymity both in terms of amounts paid and recipient identities. It handles payments by moving budgets into an escrow contract, where registered recipients receive direct notes while others can claim funds upon registration. Built using Starknet, it features off-chain management and requires no proof to operate, with privacy differentiated between direct payments and escrowed allocations.",
+    "latest_push": "Added an escrow security review with eight findings and a deploy script.",
     "tooling": [
       {
         "label": "Cairo",
@@ -164,7 +164,7 @@
     "churn_pct": 1,
     "summary": "Conduct sealed-bid auctions with native Vickrey and MultiUnit strategies.",
     "description_long": "Gavel enables sealed-bid auctions on Starknet using the STRK20 privacy pool, making it possible to conduct Vickrey and MultiUnit auctions without exposing bidders' identities or bid amounts until the reveal phase. It does this by storing commitments within a privacy pool and allowing bids to be placed with escrows of identical collateral amounts, ensuring that no information is leaked before the bids are revealed. The system includes a reusable sealed-commitment primitive and an anonymizer contract, developed in Cairo with a structured repository layout.",
-    "latest_push": "Deployed to Sepolia and fixed fixture leakage into live data.",
+    "latest_push": "Deployed to Sepolia and prevented fixtures from leaking into live data.",
     "tooling": [
       {
         "label": "Cairo",
@@ -238,8 +238,8 @@
     "readme_hash": "5b8b3ccd69e1723f",
     "desc_v6": true,
     "churn_pct": 3.9,
-    "summary": "Sealed-bid prediction markets with private orders and tradeable positions.",
-    "description_long": "Atrum is a prediction market where orders are unreadable until they are binding, eliminating the risk of front-running. It operates a sealed-bid batch auction with a uniform clearing price, allowing users to trade positions before the event resolves. Built on Starknet with strict privacy measures, the project ensures that while order sizes are visible, the identities of participants and specific order details remain hidden until after the batch closes.",
+    "summary": "A sealed-bid prediction market with hidden orders and tradable positions.",
+    "description_long": "This project creates a prediction market where orders are submitted as private notes and are unreadable until the batch closes. Utilizing a sealed-bid batch auction mechanism, it computes a uniform clearing price post-closure, allowing bound orders to remain confidential and mitigates front-running risks. The system is built on previous experience with the Monad project and consists of a factory contract that deploys markets securely and permissionlessly while ensuring that creators cannot misuse their control over resolutions.",
     "latest_push": "Displayed the reveal window for traders and added 28 tests.",
     "tooling": [
       {
@@ -334,7 +334,7 @@
     "churn_pct": 1.8,
     "summary": "Pay anyone from any chain to an @handle or email for private receipt on Starknet.",
     "description_long": "Send payments to users identified by an @handle or email address. Recipients receive the funds privately on Starknet.",
-    "latest_push": "Fixed the wrapper magic and hardened the Sepolia settle path.",
+    "latest_push": "Fixed wrapper magic and hardened the Sepolia settle path.",
     "tooling": [
       {
         "label": "starknet.js",
