@@ -1,5 +1,122 @@
 [
   {
+    "slug": "tip",
+    "name": "tip",
+    "one_liner": "A native mobile wallet for STRK20: private send, receive, and shield/unshield, non-custodial, built in Flutter.",
+    "category": "Other",
+    "repo_url": "https://github.com/Immadominion/tip",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-10",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T21:15:54Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Immadominion",
+        "name": "Nwakanma Dominion",
+        "avatar_url": "https://avatars.githubusercontent.com/u/118551746?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-22"
+    ],
+    "head_sha": "82b7a2ecdd2b07fe9f2a9141b75b9b54ada98e3e",
+    "readme_hash": "bb2993a6415b243d",
+    "desc_v6": true,
+    "churn_pct": 0.9,
+    "summary": "A mobile wallet for private transactions on Starknet using STRK20.",
+    "description_long": "tip is a non-custodial mobile wallet for Starknet that allows users to shield, unshield, and send tokens privately from their devices. It is built with Dart and Flutter, and includes a client for the STRK20 privacy pool, with functionalities such as a discovery client for balances and a proving client for transaction processing. The app features advanced cryptographic protocols for secure messaging and data transport, all verified against established RFCs.",
+    "latest_push": "Added a tool for creating a Sepolia development account.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 60,
+    "deletions": 0,
+    "sprint": {
+      "pushes": 20,
+      "additions": 10830,
+      "deletions": 7,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
+    "slug": "almoner",
+    "name": "Almoner",
+    "one_liner": "Private batch disbursement on STRK20: pay many people from a shielded balance for one flat pool fee, including people who have never registered.",
+    "category": "Infra",
+    "repo_url": "https://github.com/leojay-net/almoner",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-10",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T21:13:24Z",
+    "stars": 1,
+    "builders": [
+      {
+        "login": "leojay-net",
+        "name": "leojay",
+        "avatar_url": "https://avatars.githubusercontent.com/u/102752992?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-21",
+      "2026-08-22"
+    ],
+    "head_sha": "6e19b2b479c5cd28a112e2d73db2955977f7dbb0",
+    "readme_hash": "6f33f9fa054a6d99",
+    "desc_v6": true,
+    "churn_pct": 13.1,
+    "summary": "Batch pay many users from a shielded balance with anonymity.",
+    "description_long": "Almoner allows users to batch pay multiple recipients at once from a shielded balance while keeping the specifics of each payment confidential. It operates by splitting payments at the proof boundary, where funds are moved into an escrow contract and then allocated to registered recipients or issued as claims for unregistered ones. The application is built using Next.js for the frontend and includes mechanisms for scheduling, claim management, and notifications.",
+    "latest_push": "Pinned calldata vectors to prevent encoder and signature drift.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 572,
+    "deletions": 22,
+    "sprint": {
+      "pushes": 66,
+      "additions": 20960,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
     "slug": "gavel",
     "name": "gavel",
     "one_liner": "Sealed-bid auctions where the bids are actually sealed - Vickrey, first-price and multi-unit auctions on the STRK20 privacy pool",
@@ -21,7 +138,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-22T20:49:41Z",
+    "pushed_at": "2026-08-22T21:09:32Z",
     "stars": 0,
     "builders": [
       {
@@ -35,19 +152,19 @@
         "family": "Claude",
         "name": "Claude Opus 5",
         "avatar_url": "",
-        "commits": 8
+        "commits": 9
       }
     ],
     "active_days": [
       "2026-08-22"
     ],
-    "head_sha": "18fad0acf41e4f156f5c58e0e886f5683259ff15",
+    "head_sha": "34423901669ad752582ba3e8b973b7cc38cf3310",
     "readme_hash": "cae798eebcd30bf4",
     "desc_v6": true,
-    "churn_pct": 76,
+    "churn_pct": 1,
     "summary": "Conduct sealed-bid auctions with native Vickrey and MultiUnit strategies.",
     "description_long": "Gavel enables sealed-bid auctions on Starknet using the STRK20 privacy pool, making it possible to conduct Vickrey and MultiUnit auctions without exposing bidders' identities or bid amounts until the reveal phase. It does this by storing commitments within a privacy pool and allowing bids to be placed with escrows of identical collateral amounts, ensuring that no information is leaked before the bids are revealed. The system includes a reusable sealed-commitment primitive and an anonymizer contract, developed in Cairo with a structured repository layout.",
-    "latest_push": "Rebuilt the interface as an exchange terminal.",
+    "latest_push": "Deployed to Sepolia and fixed fixture leakage into live data.",
     "tooling": [
       {
         "label": "Cairo",
@@ -61,12 +178,187 @@
       }
     ],
     "has_readme": true,
-    "additions": 3194,
-    "deletions": 1152,
+    "additions": 49,
+    "deletions": 6,
     "sprint": {
-      "pushes": 16,
-      "additions": 9512,
+      "pushes": 17,
+      "additions": 9555,
       "deletions": 10,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "atrum",
+    "name": "Atrum",
+    "one_liner": "Sealed-bid prediction markets: orders stay unreadable until they are binding, clear at a uniform price, and positions are tradeable before resolution.",
+    "category": "Other",
+    "repo_url": "https://github.com/atrummarkets/atrum-starknet",
+    "demo_url": "https://strk20.atrum.fun",
+    "demo_video": "",
+    "x_handle": "AtrumMarkets",
+    "inspired_by": "RFP-07",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T21:01:32Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "TechnicallyKiller",
+        "name": "Divyanshh Kalra",
+        "avatar_url": "https://avatars.githubusercontent.com/u/86044867?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 4
+      }
+    ],
+    "active_days": [
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-21",
+      "2026-08-22"
+    ],
+    "head_sha": "8ffaf0c3e841795792ef5bea13d4a7b35ad552be",
+    "readme_hash": "5b8b3ccd69e1723f",
+    "desc_v6": true,
+    "churn_pct": 3.9,
+    "summary": "Sealed-bid prediction markets with private orders and tradeable positions.",
+    "description_long": "Atrum is a prediction market where orders are unreadable until they are binding, eliminating the risk of front-running. It operates a sealed-bid batch auction with a uniform clearing price, allowing users to trade positions before the event resolves. Built on Starknet with strict privacy measures, the project ensures that while order sizes are visible, the identities of participants and specific order details remain hidden until after the batch closes.",
+    "latest_push": "Displayed the reveal window for traders and added 28 tests.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 267,
+    "deletions": 11,
+    "sprint": {
+      "pushes": 47,
+      "additions": 11684,
+      "deletions": 8,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "wotta",
+    "name": "Wotta",
+    "one_liner": "Pay anyone, from any chain, to an @handle or email - and let them receive privately on Starknet.",
+    "category": "Payments",
+    "repo_url": "https://github.com/wurli-sh/wotta-strk",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-09",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T20:53:49Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "wurli-sh",
+        "name": "wurli-sh",
+        "avatar_url": "https://avatars.githubusercontent.com/u/261630289?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Cursor",
+        "name": "Cursor",
+        "avatar_url": "",
+        "commits": 17
+      }
+    ],
+    "active_days": [
+      "2026-08-20",
+      "2026-08-22"
+    ],
+    "head_sha": "c67ba811299c1261f26d9d9e943fad7304f9679e",
+    "readme_hash": "",
+    "desc_v6": true,
+    "churn_pct": 1.8,
+    "summary": "Pay anyone from any chain to an @handle or email for private receipt on Starknet.",
+    "description_long": "Send payments to users identified by an @handle or email address. Recipients receive the funds privately on Starknet.",
+    "latest_push": "Fixed the wrapper magic and hardened the Sepolia settle path.",
+    "tooling": [
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": false,
+    "additions": 272,
+    "deletions": 106,
+    "sprint": {
+      "pushes": 28,
+      "additions": 19906,
+      "deletions": 0,
       "computed": 2
     },
     "assessment": null,
@@ -118,7 +410,6 @@
     "head_sha": "e4a3364a4df4172d44ce960b931e07e540714dab",
     "readme_hash": "7acf52162bf3847e",
     "desc_v6": true,
-    "churn_pct": 5.1,
     "summary": "A mobile-first P2P marketplace for escrow transactions without revealing balances.",
     "description_long": "GhostDeal is a Progressive Web App (PWA) that allows users to pay in person while keeping their wallet balance private. Sellers present a QR code for buyers to scan and pay, which locks funds in a private escrow until the buyer confirms delivery. The project is built using Next.js, React, and TypeScript, with a Cairo helper for escrow functionality. It runs on the STRK20 mainnet and includes a Wallet API integration with starknet.js.",
     "latest_push": "Restyled the wallet chrome for dark mode in the application.",
@@ -162,6 +453,7 @@
     "has_readme": true,
     "additions": 76,
     "deletions": 36,
+    "churn_pct": 5.1,
     "sprint": {
       "pushes": 9,
       "additions": 10322,
@@ -218,7 +510,6 @@
     "head_sha": "50c1276fca88fa978ee4ecd2661da6cf1435f3d0",
     "readme_hash": "6960137d2353bced",
     "desc_v6": true,
-    "churn_pct": 8.7,
     "summary": "A sealed-bid auction protocol with unlinkable bidders and hidden bid values until reveal.",
     "description_long": "Sealed implements a single-item, single-round, sealed-bid auction that settles at the second-highest price. Bidders submit a Poseidon commitment to their bid, locking identical collateral amounts funded by their shielded STRK20 balance, while the auction contract manages these assets without revealing bidder identities. This design ensures privacy for both bidders and bid amounts, fulfilling the requirements set forth in RFP-08 by not exposing bidder addresses or bid values until reveal.",
     "latest_push": "Derived bid secrets from a wallet signature and fixed bid reveal issues.",
@@ -237,6 +528,7 @@
     "has_readme": true,
     "additions": 543,
     "deletions": 99,
+    "churn_pct": 8.7,
     "sprint": {
       "pushes": 82,
       "additions": 16223,
@@ -347,7 +639,6 @@
     "head_sha": "a045f76410d0095126381339ff1197f5830619b6",
     "readme_hash": "a871f5ff1107fb3c",
     "desc_v6": true,
-    "churn_pct": 0.6,
     "summary": "A whitehat rescue bot that sweeps exposed on-chain funds to safety.",
     "description_long": "Aegis monitors public repositories for accidentally leaked private keys and API keys, verifies if they control actual funds, and automatically sweeps those funds to a secure address before they can be exploited. It scans registered projects for sensitive filenames, checks for real balances, derives the Starknet account, deploys if necessary, and conducts sweeping operations entirely automated. Owners prove their identity through GitHub to reclaim their funds, which are transferred through the STRK20 shielded pool for enhanced privacy.",
     "latest_push": "Pinned the site to the light Subframe theme to remove dark styling.",
@@ -391,6 +682,7 @@
     "has_readme": true,
     "additions": 7,
     "deletions": 28,
+    "churn_pct": 0.6,
     "sprint": {
       "pushes": 93,
       "additions": 6845,
@@ -406,61 +698,6 @@
       "facts_v2": true
     },
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "tip",
-    "name": "tip",
-    "one_liner": "A native mobile wallet for STRK20: private send, receive, and shield/unshield, non-custodial, built in Flutter.",
-    "category": "Other",
-    "repo_url": "https://github.com/Immadominion/tip",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-10",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-22T20:10:44Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Immadominion",
-        "name": "Nwakanma Dominion",
-        "avatar_url": "https://avatars.githubusercontent.com/u/118551746?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-22"
-    ],
-    "head_sha": "a0c12ef7bb6fe099cb30dcc805eadf616dcd1753",
-    "readme_hash": "bb2993a6415b243d",
-    "desc_v6": true,
-    "summary": "A mobile wallet for private transactions on Starknet using STRK20.",
-    "description_long": "tip is a non-custodial mobile wallet for Starknet that allows users to shield, unshield, and send tokens privately from their devices. It is built with Dart and Flutter, and includes a client for the STRK20 privacy pool, with functionalities such as a discovery client for balances and a proving client for transaction processing. The app features advanced cryptographic protocols for secure messaging and data transport, all verified against established RFCs.",
-    "latest_push": "Added onboarding, home, send, and receive screens with detailed transfer breakdown.",
-    "tooling": [],
-    "has_readme": true,
-    "additions": 1270,
-    "deletions": 23,
-    "churn_pct": 19.7,
-    "sprint": {
-      "pushes": 19,
-      "additions": 10770,
-      "deletions": 7,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
   },
   {
     "slug": "vinss",
@@ -1333,6 +1570,92 @@
     "star_evidence": "Cairo in the repository"
   },
   {
+    "slug": "my-strk20-project",
+    "name": "my-strk20-project",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/SakshamGiri202/my-strk20-project",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T18:20:14Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "SakshamGiri202",
+        "name": "SakshamGiri202",
+        "avatar_url": "https://avatars.githubusercontent.com/u/136309568?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-22"
+    ],
+    "head_sha": "adb6c12d356dc73f8e54e78761f031d28839d525",
+    "readme_hash": "",
+    "desc_v6": false,
+    "churn_pct": 100,
+    "summary": "",
+    "description_long": "",
+    "latest_push": "Added strk20.json and STRK20 skills.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 4890,
+    "deletions": 0,
+    "sprint": {
+      "pushes": 2,
+      "additions": 6890,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
     "slug": "erebus",
     "name": "Erebus",
     "one_liner": "",
@@ -1492,85 +1815,6 @@
       "reason": "StakeWars lacks innovative privacy features and engineering depth.",
       "facts_v2": true
     },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "wotta",
-    "name": "Wotta",
-    "one_liner": "Pay anyone, from any chain, to an @handle or email - and let them receive privately on Starknet.",
-    "category": "Payments",
-    "repo_url": "https://github.com/wurli-sh/wotta-strk",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-09",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-22T17:04:23Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "wurli-sh",
-        "name": "wurli-sh",
-        "avatar_url": "https://avatars.githubusercontent.com/u/261630289?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Cursor",
-        "name": "Cursor",
-        "avatar_url": "",
-        "commits": 16
-      }
-    ],
-    "active_days": [
-      "2026-08-20",
-      "2026-08-22"
-    ],
-    "head_sha": "558820d55b1c08f7b9c8c0b20ad70f806baf9c9e",
-    "readme_hash": "",
-    "desc_v6": true,
-    "summary": "Pay anyone from any chain to an @handle or email for private receipt on Starknet.",
-    "description_long": "Send payments to users identified by an @handle or email address. Recipients receive the funds privately on Starknet.",
-    "latest_push": "Admitted all CCTP rails for Sepolia Send and required wallet connections for burn.",
-    "tooling": [
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": false,
-    "additions": 558,
-    "deletions": 88,
-    "churn_pct": 3.1,
-    "sprint": {
-      "pushes": 27,
-      "additions": 19983,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": null,
     "star_evidence": "Cairo in the repository"
   },
   {
@@ -3307,67 +3551,6 @@
     "star_evidence": "Cairo in the repository"
   },
   {
-    "slug": "almoner",
-    "name": "Almoner",
-    "one_liner": "Private batch disbursement on STRK20: pay many people from a shielded balance for one flat pool fee, including people who have never registered.",
-    "category": "Infra",
-    "repo_url": "https://github.com/leojay-net/almoner",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-10",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T23:34:13Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "leojay-net",
-        "name": "leojay",
-        "avatar_url": "https://avatars.githubusercontent.com/u/102752992?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-21"
-    ],
-    "head_sha": "f54ea58305da8d5b3e73f482a10d582cb8f2f335",
-    "readme_hash": "d9e7510050a1c703",
-    "desc_v6": true,
-    "summary": "Batch pay many users from a shielded balance with anonymity.",
-    "description_long": "Almoner allows users to batch pay multiple recipients at once from a shielded balance while keeping the specifics of each payment confidential. It operates by splitting payments at the proof boundary, where funds are moved into an escrow contract and then allocated to registered recipients or issued as claims for unregistered ones. The application is built using Next.js for the frontend and includes mechanisms for scheduling, claim management, and notifications.",
-    "latest_push": "Added the keeper package with dry-run mode and various event decoding features.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1169,
-    "deletions": 15,
-    "churn_pct": 27.4,
-    "sprint": {
-      "pushes": 55,
-      "additions": 20410,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
-  },
-  {
     "slug": "ghostline",
     "name": "GhostLine",
     "one_liner": "A privacy firewall that detects transaction leakage before you sign on Starknet.",
@@ -3455,101 +3638,6 @@
       "pushes": 32,
       "additions": 7951,
       "deletions": 1,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "atrum",
-    "name": "Atrum",
-    "one_liner": "Sealed-bid prediction markets: orders stay unreadable until they are binding, clear at a uniform price, and positions are tradeable before resolution.",
-    "category": "Other",
-    "repo_url": "https://github.com/atrummarkets/atrum-starknet",
-    "demo_url": "https://strk20.atrum.fun",
-    "demo_video": "",
-    "x_handle": "AtrumMarkets",
-    "inspired_by": "RFP-07",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T22:27:42Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "TechnicallyKiller",
-        "name": "Divyanshh Kalra",
-        "avatar_url": "https://avatars.githubusercontent.com/u/86044867?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 2
-      }
-    ],
-    "active_days": [
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-21"
-    ],
-    "head_sha": "f84314f20d2704d8c49fadea2545ccb463fd88bf",
-    "readme_hash": "7b27f20512b31966",
-    "desc_v6": true,
-    "summary": "A sealed-bid prediction market with hidden orders and tradable positions.",
-    "description_long": "This project creates a prediction market where orders are submitted as private notes and are unreadable until the batch closes. Utilizing a sealed-bid batch auction mechanism, it computes a uniform clearing price post-closure, allowing bound orders to remain confidential and mitigates front-running risks. The system is built on previous experience with the Monad project and consists of a factory contract that deploys markets securely and permissionlessly while ensuring that creators cannot misuse their control over resolutions.",
-    "latest_push": "Redeployed Sepolia with enhancements to the reveal window enforcement.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 78,
-    "deletions": 29,
-    "churn_pct": 1.5,
-    "sprint": {
-      "pushes": 45,
-      "additions": 11428,
-      "deletions": 8,
       "computed": 2
     },
     "assessment": null,
