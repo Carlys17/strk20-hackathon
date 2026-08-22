@@ -1,5 +1,248 @@
 [
   {
+    "slug": "almoner",
+    "name": "Almoner",
+    "one_liner": "Private batch disbursement on STRK20: pay many people from a shielded balance for one flat pool fee, including people who have never registered.",
+    "category": "Infra",
+    "repo_url": "https://github.com/leojay-net/almoner",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-10",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T22:45:51Z",
+    "stars": 1,
+    "builders": [
+      {
+        "login": "leojay-net",
+        "name": "leojay",
+        "avatar_url": "https://avatars.githubusercontent.com/u/102752992?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-21",
+      "2026-08-22"
+    ],
+    "head_sha": "4b628ec0b1788f57c90f8965ec502743a77e673f",
+    "readme_hash": "6f33f9fa054a6d99",
+    "desc_v6": true,
+    "churn_pct": 0.9,
+    "summary": "Batch payment disbursement from a shielded balance to multiple recipients",
+    "description_long": "Almoner allows users to make batch payments from a shielded balance, ensuring anonymity both in terms of amounts paid and recipient identities. It handles payments by moving budgets into an escrow contract, where registered recipients receive direct notes while others can claim funds upon registration. Built using Starknet, it features off-chain management and requires no proof to operate, with privacy differentiated between direct payments and escrowed allocations.",
+    "latest_push": "Reported unanswered version queries as unknown in wallet capability.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 36,
+    "deletions": 16,
+    "sprint": {
+      "pushes": 75,
+      "additions": 22420,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "conditionalpay",
+    "name": "ConditionalPay",
+    "one_liner": "Programmable private settlement infrastructure for STRK20.",
+    "category": "Infra",
+    "repo_url": "https://github.com/eugenennamdi/ConditionalPay",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project is primarily a demo with no substantial contracts or innovative use of privacy.",
+    "contracts": [
+      {
+        "address": "0x0166e31803cfab50383d5b636b86a5646233881fad3a2fb89354da63f6cdb483",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x47edc8e74fc08c4726a817a23085a2ae2dd95590fb6a32d3b3c5b5159e586e6",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0xde61c431a92dabc7b8672cd08cdce0b479b83ca261c0591992a84e6e7779b7",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x2f2f88ab25f64a619aa05dcaff7c2af85efc6cd086a229696ac8edc3bdd6d26",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x64cfec311d340f97fb0d9245de01ab36f3267259ac162290265e55ca99dd88d",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      }
+    ],
+    "verified_txs": 4,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": true
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T22:35:29Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "eugenennamdi",
+        "name": "eugenennamdi",
+        "avatar_url": "https://avatars.githubusercontent.com/u/85407620?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-20",
+      "2026-08-22"
+    ],
+    "head_sha": "60bc58a47e7c6c703cec3b38ae4235dc9504f50a",
+    "readme_hash": "a18c4a712ea1f4de",
+    "desc_v6": true,
+    "churn_pct": 100,
+    "summary": "Create conditional payments with hashlocks and time constraints.",
+    "description_long": "ConditionalPay allows applications to make programmable, private settlements using hashlocks, time windows, and optional approval gates. It does not store user addresses, ensuring privacy while enabling a public and auditable system. The project operates on Starknet, using the STRK20 pool for transaction management, and features a state machine for payment interactions including creating, claiming, and refunding payments.",
+    "latest_push": "Finalized documentation for ConditionalPay submission and Mainnet evidence.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 8390,
+    "deletions": 971,
+    "sprint": {
+      "pushes": 16,
+      "additions": 20326,
+      "deletions": 778,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project mainly focuses on private transfers and ultimately serves as a demo.",
+      "why_complex": "There are no deployed contracts that show engineering depth or interaction.",
+      "reason": "The project is primarily a demo with no substantial contracts or innovative use of privacy.",
+      "facts_v2": true
+    },
+    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "tip",
+    "name": "tip",
+    "one_liner": "A native mobile wallet for STRK20: private send, receive, and shield/unshield, non-custodial, built in Flutter.",
+    "category": "Other",
+    "repo_url": "https://github.com/Immadominion/tip",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-10",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T22:35:15Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Immadominion",
+        "name": "Nwakanma Dominion",
+        "avatar_url": "https://avatars.githubusercontent.com/u/118551746?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-22"
+    ],
+    "head_sha": "3b1bfbcff0468cd31b3b716401c0f37e3a007d41",
+    "readme_hash": "bb2993a6415b243d",
+    "desc_v6": true,
+    "churn_pct": 2.7,
+    "summary": "A mobile wallet for private transactions on Starknet using STRK20.",
+    "description_long": "tip is a non-custodial mobile wallet for Starknet that allows users to shield, unshield, and send tokens privately from their devices. It is built with Dart and Flutter, and includes a client for the STRK20 privacy pool, with functionalities such as a discovery client for balances and a proving client for transaction processing. The app features advanced cryptographic protocols for secure messaging and data transport, all verified against established RFCs.",
+    "latest_push": "Encoded the pool's proof submission rules in the proving_rules.dart file.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 191,
+    "deletions": 0,
+    "sprint": {
+      "pushes": 25,
+      "additions": 11534,
+      "deletions": 7,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
     "slug": "oxa-protocol",
     "name": "oxa-protocol",
     "one_liner": "Privacy-preserving, policy-controlled payments for autonomous agents on Starknet.",
@@ -39,7 +282,6 @@
     "head_sha": "209a4137bcdc2052af984922a1e272c85b72a0dd",
     "readme_hash": "b856c85d35050df9",
     "desc_v6": true,
-    "churn_pct": 41.4,
     "summary": "Generate scoped, single-use payment credentials for autonomous agents.",
     "description_long": "OXA is a protocol for creating one-time payment credentials, allowing owners to fund transactions from a shielded STRK20 balance. These credentials can be issued on demand for specific amounts of ERC-20 tokens and can settle either privately or publicly. As of now, the project is in the pre-build phase with no contracts deployed.",
     "latest_push": "Added the oxa_integration_tests package with all tests passing.",
@@ -53,71 +295,10 @@
     "has_readme": true,
     "additions": 359,
     "deletions": 0,
+    "churn_pct": 41.4,
     "sprint": {
       "pushes": 11,
       "additions": 1400,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "almoner",
-    "name": "Almoner",
-    "one_liner": "Private batch disbursement on STRK20: pay many people from a shielded balance for one flat pool fee, including people who have never registered.",
-    "category": "Infra",
-    "repo_url": "https://github.com/leojay-net/almoner",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-10",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-22T22:12:00Z",
-    "stars": 1,
-    "builders": [
-      {
-        "login": "leojay-net",
-        "name": "leojay",
-        "avatar_url": "https://avatars.githubusercontent.com/u/102752992?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-21",
-      "2026-08-22"
-    ],
-    "head_sha": "023befdc36250922d133e98cdcf32a99dc25f415",
-    "readme_hash": "6f33f9fa054a6d99",
-    "desc_v6": true,
-    "churn_pct": 35.4,
-    "summary": "Batch payment disbursement from a shielded balance to multiple recipients",
-    "description_long": "Almoner allows users to make batch payments from a shielded balance, ensuring anonymity both in terms of amounts paid and recipient identities. It handles payments by moving budgets into an escrow contract, where registered recipients receive direct notes while others can claim funds upon registration. Built using Starknet, it features off-chain management and requires no proof to operate, with privacy differentiated between direct payments and escrowed allocations.",
-    "latest_push": "Added a design system, new UI components, and rebuilt the landing page.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1713,
-    "deletions": 273,
-    "sprint": {
-      "pushes": 74,
-      "additions": 22400,
       "deletions": 0,
       "computed": 2
     },
@@ -170,7 +351,6 @@
     "head_sha": "d23033dd96fe586e748389d1a0925e43d923b5b5",
     "readme_hash": "0a3c7697b99dcc2b",
     "desc_v6": true,
-    "churn_pct": 11.3,
     "summary": "A privacy firewall that evaluates transaction risks before signing.",
     "description_long": "GhostLine analyzes transactions for potential privacy leaks to provide a score and recommendations. It consists of a risk calculation engine that examines transaction timing, frequency, amounts, and patterns, allowing users to make informed decisions before signing on Starknet.",
     "latest_push": "Added private yield withdrawal functionality and Vesu STRK vault preset.",
@@ -209,6 +389,7 @@
     "has_readme": true,
     "additions": 108,
     "deletions": 22,
+    "churn_pct": 11.3,
     "sprint": {
       "pushes": 38,
       "additions": 8140,
@@ -216,156 +397,6 @@
       "computed": 2
     },
     "assessment": null,
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "tip",
-    "name": "tip",
-    "one_liner": "A native mobile wallet for STRK20: private send, receive, and shield/unshield, non-custodial, built in Flutter.",
-    "category": "Other",
-    "repo_url": "https://github.com/Immadominion/tip",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-10",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-22T22:00:41Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Immadominion",
-        "name": "Nwakanma Dominion",
-        "avatar_url": "https://avatars.githubusercontent.com/u/118551746?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-22"
-    ],
-    "head_sha": "c7fb088ceed1e259231ba9dfe8ce7072dd6542f6",
-    "readme_hash": "bb2993a6415b243d",
-    "desc_v6": true,
-    "churn_pct": 4.1,
-    "summary": "A mobile wallet for private transactions on Starknet using STRK20.",
-    "description_long": "tip is a non-custodial mobile wallet for Starknet that allows users to shield, unshield, and send tokens privately from their devices. It is built with Dart and Flutter, and includes a client for the STRK20 privacy pool, with functionalities such as a discovery client for balances and a proving client for transaction processing. The app features advanced cryptographic protocols for secure messaging and data transport, all verified against established RFCs.",
-    "latest_push": "Added the proof invocation to the proving service.",
-    "tooling": [],
-    "has_readme": true,
-    "additions": 289,
-    "deletions": 0,
-    "sprint": {
-      "pushes": 24,
-      "additions": 11343,
-      "deletions": 7,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
-  },
-  {
-    "slug": "conditionalpay",
-    "name": "ConditionalPay",
-    "one_liner": "Programmable private settlement infrastructure for STRK20.",
-    "category": "Infra",
-    "repo_url": "https://github.com/eugenennamdi/ConditionalPay",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project is primarily a demo with no substantial contracts or innovative use of privacy.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-22T21:44:41Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "eugenennamdi",
-        "name": "eugenennamdi",
-        "avatar_url": "https://avatars.githubusercontent.com/u/85407620?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-20"
-    ],
-    "head_sha": "4d6628503d69dc7b56584475f972ad7eb41c0e81",
-    "readme_hash": "7c0bbf813c1629dc",
-    "desc_v6": true,
-    "summary": "Programmable private settlement infrastructure for STRK20.",
-    "description_long": "This project creates a system for conducting private settlements on the STRK20 network. It allows for programmable payment conditions that can be applied to transactions.",
-    "latest_push": "Added ConditionalPay query, event parsing, and Mainnet execution planning.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1964,
-    "deletions": 32,
-    "churn_pct": 22.5,
-    "sprint": {
-      "pushes": 12,
-      "additions": 12278,
-      "deletions": 149,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "The project mainly focuses on private transfers and ultimately serves as a demo.",
-      "why_complex": "There are no deployed contracts that show engineering depth or interaction.",
-      "reason": "The project is primarily a demo with no substantial contracts or innovative use of privacy.",
-      "facts_v2": true
-    },
     "star_evidence": "Cairo in the repository"
   },
   {
@@ -4385,7 +4416,7 @@
       },
       {
         "address": "0x04f8f4a1a90899b6b61b98cebc245fbb49a139a4be7448685593bb10be969d21",
-        "network": "mainnet"
+        "network": "unknown"
       },
       {
         "address": "0x013c507ad43b4f2e61037cbd08ee3f15606d2dc538a17135b46c8c095415b0ab",
@@ -4531,7 +4562,7 @@
       "computed": 2
     },
     "assessment": null,
-    "star_evidence": "14 contracts deployed on mainnet, Cairo in the repository"
+    "star_evidence": "13 contracts deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "strk20-indexer",
