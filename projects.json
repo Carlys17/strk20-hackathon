@@ -61,7 +61,7 @@
     "churn_pct": 0.4,
     "summary": "A privacy superapp for cross-chain transfers with no on-chain links.",
     "description_long": "Mirage is a privacy superapp that transforms the STRK20 shielded pool on Starknet into a gateway for transferring assets across 35+ blockchains. Users can shield any ERC-20 token, execute private swaps, and send funds to fresh addresses on supported chains like BTC, Solana, and Arbitrum, effectively unlinking their main wallet from outgoing transactions. The implementation includes STRK20 for shielding, NEAR Intents for cross-chain execution, and a workflow engine for amount splitting and timing randomization, all running in a TEE.",
-    "latest_push": "Showed token symbol instead of asset ID in Swap asset selects.",
+    "latest_push": "Showed token symbol instead of asset id in Swap asset selects.",
     "tooling": [],
     "has_readme": true,
     "additions": 11,
@@ -74,6 +74,88 @@
     },
     "assessment": null,
     "star_evidence": ""
+  },
+  {
+    "slug": "sealed",
+    "name": "Sealed",
+    "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/tinoxbt/sealed",
+    "demo_url": "https://tinoxbt.github.io/sealed/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-08",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
+    "contracts": [
+      {
+        "address": "0x01fdad69852ba0ae7de900aaa6165b015010f493c5a5d5466bc6a8e580c05d02",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T09:31:16Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "tinoxbt",
+        "name": "tinoxbt",
+        "avatar_url": "https://avatars.githubusercontent.com/u/202869881?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-21",
+      "2026-08-22"
+    ],
+    "head_sha": "8347eb6fb0f2de3e9fd9bc26bbe2ac63b408e085",
+    "readme_hash": "ac9ac192b71369e5",
+    "desc_v6": true,
+    "churn_pct": 11.3,
+    "summary": "A sealed-bid auction for a single item with unlinkable bidders and hidden bid values.",
+    "description_long": "Sealed implements a variant of a Vickrey auction on Starknet where bidders' identities remain hidden and bid values are concealed until they are revealed. Each bidder locks in identical amounts of STRK20 collateral, and the auction settles at the second-highest bid or reserve price. The system uses Poseidon commitments to obscure bid values, and the STRK20 pool ensures that no bidder's address appears on-chain during the bidding process.",
+    "latest_push": "Encrypted the backup on chain and verified it against Sepolia.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 761,
+    "deletions": 17,
+    "sprint": {
+      "pushes": 79,
+      "additions": 15746,
+      "deletions": 104,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "It enables unlinkable sealed-bid auctions with privacy for both bids and identities using STRK20.",
+      "why_complex": "The project implements multiple contracts with Poseidon commitments and uniform collateral mechanisms.",
+      "reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
+      "facts_v2": true
+    },
+    "star_evidence": "1 contract deployed, Cairo in the repository"
   },
   {
     "slug": "strk20-privacy-wallet",
@@ -152,7 +234,7 @@
     "churn_pct": 0.4,
     "summary": "Private perpetual futures trading with shielded collateral on Starknet.",
     "description_long": "This project implements a privacy-focused perpetual futures trading protocol called PEL (Private Execution Layer) on Starknet. Traders can open leveraged positions with shielded collateral, concealing their position details while ensuring cryptographic proof via Groth16 zk-SNARKs. The core components include the `PELPerpsSTRK20Bridge` for managing shielded notes within the STRK20 privacy pool, which exchanges notes in a single transaction to maintain privacy throughout the lifecycle of the trading operations.",
-    "latest_push": "Fixed proof-bound liquidation settlement and enhanced strict payout parser.",
+    "latest_push": "Fixed proof-bound liquidation settlement and strict payout parser.",
     "tooling": [
       {
         "label": "AVNU",
@@ -285,7 +367,7 @@
     "churn_pct": 21,
     "summary": "A private, stake-backed reputation layer for foresight and accountability.",
     "description_long": "Xence allows users to make probabilistic forecasts that are privately backed by stakes hidden in the STRK20 privacy pool. It records the commitment publicly, while ensuring the underlying position and stake amounts remain confidential, scoring users on their forecasting accuracy using Brier scores. Built using Cairo and various web technologies, it integrates with the Starknet Wallet API to maintain user privacy and facilitate secure transactions.",
-    "latest_push": "Forecasted live feed movements and streamlined related scripts.",
+    "latest_push": "Forecasted live feeds as moves, settled full cycle on mainnet, and coded agent.",
     "tooling": [
       {
         "label": "TypeScript",
@@ -465,88 +547,6 @@
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
   },
   {
-    "slug": "sealed",
-    "name": "Sealed",
-    "one_liner": "Sealed-bid, second-price auctions on Starknet with unlinkable bidders and private settlement through STRK20.",
-    "category": "DeFi",
-    "repo_url": "https://github.com/tinoxbt/sealed",
-    "demo_url": "https://tinoxbt.github.io/sealed/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-08",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
-    "contracts": [
-      {
-        "address": "0x01fdad69852ba0ae7de900aaa6165b015010f493c5a5d5466bc6a8e580c05d02",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-22T09:22:38Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "tinoxbt",
-        "name": "tinoxbt",
-        "avatar_url": "https://avatars.githubusercontent.com/u/202869881?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-21",
-      "2026-08-22"
-    ],
-    "head_sha": "d01d3e8a11f19302f4d24c760f9cc9983f042ef2",
-    "readme_hash": "ac9ac192b71369e5",
-    "desc_v6": true,
-    "churn_pct": 9.9,
-    "summary": "A sealed-bid auction for a single item with unlinkable bidders and hidden bid values.",
-    "description_long": "Sealed implements a variant of a Vickrey auction on Starknet where bidders' identities remain hidden and bid values are concealed until they are revealed. Each bidder locks in identical amounts of STRK20 collateral, and the auction settles at the second-highest bid or reserve price. The system uses Poseidon commitments to obscure bid values, and the STRK20 pool ensures that no bidder's address appears on-chain during the bidding process.",
-    "latest_push": "Encrypted the backup on chain to ensure file survivability.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 657,
-    "deletions": 17,
-    "sprint": {
-      "pushes": 78,
-      "additions": 15642,
-      "deletions": 104,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "It enables unlinkable sealed-bid auctions with privacy for both bids and identities using STRK20.",
-      "why_complex": "The project implements multiple contracts with Poseidon commitments and uniform collateral mechanisms.",
-      "reason": "Sealed creates a new auction model where bidder identities remain hidden and bids stay concealed.",
-      "facts_v2": true
-    },
-    "star_evidence": "1 contract deployed, Cairo in the repository"
-  },
-  {
     "slug": "airlock",
     "name": "Airlock",
     "one_liner": "One-click privacy from any chain: bridge in, hold private, withdraw to a different chain with no on-chain link.",
@@ -616,8 +616,8 @@
     "readme_hash": "84462d676f30ff83",
     "desc_v6": true,
     "churn_pct": 7.3,
-    "summary": "Cross-chain privacy for transferring assets without linking transactions.",
-    "description_long": "Airlock allows users to bridge assets from one chain, hold them privately, and withdraw to another chain without any on-chain link between the two. The project is built on the STRK20 privacy pool, utilizing the `AirlockBucketer` anonymizer for denomination bucketing, and includes features such as a live demo, deployed contracts on mainnet and Sepolia, and real-time anonymity metrics. The application emphasizes the importance of timing and amount patterns in maintaining privacy, while enabling secure and private withdrawals.",
+    "summary": "Cross-chain privacy bridge with anonymous deposits and withdrawals.",
+    "description_long": "Airlock lets users connect their existing wallets, transfer assets into the STRK20 privacy pool, and withdraw to a different chain without any link being made on-chain between the two transactions. It includes features such as a live demo, deployed contracts on mainnet and Sepolia, and an anonymizer that splits withdrawals into standard denominations to enhance privacy. Users can monitor the anonymity set and timing disclosures directly from the mainnet pool.",
     "latest_push": "Added functionality to the account panel for managing receipts and bills.",
     "tooling": [
       {
@@ -705,7 +705,7 @@
     "churn_pct": 4.9,
     "summary": "Unlinkable cross-chain payouts from a shielded Starknet balance.",
     "description_long": "Crosslink enables third-party payments in native USDC on their own chain, funded from a shielded Starknet balance. It features a Linkability Meter that assesses the pool's state to ensure send transactions maintain unlinkability. Built with a wallet-derived Starknet account, the system includes a live demo of private and public transactions, and uses a Wallet API for shielding and private transfer operations.",
-    "latest_push": "Fixed accessibility issues in the wallet list and added aria-live regions.",
+    "latest_push": "Fixed accessibility issues and set demo URL in strk20.json.",
     "tooling": [
       {
         "label": "TypeScript",
@@ -772,7 +772,7 @@
     "churn_pct": 66.9,
     "summary": "A privacy-preserving claims rail for public verification of private payouts.",
     "description_long": "Nyalthe allows for the creation of a funded event policy that settles private claimant payouts while enabling public verification of the policy and the transactions involved. The project consists of contracts that manage the policy creation, funding reserves, event acceptance, claim authorization, and private settlement. It is currently in early public build, with ongoing implementation and testing tracked in the repository.",
-    "latest_push": "Added typed STRK20 settlement action builder and pointed Sepolia manifest to active policy deployment.",
+    "latest_push": "Added typed STRK20 settlement action builder and updated manifest.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -1039,9 +1039,9 @@
     "readme_hash": "789e783064556987",
     "desc_v6": true,
     "churn_pct": 0,
-    "summary": "Private standing authorization for recurring payments on Starknet.",
-    "description_long": "NIGHTSHIFT allows subscribers to approve recurring charges against their escrow without repeating wallet interactions. It consists of a custom anonymizer contract deployed on mainnet, which handles subscriptions through a vault that records commitments and allows automated charges based on a cryptographic nullifier. The system operates without exposing wallet information or requiring a prover, ensuring privacy and security for strategic transactions.",
-    "latest_push": "Clarified the escrow-plus-nullifier mechanism in the README.",
+    "summary": "Private standing authorization with scheduled charges on Starknet.",
+    "description_long": "NIGHTSHIFT allows subscribers to commit funds in escrow once and be charged on a schedule using a write-once nullifier. The system operates through a custom anonymizer contract and a wallet API, ensuring that the subscriber's wallet remains anonymous and is never re-queried after the initial commitment. The payment cycle is facilitated by cryptographic gates that prevent early or duplicate charges, maintaining privacy without relying on external proving services.",
+    "latest_push": "Clarified the mechanism section in README.md about escrow-plus-nullifier.",
     "tooling": [
       {
         "label": "get-starknet",
