@@ -1,60 +1,5 @@
 [
   {
-    "slug": "tip",
-    "name": "tip",
-    "one_liner": "A native mobile wallet for STRK20: private send, receive, and shield/unshield, non-custodial, built in Flutter.",
-    "category": "Other",
-    "repo_url": "https://github.com/Immadominion/tip",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-10",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-22T04:34:32Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Immadominion",
-        "name": "Nwakanma Dominion",
-        "avatar_url": "https://avatars.githubusercontent.com/u/118551746?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-22"
-    ],
-    "head_sha": "c62ca9c64c4949afa6c5cf61f8c814d4bd2f3acf",
-    "readme_hash": "73e0b39450cb4d3b",
-    "desc_v6": true,
-    "churn_pct": 100,
-    "summary": "A private, mobile wallet for sending, receiving, and shielding tokens on Starknet.",
-    "description_long": "tip is a mobile-native wallet that allows users to shield, unshield, and send tokens privately from their smartphones. It is built using Flutter and Dart, with a native Dart implementation of the STRK20 privacy client and relies on the `starknet.dart` for the account layer.",
-    "latest_push": "Added tip_privacy package with STARK field arithmetic and string encoding.",
-    "tooling": [],
-    "has_readme": true,
-    "additions": 926,
-    "deletions": 0,
-    "sprint": {
-      "pushes": 4,
-      "additions": 1018,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
-  },
-  {
     "slug": "xence",
     "name": "Xence",
     "one_liner": "Proof you were right, before it happened - seal a probabilistic forecast, bond it privately through the STRK20 pool, and let the chain score your calibration. Public record, invisible position.",
@@ -77,15 +22,29 @@
         "network": "mainnet"
       }
     ],
-    "transactions": [],
-    "verified_txs": 0,
+    "transactions": [
+      {
+        "hash": "0xfa3539d148067f8541448f09838cd9bd6442ffd3f79e36a24169abfe524403",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      },
+      {
+        "hash": "0x5dfa081e416f97644899c4150a4e7ca273144d08b431479d73296f79823da13",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      }
+    ],
+    "verified_txs": 1,
     "requirements": {
       "demo": false,
       "video": false,
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-22T04:27:00Z",
+    "pushed_at": "2026-08-22T05:03:51Z",
     "stars": 0,
     "builders": [
       {
@@ -99,13 +58,13 @@
       "2026-08-21",
       "2026-08-22"
     ],
-    "head_sha": "d2bc795a8baa1d5dca205d425e41c494f451839c",
+    "head_sha": "c07450bb5d7da09090c45d907b81d363c92fd760",
     "readme_hash": "02a6e416be7d0abe",
     "desc_v6": true,
-    "churn_pct": 4.8,
+    "churn_pct": 100,
     "summary": "A private, stake-backed reputation layer for foresight and accountability.",
     "description_long": "Xence allows users to make probabilistic forecasts that are privately backed by stakes hidden in the STRK20 privacy pool. It records the commitment publicly, while ensuring the underlying position and stake amounts remain confidential, scoring users on their forecasting accuracy using Brier scores. Built using Cairo and various web technologies, it integrates with the Starknet Wallet API to maintain user privacy and facilitate secure transactions.",
-    "latest_push": "Suppressed hydration mismatch errors in wallet extensions.",
+    "latest_push": "Sealed the first forecast on mainnet via the STRK20 pool.",
     "tooling": [
       {
         "label": "TypeScript",
@@ -119,12 +78,12 @@
       }
     ],
     "has_readme": true,
-    "additions": 291,
-    "deletions": 26,
+    "additions": 11211,
+    "deletions": 894,
     "sprint": {
-      "pushes": 19,
-      "additions": 18095,
-      "deletions": 703,
+      "pushes": 21,
+      "additions": 28422,
+      "deletions": 713,
       "computed": 2
     },
     "assessment": null,
@@ -152,7 +111,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-22T03:39:30Z",
+    "pushed_at": "2026-08-22T04:44:40Z",
     "stars": 0,
     "builders": [
       {
@@ -168,7 +127,6 @@
     ],
     "agents": [],
     "active_days": [
-      "2026-08-16",
       "2026-08-17",
       "2026-08-18",
       "2026-08-19",
@@ -176,12 +134,13 @@
       "2026-08-21",
       "2026-08-22"
     ],
-    "head_sha": "9883adf49780e0cd40d6cdda36abbaa1ddf6888e",
+    "head_sha": "867726ab0b0b01fda0b03b7f63b8e0b940739359",
     "readme_hash": "709363b44ceb8140",
     "desc_v6": true,
+    "churn_pct": 1.2,
     "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
     "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
-    "latest_push": "Fixed the offer guide popup in the OfferPanel component.",
+    "latest_push": "Polished the offer creation user experience in the frontend.",
     "tooling": [
       {
         "label": "Cairo",
@@ -190,13 +149,12 @@
       }
     ],
     "has_readme": true,
-    "additions": 6,
-    "deletions": 6,
-    "churn_pct": 0.1,
+    "additions": 168,
+    "deletions": 95,
     "sprint": {
       "pushes": 100,
-      "additions": 15834,
-      "deletions": 2028,
+      "additions": 15836,
+      "deletions": 2032,
       "computed": 2
     },
     "assessment": {
@@ -208,6 +166,61 @@
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "tip",
+    "name": "tip",
+    "one_liner": "A native mobile wallet for STRK20: private send, receive, and shield/unshield, non-custodial, built in Flutter.",
+    "category": "Other",
+    "repo_url": "https://github.com/Immadominion/tip",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-10",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T04:40:20Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Immadominion",
+        "name": "Nwakanma Dominion",
+        "avatar_url": "https://avatars.githubusercontent.com/u/118551746?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-22"
+    ],
+    "head_sha": "a0ffa2be8c3d244322a3b36cfb260c78d5e3e727",
+    "readme_hash": "c60c7baa8f1db8a6",
+    "desc_v6": true,
+    "churn_pct": 57,
+    "summary": "A private, mobile-native wallet for sending and receiving Starknet assets.",
+    "description_long": "tip is a non-custodial private wallet for Starknet that allows users to shield, unshield, and send assets privately from their mobile devices. It is built with Flutter and Dart, utilizing a native Dart client for the STRK20 privacy pool that implements cryptographic primitives such as the Poseidon hash suite and ECDH key agreements, with tests validating against Cairo contracts.",
+    "latest_push": "Added note and channel encryption with additive masking functionality.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 568,
+    "deletions": 7,
+    "sprint": {
+      "pushes": 6,
+      "additions": 1586,
+      "deletions": 7,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
   },
   {
     "slug": "oxa-protocol",
