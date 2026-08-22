@@ -1,5 +1,114 @@
 [
   {
+    "slug": "airlock",
+    "name": "Airlock",
+    "one_liner": "One-click privacy from any chain: bridge in, hold private, withdraw to a different chain with no on-chain link.",
+    "category": "Infra",
+    "repo_url": "https://github.com/kenkomu/airlock",
+    "demo_url": "https://kenkomu.github.io/airlock/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-09",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Airlock creates a cross-chain privacy solution without direct links between transactions.",
+    "contracts": [
+      {
+        "address": "0x036816fe3c38b222e737ec4168b604309ab24154862d1a3f4c9db0042a90e97a",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x004c368ae058ee81b61884c5c47ee57484c4348669b66ac606366bbd1fd1b1fb",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x00de39f79e7e8b0dcdafe955330e206990203d6047a22e853eab9df83c440e6b",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x03f52e1bddd716344f5dd3c43ba2b81eb1aefb0bc7791aba3e54051b40963a50",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      }
+    ],
+    "verified_txs": 1,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T10:18:29Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "renoschubert",
+        "name": "Kenneth Komu",
+        "avatar_url": "https://avatars.githubusercontent.com/u/46114615?v=4"
+      },
+      {
+        "login": "kenkomu",
+        "name": "Kenneth Njoroge",
+        "avatar_url": "https://avatars.githubusercontent.com/u/95502725?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-22"
+    ],
+    "head_sha": "36e1355ba855312b01ef5b94c89b6d3f18ddb94c",
+    "readme_hash": "84462d676f30ff83",
+    "desc_v6": true,
+    "churn_pct": 8.8,
+    "summary": "Cross-chain privacy bridge with anonymous deposits and withdrawals.",
+    "description_long": "Airlock lets users connect their existing wallets, transfer assets into the STRK20 privacy pool, and withdraw to a different chain without any link being made on-chain between the two transactions. It includes features such as a live demo, deployed contracts on mainnet and Sepolia, and an anonymizer that splits withdrawals into standard denominations to enhance privacy. Users can monitor the anonymity set and timing disclosures directly from the mainnet pool.",
+    "latest_push": "Added an account card, light mode, and responsive header behavior.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Anonymizer contract",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 677,
+    "deletions": 98,
+    "sprint": {
+      "pushes": 60,
+      "additions": 13909,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": false,
+      "why_innovative": "It enables unlinkable cross-chain asset movement using a privacy pool mechanism.",
+      "why_complex": "No deployed contracts or proven engineering components are present.",
+      "reason": "Airlock creates a cross-chain privacy solution without direct links between transactions.",
+      "facts_v2": true
+    },
+    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
+  },
+  {
     "slug": "aegis-rescue",
     "name": "Aegis Rescue",
     "one_liner": "Whitehat rescue bot: sweeps exposed on-chain funds into the STRK20 shielded pool before attackers can, returns them to verified GitHub owners.",
@@ -73,7 +182,7 @@
       "mainnet": true
     },
     "status": "building",
-    "pushed_at": "2026-08-22T09:49:35Z",
+    "pushed_at": "2026-08-22T09:57:41Z",
     "stars": 0,
     "builders": [
       {
@@ -90,13 +199,13 @@
       "2026-08-21",
       "2026-08-22"
     ],
-    "head_sha": "5bcfe2b713728901fc40aa1a7c783a8ef1382b96",
+    "head_sha": "6f4936c9413c7e45a8a5511ea06321b96e521f77",
     "readme_hash": "a871f5ff1107fb3c",
     "desc_v6": true,
-    "churn_pct": 0.6,
+    "churn_pct": 3.7,
     "summary": "A whitehat rescue bot that sweeps exposed on-chain funds to safety.",
     "description_long": "Aegis monitors public repositories for accidentally leaked private keys and API keys, verifies if they control actual funds, and automatically sweeps those funds to a secure address before they can be exploited. It scans registered projects for sensitive filenames, checks for real balances, derives the Starknet account, deploys if necessary, and conducts sweeping operations entirely automated. Owners prove their identity through GitHub to reclaim their funds, which are transferred through the STRK20 shielded pool for enhanced privacy.",
-    "latest_push": "Displayed payout control only to the safe wallet and clarified manual transfer.",
+    "latest_push": "Added batch payout functionality to process multiple claims in one transaction.",
     "tooling": [
       {
         "label": "AVNU",
@@ -135,11 +244,11 @@
       }
     ],
     "has_readme": true,
-    "additions": 21,
-    "deletions": 5,
+    "additions": 168,
+    "deletions": 12,
     "sprint": {
-      "pushes": 72,
-      "additions": 5390,
+      "pushes": 73,
+      "additions": 5546,
       "deletions": 16,
       "computed": 2
     },
@@ -366,7 +475,6 @@
     "head_sha": "edaec13fade1b99f904eb2ab8136c3485a3243b4",
     "readme_hash": "6960137d2353bced",
     "desc_v6": true,
-    "churn_pct": 0.8,
     "summary": "A sealed-bid auction protocol with unlinkable bidders and hidden bid values until reveal.",
     "description_long": "Sealed implements a single-item, single-round, sealed-bid auction that settles at the second-highest price. Bidders submit a Poseidon commitment to their bid, locking identical collateral amounts funded by their shielded STRK20 balance, while the auction contract manages these assets without revealing bidder identities. This design ensures privacy for both bidders and bid amounts, fulfilling the requirements set forth in RFP-08 by not exposing bidder addresses or bid values until reveal.",
     "latest_push": "Aligned documentation with the current build.",
@@ -385,6 +493,7 @@
     "has_readme": true,
     "additions": 37,
     "deletions": 19,
+    "churn_pct": 0.8,
     "sprint": {
       "pushes": 80,
       "additions": 15779,
@@ -562,7 +671,6 @@
     "head_sha": "3c051930effb50613d719c6725737644f447a62b",
     "readme_hash": "eded08229639161f",
     "desc_v6": true,
-    "churn_pct": 0.1,
     "summary": "Private perpetual futures trading with shielded collateral on Starknet.",
     "description_long": "This project implements a privacy-focused perpetual futures trading protocol called PEL (Private Execution Layer) on Starknet. Traders can open leveraged positions with shielded collateral, concealing their position details while ensuring cryptographic proof via Groth16 zk-SNARKs. The core components include the `PELPerpsSTRK20Bridge` for managing shielded notes within the STRK20 privacy pool, which exchanges notes in a single transaction to maintain privacy throughout the lifecycle of the trading operations.",
     "latest_push": "Fixed liquidation models and payout delivery in the risk engine.",
@@ -611,6 +719,7 @@
     "has_readme": true,
     "additions": 179,
     "deletions": 43,
+    "churn_pct": 0.1,
     "sprint": {
       "pushes": 81,
       "additions": 20115,
@@ -702,115 +811,6 @@
     },
     "assessment": null,
     "star_evidence": ""
-  },
-  {
-    "slug": "airlock",
-    "name": "Airlock",
-    "one_liner": "One-click privacy from any chain: bridge in, hold private, withdraw to a different chain with no on-chain link.",
-    "category": "Infra",
-    "repo_url": "https://github.com/kenkomu/airlock",
-    "demo_url": "https://kenkomu.github.io/airlock/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-09",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Airlock creates a cross-chain privacy solution without direct links between transactions.",
-    "contracts": [
-      {
-        "address": "0x036816fe3c38b222e737ec4168b604309ab24154862d1a3f4c9db0042a90e97a",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x004c368ae058ee81b61884c5c47ee57484c4348669b66ac606366bbd1fd1b1fb",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x00de39f79e7e8b0dcdafe955330e206990203d6047a22e853eab9df83c440e6b",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [
-      {
-        "hash": "0x03f52e1bddd716344f5dd3c43ba2b81eb1aefb0bc7791aba3e54051b40963a50",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      }
-    ],
-    "verified_txs": 1,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-22T09:22:38Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "renoschubert",
-        "name": "Kenneth Komu",
-        "avatar_url": "https://avatars.githubusercontent.com/u/46114615?v=4"
-      },
-      {
-        "login": "kenkomu",
-        "name": "Kenneth Njoroge",
-        "avatar_url": "https://avatars.githubusercontent.com/u/95502725?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21",
-      "2026-08-22"
-    ],
-    "head_sha": "e9a3d82e41a30dff2a53594c83e407955900bff9",
-    "readme_hash": "84462d676f30ff83",
-    "desc_v6": true,
-    "summary": "Cross-chain privacy bridge with anonymous deposits and withdrawals.",
-    "description_long": "Airlock lets users connect their existing wallets, transfer assets into the STRK20 privacy pool, and withdraw to a different chain without any link being made on-chain between the two transactions. It includes features such as a live demo, deployed contracts on mainnet and Sepolia, and an anonymizer that splits withdrawals into standard denominations to enhance privacy. Users can monitor the anonymity set and timing disclosures directly from the mainnet pool.",
-    "latest_push": "Added functionality to the account panel for managing receipts and bills.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Anonymizer contract",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 569,
-    "deletions": 38,
-    "churn_pct": 7.3,
-    "sprint": {
-      "pushes": 57,
-      "additions": 13330,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": false,
-      "why_innovative": "It enables unlinkable cross-chain asset movement using a privacy pool mechanism.",
-      "why_complex": "No deployed contracts or proven engineering components are present.",
-      "reason": "Airlock creates a cross-chain privacy solution without direct links between transactions.",
-      "facts_v2": true
-    },
-    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "nyalthe",
