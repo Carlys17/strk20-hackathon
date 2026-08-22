@@ -21,7 +21,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-22T22:45:51Z",
+    "pushed_at": "2026-08-22T23:20:13Z",
     "stars": 1,
     "builders": [
       {
@@ -35,13 +35,13 @@
       "2026-08-21",
       "2026-08-22"
     ],
-    "head_sha": "4b628ec0b1788f57c90f8965ec502743a77e673f",
+    "head_sha": "4f7f83ec8e953cb162fc49f9e5311255e8fd2ddb",
     "readme_hash": "6f33f9fa054a6d99",
     "desc_v6": true,
-    "churn_pct": 0.9,
+    "churn_pct": 4.3,
     "summary": "Batch payment disbursement from a shielded balance to multiple recipients",
     "description_long": "Almoner allows users to make batch payments from a shielded balance, ensuring anonymity both in terms of amounts paid and recipient identities. It handles payments by moving budgets into an escrow contract, where registered recipients receive direct notes while others can claim funds upon registration. Built using Starknet, it features off-chain management and requires no proof to operate, with privacy differentiated between direct payments and escrowed allocations.",
-    "latest_push": "Reported unanswered version queries as unknown in wallet capability.",
+    "latest_push": "Added the verified Sepolia pool address with its 2 STRK fee.",
     "tooling": [
       {
         "label": "Cairo",
@@ -50,11 +50,11 @@
       }
     ],
     "has_readme": true,
-    "additions": 36,
-    "deletions": 16,
+    "additions": 210,
+    "deletions": 37,
     "sprint": {
-      "pushes": 75,
-      "additions": 22420,
+      "pushes": 80,
+      "additions": 22593,
       "deletions": 0,
       "computed": 2
     },
@@ -132,7 +132,6 @@
     "head_sha": "60bc58a47e7c6c703cec3b38ae4235dc9504f50a",
     "readme_hash": "a18c4a712ea1f4de",
     "desc_v6": true,
-    "churn_pct": 100,
     "summary": "Create conditional payments with hashlocks and time constraints.",
     "description_long": "ConditionalPay allows applications to make programmable, private settlements using hashlocks, time windows, and optional approval gates. It does not store user addresses, ensuring privacy while enabling a public and auditable system. The project operates on Starknet, using the STRK20 pool for transaction management, and features a state machine for payment interactions including creating, claiming, and refunding payments.",
     "latest_push": "Finalized documentation for ConditionalPay submission and Mainnet evidence.",
@@ -171,6 +170,7 @@
     "has_readme": true,
     "additions": 8390,
     "deletions": 971,
+    "churn_pct": 100,
     "sprint": {
       "pushes": 16,
       "additions": 20326,
@@ -225,7 +225,6 @@
     "head_sha": "3b1bfbcff0468cd31b3b716401c0f37e3a007d41",
     "readme_hash": "bb2993a6415b243d",
     "desc_v6": true,
-    "churn_pct": 2.7,
     "summary": "A mobile wallet for private transactions on Starknet using STRK20.",
     "description_long": "tip is a non-custodial mobile wallet for Starknet that allows users to shield, unshield, and send tokens privately from their devices. It is built with Dart and Flutter, and includes a client for the STRK20 privacy pool, with functionalities such as a discovery client for balances and a proving client for transaction processing. The app features advanced cryptographic protocols for secure messaging and data transport, all verified against established RFCs.",
     "latest_push": "Encoded the pool's proof submission rules in the proving_rules.dart file.",
@@ -233,6 +232,7 @@
     "has_readme": true,
     "additions": 191,
     "deletions": 0,
+    "churn_pct": 2.7,
     "sprint": {
       "pushes": 25,
       "additions": 11534,
@@ -4416,7 +4416,7 @@
       },
       {
         "address": "0x04f8f4a1a90899b6b61b98cebc245fbb49a139a4be7448685593bb10be969d21",
-        "network": "unknown"
+        "network": "mainnet"
       },
       {
         "address": "0x013c507ad43b4f2e61037cbd08ee3f15606d2dc538a17135b46c8c095415b0ab",
@@ -4562,7 +4562,7 @@
       "computed": 2
     },
     "assessment": null,
-    "star_evidence": "13 contracts deployed on mainnet, Cairo in the repository"
+    "star_evidence": "14 contracts deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "strk20-indexer",
