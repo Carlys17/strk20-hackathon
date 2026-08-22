@@ -1,5 +1,78 @@
 [
   {
+    "slug": "gavel",
+    "name": "gavel",
+    "one_liner": "Sealed-bid auctions where the bids are actually sealed - Vickrey, first-price and multi-unit auctions on the STRK20 privacy pool",
+    "category": "DeFi",
+    "repo_url": "https://github.com/mohdafzal11/gavel",
+    "demo_url": "https://gavel-lovat.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-08",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T18:59:58Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "mohdafzal11",
+        "name": "Mohd Afzal",
+        "avatar_url": "https://avatars.githubusercontent.com/u/78993009?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 7
+      }
+    ],
+    "active_days": [
+      "2026-08-22"
+    ],
+    "head_sha": "82109734d516b8e6cb81486c76be7a1993169988",
+    "readme_hash": "cae798eebcd30bf4",
+    "desc_v6": true,
+    "churn_pct": 48.9,
+    "summary": "Conduct sealed-bid auctions with native Vickrey and MultiUnit strategies.",
+    "description_long": "Gavel enables sealed-bid auctions on Starknet using the STRK20 privacy pool, making it possible to conduct Vickrey and MultiUnit auctions without exposing bidders' identities or bid amounts until the reveal phase. It does this by storing commitments within a privacy pool and allowing bids to be placed with escrows of identical collateral amounts, ensuring that no information is leaked before the bids are revealed. The system includes a reusable sealed-commitment primitive and an anonymizer contract, developed in Cairo with a structured repository layout.",
+    "latest_push": "Redesigned the interface and rebuilt it as a full product.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1457,
+    "deletions": 492,
+    "sprint": {
+      "pushes": 14,
+      "additions": 7339,
+      "deletions": 10,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
     "slug": "tip",
     "name": "tip",
     "one_liner": "A native mobile wallet for STRK20: private send, receive, and shield/unshield, non-custodial, built in Flutter.",
@@ -21,7 +94,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-22T18:28:44Z",
+    "pushed_at": "2026-08-22T18:55:09Z",
     "stars": 0,
     "builders": [
       {
@@ -34,25 +107,202 @@
     "active_days": [
       "2026-08-22"
     ],
-    "head_sha": "beb7540855b1d542bc52e8eb103ad4d3d8ec29ac",
-    "readme_hash": "c60c7baa8f1db8a6",
+    "head_sha": "78755b878a8e7e8d199bd52f6502af056738c70e",
+    "readme_hash": "bb2993a6415b243d",
     "desc_v6": true,
-    "churn_pct": 70.5,
-    "summary": "A private, mobile-native wallet for sending and receiving Starknet assets.",
-    "description_long": "tip is a non-custodial private wallet for Starknet that allows users to shield, unshield, and send assets privately from their mobile devices. It is built with Flutter and Dart, utilizing a native Dart client for the STRK20 privacy pool that implements cryptographic primitives such as the Poseidon hash suite and ECDH key agreements, with tests validating against Cairo contracts.",
-    "latest_push": "Added discovery and proving service clients with handling features.",
+    "churn_pct": 49.9,
+    "summary": "A mobile wallet for private transactions on Starknet using STRK20.",
+    "description_long": "tip is a non-custodial mobile wallet for Starknet that allows users to shield, unshield, and send tokens privately from their devices. It is built with Dart and Flutter, and includes a client for the STRK20 privacy pool, with functionalities such as a discovery client for balances and a proving client for transaction processing. The app features advanced cryptographic protocols for secure messaging and data transport, all verified against established RFCs.",
+    "latest_push": "Added QUIC varints, Binary HTTP, HPKE base mode, and Oblivious HTTP client.",
     "tooling": [],
     "has_readme": true,
-    "additions": 1592,
-    "deletions": 0,
+    "additions": 1872,
+    "deletions": 9,
     "sprint": {
-      "pushes": 8,
-      "additions": 3178,
+      "pushes": 12,
+      "additions": 5041,
       "deletions": 7,
       "computed": 2
     },
     "assessment": null,
     "star_evidence": ""
+  },
+  {
+    "slug": "nyalthe",
+    "name": "nyalthe",
+    "one_liner": "Privacy-preserving parametric claims on Starknet using STRK20",
+    "category": "Other",
+    "repo_url": "https://github.com/mystiquemide/nyalthe",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x07426e95949ac5bdc723237952e0a344c333ea4adb5968ea8a65b2b517a42a19",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T18:47:17Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "mystiquemide",
+        "name": "MystiqueMide",
+        "avatar_url": "https://avatars.githubusercontent.com/u/176629124?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-21",
+      "2026-08-22"
+    ],
+    "head_sha": "9be7af0f1b89418ff93b23add16010ef244581f5",
+    "readme_hash": "5936785fa9e94c4d",
+    "desc_v6": true,
+    "churn_pct": 1.3,
+    "summary": "A privacy-preserving claims rail for public verification of private payouts.",
+    "description_long": "Nyalthe allows for the creation of a funded event policy that settles private claimant payouts while enabling public verification of the policy and the transactions involved. The project consists of contracts that manage the policy creation, funding reserves, event acceptance, claim authorization, and private settlement. It is currently in early public build, with ongoing implementation and testing tracked in the repository.",
+    "latest_push": "Stopped repeat funding after policy settlement and made policy selection configurable.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 24,
+    "deletions": 1,
+    "sprint": {
+      "pushes": 26,
+      "additions": 5929,
+      "deletions": 1,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "1 contract deployed, Cairo in the repository"
+  },
+  {
+    "slug": "portage",
+    "name": "Portage.fun",
+    "one_liner": "Provably-fair idle creature-collecting on Starknet — hatch, evolve, and trade original creatures.",
+    "category": "Gaming",
+    "repo_url": "https://github.com/joaoolucas/portage-strk",
+    "demo_url": "https://portage-topaz.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T18:44:12Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "joaoolucas",
+        "name": "joaoolucas",
+        "avatar_url": "https://avatars.githubusercontent.com/u/83239762?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 15
+      }
+    ],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-21"
+    ],
+    "head_sha": "004b109a2c51b722338a9d4d2c24e0b921a39111",
+    "readme_hash": "5b94ae03d44a7f16",
+    "desc_v6": true,
+    "summary": "A cozy idle RPG for creature collecting, evolving, and trading.",
+    "description_long": "This project is a browser-based idle RPG focused on collecting and evolving creatures. It features tile movement, NPC interaction, offline progress, and local automatic saving. The game engine is built with Next.js, while creature mechanics are implemented in Cairo smart contracts. Local-first gameplay is prioritized, and the on-chain integration with STRK20 for privacy features is still under development.",
+    "latest_push": "Fixed issues with the caravan response, camera centering, and hunt failures.",
+    "tooling": [
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 393,
+    "deletions": 160,
+    "churn_pct": 3.8,
+    "sprint": {
+      "pushes": 100,
+      "additions": 3430,
+      "deletions": 202,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project is an idle creature-collecting RPG, which does not apply privacy in a non-obvious way.",
+      "why_complex": "There are no deployed contracts or depth in Cairo code at this stage.",
+      "reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "tony-strk",
@@ -100,7 +350,6 @@
     "head_sha": "d3e6fbeab9abfe57252a2b25bad2d43587e7997f",
     "readme_hash": "e768f9513c994d1a",
     "desc_v6": true,
-    "churn_pct": 35.7,
     "summary": "Browse the web anonymously and make private payments for AI agents.",
     "description_long": "Tony Strk is a remote MCP server that allows AI agents to browse the web and make payments without revealing the user's identity. It integrates a cloud headless browser operating on Tor for anonymous browsing and a wallet that uses shielded STRK20 transactions to ensure payment privacy. The system features distinct workers for browsing and payment, ensuring no single party can link both actions back to the user, maintaining privacy through a series of independent channels.",
     "latest_push": "Hardened the paywall anonymizer and added related tests.",
@@ -134,6 +383,7 @@
     "has_readme": true,
     "additions": 1056,
     "deletions": 78,
+    "churn_pct": 35.7,
     "sprint": {
       "pushes": 28,
       "additions": 17800,
@@ -275,7 +525,6 @@
     "head_sha": "29ef0e396bb49d1e57ee6f67a5844efa309041a2",
     "readme_hash": "789e783064556987",
     "desc_v6": true,
-    "churn_pct": 36.6,
     "summary": "Private standing authorization with scheduled charges on Starknet.",
     "description_long": "NIGHTSHIFT allows subscribers to commit funds in escrow once and be charged on a schedule using a write-once nullifier. The system operates through a custom anonymizer contract and a wallet API, ensuring that the subscriber's wallet remains anonymous and is never re-queried after the initial commitment. The payment cycle is facilitated by cryptographic gates that prevent early or duplicate charges, maintaining privacy without relying on external proving services.",
     "latest_push": "Added heartbeat instrument, charge feed, and story band to the board.",
@@ -309,6 +558,7 @@
     "has_readme": true,
     "additions": 7684,
     "deletions": 294,
+    "churn_pct": 36.6,
     "sprint": {
       "pushes": 47,
       "additions": 25049,
@@ -365,7 +615,6 @@
     "head_sha": "e5fe3cd5161a4ae8a53840057aa8206715fa85ec",
     "readme_hash": "eb88838303ebe515",
     "desc_v6": true,
-    "churn_pct": 22.5,
     "summary": "A privacy meter to ensure true anonymity in Starknet USDC transactions.",
     "description_long": "Crosslink checks if a private payment can remain unlinkable by analyzing the Starknet privacy pool's state. It features a Linkability Meter that evaluates factors like amount uniqueness, timing, and pool depth before allowing a transaction. The project includes a wallet-derived Starknet account, mainnet integration with real-time scoring, and a public API for integration.",
     "latest_push": "Added homepage hero, invariant badge, and new Docs page.",
@@ -379,6 +628,7 @@
     "has_readme": true,
     "additions": 816,
     "deletions": 54,
+    "churn_pct": 22.5,
     "sprint": {
       "pushes": 44,
       "additions": 13888,
@@ -387,98 +637,6 @@
     },
     "assessment": null,
     "star_evidence": ""
-  },
-  {
-    "slug": "nyalthe",
-    "name": "nyalthe",
-    "one_liner": "Privacy-preserving parametric claims on Starknet using STRK20",
-    "category": "Other",
-    "repo_url": "https://github.com/mystiquemide/nyalthe",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x07426e95949ac5bdc723237952e0a344c333ea4adb5968ea8a65b2b517a42a19",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-22T18:23:20Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "mystiquemide",
-        "name": "MystiqueMide",
-        "avatar_url": "https://avatars.githubusercontent.com/u/176629124?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-21",
-      "2026-08-22"
-    ],
-    "head_sha": "405883805b3663fec5f53605fd071f6115934e45",
-    "readme_hash": "5936785fa9e94c4d",
-    "desc_v6": true,
-    "churn_pct": 5,
-    "summary": "A privacy-preserving claims rail for public verification of private payouts.",
-    "description_long": "Nyalthe allows for the creation of a funded event policy that settles private claimant payouts while enabling public verification of the policy and the transactions involved. The project consists of contracts that manage the policy creation, funding reserves, event acceptance, claim authorization, and private settlement. It is currently in early public build, with ongoing implementation and testing tracked in the repository.",
-    "latest_push": "Split the Nyalthe funding and private settlement processes.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 65,
-    "deletions": 31,
-    "sprint": {
-      "pushes": 24,
-      "additions": 5906,
-      "deletions": 1,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "1 contract deployed, Cairo in the repository"
   },
   {
     "slug": "ghostorder",
@@ -524,7 +682,6 @@
     "head_sha": "1192e42b7cec330a71d67c63028577c7b773254c",
     "readme_hash": "d18c40c8383d55dd",
     "desc_v6": true,
-    "churn_pct": 23,
     "summary": "Conditional trading with hidden order parameters and private execution.",
     "description_long": "Ghost Orders is a privacy-focused conditional trading layer that allows users to create conditional trading instructions while keeping sensitive order details private. The project is built on Starknet and includes features such as private conditional order creation, hidden trigger parameters, and client-side condition monitoring, with a focus on integrating STRK20 for asset handling and settlement.",
     "latest_push": "Added the Ghost Orders commitment protocol with relevant files.",
@@ -548,6 +705,7 @@
     "has_readme": true,
     "additions": 834,
     "deletions": 6,
+    "churn_pct": 23,
     "sprint": {
       "pushes": 8,
       "additions": 9168,
@@ -562,79 +720,6 @@
       "reason": "Ghost Orders enables private conditional trading for STRK20, addressing privacy in order placements.",
       "facts_v2": true
     },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "gavel",
-    "name": "gavel",
-    "one_liner": "Sealed-bid auctions where the bids are actually sealed - Vickrey, first-price and multi-unit auctions on the STRK20 privacy pool",
-    "category": "DeFi",
-    "repo_url": "https://github.com/mohdafzal11/gavel",
-    "demo_url": "https://gavel-lovat.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-08",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-22T18:14:16Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "mohdafzal11",
-        "name": "Mohd Afzal",
-        "avatar_url": "https://avatars.githubusercontent.com/u/78993009?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 7
-      }
-    ],
-    "active_days": [
-      "2026-08-22"
-    ],
-    "head_sha": "57931d262a6355a54b80200b6ff076a5c262e39b",
-    "readme_hash": "cae798eebcd30bf4",
-    "desc_v6": true,
-    "churn_pct": 65.1,
-    "summary": "Conduct sealed-bid auctions with native Vickrey and MultiUnit strategies.",
-    "description_long": "Gavel enables sealed-bid auctions on Starknet using the STRK20 privacy pool, making it possible to conduct Vickrey and MultiUnit auctions without exposing bidders' identities or bid amounts until the reveal phase. It does this by storing commitments within a privacy pool and allowing bids to be placed with escrows of identical collateral amounts, ensuring that no information is leaked before the bids are revealed. The system includes a reusable sealed-commitment primitive and an anonymizer contract, developed in Cairo with a structured repository layout.",
-    "latest_push": "Fixed a false storage warning and deployed the demo to Vercel.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 33,
-    "deletions": 1973,
-    "sprint": {
-      "pushes": 12,
-      "additions": 6374,
-      "deletions": 10,
-      "computed": 2
-    },
-    "assessment": null,
     "star_evidence": "Cairo in the repository"
   },
   {
@@ -685,7 +770,6 @@
     "head_sha": "e1cd9222931d5e994e8dcac92219c1188d980217",
     "readme_hash": "709363b44ceb8140",
     "desc_v6": true,
-    "churn_pct": 1.3,
     "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
     "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
     "latest_push": "Fixed the deployment configuration for Rekber V2 testnet.",
@@ -699,6 +783,7 @@
     "has_readme": true,
     "additions": 178,
     "deletions": 170,
+    "churn_pct": 1.3,
     "sprint": {
       "pushes": 100,
       "additions": 16700,
@@ -895,7 +980,6 @@
     "head_sha": "34b58c3d28fd991f5e22a908948f5672e96bf57c",
     "readme_hash": "a871f5ff1107fb3c",
     "desc_v6": true,
-    "churn_pct": 1,
     "summary": "A whitehat rescue bot that sweeps exposed on-chain funds to safety.",
     "description_long": "Aegis monitors public repositories for accidentally leaked private keys and API keys, verifies if they control actual funds, and automatically sweeps those funds to a secure address before they can be exploited. It scans registered projects for sensitive filenames, checks for real balances, derives the Starknet account, deploys if necessary, and conducts sweeping operations entirely automated. Owners prove their identity through GitHub to reclaim their funds, which are transferred through the STRK20 shielded pool for enhanced privacy.",
     "latest_push": "Made claimable track the remaining rescued balance for new claims.",
@@ -939,6 +1023,7 @@
     "has_readme": true,
     "additions": 38,
     "deletions": 15,
+    "churn_pct": 1,
     "sprint": {
       "pushes": 81,
       "additions": 6010,
@@ -1001,7 +1086,6 @@
     "head_sha": "a67d2e7225ee6ef1a33a1f64a92919cf36329136",
     "readme_hash": "d1539211008af311",
     "desc_v6": true,
-    "churn_pct": 0.2,
     "summary": "A persistent strategy game for capturing sectors and battling rivals with delegated STRK.",
     "description_long": "Stake Wars is a non-custodial strategy game where players use their delegated STRK as FORCE to capture and defend Sectors on the Core. The game combines elements of territory management and strategic challenges without creating a separate game token. It includes a web application built with React, TypeScript, and Vite; a Go API; and contracts written in Cairo and Dojo.",
     "latest_push": "Refined the sector owner boundaries in the Planet component.",
@@ -1015,6 +1099,7 @@
     "has_readme": true,
     "additions": 39,
     "deletions": 11,
+    "churn_pct": 0.2,
     "sprint": {
       "pushes": 58,
       "additions": 34232,
@@ -3906,91 +3991,6 @@
     },
     "assessment": null,
     "star_evidence": ""
-  },
-  {
-    "slug": "portage",
-    "name": "Portage.fun",
-    "one_liner": "Provably-fair idle creature-collecting on Starknet — hatch, evolve, and trade original creatures.",
-    "category": "Gaming",
-    "repo_url": "https://github.com/joaoolucas/portage-strk",
-    "demo_url": "https://portage-topaz.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T17:31:05Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "joaoolucas",
-        "name": "joaoolucas",
-        "avatar_url": "https://avatars.githubusercontent.com/u/83239762?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 15
-      }
-    ],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-21"
-    ],
-    "head_sha": "004b109a2c51b722338a9d4d2c24e0b921a39111",
-    "readme_hash": "5b94ae03d44a7f16",
-    "desc_v6": true,
-    "summary": "A cozy idle RPG for creature collecting, evolving, and trading.",
-    "description_long": "This project is a browser-based idle RPG focused on collecting and evolving creatures. It features tile movement, NPC interaction, offline progress, and local automatic saving. The game engine is built with Next.js, while creature mechanics are implemented in Cairo smart contracts. Local-first gameplay is prioritized, and the on-chain integration with STRK20 for privacy features is still under development.",
-    "latest_push": "Fixed issues with the caravan response, camera centering, and hunt failures.",
-    "tooling": [
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 393,
-    "deletions": 160,
-    "churn_pct": 3.8,
-    "sprint": {
-      "pushes": 100,
-      "additions": 3430,
-      "deletions": 202,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "The project is an idle creature-collecting RPG, which does not apply privacy in a non-obvious way.",
-      "why_complex": "There are no deployed contracts or depth in Cairo code at this stage.",
-      "reason": "The project currently lacks actual implemented contracts and complexity in engineering.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "shadowledger",
