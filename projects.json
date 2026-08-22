@@ -1,5 +1,347 @@
 [
   {
+    "slug": "aegis-rescue",
+    "name": "Aegis Rescue",
+    "one_liner": "Whitehat rescue bot: sweeps exposed on-chain funds into the STRK20 shielded pool before attackers can, returns them to verified GitHub owners.",
+    "category": "Tooling",
+    "repo_url": "https://github.com/justbiar/aegis",
+    "demo_url": "https://aegis-peach-six.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project converts a privacy pool into a safe box for accidentally leaked keys.",
+    "contracts": [
+      {
+        "address": "0x78ae662e0cc6d1ab2cfeaf2a51ba8783d88e31886f88a794d142f95a6f8735b",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x1d6dc36e95456923d773b7d2f381ea7557ecdbbdf5a8b1807113c5d80646ba4",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x4e9bdb6368afb6ae8613e994361acb7737cf48ef0fe6dd1525cc30f0c6820a3",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x7f96fbdf92b465b97286f95dc9c2553d2af557ca8e3b2cbe67acb3acf211f51",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x65246d96500da46c31394b26ff832e431501d9d6693083aca29a81ef27299dd",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      },
+      {
+        "hash": "0x4ec92a188814f63c2a4acc4596eb3af15cabbf9a2a50b1a1b20aca1a3f02b43",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      },
+      {
+        "hash": "0x28613ae48d65bb4a5ff4113299a7d600861cc4c9315e70d6085ca05d008a8fd",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      },
+      {
+        "hash": "0x10f38798ec3dba77d1abd2c9c78e22d4c6c42f923d96668592638df2c298016",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      }
+    ],
+    "verified_txs": 3,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": true
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T08:46:41Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "justbiar",
+        "name": "Biar",
+        "avatar_url": "https://avatars.githubusercontent.com/u/160464890?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-17",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-22"
+    ],
+    "head_sha": "75858347f0c40f0033d2e114ad2c1a595d83fc6b",
+    "readme_hash": "a871f5ff1107fb3c",
+    "desc_v6": true,
+    "churn_pct": 1.5,
+    "summary": "A whitehat rescue bot that sweeps exposed on-chain funds to safety.",
+    "description_long": "Aegis monitors public repositories for accidentally leaked private keys and API keys, verifies if they control actual funds, and automatically sweeps those funds to a secure address before they can be exploited. It scans registered projects for sensitive filenames, checks for real balances, derives the Starknet account, deploys if necessary, and conducts sweeping operations entirely automated. Owners prove their identity through GitHub to reclaim their funds, which are transferred through the STRK20 shielded pool for enhanced privacy.",
+    "latest_push": "Kept the wallet debug panel local-only and added mainnet echo transactions.",
+    "tooling": [
+      {
+        "label": "AVNU",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 50,
+    "deletions": 17,
+    "sprint": {
+      "pushes": 67,
+      "additions": 5219,
+      "deletions": 16,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": false,
+      "why_innovative": "It rescues exposed on-chain funds by using privacy to thwart potential theft in a novel domain.",
+      "why_complex": "No deployed contracts or complex Cairo logic has been presented yet.",
+      "reason": "The project converts a privacy pool into a safe box for accidentally leaked keys.",
+      "facts_v2": true
+    },
+    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "cutout",
+    "name": "Cutout",
+    "one_liner": "A privacy-liquidity router for STRK20. Before you sign, it checks whether your amount has meaningful public cover and routes flexible transactions toward healthier exact-amount cohorts.",
+    "category": "Infra",
+    "repo_url": "https://github.com/dmetagame/cutout",
+    "demo_url": "https://cutout.rouma.online/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Cutout provides privacy-aware deposit recommendations based on public cohort evidence.",
+    "contracts": [],
+    "transactions": [
+      {
+        "hash": "0x0759b56d2933641379f1797c076dbc4951697d49ecb14ccbc34424c4e30975e6",
+        "ok": true,
+        "pool": true,
+        "mine": null
+      },
+      {
+        "hash": "0x05bc97bd56952cc88a8df5a9bfdba4167a374b48df73ac6781e732bc59f1234d",
+        "ok": true,
+        "pool": true,
+        "mine": null
+      },
+      {
+        "hash": "0x0664cc565fd645886bc0717fc2def36ba645ce00e3c7c8fb7206f2e051846b75",
+        "ok": true,
+        "pool": true,
+        "mine": null
+      },
+      {
+        "hash": "0x006775cba74f53046d2fa584aa4cd2bf7a6e5191c0f4a199119f485a578007ba",
+        "ok": true,
+        "pool": true,
+        "mine": null
+      }
+    ],
+    "verified_txs": 4,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": true
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T08:43:44Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "dmetagame",
+        "name": "dmetagame",
+        "avatar_url": "https://avatars.githubusercontent.com/u/118340345?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-22"
+    ],
+    "head_sha": "f34655b7b2f19b47b7fcdeec832fce39a455a6a7",
+    "readme_hash": "9ede26e662465d9d",
+    "desc_v6": true,
+    "churn_pct": 27.9,
+    "summary": "A wallet-native signing guard for shield transactions using public STRK20 evidence.",
+    "description_long": "Cutout checks proposed token and deposit amounts for public cohort cover before users sign shield transactions. It recommends an optimal amount change if allowed by the user, relying on deterministic offchain checks and public evidence without requiring a specific contract. The system consists of a Next.js signing client, a supervised indexer, and a SQLite read model, ensuring all sensitive processes happen client-side.",
+    "latest_push": "Released Cutout version 0.2.0 with extensive documentation and component changes.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 4637,
+    "deletions": 409,
+    "sprint": {
+      "pushes": 17,
+      "additions": 24446,
+      "deletions": 191,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "Cutout uses deterministic public STRK20 evidence to avoid predictable deposit amounts.",
+      "why_complex": "The architecture includes a supervised incremental indexer and CUTOUT-v1.3 evaluation logic.",
+      "reason": "Cutout provides privacy-aware deposit recommendations based on public cohort evidence.",
+      "facts_v2": true
+    },
+    "star_evidence": ""
+  },
+  {
+    "slug": "crosslink",
+    "name": "Crosslink",
+    "one_liner": "Unlinkable cross-chain payouts: fund a shielded balance on Starknet, pay anyone on any chain, and neither the public nor the recipient can trace it back to you.",
+    "category": "Payments",
+    "repo_url": "https://github.com/CaptainDiv/crosslink",
+    "demo_url": "https://captaindiv.github.io/crosslink/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-22",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T08:41:03Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "CaptainDiv",
+        "name": "Captain",
+        "avatar_url": "https://avatars.githubusercontent.com/u/207330336?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Sonnet 5",
+        "avatar_url": "",
+        "commits": 16
+      }
+    ],
+    "active_days": [
+      "2026-08-19",
+      "2026-08-21",
+      "2026-08-22"
+    ],
+    "head_sha": "d556dba6344b3ebd1afec2227293e4f35d725c81",
+    "readme_hash": "1438d46a21ac9733",
+    "desc_v6": true,
+    "churn_pct": 4.4,
+    "summary": "Unlinkable cross-chain payouts from a shielded Starknet balance.",
+    "description_long": "Crosslink enables third-party payments in native USDC on their own chain, funded from a shielded Starknet balance. It features a Linkability Meter that assesses the pool's state to ensure send transactions maintain unlinkability. Built with a wallet-derived Starknet account, the system includes a live demo of private and public transactions, and uses a Wallet API for shielding and private transfer operations.",
+    "latest_push": "Added design tokens for the visual redesign in style.css.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 102,
+    "deletions": 28,
+    "sprint": {
+      "pushes": 27,
+      "additions": 12165,
+      "deletions": 12,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
     "slug": "strk20-privacy-wallet",
     "name": "strk20-privacy-wallet",
     "one_liner": "Umbra-grade privacy wallet for Starknet powered by STRK20 privacy pool",
@@ -50,7 +392,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-22T08:23:07Z",
+    "pushed_at": "2026-08-22T08:38:35Z",
     "stars": 0,
     "builders": [
       {
@@ -70,13 +412,13 @@
       "2026-08-21",
       "2026-08-22"
     ],
-    "head_sha": "06c4a3994019962c74e719b53106662ab7e18568",
+    "head_sha": "fc0eddd23bfc1c7034084cfbfc418a617459ff8d",
     "readme_hash": "eded08229639161f",
     "desc_v6": true,
-    "churn_pct": 0.2,
+    "churn_pct": 0.1,
     "summary": "Private perpetual futures trading with shielded collateral on Starknet.",
     "description_long": "This project implements a privacy-focused perpetual futures trading protocol called PEL (Private Execution Layer) on Starknet. Traders can open leveraged positions with shielded collateral, concealing their position details while ensuring cryptographic proof via Groth16 zk-SNARKs. The core components include the `PELPerpsSTRK20Bridge` for managing shielded notes within the STRK20 privacy pool, which exchanges notes in a single transaction to maintain privacy throughout the lifecycle of the trading operations.",
-    "latest_push": "Fixed fail-closed LP requirements and refined insurance-backed profit calculations.",
+    "latest_push": "Fixed PositionClosed payout event parsing and added canonical liquidation tests.",
     "tooling": [
       {
         "label": "AVNU",
@@ -120,10 +462,10 @@
       }
     ],
     "has_readme": true,
-    "additions": 208,
-    "deletions": 156,
+    "additions": 106,
+    "deletions": 22,
     "sprint": {
-      "pushes": 78,
+      "pushes": 79,
       "additions": 20115,
       "deletions": 0,
       "computed": 2
@@ -222,76 +564,6 @@
       "pushes": 4,
       "additions": 17845,
       "deletions": 270,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
-  },
-  {
-    "slug": "crosslink",
-    "name": "Crosslink",
-    "one_liner": "Unlinkable cross-chain payouts: fund a shielded balance on Starknet, pay anyone on any chain, and neither the public nor the recipient can trace it back to you.",
-    "category": "Payments",
-    "repo_url": "https://github.com/CaptainDiv/crosslink",
-    "demo_url": "https://captaindiv.github.io/crosslink/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-22",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-22T08:14:20Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "CaptainDiv",
-        "name": "Captain",
-        "avatar_url": "https://avatars.githubusercontent.com/u/207330336?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Sonnet 5",
-        "avatar_url": "",
-        "commits": 15
-      }
-    ],
-    "active_days": [
-      "2026-08-19",
-      "2026-08-21",
-      "2026-08-22"
-    ],
-    "head_sha": "65fd5b86780a03787b29ca771b7ec4f2a96f6840",
-    "readme_hash": "1438d46a21ac9733",
-    "desc_v6": true,
-    "churn_pct": 13.5,
-    "summary": "Unlinkable cross-chain payouts from a shielded Starknet balance.",
-    "description_long": "Crosslink enables third-party payments in native USDC on their own chain, funded from a shielded Starknet balance. It features a Linkability Meter that assesses the pool's state to ensure send transactions maintain unlinkability. Built with a wallet-derived Starknet account, the system includes a live demo of private and public transactions, and uses a Wallet API for shielding and private transfer operations.",
-    "latest_push": "Fixed demo.html by deduplicating the verdict card and adding real addresses.",
-    "tooling": [
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 203,
-    "deletions": 189,
-    "sprint": {
-      "pushes": 26,
-      "additions": 12091,
-      "deletions": 12,
       "computed": 2
     },
     "assessment": null,
@@ -546,6 +818,61 @@
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "veilflow",
+    "name": "VeilFlow",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/thebhavye/VeilFlow",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T07:34:41Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "thebhavye",
+        "name": "thebhavyekathuria",
+        "avatar_url": "https://avatars.githubusercontent.com/u/182117439?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-22"
+    ],
+    "head_sha": "bb87601eab2f8685a6a3436f73ddace6f21b54a8",
+    "readme_hash": "5dc59a1ae0de2f2c",
+    "desc_v6": true,
+    "churn_pct": 0,
+    "summary": "Private payments and DeFi services on Starknet.",
+    "description_long": "VeilFlow allows users to make private payments and use decentralized finance features on Starknet. It integrates the STRK20 privacy pool to ensure transaction confidentiality while providing DeFi functionalities.",
+    "latest_push": "Added strk20.json file and README for STRK20 registration.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 13,
+    "deletions": 0,
+    "sprint": {
+      "pushes": 1,
+      "additions": 13,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
   },
   {
     "slug": "lantern",
@@ -1203,141 +1530,6 @@
     },
     "assessment": null,
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "aegis-rescue",
-    "name": "Aegis Rescue",
-    "one_liner": "Whitehat rescue bot: sweeps exposed on-chain funds into the STRK20 shielded pool before attackers can, returns them to verified GitHub owners.",
-    "category": "Tooling",
-    "repo_url": "https://github.com/justbiar/aegis",
-    "demo_url": "https://aegis-peach-six.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project converts a privacy pool into a safe box for accidentally leaked keys.",
-    "contracts": [
-      {
-        "address": "0x78ae662e0cc6d1ab2cfeaf2a51ba8783d88e31886f88a794d142f95a6f8735b",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [
-      {
-        "hash": "0x65246d96500da46c31394b26ff832e431501d9d6693083aca29a81ef27299dd",
-        "ok": true,
-        "pool": true,
-        "mine": false,
-        "note": "touched the pool, but not through this project's contracts"
-      },
-      {
-        "hash": "0x4ec92a188814f63c2a4acc4596eb3af15cabbf9a2a50b1a1b20aca1a3f02b43",
-        "ok": true,
-        "pool": true,
-        "mine": false,
-        "note": "touched the pool, but not through this project's contracts"
-      },
-      {
-        "hash": "0x28613ae48d65bb4a5ff4113299a7d600861cc4c9315e70d6085ca05d008a8fd",
-        "ok": true,
-        "pool": true,
-        "mine": false,
-        "note": "touched the pool, but not through this project's contracts"
-      },
-      {
-        "hash": "0x10f38798ec3dba77d1abd2c9c78e22d4c6c42f923d96668592638df2c298016",
-        "ok": true,
-        "pool": true,
-        "mine": false,
-        "note": "touched the pool, but not through this project's contracts"
-      }
-    ],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-21T23:23:55Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "justbiar",
-        "name": "Biar",
-        "avatar_url": "https://avatars.githubusercontent.com/u/160464890?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-17",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21"
-    ],
-    "head_sha": "66b0e45ac78d896eddab0667a31becdcc8fc56db",
-    "readme_hash": "a871f5ff1107fb3c",
-    "desc_v6": true,
-    "summary": "A whitehat rescue bot that sweeps exposed on-chain funds to safety.",
-    "description_long": "Aegis monitors public repositories for accidentally leaked private keys and API keys, verifies if they control actual funds, and automatically sweeps those funds to a secure address before they can be exploited. It scans registered projects for sensitive filenames, checks for real balances, derives the Starknet account, deploys if necessary, and conducts sweeping operations entirely automated. Owners prove their identity through GitHub to reclaim their funds, which are transferred through the STRK20 shielded pool for enhanced privacy.",
-    "latest_push": "Restricted claim payouts to the actual safe wallet.",
-    "tooling": [
-      {
-        "label": "AVNU",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 51,
-    "deletions": 7,
-    "churn_pct": 1.3,
-    "sprint": {
-      "pushes": 62,
-      "additions": 5186,
-      "deletions": 16,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": false,
-      "why_innovative": "It rescues exposed on-chain funds by using privacy to thwart potential theft in a novel domain.",
-      "why_complex": "No deployed contracts or complex Cairo logic has been presented yet.",
-      "reason": "The project converts a privacy pool into a safe box for accidentally leaked keys.",
-      "facts_v2": true
-    },
-    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "ghostline",
@@ -5255,123 +5447,6 @@
     },
     "assessment": null,
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "cutout",
-    "name": "Cutout",
-    "one_liner": "A privacy-liquidity router for STRK20. Before you sign, it checks whether your amount has meaningful public cover and routes flexible transactions toward healthier exact-amount cohorts.",
-    "category": "Infra",
-    "repo_url": "https://github.com/dmetagame/cutout",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Cutout provides privacy-aware deposit recommendations based on public cohort evidence.",
-    "contracts": [],
-    "transactions": [
-      {
-        "hash": "0x0759b56d2933641379f1797c076dbc4951697d49ecb14ccbc34424c4e30975e6",
-        "ok": true,
-        "pool": true,
-        "mine": null
-      },
-      {
-        "hash": "0x05bc97bd56952cc88a8df5a9bfdba4167a374b48df73ac6781e732bc59f1234d",
-        "ok": true,
-        "pool": true,
-        "mine": null
-      },
-      {
-        "hash": "0x0664cc565fd645886bc0717fc2def36ba645ce00e3c7c8fb7206f2e051846b75",
-        "ok": true,
-        "pool": true,
-        "mine": null
-      },
-      {
-        "hash": "0x006775cba74f53046d2fa584aa4cd2bf7a6e5191c0f4a199119f485a578007ba",
-        "ok": true,
-        "pool": true,
-        "mine": null
-      }
-    ],
-    "verified_txs": 4,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": true
-    },
-    "status": "building",
-    "pushed_at": "2026-08-20T18:42:33Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "dmetagame",
-        "name": "dmetagame",
-        "avatar_url": "https://avatars.githubusercontent.com/u/118340345?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20"
-    ],
-    "head_sha": "636e81d1686e701c6c9e10f9c192289979e1ebbe",
-    "readme_hash": "e984a3e1a6caa01b",
-    "desc_v6": true,
-    "summary": "A wallet-native signing guard for shield transactions using public STRK20 evidence.",
-    "description_long": "Cutout checks proposed token and deposit amounts for public cohort cover before users sign shield transactions. It recommends an optimal amount change if allowed by the user, relying on deterministic offchain checks and public evidence without requiring a specific contract. The system consists of a Next.js signing client, a supervised indexer, and a SQLite read model, ensuring all sensitive processes happen client-side.",
-    "latest_push": "Added audit notes and maintained fresh snapshots during sync.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1078,
-    "deletions": 42,
-    "churn_pct": 7.5,
-    "sprint": {
-      "pushes": 16,
-      "additions": 23604,
-      "deletions": 196,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "Cutout uses deterministic public STRK20 evidence to avoid predictable deposit amounts.",
-      "why_complex": "The architecture includes a supervised incremental indexer and CUTOUT-v1.3 evaluation logic.",
-      "reason": "Cutout provides privacy-aware deposit recommendations based on public cohort evidence.",
-      "facts_v2": true
-    },
-    "star_evidence": ""
   },
   {
     "slug": "tacit",
