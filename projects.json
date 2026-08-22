@@ -21,7 +21,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-22T13:53:26Z",
+    "pushed_at": "2026-08-22T14:20:19Z",
     "stars": 0,
     "builders": [
       {
@@ -42,13 +42,13 @@
       "2026-08-21",
       "2026-08-22"
     ],
-    "head_sha": "9216a5975b27bfe2952934aaeaf9cec685321de2",
+    "head_sha": "365ad8bae4f2e46301a64ae28e054ccae73a2cb1",
     "readme_hash": "df3ba2d8be71fc10",
     "desc_v6": true,
-    "churn_pct": 5.5,
+    "churn_pct": 10,
     "summary": "Privacy-first invoicing and settlement for independent workers and teams.",
     "description_long": "CipherBill enables users to connect a Starknet wallet, shield STRK, create invoices or payment requests, and settle through private transfers. It is built with Next.js, React, TypeScript, and the Starknet.js Wallet API, integrating the STRK20 privacy pool. The application supports selective evidence exports, allowing users to share metadata without exposing complete financial details.",
-    "latest_push": "Added the one-time ephemeral invoice engine and its tests.",
+    "latest_push": "Added private early rebate and invoice insurance engines.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -77,16 +77,164 @@
       }
     ],
     "has_readme": true,
-    "additions": 837,
-    "deletions": 0,
+    "additions": 1724,
+    "deletions": 7,
     "sprint": {
-      "pushes": 10,
-      "additions": 25460,
-      "deletions": 276,
+      "pushes": 12,
+      "additions": 25694,
+      "deletions": 44,
       "computed": 2
     },
     "assessment": null,
     "star_evidence": ""
+  },
+  {
+    "slug": "crosslink",
+    "name": "Crosslink",
+    "one_liner": "Crosslink measures whether a private payment is actually private. StarkWare's bridgeOutToWallet already does unlinkable payout to any address — what nothing does is tell you whether the anonymity set is deep enough for that to mean anything. Our Linkability Meter scores a pending send against the live mainnet pool on amount uniqueness, timing, channel freshness and plausible-set size, and blocks the send when privacy would be fake. Live on mainnet; it gated our own transfers. Roadmap: an embeddable toggle protocols can drop into their own send flow, and USDC cross-chain corridors via CCTP.",
+    "category": "Payments",
+    "repo_url": "https://github.com/CaptainDiv/crosslink",
+    "demo_url": "https://crosslink-delta.vercel.app/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-22",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T14:18:16Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "CaptainDiv",
+        "name": "Captain",
+        "avatar_url": "https://avatars.githubusercontent.com/u/207330336?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Sonnet 5",
+        "avatar_url": "",
+        "commits": 29
+      }
+    ],
+    "active_days": [
+      "2026-08-19",
+      "2026-08-21",
+      "2026-08-22"
+    ],
+    "head_sha": "9c2f9dc7d96cef0f3e4038b205ff59c4de8ac240",
+    "readme_hash": "ddca8a5ba1938ffb",
+    "desc_v6": true,
+    "churn_pct": 23.7,
+    "summary": "A privacy tool that verifies the anonymity of private payments on Starknet.",
+    "description_long": "Crosslink checks if a private payment has sufficient anonymity before proceeding. It features a Linkability Meter that evaluates pending sends based on the current state of the Starknet privacy pool, blocking transactions that don't meet privacy thresholds. The project includes a wallet-derived Starknet account system, a live scoring API, and a side-by-side demo contrasting public and private transfers.",
+    "latest_push": "Made @crosslink/meter a standalone package and implemented a scoring API.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 778,
+    "deletions": 19,
+    "sprint": {
+      "pushes": 40,
+      "additions": 13126,
+      "deletions": 13,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
+    "slug": "vinss",
+    "name": "VINSS",
+    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/DXJLabs/vinss",
+    "demo_url": "https://vinss-nu.vercel.app/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-01",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T14:13:27Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ntfound-dev",
+        "name": "ntfound-dev",
+        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
+      },
+      {
+        "login": "DXJLabs",
+        "name": "DXJ Labs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-22"
+    ],
+    "head_sha": "435cc9a2f260c0d559be553fe377459595259baa",
+    "readme_hash": "709363b44ceb8140",
+    "desc_v6": true,
+    "churn_pct": 11,
+    "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
+    "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
+    "latest_push": "Added Rekber V2 settlement and certificates to the project.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 2126,
+    "deletions": 526,
+    "sprint": {
+      "pushes": 100,
+      "additions": 16115,
+      "deletions": 1993,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "creates a private deal room for encrypted negotiations and offers, not typical in this domain.",
+      "why_complex": "includes multiple Cairo helper contracts for messaging, escrow, and requires event decryption via an indexer.",
+      "reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "one-way",
@@ -130,7 +278,6 @@
     "head_sha": "a07acc5d1972e9ad94fe605d3b8d4b1e7f8bd033",
     "readme_hash": "d6e46ace8afaa189",
     "desc_v6": true,
-    "churn_pct": 49.4,
     "summary": "A one-way door for ERC-20 tokens that enables private transfers and anonymous payments.",
     "description_long": "OneWay allows users to get paid anonymously via a ghost address that does not reveal their identity. Users can also transfer funds from a known wallet to a private balance, and later exit to a fresh address on the same chain or another. The system is built using EVM-compatible contracts and a privacy layer, with security provided by a unique commitment derived from the user's signature.",
     "latest_push": "Added shared ingress functionality for ghost sweeps in the pool.",
@@ -144,6 +291,7 @@
     "has_readme": true,
     "additions": 634,
     "deletions": 98,
+    "churn_pct": 49.4,
     "sprint": {
       "pushes": 9,
       "additions": 6125,
@@ -204,7 +352,6 @@
     "head_sha": "3b7b5c135a4fd69bed61aa08abe0674b4edc64ea",
     "readme_hash": "2388972a22698009",
     "desc_v6": true,
-    "churn_pct": 0.4,
     "summary": "Encrypted negotiation and atomic settlement for AI agents.",
     "description_long": "Erebus enables AI agents to negotiate in encrypted channels and settle transactions atomically without revealing the negotiation details. It consists of a reference agent flow running in the browser, using the STRK20 privacy pool to manage encrypted note salts and offering selective disclosure capabilities through viewing keys. The system is structured for agent autonomy, employing Starknet's account abstraction for gasless operations, and focuses on message and relationship privacy.",
     "latest_push": "Documented agents running on MCP v3, covering DoD 1, 3, and 4.",
@@ -223,6 +370,7 @@
     "has_readme": true,
     "additions": 97,
     "deletions": 1,
+    "churn_pct": 0.4,
     "sprint": {
       "pushes": 49,
       "additions": 14293,
@@ -1073,76 +1221,6 @@
     "star_evidence": "Cairo in the repository"
   },
   {
-    "slug": "crosslink",
-    "name": "Crosslink",
-    "one_liner": "Crosslink measures whether a private payment is actually private. StarkWare's bridgeOutToWallet already does unlinkable payout to any address — what nothing does is tell you whether the anonymity set is deep enough for that to mean anything. Our Linkability Meter scores a pending send against the live mainnet pool on amount uniqueness, timing, channel freshness and plausible-set size, and blocks the send when privacy would be fake. Live on mainnet; it gated our own transfers. Roadmap: an embeddable toggle protocols can drop into their own send flow, and USDC cross-chain corridors via CCTP.",
-    "category": "Payments",
-    "repo_url": "https://github.com/CaptainDiv/crosslink",
-    "demo_url": "https://crosslink-delta.vercel.app/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-22",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-22T10:32:20Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "CaptainDiv",
-        "name": "Captain",
-        "avatar_url": "https://avatars.githubusercontent.com/u/207330336?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Sonnet 5",
-        "avatar_url": "",
-        "commits": 26
-      }
-    ],
-    "active_days": [
-      "2026-08-19",
-      "2026-08-21",
-      "2026-08-22"
-    ],
-    "head_sha": "40f25a722f9372781d75f6ce66e5379a16f236d9",
-    "readme_hash": "1438d46a21ac9733",
-    "desc_v6": true,
-    "summary": "Unlinkable cross-chain payouts from a shielded Starknet balance.",
-    "description_long": "Crosslink enables third-party payments in native USDC on their own chain, funded from a shielded Starknet balance. It features a Linkability Meter that assesses the pool's state to ensure send transactions maintain unlinkability. Built with a wallet-derived Starknet account, the system includes a live demo of private and public transactions, and uses a Wallet API for shielding and private transfer operations.",
-    "latest_push": "Fixed wallet detection to retry instead of using a synchronous read.",
-    "tooling": [
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 59,
-    "deletions": 13,
-    "churn_pct": 2.3,
-    "sprint": {
-      "pushes": 37,
-      "additions": 12367,
-      "deletions": 13,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
-  },
-  {
     "slug": "xence",
     "name": "Xence",
     "one_liner": "Proof you were right, before it happened - seal a probabilistic forecast, bond it privately through the STRK20 pool, and let the chain score your calibration. Public record, invisible position.",
@@ -1942,84 +2020,6 @@
       "computed": 2
     },
     "assessment": null,
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "vinss",
-    "name": "VINSS",
-    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/DXJLabs/vinss",
-    "demo_url": "https://vinss-nu.vercel.app/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-01",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-22T07:38:18Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "ntfound-dev",
-        "name": "ntfound-dev",
-        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
-      },
-      {
-        "login": "DXJLabs",
-        "name": "DXJ Labs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21",
-      "2026-08-22"
-    ],
-    "head_sha": "f0b311f9a8d4fb01789fa63acd6a3d6e3a002e07",
-    "readme_hash": "709363b44ceb8140",
-    "desc_v6": true,
-    "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
-    "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
-    "latest_push": "Added VINSS live transaction feed to room pages.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 48,
-    "deletions": 10,
-    "churn_pct": 0.3,
-    "sprint": {
-      "pushes": 100,
-      "additions": 15707,
-      "deletions": 2513,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "creates a private deal room for encrypted negotiations and offers, not typical in this domain.",
-      "why_complex": "includes multiple Cairo helper contracts for messaging, escrow, and requires event decryption via an indexer.",
-      "reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
-      "facts_v2": true
-    },
     "star_evidence": "Cairo in the repository"
   },
   {
