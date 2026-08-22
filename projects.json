@@ -1,63 +1,117 @@
 [
   {
-    "slug": "airlock",
-    "name": "Airlock",
-    "one_liner": "One-click privacy from any chain: bridge in, hold private, withdraw to a different chain with no on-chain link.",
-    "category": "Infra",
-    "repo_url": "https://github.com/kenkomu/airlock",
-    "demo_url": "https://kenkomu.github.io/airlock/",
+    "slug": "wotta",
+    "name": "Wotta",
+    "one_liner": "Pay anyone, from any chain, to an @handle or email - and let them receive privately on Starknet.",
+    "category": "Payments",
+    "repo_url": "https://github.com/wurli-sh/wotta-strk",
+    "demo_url": "",
     "demo_video": "",
     "x_handle": "",
-    "inspired_by": "RFP-09",
+    "inspired_by": "IDEA-09",
     "affiliation": "",
     "starred": false,
-    "star_reason": "Airlock creates a cross-chain privacy solution without direct links between transactions.",
-    "contracts": [
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T10:49:45Z",
+    "stars": 0,
+    "builders": [
       {
-        "address": "0x036816fe3c38b222e737ec4168b604309ab24154862d1a3f4c9db0042a90e97a",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x004c368ae058ee81b61884c5c47ee57484c4348669b66ac606366bbd1fd1b1fb",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x00de39f79e7e8b0dcdafe955330e206990203d6047a22e853eab9df83c440e6b",
-        "network": "sepolia"
+        "login": "wurli-sh",
+        "name": "wurli-sh",
+        "avatar_url": "https://avatars.githubusercontent.com/u/261630289?v=4"
       }
     ],
-    "transactions": [
+    "agents": [],
+    "active_days": [
+      "2026-08-20",
+      "2026-08-22"
+    ],
+    "head_sha": "db003b5fa6ae85cf311905016b29cc440bca0402",
+    "readme_hash": "",
+    "desc_v6": true,
+    "churn_pct": 100,
+    "summary": "Pay anyone from any chain to an @handle or email for private receipt on Starknet.",
+    "description_long": "Send payments to users identified by an @handle or email address. Recipients receive the funds privately on Starknet.",
+    "latest_push": "Added Wotta Starknet escrow and CCTP router contracts.",
+    "tooling": [
       {
-        "hash": "0x03f52e1bddd716344f5dd3c43ba2b81eb1aefb0bc7791aba3e54051b40963a50",
-        "ok": true,
-        "pool": true,
-        "mine": true
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
       }
     ],
-    "verified_txs": 1,
+    "has_readme": false,
+    "additions": 19155,
+    "deletions": 627,
+    "sprint": {
+      "pushes": 11,
+      "additions": 19924,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "erebus",
+    "name": "Erebus",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/PoulavBhowmick03/Erebus",
+    "demo_url": "https://erebus-private-agents.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Erebus enables privacy in autonomous agent transactions with novel encrypted negotiation.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
     "requirements": {
       "demo": true,
       "video": false,
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-22T10:18:29Z",
-    "stars": 0,
+    "pushed_at": "2026-08-22T10:45:15Z",
+    "stars": 2,
     "builders": [
       {
-        "login": "renoschubert",
-        "name": "Kenneth Komu",
-        "avatar_url": "https://avatars.githubusercontent.com/u/46114615?v=4"
+        "login": "PoulavBhowmick03",
+        "name": "PoulavBhowmick03",
+        "avatar_url": "https://avatars.githubusercontent.com/u/133862694?v=4"
       },
       {
-        "login": "kenkomu",
-        "name": "Kenneth Njoroge",
-        "avatar_url": "https://avatars.githubusercontent.com/u/95502725?v=4"
+        "login": "ishitab02",
+        "name": "Ishita",
+        "avatar_url": "https://avatars.githubusercontent.com/u/139248026?v=4"
       }
     ],
     "agents": [],
     "active_days": [
+      "2026-08-14",
       "2026-08-15",
+      "2026-08-16",
       "2026-08-17",
       "2026-08-18",
       "2026-08-19",
@@ -65,13 +119,13 @@
       "2026-08-21",
       "2026-08-22"
     ],
-    "head_sha": "36e1355ba855312b01ef5b94c89b6d3f18ddb94c",
-    "readme_hash": "84462d676f30ff83",
+    "head_sha": "a5f55c3b5aa1c44f36abb82e03317ab2c0ecb818",
+    "readme_hash": "2388972a22698009",
     "desc_v6": true,
-    "churn_pct": 8.8,
-    "summary": "Cross-chain privacy bridge with anonymous deposits and withdrawals.",
-    "description_long": "Airlock lets users connect their existing wallets, transfer assets into the STRK20 privacy pool, and withdraw to a different chain without any link being made on-chain between the two transactions. It includes features such as a live demo, deployed contracts on mainnet and Sepolia, and an anonymizer that splits withdrawals into standard denominations to enhance privacy. Users can monitor the anonymity set and timing disclosures directly from the mainnet pool.",
-    "latest_push": "Added an account card, light mode, and responsive header behavior.",
+    "churn_pct": 24.7,
+    "summary": "Encrypted negotiation and atomic settlement for AI agents.",
+    "description_long": "Erebus enables AI agents to negotiate in encrypted channels and settle transactions atomically without revealing the negotiation details. It consists of a reference agent flow running in the browser, using the STRK20 privacy pool to manage encrypted note salts and offering selective disclosure capabilities through viewing keys. The system is structured for agent autonomy, employing Starknet's account abstraction for gasless operations, and focuses on message and relationship privacy.",
+    "latest_push": "Fixed serialization of u128 amounts as decimal strings at the JSON boundary.",
     "tooling": [
       {
         "label": "Cairo",
@@ -79,34 +133,99 @@
         "stack": false
       },
       {
-        "label": "Anonymizer contract",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "Starknet Foundry",
+        "label": "Rust",
         "live": false,
         "stack": false
       }
     ],
     "has_readme": true,
-    "additions": 677,
-    "deletions": 98,
+    "additions": 5270,
+    "deletions": 618,
     "sprint": {
-      "pushes": 60,
-      "additions": 13909,
-      "deletions": 0,
+      "pushes": 44,
+      "additions": 13823,
+      "deletions": 3476,
       "computed": 2
     },
     "assessment": {
       "innovative": true,
-      "complex": false,
-      "why_innovative": "It enables unlinkable cross-chain asset movement using a privacy pool mechanism.",
-      "why_complex": "No deployed contracts or proven engineering components are present.",
-      "reason": "Airlock creates a cross-chain privacy solution without direct links between transactions.",
+      "complex": true,
+      "why_innovative": "applies privacy to agent-to-agent commerce using encrypted negotiation channels.",
+      "why_complex": "implements AES-256-GCM-SIV for wire v2 and includes multiple interacting agents and roles.",
+      "reason": "Erebus enables privacy in autonomous agent transactions with novel encrypted negotiation.",
       "facts_v2": true
     },
-    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "crosslink",
+    "name": "Crosslink",
+    "one_liner": "Crosslink measures whether a private payment is actually private. StarkWare's bridgeOutToWallet already does unlinkable payout to any address — what nothing does is tell you whether the anonymity set is deep enough for that to mean anything. Our Linkability Meter scores a pending send against the live mainnet pool on amount uniqueness, timing, channel freshness and plausible-set size, and blocks the send when privacy would be fake. Live on mainnet; it gated our own transfers. Roadmap: an embeddable toggle protocols can drop into their own send flow, and USDC cross-chain corridors via CCTP.",
+    "category": "Payments",
+    "repo_url": "https://github.com/CaptainDiv/crosslink",
+    "demo_url": "https://crosslink-delta.vercel.app/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-22",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T10:32:20Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "CaptainDiv",
+        "name": "Captain",
+        "avatar_url": "https://avatars.githubusercontent.com/u/207330336?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Sonnet 5",
+        "avatar_url": "",
+        "commits": 26
+      }
+    ],
+    "active_days": [
+      "2026-08-19",
+      "2026-08-21",
+      "2026-08-22"
+    ],
+    "head_sha": "40f25a722f9372781d75f6ce66e5379a16f236d9",
+    "readme_hash": "1438d46a21ac9733",
+    "desc_v6": true,
+    "churn_pct": 2.3,
+    "summary": "Unlinkable cross-chain payouts from a shielded Starknet balance.",
+    "description_long": "Crosslink enables third-party payments in native USDC on their own chain, funded from a shielded Starknet balance. It features a Linkability Meter that assesses the pool's state to ensure send transactions maintain unlinkability. Built with a wallet-derived Starknet account, the system includes a live demo of private and public transactions, and uses a Wallet API for shielding and private transfer operations.",
+    "latest_push": "Fixed wallet detection to retry instead of using a synchronous read.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 59,
+    "deletions": 13,
+    "sprint": {
+      "pushes": 37,
+      "additions": 12367,
+      "deletions": 13,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
   },
   {
     "slug": "aegis-rescue",
@@ -182,7 +301,7 @@
       "mainnet": true
     },
     "status": "building",
-    "pushed_at": "2026-08-22T09:57:41Z",
+    "pushed_at": "2026-08-22T10:30:35Z",
     "stars": 0,
     "builders": [
       {
@@ -199,13 +318,13 @@
       "2026-08-21",
       "2026-08-22"
     ],
-    "head_sha": "6f4936c9413c7e45a8a5511ea06321b96e521f77",
+    "head_sha": "394b0ff2ac3e5ff2e1103868fe01afb800bd4f27",
     "readme_hash": "a871f5ff1107fb3c",
     "desc_v6": true,
-    "churn_pct": 3.7,
+    "churn_pct": 8,
     "summary": "A whitehat rescue bot that sweeps exposed on-chain funds to safety.",
     "description_long": "Aegis monitors public repositories for accidentally leaked private keys and API keys, verifies if they control actual funds, and automatically sweeps those funds to a secure address before they can be exploited. It scans registered projects for sensitive filenames, checks for real balances, derives the Starknet account, deploys if necessary, and conducts sweeping operations entirely automated. Owners prove their identity through GitHub to reclaim their funds, which are transferred through the STRK20 shielded pool for enhanced privacy.",
-    "latest_push": "Added batch payout functionality to process multiple claims in one transaction.",
+    "latest_push": "Split the claim panel into a claimant flow and a safe-wallet admin payout queue.",
     "tooling": [
       {
         "label": "AVNU",
@@ -244,11 +363,11 @@
       }
     ],
     "has_readme": true,
-    "additions": 168,
-    "deletions": 12,
+    "additions": 258,
+    "deletions": 137,
     "sprint": {
-      "pushes": 73,
-      "additions": 5546,
+      "pushes": 74,
+      "additions": 5667,
       "deletions": 16,
       "computed": 2
     },
@@ -258,6 +377,191 @@
       "why_innovative": "It rescues exposed on-chain funds by using privacy to thwart potential theft in a novel domain.",
       "why_complex": "No deployed contracts or complex Cairo logic has been presented yet.",
       "reason": "The project converts a privacy pool into a safe box for accidentally leaked keys.",
+      "facts_v2": true
+    },
+    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "mirage",
+    "name": "Mirage",
+    "one_liner": "One wallet, every chain, no trace. Shield any ERC-20 on Starknet, exit privately to 35+ chains via NEAR Intents.",
+    "category": "Consumer",
+    "repo_url": "https://github.com/YanYuanFE/mirage",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-09",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [
+      {
+        "hash": "0x7f419460965d6d83b2cc919a0f08d11dee212fe367849cfb1afe124ed14b511",
+        "ok": true,
+        "pool": true,
+        "mine": null
+      },
+      {
+        "hash": "0x7d643ebd88f2894b2733628fcc7363fd082e30a0ea0b47c3608149a7bbfc86c",
+        "ok": true,
+        "pool": true,
+        "mine": null
+      },
+      {
+        "hash": "0x3f556eafedae96409b43b7e20b0e2f56199cc74a1ea97b8e09a63c80e4ec0f2",
+        "ok": true,
+        "pool": true,
+        "mine": null
+      }
+    ],
+    "verified_txs": 3,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": true
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T10:21:18Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "EvanYan1024",
+        "name": "Evan",
+        "avatar_url": "https://avatars.githubusercontent.com/u/136288110?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-22"
+    ],
+    "head_sha": "87ef3b1b0fe41057550e37e2f12565040a52326d",
+    "readme_hash": "5fb9c87d7dabf411",
+    "desc_v6": true,
+    "churn_pct": 0.2,
+    "summary": "A privacy superapp for cross-chain transfers with no on-chain links.",
+    "description_long": "Mirage is a privacy superapp that transforms the STRK20 shielded pool on Starknet into a gateway for transferring assets across 35+ blockchains. Users can shield any ERC-20 token, execute private swaps, and send funds to fresh addresses on supported chains like BTC, Solana, and Arbitrum, effectively unlinking their main wallet from outgoing transactions. The implementation includes STRK20 for shielding, NEAR Intents for cross-chain execution, and a workflow engine for amount splitting and timing randomization, all running in a TEE.",
+    "latest_push": "Fixed inbound status polling to query EVM deposit address without felt padding.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 2,
+    "deletions": 3,
+    "sprint": {
+      "pushes": 20,
+      "additions": 10652,
+      "deletions": 14,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
+    "slug": "airlock",
+    "name": "Airlock",
+    "one_liner": "One-click privacy from any chain: bridge in, hold private, withdraw to a different chain with no on-chain link.",
+    "category": "Infra",
+    "repo_url": "https://github.com/kenkomu/airlock",
+    "demo_url": "https://kenkomu.github.io/airlock/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-09",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Airlock creates a cross-chain privacy solution without direct links between transactions.",
+    "contracts": [
+      {
+        "address": "0x036816fe3c38b222e737ec4168b604309ab24154862d1a3f4c9db0042a90e97a",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x004c368ae058ee81b61884c5c47ee57484c4348669b66ac606366bbd1fd1b1fb",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x00de39f79e7e8b0dcdafe955330e206990203d6047a22e853eab9df83c440e6b",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x03f52e1bddd716344f5dd3c43ba2b81eb1aefb0bc7791aba3e54051b40963a50",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      }
+    ],
+    "verified_txs": 1,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-22T10:18:29Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "renoschubert",
+        "name": "Kenneth Komu",
+        "avatar_url": "https://avatars.githubusercontent.com/u/46114615?v=4"
+      },
+      {
+        "login": "kenkomu",
+        "name": "Kenneth Njoroge",
+        "avatar_url": "https://avatars.githubusercontent.com/u/95502725?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-22"
+    ],
+    "head_sha": "36e1355ba855312b01ef5b94c89b6d3f18ddb94c",
+    "readme_hash": "84462d676f30ff83",
+    "desc_v6": true,
+    "summary": "Cross-chain privacy bridge with anonymous deposits and withdrawals.",
+    "description_long": "Airlock lets users connect their existing wallets, transfer assets into the STRK20 privacy pool, and withdraw to a different chain without any link being made on-chain between the two transactions. It includes features such as a live demo, deployed contracts on mainnet and Sepolia, and an anonymizer that splits withdrawals into standard denominations to enhance privacy. Users can monitor the anonymity set and timing disclosures directly from the mainnet pool.",
+    "latest_push": "Added an account card, light mode, and responsive header behavior.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Anonymizer contract",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 677,
+    "deletions": 98,
+    "churn_pct": 8.8,
+    "sprint": {
+      "pushes": 60,
+      "additions": 13909,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": false,
+      "why_innovative": "It enables unlinkable cross-chain asset movement using a privacy pool mechanism.",
+      "why_complex": "No deployed contracts or proven engineering components are present.",
+      "reason": "Airlock creates a cross-chain privacy solution without direct links between transactions.",
       "facts_v2": true
     },
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
@@ -330,7 +634,6 @@
     "head_sha": "19b1ed6932cfd4aa9a3d54576dffcfd54418bb37",
     "readme_hash": "02a6e416be7d0abe",
     "desc_v6": true,
-    "churn_pct": 14.6,
     "summary": "A private, stake-backed reputation layer for foresight and accountability.",
     "description_long": "Xence allows users to make probabilistic forecasts that are privately backed by stakes hidden in the STRK20 privacy pool. It records the commitment publicly, while ensuring the underlying position and stake amounts remain confidential, scoring users on their forecasting accuracy using Brier scores. Built using Cairo and various web technologies, it integrates with the Starknet Wallet API to maintain user privacy and facilitate secure transactions.",
     "latest_push": "Changed Xence's designation and fixed the asset menu functionality.",
@@ -349,6 +652,7 @@
     "has_readme": true,
     "additions": 870,
     "deletions": 76,
+    "churn_pct": 14.6,
     "sprint": {
       "pushes": 27,
       "additions": 29195,
@@ -357,76 +661,6 @@
     },
     "assessment": null,
     "star_evidence": "2 contracts deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "crosslink",
-    "name": "Crosslink",
-    "one_liner": "Crosslink measures whether a private payment is actually private. StarkWare's bridgeOutToWallet already does unlinkable payout to any address — what nothing does is tell you whether the anonymity set is deep enough for that to mean anything. Our Linkability Meter scores a pending send against the live mainnet pool on amount uniqueness, timing, channel freshness and plausible-set size, and blocks the send when privacy would be fake. Live on mainnet; it gated our own transfers. Roadmap: an embeddable toggle protocols can drop into their own send flow, and USDC cross-chain corridors via CCTP.",
-    "category": "Payments",
-    "repo_url": "https://github.com/CaptainDiv/crosslink",
-    "demo_url": "https://crosslink-delta.vercel.app/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-22",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-22T09:46:58Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "CaptainDiv",
-        "name": "Captain",
-        "avatar_url": "https://avatars.githubusercontent.com/u/207330336?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Sonnet 5",
-        "avatar_url": "",
-        "commits": 24
-      }
-    ],
-    "active_days": [
-      "2026-08-19",
-      "2026-08-21",
-      "2026-08-22"
-    ],
-    "head_sha": "0e51d708920890da8f243840cdc2ed259987d2ac",
-    "readme_hash": "1438d46a21ac9733",
-    "desc_v6": true,
-    "churn_pct": 1.7,
-    "summary": "Unlinkable cross-chain payouts from a shielded Starknet balance.",
-    "description_long": "Crosslink enables third-party payments in native USDC on their own chain, funded from a shielded Starknet balance. It features a Linkability Meter that assesses the pool's state to ensure send transactions maintain unlinkability. Built with a wallet-derived Starknet account, the system includes a live demo of private and public transactions, and uses a Wallet API for shielding and private transfer operations.",
-    "latest_push": "Fixed Vite base for environment awareness and added cross-page navigation.",
-    "tooling": [
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 50,
-    "deletions": 2,
-    "sprint": {
-      "pushes": 35,
-      "additions": 12321,
-      "deletions": 13,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
   },
   {
     "slug": "sealed",
@@ -549,7 +783,6 @@
     "head_sha": "a13a2cd58d1ae70994bc2ae0dc5c7bc036e82ef0",
     "readme_hash": "e2a35acfc7b9a547",
     "desc_v6": true,
-    "churn_pct": 3,
     "summary": "Private payroll with unlinkable note transfers for team payments.",
     "description_long": "ShadowPay allows organizations to handle payroll privately on Starknet. It shields STRK into the STRK20 privacy pool, facilitating unlinkable note→note transfers to pay team members and enabling them to unshield their funds on demand. The project is built using Next.js, React, TypeScript, and starknet.js, using a three-transaction flow: public deposit, private transfers, and withdrawal or invocation of the echo helper.",
     "latest_push": "Made payroll stacks full width and fixed navigation wrapper on multiple devices.",
@@ -588,6 +821,7 @@
     "has_readme": true,
     "additions": 54,
     "deletions": 17,
+    "churn_pct": 3,
     "sprint": {
       "pushes": 7,
       "additions": 2748,
@@ -735,82 +969,6 @@
       "facts_v2": true
     },
     "star_evidence": "2 contracts deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "mirage",
-    "name": "Mirage",
-    "one_liner": "One wallet, every chain, no trace. Shield any ERC-20 on Starknet, exit privately to 35+ chains via NEAR Intents.",
-    "category": "Consumer",
-    "repo_url": "https://github.com/YanYuanFE/mirage",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-09",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [
-      {
-        "hash": "0x7f419460965d6d83b2cc919a0f08d11dee212fe367849cfb1afe124ed14b511",
-        "ok": true,
-        "pool": true,
-        "mine": null
-      },
-      {
-        "hash": "0x7d643ebd88f2894b2733628fcc7363fd082e30a0ea0b47c3608149a7bbfc86c",
-        "ok": true,
-        "pool": true,
-        "mine": null
-      },
-      {
-        "hash": "0x3f556eafedae96409b43b7e20b0e2f56199cc74a1ea97b8e09a63c80e4ec0f2",
-        "ok": true,
-        "pool": true,
-        "mine": null
-      }
-    ],
-    "verified_txs": 3,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": true
-    },
-    "status": "building",
-    "pushed_at": "2026-08-22T09:40:13Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "EvanYan1024",
-        "name": "Evan",
-        "avatar_url": "https://avatars.githubusercontent.com/u/136288110?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-20",
-      "2026-08-21",
-      "2026-08-22"
-    ],
-    "head_sha": "825a4739f7faddd048421622d0a78de7c3edef69",
-    "readme_hash": "5fb9c87d7dabf411",
-    "desc_v6": true,
-    "churn_pct": 3.1,
-    "summary": "A privacy superapp for cross-chain transfers with no on-chain links.",
-    "description_long": "Mirage is a privacy superapp that transforms the STRK20 shielded pool on Starknet into a gateway for transferring assets across 35+ blockchains. Users can shield any ERC-20 token, execute private swaps, and send funds to fresh addresses on supported chains like BTC, Solana, and Arbitrum, effectively unlinking their main wallet from outgoing transactions. The implementation includes STRK20 for shielding, NEAR Intents for cross-chain execution, and a workflow engine for amount splitting and timing randomization, all running in a TEE.",
-    "latest_push": "Added chain icons to the Swap chain selects component.",
-    "tooling": [],
-    "has_readme": true,
-    "additions": 79,
-    "deletions": 4,
-    "sprint": {
-      "pushes": 19,
-      "additions": 10653,
-      "deletions": 14,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
   },
   {
     "slug": "nyalthe",
@@ -1167,91 +1325,6 @@
     },
     "assessment": null,
     "star_evidence": "4 contracts deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "erebus",
-    "name": "Erebus",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/PoulavBhowmick03/Erebus",
-    "demo_url": "https://erebus-private-agents.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Erebus enables privacy in autonomous agent transactions with novel encrypted negotiation.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-22T08:48:24Z",
-    "stars": 2,
-    "builders": [
-      {
-        "login": "PoulavBhowmick03",
-        "name": "PoulavBhowmick03",
-        "avatar_url": "https://avatars.githubusercontent.com/u/133862694?v=4"
-      },
-      {
-        "login": "ishitab02",
-        "name": "Ishita",
-        "avatar_url": "https://avatars.githubusercontent.com/u/139248026?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21"
-    ],
-    "head_sha": "77a461bcfa6223a347e10a0462b4a0fc00f609ae",
-    "readme_hash": "62fd460b162e8a43",
-    "desc_v6": true,
-    "summary": "Encrypted negotiation and atomic settlement for AI agents.",
-    "description_long": "Erebus enables AI agents to negotiate in encrypted channels and settle transactions atomically without revealing the negotiation details. It consists of a reference agent flow running in the browser, using the STRK20 privacy pool to manage encrypted note salts and offering selective disclosure capabilities through viewing keys. The system is structured for agent autonomy, employing Starknet's account abstraction for gasless operations, and focuses on message and relationship privacy.",
-    "latest_push": "Fixed startup checks and enforced spending caps in the MCP server.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Rust",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 765,
-    "deletions": 18,
-    "churn_pct": 3.8,
-    "sprint": {
-      "pushes": 40,
-      "additions": 8703,
-      "deletions": 3008,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "applies privacy to agent-to-agent commerce using encrypted negotiation channels.",
-      "why_complex": "implements AES-256-GCM-SIV for wire v2 and includes multiple interacting agents and roles.",
-      "reason": "Erebus enables privacy in autonomous agent transactions with novel encrypted negotiation.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "cutout",
@@ -6409,61 +6482,6 @@
     "sprint": {
       "pushes": 4,
       "additions": 1845,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
-  },
-  {
-    "slug": "wotta",
-    "name": "Wotta",
-    "one_liner": "Pay anyone, from any chain, to an @handle or email - and let them receive privately on Starknet.",
-    "category": "Payments",
-    "repo_url": "https://github.com/wurli-sh/wotta-strk",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-09",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-20T06:26:41Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "wurli-sh",
-        "name": "wurli-sh",
-        "avatar_url": "https://avatars.githubusercontent.com/u/261630289?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-20"
-    ],
-    "head_sha": "41bc0cfa210d5e088115ad9508b58fce329ddb32",
-    "readme_hash": "",
-    "desc_v6": true,
-    "summary": "Pay anyone from any chain to an @handle or email for private receipt on Starknet.",
-    "description_long": "Send payments to users identified by an @handle or email address. Recipients receive the funds privately on Starknet.",
-    "latest_push": "Added Wotta documentation, implementation plan, and .gitignore.",
-    "tooling": [],
-    "has_readme": false,
-    "additions": 1117,
-    "deletions": 0,
-    "churn_pct": 0,
-    "sprint": {
-      "pushes": 2,
-      "additions": 1318,
       "deletions": 0,
       "computed": 2
     },
