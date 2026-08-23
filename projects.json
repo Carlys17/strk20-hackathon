@@ -1,5 +1,145 @@
 [
   {
+    "slug": "privacy-preview",
+    "name": "Privacy Preview",
+    "one_liner": "See what a Starknet transaction reveals before signing, then execute it privately through STRK20.",
+    "category": "Tooling",
+    "repo_url": "https://github.com/Tutulii/private-payroll",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-25",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-23T04:30:46Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Tutulii",
+        "name": "Tutulii",
+        "avatar_url": "https://avatars.githubusercontent.com/u/159540071?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-23"
+    ],
+    "head_sha": "e84e851b97f792e54254dd2c8c97c0865e684cbe",
+    "readme_hash": "4c1ef1c4f7099a45",
+    "desc_v6": true,
+    "churn_pct": 0,
+    "summary": "Run private payroll and treasury disbursements on Starknet without exposing salaries.",
+    "description_long": "Private Payroll allows employers to manage payrolls and disburse funds while maintaining employee salary confidentiality. Users can create a local recipient list, prepare payroll batches with token amounts, and execute private payments using STRK20 shielded transfers, ensuring that individual salaries are not published in the application interface. The application tracks batch progress and permits optional selective disclosure of payment records.",
+    "latest_push": "Refocused the project on private payroll functionalities.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 12,
+    "deletions": 3,
+    "sprint": {
+      "pushes": 2,
+      "additions": 52,
+      "deletions": 3,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
+    "slug": "vinss",
+    "name": "VINSS",
+    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/DXJLabs/vinss",
+    "demo_url": "https://vinss-nu.vercel.app/",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "IDEA-01",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-23T04:26:20Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "ntfound-dev",
+        "name": "ntfound-dev",
+        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
+      },
+      {
+        "login": "DXJLabs",
+        "name": "DXJ Labs",
+        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Codex",
+        "name": "Codex",
+        "avatar_url": "https://avatars.githubusercontent.com/u/267193182?v=4",
+        "commits": 2
+      }
+    ],
+    "active_days": [
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-22",
+      "2026-08-23"
+    ],
+    "head_sha": "e06cde67f3321c9374fdcf1de39ae58977d5261d",
+    "readme_hash": "709363b44ceb8140",
+    "desc_v6": true,
+    "churn_pct": 1.7,
+    "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
+    "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
+    "latest_push": "Refined the deal room UX and completed the Rekber V2 settlement flow.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 303,
+    "deletions": 163,
+    "sprint": {
+      "pushes": 100,
+      "additions": 16614,
+      "deletions": 1967,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "creates a private deal room for encrypted negotiations and offers, not typical in this domain.",
+      "why_complex": "includes multiple Cairo helper contracts for messaging, escrow, and requires event decryption via an indexer.",
+      "reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
     "slug": "oxa-protocol",
     "name": "oxa-protocol",
     "one_liner": "Privacy-preserving, policy-controlled payments for autonomous agents on Starknet.",
@@ -40,7 +180,6 @@
     "head_sha": "c3f83eb9fa908b21bc372f9bbcea2503b9fee514",
     "readme_hash": "b856c85d35050df9",
     "desc_v6": true,
-    "churn_pct": 100,
     "summary": "Generate scoped, single-use payment credentials for autonomous agents.",
     "description_long": "OXA is a protocol for creating one-time payment credentials, allowing owners to fund transactions from a shielded STRK20 balance. These credentials can be issued on demand for specific amounts of ERC-20 tokens and can settle either privately or publicly. As of now, the project is in the pre-build phase with no contracts deployed.",
     "latest_push": "Added broker and sdk scaffolding, along with updated configuration.",
@@ -54,6 +193,7 @@
     "has_readme": true,
     "additions": 2270,
     "deletions": 1,
+    "churn_pct": 100,
     "sprint": {
       "pushes": 12,
       "additions": 3669,
@@ -108,7 +248,6 @@
     "head_sha": "c241e0c6e75b7957dc269748d9cbbf0ebe3605e8",
     "readme_hash": "d18c40c8383d55dd",
     "desc_v6": true,
-    "churn_pct": 6.3,
     "summary": "Conditional trading with hidden order parameters and private execution.",
     "description_long": "Ghost Orders is a privacy-focused conditional trading layer that allows users to create conditional trading instructions while keeping sensitive order details private. The project is built on Starknet and includes features such as private conditional order creation, hidden trigger parameters, and client-side condition monitoring, with a focus on integrating STRK20 for asset handling and settlement.",
     "latest_push": "Added deploy-contract.ts, dotenv support, and .env.example for Sepolia.",
@@ -132,6 +271,7 @@
     "has_readme": true,
     "additions": 214,
     "deletions": 33,
+    "churn_pct": 6.3,
     "sprint": {
       "pushes": 10,
       "additions": 9399,
@@ -186,7 +326,6 @@
     "head_sha": "7061e89ba0f38f9999c624b14b8806159ef60878",
     "readme_hash": "cc27ee6749249827",
     "desc_v6": true,
-    "churn_pct": 4.1,
     "summary": "A web application for private payroll and vesting distributions on Starknet.",
     "description_long": "Cloakroom is a web application and Starknet smart contract that manages private payroll and vesting distributions on-chain. The project's core contract, `PayrollAnonymizer.cairo`, interacts with the STRK20 privacy pool to execute transactions while masking sender and recipient details. The application currently has no deployed contracts or live transactions.",
     "latest_push": "Fixed marketing copy across multiple sections for factual accuracy.",
@@ -220,6 +359,7 @@
     "has_readme": true,
     "additions": 89,
     "deletions": 90,
+    "churn_pct": 4.1,
     "sprint": {
       "pushes": 8,
       "additions": 23474,
@@ -284,92 +424,6 @@
     },
     "assessment": null,
     "star_evidence": ""
-  },
-  {
-    "slug": "vinss",
-    "name": "VINSS",
-    "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/DXJLabs/vinss",
-    "demo_url": "https://vinss-nu.vercel.app/",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-01",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-23T02:09:40Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "ntfound-dev",
-        "name": "ntfound-dev",
-        "avatar_url": "https://avatars.githubusercontent.com/u/137505064?v=4"
-      },
-      {
-        "login": "DXJLabs",
-        "name": "DXJ Labs",
-        "avatar_url": "https://avatars.githubusercontent.com/u/296154937?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Codex",
-        "name": "Codex",
-        "avatar_url": "https://avatars.githubusercontent.com/u/267193182?v=4",
-        "commits": 2
-      }
-    ],
-    "active_days": [
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21",
-      "2026-08-22",
-      "2026-08-23"
-    ],
-    "head_sha": "d613dea3d6958b8e12c9d4f66edc02eb2669cc28",
-    "readme_hash": "709363b44ceb8140",
-    "desc_v6": true,
-    "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
-    "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
-    "latest_push": "Added certificates functionality to public activity.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 953,
-    "deletions": 23,
-    "churn_pct": 3.5,
-    "sprint": {
-      "pushes": 100,
-      "additions": 16614,
-      "deletions": 1967,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "creates a private deal room for encrypted negotiations and offers, not typical in this domain.",
-      "why_complex": "includes multiple Cairo helper contracts for messaging, escrow, and requires event decryption via an indexer.",
-      "reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "morok-pay-starknet",
@@ -1035,7 +1089,7 @@
     "churn_pct": 100,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added PrivacyHub and AccountFactory contracts with STRK20 skills.",
+    "latest_push": "Added PrivacyHub and AccountFactory contracts along with STRK20 skills.",
     "tooling": [
       {
         "label": "get-starknet",
