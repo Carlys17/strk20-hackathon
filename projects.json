@@ -1,5 +1,95 @@
 [
   {
+    "slug": "cipherbill",
+    "name": "CipherBill",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/Nitish-1303/CipherBill",
+    "demo_url": "https://cipher-bill.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-23T07:28:02Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Nitish-1303",
+        "name": "Nitish-1303",
+        "avatar_url": "https://avatars.githubusercontent.com/u/141549775?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 25
+      }
+    ],
+    "active_days": [
+      "2026-08-21",
+      "2026-08-22",
+      "2026-08-23"
+    ],
+    "head_sha": "613ffc7b787661e33af2986b71a1fa166d884029",
+    "readme_hash": "df3ba2d8be71fc10",
+    "desc_v6": true,
+    "churn_pct": 11.3,
+    "summary": "Privacy-first invoicing and settlement for independent workers and teams.",
+    "description_long": "CipherBill enables users to connect a Starknet wallet, shield STRK, create invoices or payment requests, and settle through private transfers. It is built with Next.js, React, TypeScript, and the Starknet.js Wallet API, integrating the STRK20 privacy pool. The application supports selective evidence exports, allowing users to share metadata without exposing complete financial details.",
+    "latest_push": "Added decentralized zero-knowledge reputation and escrow dispute resolution.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 3779,
+    "deletions": 1,
+    "sprint": {
+      "pushes": 22,
+      "additions": 26165,
+      "deletions": 30,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
     "slug": "whisperpay",
     "name": "whisperpay",
     "one_liner": "One-link private payments on STRK20, with the funding deposit over-shielded so the public leg never states what was paid.",
@@ -40,7 +130,7 @@
       "mainnet": true
     },
     "status": "building",
-    "pushed_at": "2026-08-23T06:39:51Z",
+    "pushed_at": "2026-08-23T07:06:35Z",
     "stars": 0,
     "builders": [
       {
@@ -54,7 +144,7 @@
         "family": "Claude",
         "name": "Claude Opus 5",
         "avatar_url": "",
-        "commits": 12
+        "commits": 14
       }
     ],
     "active_days": [
@@ -63,13 +153,13 @@
       "2026-08-19",
       "2026-08-23"
     ],
-    "head_sha": "265634d51f935ad1323be6449fb7490317e49eb3",
-    "readme_hash": "33559a8b4a17193f",
+    "head_sha": "e0606d20697ca1814e5eff247025d35d1c1416e4",
+    "readme_hash": "401eae468ca001cb",
     "desc_v6": true,
-    "churn_pct": 13,
-    "summary": "Generate private payment requests with shareable links on Starknet.",
-    "description_long": "Whisper Pay is a tool for creating one-link private payment requests that keeps transaction details confidential on-chain. It directs payments anonymously through STRK20's shielded flow, ensuring the sender, receiver, and payment amount remain hidden while the recipient can view their incoming payments. Built with Next.js, TypeScript, and integrated with STRK20 operations without any custom contracts, the system combines wallet connections with traditional payment requests to enhance privacy.",
-    "latest_push": "Removed recipient commitment handling and fixed signing failure guards.",
+    "churn_pct": 11.7,
+    "summary": "Send payment links that keep amounts private during transactions.",
+    "description_long": "Whisper Pay allows users to create payment links while maintaining the privacy of transaction details such as amounts and identities. It routes payments through the STRK20 privacy pool, utilizing strategies to obscure public deposit information by rounding amounts. The system includes features such as a Privacy Risk Meter to assess the privacy of transactions and signed receipts for verification, all built around core functionalities present in the `planPayment`, `assessPrivacy`, and `verify` modules.",
+    "latest_push": "Fixed whitelist logic for reading records and updated decline message validation.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -98,11 +188,11 @@
       }
     ],
     "has_readme": true,
-    "additions": 304,
-    "deletions": 492,
+    "additions": 509,
+    "deletions": 234,
     "sprint": {
-      "pushes": 27,
-      "additions": 15310,
+      "pushes": 29,
+      "additions": 15585,
       "deletions": 1,
       "computed": 2
     },
@@ -115,6 +205,169 @@
       "facts_v2": true
     },
     "star_evidence": ""
+  },
+  {
+    "slug": "tony-strk",
+    "name": "Tony-Strk",
+    "one_liner": "Anonymous browsing and private payments for AI agents. A remote MCP server built on Tor and shielded STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/Aaronvern/Tony-Strk",
+    "demo_url": "https://tony-strk.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-23T06:58:58Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Aaronvern",
+        "name": "Aaronvern",
+        "avatar_url": "https://avatars.githubusercontent.com/u/147914193?v=4"
+      },
+      {
+        "login": "prathadox",
+        "name": "Prathamesh Bhatkhande",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148304605?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-22"
+    ],
+    "head_sha": "d3e6fbeab9abfe57252a2b25bad2d43587e7997f",
+    "readme_hash": "e768f9513c994d1a",
+    "desc_v6": true,
+    "summary": "Browse the web anonymously and make private payments for AI agents.",
+    "description_long": "Tony Strk is a remote MCP server that allows AI agents to browse the web and make payments without revealing the user's identity. It integrates a cloud headless browser operating on Tor for anonymous browsing and a wallet that uses shielded STRK20 transactions to ensure payment privacy. The system features distinct workers for browsing and payment, ensuring no single party can link both actions back to the user, maintaining privacy through a series of independent channels.",
+    "latest_push": "Hardened the paywall anonymizer and added related tests.",
+    "tooling": [
+      {
+        "label": "Privacy SDK",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1056,
+    "deletions": 78,
+    "churn_pct": 35.7,
+    "sprint": {
+      "pushes": 28,
+      "additions": 17800,
+      "deletions": 98,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "gavel",
+    "name": "gavel",
+    "one_liner": "Sealed-bid auctions where the bids are actually sealed - Vickrey, first-price and multi-unit auctions on the STRK20 privacy pool",
+    "category": "DeFi",
+    "repo_url": "https://github.com/mohdafzal11/gavel",
+    "demo_url": "https://gavel-lovat.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-08",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-23T06:51:20Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "mohdafzal11",
+        "name": "Mohd Afzal",
+        "avatar_url": "https://avatars.githubusercontent.com/u/78993009?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 18
+      }
+    ],
+    "active_days": [
+      "2026-08-22",
+      "2026-08-23"
+    ],
+    "head_sha": "8f0d1228a90e5bed2e1db57297150066aa15baaf",
+    "readme_hash": "cae798eebcd30bf4",
+    "desc_v6": true,
+    "churn_pct": 20.2,
+    "summary": "Conduct sealed-bid auctions with native Vickrey and MultiUnit strategies.",
+    "description_long": "Gavel enables sealed-bid auctions on Starknet using the STRK20 privacy pool, making it possible to conduct Vickrey and MultiUnit auctions without exposing bidders' identities or bid amounts until the reveal phase. It does this by storing commitments within a privacy pool and allowing bids to be placed with escrows of identical collateral amounts, ensuring that no information is leaked before the bids are revealed. The system includes a reusable sealed-commitment primitive and an anonymizer contract, developed in Cairo with a structured repository layout.",
+    "latest_push": "Stopped blaming the wallet and clarified missing steps from the pool.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1412,
+    "deletions": 96,
+    "sprint": {
+      "pushes": 26,
+      "additions": 11286,
+      "deletions": 10,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "strk20-privacy-wallet",
@@ -191,7 +444,6 @@
     "head_sha": "113a200b7e909e9c7988f4c91c25f141f90c12e4",
     "readme_hash": "d2a92e0e3967492b",
     "desc_v6": true,
-    "churn_pct": 1.5,
     "summary": "Private perpetual futures trading with shielded collateral.",
     "description_long": "This project implements a private perpetual futures protocol on Starknet, allowing traders to open leveraged positions with shielded USDC collateral. It uses Groth16 zk-SNARKs for each state transition, ensuring that details like position size and entry price are not publicly disclosed while maintaining solvency and liquidation enforcement. Key components include the PELPerpsSTRK20Bridge contract for handling private transfers and a dedicated verifier for on-chain proof verification.",
     "latest_push": "Added a generic Wallet API lane for shield, private-send, unshield, and balances.",
@@ -245,6 +497,7 @@
     "has_readme": true,
     "additions": 1474,
     "deletions": 1193,
+    "churn_pct": 1.5,
     "sprint": {
       "pushes": 86,
       "additions": 20115,
@@ -260,80 +513,6 @@
       "facts_v2": true
     },
     "star_evidence": "2 contracts deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "gavel",
-    "name": "gavel",
-    "one_liner": "Sealed-bid auctions where the bids are actually sealed - Vickrey, first-price and multi-unit auctions on the STRK20 privacy pool",
-    "category": "DeFi",
-    "repo_url": "https://github.com/mohdafzal11/gavel",
-    "demo_url": "https://gavel-lovat.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-08",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-23T06:19:57Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "mohdafzal11",
-        "name": "Mohd Afzal",
-        "avatar_url": "https://avatars.githubusercontent.com/u/78993009?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 16
-      }
-    ],
-    "active_days": [
-      "2026-08-22",
-      "2026-08-23"
-    ],
-    "head_sha": "f26dc5520567f4eea62406e23bf0788506d07dab",
-    "readme_hash": "cae798eebcd30bf4",
-    "desc_v6": true,
-    "churn_pct": 4.7,
-    "summary": "Conduct sealed-bid auctions with native Vickrey and MultiUnit strategies.",
-    "description_long": "Gavel enables sealed-bid auctions on Starknet using the STRK20 privacy pool, making it possible to conduct Vickrey and MultiUnit auctions without exposing bidders' identities or bid amounts until the reveal phase. It does this by storing commitments within a privacy pool and allowing bids to be placed with escrows of identical collateral amounts, ensuring that no information is leaked before the bids are revealed. The system includes a reusable sealed-commitment primitive and an anonymizer contract, developed in Cairo with a structured repository layout.",
-    "latest_push": "Redirected users to the wallet extension and improved wallet connection handling.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 275,
-    "deletions": 13,
-    "sprint": {
-      "pushes": 24,
-      "additions": 9970,
-      "deletions": 10,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "sotto",
@@ -377,7 +556,6 @@
     "head_sha": "cfdda6a366dc2d4616ddefdf7973ff397a11aa1a",
     "readme_hash": "cd8470f5b4bc56e8",
     "desc_v6": true,
-    "churn_pct": 12.7,
     "summary": "A private yield account for DeFi that supports shielded assets and capital allocation.",
     "description_long": "Sotto allows users to manage shielded assets, lend, stake, and allocate capital while keeping their holdings private. Built on Starknet with STRK20, it uses encrypted notes to represent balances, letting users deposit, withdraw, and track their activities without exposing their identity or total holdings. The account is non-custodial and integrates multiple strategies within a single interface while maintaining privacy through a connected wallet.",
     "latest_push": "Added the Private Pay feature in PaymentPay and relevant tests.",
@@ -416,6 +594,7 @@
     "has_readme": true,
     "additions": 771,
     "deletions": 192,
+    "churn_pct": 12.7,
     "sprint": {
       "pushes": 9,
       "additions": 13827,
@@ -431,96 +610,6 @@
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "cipherbill",
-    "name": "CipherBill",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/Nitish-1303/CipherBill",
-    "demo_url": "https://cipher-bill.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-23T05:54:34Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Nitish-1303",
-        "name": "Nitish-1303",
-        "avatar_url": "https://avatars.githubusercontent.com/u/141549775?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 24
-      }
-    ],
-    "active_days": [
-      "2026-08-21",
-      "2026-08-22",
-      "2026-08-23"
-    ],
-    "head_sha": "518470137e13a15ef6616de6785e159f1cbf5600",
-    "readme_hash": "df3ba2d8be71fc10",
-    "desc_v6": true,
-    "summary": "Privacy-first invoicing and settlement for independent workers and teams.",
-    "description_long": "CipherBill enables users to connect a Starknet wallet, shield STRK, create invoices or payment requests, and settle through private transfers. It is built with Next.js, React, TypeScript, and the Starknet.js Wallet API, integrating the STRK20 privacy pool. The application supports selective evidence exports, allowing users to share metadata without exposing complete financial details.",
-    "latest_push": "Added decentralized zero-knowledge invoice factoring and liquidity marketplace.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1713,
-    "deletions": 1,
-    "churn_pct": 6.1,
-    "sprint": {
-      "pushes": 20,
-      "additions": 26527,
-      "deletions": 30,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
   },
   {
     "slug": "private-payroll",
@@ -1732,7 +1821,7 @@
     "churn_pct": 100,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added PrivacyHub and AccountFactory contracts with STRK20 skills.",
+    "latest_push": "Added PrivacyHub and AccountFactory contracts along with STRK20 skills.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -2369,95 +2458,6 @@
       "pushes": 8,
       "additions": 2971,
       "deletions": 221,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "tony-strk",
-    "name": "Tony-Strk",
-    "one_liner": "Anonymous browsing and private payments for AI agents. A remote MCP server built on Tor and shielded STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/Aaronvern/Tony-Strk",
-    "demo_url": "https://tony-strk.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-22T19:33:08Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Aaronvern",
-        "name": "Aaronvern",
-        "avatar_url": "https://avatars.githubusercontent.com/u/147914193?v=4"
-      },
-      {
-        "login": "prathadox",
-        "name": "Prathamesh Bhatkhande",
-        "avatar_url": "https://avatars.githubusercontent.com/u/148304605?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21",
-      "2026-08-22"
-    ],
-    "head_sha": "d3e6fbeab9abfe57252a2b25bad2d43587e7997f",
-    "readme_hash": "e768f9513c994d1a",
-    "desc_v6": true,
-    "summary": "Browse the web anonymously and make private payments for AI agents.",
-    "description_long": "Tony Strk is a remote MCP server that allows AI agents to browse the web and make payments without revealing the user's identity. It integrates a cloud headless browser operating on Tor for anonymous browsing and a wallet that uses shielded STRK20 transactions to ensure payment privacy. The system features distinct workers for browsing and payment, ensuring no single party can link both actions back to the user, maintaining privacy through a series of independent channels.",
-    "latest_push": "Hardened the paywall anonymizer and added related tests.",
-    "tooling": [
-      {
-        "label": "Privacy SDK",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1056,
-    "deletions": 78,
-    "churn_pct": 35.7,
-    "sprint": {
-      "pushes": 28,
-      "additions": 17800,
-      "deletions": 98,
       "computed": 2
     },
     "assessment": null,
