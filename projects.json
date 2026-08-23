@@ -1,5 +1,69 @@
 [
   {
+    "slug": "oxa-protocol",
+    "name": "oxa-protocol",
+    "one_liner": "Privacy-preserving, policy-controlled payments for autonomous agents on Starknet.",
+    "category": "Other",
+    "repo_url": "https://github.com/phllp-tanstic/oxa-protocol",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-23T03:16:17Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "phllp-tanstic",
+        "name": "phllp-tanstic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/95053491?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-22",
+      "2026-08-23"
+    ],
+    "head_sha": "c3f83eb9fa908b21bc372f9bbcea2503b9fee514",
+    "readme_hash": "b856c85d35050df9",
+    "desc_v6": true,
+    "churn_pct": 100,
+    "summary": "Generate scoped, single-use payment credentials for autonomous agents.",
+    "description_long": "OXA is a protocol for creating one-time payment credentials, allowing owners to fund transactions from a shielded STRK20 balance. These credentials can be issued on demand for specific amounts of ERC-20 tokens and can settle either privately or publicly. As of now, the project is in the pre-build phase with no contracts deployed.",
+    "latest_push": "Added broker and sdk scaffolding, along with updated configuration.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 2270,
+    "deletions": 1,
+    "sprint": {
+      "pushes": 12,
+      "additions": 3669,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
     "slug": "ghostorder",
     "name": "GhostOrder",
     "one_liner": "A privacy-focused conditional intent layer on Starknet using STRK20, enabling users to create hidden trading conditions and execute them without exposing sensitive order parameters while they wait.",
@@ -21,7 +85,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-23T02:38:20Z",
+    "pushed_at": "2026-08-23T03:08:13Z",
     "stars": 0,
     "builders": [
       {
@@ -41,12 +105,13 @@
       "2026-08-22",
       "2026-08-23"
     ],
-    "head_sha": "293258e66e21f38730747294ca6ca83390b675bc",
+    "head_sha": "c241e0c6e75b7957dc269748d9cbbf0ebe3605e8",
     "readme_hash": "d18c40c8383d55dd",
     "desc_v6": true,
+    "churn_pct": 6.3,
     "summary": "Conditional trading with hidden order parameters and private execution.",
     "description_long": "Ghost Orders is a privacy-focused conditional trading layer that allows users to create conditional trading instructions while keeping sensitive order details private. The project is built on Starknet and includes features such as private conditional order creation, hidden trigger parameters, and client-side condition monitoring, with a focus on integrating STRK20 for asset handling and settlement.",
-    "latest_push": "Added Ghost Orders contract integration and Starknet deployment scripts.",
+    "latest_push": "Added deploy-contract.ts, dotenv support, and .env.example for Sepolia.",
     "tooling": [
       {
         "label": "starknet.js",
@@ -65,12 +130,11 @@
       }
     ],
     "has_readme": true,
-    "additions": 52,
-    "deletions": 4,
-    "churn_pct": 1.5,
+    "additions": 214,
+    "deletions": 33,
     "sprint": {
-      "pushes": 9,
-      "additions": 9218,
+      "pushes": 10,
+      "additions": 9399,
       "deletions": 494,
       "computed": 2
     },
@@ -82,6 +146,87 @@
       "reason": "Ghost Orders enables private conditional trading for STRK20, addressing privacy in order placements.",
       "facts_v2": true
     },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "cloakroom",
+    "name": "Cloakroom",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/Bholdguy/Cloakroom",
+    "demo_url": "https://cloakroom-psi.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-23T03:04:41Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Bholdguy",
+        "name": "bholdguy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/197431308?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-23"
+    ],
+    "head_sha": "7061e89ba0f38f9999c624b14b8806159ef60878",
+    "readme_hash": "cc27ee6749249827",
+    "desc_v6": true,
+    "churn_pct": 4.1,
+    "summary": "A web application for private payroll and vesting distributions on Starknet.",
+    "description_long": "Cloakroom is a web application and Starknet smart contract that manages private payroll and vesting distributions on-chain. The project's core contract, `PayrollAnonymizer.cairo`, interacts with the STRK20 privacy pool to execute transactions while masking sender and recipient details. The application currently has no deployed contracts or live transactions.",
+    "latest_push": "Fixed marketing copy across multiple sections for factual accuracy.",
+    "tooling": [
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 89,
+    "deletions": 90,
+    "sprint": {
+      "pushes": 8,
+      "additions": 23474,
+      "deletions": 143,
+      "computed": 2
+    },
+    "assessment": null,
     "star_evidence": "Cairo in the repository"
   },
   {
@@ -139,82 +284,6 @@
     },
     "assessment": null,
     "star_evidence": ""
-  },
-  {
-    "slug": "cloakroom",
-    "name": "Cloakroom",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/Bholdguy/Cloakroom",
-    "demo_url": "https://cloakroom-psi.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-23T02:12:08Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Bholdguy",
-        "name": "bholdguy",
-        "avatar_url": "https://avatars.githubusercontent.com/u/197431308?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-23"
-    ],
-    "head_sha": "15d35adf653ec413b624ba5621b72259a6ca3f67",
-    "readme_hash": "7ba16f1bf0991960",
-    "desc_v6": true,
-    "churn_pct": 100,
-    "summary": "A tool for cross-chain communication.",
-    "description_long": "A tool for cross-chain communication.",
-    "latest_push": "Fixed project structure and added a base64 whitepaper download utility.",
-    "tooling": [
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 2,
-    "deletions": 279832,
-    "sprint": {
-      "pushes": 7,
-      "additions": 23462,
-      "deletions": 130,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "vinss",
@@ -667,69 +736,6 @@
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
   },
   {
-    "slug": "oxa-protocol",
-    "name": "oxa-protocol",
-    "one_liner": "Privacy-preserving, policy-controlled payments for autonomous agents on Starknet.",
-    "category": "Other",
-    "repo_url": "https://github.com/phllp-tanstic/oxa-protocol",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-22T22:18:51Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "phllp-tanstic",
-        "name": "phllp-tanstic",
-        "avatar_url": "https://avatars.githubusercontent.com/u/95053491?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-22"
-    ],
-    "head_sha": "209a4137bcdc2052af984922a1e272c85b72a0dd",
-    "readme_hash": "b856c85d35050df9",
-    "desc_v6": true,
-    "summary": "Generate scoped, single-use payment credentials for autonomous agents.",
-    "description_long": "OXA is a protocol for creating one-time payment credentials, allowing owners to fund transactions from a shielded STRK20 balance. These credentials can be issued on demand for specific amounts of ERC-20 tokens and can settle either privately or publicly. As of now, the project is in the pre-build phase with no contracts deployed.",
-    "latest_push": "Added the oxa_integration_tests package with all tests passing.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 359,
-    "deletions": 0,
-    "churn_pct": 41.4,
-    "sprint": {
-      "pushes": 11,
-      "additions": 1400,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
-  },
-  {
     "slug": "ghostline",
     "name": "GhostLine",
     "one_liner": "A privacy firewall that detects transaction leakage before you sign on Starknet.",
@@ -1029,7 +1035,7 @@
     "churn_pct": 100,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added PrivacyHub and AccountFactory contracts along with STRK20 skills.",
+    "latest_push": "Added PrivacyHub and AccountFactory contracts with STRK20 skills.",
     "tooling": [
       {
         "label": "get-starknet",
