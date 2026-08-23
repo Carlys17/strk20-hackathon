@@ -1,5 +1,150 @@
 [
   {
+    "slug": "strk20-privacy-wallet",
+    "name": "strk20-privacy-wallet",
+    "one_liner": "Umbra-grade privacy wallet for Starknet powered by STRK20 privacy pool",
+    "category": "Other",
+    "repo_url": "https://github.com/SmratJay/strk20-privacy-wallet",
+    "demo_url": "https://strk20-privacy-wallet.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project lacks both innovation in privacy application and complexity in engineering.",
+    "contracts": [
+      {
+        "address": "0x15235e8b34aa38baed771bf74ca966f63bbbd0509844098ff63f5adef2a4a96",
+        "network": "unknown"
+      },
+      {
+        "address": "0x658e68d9a311bcdd56d98d3ebbcebff2ddd43463547bab859d4d12092444c2b",
+        "network": "sepolia"
+      },
+      {
+        "address": "0xb0eefeb3c52b062ab63736e93355034058688cbfb8ccba7b7f75261b3f4897",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x29e641f5fa56d527a08b22a65bbc27d9cb27694fa983fa150329ade094e1f",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x0254a6b2997ef52e9f830ce1f543f6b29768295e8d17e2267d672c552cfe0d91",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x040337b1af3c663e86e333bab5a4b28da8d4652a15a69beee2b677776ffe812a",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x053c91253bc9682c04929ca02ed00b3e423f6710d2ee7e0d5ebb06f3ecf368a8",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-23T14:22:34Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "SmratJay",
+        "name": "SmratJay",
+        "avatar_url": "https://avatars.githubusercontent.com/u/74355410?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-22",
+      "2026-08-23"
+    ],
+    "head_sha": "2cef39418bf99c5a83c78da1aca56047ed8dd4b9",
+    "readme_hash": "c49f13c8896455b2",
+    "desc_v6": true,
+    "churn_pct": 0.1,
+    "summary": "Private perpetual futures trading with shielded collateral on Starknet.",
+    "description_long": "This project enables users to open private perpetual futures positions on Starknet while maintaining the confidentiality of their trading data. The system uses Groth16 zk-SNARKs for state transitions, ensuring only commitment and nullifier are posted to the blockchain. The interaction with the STRK20 privacy pool ensures that all collateral remains shielded during transactions, while five dedicated on-chain verifiers maintain proof integrity.",
+    "latest_push": "Fixed the form-submit bug on Share-private-balances and improved guidance.",
+    "tooling": [
+      {
+        "label": "AVNU",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Rust",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 167,
+    "deletions": 10,
+    "sprint": {
+      "pushes": 93,
+      "additions": 20115,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "applies privacy to a wallet but offers no new technology or mechanism beyond existing solutions.",
+      "why_complex": "no deployed contracts or innovative engineering work is present to assess.",
+      "reason": "The project lacks both innovation in privacy application and complexity in engineering.",
+      "facts_v2": true
+    },
+    "star_evidence": "2 contracts deployed on mainnet, Cairo in the repository"
+  },
+  {
     "slug": "cipherbill",
     "name": "CipherBill",
     "one_liner": "",
@@ -46,7 +191,6 @@
     "head_sha": "888b4b8f409d72cec43963dc2fe8ad9507fc6df4",
     "readme_hash": "df3ba2d8be71fc10",
     "desc_v6": true,
-    "churn_pct": 3.3,
     "summary": "Privacy-first invoicing and settlement for independent workers and teams.",
     "description_long": "CipherBill enables users to connect a Starknet wallet, shield STRK, create invoices or payment requests, and settle through private transfers. It is built with Next.js, React, TypeScript, and the Starknet.js Wallet API, integrating the STRK20 privacy pool. The application supports selective evidence exports, allowing users to share metadata without exposing complete financial details.",
     "latest_push": "Added a zero-knowledge merchant proof-of-reserves attestation engine.",
@@ -80,6 +224,7 @@
     "has_readme": true,
     "additions": 1552,
     "deletions": 0,
+    "churn_pct": 3.3,
     "sprint": {
       "pushes": 28,
       "additions": 26200,
@@ -181,7 +326,6 @@
     "head_sha": "0d1a7505f4dd1e1cdc3553a2f1bf60fa33c02c98",
     "readme_hash": "c07e80138ccebf85",
     "desc_v6": true,
-    "churn_pct": 10.6,
     "summary": "Accept private payments with a checkout widget and hosted invoices.",
     "description_long": "Stealth Checkout allows merchants to accept private payments on Starknet through an embeddable payment widget, hosted invoice links, automated confirmations with signed webhooks, and receipts. The checkout process involves connecting a wallet, shielding if necessary, completing a payment, and receiving a receipt, all while ensuring transparency around what information is revealed on-chain. The project includes various components such as a TS widget, an invoice page, a merchant dashboard, and a watcher for confirming payments.",
     "latest_push": "Surfaced the pool fee and completed the invoice lifecycle.",
@@ -195,6 +339,7 @@
     "has_readme": true,
     "additions": 3337,
     "deletions": 436,
+    "churn_pct": 10.6,
     "sprint": {
       "pushes": 38,
       "additions": 42523,
@@ -299,7 +444,6 @@
     "head_sha": "218582172709f4c5f315454b42f92b7a329166db",
     "readme_hash": "a871f5ff1107fb3c",
     "desc_v6": true,
-    "churn_pct": 0.7,
     "summary": "A whitehat rescue bot that sweeps exposed on-chain funds to safety.",
     "description_long": "Aegis monitors public repositories for accidentally leaked private keys and API keys, verifies if they control actual funds, and automatically sweeps those funds to a secure address before they can be exploited. It scans registered projects for sensitive filenames, checks for real balances, derives the Starknet account, deploys if necessary, and conducts sweeping operations entirely automated. Owners prove their identity through GitHub to reclaim their funds, which are transferred through the STRK20 shielded pool for enhanced privacy.",
     "latest_push": "Used the cinematic rescue clip as the hero visual and added the Aegis logo.",
@@ -343,6 +487,7 @@
     "has_readme": true,
     "additions": 27,
     "deletions": 21,
+    "churn_pct": 0.7,
     "sprint": {
       "pushes": 100,
       "additions": 5200,
@@ -478,7 +623,6 @@
     "head_sha": "8018ff0b574ee8e397d22e2701a1f6a4884494b8",
     "readme_hash": "df04aa354c509f3a",
     "desc_v6": true,
-    "churn_pct": 0.1,
     "summary": "Sealed-bid auctions with privacy for bids and outcomes on STRK20.",
     "description_long": "This project implements Vickrey sealed-bid auctions on the STRK20 privacy pool, ensuring that losing bids remain unpublished. It uses a contract that settles the auction outcomes through hash-preimage proofs, protecting the bids from exposure after submission. The project includes an auction contract, an anonymizer helper, a client library, and a web app, with functions to facilitate the auction process securely while maintaining user privacy.",
     "latest_push": "Updated README and mainnet documentation with closing date.",
@@ -497,6 +641,7 @@
     "has_readme": true,
     "additions": 6,
     "deletions": 1,
+    "churn_pct": 0.1,
     "sprint": {
       "pushes": 27,
       "additions": 12193,
@@ -505,151 +650,6 @@
     },
     "assessment": null,
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "strk20-privacy-wallet",
-    "name": "strk20-privacy-wallet",
-    "one_liner": "Umbra-grade privacy wallet for Starknet powered by STRK20 privacy pool",
-    "category": "Other",
-    "repo_url": "https://github.com/SmratJay/strk20-privacy-wallet",
-    "demo_url": "https://strk20-privacy-wallet.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project lacks both innovation in privacy application and complexity in engineering.",
-    "contracts": [
-      {
-        "address": "0x15235e8b34aa38baed771bf74ca966f63bbbd0509844098ff63f5adef2a4a96",
-        "network": "unknown"
-      },
-      {
-        "address": "0x658e68d9a311bcdd56d98d3ebbcebff2ddd43463547bab859d4d12092444c2b",
-        "network": "sepolia"
-      },
-      {
-        "address": "0xb0eefeb3c52b062ab63736e93355034058688cbfb8ccba7b7f75261b3f4897",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x29e641f5fa56d527a08b22a65bbc27d9cb27694fa983fa150329ade094e1f",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x0254a6b2997ef52e9f830ce1f543f6b29768295e8d17e2267d672c552cfe0d91",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x040337b1af3c663e86e333bab5a4b28da8d4652a15a69beee2b677776ffe812a",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x053c91253bc9682c04929ca02ed00b3e423f6710d2ee7e0d5ebb06f3ecf368a8",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-23T13:51:07Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "SmratJay",
-        "name": "SmratJay",
-        "avatar_url": "https://avatars.githubusercontent.com/u/74355410?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21",
-      "2026-08-22",
-      "2026-08-23"
-    ],
-    "head_sha": "02923269de5703329aeb085be63ea8c5ad2eeef6",
-    "readme_hash": "c49f13c8896455b2",
-    "desc_v6": true,
-    "summary": "Private perpetual futures trading with shielded collateral on Starknet.",
-    "description_long": "This project enables users to open private perpetual futures positions on Starknet while maintaining the confidentiality of their trading data. The system uses Groth16 zk-SNARKs for state transitions, ensuring only commitment and nullifier are posted to the blockchain. The interaction with the STRK20 privacy pool ensures that all collateral remains shielded during transactions, while five dedicated on-chain verifiers maintain proof integrity.",
-    "latest_push": "Prompted wallet to switch to Sepolia via wallet_switchStarknetChain.",
-    "tooling": [
-      {
-        "label": "AVNU",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Rust",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 344,
-    "deletions": 45,
-    "churn_pct": 0.2,
-    "sprint": {
-      "pushes": 92,
-      "additions": 20115,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "applies privacy to a wallet but offers no new technology or mechanism beyond existing solutions.",
-      "why_complex": "no deployed contracts or innovative engineering work is present to assess.",
-      "reason": "The project lacks both innovation in privacy application and complexity in engineering.",
-      "facts_v2": true
-    },
-    "star_evidence": "2 contracts deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "envelope",
@@ -1907,7 +1907,6 @@
     "head_sha": "3deb06a6c2742e7963291213b64019459ec17116",
     "readme_hash": "db2682724d16c237",
     "desc_v6": true,
-    "churn_pct": 4.2,
     "summary": "Generate cryptographic proofs of private STRK20 transactions for selective sharing.",
     "description_long": "A self-service tool that enables STRK20 payment recipients to create verifiable ZK receipts for individual private transactions without disclosing complete wallet history. Features include on-demand transaction proofs, selective disclosure options for sharing with auditors or tax authorities, integration with WalletAccountV6 via Starknet Wallet API, and a lightweight verification portal for auditors. The project is built using Next.js, React, and TypeScript, with supporting Cairo contracts.",
     "latest_push": "Set up STRK20 ZK Receipts with initial files and configurations.",
@@ -1946,6 +1945,7 @@
     "has_readme": true,
     "additions": 37,
     "deletions": 26,
+    "churn_pct": 4.2,
     "sprint": {
       "pushes": 1,
       "additions": 37,
@@ -2208,6 +2208,66 @@
     },
     "assessment": null,
     "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "kelpay",
+    "name": "kelpay",
+    "one_liner": "Private payment links for freelancers, creators, and small teams.",
+    "category": "Payments",
+    "repo_url": "https://github.com/heyfegor/kelpay",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "creatormorph",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-23T06:16:03Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "heyfegor",
+        "name": "heyfegor",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148803813?v=4"
+      },
+      {
+        "login": "creatormorph",
+        "name": "creatormorph",
+        "avatar_url": "https://github.com/creatormorph.png"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-23"
+    ],
+    "head_sha": "26e6d3cd262f8bc1528e0bbe4d40ae690631d59d",
+    "readme_hash": "5f763763cc12b02a",
+    "desc_v6": true,
+    "churn_pct": 0,
+    "summary": "Request and receive private payments through secure links.",
+    "description_long": "KelPay allows professionals to create payment requests that can be shared via links, ensuring that payment details remain private. It is built on Starknet and uses STRK20 privacy infrastructure, along with the Starknet Privacy SDK, Next.js, and TypeScript.",
+    "latest_push": "Added initial KelPay project overview documentation.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 42,
+    "deletions": 2,
+    "sprint": {
+      "pushes": 2,
+      "additions": 208,
+      "deletions": 2,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
   },
   {
     "slug": "sotto",
