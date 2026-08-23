@@ -68,7 +68,6 @@
     "head_sha": "3bba285fa52bbe01cbaa676337b0111c3e2ef180",
     "readme_hash": "9ede26e662465d9d",
     "desc_v6": true,
-    "churn_pct": 0.3,
     "summary": "A wallet-native signing guard for shield transactions using public STRK20 evidence.",
     "description_long": "Cutout checks proposed token and deposit amounts for public cohort cover before users sign shield transactions. It recommends an optimal amount change if allowed by the user, relying on deterministic offchain checks and public evidence without requiring a specific contract. The system consists of a Next.js signing client, a supervised indexer, and a SQLite read model, ensuring all sensitive processes happen client-side.",
     "latest_push": "Fixed snapshot advances during preflight in the signing workflow.",
@@ -102,6 +101,7 @@
     "has_readme": true,
     "additions": 54,
     "deletions": 2,
+    "churn_pct": 0.3,
     "sprint": {
       "pushes": 19,
       "additions": 24502,
@@ -156,7 +156,6 @@
     "head_sha": "8968152f92b04f36a7a2fd1d5a287cde32ad8d96",
     "readme_hash": "b904ad50b63f1fe8",
     "desc_v6": true,
-    "churn_pct": 44.3,
     "summary": "Manage private payroll and treasury disbursements on Starknet.",
     "description_long": "This application allows employers to process payroll batches and make transactions through STRK20 shielded transfers, ensuring that employee salaries are not publicly visible. It builds a responsive Next.js frontend that integrates with a Starknet Wallet API, enabling features like batch transfers, transaction tracking, and an overview of payroll and team activity.",
     "latest_push": "Added the Ready wallet STRK20 payroll flow and fixed related balance states.",
@@ -190,6 +189,7 @@
     "has_readme": true,
     "additions": 2222,
     "deletions": 73,
+    "churn_pct": 44.3,
     "sprint": {
       "pushes": 9,
       "additions": 20695,
@@ -268,7 +268,6 @@
     "head_sha": "79cc17a80459dcc88837483d5901f519adb6079d",
     "readme_hash": "02a6e416be7d0abe",
     "desc_v6": true,
-    "churn_pct": 12.7,
     "summary": "A private, stake-backed reputation layer for foresight and accountability.",
     "description_long": "Xence allows users to make probabilistic forecasts that are privately backed by stakes hidden in the STRK20 privacy pool. It records the commitment publicly, while ensuring the underlying position and stake amounts remain confidential, scoring users on their forecasting accuracy using Brier scores. Built using Cairo and various web technologies, it integrates with the Starknet Wallet API to maintain user privacy and facilitate secure transactions.",
     "latest_push": "Forecasted live feed as a move instead of a price level.",
@@ -287,6 +286,7 @@
     "has_readme": true,
     "additions": 619,
     "deletions": 245,
+    "churn_pct": 12.7,
     "sprint": {
       "pushes": 28,
       "additions": 29584,
@@ -460,7 +460,6 @@
     "head_sha": "30e55d759676c83b82aeaa2aee95a9263afc88b4",
     "readme_hash": "c49f13c8896455b2",
     "desc_v6": true,
-    "churn_pct": 0.2,
     "summary": "Private perpetual futures trading with shielded collateral on Starknet.",
     "description_long": "This project enables users to open private perpetual futures positions on Starknet while maintaining the confidentiality of their trading data. The system uses Groth16 zk-SNARKs for state transitions, ensuring only commitment and nullifier are posted to the blockchain. The interaction with the STRK20 privacy pool ensures that all collateral remains shielded during transactions, while five dedicated on-chain verifiers maintain proof integrity.",
     "latest_push": "Added 1-click copy functionality for connected wallet address in UI.",
@@ -514,6 +513,7 @@
     "has_readme": true,
     "additions": 243,
     "deletions": 43,
+    "churn_pct": 0.2,
     "sprint": {
       "pushes": 88,
       "additions": 20115,
@@ -577,7 +577,6 @@
     "head_sha": "45e304b4346d60add881bbaa01568b96632c81c8",
     "readme_hash": "df3ba2d8be71fc10",
     "desc_v6": true,
-    "churn_pct": 6.4,
     "summary": "Privacy-first invoicing and settlement for independent workers and teams.",
     "description_long": "CipherBill enables users to connect a Starknet wallet, shield STRK, create invoices or payment requests, and settle through private transfers. It is built with Next.js, React, TypeScript, and the Starknet.js Wallet API, integrating the STRK20 privacy pool. The application supports selective evidence exports, allowing users to share metadata without exposing complete financial details.",
     "latest_push": "Added decentralized zero-knowledge multi-currency invoice denomination and FX shield.",
@@ -611,6 +610,7 @@
     "has_readme": true,
     "additions": 2519,
     "deletions": 0,
+    "churn_pct": 6.4,
     "sprint": {
       "pushes": 24,
       "additions": 26184,
@@ -686,7 +686,6 @@
     "head_sha": "03f5e2323fe36be444b4f86a117c88afb48dd8aa",
     "readme_hash": "81f00d5066a22704",
     "desc_v6": true,
-    "churn_pct": 13.7,
     "summary": "Shielded allocation for grants, bounties, and payouts on Starknet.",
     "description_long": "Cloakra enables secret capital distribution for contributions, grants, and bug bounties, concealing details like recipient identities and amounts in the STRK20 Privacy Pool. It includes modules for atomic splits of funds (StealthSplit), anonymous bounty payouts (GhostBounty), and shielded grant disbursements (StealthGrant), all built on Starknet using WalletAccountV6 for executing actions without server-side key storage.",
     "latest_push": "Added the /app route for the treasury app and rebuilt the landing page.",
@@ -694,6 +693,7 @@
     "has_readme": true,
     "additions": 332,
     "deletions": 133,
+    "churn_pct": 13.7,
     "sprint": {
       "pushes": 21,
       "additions": 9098,
@@ -802,7 +802,6 @@
     "head_sha": "250889ed0c563c63249edea3dc0a466459ebcfc6",
     "readme_hash": "56f323344f85a3bd",
     "desc_v6": true,
-    "churn_pct": 1.3,
     "summary": "Accept private payments with an embeddable checkout widget and hosted invoices.",
     "description_long": "Stealth Checkout enables merchants to accept private payments on Starknet through an embeddable payment widget, hosted invoice pages, and headless payment confirmations via webhooks. The project includes a payment widget that supports private transactions, receipt generation for payments, a watcher to confirm transactions on the backend, and a demo arcade store to showcase functionality. Built as a framework-agnostic TypeScript package, the checkout allows various tiers of integration from simple button implementation to full backend webhook support.",
     "latest_push": "Fixed issues found during the re-audit in the checkout module.",
@@ -816,6 +815,7 @@
     "has_readme": true,
     "additions": 393,
     "deletions": 40,
+    "churn_pct": 1.3,
     "sprint": {
       "pushes": 29,
       "additions": 39229,
@@ -2495,7 +2495,7 @@
     "churn_pct": 100,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added PrivacyHub, AccountFactory contracts, and STRK20 skills.",
+    "latest_push": "Added PrivacyHub and AccountFactory contracts along with STRK20 skills.",
     "tooling": [
       {
         "label": "get-starknet",
