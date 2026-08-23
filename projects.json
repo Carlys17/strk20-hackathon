@@ -1,5 +1,142 @@
 [
   {
+    "slug": "nightgate",
+    "name": "Nightgate",
+    "one_liner": "A decorrelation layer for the STRK20 pool: enter from any chain with your existing wallet, exit later to an unrelated address in a standard denomination after a randomized delay, optionally in a different asset.",
+    "category": "Other",
+    "repo_url": "https://github.com/Mrwicks00/Nightgate",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-09",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-23T14:52:06Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Mrwicks00",
+        "name": "Mrwicks00",
+        "avatar_url": "https://avatars.githubusercontent.com/u/127976405?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-23"
+    ],
+    "head_sha": "758bd3bd8420a2b498f7238236976513d6294b85",
+    "readme_hash": "97850e118475957d",
+    "desc_v6": true,
+    "churn_pct": 100,
+    "summary": "A decorrelation layer for the STRK20 privacy pool for cross-chain transactions.",
+    "description_long": "Enables users to enter the STRK20 privacy pool from any blockchain using their existing wallet. Users can exit to an unrelated address, in a standard denomination, after a randomized delay and can choose to receive a different asset. The design focuses on ensuring that no correlation can be made between the entry and exit points.",
+    "latest_push": "Added SDK setup script and a pool-mechanics test.",
+    "tooling": [
+      {
+        "label": "Privacy SDK",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1094,
+    "deletions": 0,
+    "sprint": {
+      "pushes": 4,
+      "additions": 1314,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
+    "slug": "vickrey",
+    "name": "Vickrey",
+    "one_liner": "Sealed-bid Vickrey auctions on STRK20 where the losing bids are never published. The outcome is proved on-chain, not asserted.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/Vickrey-Protocol/vickrey",
+    "demo_url": "https://vickrey-ten.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-08",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-23T14:47:07Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Jagadeeshftw",
+        "name": "Jagadeesh B",
+        "avatar_url": "https://avatars.githubusercontent.com/u/92681651?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-23"
+    ],
+    "head_sha": "466b369a84e6ac50362c53d0aea37ab81686c613",
+    "readme_hash": "df04aa354c509f3a",
+    "desc_v6": true,
+    "churn_pct": 15,
+    "summary": "Sealed-bid auctions with privacy for bids and outcomes on STRK20.",
+    "description_long": "This project implements Vickrey sealed-bid auctions on the STRK20 privacy pool, ensuring that losing bids remain unpublished. It uses a contract that settles the auction outcomes through hash-preimage proofs, protecting the bids from exposure after submission. The project includes an auction contract, an anonymizer helper, a client library, and a web app, with functions to facilitate the auction process securely while maintaining user privacy.",
+    "latest_push": "Defined the approved product direction in the web components.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 532,
+    "deletions": 439,
+    "sprint": {
+      "pushes": 28,
+      "additions": 12286,
+      "deletions": 2,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
     "slug": "aegis-rescue",
     "name": "Aegis Rescue",
     "one_liner": "Whitehat rescue bot: sweeps exposed on-chain funds into the STRK20 shielded pool before attackers can, returns them to verified GitHub owners.",
@@ -73,7 +210,7 @@
       "mainnet": true
     },
     "status": "building",
-    "pushed_at": "2026-08-23T14:34:22Z",
+    "pushed_at": "2026-08-23T14:44:32Z",
     "stars": 0,
     "builders": [
       {
@@ -91,13 +228,13 @@
       "2026-08-22",
       "2026-08-23"
     ],
-    "head_sha": "f20b00754ca2fb89ad6553f590b44ca97c14d0cb",
+    "head_sha": "33bc137533d361eb7b7cb931b8fa89add9793927",
     "readme_hash": "a871f5ff1107fb3c",
     "desc_v6": true,
-    "churn_pct": 4.4,
+    "churn_pct": 3.1,
     "summary": "A whitehat rescue bot that sweeps exposed on-chain funds to safety.",
     "description_long": "Aegis monitors public repositories for accidentally leaked private keys and API keys, verifies if they control actual funds, and automatically sweeps those funds to a secure address before they can be exploited. It scans registered projects for sensitive filenames, checks for real balances, derives the Starknet account, deploys if necessary, and conducts sweeping operations entirely automated. Owners prove their identity through GitHub to reclaim their funds, which are transferred through the STRK20 shielded pool for enhanced privacy.",
-    "latest_push": "Swapped the hero visual to a monochrome vault fly-through clip.",
+    "latest_push": "Covered the page fully during the vault intro and zoomed into the site.",
     "tooling": [
       {
         "label": "AVNU",
@@ -136,12 +273,12 @@
       }
     ],
     "has_readme": true,
-    "additions": 179,
-    "deletions": 103,
+    "additions": 127,
+    "deletions": 76,
     "sprint": {
       "pushes": 100,
-      "additions": 5200,
-      "deletions": 226,
+      "additions": 5114,
+      "deletions": 162,
       "computed": 2
     },
     "assessment": {
@@ -337,7 +474,6 @@
     "head_sha": "93c821c0c4b64cc904b3fbea519b5e75f2c2ef45",
     "readme_hash": "5621c695f378c723",
     "desc_v6": true,
-    "churn_pct": 0,
     "summary": "Conduct private Vickrey NFT auctions with sealed bids and shielded refunds.",
     "description_long": "CipherBid is an open-source auction house for ERC-721 assets with atomically delivered bids. It locks the same collateral cap through STRK20 for all bidders, using sealed Poseidon commitments for the actual bid amounts until the reveal window. The project includes a Cairo auction-house deployment, escrowed ERC-721 per auction, anonymous bid ingress, shielded refunds, and a responsive Next.js interface.",
     "latest_push": "Bootstrapped the CipherBid sprint project.",
@@ -345,6 +481,7 @@
     "has_readme": true,
     "additions": 216,
     "deletions": 0,
+    "churn_pct": 0,
     "sprint": {
       "pushes": 1,
       "additions": 216,
@@ -641,72 +778,6 @@
     "star_evidence": ""
   },
   {
-    "slug": "vickrey",
-    "name": "Vickrey",
-    "one_liner": "Sealed-bid Vickrey auctions on STRK20 where the losing bids are never published. The outcome is proved on-chain, not asserted.",
-    "category": "DeFi",
-    "repo_url": "https://github.com/Vickrey-Protocol/vickrey",
-    "demo_url": "https://vickrey-ten.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-08",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-23T14:05:19Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Jagadeeshftw",
-        "name": "Jagadeesh B",
-        "avatar_url": "https://avatars.githubusercontent.com/u/92681651?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-23"
-    ],
-    "head_sha": "8018ff0b574ee8e397d22e2701a1f6a4884494b8",
-    "readme_hash": "df04aa354c509f3a",
-    "desc_v6": true,
-    "summary": "Sealed-bid auctions with privacy for bids and outcomes on STRK20.",
-    "description_long": "This project implements Vickrey sealed-bid auctions on the STRK20 privacy pool, ensuring that losing bids remain unpublished. It uses a contract that settles the auction outcomes through hash-preimage proofs, protecting the bids from exposure after submission. The project includes an auction contract, an anonymizer helper, a client library, and a web app, with functions to facilitate the auction process securely while maintaining user privacy.",
-    "latest_push": "Updated README and mainnet documentation with closing date.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 6,
-    "deletions": 1,
-    "churn_pct": 0.1,
-    "sprint": {
-      "pushes": 27,
-      "additions": 12193,
-      "deletions": 2,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
-  },
-  {
     "slug": "envelope",
     "name": "envelope",
     "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
@@ -969,61 +1040,6 @@
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "nightgate",
-    "name": "Nightgate",
-    "one_liner": "A decorrelation layer for the STRK20 pool: enter from any chain with your existing wallet, exit later to an unrelated address in a standard denomination after a randomized delay, optionally in a different asset.",
-    "category": "Other",
-    "repo_url": "https://github.com/Mrwicks00/Nightgate",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "RFP-09",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-23T12:48:34Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Mrwicks00",
-        "name": "Mrwicks00",
-        "avatar_url": "https://avatars.githubusercontent.com/u/127976405?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-23"
-    ],
-    "head_sha": "b3307508bb4e7f6c8568e39cc5e5ae552fa8fc1f",
-    "readme_hash": "97850e118475957d",
-    "desc_v6": true,
-    "summary": "A decorrelation layer for the STRK20 privacy pool for cross-chain transactions.",
-    "description_long": "Enables users to enter the STRK20 privacy pool from any blockchain using their existing wallet. Users can exit to an unrelated address, in a standard denomination, after a randomized delay and can choose to receive a different asset. The design focuses on ensuring that no correlation can be made between the entry and exit points.",
-    "latest_push": "Deployed AccountFactory to Sepolia and verified Eth712Account determinism.",
-    "tooling": [],
-    "has_readme": true,
-    "additions": 48,
-    "deletions": 6,
-    "churn_pct": 41.6,
-    "sprint": {
-      "pushes": 3,
-      "additions": 220,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
   },
   {
     "slug": "cloakroom",
