@@ -31,16 +31,28 @@
         "ok": true,
         "pool": true,
         "mine": true
+      },
+      {
+        "hash": "0x038d24f980d612b54629e6fb29f5fcde879914869dd8c345c4d75b089bcf7af3",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x056923063c7b8d9cc26cdc716dd7e8ff9adf797e098b46d3554c1a28631c22c7",
+        "ok": true,
+        "pool": true,
+        "mine": true
       }
     ],
-    "verified_txs": 1,
+    "verified_txs": 3,
     "requirements": {
       "demo": true,
       "video": false,
-      "mainnet": false
+      "mainnet": true
     },
     "status": "building",
-    "pushed_at": "2026-08-23T22:50:22Z",
+    "pushed_at": "2026-08-23T23:07:31Z",
     "stars": 0,
     "builders": [
       {
@@ -56,13 +68,13 @@
       "2026-08-22",
       "2026-08-23"
     ],
-    "head_sha": "9281b799b9b32ae126d857954441eb018e0c41ad",
+    "head_sha": "f66beb539ca72fc0fcd55b24a252313a00b58c58",
     "readme_hash": "0b388b69ae9d8549",
     "desc_v6": true,
-    "churn_pct": 13.6,
+    "churn_pct": 2.3,
     "summary": "Private crowdfunding with public goals and anonymous backers.",
     "description_long": "Lantern is a sealed fundraiser protocol that allows campaigns to display their funding goal, total raised, number of backers, and time remaining, while keeping donor identities and amounts private. Built using Cairo and Next.js, it includes a smart contract that manages campaign states and a front-end that enables users to create campaigns, donate anonymously, and claim refunds or payouts based on the campaign outcome.",
-    "latest_push": "Added the security page and fixed promise resolution in the wallet.",
+    "latest_push": "Fixed wallet success declaration timing and cleared amount for re-giving.",
     "tooling": [
       {
         "label": "Cairo",
@@ -76,16 +88,80 @@
       }
     ],
     "has_readme": true,
-    "additions": 505,
-    "deletions": 41,
+    "additions": 80,
+    "deletions": 15,
     "sprint": {
-      "pushes": 17,
-      "additions": 16955,
+      "pushes": 19,
+      "additions": 17020,
       "deletions": 1460,
       "computed": 2
     },
     "assessment": null,
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "oxa-protocol",
+    "name": "oxa-protocol",
+    "one_liner": "Privacy-preserving, policy-controlled payments for autonomous agents on Starknet.",
+    "category": "Other",
+    "repo_url": "https://github.com/phllp-tanstic/oxa-protocol",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-23T22:59:06Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "phllp-tanstic",
+        "name": "phllp-tanstic",
+        "avatar_url": "https://avatars.githubusercontent.com/u/95053491?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-22",
+      "2026-08-23"
+    ],
+    "head_sha": "871c3958e35f5fd8144889e313ef093f86ed0a88",
+    "readme_hash": "b856c85d35050df9",
+    "desc_v6": true,
+    "churn_pct": 64.7,
+    "summary": "Generate scoped, single-use payment credentials for autonomous agents.",
+    "description_long": "OXA is a protocol for creating one-time payment credentials, allowing owners to fund transactions from a shielded STRK20 balance. These credentials can be issued on demand for specific amounts of ERC-20 tokens and can settle either privately or publicly. As of now, the project is in the pre-build phase with no contracts deployed.",
+    "latest_push": "Added Broker policy-check logic and commitment hash, fixed deployments.md.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 902,
+    "deletions": 7,
+    "sprint": {
+      "pushes": 13,
+      "additions": 4564,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "atrum",
@@ -136,7 +212,6 @@
     "head_sha": "846de30d7e54e04d76daecf745a8c8d3a7609796",
     "readme_hash": "d15802b88acefd5a",
     "desc_v6": true,
-    "churn_pct": 11.3,
     "summary": "Create sealed-bid prediction markets with hidden orders and tradeable positions.",
     "description_long": "A prediction market where orders are submitted as private notes that remain unreadable until the batch closes. It operates with a sealed-bid batch auction and computes a uniform clearing price, ensuring front-running is impossible. The project includes contracts for deploying markets, managing orders, and allowing creators to resolve outcomes while safeguarding against malicious actions.",
     "latest_push": "Added light and dark themes along with a contrast checker that identified bugs.",
@@ -175,6 +250,7 @@
     "has_readme": true,
     "additions": 820,
     "deletions": 48,
+    "churn_pct": 11.3,
     "sprint": {
       "pushes": 49,
       "additions": 12456,
@@ -4420,70 +4496,6 @@
       "reason": "Sotto integrates privacy for DeFi actions but lacks innovation beyond basic private transfers.",
       "facts_v2": true
     },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "oxa-protocol",
-    "name": "oxa-protocol",
-    "one_liner": "Privacy-preserving, policy-controlled payments for autonomous agents on Starknet.",
-    "category": "Other",
-    "repo_url": "https://github.com/phllp-tanstic/oxa-protocol",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-23T03:16:17Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "phllp-tanstic",
-        "name": "phllp-tanstic",
-        "avatar_url": "https://avatars.githubusercontent.com/u/95053491?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-22",
-      "2026-08-23"
-    ],
-    "head_sha": "c3f83eb9fa908b21bc372f9bbcea2503b9fee514",
-    "readme_hash": "b856c85d35050df9",
-    "desc_v6": true,
-    "summary": "Generate scoped, single-use payment credentials for autonomous agents.",
-    "description_long": "OXA is a protocol for creating one-time payment credentials, allowing owners to fund transactions from a shielded STRK20 balance. These credentials can be issued on demand for specific amounts of ERC-20 tokens and can settle either privately or publicly. As of now, the project is in the pre-build phase with no contracts deployed.",
-    "latest_push": "Added broker and sdk scaffolding, along with updated configuration.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 2270,
-    "deletions": 1,
-    "churn_pct": 100,
-    "sprint": {
-      "pushes": 12,
-      "additions": 3669,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": null,
     "star_evidence": "Cairo in the repository"
   },
   {
