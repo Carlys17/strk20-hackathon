@@ -1,5 +1,71 @@
 [
   {
+    "slug": "vickrey",
+    "name": "Vickrey",
+    "one_liner": "Sealed-bid Vickrey auctions on STRK20 where the losing bids are never published. The outcome is proved on-chain, not asserted.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/Vickrey-Protocol/vickrey",
+    "demo_url": "https://vickrey-ten.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-08",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-23T13:42:01Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Jagadeeshftw",
+        "name": "Jagadeesh B",
+        "avatar_url": "https://avatars.githubusercontent.com/u/92681651?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-23"
+    ],
+    "head_sha": "d5790087dfc08a0c0a70b0b80c2e5039d57db79a",
+    "readme_hash": "880fb97a4b64abbc",
+    "desc_v6": true,
+    "churn_pct": 7.1,
+    "summary": "Sealed-bid auctions where losing bids remain private.",
+    "description_long": "Vickrey allows for sealed-bid auctions on STRK20, where the highest bidder wins but pays the second-highest bid. The auction outcome is established on-chain through hash-preimage proofs, ensuring that losing bids are not revealed anywhere other than the bidders' devices. Key components include an auction contract, a helper for anonymization, and a client library for interaction, all tested but not yet deployed or audited.",
+    "latest_push": "Added the ladder as an instrument with adjustments to related components.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 291,
+    "deletions": 153,
+    "sprint": {
+      "pushes": 26,
+      "additions": 12188,
+      "deletions": 2,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
     "slug": "envelope",
     "name": "envelope",
     "one_liner": "Private money you can send as a link. A STRK20 anonymizer that pays people who have never touched Starknet, with claim authorisations that cannot be front-run.",
@@ -50,7 +116,6 @@
     "head_sha": "3adf3537f4de4107844ca44fe8b8b301e5edbd66",
     "readme_hash": "91b7fa159a0684e7",
     "desc_v6": true,
-    "churn_pct": 2.8,
     "summary": "Send private money as a link to an agent without a wallet or address.",
     "description_long": "Envelope allows users to send shielded tokens as a link, enabling payments to agents who do not possess a wallet or address. The system uses an anonymizer contract that seals an amount into an envelope, which can only be opened by the recipient's shielded balance, ensuring privacy throughout the transaction process. It includes functionalities such as sealing envelopes, checking their status, and opening them without the need for prior identification or registration, relying on a secured key stored in the link.",
     "latest_push": "Polished the sealed page and added an agent prompt copier.",
@@ -69,6 +134,7 @@
     "has_readme": true,
     "additions": 414,
     "deletions": 28,
+    "churn_pct": 2.8,
     "sprint": {
       "pushes": 100,
       "additions": 7643,
@@ -130,7 +196,6 @@
     "head_sha": "9faa70a018c92a57836890d9ce1784def6162a95",
     "readme_hash": "5936785fa9e94c4d",
     "desc_v6": true,
-    "churn_pct": 43.3,
     "summary": "A privacy-preserving claims rail for public verification of private payouts.",
     "description_long": "Nyalthe allows for the creation of a funded event policy that settles private claimant payouts while enabling public verification of the policy and the transactions involved. The project consists of contracts that manage the policy creation, funding reserves, event acceptance, claim authorization, and private settlement. It is currently in early public build, with ongoing implementation and testing tracked in the repository.",
     "latest_push": "Added the Nyalthe dark theme, site navigation, and landing hero.",
@@ -169,6 +234,7 @@
     "has_readme": true,
     "additions": 803,
     "deletions": 169,
+    "churn_pct": 43.3,
     "sprint": {
       "pushes": 33,
       "additions": 6569,
@@ -273,7 +339,6 @@
     "head_sha": "382a44c16bce791728b50ca66f24a96299cf2987",
     "readme_hash": "a871f5ff1107fb3c",
     "desc_v6": true,
-    "churn_pct": 72.3,
     "summary": "A whitehat rescue bot that sweeps exposed on-chain funds to safety.",
     "description_long": "Aegis monitors public repositories for accidentally leaked private keys and API keys, verifies if they control actual funds, and automatically sweeps those funds to a secure address before they can be exploited. It scans registered projects for sensitive filenames, checks for real balances, derives the Starknet account, deploys if necessary, and conducts sweeping operations entirely automated. Owners prove their identity through GitHub to reclaim their funds, which are transferred through the STRK20 shielded pool for enhanced privacy.",
     "latest_push": "Added a live vault counter to the landing page.",
@@ -317,6 +382,7 @@
     "has_readme": true,
     "additions": 4218,
     "deletions": 411,
+    "churn_pct": 72.3,
     "sprint": {
       "pushes": 100,
       "additions": 6877,
@@ -388,7 +454,6 @@
     "head_sha": "5e93773cc6ca48d489f001d2383cae60da873d12",
     "readme_hash": "709363b44ceb8140",
     "desc_v6": true,
-    "churn_pct": 6.1,
     "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
     "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
     "latest_push": "Added encrypted file attachments and refined deal room UX.",
@@ -402,6 +467,7 @@
     "has_readme": true,
     "additions": 1584,
     "deletions": 186,
+    "churn_pct": 6.1,
     "sprint": {
       "pushes": 100,
       "additions": 16583,
@@ -465,7 +531,6 @@
     "head_sha": "4a978071af0acd0e1b0e75578dcbe44194130298",
     "readme_hash": "df3ba2d8be71fc10",
     "desc_v6": true,
-    "churn_pct": 5.8,
     "summary": "Privacy-first invoicing and settlement for independent workers and teams.",
     "description_long": "CipherBill enables users to connect a Starknet wallet, shield STRK, create invoices or payment requests, and settle through private transfers. It is built with Next.js, React, TypeScript, and the Starknet.js Wallet API, integrating the STRK20 privacy pool. The application supports selective evidence exports, allowing users to share metadata without exposing complete financial details.",
     "latest_push": "Added a decentralized zero-knowledge merchant tax compliance export engine.",
@@ -499,6 +564,7 @@
     "has_readme": true,
     "additions": 2626,
     "deletions": 0,
+    "churn_pct": 5.8,
     "sprint": {
       "pushes": 27,
       "additions": 26091,
@@ -583,7 +649,6 @@
     "head_sha": "a752044857ee46d69991a3fa93f1f144e93bc491",
     "readme_hash": "c49f13c8896455b2",
     "desc_v6": true,
-    "churn_pct": 0.6,
     "summary": "Private perpetual futures trading with shielded collateral on Starknet.",
     "description_long": "This project enables users to open private perpetual futures positions on Starknet while maintaining the confidentiality of their trading data. The system uses Groth16 zk-SNARKs for state transitions, ensuring only commitment and nullifier are posted to the blockchain. The interaction with the STRK20 privacy pool ensures that all collateral remains shielded during transactions, while five dedicated on-chain verifiers maintain proof integrity.",
     "latest_push": "Fixed protocol-correct private-receiving onboarding via wallet registration.",
@@ -637,6 +702,7 @@
     "has_readme": true,
     "additions": 902,
     "deletions": 211,
+    "churn_pct": 0.6,
     "sprint": {
       "pushes": 91,
       "additions": 20115,
@@ -652,72 +718,6 @@
       "facts_v2": true
     },
     "star_evidence": "2 contracts deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "vickrey",
-    "name": "vickrey",
-    "one_liner": "Sealed-bid Vickrey auctions on STRK20 where the losing bids are never published. The outcome is proved on-chain, not asserted.",
-    "category": "Other",
-    "repo_url": "https://github.com/Vickrey-Protocol/vickrey",
-    "demo_url": "https://vickrey-ten.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-23T13:03:43Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Jagadeeshftw",
-        "name": "Jagadeesh B",
-        "avatar_url": "https://avatars.githubusercontent.com/u/92681651?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-23"
-    ],
-    "head_sha": "45bc12674b35e5cdfcace0053a37aecef9a19413",
-    "readme_hash": "880fb97a4b64abbc",
-    "desc_v6": true,
-    "churn_pct": 8.8,
-    "summary": "Sealed-bid auctions where losing bids remain private.",
-    "description_long": "Vickrey allows for sealed-bid auctions on STRK20, where the highest bidder wins but pays the second-highest bid. The auction outcome is established on-chain through hash-preimage proofs, ensuring that losing bids are not revealed anywhere other than the bidders' devices. Key components include an auction contract, a helper for anonymization, and a client library for interaction, all tested but not yet deployed or audited.",
-    "latest_push": "Added a landing page with a pitch and auction features.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 503,
-    "deletions": 42,
-    "sprint": {
-      "pushes": 23,
-      "additions": 12050,
-      "deletions": 2,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "stealth-checkout",
@@ -811,7 +811,6 @@
     "head_sha": "85413b633853c032375a6b093d8f72d2a47b0caf",
     "readme_hash": "56f323344f85a3bd",
     "desc_v6": true,
-    "churn_pct": 1.6,
     "summary": "Accept private payments with an embeddable checkout widget and hosted invoices.",
     "description_long": "Stealth Checkout enables merchants to accept private payments on Starknet through an embeddable payment widget, hosted invoice pages, and headless payment confirmations via webhooks. The project includes a payment widget that supports private transactions, receipt generation for payments, a watcher to confirm transactions on the backend, and a demo arcade store to showcase functionality. Built as a framework-agnostic TypeScript package, the checkout allows various tiers of integration from simple button implementation to full backend webhook support.",
     "latest_push": "Closed the third round and modified related classes accordingly.",
@@ -825,6 +824,7 @@
     "has_readme": true,
     "additions": 458,
     "deletions": 66,
+    "churn_pct": 1.6,
     "sprint": {
       "pushes": 30,
       "additions": 39621,
@@ -872,7 +872,6 @@
     "head_sha": "b3307508bb4e7f6c8568e39cc5e5ae552fa8fc1f",
     "readme_hash": "97850e118475957d",
     "desc_v6": true,
-    "churn_pct": 41.6,
     "summary": "A decorrelation layer for the STRK20 privacy pool for cross-chain transactions.",
     "description_long": "Enables users to enter the STRK20 privacy pool from any blockchain using their existing wallet. Users can exit to an unrelated address, in a standard denomination, after a randomized delay and can choose to receive a different asset. The design focuses on ensuring that no correlation can be made between the entry and exit points.",
     "latest_push": "Deployed AccountFactory to Sepolia and verified Eth712Account determinism.",
@@ -880,6 +879,7 @@
     "has_readme": true,
     "additions": 48,
     "deletions": 6,
+    "churn_pct": 41.6,
     "sprint": {
       "pushes": 3,
       "additions": 220,
@@ -1522,7 +1522,7 @@
       },
       {
         "address": "0x711b2c0eba71bfde250451b6a1ec30239a6285949f1dba45a359517912ff56a",
-        "network": "unknown"
+        "network": "mainnet"
       }
     ],
     "transactions": [
@@ -1597,7 +1597,7 @@
       "computed": 2
     },
     "assessment": null,
-    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
+    "star_evidence": "2 contracts deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "tony-strk",
@@ -2768,7 +2768,6 @@
     "head_sha": "e6860da48c56699036dcb1e496aee6f936c3c510",
     "readme_hash": "7c0bbf813c1629dc",
     "desc_v6": true,
-    "churn_pct": 100,
     "summary": "No description available.",
     "description_long": "",
     "latest_push": "Added PrivacyHub and AccountFactory contracts with STRK20 skills.",
@@ -2807,6 +2806,7 @@
     "has_readme": true,
     "additions": 3947,
     "deletions": 11,
+    "churn_pct": 100,
     "sprint": {
       "pushes": 3,
       "additions": 10837,
