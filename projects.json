@@ -21,7 +21,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-23T19:37:15Z",
+    "pushed_at": "2026-08-23T20:21:40Z",
     "stars": 0,
     "builders": [
       {
@@ -34,13 +34,13 @@
     "active_days": [
       "2026-08-23"
     ],
-    "head_sha": "7685a6e8108ca84c7211a9895485b6842569c15b",
+    "head_sha": "6040a898d235e1531077e6628077f3be13d568b9",
     "readme_hash": "df04aa354c509f3a",
     "desc_v6": true,
-    "churn_pct": 11.2,
+    "churn_pct": 34.2,
     "summary": "Sealed-bid auctions with privacy for bids and outcomes on STRK20.",
     "description_long": "This project implements Vickrey sealed-bid auctions on the STRK20 privacy pool, ensuring that losing bids remain unpublished. It uses a contract that settles the auction outcomes through hash-preimage proofs, protecting the bids from exposure after submission. The project includes an auction contract, an anonymizer helper, a client library, and a web app, with functions to facilitate the auction process securely while maintaining user privacy.",
-    "latest_push": "Fixed three bugs discovered during the Sepolia rehearsal.",
+    "latest_push": "Split the marketing site from the application and fixed auction locking issue.",
     "tooling": [
       {
         "label": "Cairo",
@@ -54,16 +54,179 @@
       }
     ],
     "has_readme": true,
-    "additions": 777,
-    "deletions": 111,
+    "additions": 2836,
+    "deletions": 604,
     "sprint": {
-      "pushes": 39,
-      "additions": 14102,
+      "pushes": 43,
+      "additions": 16334,
       "deletions": 2,
       "computed": 2
     },
     "assessment": null,
     "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "strkworld",
+    "name": "STRKWORLD",
+    "one_liner": "A 2D top-down city where the buildings are Starknet privacy protocols",
+    "category": "Gaming",
+    "repo_url": "https://github.com/Calcutatator/STRKWORLD",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "starkware",
+    "starred": false,
+    "star_reason": "The concept exists but lacks implemented complexity or innovative privacy applications.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-23T20:20:03Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Calcutatator",
+        "name": "Calcutator",
+        "avatar_url": "https://avatars.githubusercontent.com/u/114863662?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 1
+      }
+    ],
+    "active_days": [
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-23"
+    ],
+    "head_sha": "ddf61c80ebacf9a809c8c8f2d608df52ba3f9aeb",
+    "readme_hash": "d13f73105228ff23",
+    "desc_v6": true,
+    "churn_pct": 0.8,
+    "summary": "Explore a 2D city with buildings representing Starknet privacy protocols.",
+    "description_long": "STRKWORLD is a 2D top-down city where players walk around a shared pseudonymous environment and interact with various privacy-preserving protocols using real funds on Starknet. The project is organized into packages including 'web' for the application shell, 'backend' for the planned RPC proxy, and several others that handle privacy operations, bridging, and multiplayer presence. Each interaction within the city is gated by approved private execution paths to ensure user privacy.",
+    "latest_push": "Gated the transfer route behind an explicit policy and fixed wallet admission.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 352,
+    "deletions": 12,
+    "sprint": {
+      "pushes": 100,
+      "additions": 60678,
+      "deletions": 6248,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project applies privacy to buildings where financial actions are taken, which is a standard idea.",
+      "why_complex": "There are no deployed contracts or advanced Cairo code provided at this stage.",
+      "reason": "The concept exists but lacks implemented complexity or innovative privacy applications.",
+      "facts_v2": true
+    },
+    "star_evidence": ""
+  },
+  {
+    "slug": "prism",
+    "name": "Prism",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/etvjay/Prism",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-23T20:14:42Z",
+    "stars": 1,
+    "builders": [
+      {
+        "login": "etvjay",
+        "name": "etvjay",
+        "avatar_url": "https://avatars.githubusercontent.com/u/315516498?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-20"
+    ],
+    "head_sha": "fbb5084cd9106c9e6965083597285fd084b58585",
+    "readme_hash": "4c7ff264b6612f59",
+    "desc_v6": true,
+    "summary": "A Starknet-native identity and financial coordination protocol.",
+    "description_long": "Prism anchors identity on Starknet with a persistent Prism ID while allowing connected accounts on other chains to act as native execution identities. It supports creating a Prism ID, connecting a Base execution account, and managing it without altering the ID, alongside displaying a unified financial state across Starknet and Base, facilitated by STRK20 for private financial actions.",
+    "latest_push": "Updated documentation on STRK20 integration and research context.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 256,
+    "deletions": 385,
+    "churn_pct": 100,
+    "sprint": {
+      "pushes": 42,
+      "additions": 8287,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
   },
   {
     "slug": "ownerz",
@@ -114,7 +277,6 @@
     "head_sha": "828357d389f12f08e77338f475c9e31c08b4a05c",
     "readme_hash": "fb50075b66ae1661",
     "desc_v6": true,
-    "churn_pct": 0.8,
     "summary": "A marketplace to sell private data with anonymous transactions and post-quantum encryption.",
     "description_long": "This project allows users to monetize private data on a blockchain without intermediaries or hidden costs. Sellers upload locally encrypted files to Filecoin and register the CID and price on the STRK20 smart contract, while buyers access the data via direct CID and make anonymous purchases using ZK-proofs. The decryption key is automatically delivered to the verified buyer in a private blockchain event.",
     "latest_push": "Fixed the StarknetKit mobile deeplink and WebWallet fallback.",
@@ -158,6 +320,7 @@
     "has_readme": true,
     "additions": 33,
     "deletions": 13,
+    "churn_pct": 0.8,
     "sprint": {
       "pushes": 27,
       "additions": 19546,
@@ -500,88 +663,6 @@
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
   },
   {
-    "slug": "strkworld",
-    "name": "STRKWORLD",
-    "one_liner": "A 2D top-down city where the buildings are Starknet privacy protocols",
-    "category": "Gaming",
-    "repo_url": "https://github.com/Calcutatator/STRKWORLD",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "starkware",
-    "starred": false,
-    "star_reason": "The concept exists but lacks implemented complexity or innovative privacy applications.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-23T19:07:11Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Calcutatator",
-        "name": "Calcutator",
-        "avatar_url": "https://avatars.githubusercontent.com/u/114863662?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 2
-      }
-    ],
-    "active_days": [
-      "2026-08-20",
-      "2026-08-21",
-      "2026-08-23"
-    ],
-    "head_sha": "0e5360c07495b4b97ec1116cd34b287d341b04d2",
-    "readme_hash": "d13f73105228ff23",
-    "desc_v6": true,
-    "summary": "Explore a 2D city with buildings representing Starknet privacy protocols.",
-    "description_long": "STRKWORLD is a 2D top-down city where players walk around a shared pseudonymous environment and interact with various privacy-preserving protocols using real funds on Starknet. The project is organized into packages including 'web' for the application shell, 'backend' for the planned RPC proxy, and several others that handle privacy operations, bridging, and multiplayer presence. Each interaction within the city is gated by approved private execution paths to ensure user privacy.",
-    "latest_push": "Gated the production app based on wallet connection.",
-    "tooling": [
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1125,
-    "deletions": 66,
-    "churn_pct": 2.8,
-    "sprint": {
-      "pushes": 100,
-      "additions": 60702,
-      "deletions": 6262,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "The project applies privacy to buildings where financial actions are taken, which is a standard idea.",
-      "why_complex": "There are no deployed contracts or advanced Cairo code provided at this stage.",
-      "reason": "The concept exists but lacks implemented complexity or innovative privacy applications.",
-      "facts_v2": true
-    },
-    "star_evidence": ""
-  },
-  {
     "slug": "facet",
     "name": "Facet",
     "one_liner": "Private identities for Starknet DeFi. One shielded balance, unlimited unlinkable facets, one per protocol.",
@@ -668,87 +749,6 @@
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "prism",
-    "name": "Prism",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/etvjay/Prism",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-23T18:47:43Z",
-    "stars": 1,
-    "builders": [
-      {
-        "login": "etvjay",
-        "name": "etvjay",
-        "avatar_url": "https://avatars.githubusercontent.com/u/315516498?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-20"
-    ],
-    "head_sha": "fbb5084cd9106c9e6965083597285fd084b58585",
-    "readme_hash": "4c7ff264b6612f59",
-    "desc_v6": true,
-    "summary": "A Starknet-native identity and financial coordination protocol.",
-    "description_long": "Prism anchors identity on Starknet with a persistent Prism ID while allowing connected accounts on other chains to act as native execution identities. It supports creating a Prism ID, connecting a Base execution account, and managing it without altering the ID, alongside displaying a unified financial state across Starknet and Base, facilitated by STRK20 for private financial actions.",
-    "latest_push": "Updated documentation on STRK20 integration and research context.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 256,
-    "deletions": 385,
-    "churn_pct": 100,
-    "sprint": {
-      "pushes": 42,
-      "additions": 8287,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
   },
   {
     "slug": "nightshift",
@@ -5091,10 +5091,9 @@
       },
       {
         "hash": "0x7d643ebd88f2894b2733628fcc7363fd082e30a0ea0b47c3608149a7bbfc86c",
-        "ok": false,
-        "pool": false,
-        "mine": false,
-        "note": "not found on mainnet"
+        "ok": true,
+        "pool": true,
+        "mine": null
       },
       {
         "hash": "0x3f556eafedae96409b43b7e20b0e2f56199cc74a1ea97b8e09a63c80e4ec0f2",
@@ -5103,11 +5102,11 @@
         "mine": null
       }
     ],
-    "verified_txs": 2,
+    "verified_txs": 3,
     "requirements": {
       "demo": false,
       "video": false,
-      "mainnet": false
+      "mainnet": true
     },
     "status": "building",
     "pushed_at": "2026-08-22T13:22:05Z",
