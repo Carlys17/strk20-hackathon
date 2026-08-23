@@ -21,7 +21,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-23T00:54:37Z",
+    "pushed_at": "2026-08-23T01:15:34Z",
     "stars": 0,
     "builders": [
       {
@@ -35,76 +35,21 @@
       "2026-08-22",
       "2026-08-23"
     ],
-    "head_sha": "9b2068d0540c9427c34e616917fd6c7dffb1a14c",
-    "readme_hash": "bb2993a6415b243d",
+    "head_sha": "acf34c754a93cb48541ce0a1b98a19e71a0b9619",
+    "readme_hash": "c08842f6197e5670",
     "desc_v6": true,
-    "churn_pct": 59.8,
-    "summary": "A mobile wallet for private transactions on Starknet using STRK20.",
-    "description_long": "tip is a non-custodial mobile wallet for Starknet that allows users to shield, unshield, and send tokens privately from their devices. It is built with Dart and Flutter, and includes a client for the STRK20 privacy pool, with functionalities such as a discovery client for balances and a proving client for transaction processing. The app features advanced cryptographic protocols for secure messaging and data transport, all verified against established RFCs.",
-    "latest_push": "Added the token registry and implemented wallet management features.",
+    "churn_pct": 13,
+    "summary": "A mobile wallet for sending, tipping, and holding various tokens on Starknet.",
+    "description_long": "tip is a non-custodial mobile wallet built in Flutter for Starknet, allowing users to hold, send, and tip various tokens directly from their phones. It includes features like live balance reading, a tip link system for recipients without wallets, and a secure key management system. The wallet interacts with the STRK20 privacy pool via a native Dart client that handles protocol cryptography, private transport, and reorg handling in transaction processing.",
+    "latest_push": "Added the tip and claim screens and enabled external tip link opening.",
     "tooling": [],
     "has_readme": true,
-    "additions": 6995,
-    "deletions": 390,
+    "additions": 1665,
+    "deletions": 37,
     "sprint": {
-      "pushes": 35,
-      "additions": 18139,
-      "deletions": 7,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
-  },
-  {
-    "slug": "roundveil",
-    "name": "Roundveil",
-    "one_liner": "Private savings circles where each round pays the precommitted member without exposing who contributed or who received the pot.",
-    "category": "Consumer",
-    "repo_url": "https://github.com/hicksonhaziel/Roundveil",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-23T00:43:30Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "hicksonhaziel",
-        "name": "hicksonhaziel",
-        "avatar_url": "https://avatars.githubusercontent.com/u/172221844?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-23"
-    ],
-    "head_sha": "29f805761f1f604b1f4a0aa862318a3b5b0ccaeb",
-    "readme_hash": "94eff2e896fa98ae",
-    "desc_v6": true,
-    "churn_pct": 0,
-    "summary": "Private savings circles with anonymous contributions and payouts for three members.",
-    "description_long": "Roundveil is a consumer application for Starknet's STRK20 privacy pool, designed as a rotating savings circle. It features three invited members contributing fixed amounts in sequential rounds without revealing individual contributions or payouts. The system includes a public configuration for rules and funding status, while maintaining privacy for the contributor and recipient identities through unlinkability.",
-    "latest_push": "Initialized the Roundveil project.",
-    "tooling": [],
-    "has_readme": true,
-    "additions": 53,
-    "deletions": 0,
-    "sprint": {
-      "pushes": 1,
-      "additions": 53,
-      "deletions": 0,
+      "pushes": 37,
+      "additions": 19770,
+      "deletions": 10,
       "computed": 2
     },
     "assessment": null,
@@ -151,7 +96,7 @@
       "mainnet": true
     },
     "status": "building",
-    "pushed_at": "2026-08-23T00:37:18Z",
+    "pushed_at": "2026-08-23T01:07:41Z",
     "stars": 0,
     "builders": [
       {
@@ -172,14 +117,16 @@
       "2026-08-17",
       "2026-08-18",
       "2026-08-19",
-      "2026-08-20"
+      "2026-08-20",
+      "2026-08-23"
     ],
-    "head_sha": "aea4b879616ed33d284b40dc4abdaeedca119c25",
-    "readme_hash": "b00c1aa0f5fb0f7a",
+    "head_sha": "e22b3c34655b319abf651c107b2c48bb219dc90f",
+    "readme_hash": "e300283d0b9987fe",
     "desc_v6": true,
-    "summary": "Process private USDC payments with invoices and QR codes on Starknet.",
-    "description_long": "MorokPay enables private USDC payments using invoices and QR codes. It connects to the Ready wallet, allowing users to create and pay invoices, mint USDC from Base through CCTP, and manage private balances securely. Key components include the STRK20 pool for transactions, a QR code generation feature for payments, and functions for topping up USDC while maintaining privacy throughout the payment process.",
-    "latest_push": "Refreshed the MorokPay interface with Electric Vault changes.",
+    "churn_pct": 4.1,
+    "summary": "Process private USDC donations on Starknet via reusable QR codes.",
+    "description_long": "MorokPay enables creators to receive private USDC donations using a QR code, maintaining anonymity for both the amount and the sender. The system interacts with the STRK20 Privacy Pool, and features a user interface for donors to make payments and for creators to track their received donations. It includes plans for a public donation pot and contests to promote usage in the Starknet environment.",
+    "latest_push": "Focused the sprint on private donations and modified related documentation.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -218,17 +165,71 @@
       }
     ],
     "has_readme": true,
-    "additions": 360,
-    "deletions": 118,
-    "churn_pct": 6.4,
+    "additions": 179,
+    "deletions": 127,
     "sprint": {
-      "pushes": 34,
-      "additions": 35190,
-      "deletions": 3752,
+      "pushes": 35,
+      "additions": 35245,
+      "deletions": 3755,
       "computed": 2
     },
     "assessment": null,
     "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "roundveil",
+    "name": "Roundveil",
+    "one_liner": "Private savings circles where each round pays the precommitted member without exposing who contributed or who received the pot.",
+    "category": "Consumer",
+    "repo_url": "https://github.com/hicksonhaziel/Roundveil",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-23T00:43:30Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "hicksonhaziel",
+        "name": "hicksonhaziel",
+        "avatar_url": "https://avatars.githubusercontent.com/u/172221844?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-23"
+    ],
+    "head_sha": "29f805761f1f604b1f4a0aa862318a3b5b0ccaeb",
+    "readme_hash": "94eff2e896fa98ae",
+    "desc_v6": true,
+    "summary": "Private savings circles with anonymous contributions and payouts for three members.",
+    "description_long": "Roundveil is a consumer application for Starknet's STRK20 privacy pool, designed as a rotating savings circle. It features three invited members contributing fixed amounts in sequential rounds without revealing individual contributions or payouts. The system includes a public configuration for rules and funding status, while maintaining privacy for the contributor and recipient identities through unlinkability.",
+    "latest_push": "Initialized the Roundveil project.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 53,
+    "deletions": 0,
+    "churn_pct": 0,
+    "sprint": {
+      "pushes": 1,
+      "additions": 53,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
   },
   {
     "slug": "almoner",
@@ -781,7 +782,7 @@
     "churn_pct": 100,
     "summary": "",
     "description_long": "",
-    "latest_push": "Added PrivacyHub and AccountFactory contracts along with STRK20 skills.",
+    "latest_push": "Added PrivacyHub and AccountFactory contracts and STRK20 skills.",
     "tooling": [
       {
         "label": "get-starknet",
