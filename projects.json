@@ -1,5 +1,97 @@
 [
   {
+    "slug": "gigstark",
+    "name": "Gigstark",
+    "one_liner": "Private freelance milestones, creator subscriptions, and proof-gated access on Starknet with STRK20",
+    "category": "Other",
+    "repo_url": "https://github.com/OGtev317/Gigstark",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-24T17:32:34Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "OGtev317",
+        "name": "OGtev317",
+        "avatar_url": "https://avatars.githubusercontent.com/u/233919431?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-23",
+      "2026-08-24"
+    ],
+    "head_sha": "4f24d53a16fcee49e50901a9533c69b2ee5333e0",
+    "readme_hash": "a58da7139820b8f3",
+    "desc_v6": true,
+    "churn_pct": 100,
+    "summary": "A prototype for private freelance milestones and creator subscriptions.",
+    "description_long": "Gigstark is a local, non-custodial STRK20 prototype designed for private freelance milestones and creator subscriptions on Starknet. It features a browser-only demo for escrow state machines, tests for various transaction scenarios, bound subscriptions, and a receipt verifier model without wallet scanning. The contracts include a Cairo anonymizer draft, a hybrid compute resolution, and a range of safety measures to ensure private key management and transaction integrity.",
+    "latest_push": "Added the verifiable compute specimen and its related documentation.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 8270,
+    "deletions": 12,
+    "sprint": {
+      "pushes": 4,
+      "additions": 18725,
+      "deletions": 207,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
     "slug": "vickrey",
     "name": "Vickrey",
     "one_liner": "Sealed-bid Vickrey auctions on STRK20 where the losing bids are never published. The outcome is proved on-chain, not asserted.",
@@ -21,7 +113,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-24T17:17:08Z",
+    "pushed_at": "2026-08-24T17:24:15Z",
     "stars": 0,
     "builders": [
       {
@@ -35,13 +127,13 @@
       "2026-08-23",
       "2026-08-24"
     ],
-    "head_sha": "e9da4d2cd9df5e9c753d99f32fbe2012c81a83cd",
+    "head_sha": "14513bd9c2edb1eef43a4e73832304839c4db724",
     "readme_hash": "28f6f91a4811daf4",
     "desc_v6": true,
-    "churn_pct": 0.8,
+    "churn_pct": 4.6,
     "summary": "Conduct sealed-bid auctions where losing bids remain private.",
     "description_long": "The project implements Vickrey auctions on Starknet, ensuring that losing bids are never revealed. The auction process is verified on-chain using hash-preimage proofs, where bids are sealed before they can be opened. The system consists of an auction contract, anonymizer helper, client library, and a web application, with full test coverage but not yet deployed on mainnet.",
-    "latest_push": "Added documentation for candidate-frozen and three related tests.",
+    "latest_push": "Settled sections 5 and 6a and documented the fallback ladder.",
     "tooling": [
       {
         "label": "Cairo",
@@ -55,11 +147,11 @@
       }
     ],
     "has_readme": true,
-    "additions": 87,
-    "deletions": 1,
+    "additions": 539,
+    "deletions": 3,
     "sprint": {
-      "pushes": 60,
-      "additions": 18247,
+      "pushes": 63,
+      "additions": 18783,
       "deletions": 2,
       "computed": 2
     },
@@ -142,7 +234,6 @@
     "head_sha": "f5991a56449348aa998bfa4617c7c19c5a2927d3",
     "readme_hash": "4101a97e21856e9a",
     "desc_v6": true,
-    "churn_pct": 0.2,
     "summary": "Private perpetual futures trading with shielded collateral on Starknet.",
     "description_long": "This project enables users to open private perpetual futures positions on Starknet while maintaining the confidentiality of their trading data. The system uses Groth16 zk-SNARKs for state transitions, ensuring only commitment and nullifier are posted to the blockchain. The interaction with the STRK20 privacy pool ensures that all collateral remains shielded during transactions, while five dedicated on-chain verifiers maintain proof integrity.",
     "latest_push": "Added the Privy x STRK20 repository audit documentation.",
@@ -191,6 +282,7 @@
     "has_readme": true,
     "additions": 402,
     "deletions": 0,
+    "churn_pct": 0.2,
     "sprint": {
       "pushes": 100,
       "additions": 19726,
@@ -206,93 +298,6 @@
       "facts_v2": true
     },
     "star_evidence": "2 contracts deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "gigstark",
-    "name": "Gigstark",
-    "one_liner": "Private freelance milestones, creator subscriptions, and proof-gated access on Starknet with STRK20",
-    "category": "Other",
-    "repo_url": "https://github.com/OGtev317/Gigstark",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-24T17:10:58Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "OGtev317",
-        "name": "OGtev317",
-        "avatar_url": "https://avatars.githubusercontent.com/u/233919431?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-23",
-      "2026-08-24"
-    ],
-    "head_sha": "b2e734f6aa84b26bbe3e5678c2d93807ee496c23",
-    "readme_hash": "c42e6a424c8ce397",
-    "desc_v6": true,
-    "churn_pct": 46,
-    "summary": "A non-custodial prototype for private freelance milestones and creator subscriptions.",
-    "description_long": "Gigstark supports private transactions for freelancers, including escrow services and subscription models. It features a browser-only demo for state management, a bounded subscription machine, and various verification models like a Passport-inspired tier system. The contracts, built with Cairo, include a privacy-focused anonymizer, role authorization, and tier proof consumption, while maintaining strict boundaries on sensitive data.",
-    "latest_push": "Added hybrid compute settlement baseline and passport-gated STRK20 flows.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 2597,
-    "deletions": 164,
-    "sprint": {
-      "pushes": 3,
-      "additions": 10467,
-      "deletions": 207,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "vinss",
@@ -350,7 +355,6 @@
     "head_sha": "d8475c3978ed23e080297065dc275b5ff4146620",
     "readme_hash": "709363b44ceb8140",
     "desc_v6": true,
-    "churn_pct": 1,
     "summary": "A private deal room for encrypted negotiation, structured offers, and evidence of settlement.",
     "description_long": "VINSS provides a complete deal lifecycle from private chat to structured offers, escrow coordination, and settlement evidence. It features encrypted messaging for negotiation, creates a structured offer lifecycle, and issues NFT certificates for each settlement without exposing sensitive data. The system is built on Starknet and has been tested on-chain.",
     "latest_push": "Raised VINSS application fees in the relevant contracts and configuration files.",
@@ -364,6 +368,7 @@
     "has_readme": true,
     "additions": 179,
     "deletions": 113,
+    "churn_pct": 1,
     "sprint": {
       "pushes": 100,
       "additions": 16513,
@@ -419,7 +424,6 @@
     "head_sha": "261adcf5646843a4e22910faa132c92a6dc4846c",
     "readme_hash": "6957899cab45b698",
     "desc_v6": true,
-    "churn_pct": 86,
     "summary": "Create and process private invoices with shielded payments.",
     "description_long": "BlindPay allows merchants to issue invoices and receive payments via shielded notes on Starknet. It includes features like private invoice links, an API for merchants, a React frontend, and an indexer for fast invoice lookups. The contracts implement a privacy escrow system using Cairo, enabling anonymous payment flows while maintaining verifiable settlements.",
     "latest_push": "Added BlindPayEscrow contract with snforge tests and shielded balances on profile.",
@@ -438,6 +442,7 @@
     "has_readme": true,
     "additions": 1067,
     "deletions": 9494,
+    "churn_pct": 86,
     "sprint": {
       "pushes": 4,
       "additions": 42938,
@@ -597,7 +602,6 @@
     "head_sha": "87120b7890795ef8f5829a3c5eca7f2091608e7f",
     "readme_hash": "d1a58baa16d14810",
     "desc_v6": true,
-    "churn_pct": 100,
     "summary": "Make private USDC donations with reusable QR codes on Starknet.",
     "description_long": "MorokPay allows creators to publish reusable QR codes for private USDC donations, where supporters can choose the amount and confirm the transfer through the Ready application. The app connects to the STRK20 pool, ensuring that transfer amounts and sender-recipient relationships remain private on-chain. It includes features like donation QR creation, private payments, and balance management, with a focus on maintaining user privacy and control.",
     "latest_push": "Focused the repository on the donation MVP.",
@@ -636,6 +640,7 @@
     "has_readme": true,
     "additions": 150,
     "deletions": 12746,
+    "churn_pct": 100,
     "sprint": {
       "pushes": 38,
       "additions": 25088,
@@ -6799,9 +6804,10 @@
       },
       {
         "hash": "0x007239d9449a5a09aa701488149c30b6685794f7db67e2041069a0212f5f9f7e",
-        "ok": true,
-        "pool": true,
-        "mine": true
+        "ok": false,
+        "pool": false,
+        "mine": false,
+        "note": "not found on mainnet"
       },
       {
         "hash": "0x024566acdb0de49b44a6ef689387209eb09c71fc037e75c2d4129f915c8e6c5c",
@@ -6810,7 +6816,7 @@
         "mine": true
       }
     ],
-    "verified_txs": 4,
+    "verified_txs": 3,
     "requirements": {
       "demo": true,
       "video": false,
