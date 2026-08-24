@@ -1,5 +1,132 @@
 [
   {
+    "slug": "crosslink",
+    "name": "Crosslink",
+    "one_liner": "Crosslink measures whether a private payment is actually private. StarkWare's bridgeOutToWallet already does unlinkable payout to any address — what nothing does is tell you whether the anonymity set is deep enough for that to mean anything. Our Linkability Meter scores a pending send against the live mainnet pool on amount uniqueness, timing, channel freshness and plausible-set size, and blocks the send when privacy would be fake. Live on mainnet; it gated our own transfers. Roadmap: an embeddable toggle protocols can drop into their own send flow, and USDC cross-chain corridors via CCTP.",
+    "category": "Payments",
+    "repo_url": "https://github.com/CaptainDiv/crosslink",
+    "demo_url": "https://crosslink-delta.vercel.app/",
+    "demo_video": "https://youtu.be/4Nw5DhxXbOk",
+    "x_handle": "",
+    "inspired_by": "IDEA-22",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": true,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-24T23:05:10Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "CaptainDiv",
+        "name": "Captain",
+        "avatar_url": "https://avatars.githubusercontent.com/u/207330336?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Sonnet 5",
+        "avatar_url": "",
+        "commits": 34
+      }
+    ],
+    "active_days": [
+      "2026-08-19",
+      "2026-08-21",
+      "2026-08-22",
+      "2026-08-23",
+      "2026-08-24"
+    ],
+    "head_sha": "95bc91abfaae11dbab4df011139c4790b0951073",
+    "readme_hash": "53b98f6c39b199c5",
+    "desc_v6": true,
+    "churn_pct": 0,
+    "summary": "Measures privacy validity of STRK20 payouts with a live Linkability Meter.",
+    "description_long": "Crosslink assesses whether a private STRK20 payout is unlinkable based on the pool's current anonymity set. It features a Linkability Meter that scores pending sends on criteria such as uniqueness, timing correlation, and pool depth, and it blocks any sends deemed non-privacy-conforming. Built using Starknet with a wallet-derived account structure and a hosted API for integration.",
+    "latest_push": "Formatting and dependency bumps only.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 0,
+    "deletions": 0,
+    "sprint": {
+      "pushes": 50,
+      "additions": 13893,
+      "deletions": 14,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
+    "slug": "maestro",
+    "name": "maestro",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/kelvinpraises/maestro",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-24T23:03:51Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "kelvinpraises",
+        "name": "kelvinpraises",
+        "avatar_url": "https://avatars.githubusercontent.com/u/45688271?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-24"
+    ],
+    "head_sha": "d77f813b2cc8e9c7771568b42c15d8a7106605b6",
+    "readme_hash": "e5ea3c179d8f8e79",
+    "desc_v6": true,
+    "churn_pct": 100,
+    "summary": "A family allowance app for managing chores and rewards privately.",
+    "description_long": "Tracks chores and rewards for kids, allowing parents to fund a shared pot. Kids claim rewards privately as encrypted STRK20 notes, with each transaction unlinkable on the public ledger. Built with Cairo contracts for allowance streams and a React/Vite app for the client, the system uses a family board relay to ensure privacy.",
+    "latest_push": "Launched the Maestro family allowance app on Starknet with STRK20 integration.",
+    "tooling": [],
+    "has_readme": true,
+    "additions": 7847,
+    "deletions": 0,
+    "sprint": {
+      "pushes": 1,
+      "additions": 7847,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
     "slug": "vocap",
     "name": "VOCAP",
     "one_liner": "Private programmable capabilities for Starknet, enforced by STRK20 assets.",
@@ -37,7 +164,6 @@
     "head_sha": "47a21c7588e3425f5db9fc7c1a9454ec6ff48e6e",
     "readme_hash": "751c0368edaefa56",
     "desc_v6": true,
-    "churn_pct": 23.9,
     "summary": "A private protocol for executing protected actions with STRK20 assets.",
     "description_long": "VOCAP is a programmable-capability protocol that enables actions to be executed privately with STRK20 assets. It features a pool-gated router that returns the same asset to a new private note after execution. The project includes contracts for a RETURN-only router, a backend for transaction handling, and documentation for setup and integration testing, indicating ongoing development for the STRK20 Private Sprint.",
     "latest_push": "Recorded the VOCAP Sepolia deployment and removed internal agent instructions.",
@@ -56,6 +182,7 @@
     "has_readme": true,
     "additions": 128,
     "deletions": 315,
+    "churn_pct": 23.9,
     "sprint": {
       "pushes": 4,
       "additions": 4845,
@@ -134,7 +261,6 @@
     "head_sha": "7721d116c3ba2c0f677826bf25fc8b16047b4ab8",
     "readme_hash": "da6fe68401c240d1",
     "desc_v6": true,
-    "churn_pct": 4.6,
     "summary": "Manage private USDC donations through reusable QR codes.",
     "description_long": "MorokPay allows creators to publish reusable QR codes for private USDC donations on Starknet. Supporters can select an amount and confirm transfers without revealing details on-chain, as all activity remains within the STRK20 privacy pool. The app uses the Ready wallet for transaction management, handling viewing keys and transaction proofs without exposing them to the user.",
     "latest_push": "Added EVM signature compatibility lab with tests and page integration.",
@@ -173,6 +299,7 @@
     "has_readme": true,
     "additions": 361,
     "deletions": 0,
+    "churn_pct": 4.6,
     "sprint": {
       "pushes": 48,
       "additions": 26599,
@@ -5932,77 +6059,6 @@
       "reason": "Whisper Pay implements private payment links but lacks engineering depth and innovative application.",
       "facts_v2": true
     },
-    "star_evidence": ""
-  },
-  {
-    "slug": "crosslink",
-    "name": "Crosslink",
-    "one_liner": "Crosslink measures whether a private payment is actually private. StarkWare's bridgeOutToWallet already does unlinkable payout to any address — what nothing does is tell you whether the anonymity set is deep enough for that to mean anything. Our Linkability Meter scores a pending send against the live mainnet pool on amount uniqueness, timing, channel freshness and plausible-set size, and blocks the send when privacy would be fake. Live on mainnet; it gated our own transfers. Roadmap: an embeddable toggle protocols can drop into their own send flow, and USDC cross-chain corridors via CCTP.",
-    "category": "Payments",
-    "repo_url": "https://github.com/CaptainDiv/crosslink",
-    "demo_url": "https://crosslink-delta.vercel.app/",
-    "demo_video": "https://youtu.be/4Nw5DhxXbOk",
-    "x_handle": "",
-    "inspired_by": "IDEA-22",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": true,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-23T15:08:09Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "CaptainDiv",
-        "name": "The Captain",
-        "avatar_url": "https://avatars.githubusercontent.com/u/207330336?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Sonnet 5",
-        "avatar_url": "",
-        "commits": 34
-      }
-    ],
-    "active_days": [
-      "2026-08-19",
-      "2026-08-21",
-      "2026-08-22",
-      "2026-08-23"
-    ],
-    "head_sha": "fd08925df68e21c817c3898435be333ace224c57",
-    "readme_hash": "53b98f6c39b199c5",
-    "desc_v6": true,
-    "summary": "Measures privacy validity of STRK20 payouts with a live Linkability Meter.",
-    "description_long": "Crosslink assesses whether a private STRK20 payout is unlinkable based on the pool's current anonymity set. It features a Linkability Meter that scores pending sends on criteria such as uniqueness, timing correlation, and pool depth, and it blocks any sends deemed non-privacy-conforming. Built using Starknet with a wallet-derived account structure and a hosted API for integration.",
-    "latest_push": "Added demo video URL to strk20.json.",
-    "tooling": [
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1,
-    "deletions": 1,
-    "churn_pct": 0.1,
-    "sprint": {
-      "pushes": 46,
-      "additions": 13893,
-      "deletions": 14,
-      "computed": 2
-    },
-    "assessment": null,
     "star_evidence": ""
   },
   {
