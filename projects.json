@@ -124,9 +124,9 @@
     "readme_hash": "2cf030f0f545e812",
     "desc_v6": true,
     "churn_pct": 1.2,
-    "summary": "Sealed-ballot governance and shielded treasury for DAOs on Starknet.",
-    "description_long": "Aperture implements a sealed-ballot voting system where votes are private transfers, preventing observers from seeing individual choices, weights, or identities. It is built with ProposalRegistry and GovernanceAnonymizer contracts, which handle the voting process and treasury payouts through a Cairo anonymizer that keeps grant recipients anonymous. The system includes safeguards against double voting and ensures that only the aggregate results of the votes are published.",
-    "latest_push": "Updated documentation to accurately reflect project details.",
+    "summary": "Sealed-ballot governance and shielded treasury management for DAOs.",
+    "description_long": "Aperture allows for private voting and treasury payouts within DAOs. It generates one identity per voting choice to keep ballots confidential and prevents double voting by spending notes in a secure pool. Treasury payouts are anonymized, allowing grants to be distributed without revealing recipient identities, while still maintaining the integrity of the voting process.",
+    "latest_push": "Updated documentation to accurately describe the project's purpose.",
     "tooling": [
       {
         "label": "starknet.js",
@@ -289,8 +289,8 @@
     "desc_v6": true,
     "churn_pct": 100,
     "summary": "A private programmable-capability protocol for Starknet.",
-    "description_long": "VOCAP allows users to perform protected target actions gated by a private STRK20 asset, returning the asset to a fresh private note after use. It includes a RETURN-only pool-gated router in the contracts directory and a backend that manages typed policy, PostgreSQL storage, and transaction lifecycles. The project is currently under development with a focus on backend and contract stabilization, pending integration with Sepolia and STRK20.",
-    "latest_push": "Added VOCAP contracts and bootstrapped the private VOCAP workspace.",
+    "description_long": "VOCAP allows users to execute protected actions with STRK20 assets, which are returned as fresh private notes after use. The project includes a RETURN-only router, backend for transaction management, and relevant documentation, with its current focus on integrating with Sepolia and passing local verification tests.",
+    "latest_push": "Added VOCAP contracts and initialized the backend foundation.",
     "tooling": [
       {
         "label": "Cairo",
@@ -378,7 +378,7 @@
     "churn_pct": 0.1,
     "summary": "Generate secure entropy for identity and private transactions with ChaosKey+",
     "description_long": "ChaosKey+ is a device that creates unpredictable entropy from a chaotic phenomenon, anchoring a user’s identity across multiple systems. It integrates with the STRK20 privacy pool through a Ready wallet, enabling actions like shielded transfers and private transactions. The implementation relies on the Starknet SDK and various wallet standards for compatibility and functionality, with a focus on minimal compute and maximum reliability.",
-    "latest_push": "Modified App.js to adjust the component structure.",
+    "latest_push": "Modified the App.js file to adjust functionality.",
     "tooling": [],
     "has_readme": true,
     "additions": 4,
@@ -445,7 +445,7 @@
     "churn_pct": 1.1,
     "summary": "Send private payments to non-users of the privacy pool.",
     "description_long": "Xenia enables a sender to create a claim link that allows the recipient to register on the STRK20 privacy pool and claim their payment in a single transaction. The process involves creating a claim, sending a URL, and the recipient connecting their wallet to complete the registration and payment atomically. The key components include the `XeniaEscrow` contract, which manages the funds and ensures anonymity by handling deposits and claims efficiently.",
-    "latest_push": "Deployed to Vercel and recorded the demo URL in PRD.md.",
+    "latest_push": "Deployed the project to Vercel and documented the demo URL.",
     "tooling": [
       {
         "label": "Next.js",
