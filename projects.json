@@ -1,5 +1,95 @@
 [
   {
+    "slug": "tony-strk",
+    "name": "Tony-Strk",
+    "one_liner": "Anonymous browsing and private payments for AI agents. A remote MCP server built on Tor and shielded STRK20.",
+    "category": "Other",
+    "repo_url": "https://github.com/Aaronvern/Tony-Strk",
+    "demo_url": "https://tony-strk.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-24T21:54:08Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Aaronvern",
+        "name": "Aaronvern",
+        "avatar_url": "https://avatars.githubusercontent.com/u/147914193?v=4"
+      },
+      {
+        "login": "prathadox",
+        "name": "Prathamesh Bhatkhande",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148304605?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-22",
+      "2026-08-24"
+    ],
+    "head_sha": "ef2c3b9096f80dae40895060cf3b1cae9fbe6b46",
+    "readme_hash": "0523e95d5a0eeadb",
+    "desc_v6": true,
+    "churn_pct": 7.5,
+    "summary": "Anonymous browsing with private payment capabilities for AI agents.",
+    "description_long": "This project allows AI agents to browse the web anonymously and make private payments. The system uses a local-only server that fetches HTTP(S) URLs through Tor while ensuring payment details remain private using experimental STRK20 testnet features. The setup includes a Tor HTTP fetcher for anonymous requests and an opt-in wallet path for secure transactions.",
+    "latest_push": "Kept the wallet probe that found the wall in the README and page.js.",
+    "tooling": [
+      {
+        "label": "Privacy SDK",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 585,
+    "deletions": 0,
+    "sprint": {
+      "pushes": 36,
+      "additions": 24975,
+      "deletions": 149,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
     "slug": "morok-pay-starknet",
     "name": "MorokPay",
     "one_liner": "Private USDC treasury on Starknet, funded from Ethereum via CCTP.",
@@ -40,7 +130,7 @@
       "mainnet": true
     },
     "status": "building",
-    "pushed_at": "2026-08-24T21:27:43Z",
+    "pushed_at": "2026-08-24T21:53:25Z",
     "stars": 0,
     "builders": [
       {
@@ -65,13 +155,13 @@
       "2026-08-23",
       "2026-08-24"
     ],
-    "head_sha": "4a16b0a7c5a8eebea93a70df0ad3df5bf3448b62",
-    "readme_hash": "d1a58baa16d14810",
+    "head_sha": "143958c4e13858170ab29e5b94e7660474f79bbc",
+    "readme_hash": "da6fe68401c240d1",
     "desc_v6": true,
-    "churn_pct": 4.3,
-    "summary": "Make private USDC donations with reusable QR codes on Starknet.",
-    "description_long": "MorokPay allows creators to publish reusable QR codes for private USDC donations, where supporters can choose the amount and confirm the transfer through the Ready application. The app connects to the STRK20 pool, ensuring that transfer amounts and sender-recipient relationships remain private on-chain. It includes features like donation QR creation, private payments, and balance management, with a focus on maintaining user privacy and control.",
-    "latest_push": "Added in-app USDC unshield functionality and restored balance activity.",
+    "churn_pct": 0.9,
+    "summary": "Manage private USDC donations through reusable QR codes.",
+    "description_long": "MorokPay allows creators to publish reusable QR codes for private USDC donations on Starknet. Supporters can select an amount and confirm transfers without revealing details on-chain, as all activity remains within the STRK20 privacy pool. The app uses the Ready wallet for transaction management, handling viewing keys and transaction proofs without exposing them to the user.",
+    "latest_push": "Moved service fee documentation to unshield and added donation label during onboarding.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -105,15 +195,119 @@
       }
     ],
     "has_readme": true,
-    "additions": 305,
-    "deletions": 1,
+    "additions": 64,
+    "deletions": 3,
     "sprint": {
-      "pushes": 44,
-      "additions": 25699,
+      "pushes": 46,
+      "additions": 25760,
       "deletions": 3822,
       "computed": 2
     },
     "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "lens",
+    "name": "lens",
+    "one_liner": "See what a STRK20 action still reveals, then take a quieter path",
+    "category": "Other",
+    "repo_url": "https://github.com/Techkeyy/lens",
+    "demo_url": "https://lens-beige-five.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Lens scores planned actions based on potential visibility before execution.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-24T21:49:45Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Techkeyy",
+        "name": "Techkeyy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/169851342?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 28
+      }
+    ],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-24"
+    ],
+    "head_sha": "1783011eb1d624b3c3efcb372078c23413f0675c",
+    "readme_hash": "8fcb2b46626b5247",
+    "desc_v6": true,
+    "churn_pct": 3.7,
+    "summary": "Discloses specific payment relationships without exposing entire financial history.",
+    "description_long": "Lens allows users to selectively disclose one payment relationship to a verifier without revealing their entire financial life. It achieves this through a mechanism that derives a viewing key in memory from a single wallet signature, permitting the verification of payments while keeping other transactions and relationships private. The system defines three roles: the Holder who wants to disclose information, the Counterparty whose payments are being verified, and the Verifier who checks the proof against Starknet.",
+    "latest_push": "Verified live relationships and documented the mainnet evidence ledger.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 338,
+    "deletions": 4,
+    "sprint": {
+      "pushes": 37,
+      "additions": 18502,
+      "deletions": 2929,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": false,
+      "why_innovative": "It grades privacy leaks of planned STRK20 actions using historical data from pool transactions.",
+      "why_complex": "No deployed contracts or complex Cairo engineering evident in the current state of the project.",
+      "reason": "Lens scores planned actions based on potential visibility before execution.",
+      "facts_v2": true
+    },
     "star_evidence": "Cairo in the repository"
   },
   {
@@ -138,7 +332,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-24T21:22:17Z",
+    "pushed_at": "2026-08-24T21:42:49Z",
     "stars": 0,
     "builders": [
       {
@@ -198,200 +392,6 @@
     "star_evidence": ""
   },
   {
-    "slug": "tony-strk",
-    "name": "Tony-Strk",
-    "one_liner": "Anonymous browsing and private payments for AI agents. A remote MCP server built on Tor and shielded STRK20.",
-    "category": "Other",
-    "repo_url": "https://github.com/Aaronvern/Tony-Strk",
-    "demo_url": "https://tony-strk.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-24T21:21:51Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Aaronvern",
-        "name": "Aaronvern",
-        "avatar_url": "https://avatars.githubusercontent.com/u/147914193?v=4"
-      },
-      {
-        "login": "prathadox",
-        "name": "Prathamesh Bhatkhande",
-        "avatar_url": "https://avatars.githubusercontent.com/u/148304605?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21",
-      "2026-08-22",
-      "2026-08-24"
-    ],
-    "head_sha": "b002c47d8fe5d0de63b1c56eaa0cad3a39aa6ef2",
-    "readme_hash": "a4e93db82972e9ec",
-    "desc_v6": true,
-    "churn_pct": 15.3,
-    "summary": "Anonymous browsing and private payments for AI agents.",
-    "description_long": "Tony Strk allows AI agents to browse the web privately while making anonymous payments. It features a local MCP server that fetches public HTTP(S) URLs through Tor, ensuring that the user's IP address and payment details remain anonymous. The project uses STRK20 for private payments, with an experimental local wallet path that requires funding and deployment before spending.",
-    "latest_push": "Recovered unreturned wallet hashes and implemented agent paywall fixes.",
-    "tooling": [
-      {
-        "label": "Privacy SDK",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1075,
-    "deletions": 25,
-    "sprint": {
-      "pushes": 35,
-      "additions": 24390,
-      "deletions": 149,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "lens",
-    "name": "lens",
-    "one_liner": "See what a STRK20 action still reveals, then take a quieter path",
-    "category": "Other",
-    "repo_url": "https://github.com/Techkeyy/lens",
-    "demo_url": "https://lens-beige-five.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Lens scores planned actions based on potential visibility before execution.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-24T21:15:12Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Techkeyy",
-        "name": "Techkeyy",
-        "avatar_url": "https://avatars.githubusercontent.com/u/169851342?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 26
-      }
-    ],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-24"
-    ],
-    "head_sha": "db1e71e973245854f578fe9647b7faf4ff498f1d",
-    "readme_hash": "8fcb2b46626b5247",
-    "desc_v6": true,
-    "churn_pct": 39.2,
-    "summary": "Discloses specific payment relationships without exposing entire financial history.",
-    "description_long": "Lens allows users to selectively disclose one payment relationship to a verifier without revealing their entire financial life. It achieves this through a mechanism that derives a viewing key in memory from a single wallet signature, permitting the verification of payments while keeping other transactions and relationships private. The system defines three roles: the Holder who wants to disclose information, the Counterparty whose payments are being verified, and the Verifier who checks the proof against Starknet.",
-    "latest_push": "Built the disclosure request flow and added walletless proof verification.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 3042,
-    "deletions": 516,
-    "sprint": {
-      "pushes": 35,
-      "additions": 18167,
-      "deletions": 2928,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": false,
-      "why_innovative": "It grades privacy leaks of planned STRK20 actions using historical data from pool transactions.",
-      "why_complex": "No deployed contracts or complex Cairo engineering evident in the current state of the project.",
-      "reason": "Lens scores planned actions based on potential visibility before execution.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
     "slug": "prism",
     "name": "Prism",
     "one_liner": "",
@@ -413,7 +413,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-24T21:11:14Z",
+    "pushed_at": "2026-08-24T21:42:47Z",
     "stars": 1,
     "builders": [
       {
@@ -596,7 +596,6 @@
     "head_sha": "baffc60e7ae016b4655963fbfe961763157fc089",
     "readme_hash": "81db25874e3f167e",
     "desc_v6": true,
-    "churn_pct": 15,
     "summary": "Sealed-ballot governance and shielded treasury for DAOs.",
     "description_long": "Aperture implements private voting through a sealed-ballot system, where casting a vote involves transferring shielded weight to a private identity for the chosen proposal. It features a treasury payout system that anonymizes recipients through its own Cairo anonymizer. The contracts include a Proposal Registry for managing proposals and a Governance Anonymizer to handle treasury payouts, with functionality verified on both Sepolia and mainnet.",
     "latest_push": "Implemented refund payments on Sepolia, added a treasury multisig, and established a timelock.",
@@ -625,6 +624,7 @@
     "has_readme": true,
     "additions": 1874,
     "deletions": 306,
+    "churn_pct": 15,
     "sprint": {
       "pushes": 85,
       "additions": 20525,
@@ -734,7 +734,6 @@
     "head_sha": "6dc6e31f1bfb4d818d14cdbed5fe9cba39f95835",
     "readme_hash": "ffb9628d87cd38c4",
     "desc_v6": true,
-    "churn_pct": 2.3,
     "summary": "Accept private payments with checkout, invoice links, and dynamic QR codes.",
     "description_long": "Stealth Checkout allows merchants to accept private payments through a checkout widget, hosted invoice links, and webhooks for payment confirmation. It includes a TypeScript widget for integration, a dashboard for managing invoices, a watcher for transaction confirmations, and features dynamic QR codes for payments. The widget connects to the STRK20 Privacy Pool and ensures transparent privacy accounting while handling various payment modes.",
     "latest_push": "Fixed the pay button position and updated layout tests.",
@@ -748,6 +747,7 @@
     "has_readme": true,
     "additions": 930,
     "deletions": 68,
+    "churn_pct": 2.3,
     "sprint": {
       "pushes": 62,
       "additions": 52157,
