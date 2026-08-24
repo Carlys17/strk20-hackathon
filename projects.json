@@ -21,7 +21,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-24T01:00:14Z",
+    "pushed_at": "2026-08-24T01:05:45Z",
     "stars": 0,
     "builders": [
       {
@@ -35,13 +35,13 @@
       "2026-08-23",
       "2026-08-24"
     ],
-    "head_sha": "d7ce07c62be8d87b6ef95c1f125832c1087254d7",
+    "head_sha": "838158af333fd5c96f0af8735af9d39d194dfaa3",
     "readme_hash": "cc27ee6749249827",
     "desc_v6": true,
-    "churn_pct": 100,
+    "churn_pct": 3,
     "summary": "A web application for private payroll and vesting distributions on Starknet.",
     "description_long": "Cloakroom is a web application and Starknet smart contract that manages private payroll and vesting distributions on-chain. The project's core contract, `PayrollAnonymizer.cairo`, interacts with the STRK20 privacy pool to execute transactions while masking sender and recipient details. The application currently has no deployed contracts or live transactions.",
-    "latest_push": "Imported Starknet Privacy SDK to the frontend and fixed Vercel build errors.",
+    "latest_push": "Implemented server-side API proxy routes to bypass CORS blocking.",
     "tooling": [
       {
         "label": "Cairo",
@@ -55,11 +55,11 @@
       }
     ],
     "has_readme": true,
-    "additions": 14139,
+    "additions": 142,
     "deletions": 2,
     "sprint": {
-      "pushes": 18,
-      "additions": 30976,
+      "pushes": 19,
+      "additions": 31116,
       "deletions": 178,
       "computed": 2
     },
@@ -104,7 +104,6 @@
     "head_sha": "39cb7dfa9349e84898274f2b7917f3959a336f29",
     "readme_hash": "dee68b06d610bd36",
     "desc_v6": true,
-    "churn_pct": 100,
     "summary": "Simulates transaction privacy and recommends safer actions before signing.",
     "description_long": "VeilGuard is a pre-sign privacy simulator and policy engine that analyzes transaction fields for public exposure and estimates risk based on live STRK20 activity. It features a risk engine that evaluates identity protection, amount confidentiality, timing safety, and the crowd's recent behavior, generating a report with recommendations. Built with TypeScript, it includes components for event scanning, risk scoring, and a review interface without user intent crossing the public telemetry boundary.",
     "latest_push": "Launched the VeilGuard privacy simulator.",
@@ -138,6 +137,7 @@
     "has_readme": true,
     "additions": 5526,
     "deletions": 0,
+    "churn_pct": 100,
     "sprint": {
       "pushes": 1,
       "additions": 5526,
@@ -267,7 +267,6 @@
     "head_sha": "b3d353b830d8b1430f9067e21e3d9cf63de67604",
     "readme_hash": "204192c92b33576c",
     "desc_v6": true,
-    "churn_pct": 0.3,
     "summary": "Proof-carrying private payroll for humans and AI agents using STRK or USDC.",
     "description_long": "PAYO is a non-custodial payroll workspace that combines STRK20 private settlement with encrypted pay agreements and payroll-integrity proofs. It supports features like private batches, recurring channels, and scoped signing authority for AI agents while ensuring sensitive payroll records remain encrypted. The project tracks calculation proof, wallet confirmation, and settlement proof through a three-state validation process, integrating features in a Next.js application for live Mainnet operations.",
     "latest_push": "Pinned browser worker to circuit digest and allowed production proof window.",
@@ -311,6 +310,7 @@
     "has_readme": true,
     "additions": 26,
     "deletions": 7,
+    "churn_pct": 0.3,
     "sprint": {
       "pushes": 22,
       "additions": 34668,
@@ -368,7 +368,6 @@
     "head_sha": "fb3723f8115f5aa9b3adc36a891754ff0d92a166",
     "readme_hash": "23f08bb7571b39bf",
     "desc_v6": true,
-    "churn_pct": 14.3,
     "summary": "Proves specific facts about shielded STRK20 positions on-chain.",
     "description_long": "Aver allows users to prove individual facts regarding their shielded STRK20 balances, enforcing the disclosure on-chain to prevent misrouting. It implements a commitment mechanism that registers as a contract, where valid disclosures trigger on-chain checks to ensure integrity. Version 0 proves only the enforcement path, with a Poseidon commitment opening specific secrets, while future updates aim to expand the range of claims that can be validated.",
     "latest_push": "Added on-chain rejection evidence for REPLAYED_CLAIM in the code.",
@@ -387,6 +386,7 @@
     "has_readme": true,
     "additions": 25,
     "deletions": 1,
+    "churn_pct": 14.3,
     "sprint": {
       "pushes": 3,
       "additions": 662,
@@ -436,7 +436,6 @@
     "head_sha": "00b5e968d8e40084ae953278072c3880de26873c",
     "readme_hash": "c08842f6197e5670",
     "desc_v6": true,
-    "churn_pct": 0.3,
     "summary": "A mobile wallet for sending, tipping, and holding various tokens on Starknet.",
     "description_long": "tip is a non-custodial mobile wallet built in Flutter for Starknet, allowing users to hold, send, and tip various tokens directly from their phones. It includes features like live balance reading, a tip link system for recipients without wallets, and a secure key management system. The wallet interacts with the STRK20 privacy pool via a native Dart client that handles protocol cryptography, private transport, and reorg handling in transaction processing.",
     "latest_push": "Displayed the sign-in and backup screens in the gallery.",
@@ -444,6 +443,7 @@
     "has_readme": true,
     "additions": 54,
     "deletions": 5,
+    "churn_pct": 0.3,
     "sprint": {
       "pushes": 49,
       "additions": 19669,
