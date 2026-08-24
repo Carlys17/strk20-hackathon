@@ -1,5 +1,71 @@
 [
   {
+    "slug": "vocap",
+    "name": "VOCAP",
+    "one_liner": "Private programmable capabilities for Starknet, enforced by STRK20 assets.",
+    "category": "Infra",
+    "repo_url": "https://github.com/CryptoZephyr/VOCAP",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-24T22:48:13Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "CryptoZephyr",
+        "name": "CryptoZephyr",
+        "avatar_url": "https://avatars.githubusercontent.com/u/192461816?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-24"
+    ],
+    "head_sha": "47a21c7588e3425f5db9fc7c1a9454ec6ff48e6e",
+    "readme_hash": "751c0368edaefa56",
+    "desc_v6": true,
+    "churn_pct": 23.9,
+    "summary": "A private protocol for executing protected actions with STRK20 assets.",
+    "description_long": "VOCAP is a programmable-capability protocol that enables actions to be executed privately with STRK20 assets. It features a pool-gated router that returns the same asset to a new private note after execution. The project includes contracts for a RETURN-only router, a backend for transaction handling, and documentation for setup and integration testing, indicating ongoing development for the STRK20 Private Sprint.",
+    "latest_push": "Recorded the VOCAP Sepolia deployment and removed internal agent instructions.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 128,
+    "deletions": 315,
+    "sprint": {
+      "pushes": 4,
+      "additions": 4845,
+      "deletions": 327,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
     "slug": "morok-pay-starknet",
     "name": "MorokPay",
     "one_liner": "Private USDC treasury on Starknet, funded from Ethereum via CCTP.",
@@ -40,7 +106,7 @@
       "mainnet": true
     },
     "status": "building",
-    "pushed_at": "2026-08-24T22:22:06Z",
+    "pushed_at": "2026-08-24T22:27:15Z",
     "stars": 0,
     "builders": [
       {
@@ -65,13 +131,13 @@
       "2026-08-23",
       "2026-08-24"
     ],
-    "head_sha": "3424322be4e77b91acb76fb856814d03d0e2ad65",
+    "head_sha": "7721d116c3ba2c0f677826bf25fc8b16047b4ab8",
     "readme_hash": "da6fe68401c240d1",
     "desc_v6": true,
-    "churn_pct": 6.8,
+    "churn_pct": 4.6,
     "summary": "Manage private USDC donations through reusable QR codes.",
     "description_long": "MorokPay allows creators to publish reusable QR codes for private USDC donations on Starknet. Supporters can select an amount and confirm transfers without revealing details on-chain, as all activity remains within the STRK20 privacy pool. The app uses the Ready wallet for transaction management, handling viewing keys and transaction proofs without exposing them to the user.",
-    "latest_push": "Fixed the binding of private donation confirmation functionality.",
+    "latest_push": "Added EVM signature compatibility lab with tests and page integration.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -105,11 +171,11 @@
       }
     ],
     "has_readme": true,
-    "additions": 493,
-    "deletions": 15,
+    "additions": 361,
+    "deletions": 0,
     "sprint": {
-      "pushes": 47,
-      "additions": 26238,
+      "pushes": 48,
+      "additions": 26599,
       "deletions": 3822,
       "computed": 2
     },
@@ -156,7 +222,6 @@
     "head_sha": "3366fea393f6aa31a29715d580e76f19a6759f6f",
     "readme_hash": "c08842f6197e5670",
     "desc_v6": true,
-    "churn_pct": 3.4,
     "summary": "A mobile wallet for sending, tipping, and holding various tokens on Starknet.",
     "description_long": "tip is a non-custodial mobile wallet built in Flutter for Starknet, allowing users to hold, send, and tip various tokens directly from their phones. It includes features like live balance reading, a tip link system for recipients without wallets, and a secure key management system. The wallet interacts with the STRK20 privacy pool via a native Dart client that handles protocol cryptography, private transport, and reorg handling in transaction processing.",
     "latest_push": "Mirrored the pool's index bookkeeping locally in the pool simulator.",
@@ -164,6 +229,7 @@
     "has_readme": true,
     "additions": 594,
     "deletions": 0,
+    "churn_pct": 3.4,
     "sprint": {
       "pushes": 50,
       "additions": 19669,
@@ -222,7 +288,6 @@
     "head_sha": "b0303b8eeada27eb32f1efd6cdad0c00ee5235fc",
     "readme_hash": "8fcb2b46626b5247",
     "desc_v6": true,
-    "churn_pct": 1.1,
     "summary": "Discloses specific payment relationships without exposing entire financial history.",
     "description_long": "Lens allows users to selectively disclose one payment relationship to a verifier without revealing their entire financial life. It achieves this through a mechanism that derives a viewing key in memory from a single wallet signature, permitting the verification of payments while keeping other transactions and relationships private. The system defines three roles: the Holder who wants to disclose information, the Counterparty whose payments are being verified, and the Verifier who checks the proof against Starknet.",
     "latest_push": "Edited MAINNET_EVIDENCE.md to reconcile funding and trim the blocker list.",
@@ -261,6 +326,7 @@
     "has_readme": true,
     "additions": 92,
     "deletions": 13,
+    "churn_pct": 1.1,
     "sprint": {
       "pushes": 38,
       "additions": 18581,
@@ -324,7 +390,6 @@
     "head_sha": "aa73cf5f77c34493e69ea0a093a6f584fba36df1",
     "readme_hash": "9a4d5986ccff808e",
     "desc_v6": true,
-    "churn_pct": 1.4,
     "summary": "Anonymous browsing and private payments for AI agents.",
     "description_long": "Tony Strk enables AI agents to browse the web and make payments without revealing user identity or IP address. It consists of a local-only MCP server that fetches URLs through Tor and allows agents to pay paywalls using the STRK20 pool, ensuring that the merchant receives payment without knowing the payer's identity. The system manages five privacy channels and integrates with STRK20 for secure and anonymous transactions.",
     "latest_push": "Updated the README to reflect the current runnable state of the project.",
@@ -358,6 +423,7 @@
     "has_readme": true,
     "additions": 67,
     "deletions": 39,
+    "churn_pct": 1.4,
     "sprint": {
       "pushes": 37,
       "additions": 25016,
@@ -1131,72 +1197,6 @@
       "facts_v2": true
     },
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "vocap",
-    "name": "VOCAP",
-    "one_liner": "Private programmable capabilities for Starknet, enforced by STRK20 assets.",
-    "category": "Infra",
-    "repo_url": "https://github.com/CryptoZephyr/VOCAP",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-24T19:48:29Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "CryptoZephyr",
-        "name": "CryptoZephyr",
-        "avatar_url": "https://avatars.githubusercontent.com/u/192461816?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-24"
-    ],
-    "head_sha": "8ae880ea56c14ad53d011ca9012220cf8f442bc0",
-    "readme_hash": "0a383bb6872b7a10",
-    "desc_v6": true,
-    "summary": "A private programmable-capability protocol for Starknet.",
-    "description_long": "VOCAP allows users to execute protected actions with STRK20 assets, which are returned as fresh private notes after use. The project includes a RETURN-only router, backend for transaction management, and relevant documentation, with its current focus on integrating with Sepolia and passing local verification tests.",
-    "latest_push": "Added VOCAP contracts and initialized the backend foundation.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 4308,
-    "deletions": 13,
-    "churn_pct": 100,
-    "sprint": {
-      "pushes": 2,
-      "additions": 4718,
-      "deletions": 13,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "chaoskeyplus-appbuild",
