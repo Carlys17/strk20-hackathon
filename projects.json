@@ -1,5 +1,197 @@
 [
   {
+    "slug": "xenia",
+    "name": "XENIA",
+    "one_liner": "Private payment links on Starknet. Pay someone who has never registered a STRK20 viewing key — they register inside the claim.",
+    "category": "Payments",
+    "repo_url": "https://github.com/jadonamite/XENIA",
+    "demo_url": "https://usexenia.vercel.app",
+    "demo_video": "",
+    "x_handle": "jadonamite",
+    "inspired_by": "IDEA-09",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-25T19:28:50Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "jadonamite",
+        "name": "jadonamite",
+        "avatar_url": "https://avatars.githubusercontent.com/u/186282594?v=4"
+      },
+      {
+        "login": "Sam-Rytech",
+        "name": "Temitayo",
+        "avatar_url": "https://avatars.githubusercontent.com/u/107815081?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-24",
+      "2026-08-25"
+    ],
+    "head_sha": "63af19ddf024c95fb3b1c0cb298390090917bf30",
+    "readme_hash": "68eba7e95978e141",
+    "desc_v6": true,
+    "summary": "Send private payments to non-users of the privacy pool.",
+    "description_long": "Xenia enables a sender to create a claim link that allows the recipient to register on the STRK20 privacy pool and claim their payment in a single transaction. The process involves creating a claim, sending a URL, and the recipient connecting their wallet to complete the registration and payment atomically. The key components include the `XeniaEscrow` contract, which manages the funds and ensures anonymity by handling deposits and claims efficiently.",
+    "latest_push": "Saturated the orbit bloom and calmed the node glows in BuiltOnOrbit.tsx.",
+    "tooling": [
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 8,
+    "deletions": 8,
+    "churn_pct": 0.3,
+    "sprint": {
+      "pushes": 22,
+      "additions": 10506,
+      "deletions": 5,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
+    "slug": "lens",
+    "name": "lens",
+    "one_liner": "See what a STRK20 action still reveals, then take a quieter path",
+    "category": "Other",
+    "repo_url": "https://github.com/Techkeyy/lens",
+    "demo_url": "https://lens-beige-five.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Lens scores planned actions based on potential visibility before execution.",
+    "contracts": [
+      {
+        "address": "0x7e14bc65e5f759da2a981843c485a948dc6e15548fe0ba51e3ca805ca75fb01",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-25T19:25:33Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Techkeyy",
+        "name": "Techkeyy",
+        "avatar_url": "https://avatars.githubusercontent.com/u/169851342?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 30
+      }
+    ],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-24",
+      "2026-08-25"
+    ],
+    "head_sha": "5d79754dd2dc13c65397417f51ed58c1bf409c23",
+    "readme_hash": "e989ccb7b84f0239",
+    "desc_v6": true,
+    "churn_pct": 1.6,
+    "summary": "Discloses selective payment relationships without revealing full financial history.",
+    "description_long": "Lens allows users to share proof of individual payment relationships without exposing their entire transactional history. It uses a mechanism to derive viewing keys in memory and manage disclosures through a defined workflow involving Holders, Counterparties, and Verifiers. Payments are tracked with a snapshot commitment, ensuring that only the agreed-upon relationships and amounts are disclosed while keeping all other financial data private.",
+    "latest_push": "Updated the prover plan documentation and scripts for differential registration.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 148,
+    "deletions": 28,
+    "sprint": {
+      "pushes": 52,
+      "additions": 21256,
+      "deletions": 2606,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": false,
+      "why_innovative": "It grades privacy leaks of planned STRK20 actions using historical data from pool transactions.",
+      "why_complex": "No deployed contracts or complex Cairo engineering evident in the current state of the project.",
+      "reason": "Lens scores planned actions based on potential visibility before execution.",
+      "facts_v2": true
+    },
+    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
+  },
+  {
     "slug": "jalin",
     "name": "Jalin",
     "one_liner": "A programmable execution router for the STRK20 pool: arbitrary multi-step, multi-token plans executed inside a single privacy_invoke, with safety carried by on-chain invariants rather than a whitelist.",
@@ -49,7 +241,6 @@
     "head_sha": "99424dde87a538a27203caa00c3a9647e9f519a7",
     "readme_hash": "df0c26f6c0cfe067",
     "desc_v6": true,
-    "churn_pct": 1.4,
     "summary": "A programmable execution router for multi-step, multi-token DeFi actions.",
     "description_long": "Jalin executes complex plans for private transactions using a single STRK20 privacy_invoke. It takes a list of steps that define targets, operations, and outputs, executing them in sequence while ensuring that the state remains secure and compliant with necessary invariants. The implementation is built in Cairo, and it manages approvals, enforces zero balances, and allows free-form calldata for any Starknet contract.",
     "latest_push": "Kept screening fail-closed and split it out without loosening constraints.",
@@ -68,6 +259,7 @@
     "has_readme": true,
     "additions": 40,
     "deletions": 29,
+    "churn_pct": 1.4,
     "sprint": {
       "pushes": 42,
       "additions": 23712,
@@ -212,7 +404,6 @@
     "head_sha": "2ea6d4a59897b5ed8d34a8ea305de75b34ce9a07",
     "readme_hash": "789e783064556987",
     "desc_v6": true,
-    "churn_pct": 0,
     "summary": "Private standing authorization with scheduled charges on Starknet.",
     "description_long": "NIGHTSHIFT allows subscribers to commit funds in escrow once and be charged on a schedule using a write-once nullifier. The system operates through a custom anonymizer contract and a wallet API, ensuring that the subscriber's wallet remains anonymous and is never re-queried after the initial commitment. The payment cycle is facilitated by cryptographic gates that prevent early or duplicate charges, maintaining privacy without relying on external proving services.",
     "latest_push": "Added Vercel configuration for app with SPA router adjustments.",
@@ -246,6 +437,7 @@
     "has_readme": true,
     "additions": 7,
     "deletions": 0,
+    "churn_pct": 0,
     "sprint": {
       "pushes": 54,
       "additions": 25661,
@@ -325,7 +517,6 @@
     "head_sha": "a0911f938a76c046cbdd6ccd9f2331855e7b1957",
     "readme_hash": "ff027b65da482eea",
     "desc_v6": true,
-    "churn_pct": 100,
     "summary": "A one-device Travel Safe for private STRK management.",
     "description_long": "Wrenchless allows users to set a fund limit with a return date for private STRK on Starknet. It generates a funding proof and manages a safe that can only be accessed via a passkey. Key components include a local ticket for security, a refund mechanism after the return date, and a set of routes for creating and recovering safes.",
     "latest_push": "Added the dry-run registration relay and validated registration proof facts.",
@@ -344,6 +535,7 @@
     "has_readme": true,
     "additions": 19523,
     "deletions": 89,
+    "churn_pct": 100,
     "sprint": {
       "pushes": 41,
       "additions": 21080,
@@ -352,116 +544,6 @@
     },
     "assessment": null,
     "star_evidence": "2 contracts deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "lens",
-    "name": "lens",
-    "one_liner": "See what a STRK20 action still reveals, then take a quieter path",
-    "category": "Other",
-    "repo_url": "https://github.com/Techkeyy/lens",
-    "demo_url": "https://lens-beige-five.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Lens scores planned actions based on potential visibility before execution.",
-    "contracts": [
-      {
-        "address": "0x7e14bc65e5f759da2a981843c485a948dc6e15548fe0ba51e3ca805ca75fb01",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-25T19:12:33Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Techkeyy",
-        "name": "Techkeyy",
-        "avatar_url": "https://avatars.githubusercontent.com/u/169851342?v=4"
-      }
-    ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 30
-      }
-    ],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-24",
-      "2026-08-25"
-    ],
-    "head_sha": "041e1218bece8fb1b5a4ef68027319f5f1ad24a3",
-    "readme_hash": "e989ccb7b84f0239",
-    "desc_v6": true,
-    "churn_pct": 5.1,
-    "summary": "Discloses selective payment relationships without revealing full financial history.",
-    "description_long": "Lens allows users to share proof of individual payment relationships without exposing their entire transactional history. It uses a mechanism to derive viewing keys in memory and manage disclosures through a defined workflow involving Holders, Counterparties, and Verifiers. Payments are tracked with a snapshot commitment, ensuring that only the agreed-upon relationships and amounts are disclosed while keeping all other financial data private.",
-    "latest_push": "Added differential testing for registration against upstream.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 500,
-    "deletions": 82,
-    "sprint": {
-      "pushes": 51,
-      "additions": 21373,
-      "deletions": 2606,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": false,
-      "why_innovative": "It grades privacy leaks of planned STRK20 actions using historical data from pool transactions.",
-      "why_complex": "No deployed contracts or complex Cairo engineering evident in the current state of the project.",
-      "reason": "Lens scores planned actions based on potential visibility before execution.",
-      "facts_v2": true
-    },
-    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "rhizome",
@@ -511,7 +593,6 @@
     "head_sha": "fb14abd008ab211da20e4f5d7c7fbf90a53483d3",
     "readme_hash": "44b90590f7a90743",
     "desc_v6": true,
-    "churn_pct": 1,
     "summary": "A tool for calculating and executing private positions in DeFi with fee-aware tranche scheduling.",
     "description_long": "Rhizome computes the cost of unlinkability in transactions within the STRK20 privacy pool and executes the necessary actions to maintain privacy. It reads real-time fees and transaction history, scores amounts to avoid distinctive patterns, and schedules transactions to enhance privacy through its own anonymizer contract, facilitating multiple indistinguishable deposits. Key contract functionalities include the mechanism for fee collection and transaction handling, reflecting detailed insights into the underlying pool's operations.",
     "latest_push": "Made receipt lookup resilient and blocked early vault moves.",
@@ -545,6 +626,7 @@
     "has_readme": true,
     "additions": 60,
     "deletions": 3,
+    "churn_pct": 1,
     "sprint": {
       "pushes": 45,
       "additions": 9867,
@@ -606,7 +688,6 @@
     "head_sha": "484ce9761a963ab0b42abbb0a06002ad8daadc29",
     "readme_hash": "8fc59d376fb880e1",
     "desc_v6": true,
-    "churn_pct": 0.3,
     "summary": "A non-custodial strategy game for territory battles using validator delegation.",
     "description_long": "Stake Wars is a persistent game where players deploy delegated STRK as FORCE to capture and defend Sectors. The game integrates with the Whisper library for private Vickrey auctions, maintaining public delegation and gameplay. The repository contains the web application, game API, and Cairo contracts.",
     "latest_push": "Simplified the challenge controls in CaptureControl.tsx.",
@@ -620,6 +701,7 @@
     "has_readme": true,
     "additions": 23,
     "deletions": 36,
+    "churn_pct": 0.3,
     "sprint": {
       "pushes": 69,
       "additions": 36136,
@@ -635,88 +717,6 @@
       "facts_v2": true
     },
     "star_evidence": "1 contract deployed, Cairo in the repository"
-  },
-  {
-    "slug": "xenia",
-    "name": "XENIA",
-    "one_liner": "Private payment links on Starknet. Pay someone who has never registered a STRK20 viewing key — they register inside the claim.",
-    "category": "Payments",
-    "repo_url": "https://github.com/jadonamite/XENIA",
-    "demo_url": "https://usexenia.vercel.app",
-    "demo_video": "",
-    "x_handle": "jadonamite",
-    "inspired_by": "IDEA-09",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-25T18:22:08Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "jadonamite",
-        "name": "jadonamite",
-        "avatar_url": "https://avatars.githubusercontent.com/u/186282594?v=4"
-      },
-      {
-        "login": "Sam-Rytech",
-        "name": "Temitayo",
-        "avatar_url": "https://avatars.githubusercontent.com/u/107815081?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-24",
-      "2026-08-25"
-    ],
-    "head_sha": "63af19ddf024c95fb3b1c0cb298390090917bf30",
-    "readme_hash": "68eba7e95978e141",
-    "desc_v6": true,
-    "summary": "Send private payments to non-users of the privacy pool.",
-    "description_long": "Xenia enables a sender to create a claim link that allows the recipient to register on the STRK20 privacy pool and claim their payment in a single transaction. The process involves creating a claim, sending a URL, and the recipient connecting their wallet to complete the registration and payment atomically. The key components include the `XeniaEscrow` contract, which manages the funds and ensures anonymity by handling deposits and claims efficiently.",
-    "latest_push": "Saturated the orbit bloom and calmed the node glows in BuiltOnOrbit.tsx.",
-    "tooling": [
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 8,
-    "deletions": 8,
-    "churn_pct": 0.3,
-    "sprint": {
-      "pushes": 22,
-      "additions": 10506,
-      "deletions": 5,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
   },
   {
     "slug": "preflight",
@@ -1823,7 +1823,6 @@
     "head_sha": "90da5455cedfcf0e48d3f22052fb925094ed9ada",
     "readme_hash": "8321cd4d3a1dc64f",
     "desc_v6": true,
-    "churn_pct": 0,
     "summary": "A consumer money app for private financial transactions on Starknet.",
     "description_long": "Lumen is a money application that allows users to pay, receive, and manage funds without creating a public financial profile. It features relationship boundaries to isolate transaction visibility, private receipts to confirm payments without revealing details, and an internal engine that optimizes actions to prevent behavioral leaks. Built with a focus on privacy, the app operates on Starknet using the STRK20 privacy pool, relying on non-custodial wallets for key management and transaction approvals.",
     "latest_push": "Implemented a monochrome redesign and fixed NOT_REGISTERED issue.",
@@ -1867,6 +1866,7 @@
     "has_readme": true,
     "additions": 2,
     "deletions": 2,
+    "churn_pct": 0,
     "sprint": {
       "pushes": 29,
       "additions": 24675,
