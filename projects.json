@@ -136,9 +136,9 @@
     "readme_hash": "93df8e101e048639",
     "desc_v6": true,
     "churn_pct": 37.4,
-    "summary": "Create unlinkable identities for decentralized finance interactions.",
-    "description_long": "Facet allows users to interact with decentralized finance protocols while maintaining multiple unlinkable identities. It uses STRK20 shadow accounts to ensure that each interaction remains anonymous and funded through shielded notes, preventing exposure of real identities. Key features include unique identity generation per app context and the ability to operate without public interactions that could link transactions back to users.",
-    "latest_push": "Added the public page and fixed visibility of the cut facet on the stone.",
+    "summary": "Create unlinkable identities for private transactions in Starknet DeFi.",
+    "description_long": "Facet allows the creation of unique, unlinkable identities for each app interaction, ensuring that transactions cannot be traced back to a user. It uses STRK20 shadow accounts to fund these identities from shielded notes, preventing public approval and ensuring privacy during transactions. The functionality is supported by a series of contracts, with a specific focus on maintaining separation between identities through the use of a unique identity key derived per user and per application.",
+    "latest_push": "Added the public page and made the cut facet visible on the stone.",
     "tooling": [
       {
         "label": "Cairo",
@@ -227,7 +227,7 @@
     "churn_pct": 3.7,
     "summary": "A negotiation and settlement infrastructure for AI agents with encrypted communication.",
     "description_long": "Erebus enables AI agents to negotiate and settle transactions privately. It includes features like encrypted channels for communication, atomic negotiation to settlement, selective disclosure of deal information, and support for agent autonomy through Starknet account abstraction. The system uses wire v3 for enhanced privacy and integrates with the STRK20 privacy pool for secure transactions.",
-    "latest_push": "Fixed funding check for token operations and added account transaction signing.",
+    "latest_push": "Fixed funding checks in the token operation and signed transactions via AccountSigner.",
     "tooling": [
       {
         "label": "Cairo",
@@ -305,7 +305,7 @@
     "churn_pct": 20.3,
     "summary": "A private payment gateway for businesses with multiple payment methods.",
     "description_long": "Nomos enables businesses to integrate a payment link or checkout widget for customers to pay via a shielded wallet or an ordinary Starknet wallet. It operates with a custodial model where payments first settle into Nomos's internal wallet before merchants access their balances, ensuring smooth transaction flows while maintaining privacy for the merchant's identity. Built with Next.js, TypeScript, and starknet.js, the project features components like checkout interfaces, ledgers, and an operating wallet for managing transactions.",
-    "latest_push": "Rebuilt the merchant dashboard as a full product instead of a landing page.",
+    "latest_push": "Rebuilt the merchant dashboard as a fully functional product.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -402,7 +402,7 @@
     "churn_pct": 13.4,
     "summary": "Confidential token allocation with public verification and private beneficiary details.",
     "description_long": "Sevrin is a confidential token-allocation infrastructure that allows token issuers to prove aggregate supply and unlock schedules while maintaining beneficiary privacy. Built with two Cairo contracts, `SevrinFloatVault` manages token restrictions and schedules, while `SevrinClaimAdapter` links valid claims to STRK20 pools. The project includes a web application and API for managing allocations and securely delivering encrypted claim links.",
-    "latest_push": "Fixed the gitignore for the credentials folder.",
+    "latest_push": "Fixed the gitignore to include the credentials folder.",
     "tooling": [
       {
         "label": "Cairo",
@@ -466,9 +466,9 @@
     "readme_hash": "862dde680b203d06",
     "desc_v6": true,
     "churn_pct": 0,
-    "summary": "Analyzes transaction privacy exposure before signing.",
-    "description_long": "Preflight helps users understand potential privacy risks of proposed transactions, revealing what may become public and what is linkable. It includes a transaction simulation and a privacy scoring engine to generate a privacy report. The system consists of a Dapp or Wallet, a Preflight SDK Hook, and an API that interfaces with Starknet RPC to evaluate transactions.",
-    "latest_push": "Defined the Preflight project in the documentation.",
+    "summary": "A pre-signature privacy analysis tool for Starknet transactions.",
+    "description_long": "Preflight helps users understand potential privacy exposure from proposed transactions before signing. It analyzes on-chain data to reveal what information may become public, what could be linkable, the effective anonymity set, and correlation risks. Built with a Dapp/Wallet interface, it uses a Preflight SDK hook that interacts with a privacy scoring engine to generate a comprehensive privacy report for users.",
+    "latest_push": "Defined the Preflight project in documentation.",
     "tooling": [],
     "has_readme": true,
     "additions": 81,
