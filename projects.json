@@ -41,10 +41,10 @@
     "head_sha": "3ee230ee718f3884808ed62f71f857e7544ddfcc",
     "readme_hash": "64a1598e4a06ebca",
     "desc_v6": true,
-    "churn_pct": 9,
+    "churn_pct": 8.6,
     "summary": "A private payment gateway integrating multiple payment methods for businesses.",
     "description_long": "Nomos allows businesses to integrate a payment link or checkout widget, enabling customers to make payments without revealing their identity or the transaction amount on a public ledger. The project is built using Next.js and starknet.js, implementing features like shielding, unshielding, private transfers, and an anonymizer through a user's wallet, all without a viewing key.",
-    "latest_push": "Recorded NomosOperatingWallet deployment on Sepolia and implemented features.",
+    "latest_push": "Recorded NomosOperatingWallet deployment on Sepolia and added server-side signer.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -138,7 +138,7 @@
     "churn_pct": 5.1,
     "summary": "A web application for private payroll and vesting distributions on Starknet.",
     "description_long": "Cloakroom is a web application and Starknet smart contract that manages private payroll and vesting distributions on-chain. The project's core contract, `PayrollAnonymizer.cairo`, interacts with the STRK20 privacy pool to execute transactions while masking sender and recipient details. The application currently has no deployed contracts or live transactions.",
-    "latest_push": "Shifted deployment to Starknet Mainnet with updated scripts.",
+    "latest_push": "Shifted deployment to Starknet Mainnet with various script adjustments.",
     "tooling": [
       {
         "label": "Cairo",
@@ -313,7 +313,7 @@
     "churn_pct": 84.9,
     "summary": "Send private payments to non-users of the privacy pool.",
     "description_long": "Xenia enables a sender to create a claim link that allows the recipient to register on the STRK20 privacy pool and claim their payment in a single transaction. The process involves creating a claim, sending a URL, and the recipient connecting their wallet to complete the registration and payment atomically. The key components include the `XeniaEscrow` contract, which manages the funds and ensures anonymity by handling deposits and claims efficiently.",
-    "latest_push": "Added the landing page and the shared design system.",
+    "latest_push": "Added the landing page and a shared design system.",
     "tooling": [
       {
         "label": "Next.js",
@@ -506,9 +506,9 @@
     "readme_hash": "29b6e4b2ef01e447",
     "desc_v6": true,
     "churn_pct": 0,
-    "summary": "A payment system for private subscriptions to AI agents and creators.",
-    "description_long": "Keepr enables payments from shielded STRK20 balances for subscriptions and services. It includes a subscription helper contract for managing interactions, a 24/7 keeper agent for automatic renewals, a proof gate for validating subscriptions without revealing wallet addresses, and a web app for user interactions. Creators receive privacy-protecting income receipts, allowing them to confirm earnings without disclosing amounts.",
-    "latest_push": "Created README.md for project documentation.",
+    "summary": "Manage private subscription payments for services and creators using shielded STRK20 balances.",
+    "description_long": "Keepr enables private payments, automatic renewals, and income verification for AI agents and creators. It includes a subscription helper contract for managing subscriptions, a 24/7 keeper agent for processing renewals, and a web app for user interaction, along with a Telegram/Discord bot for demo purposes.",
+    "latest_push": "Created the README.md file for the project.",
     "tooling": [],
     "has_readme": true,
     "additions": 38,
