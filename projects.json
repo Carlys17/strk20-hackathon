@@ -1,77 +1,5 @@
 [
   {
-    "slug": "afterlight",
-    "name": "Afterlight",
-    "one_liner": "Private STRK20 recovery reserves with authenticated heartbeat, grace, and owner veto control.",
-    "category": "Consumer",
-    "repo_url": "https://github.com/dolepee/afterlight",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-25T05:40:54Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "dolepee",
-        "name": "qdee",
-        "avatar_url": "https://avatars.githubusercontent.com/u/113950858?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-24",
-      "2026-08-25"
-    ],
-    "head_sha": "e0b1891558e6078e60fdcbf03946e49b54274530",
-    "readme_hash": "9b186dfb28d8993a",
-    "desc_v6": true,
-    "churn_pct": 1.6,
-    "summary": "A private recovery reserve for Starknet self-custody wallets with controlled access.",
-    "description_long": "Afterlight is a private, bounded recovery reserve that allows wallet owners to fund a fixed reserve through STRK20 and maintain control via authenticated heartbeats and a veto window. If the owner becomes inactive, only a designated successor application key can authorize recovery to a specified private destination. The repository contains the Cairo recovery state machine, application keys, and a neutral relayer implementation, with test coverage for the recovery contract and other components.",
-    "latest_push": "Added no-sign Ready deployment quote and explained missing wallet detection.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Anonymizer contract",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 107,
-    "deletions": 0,
-    "sprint": {
-      "pushes": 8,
-      "additions": 28825,
-      "deletions": 96,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
-  },
-  {
     "slug": "morok-pay-starknet",
     "name": "MorokPay",
     "one_liner": "Private USDC treasury on Starknet, funded from Ethereum via CCTP.",
@@ -112,7 +40,7 @@
       "mainnet": true
     },
     "status": "building",
-    "pushed_at": "2026-08-25T05:37:40Z",
+    "pushed_at": "2026-08-25T05:57:07Z",
     "stars": 0,
     "builders": [
       {
@@ -138,13 +66,13 @@
       "2026-08-24",
       "2026-08-25"
     ],
-    "head_sha": "bffd2bd1784e5261ff2317456ea3b803269a8f23",
+    "head_sha": "9d99fe952d9c4d9dcfb79bd6b0c28a6927fde5e3",
     "readme_hash": "da6fe68401c240d1",
     "desc_v6": true,
-    "churn_pct": 5.2,
+    "churn_pct": 4.2,
     "summary": "Manage private USDC donations through reusable QR codes.",
     "description_long": "MorokPay allows creators to publish reusable QR codes for private USDC donations on Starknet. Supporters can select an amount and confirm transfers without revealing details on-chain, as all activity remains within the STRK20 privacy pool. The app uses the Ready wallet for transaction management, handling viewing keys and transaction proofs without exposing them to the user.",
-    "latest_push": "Inspected the deterministic EVM-owned account in the privacy SDK.",
+    "latest_push": "Deployed a deterministic EVM-owned account in the privacy SDK.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -178,16 +106,358 @@
       }
     ],
     "has_readme": true,
-    "additions": 414,
-    "deletions": 9,
+    "additions": 350,
+    "deletions": 2,
     "sprint": {
-      "pushes": 49,
-      "additions": 27004,
+      "pushes": 50,
+      "additions": 27352,
       "deletions": 3822,
       "computed": 2
     },
     "assessment": null,
     "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "wrenchless",
+    "name": "wrenchless",
+    "one_liner": "A private Starknet spending wallet with a covert safety mode, powered by STRK20.",
+    "category": "Consumer",
+    "repo_url": "https://github.com/Timidan/wrenchless",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "timidan_x",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-25T05:53:38Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Timidan",
+        "name": "Timidan",
+        "avatar_url": "https://avatars.githubusercontent.com/u/25876969?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-20"
+    ],
+    "head_sha": "2dfb2223a8258fdbcff593017f15b970ddfc98b6",
+    "readme_hash": "fc9016401e6affc8",
+    "desc_v6": true,
+    "summary": "A private spending wallet with a covert safety mode.",
+    "description_long": "Wrenchless allows users to carry a low-balance wallet for daily payments while keeping long-term funds in a separate vault. It achieves this through STRK20, enabling discreet transfers that protect the user's wallet graph and allow only one trusted guardian to interpret emergency signals without exposing distress on-chain. Key features include normal and duress PINs that trigger encrypted heartbeats, with a focus on safety without freezing funds or contacting authorities.",
+    "latest_push": "Introduced Wrenchless and built bounded relay registration call.",
+    "tooling": [
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 126,
+    "deletions": 0,
+    "churn_pct": 34.9,
+    "sprint": {
+      "pushes": 4,
+      "additions": 1845,
+      "deletions": 0,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
+    "slug": "stake-wars",
+    "name": "stake-wars",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/broody/stake-wars",
+    "demo_url": "https://stakewars.gg",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "StakeWars lacks innovative privacy features and engineering depth.",
+    "contracts": [
+      {
+        "address": "0x02d8bf2eb33e236b97bf61ad4b74e2b442ce6a0e25995eb9754cc5eb9dabe9a4",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-25T05:50:10Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "broody",
+        "name": "broody",
+        "avatar_url": "https://avatars.githubusercontent.com/u/610224?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-14",
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-22",
+      "2026-08-25"
+    ],
+    "head_sha": "cd5a20f0170de9bd63388373ef108c47db30a981",
+    "readme_hash": "8fc59d376fb880e1",
+    "desc_v6": true,
+    "churn_pct": 1.4,
+    "summary": "A non-custodial strategy game for territory battles using validator delegation.",
+    "description_long": "Stake Wars is a persistent game where players deploy delegated STRK as FORCE to capture and defend Sectors. The game integrates with the Whisper library for private Vickrey auctions, maintaining public delegation and gameplay. The repository contains the web application, game API, and Cairo contracts.",
+    "latest_push": "Linked Whisper as the privacy vendor and focused STRK20 on Whisper bidding.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 150,
+    "deletions": 168,
+    "sprint": {
+      "pushes": 62,
+      "additions": 36177,
+      "deletions": 3284,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "This project operates as a game without unique private mechanisms.",
+      "why_complex": "There are no deployed contracts or complex Cairo implementations.",
+      "reason": "StakeWars lacks innovative privacy features and engineering depth.",
+      "facts_v2": true
+    },
+    "star_evidence": "1 contract deployed, Cairo in the repository"
+  },
+  {
+    "slug": "afterlight",
+    "name": "Afterlight",
+    "one_liner": "Private STRK20 recovery reserves with authenticated heartbeat, grace, and owner veto control.",
+    "category": "Consumer",
+    "repo_url": "https://github.com/dolepee/afterlight",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-25T05:46:57Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "dolepee",
+        "name": "qdee",
+        "avatar_url": "https://avatars.githubusercontent.com/u/113950858?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-24",
+      "2026-08-25"
+    ],
+    "head_sha": "40e22117de2a5f5474b1ac1e6d1316aec8d07c0b",
+    "readme_hash": "9b186dfb28d8993a",
+    "desc_v6": true,
+    "churn_pct": 0.1,
+    "summary": "A private recovery reserve for Starknet self-custody wallets with controlled access.",
+    "description_long": "Afterlight is a private, bounded recovery reserve that allows wallet owners to fund a fixed reserve through STRK20 and maintain control via authenticated heartbeats and a veto window. If the owner becomes inactive, only a designated successor application key can authorize recovery to a specified private destination. The repository contains the Cairo recovery state machine, application keys, and a neutral relayer implementation, with test coverage for the recovery contract and other components.",
+    "latest_push": "Fixed wallet scanning on retry and refreshed the wallet helper bundle.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Anonymizer contract",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 6,
+    "deletions": 3,
+    "sprint": {
+      "pushes": 10,
+      "additions": 28828,
+      "deletions": 96,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "conditionalpay",
+    "name": "ConditionalPay",
+    "one_liner": "Programmable private settlement infrastructure for STRK20.",
+    "category": "Infra",
+    "repo_url": "https://github.com/eugenennamdi/ConditionalPay",
+    "demo_url": "https://conditionalpay.vercel.app",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project is primarily a demo with no substantial contracts or innovative use of privacy.",
+    "contracts": [
+      {
+        "address": "0x0166e31803cfab50383d5b636b86a5646233881fad3a2fb89354da63f6cdb483",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x47edc8e74fc08c4726a817a23085a2ae2dd95590fb6a32d3b3c5b5159e586e6",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0xde61c431a92dabc7b8672cd08cdce0b479b83ca261c0591992a84e6e7779b7",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x2f2f88ab25f64a619aa05dcaff7c2af85efc6cd086a229696ac8edc3bdd6d26",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x64cfec311d340f97fb0d9245de01ab36f3267259ac162290265e55ca99dd88d",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      }
+    ],
+    "verified_txs": 4,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": true
+    },
+    "status": "building",
+    "pushed_at": "2026-08-25T05:43:49Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "eugenennamdi",
+        "name": "eugenennamdi",
+        "avatar_url": "https://avatars.githubusercontent.com/u/85407620?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-20",
+      "2026-08-22",
+      "2026-08-23"
+    ],
+    "head_sha": "179325dbf4a87eab624f4bbc12ad1306bcec95d2",
+    "readme_hash": "a18c4a712ea1f4de",
+    "desc_v6": true,
+    "summary": "Create conditional payments with hashlocks and time constraints.",
+    "description_long": "ConditionalPay allows applications to make programmable, private settlements using hashlocks, time windows, and optional approval gates. It does not store user addresses, ensuring privacy while enabling a public and auditable system. The project operates on Starknet, using the STRK20 pool for transaction management, and features a state machine for payment interactions including creating, claiming, and refunding payments.",
+    "latest_push": "Redesigned the ConditionalPay submission interface and added a demo URL.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 3425,
+    "deletions": 661,
+    "churn_pct": 41.3,
+    "sprint": {
+      "pushes": 20,
+      "additions": 23621,
+      "deletions": 1309,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project mainly focuses on private transfers and ultimately serves as a demo.",
+      "why_complex": "There are no deployed contracts that show engineering depth or interaction.",
+      "reason": "The project is primarily a demo with no substantial contracts or innovative use of privacy.",
+      "facts_v2": true
+    },
+    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "private-payroll",
@@ -282,194 +552,6 @@
     "star_evidence": "Cairo in the repository"
   },
   {
-    "slug": "conditionalpay",
-    "name": "ConditionalPay",
-    "one_liner": "Programmable private settlement infrastructure for STRK20.",
-    "category": "Infra",
-    "repo_url": "https://github.com/eugenennamdi/ConditionalPay",
-    "demo_url": "https://conditionalpay.vercel.app",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project is primarily a demo with no substantial contracts or innovative use of privacy.",
-    "contracts": [
-      {
-        "address": "0x0166e31803cfab50383d5b636b86a5646233881fad3a2fb89354da63f6cdb483",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [
-      {
-        "hash": "0x47edc8e74fc08c4726a817a23085a2ae2dd95590fb6a32d3b3c5b5159e586e6",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      },
-      {
-        "hash": "0xde61c431a92dabc7b8672cd08cdce0b479b83ca261c0591992a84e6e7779b7",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      },
-      {
-        "hash": "0x2f2f88ab25f64a619aa05dcaff7c2af85efc6cd086a229696ac8edc3bdd6d26",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      },
-      {
-        "hash": "0x64cfec311d340f97fb0d9245de01ab36f3267259ac162290265e55ca99dd88d",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      }
-    ],
-    "verified_txs": 4,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": true
-    },
-    "status": "building",
-    "pushed_at": "2026-08-25T04:54:36Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "eugenennamdi",
-        "name": "eugenennamdi",
-        "avatar_url": "https://avatars.githubusercontent.com/u/85407620?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-20",
-      "2026-08-22",
-      "2026-08-23"
-    ],
-    "head_sha": "179325dbf4a87eab624f4bbc12ad1306bcec95d2",
-    "readme_hash": "a18c4a712ea1f4de",
-    "desc_v6": true,
-    "summary": "Create conditional payments with hashlocks and time constraints.",
-    "description_long": "ConditionalPay allows applications to make programmable, private settlements using hashlocks, time windows, and optional approval gates. It does not store user addresses, ensuring privacy while enabling a public and auditable system. The project operates on Starknet, using the STRK20 pool for transaction management, and features a state machine for payment interactions including creating, claiming, and refunding payments.",
-    "latest_push": "Redesigned the ConditionalPay submission interface and added a demo URL.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 3425,
-    "deletions": 661,
-    "churn_pct": 41.3,
-    "sprint": {
-      "pushes": 20,
-      "additions": 23621,
-      "deletions": 1309,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "The project mainly focuses on private transfers and ultimately serves as a demo.",
-      "why_complex": "There are no deployed contracts that show engineering depth or interaction.",
-      "reason": "The project is primarily a demo with no substantial contracts or innovative use of privacy.",
-      "facts_v2": true
-    },
-    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "wrenchless",
-    "name": "wrenchless",
-    "one_liner": "A private Starknet spending wallet with a covert safety mode, powered by STRK20.",
-    "category": "Consumer",
-    "repo_url": "https://github.com/Timidan/wrenchless",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "timidan_x",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-25T04:54:06Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Timidan",
-        "name": "Timidan",
-        "avatar_url": "https://avatars.githubusercontent.com/u/25876969?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-20"
-    ],
-    "head_sha": "2dfb2223a8258fdbcff593017f15b970ddfc98b6",
-    "readme_hash": "fc9016401e6affc8",
-    "desc_v6": true,
-    "summary": "A private spending wallet with a covert safety mode.",
-    "description_long": "Wrenchless allows users to carry a low-balance wallet for daily payments while keeping long-term funds in a separate vault. It achieves this through STRK20, enabling discreet transfers that protect the user's wallet graph and allow only one trusted guardian to interpret emergency signals without exposing distress on-chain. Key features include normal and duress PINs that trigger encrypted heartbeats, with a focus on safety without freezing funds or contacting authorities.",
-    "latest_push": "Introduced Wrenchless and built bounded relay registration call.",
-    "tooling": [
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 126,
-    "deletions": 0,
-    "churn_pct": 34.9,
-    "sprint": {
-      "pushes": 4,
-      "additions": 1845,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
-  },
-  {
     "slug": "vinss",
     "name": "VINSS",
     "one_liner": "Agentic private deal room on Starknet for encrypted negotiation, offers, messaging, and private escrow settlement powered by STRK20.",
@@ -526,7 +608,6 @@
     "head_sha": "a1227a2cfe47acc19e7ede37edee9a03a028f808",
     "readme_hash": "d38093d278351c88",
     "desc_v6": true,
-    "churn_pct": 0.3,
     "summary": "A private deal room for encrypted negotiation, structured offers, and escrow settlements.",
     "description_long": "VINSS is a platform that facilitates private deals through encrypted communication, allowing users to negotiate, make structured offers, manage escrow, and generate verifiable settlement evidence. It features private chat, counter-offers, and NFT settlement certificates, all built on Starknet's privacy infrastructure.",
     "latest_push": "Documented the Rekber custody implementation in the contract files.",
@@ -540,6 +621,7 @@
     "has_readme": true,
     "additions": 82,
     "deletions": 0,
+    "churn_pct": 0.3,
     "sprint": {
       "pushes": 100,
       "additions": 15890,
@@ -552,83 +634,6 @@
       "why_innovative": "creates a private deal room for encrypted negotiations and offers, not typical in this domain.",
       "why_complex": "includes multiple Cairo helper contracts for messaging, escrow, and requires event decryption via an indexer.",
       "reason": "The project provides a unique encrypted negotiation environment with custom Cairo contracts.",
-      "facts_v2": true
-    },
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "stake-wars",
-    "name": "stake-wars",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/broody/stake-wars",
-    "demo_url": "https://stakewars.gg",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "StakeWars lacks innovative privacy features and engineering depth.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-25T03:41:56Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "broody",
-        "name": "broody",
-        "avatar_url": "https://avatars.githubusercontent.com/u/610224?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-14",
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21",
-      "2026-08-22",
-      "2026-08-25"
-    ],
-    "head_sha": "307b4c214418dffcb50efaac920698c69e547d36",
-    "readme_hash": "d1539211008af311",
-    "desc_v6": true,
-    "summary": "A persistent strategy game for capturing sectors and battling rivals with delegated STRK.",
-    "description_long": "Stake Wars is a non-custodial strategy game where players use their delegated STRK as FORCE to capture and defend Sectors on the Core. The game combines elements of territory management and strategic challenges without creating a separate game token. It includes a web application built with React, TypeScript, and Vite; a Go API; and contracts written in Cairo and Dojo.",
-    "latest_push": "Supported unified whisper fulfillment in the arbiter service.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 204,
-    "deletions": 25,
-    "churn_pct": 1,
-    "sprint": {
-      "pushes": 60,
-      "additions": 36202,
-      "deletions": 3284,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "This project operates as a game without unique private mechanisms.",
-      "why_complex": "There are no deployed contracts or complex Cairo implementations.",
-      "reason": "StakeWars lacks innovative privacy features and engineering depth.",
       "facts_v2": true
     },
     "star_evidence": "Cairo in the repository"
