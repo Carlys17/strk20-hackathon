@@ -1,14 +1,187 @@
 [
   {
-    "slug": "shoal",
-    "name": "Shoal",
-    "one_liner": "Anonymity aggregation for STRK20: measure the crowd you are actually hiding in, then route value so it is as large as possible.",
-    "category": "Infra",
-    "repo_url": "https://github.com/iamdflame/shoal",
+    "slug": "rhizome",
+    "name": "Rhizome",
+    "one_liner": "Prices what privacy costs on STRK20, then executes it: fee-aware tranche scheduling for private Vesu position through its own anonymizer.",
+    "category": "DeFi",
+    "repo_url": "https://github.com/cipoklean/rhizome",
+    "demo_url": "https://rhizome-indol.vercel.app",
+    "demo_video": "",
+    "x_handle": "David63694631",
+    "inspired_by": "IDEA-16",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x552d747e90eb70e52e9c5f9d9150b97e46ac9b25989a36e7eee96a2e45c5e20",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-25T23:48:41Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "cipoklean",
+        "name": "Aghazie David",
+        "avatar_url": "https://avatars.githubusercontent.com/u/82593998?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-24",
+      "2026-08-25"
+    ],
+    "head_sha": "6841db19fab14281d1ee5e171f65d8f693a4d0f0",
+    "readme_hash": "44b90590f7a90743",
+    "desc_v6": true,
+    "churn_pct": 0.1,
+    "summary": "A tool for calculating and executing private positions in DeFi with fee-aware tranche scheduling.",
+    "description_long": "Rhizome computes the cost of unlinkability in transactions within the STRK20 privacy pool and executes the necessary actions to maintain privacy. It reads real-time fees and transaction history, scores amounts to avoid distinctive patterns, and schedules transactions to enhance privacy through its own anonymizer contract, facilitating multiple indistinguishable deposits. Key contract functionalities include the mechanism for fee collection and transaction handling, reflecting detailed insights into the underlying pool's operations.",
+    "latest_push": "Fixed the execution logic to query the wallet directly for transaction recovery.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 7,
+    "deletions": 3,
+    "sprint": {
+      "pushes": 49,
+      "additions": 11091,
+      "deletions": 32,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "1 contract deployed, Cairo in the repository"
+  },
+  {
+    "slug": "xenia",
+    "name": "XENIA",
+    "one_liner": "Private payment links on Starknet. Pay someone who has never registered a STRK20 viewing key — they register inside the claim.",
+    "category": "Payments",
+    "repo_url": "https://github.com/jadonamite/XENIA",
+    "demo_url": "https://usexenia.vercel.app",
+    "demo_video": "",
+    "x_handle": "jadonamite",
+    "inspired_by": "IDEA-09",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-25T23:42:53Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "jadonamite",
+        "name": "jadonamite",
+        "avatar_url": "https://avatars.githubusercontent.com/u/186282594?v=4"
+      },
+      {
+        "login": "Sam-Rytech",
+        "name": "Temitayo",
+        "avatar_url": "https://avatars.githubusercontent.com/u/107815081?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-24",
+      "2026-08-25"
+    ],
+    "head_sha": "723861f3299b69474ff5598291ced991bfd3003d",
+    "readme_hash": "68eba7e95978e141",
+    "desc_v6": true,
+    "churn_pct": 3.8,
+    "summary": "Send private payments to non-users of the privacy pool.",
+    "description_long": "Xenia enables a sender to create a claim link that allows the recipient to register on the STRK20 privacy pool and claim their payment in a single transaction. The process involves creating a claim, sending a URL, and the recipient connecting their wallet to complete the registration and payment atomically. The key components include the `XeniaEscrow` contract, which manages the funds and ensures anonymity by handling deposits and claims efficiently.",
+    "latest_push": "Implemented orbit stacked depth with a drifting bloom effect.",
+    "tooling": [
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 140,
+    "deletions": 48,
+    "sprint": {
+      "pushes": 23,
+      "additions": 10598,
+      "deletions": 5,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
+    "slug": "preflight",
+    "name": "Preflight",
+    "one_liner": "Pre-signature privacy simulation for STRK20: detect amount, timing, and linkability leaks before signing.",
+    "category": "Tooling",
+    "repo_url": "https://github.com/Emmanuelzyronis/preflight",
     "demo_url": "",
     "demo_video": "",
     "x_handle": "",
-    "inspired_by": "",
+    "inspired_by": "IDEA-25",
     "affiliation": "",
     "starred": false,
     "star_reason": "",
@@ -21,7 +194,87 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-25T23:33:44Z",
+    "pushed_at": "2026-08-25T23:39:32Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Emmanuelzyronis",
+        "name": "Ibiezugbe Emmanuel",
+        "avatar_url": "https://avatars.githubusercontent.com/u/218417967?v=4"
+      },
+      {
+        "login": "invalid-email-address",
+        "name": "root",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-25"
+    ],
+    "head_sha": "64b4783480dfe6662a92fe8cdb89562d7d2fad6b",
+    "readme_hash": "4114693194182b1d",
+    "desc_v6": true,
+    "churn_pct": 1.9,
+    "summary": "A pre-signature privacy simulator for STRK20 transactions.",
+    "description_long": "Preflight simulates transaction privacy before signing, showing visibility of information, anonymity-set size, and risk of amount and timing correlation. Built with a web interface and Fastify API, it features components for displaying simulated reports and health checks. The repository includes various packages for scoring, an SDK hook, and shared types, structured into web and API applications.",
+    "latest_push": "Fixed ESLint to ignore generated files and added an .npmrc file.",
+    "tooling": [
+      {
+        "label": "Privacy SDK",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 8,
+    "deletions": 1,
+    "sprint": {
+      "pushes": 13,
+      "additions": 8192,
+      "deletions": 2,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
+    "slug": "shoal",
+    "name": "Shoal",
+    "one_liner": "Anonymity aggregation for STRK20: measure the crowd you are actually hiding in, then route value so it is as large as possible.",
+    "category": "Infra",
+    "repo_url": "https://github.com/iamdflame/shoal",
+    "demo_url": "https://claude.ai/code/artifact/89e7a423-9c0f-46fd-bf44-0d1dcfba2944",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x0269fa8cd8a7a04f5cd5b2fda7139efebb99511e2dde4778ba9395948a62ecfc",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x0193e222869091a5b350d0a282c82f34c3554256a45b9ea631b66cdbd4d70309",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-25T23:37:35Z",
     "stars": 0,
     "builders": [
       {
@@ -35,20 +288,20 @@
         "family": "Claude",
         "name": "Claude Opus 5",
         "avatar_url": "",
-        "commits": 11
+        "commits": 12
       }
     ],
     "active_days": [
       "2026-08-24",
       "2026-08-25"
     ],
-    "head_sha": "7cd138228e6a804684537995ec74099cdc91916c",
+    "head_sha": "44fc482eac5f258a0008edcb0b5023c2ebaefe35",
     "readme_hash": "2f61ea7e4ab56205",
     "desc_v6": true,
-    "churn_pct": 4.5,
+    "churn_pct": 0.2,
     "summary": "An anonymity aggregation layer that measures and optimizes your effective crowd size.",
     "description_long": "Shoal computes the effective anonymity set in a privacy pool, measuring how many users you are actually hiding among by analyzing the intersection of asset, denomination, and time. It routes transactions to maximize your effective crowd size based on this computed data, reporting both the effective anonymity set and the number of cells where you may stand alone. Built on Starknet with transparency in its measurement methods, it uses event data to classify participants accurately and account for the leaky nature of public blockchain interactions.",
-    "latest_push": "Unblocked indexer-free discovery on the SDK route.",
+    "latest_push": "Added the strk20.json manifest.",
     "tooling": [
       {
         "label": "starknet.js",
@@ -72,12 +325,84 @@
       }
     ],
     "has_readme": true,
-    "additions": 232,
-    "deletions": 3,
+    "additions": 8,
+    "deletions": 0,
     "sprint": {
-      "pushes": 12,
-      "additions": 14059,
+      "pushes": 13,
+      "additions": 14067,
       "deletions": 59,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "afterlight",
+    "name": "Afterlight",
+    "one_liner": "Private STRK20 recovery reserves with authenticated heartbeat, grace, and owner veto control.",
+    "category": "Consumer",
+    "repo_url": "https://github.com/dolepee/afterlight",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-25T23:36:13Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "dolepee",
+        "name": "qdee",
+        "avatar_url": "https://avatars.githubusercontent.com/u/113950858?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-24",
+      "2026-08-25"
+    ],
+    "head_sha": "80afe17c46a998c2acd702fc89610b4f5033f2de",
+    "readme_hash": "ff51a71597fc806d",
+    "desc_v6": true,
+    "churn_pct": 1.2,
+    "summary": "A private recovery reserve for self-custody wallets with controlled access.",
+    "description_long": "Afterlight is a private, bounded recovery reserve that allows owners of Starknet self-custody wallets to fund a fixed reserve through STRK20. It maintains access control via authenticated heartbeats and a veto window, enabling the designated successor to authorize recovery only if the owner becomes inactive. The project comprises a Cairo recovery state machine, application key client, and a neutral relayer implementation, with test coverage and components organized under src/, tests/, client/, and relayer/ directories.",
+    "latest_push": "Verified locked deployment artifacts in the CI workflow.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Anonymizer contract",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 88,
+    "deletions": 1,
+    "sprint": {
+      "pushes": 25,
+      "additions": 30026,
+      "deletions": 109,
       "computed": 2
     },
     "assessment": null,
@@ -123,7 +448,6 @@
     "head_sha": "5c43d5ae8c6cfd6d0c1dacbc5c1408bf2485051b",
     "readme_hash": "79d1267942113f5e",
     "desc_v6": true,
-    "churn_pct": 0.3,
     "summary": "A non-custodial payroll system with private pay agreements and accountability proofs.",
     "description_long": "PAYO is a non-custodial payroll workspace on Starknet that enables private payroll with features like encrypted pay agreements and payroll-integrity proofs. Key components include privacy-protected transfers using STRK20, policy-constrained access for AI agents, and scoped proof packages for auditors and tax professionals. The project implements capabilities like batch payroll processing, compliance proof exports, and a bounded obligation engine, with the backend built using advanced cryptographic techniques.",
     "latest_push": "Fixed the confirmed payroll UI to finalize immediately.",
@@ -167,6 +491,7 @@
     "has_readme": true,
     "additions": 67,
     "deletions": 43,
+    "churn_pct": 0.3,
     "sprint": {
       "pushes": 36,
       "additions": 43193,
@@ -175,322 +500,6 @@
     },
     "assessment": null,
     "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "xenia",
-    "name": "XENIA",
-    "one_liner": "Private payment links on Starknet. Pay someone who has never registered a STRK20 viewing key — they register inside the claim.",
-    "category": "Payments",
-    "repo_url": "https://github.com/jadonamite/XENIA",
-    "demo_url": "https://usexenia.vercel.app",
-    "demo_video": "",
-    "x_handle": "jadonamite",
-    "inspired_by": "IDEA-09",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-25T23:32:43Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "jadonamite",
-        "name": "jadonamite",
-        "avatar_url": "https://avatars.githubusercontent.com/u/186282594?v=4"
-      },
-      {
-        "login": "Sam-Rytech",
-        "name": "Temitayo",
-        "avatar_url": "https://avatars.githubusercontent.com/u/107815081?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-24",
-      "2026-08-25"
-    ],
-    "head_sha": "63af19ddf024c95fb3b1c0cb298390090917bf30",
-    "readme_hash": "68eba7e95978e141",
-    "desc_v6": true,
-    "summary": "Send private payments to non-users of the privacy pool.",
-    "description_long": "Xenia enables a sender to create a claim link that allows the recipient to register on the STRK20 privacy pool and claim their payment in a single transaction. The process involves creating a claim, sending a URL, and the recipient connecting their wallet to complete the registration and payment atomically. The key components include the `XeniaEscrow` contract, which manages the funds and ensures anonymity by handling deposits and claims efficiently.",
-    "latest_push": "Saturated the orbit bloom and calmed the node glows in BuiltOnOrbit.tsx.",
-    "tooling": [
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 8,
-    "deletions": 8,
-    "churn_pct": 0.3,
-    "sprint": {
-      "pushes": 22,
-      "additions": 10506,
-      "deletions": 5,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
-  },
-  {
-    "slug": "rhizome",
-    "name": "Rhizome",
-    "one_liner": "Prices what privacy costs on STRK20, then executes it: fee-aware tranche scheduling for private Vesu position through its own anonymizer.",
-    "category": "DeFi",
-    "repo_url": "https://github.com/cipoklean/rhizome",
-    "demo_url": "https://rhizome-indol.vercel.app",
-    "demo_video": "",
-    "x_handle": "David63694631",
-    "inspired_by": "IDEA-16",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x552d747e90eb70e52e9c5f9d9150b97e46ac9b25989a36e7eee96a2e45c5e20",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-25T23:30:12Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "cipoklean",
-        "name": "Aghazie David",
-        "avatar_url": "https://avatars.githubusercontent.com/u/82593998?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21",
-      "2026-08-24",
-      "2026-08-25"
-    ],
-    "head_sha": "fe91a5721e8005d4395ffc36504326ce27893594",
-    "readme_hash": "44b90590f7a90743",
-    "desc_v6": true,
-    "churn_pct": 17.9,
-    "summary": "A tool for calculating and executing private positions in DeFi with fee-aware tranche scheduling.",
-    "description_long": "Rhizome computes the cost of unlinkability in transactions within the STRK20 privacy pool and executes the necessary actions to maintain privacy. It reads real-time fees and transaction history, scores amounts to avoid distinctive patterns, and schedules transactions to enhance privacy through its own anonymizer contract, facilitating multiple indistinguishable deposits. Key contract functionalities include the mechanism for fee collection and transaction handling, reflecting detailed insights into the underlying pool's operations.",
-    "latest_push": "Fixed wallet transaction matching and enhanced receipt lookup across RPC endpoints.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 1239,
-    "deletions": 21,
-    "sprint": {
-      "pushes": 48,
-      "additions": 11087,
-      "deletions": 32,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "1 contract deployed, Cairo in the repository"
-  },
-  {
-    "slug": "afterlight",
-    "name": "Afterlight",
-    "one_liner": "Private STRK20 recovery reserves with authenticated heartbeat, grace, and owner veto control.",
-    "category": "Consumer",
-    "repo_url": "https://github.com/dolepee/afterlight",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-25T23:18:02Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "dolepee",
-        "name": "qdee",
-        "avatar_url": "https://avatars.githubusercontent.com/u/113950858?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-24",
-      "2026-08-25"
-    ],
-    "head_sha": "e3282be3003c588a3915ea28b63369dc7361319a",
-    "readme_hash": "820d6262d2954753",
-    "desc_v6": true,
-    "churn_pct": 0.2,
-    "summary": "A private recovery reserve for Starknet wallets with heartbeat and successor control.",
-    "description_long": "Afterlight allows users to fund a fixed reserve privately through STRK20 and maintain control with authenticated heartbeats and a veto window. If the owner becomes inactive, only a designated successor key can authorize recovery to a specific destination. The project includes a Cairo recovery state machine, unit and integration tests, and a neutral relayer implementation for secure operation.",
-    "latest_push": "Failed closed on deployment for quote identity in the deploy file.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Anonymizer contract",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 9,
-    "deletions": 4,
-    "sprint": {
-      "pushes": 24,
-      "additions": 29939,
-      "deletions": 109,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "preflight",
-    "name": "Preflight",
-    "one_liner": "Pre-signature privacy simulation for STRK20: detect amount, timing, and linkability leaks before signing.",
-    "category": "Tooling",
-    "repo_url": "https://github.com/Emmanuelzyronis/preflight",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "IDEA-25",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-25T23:11:38Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Emmanuelzyronis",
-        "name": "Ibiezugbe Emmanuel",
-        "avatar_url": "https://avatars.githubusercontent.com/u/218417967?v=4"
-      },
-      {
-        "login": "invalid-email-address",
-        "name": "root",
-        "avatar_url": "https://avatars.githubusercontent.com/u/148100?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-25"
-    ],
-    "head_sha": "62dd4f960a48aef370046aae111fef55f373fd9a",
-    "readme_hash": "4114693194182b1d",
-    "desc_v6": true,
-    "churn_pct": 0.8,
-    "summary": "A pre-signature privacy simulator for STRK20 transactions.",
-    "description_long": "Preflight simulates transaction privacy before signing, showing visibility of information, anonymity-set size, and risk of amount and timing correlation. Built with a web interface and Fastify API, it features components for displaying simulated reports and health checks. The repository includes various packages for scoring, an SDK hook, and shared types, structured into web and API applications.",
-    "latest_push": "Updated the Node.js version in the CI workflow file.",
-    "tooling": [
-      {
-        "label": "Privacy SDK",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 3,
-    "deletions": 1,
-    "sprint": {
-      "pushes": 11,
-      "additions": 8185,
-      "deletions": 2,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
   },
   {
     "slug": "maestro",
@@ -531,7 +540,6 @@
     "head_sha": "1e6b736215504a4d3a1300c0f68b4b1d25ecd0bb",
     "readme_hash": "e5ea3c179d8f8e79",
     "desc_v6": true,
-    "churn_pct": 78.9,
     "summary": "A family allowance app for managing chores and rewards privately.",
     "description_long": "Tracks chores and rewards for kids, allowing parents to fund a shared pot. Kids claim rewards privately as encrypted STRK20 notes, with each transaction unlinkable on the public ledger. Built with Cairo contracts for allowance streams and a React/Vite app for the client, the system uses a family board relay to ensure privacy.",
     "latest_push": "Added the single-recipient stream feature and Starknet wallet connection.",
@@ -545,6 +553,7 @@
     "has_readme": true,
     "additions": 975,
     "deletions": 21,
+    "churn_pct": 78.9,
     "sprint": {
       "pushes": 10,
       "additions": 14095,
