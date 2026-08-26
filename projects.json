@@ -30,7 +30,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-26T03:44:24Z",
+    "pushed_at": "2026-08-26T04:20:40Z",
     "stars": 1,
     "builders": [
       {
@@ -44,7 +44,7 @@
         "family": "Claude",
         "name": "Claude Opus 5",
         "avatar_url": "",
-        "commits": 5
+        "commits": 10
       }
     ],
     "active_days": [
@@ -54,13 +54,13 @@
       "2026-08-25",
       "2026-08-26"
     ],
-    "head_sha": "ce1d2bf76f64afe1ab57b6f6ead836f0c2ef094a",
-    "readme_hash": "4883a675b55646f7",
+    "head_sha": "3d40d409b39bac24598b11e8952ba506f9257b15",
+    "readme_hash": "b0550195b63baa89",
     "desc_v6": true,
-    "churn_pct": 22.6,
-    "summary": "A programmable execution router for multi-step, multi-token private transactions.",
-    "description_long": "Jalin executes arbitrary multi-step plans involving multiple tokens within a single `privacy_invoke`, allowing users to swap, lend, stake, or bridge assets directly through Starknet contracts. It enforces safety through on-chain invariants, ensuring no balance is left after transactions and allowing any Starknet contract as a target, while managing approvals and outputs efficiently.",
-    "latest_push": "Replaced multiple RPC client copies with a single env loader and RPC client.",
+    "churn_pct": 12.2,
+    "summary": "Execute multi-step, multi-token plans with a single private transaction.",
+    "description_long": "Jalin is a programmable execution router for the STRK20 shielded pool that allows users to execute a plan of multiple steps in a single private transaction. It uses a single `privacy_invoke` function to process arbitrary actions on any Starknet contract, enforcing safety via invariants in Cairo, with no need for whitelisted contracts. Sub-accounts and portfolio management are implemented through a specific layer that ensures unlinkable positions, allowing for enhanced privacy in transactions.",
+    "latest_push": "Ensured all contract lines run in the test suite for full coverage.",
     "tooling": [
       {
         "label": "Cairo",
@@ -74,11 +74,11 @@
       }
     ],
     "has_readme": true,
-    "additions": 1254,
-    "deletions": 216,
+    "additions": 851,
+    "deletions": 37,
     "sprint": {
-      "pushes": 62,
-      "additions": 25814,
+      "pushes": 67,
+      "additions": 26628,
       "deletions": 11,
       "computed": 2
     },
@@ -108,7 +108,15 @@
         "network": "sepolia"
       }
     ],
-    "transactions": [],
+    "transactions": [
+      {
+        "hash": "0x04816dbb3ec04d21cc5da879358e485afdbfe52a3d8f6b8bf4a678003b6e0278",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      }
+    ],
     "verified_txs": 0,
     "requirements": {
       "demo": true,
@@ -116,7 +124,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-26T03:43:15Z",
+    "pushed_at": "2026-08-26T04:19:13Z",
     "stars": 0,
     "builders": [
       {
@@ -130,7 +138,7 @@
         "family": "Claude",
         "name": "Claude Opus 5",
         "avatar_url": "",
-        "commits": 22
+        "commits": 23
       }
     ],
     "active_days": [
@@ -138,13 +146,13 @@
       "2026-08-25",
       "2026-08-26"
     ],
-    "head_sha": "f1b2b659868bf7dc2c53d1b8c26b201d9d2e835f",
+    "head_sha": "a2ce10b5f4b9330e59c86c68a210da5e8f91259b",
     "readme_hash": "2f61ea7e4ab56205",
     "desc_v6": true,
-    "churn_pct": 9.8,
+    "churn_pct": 0.1,
     "summary": "An anonymity aggregation layer that measures and optimizes your effective crowd size.",
     "description_long": "Shoal computes the effective anonymity set in a privacy pool, measuring how many users you are actually hiding among by analyzing the intersection of asset, denomination, and time. It routes transactions to maximize your effective crowd size based on this computed data, reporting both the effective anonymity set and the number of cells where you may stand alone. Built on Starknet with transparency in its measurement methods, it uses event data to classify participants accurately and account for the leaky nature of public blockchain interactions.",
-    "latest_push": "Fixed wallet connection issues and improved wallet detection mechanisms.",
+    "latest_push": "Verified the first mainnet pool transaction in strk20.json.",
     "tooling": [
       {
         "label": "starknet.js",
@@ -168,16 +176,216 @@
       }
     ],
     "has_readme": true,
-    "additions": 471,
-    "deletions": 22,
+    "additions": 3,
+    "deletions": 1,
     "sprint": {
-      "pushes": 23,
-      "additions": 11550,
+      "pushes": 24,
+      "additions": 11552,
       "deletions": 59,
       "computed": 2
     },
     "assessment": null,
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "ghostorder",
+    "name": "GhostOrder",
+    "one_liner": "A privacy-focused conditional intent layer on Starknet using STRK20, enabling users to create hidden trading conditions and execute them without exposing sensitive order parameters while they wait.",
+    "category": "Other",
+    "repo_url": "https://github.com/kaverimeshram/GhostOrder",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Ghost Orders enables private conditional trading for STRK20, addressing privacy in order placements.",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-26T04:02:58Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "kaverimeshram",
+        "name": "kaverimeshram",
+        "avatar_url": "https://avatars.githubusercontent.com/u/182025207?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-22",
+      "2026-08-23",
+      "2026-08-24",
+      "2026-08-26"
+    ],
+    "head_sha": "c026b954108597e66d0baaaa663c3c76c1c354fa",
+    "readme_hash": "d18c40c8383d55dd",
+    "desc_v6": true,
+    "churn_pct": 5.7,
+    "summary": "Conditional trading with hidden order parameters and private execution.",
+    "description_long": "Ghost Orders is a privacy-focused conditional trading layer that allows users to create conditional trading instructions while keeping sensitive order details private. The project is built on Starknet and includes features such as private conditional order creation, hidden trigger parameters, and client-side condition monitoring, with a focus on integrating STRK20 for asset handling and settlement.",
+    "latest_push": "Added the STRK20 test receiver experiment and related files.",
+    "tooling": [
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 263,
+    "deletions": 0,
+    "sprint": {
+      "pushes": 12,
+      "additions": 10028,
+      "deletions": 499,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": false,
+      "why_innovative": "It creates private conditional trading orders that are generally not available in traditional markets.",
+      "why_complex": "No contracts or significant Cairo code have been implemented yet.",
+      "reason": "Ghost Orders enables private conditional trading for STRK20, addressing privacy in order placements.",
+      "facts_v2": true
+    },
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "zkpayslip",
+    "name": "zkpayslip",
+    "one_liner": "Private payroll on Starknet — shielded salary disbursements and one-time, verifier-bound income proofs on the STRK20 privacy pool.",
+    "category": "Payments",
+    "repo_url": "https://github.com/EndPx/zkpayslip",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "RFP-11",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "zkPayslip offers a private payroll solution with verifiable income using specific privacy techniques.",
+    "contracts": [
+      {
+        "address": "0x051c29216ddd5e9016fad4380db34e895dc8176f58ec4754cb3b4c4f14bda8b3",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-26T03:56:46Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "EndPx",
+        "name": "EndPx",
+        "avatar_url": "https://avatars.githubusercontent.com/u/127120051?v=4"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Opus 5",
+        "avatar_url": "",
+        "commits": 38
+      }
+    ],
+    "active_days": [
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-25",
+      "2026-08-26"
+    ],
+    "head_sha": "3c6cc5a6cb1b27fe374541844615a794cbde36bd",
+    "readme_hash": "7ed19bc777aabf23",
+    "desc_v6": true,
+    "churn_pct": 14.9,
+    "summary": "Private payroll management with income verification for employees.",
+    "description_long": "zkPayslip allows for private payroll on Starknet, enabling salaries to move confidentially within the STRK20 privacy pool. Employees can prove their income to a single verifier without revealing their salary details. Built using a Cairo helper that handles per-payment commitments, the project includes a mechanism for generating disclosures that link one fact to one verifier, utilizing STARK proofs for privacy.",
+    "latest_push": "Moved the console to /app and added an animated explainer to the root.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 861,
+    "deletions": 76,
+    "sprint": {
+      "pushes": 53,
+      "additions": 9317,
+      "deletions": 11,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": true,
+      "complex": true,
+      "why_innovative": "It allows employees to privately prove their income to a single verifier using a unique nullifier scheme.",
+      "why_complex": "The zkPayslip helper contract implements per-payment commitments and a custom disclosure mechanism.",
+      "reason": "zkPayslip offers a private payroll solution with verifiable income using specific privacy techniques.",
+      "facts_v2": true
+    },
+    "star_evidence": "1 contract deployed, Cairo in the repository"
   },
   {
     "slug": "preflight",
@@ -223,7 +431,6 @@
     "head_sha": "ef6973892d510399b0e72e674cf1cd883b8747eb",
     "readme_hash": "8bd2bbd2e3af7844",
     "desc_v6": true,
-    "churn_pct": 17.3,
     "summary": "Simulates pre-signature privacy risks for STRK20 transactions.",
     "description_long": "Preflight is a privacy-analysis tool that shows publicly visible information, anonymity-set size, and timing correlation risks for STRK20 transactions before signing. The project includes a web app for user interaction and an API that exposes simulation boundaries, while the backend indexes STRK20 pool events. The repository is structured with components for the front-end, API routes, and shared types, built using Node.js and various development tools.",
     "latest_push": "Isolated indexer tests and fixed eslint issues in the indexer.",
@@ -242,6 +449,7 @@
     "has_readme": true,
     "additions": 136,
     "deletions": 16,
+    "churn_pct": 17.3,
     "sprint": {
       "pushes": 23,
       "additions": 8811,
@@ -294,7 +502,6 @@
     "head_sha": "553b71fd1c12bb11085a5f1905a267870acfe74e",
     "readme_hash": "b856c85d35050df9",
     "desc_v6": true,
-    "churn_pct": 66.1,
     "summary": "Generate scoped, single-use payment credentials for autonomous agents.",
     "description_long": "OXA is a protocol for creating one-time payment credentials, allowing owners to fund transactions from a shielded STRK20 balance. These credentials can be issued on demand for specific amounts of ERC-20 tokens and can settle either privately or publicly. As of now, the project is in the pre-build phase with no contracts deployed.",
     "latest_push": "Added Broker registration scripts and a GitHub Actions workflow for building the prover.",
@@ -308,6 +515,7 @@
     "has_readme": true,
     "additions": 1025,
     "deletions": 13,
+    "churn_pct": 66.1,
     "sprint": {
       "pushes": 19,
       "additions": 5779,
@@ -318,117 +526,59 @@
     "star_evidence": "Cairo in the repository"
   },
   {
-    "slug": "zkpayslip",
-    "name": "zkpayslip",
-    "one_liner": "Private payroll on Starknet — shielded salary disbursements and one-time, verifier-bound income proofs on the STRK20 privacy pool.",
-    "category": "Payments",
-    "repo_url": "https://github.com/EndPx/zkpayslip",
-    "demo_url": "",
+    "slug": "verity",
+    "name": "Verity",
+    "one_liner": "A privacy-preserving intelligence marketplace where people are rewarded for discovering and verifying information without exposing their identity or transaction history.",
+    "category": "Other",
+    "repo_url": "https://github.com/onyebuchidaniel60/Verity",
+    "demo_url": "https://onyebuchidaniel60.github.io/Verity/",
     "demo_video": "",
     "x_handle": "",
-    "inspired_by": "RFP-11",
+    "inspired_by": "",
     "affiliation": "",
     "starred": false,
-    "star_reason": "zkPayslip offers a private payroll solution with verifiable income using specific privacy techniques.",
-    "contracts": [
-      {
-        "address": "0x051c29216ddd5e9016fad4380db34e895dc8176f58ec4754cb3b4c4f14bda8b3",
-        "network": "sepolia"
-      }
-    ],
+    "star_reason": "",
+    "contracts": [],
     "transactions": [],
     "verified_txs": 0,
     "requirements": {
-      "demo": false,
+      "demo": true,
       "video": false,
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-26T03:20:15Z",
+    "pushed_at": "2026-08-26T03:02:18Z",
     "stars": 0,
     "builders": [
       {
-        "login": "EndPx",
-        "name": "EndPx",
-        "avatar_url": "https://avatars.githubusercontent.com/u/127120051?v=4"
+        "login": "onyebuchidaniel60",
+        "name": "Buchi Nnamani",
+        "avatar_url": "https://avatars.githubusercontent.com/u/47596848?v=4"
       }
     ],
-    "agents": [
-      {
-        "family": "Claude",
-        "name": "Claude Opus 5",
-        "avatar_url": "",
-        "commits": 35
-      }
-    ],
+    "agents": [],
     "active_days": [
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-25",
       "2026-08-26"
     ],
-    "head_sha": "4995d21ecdfb5c22251d5a5d14013eb135a03156",
-    "readme_hash": "7ed19bc777aabf23",
+    "head_sha": "e64cc24199ad00d6eb6f3f2afe47e69a0ca7a220",
+    "readme_hash": "161e254ac9bec65d",
     "desc_v6": true,
-    "churn_pct": 0.4,
-    "summary": "Private payroll management with income verification for employees.",
-    "description_long": "zkPayslip allows for private payroll on Starknet, enabling salaries to move confidentially within the STRK20 privacy pool. Employees can prove their income to a single verifier without revealing their salary details. Built using a Cairo helper that handles per-payment commitments, the project includes a mechanism for generating disclosures that link one fact to one verifier, utilizing STARK proofs for privacy.",
-    "latest_push": "Recorded the ember & bone pass and its walkthrough in the documentation.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
+    "churn_pct": 0,
+    "summary": "A private marketplace for verified intelligence and bounties.",
+    "description_long": "VERITY is a privacy-preserving intelligence marketplace that rewards users for discovering and verifying information, while keeping identities and transaction histories private. It uses STRK20 privacy primitives on Starknet to support private bounty funding, private staking, and privacy-preserving submissions and settlements.",
+    "latest_push": "Updated README.md with project details.",
+    "tooling": [],
     "has_readme": true,
-    "additions": 25,
-    "deletions": 0,
+    "additions": 23,
+    "deletions": 2,
     "sprint": {
-      "pushes": 50,
-      "additions": 8532,
-      "deletions": 11,
+      "pushes": 2,
+      "additions": 25,
+      "deletions": 2,
       "computed": 2
     },
-    "assessment": {
-      "innovative": true,
-      "complex": true,
-      "why_innovative": "It allows employees to privately prove their income to a single verifier using a unique nullifier scheme.",
-      "why_complex": "The zkPayslip helper contract implements per-payment commitments and a custom disclosure mechanism.",
-      "reason": "zkPayslip offers a private payroll solution with verifiable income using specific privacy techniques.",
-      "facts_v2": true
-    },
-    "star_evidence": "1 contract deployed, Cairo in the repository"
+    "assessment": null,
+    "star_evidence": ""
   },
   {
     "slug": "afterlight",
@@ -6741,92 +6891,6 @@
       "computed": 2
     },
     "assessment": null,
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "ghostorder",
-    "name": "GhostOrder",
-    "one_liner": "A privacy-focused conditional intent layer on Starknet using STRK20, enabling users to create hidden trading conditions and execute them without exposing sensitive order parameters while they wait.",
-    "category": "Other",
-    "repo_url": "https://github.com/kaverimeshram/GhostOrder",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Ghost Orders enables private conditional trading for STRK20, addressing privacy in order placements.",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-24T06:06:50Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "kaverimeshram",
-        "name": "kaverimeshram",
-        "avatar_url": "https://avatars.githubusercontent.com/u/182025207?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21",
-      "2026-08-22",
-      "2026-08-23",
-      "2026-08-24"
-    ],
-    "head_sha": "2816a1961bafee195101c536fe9da01466642165",
-    "readme_hash": "d18c40c8383d55dd",
-    "desc_v6": true,
-    "summary": "Conditional trading with hidden order parameters and private execution.",
-    "description_long": "Ghost Orders is a privacy-focused conditional trading layer that allows users to create conditional trading instructions while keeping sensitive order details private. The project is built on Starknet and includes features such as private conditional order creation, hidden trigger parameters, and client-side condition monitoring, with a focus on integrating STRK20 for asset handling and settlement.",
-    "latest_push": "Added Ghost Orders declaration and deployment flow.",
-    "tooling": [
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 440,
-    "deletions": 79,
-    "churn_pct": 12,
-    "sprint": {
-      "pushes": 11,
-      "additions": 9765,
-      "deletions": 499,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": true,
-      "complex": false,
-      "why_innovative": "It creates private conditional trading orders that are generally not available in traditional markets.",
-      "why_complex": "No contracts or significant Cairo code have been implemented yet.",
-      "reason": "Ghost Orders enables private conditional trading for STRK20, addressing privacy in order placements.",
-      "facts_v2": true
-    },
     "star_evidence": "Cairo in the repository"
   },
   {
