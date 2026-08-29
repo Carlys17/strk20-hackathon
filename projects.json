@@ -1,14 +1,125 @@
 [
   {
-    "slug": "strk20-run",
-    "name": "strk20.run",
-    "one_liner": "A private wallet that feels like a product: shielded send, swap, chat with money in it, bridge out, prediction markets and confidential token launches - all on the STRK20 pool.",
+    "slug": "afterlight",
+    "name": "Afterlight",
+    "one_liner": "Private STRK20 recovery reserves with authenticated heartbeat, grace, and owner veto control.",
     "category": "Consumer",
-    "repo_url": "https://github.com/Blockchain-Oracle/strk20-run",
-    "demo_url": "https://app.strk20.run",
-    "demo_video": "https://vimeo.com/1222296410",
+    "repo_url": "https://github.com/dolepee/afterlight",
+    "demo_url": "https://afterlight.dolepee.com",
+    "demo_video": "",
     "x_handle": "",
     "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x06e8b6e49b4366e0dc6a35eee722b417c718988eca3f4a0c298bdf8785261c25",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x030ea14ac22e5806e382658971b686692af280bf2f02173a430f572921121722",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x69e2345ae8816986a709de84f0dcb571b5d092400d6c53bf90197480102c0fb",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x036e003396fe360ae7fe4766646f493c0eb579d82509652559d40e460770682a",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x11c990aea864e755630d41fd1292620c313b3f64407fc0b3a902544c67c8098",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x722033f7fd0397ff4d3845428c98cad885b6a63824f7c78a2b7e1d7d6f5c1b6",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      }
+    ],
+    "verified_txs": 5,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": true
+    },
+    "status": "building",
+    "pushed_at": "2026-08-29T12:59:16Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "dolepee",
+        "name": "qdee",
+        "avatar_url": "https://avatars.githubusercontent.com/u/113950858?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-24",
+      "2026-08-25",
+      "2026-08-26",
+      "2026-08-28",
+      "2026-08-29"
+    ],
+    "head_sha": "cf6510bfe84a59ee9931daa0867c53348eba508b",
+    "readme_hash": "91e57baaceded0c4",
+    "desc_v6": true,
+    "summary": "A private recovery reserve for Starknet self-custody wallets with heartbeats and veto control.",
+    "description_long": "Afterlight is a system that allows owners to privately fund a fixed recovery reserve through STRK20. It requires ongoing authenticated heartbeats to maintain control, with a grace period for recovery actions that can only be authorized by a designated successor if no heartbeat is received. The implementation includes a Cairo-based recovery state machine, a neutral relayer for transaction submission, and various user journeys for both owners and successors.",
+    "latest_push": "Classified exact claim broadcast failures in the relayer.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Anonymizer contract",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 78,
+    "deletions": 22,
+    "churn_pct": 0.8,
+    "sprint": {
+      "pushes": 66,
+      "additions": 38977,
+      "deletions": 271,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "strk20-run",
+    "name": "strk20.run",
+    "one_liner": "A private account on Starknet's STRK20 pool - no wallet, no login. Hold and send shielded value, chat with money attached, swap, bridge out, bet, launch, and vote in private houses.",
+    "category": "Consumer",
+    "repo_url": "https://github.com/Blockchain-Oracle/strk20-run",
+    "demo_url": "https://strk20.run",
+    "demo_video": "https://vimeo.com/1222296410",
+    "x_handle": "chain_oracle",
+    "inspired_by": "IDEA-13",
     "affiliation": "",
     "starred": false,
     "star_reason": "",
@@ -104,7 +215,7 @@
       "mainnet": true
     },
     "status": "finished",
-    "pushed_at": "2026-08-29T11:22:12Z",
+    "pushed_at": "2026-08-29T12:56:15Z",
     "stars": 0,
     "builders": [
       {
@@ -119,13 +230,13 @@
       "2026-08-28",
       "2026-08-29"
     ],
-    "head_sha": "3c16635e479fff323622b965c2fe61a46fcf60e0",
-    "readme_hash": "b250c7d02fd62251",
+    "head_sha": "0af0ff3c537e4f33b1d9760126bb6dc9756bfa36",
+    "readme_hash": "4d2dc241b4378757",
     "desc_v6": true,
-    "churn_pct": 34.8,
-    "summary": "A private account for sending, swapping, chatting, and launching on STRK20.",
-    "description_long": "strk20.run is a private account system that allows users to hold and send shielded value, chat with money attached, swap assets, bet, launch tokens, and bridge out. It generates keys in the browser on first load and maintains transparency about privacy, specifying who can see what before actions are taken. The system is built around smart contracts for markets, launches, messaging, governance, and integrates an oracle for price resolution.",
-    "latest_push": "Added the MessageBook helper and events for bodies in contracts.",
+    "churn_pct": 2,
+    "summary": "A private account for holding, sending, and managing shielded value on Starknet.",
+    "description_long": "Create an account instantly without a wallet or installation. Users can hold and send shielded value, chat with payments, swap assets, place bets, launch campaigns, and bridge to other networks. The key is generated in the browser, and all actions are transparent about what parties can see them.",
+    "latest_push": "Removed unnecessary words from README and added new onboarding features.",
     "tooling": [
       {
         "label": "Privacy SDK",
@@ -154,16 +265,275 @@
       }
     ],
     "has_readme": true,
-    "additions": 19754,
-    "deletions": 0,
+    "additions": 754,
+    "deletions": 407,
     "sprint": {
       "pushes": 100,
-      "additions": 13587,
-      "deletions": 5901,
+      "additions": 13107,
+      "deletions": 6342,
       "computed": 2
     },
     "assessment": null,
     "star_evidence": "4 contracts deployed on mainnet, Cairo in the repository"
+  },
+  {
+    "slug": "kelpay",
+    "name": "kelpay",
+    "one_liner": "Private payment links for freelancers, creators, and small teams.",
+    "category": "Payments",
+    "repo_url": "https://github.com/heyfegor/kelpay",
+    "demo_url": "https://kelpay-omega.vercel.app",
+    "demo_video": "",
+    "x_handle": "creatormorph",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-29T12:45:19Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "heyfegor",
+        "name": "heyfegor",
+        "avatar_url": "https://avatars.githubusercontent.com/u/148803813?v=4"
+      },
+      {
+        "login": "creatormorph",
+        "name": "creatormorph",
+        "avatar_url": "https://github.com/creatormorph.png"
+      }
+    ],
+    "agents": [
+      {
+        "family": "Claude",
+        "name": "Claude Sonnet 5",
+        "avatar_url": "",
+        "commits": 2
+      }
+    ],
+    "active_days": [
+      "2026-08-23",
+      "2026-08-25",
+      "2026-08-27"
+    ],
+    "head_sha": "72be1bb47127bf493efeeef6b565cf751de5af20",
+    "readme_hash": "5f763763cc12b02a",
+    "desc_v6": true,
+    "churn_pct": 30.8,
+    "summary": "Request and receive private payments through secure links.",
+    "description_long": "KelPay allows professionals to create payment requests that can be shared via links, ensuring that payment details remain private. It is built on Starknet and uses STRK20 privacy infrastructure, along with the Starknet Privacy SDK, Next.js, and TypeScript.",
+    "latest_push": "Completed the payment request lifecycle and added a public payment request page.",
+    "tooling": [
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 749,
+    "deletions": 42,
+    "sprint": {
+      "pushes": 5,
+      "additions": 10271,
+      "deletions": 2,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": ""
+  },
+  {
+    "slug": "poker-texas-air",
+    "name": "poker_texas_air",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/linqining/poker_texas_air",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-29T12:38:51Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "linqining",
+        "name": "linqining",
+        "avatar_url": "https://avatars.githubusercontent.com/u/18323181?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-16",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-23",
+      "2026-08-24",
+      "2026-08-25",
+      "2026-08-26",
+      "2026-08-27",
+      "2026-08-28",
+      "2026-08-29"
+    ],
+    "head_sha": "fb93426c99146e79d42dfa04bb5e11aaa809a3a8",
+    "readme_hash": "9c32f864d9747e3f",
+    "desc_v6": true,
+    "churn_pct": 0.2,
+    "summary": "A minimal implementation of the AIR protocol for Texas hold'em poker.",
+    "description_long": "This project constructs the AIR crate needed to support a mental-poker protocol and includes essential components for Layer 1 verification and state management. It consists of various Texas transition selectors, a fixed-width ABI for game phases, and a Ristretto backend for cryptographic operations, focusing on state transitions, betting rules, and seat lifecycle management. Key documents coordinate the protocols and trust models for secure game mechanics.",
+    "latest_push": "Fixed the sepolia deploy script for the deploy-acct subcommand.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Rust",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 467,
+    "deletions": 78,
+    "sprint": {
+      "pushes": 50,
+      "additions": 200239,
+      "deletions": 1191,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "vocap",
+    "name": "VOCAP",
+    "one_liner": "Private programmable capabilities for Starknet, enforced by STRK20 assets.",
+    "category": "Infra",
+    "repo_url": "https://github.com/CryptoZephyr/VOCAP",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [
+      {
+        "address": "0x6048ed36607367ea5ae050c745d47006214ecf66fdbf173d01eba96ec5d780a",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x74637f577350898c64835c88216df3030050828c723c6987a3d97d6d4eb986b",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x3e1acf0c893cb5697d48295d629e86fdddd1f8ff1fd1d307c7f2ecab8c7616f",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x290d3683e674714a79676be0fc13819fc410e0b7e3abb2551529e28a52f83e0",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0xd4be56bfd8b0402e150ced5ee7f8b9c912722f9e4e940d1cc1eda7ee2098d3",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      }
+    ],
+    "verified_txs": 3,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": true
+    },
+    "status": "building",
+    "pushed_at": "2026-08-29T12:32:38Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "CryptoZephyr",
+        "name": "CryptoZephyr",
+        "avatar_url": "https://avatars.githubusercontent.com/u/192461816?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-24",
+      "2026-08-25",
+      "2026-08-27",
+      "2026-08-28",
+      "2026-08-29"
+    ],
+    "head_sha": "587018742502416ca7d7f89154ba7ab4864044e7",
+    "readme_hash": "1baa797c80c92423",
+    "desc_v6": true,
+    "churn_pct": 6.9,
+    "summary": "A private programmable-capability protocol for Starknet with asset reuse.",
+    "description_long": "VOCAP allows users to execute target actions gated by STRK20 assets, returning the same asset for future use. The protocol includes a pool-gated router, backend for policy and execution, and maintains privacy through the STRK20 flow. The repository contains contracts for the RETURN-only flow, backend components, and documentation covering deployment and security measures.",
+    "latest_push": "Documented verified Mainnet deployment and associated updates.",
+    "tooling": [
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Starknet Foundry",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 146,
+    "deletions": 70,
+    "sprint": {
+      "pushes": 60,
+      "additions": 7643,
+      "deletions": 327,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "2 contracts deployed on mainnet, Cairo in the repository"
   },
   {
     "slug": "keepr",
@@ -171,7 +541,7 @@
     "one_liner": "Private subscription payments for AI agents and creators on STRK20 — shield, subscribe, auto-renew, prove access with a STARK proof.",
     "category": "Payments",
     "repo_url": "https://github.com/Cryptojigi/keepr",
-    "demo_url": "",
+    "demo_url": "https://keepr-eta.vercel.app",
     "demo_video": "",
     "x_handle": "",
     "inspired_by": "RFP-12",
@@ -202,12 +572,12 @@
     ],
     "verified_txs": 0,
     "requirements": {
-      "demo": false,
+      "demo": true,
       "video": false,
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-29T11:21:30Z",
+    "pushed_at": "2026-08-29T12:29:01Z",
     "stars": 0,
     "builders": [
       {
@@ -224,13 +594,13 @@
       "2026-08-28",
       "2026-08-29"
     ],
-    "head_sha": "20f81c97d0dbec6b797b3bc500210a91183a0405",
+    "head_sha": "114ff7ec0902825b777499ce0d0d6d98a674819b",
     "readme_hash": "e5ca96e72614126a",
     "desc_v6": true,
-    "churn_pct": 13.7,
+    "churn_pct": 3.7,
     "summary": "Manage private subscription payments for services and creators using shielded STRK20 balances.",
     "description_long": "Keepr enables private payments, automatic renewals, and income verification for AI agents and creators. It includes a subscription helper contract for managing subscriptions, a 24/7 keeper agent for processing renewals, and a web app for user interaction, along with a Telegram/Discord bot for demo purposes.",
-    "latest_push": "Mounted the real wallet connector and added live strk USD pricing.",
+    "latest_push": "Persisted wallet session and added zero USD input states.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -264,11 +634,11 @@
       }
     ],
     "has_readme": true,
-    "additions": 495,
-    "deletions": 265,
+    "additions": 194,
+    "deletions": 15,
     "sprint": {
-      "pushes": 20,
-      "additions": 7575,
+      "pushes": 24,
+      "additions": 7754,
       "deletions": 369,
       "computed": 2
     },
@@ -297,7 +667,7 @@
       "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-29T11:17:40Z",
+    "pushed_at": "2026-08-29T12:13:08Z",
     "stars": 0,
     "builders": [
       {
@@ -326,13 +696,13 @@
       "2026-08-28",
       "2026-08-29"
     ],
-    "head_sha": "923be9fa14d22b0e4095c8c59fecc1eb0b112870",
+    "head_sha": "cb11fea935223643dc46be7a784cb6b0a2820557",
     "readme_hash": "fb50075b66ae1661",
     "desc_v6": true,
-    "churn_pct": 1.2,
+    "churn_pct": 2.1,
     "summary": "A marketplace for selling encrypted files with anonymous transactions.",
     "description_long": "This project is a marketplace where users can upload encrypted files and sell them with anonymous transactions on the blockchain. Sellers register only the content identifier and price on a STRK20 smart contract, while buyers access the files directly and make purchases using ZK-proofs. The project uses Starknet for transactions, Filecoin for storage, and ensures security with post-quantum encryption.",
-    "latest_push": "Added the shield_pool whitelist and automated STRK20 privacy functions.",
+    "latest_push": "Deployed AccessFactory with shield_pool and included access modules.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -371,11 +741,11 @@
       }
     ],
     "has_readme": true,
-    "additions": 89,
-    "deletions": 23,
+    "additions": 198,
+    "deletions": 0,
     "sprint": {
-      "pushes": 45,
-      "additions": 23696,
+      "pushes": 46,
+      "additions": 23894,
       "deletions": 1452,
       "computed": 2
     },
@@ -390,73 +760,216 @@
     "star_evidence": "Cairo in the repository"
   },
   {
-    "slug": "afterlight",
-    "name": "Afterlight",
-    "one_liner": "Private STRK20 recovery reserves with authenticated heartbeat, grace, and owner veto control.",
+    "slug": "neobank",
+    "name": "Private money account",
+    "one_liner": "Hold, send, and earn on STRK20 without publishing salary or net worth.",
     "category": "Consumer",
-    "repo_url": "https://github.com/dolepee/afterlight",
-    "demo_url": "https://afterlight.dolepee.com",
+    "repo_url": "https://github.com/kamalbuilds/neobank",
+    "demo_url": "https://sealed.cash",
+    "demo_video": "https://sealed.cash/demo.mp4",
+    "x_handle": "kamalbuilds",
+    "inspired_by": "IDEA-13",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "The project fails to demonstrate unique use of privacy beyond conventional private transfers.",
+    "contracts": [
+      {
+        "address": "0x042fd2df34df378e33c2c0cbc3e0183974b2ca69c0d222da2326a5bfd64ec2c3",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x054d94bbe6640e1258a1961ab1226fcb7cb0a9bfdcd72dab8857195e552dc334",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x0604a76fd7f50d4856cadbc1b6c45908d3be856fde267435124b7a74a7dcbbb0",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x074dcd5ee5e0fbfdcf25a7cbc3408711de19fccdf46e8f53c71d35e795f5390a",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x059524ff1c689a45b92e0ff02c752b261805409ff5940721aa4c382ac6b572a4",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x076811f28a950b5c6ddaa02bd323b5fccb572676ff57bbc3b979a430f0acda8b",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x00474c6b220a15919770a58dad4b4ea19c30b9972a3620c5a16cee8f752068bb",
+        "network": "sepolia"
+      },
+      {
+        "address": "0x0137d48e53d94333568cedfe8c261b7f3c8ff9206636f6f759c87137da5631f7",
+        "network": "sepolia"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x04c4bea05417ce1062adef39b3d3b300f831ec994bbb4166d6010c4838d49193",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      },
+      {
+        "hash": "0x059eb6c1bdddd048006f372b4db6602560dbfc722536b94d59ece8abb865586e",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      },
+      {
+        "hash": "0xe08fd329091b483978c64f93288b7346b158e0dc485fd7c5f594899f0294",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      }
+    ],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": true,
+      "video": true,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-29T12:11:17Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "kamalbuilds",
+        "name": "Kamal",
+        "avatar_url": "https://avatars.githubusercontent.com/u/95926324?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-15",
+      "2026-08-16",
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-21",
+      "2026-08-22",
+      "2026-08-23",
+      "2026-08-24",
+      "2026-08-25",
+      "2026-08-26",
+      "2026-08-27",
+      "2026-08-28",
+      "2026-08-29"
+    ],
+    "head_sha": "445e2b367b226221a0759d1614aa165e296344ad",
+    "readme_hash": "63a00256df896338",
+    "desc_v6": true,
+    "churn_pct": 0,
+    "summary": "A fully programmable private money account for transactions on STRK20.",
+    "description_long": "This application allows users to hold and send funds on the live STRK20 pool while maintaining privacy around their salary and net worth. It features account creation, shielding of USDC or STRK, and private sending to other registered wallets. The application uses a wallet API for communication and reads the deposit events from the canonical pool for transaction history.",
+    "latest_push": "Updated the README.md file with new information.",
+    "tooling": [
+      {
+        "label": "AVNU",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Privacy SDK",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 1,
+    "deletions": 1,
+    "sprint": {
+      "pushes": 100,
+      "additions": 21486,
+      "deletions": 1331,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": false,
+      "why_innovative": "The project offers private transfers, which is an obvious use of privacy technology.",
+      "why_complex": "There are no deployed contracts or real engineering beyond frontend and the basic wallet integrations.",
+      "reason": "The project fails to demonstrate unique use of privacy beyond conventional private transfers.",
+      "facts_v2": true
+    },
+    "star_evidence": "8 contracts deployed, Cairo in the repository"
+  },
+  {
+    "slug": "prism",
+    "name": "Prism",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/etvjay/Prism",
+    "demo_url": "",
     "demo_video": "",
     "x_handle": "",
     "inspired_by": "",
     "affiliation": "",
     "starred": false,
     "star_reason": "",
-    "contracts": [
-      {
-        "address": "0x06e8b6e49b4366e0dc6a35eee722b417c718988eca3f4a0c298bdf8785261c25",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [
-      {
-        "hash": "0x030ea14ac22e5806e382658971b686692af280bf2f02173a430f572921121722",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      },
-      {
-        "hash": "0x69e2345ae8816986a709de84f0dcb571b5d092400d6c53bf90197480102c0fb",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      },
-      {
-        "hash": "0x036e003396fe360ae7fe4766646f493c0eb579d82509652559d40e460770682a",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      },
-      {
-        "hash": "0x11c990aea864e755630d41fd1292620c313b3f64407fc0b3a902544c67c8098",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      },
-      {
-        "hash": "0x722033f7fd0397ff4d3845428c98cad885b6a63824f7c78a2b7e1d7d6f5c1b6",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      }
-    ],
-    "verified_txs": 5,
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
     "requirements": {
-      "demo": true,
+      "demo": false,
       "video": false,
-      "mainnet": true
+      "mainnet": false
     },
     "status": "building",
-    "pushed_at": "2026-08-29T11:17:30Z",
+    "pushed_at": "2026-08-29T12:04:47Z",
     "stars": 0,
     "builders": [
       {
-        "login": "dolepee",
-        "name": "qdee",
-        "avatar_url": "https://avatars.githubusercontent.com/u/113950858?v=4"
+        "login": "etvjay",
+        "name": "etvjay",
+        "avatar_url": "https://avatars.githubusercontent.com/u/315516498?v=4"
       }
     ],
-    "agents": [],
+    "agents": [
+      {
+        "family": "Codex",
+        "name": "Codex",
+        "avatar_url": "https://avatars.githubusercontent.com/u/267193182?v=4",
+        "commits": 1
+      }
+    ],
     "active_days": [
       "2026-08-24",
       "2026-08-25",
@@ -464,41 +977,56 @@
       "2026-08-28",
       "2026-08-29"
     ],
-    "head_sha": "cf6510bfe84a59ee9931daa0867c53348eba508b",
-    "readme_hash": "91e57baaceded0c4",
+    "head_sha": "0d487af3bf3f8850a57fb7c0fac5cdd6aaddbc13",
+    "readme_hash": "4c7ff264b6612f59",
     "desc_v6": true,
-    "summary": "A private recovery reserve for Starknet self-custody wallets with heartbeats and veto control.",
-    "description_long": "Afterlight is a system that allows owners to privately fund a fixed recovery reserve through STRK20. It requires ongoing authenticated heartbeats to maintain control, with a grace period for recovery actions that can only be authorized by a designated successor if no heartbeat is received. The implementation includes a Cairo-based recovery state machine, a neutral relayer for transaction submission, and various user journeys for both owners and successors.",
-    "latest_push": "Classified exact claim broadcast failures in the relayer.",
+    "churn_pct": 20.9,
+    "summary": "A Starknet-native identity and financial coordination protocol.",
+    "description_long": "Prism anchors identity on Starknet with a persistent Prism ID while allowing connected accounts on other chains to act as native execution identities. It supports creating a Prism ID, connecting a Base execution account, and managing it without altering the ID, alongside displaying a unified financial state across Starknet and Base, facilitated by STRK20 for private financial actions.",
+    "latest_push": "Added STRK20 wallet capability gate and hardening phases.",
     "tooling": [
       {
-        "label": "Cairo",
+        "label": "get-starknet",
         "live": false,
         "stack": false
       },
       {
-        "label": "Anonymizer contract",
-        "live": true,
-        "stack": true
+        "label": "Next.js",
+        "live": false,
+        "stack": false
       },
       {
-        "label": "Starknet Foundry",
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
         "live": false,
         "stack": false
       }
     ],
     "has_readme": true,
-    "additions": 78,
-    "deletions": 22,
-    "churn_pct": 0.8,
+    "additions": 19382,
+    "deletions": 16,
     "sprint": {
-      "pushes": 66,
-      "additions": 38977,
-      "deletions": 271,
+      "pushes": 100,
+      "additions": 16625,
+      "deletions": 521,
       "computed": 2
     },
     "assessment": null,
-    "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
+    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "whisperpay",
@@ -553,7 +1081,7 @@
       "mainnet": true
     },
     "status": "building",
-    "pushed_at": "2026-08-29T11:11:39Z",
+    "pushed_at": "2026-08-29T11:55:39Z",
     "stars": 0,
     "builders": [
       {
@@ -577,13 +1105,13 @@
       "2026-08-23",
       "2026-08-29"
     ],
-    "head_sha": "0f49d639bdd18369b5397ec043d02ad2988078be",
-    "readme_hash": "a24b9a72a8b5fd62",
+    "head_sha": "10833652bfa80b975979f52b8ef5a2d9c9060f8d",
+    "readme_hash": "77d9cf4f598bd3cd",
     "desc_v6": true,
-    "churn_pct": 57.4,
-    "summary": "Send private payment links without revealing amounts or participant identities.",
-    "description_long": "Whisper Pay allows users to send payment links while keeping the transaction details private, routing money through the STRK20 privacy pool. It detects equal payment and deposit amounts, offering to round up deposits to obscure the actual payment. The app encodes recipient, amount, and memo directly into the URL without storing them on a server, ensuring all payment details remain confidential.",
-    "latest_push": "Implemented split-bill functionality with payment request derivation.",
+    "churn_pct": 2.2,
+    "summary": "Send payments with private links while keeping transaction details confidential.",
+    "description_long": "Whisper Pay allows users to send payment links that maintain privacy by routing transactions through the STRK20 privacy pool. It features automatic detection and handling of deposit amounts to prevent revealing payment details, and does not store any transaction hashes to ensure maximum confidentiality. The application handles both deposits and transfers simultaneously to enhance user experience and privacy.",
+    "latest_push": "Fixed the split-bill route ordering and resolved five bugs.",
     "tooling": [
       {
         "label": "get-starknet",
@@ -612,11 +1140,11 @@
       }
     ],
     "has_readme": true,
-    "additions": 6274,
-    "deletions": 327,
+    "additions": 225,
+    "deletions": 38,
     "sprint": {
-      "pushes": 34,
-      "additions": 21698,
+      "pushes": 40,
+      "additions": 21885,
       "deletions": 1,
       "computed": 2
     },
@@ -631,12 +1159,260 @@
     "star_evidence": ""
   },
   {
+    "slug": "orlop",
+    "name": "Orlop",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/Kunmiesther/Orlop",
+    "demo_url": "",
+    "demo_video": "",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "",
+    "contracts": [],
+    "transactions": [],
+    "verified_txs": 0,
+    "requirements": {
+      "demo": false,
+      "video": false,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-29T11:39:55Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Kunmiesther",
+        "name": "Estar Kunmi",
+        "avatar_url": "https://avatars.githubusercontent.com/u/161195810?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-26",
+      "2026-08-27",
+      "2026-08-28",
+      "2026-08-29"
+    ],
+    "head_sha": "67109a63482274f24cc8a9a02898bf79957a5f76",
+    "readme_hash": "ee0e834a16f86608",
+    "desc_v6": true,
+    "churn_pct": 4.1,
+    "summary": "A confidential price-discovery protocol for large on-chain trades.",
+    "description_long": "Orlop is a competitive price-discovery protocol designed for large on-chain trades. It uses sealed RFQ competition and deterministic best-quote selection, with STRK20-backed private settlement to ensure traders can discover optimal execution without revealing their trading intent.",
+    "latest_push": "Added the guarded STRK20 buyer shield flow implementation.",
+    "tooling": [
+      {
+        "label": "Privacy SDK",
+        "live": true,
+        "stack": true
+      },
+      {
+        "label": "Next.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 165,
+    "deletions": 18,
+    "sprint": {
+      "pushes": 20,
+      "additions": 6465,
+      "deletions": 7,
+      "computed": 2
+    },
+    "assessment": null,
+    "star_evidence": "Cairo in the repository"
+  },
+  {
+    "slug": "sotto",
+    "name": "Sotto",
+    "one_liner": "",
+    "category": "Other",
+    "repo_url": "https://github.com/drained69/Sotto",
+    "demo_url": "https://sottov1.up.railway.app/",
+    "demo_video": "https://youtu.be/0LV-PZqrXgs",
+    "x_handle": "",
+    "inspired_by": "",
+    "affiliation": "",
+    "starred": false,
+    "star_reason": "Sotto integrates privacy for DeFi actions but lacks innovation beyond basic private transfers.",
+    "contracts": [
+      {
+        "address": "0x06277c357edf60e9acbbd5a9efaeb8fcb0d0b0daf1f06801ed94d4247a9b1e6a",
+        "network": "mainnet"
+      },
+      {
+        "address": "0x0577ba8bf4fc66a108ef4b869308831f930d6522ddc7b1fd6ee85dd6475d44fe",
+        "network": "mainnet"
+      }
+    ],
+    "transactions": [
+      {
+        "hash": "0x011a5346e984f1e9fb3f874ab3bbafd25d2c47c13d284c38267b32bf8c65f257",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      },
+      {
+        "hash": "0x02188db2941f77b7bcea08ff203dedc76597e9d7f2150dae0adb4d44246e32de",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      },
+      {
+        "hash": "0x00be73e599f70e62e8c159b11ad031c2635dde77d78f9ea6880bbe6bd80bcc7d",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      },
+      {
+        "hash": "0x00f05f0d20ae1067cf24422c12d47c5b3a5d18723e5b83d20ee708c0b017662d",
+        "ok": true,
+        "pool": true,
+        "mine": true
+      },
+      {
+        "hash": "0x07a3c722fa88026bb8ce35a06d330bee729556c3ab23c073e04f296fc669d9dc",
+        "ok": true,
+        "pool": true,
+        "mine": false,
+        "note": "touched the pool, but not through this project's contracts"
+      },
+      {
+        "hash": "0x018af3f4d95f6d8064c56738daba6d82ae99d4be6144af8966aeef828ad4c52b",
+        "ok": true,
+        "pool": false,
+        "mine": false,
+        "note": "did not touch the pool"
+      },
+      {
+        "hash": "0x07e69b6ec60ca7edab362973764a890148ceb074f455a9a22e1e2f0e675f09b2",
+        "ok": true,
+        "pool": false,
+        "mine": false,
+        "note": "did not touch the pool"
+      }
+    ],
+    "verified_txs": 1,
+    "requirements": {
+      "demo": true,
+      "video": true,
+      "mainnet": false
+    },
+    "status": "building",
+    "pushed_at": "2026-08-29T11:31:07Z",
+    "stars": 0,
+    "builders": [
+      {
+        "login": "Chinwuba081",
+        "name": "drained",
+        "avatar_url": "https://avatars.githubusercontent.com/u/97135600?v=4"
+      }
+    ],
+    "agents": [],
+    "active_days": [
+      "2026-08-17",
+      "2026-08-18",
+      "2026-08-19",
+      "2026-08-20",
+      "2026-08-23",
+      "2026-08-24",
+      "2026-08-25",
+      "2026-08-26",
+      "2026-08-29"
+    ],
+    "head_sha": "0634469e51649ff8ed5902d7589343cc81d79295",
+    "readme_hash": "657aa843d3f23c67",
+    "desc_v6": true,
+    "churn_pct": 8.5,
+    "summary": "Private wealth management for shielded STRK20 assets on Starknet.",
+    "description_long": "Sotto is a non-custodial application that allows users to manage shielded STRK20 assets, make private payments, and execute various financial strategies from a connected Starknet wallet. It supports balance discovery, asset transfers, strategy management, private swaps, and payment requests while ensuring users retain control over their keys and privacy settings.",
+    "latest_push": "Updated the README and documentation files for clarity and detail.",
+    "tooling": [
+      {
+        "label": "get-starknet",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "React",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "starknet.js",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "TypeScript",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Vite",
+        "live": false,
+        "stack": false
+      },
+      {
+        "label": "Cairo",
+        "live": false,
+        "stack": false
+      }
+    ],
+    "has_readme": true,
+    "additions": 292,
+    "deletions": 609,
+    "sprint": {
+      "pushes": 15,
+      "additions": 16439,
+      "deletions": 440,
+      "computed": 2
+    },
+    "assessment": {
+      "innovative": false,
+      "complex": true,
+      "why_innovative": "Sotto provides privacy for yield accounts but applies known privacy mechanisms to asset transfers.",
+      "why_complex": "The project includes multiple deployed contracts for shielding and asset management, like STRK20.",
+      "reason": "Sotto integrates privacy for DeFi actions but lacks innovation beyond basic private transfers.",
+      "facts_v2": true
+    },
+    "star_evidence": "2 contracts deployed on mainnet, Cairo in the repository"
+  },
+  {
     "slug": "cloakra",
     "name": "Cloakra",
     "one_liner": "",
     "category": "Other",
     "repo_url": "https://github.com/mrnetwork0001/Cloakra",
-    "demo_url": "https://cloakra-app.vercel.app",
+    "demo_url": "https://cloakra-6mpk7tqv2-mrnetworks-projects.vercel.app",
     "demo_video": "",
     "x_handle": "",
     "inspired_by": "",
@@ -702,7 +1478,6 @@
     "head_sha": "882fbd908695a944d079974a1edaa7f0a8399a93",
     "readme_hash": "b34d3ae6519d2b80",
     "desc_v6": true,
-    "churn_pct": 1,
     "summary": "Shielded capital allocation for grants, bounties, and payouts.",
     "description_long": "Cloakra enables private transactions for grants, bug bounties, and contributor payouts within the STRK20 Privacy Pool. It includes three main modules: StealthSplit for confidential splits of funded notes, GhostBounty for anonymous bounty payouts, and StealthGrant for discreet grant rounds where only total amounts are visible on-chain. The project maintains privacy by obscuring the details of recipients and amounts while keeping the organization’s total deposits public.",
     "latest_push": "Added a preflight script to verify public accessibility of the live demo.",
@@ -710,6 +1485,7 @@
     "has_readme": true,
     "additions": 40,
     "deletions": 0,
+    "churn_pct": 1,
     "sprint": {
       "pushes": 37,
       "additions": 9847,
@@ -725,76 +1501,6 @@
       "facts_v2": true
     },
     "star_evidence": ""
-  },
-  {
-    "slug": "vocap",
-    "name": "VOCAP",
-    "one_liner": "Private programmable capabilities for Starknet, enforced by STRK20 assets.",
-    "category": "Infra",
-    "repo_url": "https://github.com/CryptoZephyr/VOCAP",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-29T10:58:59Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "CryptoZephyr",
-        "name": "CryptoZephyr",
-        "avatar_url": "https://avatars.githubusercontent.com/u/192461816?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-24",
-      "2026-08-25",
-      "2026-08-27",
-      "2026-08-28",
-      "2026-08-29"
-    ],
-    "head_sha": "186dd8e1371e3eabfd3c108400739b6befcc537b",
-    "readme_hash": "b0ea49e4b36befb3",
-    "desc_v6": true,
-    "churn_pct": 23.7,
-    "summary": "A programmable-capability protocol for executing private actions with STRK20 assets.",
-    "description_long": "VOCAP allows users to execute protected actions using STRK20 assets through a pool-gated router. It features a return mechanism where the same asset returns to a fresh private note after execution. The project includes a set of contracts for the RETURN-only functionality, a backend for transaction handling, and detailed documentation on deployment and operational protocols.",
-    "latest_push": "Fixed pnpm enablement in the mainnet workflow build.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Starknet Foundry",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 717,
-    "deletions": 25,
-    "sprint": {
-      "pushes": 54,
-      "additions": 7567,
-      "deletions": 327,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "strk20-privacy-wallet",
@@ -872,7 +1578,6 @@
     "head_sha": "6cedb494442bf64e54fc25db82b8cfd0519ea184",
     "readme_hash": "abdbb09544a775f5",
     "desc_v6": true,
-    "churn_pct": 0,
     "summary": "A privacy wallet for sending and receiving STRK20 on Starknet.",
     "description_long": "This application allows users to send and receive STRK20 privately without needing to understand complex cryptographic concepts. It acts as a consumer interface on top of the existing STRK20 privacy pool, enabling simple functions like connecting a privacy wallet, enabling private receiving, and performing transactions while keeping sender, recipient, amount, and token hidden. The application relies on the Starknet Wallet API and a compatible privacy wallet to handle viewing keys, encrypted notes, and transaction proofs.",
     "latest_push": "Fixed responsive navigation and polished the landing layout.",
@@ -931,6 +1636,7 @@
     "has_readme": true,
     "additions": 57,
     "deletions": 33,
+    "churn_pct": 0,
     "sprint": {
       "pushes": 100,
       "additions": 49587,
@@ -991,7 +1697,6 @@
     "head_sha": "66488bb5ec3191022f8b327ecc8f75fff21f0534",
     "readme_hash": "67e31836ddd459a3",
     "desc_v6": true,
-    "churn_pct": 1,
     "summary": "Proof-carrying private payroll for humans and AI agents in STRK or USDC.",
     "description_long": "PAYO is a non-custodial payroll workspace that enables private payment processing through encrypted agreements and integrity proofs, allowing payrolls to be proven without revealing individual salaries. It implements features like private batches, recurring payments, and selective disclosure for payroll data, all while supporting both human and AI payment agents. The system is built on Starknet using advanced cryptographic techniques and includes a web application for user interaction.",
     "latest_push": "Deployed proof-bound wage claim topology with comprehensive documentation.",
@@ -1035,6 +1740,7 @@
     "has_readme": true,
     "additions": 1473,
     "deletions": 10,
+    "churn_pct": 1,
     "sprint": {
       "pushes": 92,
       "additions": 24302,
@@ -1338,7 +2044,6 @@
     "head_sha": "0e3151a73c443672224878e6c9e2cb168dd7b5a3",
     "readme_hash": "d0a30499168796c4",
     "desc_v6": true,
-    "churn_pct": 1.4,
     "summary": "A credential and policy layer enforcing compliance for shielded transactions.",
     "description_long": "Cordon is a credential and policy layer for STRK20 that prevents uncredentialed or revoked payers from moving shielded funds, ensuring compliance by reverting transactions that break policy. The system uses a Cairo anonymizer to route payments through various settlement legs, where payer and payee policies are checked before allowing transactions, maintaining privacy for both parties while keeping certain details public.",
     "latest_push": "Deployed to Starknet mainnet and recorded the addresses.",
@@ -1357,6 +2062,7 @@
     "has_readme": true,
     "additions": 412,
     "deletions": 17,
+    "churn_pct": 1.4,
     "sprint": {
       "pushes": 65,
       "additions": 32476,
@@ -1490,95 +2196,6 @@
       "pushes": 25,
       "additions": 28878,
       "deletions": 18,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
-  },
-  {
-    "slug": "orlop",
-    "name": "Orlop",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/Kunmiesther/Orlop",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-29T09:50:08Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Kunmiesther",
-        "name": "Estar Kunmi",
-        "avatar_url": "https://avatars.githubusercontent.com/u/161195810?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-26",
-      "2026-08-27",
-      "2026-08-28",
-      "2026-08-29"
-    ],
-    "head_sha": "c522a9b0ce3a5453f5e0bb83ca7ac394d8ff7117",
-    "readme_hash": "ee0e834a16f86608",
-    "desc_v6": true,
-    "summary": "A confidential price-discovery protocol for large on-chain trades.",
-    "description_long": "Orlop is a competitive price-discovery protocol designed for large on-chain trades. It uses sealed RFQ competition and deterministic best-quote selection, with STRK20-backed private settlement to ensure traders can discover optimal execution without revealing their trading intent.",
-    "latest_push": "Added STRK20 settlement preflight and maker identity functionality.",
-    "tooling": [
-      {
-        "label": "Privacy SDK",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 224,
-    "deletions": 9,
-    "churn_pct": 5.7,
-    "sprint": {
-      "pushes": 19,
-      "additions": 6411,
-      "deletions": 7,
       "computed": 2
     },
     "assessment": null,
@@ -2407,178 +3024,6 @@
     },
     "assessment": null,
     "star_evidence": "2 contracts deployed, Cairo in the repository"
-  },
-  {
-    "slug": "neobank",
-    "name": "Private money account",
-    "one_liner": "Hold, send, and earn on STRK20 without publishing salary or net worth.",
-    "category": "Consumer",
-    "repo_url": "https://github.com/kamalbuilds/neobank",
-    "demo_url": "https://sealed.cash",
-    "demo_video": "https://sealed.cash/demo.mp4",
-    "x_handle": "kamalbuilds",
-    "inspired_by": "IDEA-13",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "The project fails to demonstrate unique use of privacy beyond conventional private transfers.",
-    "contracts": [
-      {
-        "address": "0x042fd2df34df378e33c2c0cbc3e0183974b2ca69c0d222da2326a5bfd64ec2c3",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x054d94bbe6640e1258a1961ab1226fcb7cb0a9bfdcd72dab8857195e552dc334",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x0604a76fd7f50d4856cadbc1b6c45908d3be856fde267435124b7a74a7dcbbb0",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x074dcd5ee5e0fbfdcf25a7cbc3408711de19fccdf46e8f53c71d35e795f5390a",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x059524ff1c689a45b92e0ff02c752b261805409ff5940721aa4c382ac6b572a4",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x076811f28a950b5c6ddaa02bd323b5fccb572676ff57bbc3b979a430f0acda8b",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x00474c6b220a15919770a58dad4b4ea19c30b9972a3620c5a16cee8f752068bb",
-        "network": "sepolia"
-      },
-      {
-        "address": "0x0137d48e53d94333568cedfe8c261b7f3c8ff9206636f6f759c87137da5631f7",
-        "network": "sepolia"
-      }
-    ],
-    "transactions": [
-      {
-        "hash": "0x04c4bea05417ce1062adef39b3d3b300f831ec994bbb4166d6010c4838d49193",
-        "ok": true,
-        "pool": true,
-        "mine": false,
-        "note": "touched the pool, but not through this project's contracts"
-      },
-      {
-        "hash": "0x059eb6c1bdddd048006f372b4db6602560dbfc722536b94d59ece8abb865586e",
-        "ok": true,
-        "pool": true,
-        "mine": false,
-        "note": "touched the pool, but not through this project's contracts"
-      },
-      {
-        "hash": "0xe08fd329091b483978c64f93288b7346b158e0dc485fd7c5f594899f0294",
-        "ok": true,
-        "pool": true,
-        "mine": false,
-        "note": "touched the pool, but not through this project's contracts"
-      }
-    ],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": true,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-29T08:37:35Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "kamalbuilds",
-        "name": "kamalbuilds",
-        "avatar_url": "https://avatars.githubusercontent.com/u/95926324?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-15",
-      "2026-08-16",
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21",
-      "2026-08-22",
-      "2026-08-23",
-      "2026-08-24",
-      "2026-08-25",
-      "2026-08-26",
-      "2026-08-27",
-      "2026-08-28",
-      "2026-08-29"
-    ],
-    "head_sha": "861c2b78427f6a9fd406fcc479d0550344de8281",
-    "readme_hash": "039a73e4afe8405c",
-    "desc_v6": true,
-    "summary": "Hold, send, and earn on STRK20 privately without revealing salary or net worth.",
-    "description_long": "A fully programmable private money account that allows users to shield, send, and unshield funds without exposing sensitive financial information. The app is built on Starknet and interacts with the live STRK20 pool, utilizing wallet APIs for shielding USDC or STRK and sending private transactions between registered wallets. Currently, it supports actions like deploying accounts, shielding tokens, and plans for future features such as private swaps and payment integration.",
-    "latest_push": "Corrected the payment mechanism in the demo video.",
-    "tooling": [
-      {
-        "label": "AVNU",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Privacy SDK",
-        "live": true,
-        "stack": true
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 0,
-    "deletions": 0,
-    "churn_pct": 0,
-    "sprint": {
-      "pushes": 100,
-      "additions": 21602,
-      "deletions": 1262,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": false,
-      "why_innovative": "The project offers private transfers, which is an obvious use of privacy technology.",
-      "why_complex": "There are no deployed contracts or real engineering beyond frontend and the basic wallet integrations.",
-      "reason": "The project fails to demonstrate unique use of privacy beyond conventional private transfers.",
-      "facts_v2": true
-    },
-    "star_evidence": "8 contracts deployed, Cairo in the repository"
   },
   {
     "slug": "privacy-msg",
@@ -4269,82 +4714,6 @@
     },
     "assessment": null,
     "star_evidence": "2 contracts deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "poker-texas-air",
-    "name": "poker_texas_air",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/linqining/poker_texas_air",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-29T00:17:29Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "linqining",
-        "name": "linqining",
-        "avatar_url": "https://avatars.githubusercontent.com/u/18323181?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-16",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-21",
-      "2026-08-23",
-      "2026-08-24",
-      "2026-08-25",
-      "2026-08-26",
-      "2026-08-27",
-      "2026-08-28",
-      "2026-08-29"
-    ],
-    "head_sha": "272a1a97e83544e0244aeb1cc23e65361b7fe203",
-    "readme_hash": "9c32f864d9747e3f",
-    "desc_v6": true,
-    "summary": "A minimal implementation of the AIR protocol for Texas hold'em poker.",
-    "description_long": "This project constructs the AIR crate needed to support a mental-poker protocol and includes essential components for Layer 1 verification and state management. It consists of various Texas transition selectors, a fixed-width ABI for game phases, and a Ristretto backend for cryptographic operations, focusing on state transitions, betting rules, and seat lifecycle management. Key documents coordinate the protocols and trust models for secure game mechanics.",
-    "latest_push": "Implemented on-chain settlement via L2 hand-bound ownership in PokerDualSettlement.",
-    "tooling": [
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Rust",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 370,
-    "deletions": 51,
-    "churn_pct": 0.1,
-    "sprint": {
-      "pushes": 48,
-      "additions": 200279,
-      "deletions": 1191,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": "Cairo in the repository"
   },
   {
     "slug": "slpm-v2",
@@ -8727,241 +9096,6 @@
     "star_evidence": "Cairo in the repository"
   },
   {
-    "slug": "sotto",
-    "name": "Sotto",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/drained69/Sotto",
-    "demo_url": "https://sottov1.up.railway.app/",
-    "demo_video": "https://youtu.be/0LV-PZqrXgs",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "Sotto integrates privacy for DeFi actions but lacks innovation beyond basic private transfers.",
-    "contracts": [
-      {
-        "address": "0x06277c357edf60e9acbbd5a9efaeb8fcb0d0b0daf1f06801ed94d4247a9b1e6a",
-        "network": "mainnet"
-      },
-      {
-        "address": "0x0577ba8bf4fc66a108ef4b869308831f930d6522ddc7b1fd6ee85dd6475d44fe",
-        "network": "mainnet"
-      }
-    ],
-    "transactions": [
-      {
-        "hash": "0x011a5346e984f1e9fb3f874ab3bbafd25d2c47c13d284c38267b32bf8c65f257",
-        "ok": true,
-        "pool": true,
-        "mine": false,
-        "note": "touched the pool, but not through this project's contracts"
-      },
-      {
-        "hash": "0x02188db2941f77b7bcea08ff203dedc76597e9d7f2150dae0adb4d44246e32de",
-        "ok": true,
-        "pool": true,
-        "mine": false,
-        "note": "touched the pool, but not through this project's contracts"
-      },
-      {
-        "hash": "0x00be73e599f70e62e8c159b11ad031c2635dde77d78f9ea6880bbe6bd80bcc7d",
-        "ok": true,
-        "pool": true,
-        "mine": false,
-        "note": "touched the pool, but not through this project's contracts"
-      },
-      {
-        "hash": "0x00f05f0d20ae1067cf24422c12d47c5b3a5d18723e5b83d20ee708c0b017662d",
-        "ok": true,
-        "pool": true,
-        "mine": true
-      },
-      {
-        "hash": "0x07a3c722fa88026bb8ce35a06d330bee729556c3ab23c073e04f296fc669d9dc",
-        "ok": true,
-        "pool": true,
-        "mine": false,
-        "note": "touched the pool, but not through this project's contracts"
-      },
-      {
-        "hash": "0x018af3f4d95f6d8064c56738daba6d82ae99d4be6144af8966aeef828ad4c52b",
-        "ok": true,
-        "pool": false,
-        "mine": false,
-        "note": "did not touch the pool"
-      },
-      {
-        "hash": "0x07e69b6ec60ca7edab362973764a890148ceb074f455a9a22e1e2f0e675f09b2",
-        "ok": true,
-        "pool": false,
-        "mine": false,
-        "note": "did not touch the pool"
-      }
-    ],
-    "verified_txs": 1,
-    "requirements": {
-      "demo": true,
-      "video": true,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-26T07:28:45Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "Chinwuba081",
-        "name": "drained",
-        "avatar_url": "https://avatars.githubusercontent.com/u/97135600?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-17",
-      "2026-08-18",
-      "2026-08-19",
-      "2026-08-20",
-      "2026-08-23",
-      "2026-08-24",
-      "2026-08-25",
-      "2026-08-26"
-    ],
-    "head_sha": "4a47fbe5333b15f665970a942eccff8cf12cd9e6",
-    "readme_hash": "dc314a344f9d8d21",
-    "desc_v6": true,
-    "summary": "Manage shielded assets, make private payments, and create escrow claims.",
-    "description_long": "Sotto is a private wealth and asset-management application built on Starknet. It allows users to manage shielded assets, execute private payments, create escrow claims, and allocate capital across various strategies, all using their STRK20 wallets. Users can deposit from compatible chains, manage their holdings, and track transactions, with no need for Sotto to access seed phrases or private keys.",
-    "latest_push": "Modified the strk20.json file.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Vite",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Cairo",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 8,
-    "deletions": 3,
-    "churn_pct": 0.1,
-    "sprint": {
-      "pushes": 14,
-      "additions": 16758,
-      "deletions": 442,
-      "computed": 2
-    },
-    "assessment": {
-      "innovative": false,
-      "complex": true,
-      "why_innovative": "Sotto provides privacy for yield accounts but applies known privacy mechanisms to asset transfers.",
-      "why_complex": "The project includes multiple deployed contracts for shielding and asset management, like STRK20.",
-      "reason": "Sotto integrates privacy for DeFi actions but lacks innovation beyond basic private transfers.",
-      "facts_v2": true
-    },
-    "star_evidence": "2 contracts deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "kelpay",
-    "name": "kelpay",
-    "one_liner": "Private payment links for freelancers, creators, and small teams.",
-    "category": "Payments",
-    "repo_url": "https://github.com/heyfegor/kelpay",
-    "demo_url": "https://kelpay-omega.vercel.app",
-    "demo_video": "",
-    "x_handle": "creatormorph",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": true,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-26T06:02:10Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "heyfegor",
-        "name": "heyfegor",
-        "avatar_url": "https://avatars.githubusercontent.com/u/148803813?v=4"
-      },
-      {
-        "login": "creatormorph",
-        "name": "creatormorph",
-        "avatar_url": "https://github.com/creatormorph.png"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-23",
-      "2026-08-25"
-    ],
-    "head_sha": "c11c1dc76ddb42d8ed05969ee368d01c90e86b45",
-    "readme_hash": "5f763763cc12b02a",
-    "desc_v6": true,
-    "summary": "Request and receive private payments through secure links.",
-    "description_long": "KelPay allows professionals to create payment requests that can be shared via links, ensuring that payment details remain private. It is built on Starknet and uses STRK20 privacy infrastructure, along with the Starknet Privacy SDK, Next.js, and TypeScript.",
-    "latest_push": "Built the foundation for the KelPay product with extensive documentation.",
-    "tooling": [
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 9356,
-    "deletions": 0,
-    "churn_pct": 100,
-    "sprint": {
-      "pushes": 3,
-      "additions": 9564,
-      "deletions": 2,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
-  },
-  {
     "slug": "morrow",
     "name": "Morrow",
     "one_liner": "A privacy preflight for STRK20 milestone payouts.",
@@ -9102,87 +9236,6 @@
       "facts_v2": true
     },
     "star_evidence": "1 contract deployed on mainnet, Cairo in the repository"
-  },
-  {
-    "slug": "prism",
-    "name": "Prism",
-    "one_liner": "",
-    "category": "Other",
-    "repo_url": "https://github.com/etvjay/Prism",
-    "demo_url": "",
-    "demo_video": "",
-    "x_handle": "",
-    "inspired_by": "",
-    "affiliation": "",
-    "starred": false,
-    "star_reason": "",
-    "contracts": [],
-    "transactions": [],
-    "verified_txs": 0,
-    "requirements": {
-      "demo": false,
-      "video": false,
-      "mainnet": false
-    },
-    "status": "building",
-    "pushed_at": "2026-08-25T23:57:19Z",
-    "stars": 0,
-    "builders": [
-      {
-        "login": "etvjay",
-        "name": "etvjay",
-        "avatar_url": "https://avatars.githubusercontent.com/u/315516498?v=4"
-      }
-    ],
-    "agents": [],
-    "active_days": [
-      "2026-08-20"
-    ],
-    "head_sha": "fbb5084cd9106c9e6965083597285fd084b58585",
-    "readme_hash": "4c7ff264b6612f59",
-    "desc_v6": true,
-    "summary": "A Starknet-native identity and financial coordination protocol.",
-    "description_long": "Prism anchors identity on Starknet with a persistent Prism ID while allowing connected accounts on other chains to act as native execution identities. It supports creating a Prism ID, connecting a Base execution account, and managing it without altering the ID, alongside displaying a unified financial state across Starknet and Base, facilitated by STRK20 for private financial actions.",
-    "latest_push": "Updated documentation on STRK20 integration and research context.",
-    "tooling": [
-      {
-        "label": "get-starknet",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "Next.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "React",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "starknet.js",
-        "live": false,
-        "stack": false
-      },
-      {
-        "label": "TypeScript",
-        "live": false,
-        "stack": false
-      }
-    ],
-    "has_readme": true,
-    "additions": 256,
-    "deletions": 385,
-    "churn_pct": 100,
-    "sprint": {
-      "pushes": 42,
-      "additions": 8287,
-      "deletions": 0,
-      "computed": 2
-    },
-    "assessment": null,
-    "star_evidence": ""
   },
   {
     "slug": "sealed",
@@ -9624,16 +9677,17 @@
       },
       {
         "hash": "0x441b1912620f38de58222ab3b8acc562d1c3d157f4f85a695e3042a969974aa",
-        "ok": true,
-        "pool": true,
-        "mine": true
+        "ok": false,
+        "pool": false,
+        "mine": false,
+        "note": "not found on mainnet"
       }
     ],
-    "verified_txs": 3,
+    "verified_txs": 2,
     "requirements": {
       "demo": true,
       "video": false,
-      "mainnet": true
+      "mainnet": false
     },
     "status": "building",
     "pushed_at": "2026-08-25T07:23:03Z",
