@@ -135,6 +135,28 @@ async function gh(path) {
   }
 }
 
+/* GitHub returns at most 100 commits per request. Activity is cumulative over
+ * the whole sprint, so reading only the first page makes old active days fall
+ * off the board as soon as a busy repository reaches its 101st commit.
+ *
+ * A later page failing is not a shorter history. Return no result rather than
+ * a partial one so callers can retain the last complete snapshot. The next
+ * scheduled run will try the whole history again. */
+async function ghAll(path) {
+  const out = [];
+  const separator = path.includes("?") ? "&" : "?";
+
+  for (let page = 1; ; page++) {
+    const batch = await gh(`${path}${separator}per_page=100&page=${page}`);
+    if (!Array.isArray(batch)) {
+      if (page > 1) warn(`${path} pagination stopped at page ${page} - keeping the last complete activity snapshot`);
+      return null;
+    }
+    out.push(...batch);
+    if (batch.length < 100) return out;
+  }
+}
+
 /* Accepts the shapes people actually paste: with or without a trailing slash,
  * with or without .git, and full URLs with query strings. */
 function parseRepo(url) {
@@ -203,6 +225,9 @@ async function resolveUser(login) {
 /* ---------- builders ---------- */
 
 const SPRINT_START = "2026-08-14T00:00:00Z";
+/* Freeze activity at the public deadline. Without an upper bound the cron
+ * would keep adding September commits to sprint totals after judging began. */
+const SPRINT_END = "2026-08-31T23:59:00Z";
 
 /* Who actually wrote the code, taken from the commit history rather than from
  * a list someone remembered to keep current. A teammate who joins in week two
@@ -248,7 +273,7 @@ const cleanAgentName = (raw) => raw
   .replace(/\s+/g, " ")
   .trim();
 
-async function detectBuilders(owner, repo, entry, meta) {
+async function detectBuilders(owner, repo, entry, meta, prev) {
   const seen = new Map();
   const counts = new Map();
   const agents = new Map();
@@ -320,15 +345,16 @@ async function detectBuilders(owner, repo, entry, meta) {
   };
 
   const started = Date.now() >= new Date(SPRINT_START).getTime();
-  const sprintCommits = await gh(`/repos/${owner}/${repo}/commits?per_page=100${started ? `&since=${SPRINT_START}` : ""}`);
+  const sprintCommits = await ghAll(`/repos/${owner}/${repo}/commits${started ? `?since=${SPRINT_START}&until=${SPRINT_END}` : ""}`);
+  const sprintHistoryComplete = Array.isArray(sprintCommits);
   collect(sprintCommits);
 
   /* What the sprint has cost this project so far, as opposed to what the last
      push cost - the shareable card wants a total, and additions/deletions on a
      project are per-push. The oldest commit in the window gives its own parent
      for free, which is the pre-sprint state to compare against. */
-  const sprintPushes = Array.isArray(sprintCommits) ? sprintCommits.length : 0;
-  const oldest = Array.isArray(sprintCommits) && sprintCommits.length
+  const sprintPushes = sprintHistoryComplete ? sprintCommits.length : null;
+  const oldest = sprintHistoryComplete && sprintCommits.length
     ? sprintCommits[sprintCommits.length - 1]
     : null;
   /* A repository created during the sprint has no pre-sprint parent to compare
@@ -434,7 +460,9 @@ async function detectBuilders(owner, repo, entry, meta) {
     /* Sprint days only. The fallback query above reaches outside the window to
        find faces for a repository that has not pushed yet, and those commits
        must not light dots. */
-    active_days: [...days].filter((d) => d >= SPRINT_START.slice(0, 10)).sort(),
+    active_days: sprintHistoryComplete
+      ? [...days].filter((d) => d >= SPRINT_START.slice(0, 10) && d <= SPRINT_END.slice(0, 10)).sort()
+      : (prev?.active_days || []),
   };
 }
 
@@ -959,7 +987,7 @@ async function buildProject(entry, prev) {
     };
   }
 
-  const { builders, agents, active_days, sprint_pushes, sprint_base, sprint_root } = await detectBuilders(owner, repo, entry, meta);
+  const { builders, agents, active_days, sprint_pushes, sprint_base, sprint_root } = await detectBuilders(owner, repo, entry, meta, prev);
 
   const demoUrl = await resolveDemo(entry, meta, owner, repo);
   const contracts = await resolveContracts(entry);
@@ -1058,7 +1086,12 @@ async function buildProject(entry, prev) {
   /* Sprint totals were added after most projects had already been indexed, and
      a project that has stopped pushing never changes SHA again - so without
      this they would sit at zero for the rest of the sprint. */
-  const sprintUsable = prev?.sprint?.computed === 2;
+  /* v2 could be based on the newest 100 commits rather than the whole sprint.
+     Only those capped rows need the expensive one-time totals rebuild; an
+     uncapped v2 value was already complete and can be promoted on the cached
+     path below. */
+  const sprintUsable = prev?.sprint?.computed === 3 ||
+    (prev?.sprint?.computed === 2 && (prev?.sprint?.pushes || 0) < 100);
   if (prev && headSha && prev.head_sha === headSha && summaryUsable && assessmentUsable && descUsable && sprintUsable) {
     console.log(`  ${entry.slug}: unchanged`);
     return {
@@ -1075,7 +1108,11 @@ async function buildProject(entry, prev) {
       additions: prev.additions || 0,
       deletions: prev.deletions || 0,
       churn_pct: prev.churn_pct || 0,
-      sprint: prev.sprint || { pushes: sprint_pushes || 0, additions: 0, deletions: 0 },
+      sprint: {
+        ...(prev.sprint || { additions: 0, deletions: 0 }),
+        pushes: sprint_pushes ?? prev?.sprint?.pushes ?? 0,
+        computed: 3,
+      },
       /* The verdict stands for this head_sha, but the facts around it are
          checked again: a transaction verifies on-chain without anyone pushing,
          so a project can cross the line between two runs of the cron. */
@@ -1305,7 +1342,12 @@ async function buildProject(entry, prev) {
     deletions,
     /* Totals for the shareable card: what the sprint has cost, against what the
        last push cost, which is what additions and deletions above describe. */
-    sprint: { pushes: sprint_pushes || 0, additions: sprintAdd, deletions: sprintDel, computed: 2 },
+    sprint: {
+      pushes: sprint_pushes ?? prev?.sprint?.pushes ?? 0,
+      additions: sprintAdd,
+      deletions: sprintDel,
+      computed: 3,
+    },
     /* Kept so the next run reuses the verdict for this head_sha rather than
        asking again and risking a different answer over identical code.
        When a sticky star outlives a judgement that has since flipped, the
