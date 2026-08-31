@@ -3,7 +3,7 @@
  * Registration is a PR against registry.json, so this is what stands between a
  * contributor and being merged. It reports every problem in one pass rather
  * than failing on the first, because a round trip per typo is the fastest way
- * to lose someone in an 18-day sprint.
+ * to lose someone in a 25-day sprint.
  *
  * Exit 0 means a maintainer can merge without reading the JSON.
  *

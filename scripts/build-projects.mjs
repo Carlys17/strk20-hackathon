@@ -11,7 +11,7 @@
  *
  * Everything is cached on the repository's head SHA. A project that hasn't
  * pushed since the last run costs exactly one API call and no tokens, which is
- * what makes a 30-minute cron affordable across an 18-day sprint.
+ * what makes a 30-minute cron affordable across a 25-day sprint.
  *
  * No dependencies - Node 20's built-in fetch only.
  *
@@ -226,8 +226,8 @@ async function resolveUser(login) {
 
 const SPRINT_START = "2026-08-14T00:00:00Z";
 /* Freeze activity at the public deadline. Without an upper bound the cron
- * would keep adding September commits to sprint totals after judging began. */
-const SPRINT_END = "2026-08-31T23:59:00Z";
+ * would keep adding post-deadline commits to sprint totals after judging began. */
+const SPRINT_END = "2026-09-07T23:59:00Z";
 
 /* Who actually wrote the code, taken from the commit history rather than from
  * a list someone remembered to keep current. A teammate who joins in week two

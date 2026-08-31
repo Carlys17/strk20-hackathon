@@ -57,7 +57,7 @@ test("the indexer retains prior active days when history is unavailable", () => 
 });
 
 test("the GitHub activity window freezes at the submission deadline", () => {
-  assert.match(source, /const SPRINT_END = "2026-08-31T23:59:00Z"/);
+  assert.match(source, /const SPRINT_END = "2026-09-07T23:59:00Z"/);
   assert.match(source, /since=\$\{SPRINT_START\}&until=\$\{SPRINT_END\}/);
   assert.match(source, /d <= SPRINT_END\.slice\(0, 10\)/);
 });

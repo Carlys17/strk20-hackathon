@@ -1,8 +1,8 @@
 # Private Sprint
 
-> An 18-day sprint to ship a real privacy application on Starknet mainnet.
+> A 25-day sprint to ship a real privacy application on Starknet mainnet.
 
-**August 14 - August 31, 2026.** $5,000 USD paid in STRK:
+**August 14 - September 7, 2026.** $5,000 USD paid in STRK:
 
 - 🥇 **$2,500** for first
 - 🥈 **$1,500** for second
@@ -103,7 +103,7 @@ Ideas are not exclusive. Several teams working from the same idea is fine.
 
 ## Submitting
 
-There is nothing to submit. Whatever your repository shows at **August 31, 23:59 UTC** is your entry.
+There is nothing to submit. Whatever your repository shows at **September 7, 23:59 UTC** is your entry.
 
 To be scored, it needs:
 
@@ -126,15 +126,15 @@ A named panel scores every project after submissions close.
 
 If another team depends on something you published, that counts in your favour.
 
-Winners announced **September 4**.
+Winners announced **September 11**.
 
 ## Timeline
 
 | Date | |
 |---|---|
 | August 14 | Applications and hacking open |
-| August 31, 23:59 UTC | Submissions close |
-| September 4 | Winners announced |
+| September 7, 23:59 UTC | Submissions close |
+| September 11 | Winners announced |
 
 ## Ideas
 

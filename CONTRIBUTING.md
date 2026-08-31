@@ -87,7 +87,7 @@ Everything on the list is in scope for the sprint, and so is anything that isn't
 
 ## Submitting
 
-There is nothing to submit, and no second pull request. Whatever your repository shows at **August 31, 23:59 UTC** is your entry.
+There is nothing to submit, and no second pull request. Whatever your repository shows at **September 7, 23:59 UTC** is your entry.
 
 A project counts as submitted once three things are true, each checked automatically and shown on the hub so you can see what's still missing:
 
